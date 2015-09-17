@@ -67,7 +67,7 @@ class Pages extends CI_Controller {
         if (PROJECT_PROFILES_ENABLED) {
             $this->load->model('projects_model');
             $project_urls = $this->projects_model->sitemap(base_url() . 'p/');
-            $urls = $urls + $project_urls;
+            $urls = array_merge($urls, $project_urls);
         }
 
         $this->output->set_content_type('application/xml');

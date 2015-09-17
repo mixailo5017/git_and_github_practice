@@ -6,18 +6,24 @@ class Projects_model extends CI_Model {
 
     public function sitemap($segment = '')
     {
+        // Outputs a string of as many comma-separated question marks as there are elements in INTERNAL_USERS
+        $in_string = str_replace(' ', ',', trim(str_repeat("? ", count(INTERNAL_USERS))));
+
         $sql = "
         SELECT ? || p.slug loc
           FROM exp_projects p JOIN exp_members m
             ON p.uid = m.uid
          WHERE p.isdeleted = ?
            AND m.status = ?
+           AND p.uid IN (" . $in_string . ")
         ";
         $bindings = array(
             $segment,
             '0',
             STATUS_ACTIVE
         );
+
+        $bindings = array_merge($bindings, INTERNAL_USERS); // Project should not belong to a real project developer
 
         $rows = $this->db
             ->query($sql, $bindings)
@@ -32,6 +38,9 @@ class Projects_model extends CI_Model {
      */
     public function find_public($slug)
     {
+        // Outputs a string of as many comma-separated question marks as there are elements in INTERNAL_USERS
+        $in_string = str_replace(' ', ',', trim(str_repeat("? ", count(INTERNAL_USERS))));
+
         $sql = "
         SELECT p.pid project_id, p.projectphoto, p.projectname, p.description,
                p.country, p.location, p.stage, p.sector, p.subsector
@@ -40,6 +49,7 @@ class Projects_model extends CI_Model {
          WHERE p.slug = ?
            AND p.isdeleted = ?
            AND m.status = ?
+           AND p.uid IN (" . $in_string . ")
          LIMIT 1";
 
         $bindings = array(
@@ -47,6 +57,8 @@ class Projects_model extends CI_Model {
             '0', // Project should be in a not deleted state
             STATUS_ACTIVE // Project owner should be active
         );
+
+        $bindings = array_merge($bindings, INTERNAL_USERS); // Project should not belong to a real project developer
 
         $row = $this->db
             ->query($sql, $bindings)
