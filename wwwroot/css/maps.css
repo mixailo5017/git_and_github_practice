@@ -1,0 +1,9 @@
+div.open_project div.type p{display:none;}
+div.open_project div.type.energy, .open_expert div.type.energy { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/lightning_large.png) no-repeat 16px 50%; }
+div.open_project div.type.mining, .open_expert div.type.mining { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/mining_large.png) no-repeat 16px 50%; }
+div.open_project div.type.water, .open_expert div.type.water { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/water_large.png) no-repeat 16px 50%; }
+div.open_project div.type.transport, .open_expert div.type.transport { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/transport_large.png) no-repeat 16px 50%; }
+div.open_project div.type.mining, div.open_project div.type.mining_related, .open_expert div.type.mining, .open_expert div.type.mining_related { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/mining_large.png) no-repeat 6px 50%; }
+div.open_project div.type.comm, .open_expert div.type.comm { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/comm_large.png) no-repeat 16px 50%; }
+div.open_project div.type.social, .open_expert div.type.social { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/social_large.png) no-repeat 16px 50%; }
+div.open_project div.type.oil_gas, .open_expert div.type.oil_gas { background: #45474a url(http://vip-map.vimdev.com/map_html/assets/images/map/oil_large.png) no-repeat 16px 50%; }

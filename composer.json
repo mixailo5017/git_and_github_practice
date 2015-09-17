@@ -1,0 +1,15 @@
+{
+    "require": {
+        "vlucas/phpdotenv": "~1.1"
+    },
+    "require-dev": {
+        "codeception/codeception": "*",
+        "fzaninotto/faker": "1.5.*@dev"
+    },
+    "autoload": {
+      "files": [
+        ".app/helpers.php",
+        ".app/libraries/Matches_lib.php"
+      ]
+    }
+}

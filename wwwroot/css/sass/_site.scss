@@ -1,0 +1,47 @@
+$layout: "/assets/images/layout/";
+$home: "/assets/images/home/";
+$sub: "/assets/images/sub/";
+$fonts: "/assets/fonts/";
+$temp: "/assets/images/temp/";
+$img-root: "/images/";
+
+//global font
+$global-font: "Open Sans", sans-serif;
+$arial: "Arial", "Helvetica", sans-serif;
+
+//$site :"../images/site/";
+$site :"/images/site/";
+
+//$icons :"../images/icons/";
+$icons :"/images/icons/";
+$maps: "/images/map/";
+
+// Create global variables
+$base_width:0;
+$number_of_columns:0;
+$gutter_size:0;
+
+@mixin base{
+	$base_width: 984;
+	$number_of_columns: 12;
+	$gutter_size:7;
+}
+
+@mixin grade($color1, $color2){
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -o-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -ms-linear-gradient(top, $color1 0%,$color2 100%);
+	background: linear-gradient(to bottom, $color1 0%,$color2 100%);
+}
+
+.content {
+  width: 965px;
+  margin: 0 auto;
+}
+
+/*color variables*/
+$base: #40a7e2; //rgba 64, 167, 226
+$base_btn: #7bc365; //rgba 123, 195, 101 color //#5bcd64 old green
+$base_btn_dark: #2c8258; //rgba 44, 130, 88

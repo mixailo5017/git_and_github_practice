@@ -1,0 +1,22 @@
+.lang_french {
+  .permissions_block select {
+    width: 181px;
+  }
+
+  #header_nav{
+    left:172px;
+  }
+}
+
+.dark_green, .btn.dark_green {
+  @include box-shadow(inset 0px 1px 0px 0px #CBF7C5);
+  background-color: $base_btn;
+  border-radius: 3px;
+  border: 1px solid darken($base_btn, 30%);
+  display: inline-block;
+  color: darken($base_btn, 30%) !important;
+  font-family: arial; font-size: 12px; font-weight: bold;
+  padding: 7px 24px; text-decoration: none; text-shadow: 1px 1px 1px #B0EEA7;
+  &:hover { background-color: lighten($base_btn, 10%); }
+  &:active { position: relative; top: 1px; }
+}

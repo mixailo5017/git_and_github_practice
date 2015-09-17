@@ -1,0 +1,32 @@
+.lang_portuguese {
+	#header_nav{
+		left:175px;
+	}
+	#col5 {
+  // 		#new_project label {
+	 //  		width: 120px;
+		// }
+		// input.light_green {
+		// 	margin-left: 140px;
+		// }
+
+		label {
+			line-height: 1.2; padding-top: 8px;
+		}
+
+		.errormsg {
+			label {
+				padding-top:0;
+			}
+		}
+
+		label[for*="org_em"] {
+			padding-top: 0;
+		}
+
+		#title_input {
+			width: 530px !important;
+		}
+	}
+}
+

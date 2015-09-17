@@ -1,0 +1,59 @@
+<?php
+
+$lang['js']['SearchNoProject'] = 'Il n\'y a pas de projets qui correspondent &agrave; vos crit&egrave;res de recherche.';
+$lang['js']['EmailReq'] = 'Email est requis.';
+$lang['js']['EmailNotValid'] = 'l\'adresse email n\'est pas valide';
+$lang['js']['EnterValidEmail'] = 'S\'il vous pla&icirc;t, entrer une adresse email valide';
+$lang['js']['FirstNameReq'] = 'Pr&eacute;nom est requis.';
+$lang['js']['OrganizationReq'] = 'Nom de l\'organisation est n&eacute;cessaire.';
+$lang['js']['PasswordReq'] = 'Mot de passe est requis.';
+$lang['js']['Passwordatleast'] = 'Mot de passe doit contenir au moins 6 caract&egrave;res.';
+$lang['js']['ConfPassReq'] = 'La confirmation du mot de passe est n&eacute;cessaire.';
+$lang['js']['ConfPassatleast'] = 'Mot de passe doit contenir au moins 6 caract&egrave;res.';
+$lang['js']['EnterSamePass'] = 'Entrez le m&ecirc;me mot de passe comme ci-dessus';
+$lang['js']['PhotoReq'] = 'Le champ de la photo est n&eacute;cessaire.';
+$lang['js']['VideoReq'] = 'Le domaine de la vid&eacute;o est n&eacute;cessaire.';
+$lang['js']['VideoUrlNotValid'] = 'L\'URL de la vid&eacute;o n\'est pas valide.';
+$lang['js']['FirstNameReq'] = 'Champ Pr&eacute;nom est n&eacute;cessaire .';
+$lang['js']['LastNameReq'] = 'Champ Nom est n&eacute;cessaire .';
+$lang['js']['TitleReq'] = 'Champ Titre est n&eacute;cessaire .';
+$lang['js']['OrganizationFieldReq'] = 'Domaine de l\'organisation est n&eacute;cessaire.';
+$lang['js']['UniversityReq'] = 'Champ Nom de Universit&eacute; est n&eacute;cessaire.';
+$lang['js']['DegreeReq'] = 'Champ Degr&eacute; est n&eacute;cessaire.';
+$lang['js']['MajorReq'] = 'Champ Majeure est n&eacute;cessaire.';
+$lang['js']['DescriptionReq'] = 'Description est n&eacute;cessaire.';
+$lang['js']['Desc200'] = 'La description doit contenir moins de 200 caract&egrave;res.';
+$lang['js']['KeywordReq'] = 'Mots-cl&eacute;s est n&eacute;cessaire.';
+$lang['js']['CountryReq'] = 'Pays est n&eacute;cessaire.';
+$lang['js']['LocationReq'] = 'Situation est n&eacute;cessaire.';
+$lang['js']['SectorReq'] = 'Secteur est n&eacute;cessaire.';
+$lang['js']['SubSecReq'] = 'Sous-secteur est n&eacute;cessaire.';
+$lang['js']['BudgetReq'] = 'Budget Total est n&eacute;cessaire.';
+$lang['js']['FinancialReq'] = 'Structure Financi&egrave;re est n&eacute;cessaire.';
+$lang['js']['NameReq'] = 'Nom est obligatoire.';
+$lang['js']['RoleReq'] = 'R&ocirc;le est n&eacute;cessaire.';
+$lang['js']['ShowLess'] = 'Voir moins';
+$lang['js']['ShowMore'] = 'Voir plus';
+$lang['js']['CantSend'] = 'Vous ne pouvez pas envoyer un message &agrave; vous-m&ecirc;me';
+$lang['js']['AreYouSure'] = '&ecirc;tes-vous s&ucirc;r';
+$lang['js']['Yes'] = 'Oui';
+$lang['js']['No'] = 'Non';
+$lang['js']['Delete'] = 'Effacer';
+$lang['js']['Cancel'] = 'Annuler';
+$lang['js']['Noresultsmatched'] = 'Pas de r&eacute;sultats assortis';
+$lang['js']['CompanyReq'] = 'Champ Entreprise est n&eacute;cessaire';
+$lang['js']['Browse'] = 'Naviguer';
+$lang['js']['NoFileSelected'] = 'Aucun fichier s&eacute;lectionn&eacute;...';
+
+$lang['js']['EditProjectLocation']  = "Edit project location";
+$lang['js']['DragToSetLocation']    = "Drag to set location";
+$lang['js']['SaveProjectLocation']  = "Save project location";
+$lang['js']['Save']                 = "Save";
+$lang['js']['ErrorFetchingAddress'] = "Error fetching address";
+$lang['js']['Saved']                = "Saved";
+
+$lang['js']['follow'] = 'Suivre';
+$lang['js']['unfollow'] = 'Se désabonner';
+$lang['js']['following'] = 'Abonné';
+
+$lang['js']['RateExpert'] = 'Évaluez cet expert';

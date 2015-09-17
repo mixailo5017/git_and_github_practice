@@ -1,0 +1,372 @@
+
+/* .m_project */
+// <article class="m_project">
+//     <div class="image">
+//         <div class="image_wrap">
+//             <span class="number"><?php echo $project_count ?></span>
+//             <img src="<?php echo project_image($project['projectphoto']) ?>" alt="<?php echo $project['projectname'] . "'s photo" ?>">
+//         </div>
+//         <span class="ps_<?php echo project_stage_class($project['stage']) ?>"></span>
+//         <span class="price">$<?php echo $project['totalbudget'] ?>MM</span>
+//     </div>
+//     <div class="content">
+//         <h3 class="shadow my_vip_header h3"><?php echo $project['projectname'] ?></h3>
+//         <span class="type <?php echo project_sector_class($project['sector']) ?>"><?php echo ucfirst($project['sector']) ?></span>
+//     </div>
+// </article>
+$m_project_width:161;
+$m_project_image_width:62;
+$m_project_image_mr:4;
+$m_project_content_width:94;
+.m_project{@extend .clear_fix; border-bottom:1px solid #373b43; border-bottom: 1px solid rgba(#373b43, 0.1); padding-bottom:15px; margin-bottom:15px;
+  .image{width:pw($m_project_image_width, $m_project_width); margin-right:pw($m_project_image_mr, $m_project_width); float:left;}
+  .image_wrap{position:relative;
+    .number{color: #000;@include rem(1); background: #FFF;position: absolute;z-index: 2;display: inline-block;padding: 0 4px; }
+    img{@extend .img_wrap;}
+  }
+  .price{display:block;color: #373b43; @include rem(1.1); font-weight: bold;}
+  .content{width:pw($m_project_content_width, $m_project_width); float:left; }
+}
+
+//#col3 width
+$m_col3_width:208;
+#col3 {
+  .m_project {
+    .image {
+      width: pw($m_project_image_width, $m_col3_width);
+    }
+
+    &:last-child {
+      margin-bottom: 0; padding-bottom: 0; border-bottom: 0;
+    }
+  }
+}
+
+//  <li class="m_person">
+//     <a href="/expertise/<?php echo $expert['uid'] ?>" class="image">
+//         <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $fullname ?>'s photo">
+//     </a>
+//     <p>
+//         <a href="/expertise/<?php echo $expert['uid'] ?>"><?php echo $fullname ?></a>
+//         <br><span class="title"><?php echo $expert['title'] ?></span>
+//         <br><span class="title"><?php echo $expert['organization'] ?></span>
+//     </p>
+// </li>
+
+$m_person_width:161;
+$m_person_image_width:47;
+$m_person_image_mr:4;
+$m_person_content_width:110;
+.m_person{@extend .clear_fix; border-bottom:1px solid #373b43; border-bottom: 1px solid rgba(#373b43, 0.1); padding-bottom:15px; margin-bottom:15px;
+  .image{width:pw($m_person_image_width, $m_person_width); margin-right:pw($m_person_image_mr, $m_person_width); float:left; display:block;
+    img{@extend .img_wrap; width:41px;}
+  }
+
+
+  .title{display:block;color: #373b43;@include rem(1.1); line-height:1.2;}
+  .content{width:pw($m_person_content_width, $m_person_width); float:left; }
+}
+
+
+// <section class="updates">
+//   <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipUpdatesTitle') ?></h2>
+
+//   <ul class="updates">
+//       <li class="update">
+//           <div class="image">
+//               <img src="/images/thumb-test.gif" class="thumb" alt="" />
+//           </div>
+//           <div class="content">
+//               <p><strong>North Metro Commuter Rail</strong> updated status: "you've been making great progress this railroad. I can't belive it." </p>
+//              <span class="time">21 hours ago</span>
+//           </div>
+//       </li>
+//   <li>
+ //     <?php echo form_open('updates/myvip', 'name="updates_view_more"'); ?>
+//   <input type="submit" class="view-more" value="<?php echo lang('ViewMore') ?>">
+//   <?php echo form_close() ?>
+//    </li>
+//   </ul>
+
+//
+// </section>
+
+$update_width:600;
+$update_image:45;
+$update_image_mr:17;
+$update_content:493;
+.white_box.comments ul.updates{border:none; border-radius:0;}
+
+.updates, .comments ul.updates{padding:0; border:1px solid rgb(55,59,67); border: 1px solid rgba(55,59,67,.17);border-radius: 4px 4px 0 0;background-color: #fff; clear:both; list-style:none;
+  .updates, .comments ul.updates{padding:0; border:none;border-radius:0;border-top:1px solid #d9d9db; position:relative; top:10px;}
+  .update{border-bottom:1px solid #d9d9db; padding:20px 23px; @extend .clear_fix;
+    &:hover{background-color: #EBF4FA;}
+    .update{
+      margin:auto -23px;background-color: #EBF4FA; padding:20px 23px 20px 87px;
+    }
+    .comment-wrapper{margin:auto -23px -20px; padding-bottom:20px;background-color: #EBF4FA;padding-left:87px; }
+    &:first-child{padding-top:28px; border-radius:4px 4px 0 0;}
+    &:last-child{border-bottom:none; padding-bottom:28px; border-radius:0;
+     .additional-comments{margin-bottom:-28px;}
+    }
+  }
+  .image{width:pw($update_image, $update_width); margin-right:pw($update_image_mr, $update_width); float:left;
+    img{@extend .img_wrap;}
+  }
+  .content{width:pw($update_content, $update_width); float:left;
+    p{margin:0; color: #373b43; @include rem(1.3); line-height:1.2; margin-bottom:5px;}
+    .time{color:#767676; font-style:italic;}
+    .time2{color:#767676; font-style:italic; display:block; text-align:right; margin-bottom:3px;}
+  }
+
+}
+
+
+.projects .comments ul.updates{padding:0;}
+.comments li .additional-comments{background:none; padding:0;}
+
+
+// <ul class="m_store">
+//     <?php foreach($store_items as $item) { ?>
+//     <li class="item">
+//         <a href="<?php echo $item['url'] ?>">
+//             <img src="<?php echo store_item_image($item['photo'], 50) ?>" alt="Store item's photo">
+//             <span><?php echo $item['title'] ?></span>
+//         </a>
+//     </li>
+//     <?php } ?>
+// </ul>
+
+.m_store{
+  .item{border-bottom:1px solid #d9d9db; padding:0 0 10px; margin-bottom:10px;
+    a{}
+    img{display:block; margin-bottom:5px;}
+  }
+}
+
+// <article class="m_video">
+//     <div class="image">
+//         <img src="/images/icons/video_icon6.png" alt="">
+//     </div>
+//     <div class="content">
+//         <h2>MyViP</h2>
+//         <p>Stay on top of developments in the projects you follow. See updates from the experts you track. Get personalized recommendations for experts whose experience matches your needs.</p>
+//         <a href="#" class="button dark_green">Watch the video</a>
+//     </div>
+// </article>
+
+.m_video{margin-bottom:40px;
+  .image, .content{display:inline-block; vertical-align:top;}
+  .image{width:145px; padding-top:20px; margin-right:20px;}
+  .content{width:575px;}
+  a.button {border: 1px solid darken($base_btn, 30%);}
+}
+
+//Public Facing
+.m-public-facing {
+  padding: 65px 0 30px;
+
+  section {
+    margin-bottom: 45px; padding-bottom: 45px;
+
+    &.bordered {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+  
+  .m-meta-container {
+    margin: 25px 0; position: relative;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+
+  h2 {
+    font-size: 16px; font-size: 1.6rem; font-weight: bold;
+    margin: 0 0 10px ;
+  }
+
+  p {
+    font-size: 14px; font-size: 1.4rem; margin-bottom: 25px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn-container {
+    margin-top: 40px;
+  }
+
+  .bttn {
+    display: block; text-decoration: none;
+    color: #fff; border-radius: 5px; text-align: center;
+    padding: 10px 20px; max-width: 120px; width: 20%;
+    font-size: 14px; font-size: 1.4rem;
+    background: $base;
+    -webkit-transition: all .125s linear;
+    transition: all .125s linear;
+
+    &:hover {
+      background: darken($base, 20%);
+    }
+
+    &.disabled {
+      cursor: default; background: #ccc;
+
+      &:hover {
+        background: #ccc;
+      }
+    }
+  }
+
+  .bttn + .bttn {
+    margin-top: 20px;
+  }
+
+  .btn-outlined {
+    border: 2px solid $base_btn;
+    color: $base_btn; background: none;
+    &:hover {
+      background: #fff; color: darken($base_btn, 20%); border-color: darken($base_btn, 20%);
+    }
+  }
+
+  .btn-filled {
+
+    background: $base_btn; border: 2px solid $base_btn;
+
+    &:hover {
+      background: darken($base_btn, 20%); border-color: darken($base_btn, 20%);
+    }
+  }
+
+  .m-thumb, .m-meta {
+    float: left;
+  }
+  .m-thumb {
+    width: 21%; margin-right: 4%;
+  }
+
+  .m-meta {
+    width: 75%;
+    h1 {
+      margin: 0 0 10px 0;
+      font-weight: bold; font-size: 26px; font-size: 2.6rem;
+    }
+
+    p {
+      margin-bottom: 5px; margin-top: 0;
+    }
+
+    .btn-container {
+      position: absolute; bottom: 0; width: 100%;
+    }
+  }
+
+  .m-join-cta {
+    background: #e9e9ed; padding: 5% 10%; text-align: center;
+    h2 {
+      font-size: 24px; font-size: 2.4rem; line-height: 1.2;
+    }
+
+    .bttn {
+      font-weight: bold; font-size: 20px; font-size: 2rem;
+      max-width: 200px; margin-right: 50px; padding: 16px 5%;
+      display: inline-block;
+    }
+  }
+}
+
+
+
+
+/* Pretty Photo */
+div.pp_default .pp_top,div.pp_default .pp_top .pp_middle,div.pp_default .pp_top .pp_left,div.pp_default .pp_top .pp_right,div.pp_default .pp_bottom,div.pp_default .pp_bottom .pp_left,div.pp_default .pp_bottom .pp_middle,div.pp_default .pp_bottom .pp_right{height:13px}
+div.pp_default .pp_top .pp_left{background:url(/images/prettyPhoto/default/sprite.png) -78px -93px no-repeat}
+div.pp_default .pp_top .pp_middle{background:url(/images/prettyPhoto/default/sprite_x.png) top left repeat-x}
+div.pp_default .pp_top .pp_right{background:url(/images/prettyPhoto/default/sprite.png) -112px -93px no-repeat}
+div.pp_default .pp_content .ppt{color:#f8f8f8}
+div.pp_default .pp_content_container .pp_left{background:url(/images/prettyPhoto/default/sprite_y.png) -7px 0 repeat-y;padding-left:13px}
+div.pp_default .pp_content_container .pp_right{background:url(/images/prettyPhoto/default/sprite_y.png) top right repeat-y;padding-right:13px}
+div.pp_default .pp_next:hover{background:url(/images/prettyPhoto/default/sprite_next.png) center right no-repeat;cursor:pointer}
+div.pp_default .pp_previous:hover{background:url(/images/prettyPhoto/default/sprite_prev.png) center left no-repeat;cursor:pointer}
+div.pp_default .pp_expand{background:url(/images/prettyPhoto/default/sprite.png) 0 -29px no-repeat;cursor:pointer;width:28px;height:28px}
+div.pp_default .pp_expand:hover{background:url(/images/prettyPhoto/default/sprite.png) 0 -56px no-repeat;cursor:pointer}
+div.pp_default .pp_contract{background:url(/images/prettyPhoto/default/sprite.png) 0 -84px no-repeat;cursor:pointer;width:28px;height:28px}
+div.pp_default .pp_contract:hover{background:url(/images/prettyPhoto/default/sprite.png) 0 -113px no-repeat;cursor:pointer}
+div.pp_default .pp_close{width:30px;height:30px;background:url(/images/prettyPhoto/default/sprite.png) 2px 1px no-repeat;cursor:pointer}
+div.pp_default .pp_gallery ul li a{background:url(/images/prettyPhoto/default/default_thumb.png) center center #f8f8f8;border:1px solid #aaa}
+div.pp_default .pp_social{margin-top:7px}
+div.pp_default .pp_gallery a.pp_arrow_previous,div.pp_default .pp_gallery a.pp_arrow_next{position:static;left:auto}
+div.pp_default .pp_nav .pp_play,div.pp_default .pp_nav .pp_pause{background:url(/images/prettyPhoto/default/sprite.png) -51px 1px no-repeat;height:30px;width:30px}
+div.pp_default .pp_nav .pp_pause{background-position:-51px -29px}
+div.pp_default a.pp_arrow_previous,div.pp_default a.pp_arrow_next{background:url(/images/prettyPhoto/default/sprite.png) -31px -3px no-repeat;height:20px;width:20px;margin:4px 0 0}
+div.pp_default a.pp_arrow_next{left:52px;background-position:-82px -3px}
+div.pp_default .pp_content_container .pp_details{margin-top:5px}
+div.pp_default .pp_nav{clear:none;height:30px;width:110px;position:relative}
+div.pp_default .pp_nav .currentTextHolder{font-family:Georgia;font-style:italic;color:#999;font-size:11px;left:75px;line-height:25px;position:absolute;top:2px;margin:0;padding:0 0 0 10px}
+div.pp_default .pp_close:hover,div.pp_default .pp_nav .pp_play:hover,div.pp_default .pp_nav .pp_pause:hover,div.pp_default .pp_arrow_next:hover,div.pp_default .pp_arrow_previous:hover{opacity:0.7}
+div.pp_default .pp_description{font-size:11px;font-weight:700;line-height:14px;margin:5px 50px 5px 0}
+div.pp_default .pp_bottom .pp_left{background:url(/images/prettyPhoto/default/sprite.png) -78px -127px no-repeat}
+div.pp_default .pp_bottom .pp_middle{background:url(/images/prettyPhoto/default/sprite_x.png) bottom left repeat-x}
+div.pp_default .pp_bottom .pp_right{background:url(/images/prettyPhoto/default/sprite.png) -112px -127px no-repeat}
+div.pp_default .pp_loaderIcon{background:url(/images/prettyPhoto/default/loader.gif) center center no-repeat}
+
+div.pp_pic_holder a:focus{outline:none}
+div.pp_overlay{background:#000;display:none;left:0;position:absolute;top:0;width:100%;z-index:9500}
+div.pp_pic_holder{display:none;position:absolute;width:100px;z-index:10000}
+.pp_content{height:40px;min-width:40px}
+* html .pp_content{width:40px}
+.pp_content_container{position:relative;text-align:left;width:100%}
+.pp_content_container .pp_left{padding-left:20px}
+.pp_content_container .pp_right{padding-right:20px}
+.pp_content_container .pp_details{float:left;margin:10px 0 2px}
+.pp_description{display:none;margin:0}
+.pp_social{float:left;margin:0; display:none;}
+.pp_social .facebook{float:left;margin-left:5px;width:55px;overflow:hidden}
+.pp_social .twitter{float:left}
+.pp_nav{clear:right;float:left;margin:3px 10px 0 0}
+.pp_nav p{float:left;white-space:nowrap;margin:2px 4px}
+.pp_nav .pp_play,.pp_nav .pp_pause{float:left;margin-right:4px;text-indent:-10000px}
+a.pp_arrow_previous,a.pp_arrow_next{display:block;float:left;height:15px;margin-top:3px;overflow:hidden;text-indent:-10000px;width:14px}
+.pp_hoverContainer{position:absolute;top:0;width:100%;z-index:2000}
+.pp_gallery{display:none;left:50%;margin-top:-50px;position:absolute;z-index:10000}
+.pp_gallery div{float:left;overflow:hidden;position:relative}
+.pp_gallery ul{float:left;height:35px;position:relative;white-space:nowrap;margin:0 0 0 5px;padding:0}
+.pp_gallery ul a{border:1px rgba(0,0,0,0.5) solid;display:block;float:left;height:33px;overflow:hidden}
+.pp_gallery ul a img{border:0}
+.pp_gallery li{display:block;float:left;margin:0 5px 0 0;padding:0}
+.pp_gallery li.default a{background:url(/images/prettyPhoto/facebook/default_thumbnail.gif) 0 0 no-repeat;display:block;height:33px;width:50px}
+.pp_gallery .pp_arrow_previous,.pp_gallery .pp_arrow_next{margin-top:7px!important}
+a.pp_next{background:url(/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:right;height:100%;text-indent:-10000px;width:49%}
+a.pp_previous{background:url(/images/prettyPhoto/light_rounded/btnNext.png) 10000px 10000px no-repeat;display:block;float:left;height:100%;text-indent:-10000px;width:49%}
+a.pp_expand,a.pp_contract{cursor:pointer;display:none;height:20px;position:absolute;right:30px;text-indent:-10000px;top:10px;width:20px;z-index:20000}
+a.pp_close{position:absolute;right:0;top:0;display:block;line-height:22px;text-indent:-10000px}
+.pp_loaderIcon{display:block;height:24px;left:50%;position:absolute;top:50%;width:24px;margin:-12px 0 0 -12px}
+#pp_full_res{line-height:1!important}
+#pp_full_res .pp_inline{text-align:left}
+#pp_full_res .pp_inline p{margin:0 0 15px}
+div.ppt{color:#fff;display:none;font-size:17px;z-index:9999;margin:0 0 5px 15px}
+div.pp_default .pp_content,div.light_rounded .pp_content{background-color:#fff}
+div.pp_default #pp_full_res .pp_inline,div.light_rounded .pp_content .ppt,div.light_rounded #pp_full_res .pp_inline,div.light_square .pp_content .ppt,div.light_square #pp_full_res .pp_inline,div.facebook .pp_content .ppt,div.facebook #pp_full_res .pp_inline{color:#000}
+div.pp_default .pp_gallery ul li a:hover,div.pp_default .pp_gallery ul li.selected a,.pp_gallery ul a:hover,.pp_gallery li.selected a{border-color:#fff}
+div.pp_default .pp_details,div.light_rounded .pp_details,div.dark_rounded .pp_details,div.dark_square .pp_details,div.light_square .pp_details,div.facebook .pp_details{position:relative}
+div.light_rounded .pp_top .pp_middle,div.light_rounded .pp_content_container .pp_left,div.light_rounded .pp_content_container .pp_right,div.light_rounded .pp_bottom .pp_middle,div.light_square .pp_left,div.light_square .pp_middle,div.light_square .pp_right,div.light_square .pp_content,div.facebook .pp_content{background:#fff}
+div.light_rounded .pp_description,div.light_square .pp_description{margin-right:85px}
+div.light_rounded .pp_gallery a.pp_arrow_previous,div.light_rounded .pp_gallery a.pp_arrow_next,div.dark_rounded .pp_gallery a.pp_arrow_previous,div.dark_rounded .pp_gallery a.pp_arrow_next,div.dark_square .pp_gallery a.pp_arrow_previous,div.dark_square .pp_gallery a.pp_arrow_next,div.light_square .pp_gallery a.pp_arrow_previous,div.light_square .pp_gallery a.pp_arrow_next{margin-top:12px!important}
+div.light_rounded .pp_arrow_previous.disabled,div.dark_rounded .pp_arrow_previous.disabled,div.dark_square .pp_arrow_previous.disabled,div.light_square .pp_arrow_previous.disabled{background-position:0 -87px;cursor:default}
+div.light_rounded .pp_arrow_next.disabled,div.dark_rounded .pp_arrow_next.disabled,div.dark_square .pp_arrow_next.disabled,div.light_square .pp_arrow_next.disabled{background-position:-22px -87px;cursor:default}
+div.light_rounded .pp_loaderIcon,div.light_square .pp_loaderIcon{background:url(/images/prettyPhoto/light_rounded/loader.gif) center center no-repeat}
+div.dark_rounded .pp_top .pp_middle,div.dark_rounded .pp_content,div.dark_rounded .pp_bottom .pp_middle{background:url(/images/prettyPhoto/dark_rounded/contentPattern.png) top left repeat}
+div.dark_rounded .currentTextHolder,div.dark_square .currentTextHolder{color:#c4c4c4}
+div.dark_rounded #pp_full_res .pp_inline,div.dark_square #pp_full_res .pp_inline{color:#fff}
+.pp_top,.pp_bottom{height:20px;position:relative}
+* html .pp_top,* html .pp_bottom{padding:0 20px}
+.pp_top .pp_left,.pp_bottom .pp_left{height:20px;left:0;position:absolute;width:20px}
+.pp_top .pp_middle,.pp_bottom .pp_middle{height:20px;left:20px;position:absolute;right:20px}
+* html .pp_top .pp_middle,* html .pp_bottom .pp_middle{left:0;position:static}
+.pp_top .pp_right,.pp_bottom .pp_right{height:20px;left:auto;position:absolute;right:0;top:0;width:20px}
+.pp_fade,.pp_gallery li.default a img{display:none}

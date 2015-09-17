@@ -1,0 +1,20 @@
+﻿.bodywrapper { background: url(../images/headerbg/btl.png) repeat-x center top; }
+.topheader { background-image: url(../images/headerbg/bluetrans2.png); background-color: transparent; border-bottom: 0; }
+.header { background-image: url(../images/headerbg/bluetrans.png); background-color: transparent; }
+/* Changes start */
+table a{color:#FB9337;}
+.pageheader .navoptions a:hover,.pageheader .navoptions .here a
+{
+	background: none repeat scroll 0 0 #FB9337;
+    border: 1px solid #de4204;
+    border-radius: 2px 2px 2px 2px;
+    box-shadow: 0 1px 0 #FFFFFF;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 21px;
+    padding: 5px 15px;
+}
+
+/* Changes end */

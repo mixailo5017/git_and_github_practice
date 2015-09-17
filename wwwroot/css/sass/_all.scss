@@ -1,0 +1,62 @@
+// TEMP FILE TO HOLD ALL CSS CHANGE FOR ALL LANGS
+
+.bold { font-weight: bold; }
+
+.underline { text-decoration: underline; }
+
+.italic { font-style: italic; }
+
+@import "concierge";
+@import "projects";
+@import "header.scss";
+@import "breadcrumbs.scss";
+
+@import "_font-awesome/font-awesome";
+
+// GLOBAL
+.lang_flags {
+	position: relative;
+	div {
+		position:fixed;
+		top:100px;
+		left:0px;
+		margin-left:8px;
+		z-index: 510;
+		ul {
+
+			list-style-type: none;
+			margin: 0 !important;
+			padding: 2px;
+			li a{
+				background: #aaa !important;
+				color: white;
+				display: block;
+				font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+				font-size: 18px;
+				font-weight: bold;
+				height: 22px;
+				line-height: 19px;
+				margin: 1px;padding: 0;
+				text-align: center;
+				text-decoration: none; width: 28px;
+				padding:3px;
+				&.firstAnchor{ border-radius: 4px 4px 0 0; }
+				&.lastAnchor{ border-radius: 0 0 4px 4px; }
+				&:hover, &.active{ background:  #787878 !important; }
+			}
+		}
+	}
+}
+
+
+#forum .map_filter .form_control {
+	line-height: 35px;
+	height: 35px;
+	margin-top: -8px;
+	.select_list .select_control p {
+		line-height: 35px;
+	}
+	.select_list ul {
+		top: 35px;
+	}
+}

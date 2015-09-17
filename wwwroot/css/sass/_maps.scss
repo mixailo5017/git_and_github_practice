@@ -1,0 +1,716 @@
+// Boom sprites, what NOW!@?
+// To use these just apply map-{iconname} to the element and set it's height/width
+// You can also use an @include statement. Look up the docs.
+@import "map/*.png";
+@include all-map-sprites;
+
+/* New Maps */
+
+#map_search {
+  // overflow-y: hidden;
+  #content {margin-bottom: 0;}
+}
+
+h1.new_map{@include rem(1.7); color:#62666e; padding:20px 17px 4px;
+  .alt{color:#a3a3a3;}
+}
+
+.map_filter{
+  height: 42px; 
+  padding: 0 0 0 30px;
+  border: 1px solid #363B42;
+  border-radius: 3px 3px 0 0;
+  position: relative; 
+  // Z-index of nav dropdown for account is 600
+  z-index: 500;
+  background-color: #585F6C;
+  .form_row{}
+  .show_me,
+  .word{
+    @include rem(1.3);
+    color:#FFF;
+    float: left;
+    line-height: 42px;
+  }
+
+
+  .input_group {
+    float: left;
+    margin-right: 25px;
+    @include clearfix;
+
+  }
+
+  .pe_toggle {
+    .form_control {
+      padding-right: 0;
+    }
+  }
+
+  .budget {
+    margin-right: 0;
+    .form_control {
+      width: 120px;
+    }
+  }
+
+  .form_control {
+    background-color: #626A79;
+    position: relative;
+    vertical-align: middle;
+    width: 161px;
+    display: block;
+    float: left;
+    line-height: 42px;
+    height: 42px;
+    margin-left: 7px;
+    padding: 0 7px;
+
+
+    select {
+      width: 140px;
+      margin-bottom: 5px;
+      display: none;
+    }
+
+    .select_list {
+      cursor: pointer;
+
+      .select_control {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: #FFF;
+        background-color: #626A79;
+        p {
+          //line-height: 42px;
+          line-height: 1;
+          padding-top:16px;
+          padding-left: 8px;
+          margin: 0;
+          .map-transport-circle,
+          .map-energy-circle,
+          .map-water-circle,
+          .map-oil-gas-circle,
+          .map-information-communication-technologies-circle,
+          .map-social-circle,
+          .map-mining-related-circle,
+          .map-real-estate-circle,
+          .map-industrial-circle,
+          .map-tourism-related-circle,
+          .map-logistics-circle,
+          .map-urban-planning-design-circle,
+          .map-urban-design-planning-circle {
+            height: 12px;
+            width: 12px;
+            //margin: 14px 8px 0 0;
+            margin:0 8px 0 0;
+            padding-bottom:1px;
+            display: block;
+            float: left;
+          }
+        }
+        .map-dropdown {
+          height: 8px;
+          width: 12px;
+          position: absolute;
+          top: 17px;
+          right: 4px;
+        }
+      }
+
+      ul {
+        position: absolute;
+        left: -1px;
+        right: -1px;
+        top: 42px;
+        background-color: #626A79;
+        border: 1px solid #363B42;
+        border-top: none;
+        z-index: 999;
+        border-radius: 0 0 3px 3px;
+        color: #FFF;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+        li {
+          //line-height: 29px;
+          line-height:1;
+
+          font-size: 12px;
+          cursor: pointer;
+          padding:9px 0 8px 8px;
+          &.active, &:hover {
+            background-color: #585F6C;
+            color: #A8EAE2;
+          }
+
+          .map-transport-circle,
+          .map-energy-circle,
+          .map-water-circle,
+          .map-oil-gas-circle,
+          .map-information-communication-technologies-circle,
+          .map-social-circle,
+          .map-mining-related-circle,
+          .map-real-estate-circle,
+          .map-industrial-circle,
+          .map-tourism-related-circle,
+          .map-logistics-circle,
+          .map-urban-planning-design-circle,
+          .map-urban-design-planning-circle {
+            height: 12px;
+            width: 12px;
+            float: left;
+            display: block;
+            margin: -1px 8px 5px 0;  
+          }
+        }
+      }
+    }
+
+    &.open ul {
+      display: block;
+    }
+  }
+
+  input[type="radio"]{margin-right:4px;
+    &+label{@include rem(1.3); color:#FFF; margin-right:8px;}
+  }
+
+  input.light_green{vertical-align:middle; margin-bottom:0; position:relative; top:3px;}
+}
+
+.toggle_projects,
+.toggle_experts {
+  display:none;
+}
+
+
+// Classes for showing and hiding content as it relates to the state of the map
+.show_projects{
+  #map_projects{display:block;}
+  #map_experts{display:none;}
+  .map_options .error_msg { display: none; }
+  .map_options .loader { display: none; }
+
+  .leaflet-marker-icon, .leaflet-marker-shadow{
+    &.expert_pin{display:none;}
+  }
+  .toggle_projects{display:inline;}
+}
+
+.show_experts{
+  #map_projects{display:none;}
+  #map_experts{display:block;}
+  .map_options .error_msg { display: none; }
+  .map_options .loader { display: none; }
+
+  .leaflet-marker-icon, .leaflet-marker-shadow{
+    &.expert_pin{display:block;}
+    &.project_pin{display:none;}
+  }
+  .toggle_experts{display:inline;}
+}
+
+.show_loading {
+  #map_projects{display:none;}
+  #map_experts{display:none;}
+  .map_options .error_msg { display: none; }
+  .map_options .loader { display: block; }
+  // .leaflet-marker-icon, .leaflet-marker-shadow{
+  //   &.expert_pin{display:none;}
+  //   &.project_pin{display:none;}
+  // }
+}
+
+.show_no_results {
+  #map_projects{display:none;}
+  #map_experts{display:none;}
+  .map_options .error_msg { display: block; }
+  .map_options .loader { display: none; }
+}
+
+.project_pin{}
+// .leaflet-control-attribution{display:none !important;}
+#map_experts{
+  h2, .title{color:#5f6267; @include rem(1.3);}
+  a{
+    &:hover, &:focus{
+      h2, .title{color:#FFF;}
+    }
+  }
+
+}
+
+div.new_map{background-color: #f9f9f9; margin-top: 20px;
+  .result_info_top{border-bottom: 1px solid rgba(#ddd, 0.4);box-shadow: 0 3px 0 rgba(0,0,0,.25); padding:16px 0 15px 27px; z-index:2;
+    .buttons{top:16px;}
+  }
+}
+
+.map_options { float:left; overflow-y: scroll; padding: 10px 7px 10px 14px; width:253px; height: 100%;
+  article{border-bottom:1px solid #E0E0E0; padding-bottom:7px; margin-bottom:16px;}
+  .error_msg { text-align: center; display: none;
+    p {
+      padding: 0 25px;
+    }
+  }
+  .loader { text-align: center; display: none;}
+  .image{position:relative;display:inline-block; vertical-align:top;
+    .number{color: #000;@include rem(1); background:#FFF; position:absolute; z-index:2; display:inline-block; padding:0 4px;}
+    img{color:#656565; line-height: 1em; @include rem(1); word-wrap: break-word; overflow: hidden; background:#FFF; display:block;padding:3px; border-radius: 3px;@include box-shadow(0 1px 1px 0 rgba(0,0,0,.22)); margin-bottom:5px;}
+
+  }
+  .content{ padding-left:6px;
+    width:160px; display:inline-block; vertical-align:top;
+    h2{@include rem(1.2); color:#000; line-height:1.2; margin:0; font-weight:bold;}
+    .price{float:right;color: #656565;@include rem(1.1); font-weight:bold; margin-right:9px;}
+    // .type{color: #656565;@include rem(1.1); padding:2px 0 10px 16px;
+    //   &.transport,&.transportation{background:url(#{$maps}project_icon_transportation.png) no-repeat 0 2px;}
+    //   &.water{background:url(#{$maps}project_icon_water.png) no-repeat;}
+    //   &.mining_related,&.mining{background:url(#{$maps}project_icon_mining.png) no-repeat;}
+    //   &.information_communication_technologies,&.comm{background:url(#{$maps}project_icon_comm.png) no-repeat 0 -2px;}
+    //   &.energy{background:url(#{$maps}project_icon_energy.png) no-repeat 0px -2px;}
+    //   &.social{background:url(#{$maps}project_icon_social.png) no-repeat -2px -1px;}
+    //   &.oilgas,&.oil_gas{background:url(#{$maps}project_icon_oil_gas.png) no-repeat;}
+    // }
+    .title{@include rem(1.1); color:#000; line-height:1; display:block;}
+ 
+  } 
+
+  a{text-decoration:none;display:block;margin:-16px -17px 0 -25px; padding:16px 17px 0 25px;
+    &:hover, &:focus{background:#4d4d4d;
+      h2, .type, .price{color:#FFF;}
+      article{border-bottom:1px solid #4d4d4d;}
+      .type{
+        &.transport,&.transportation{background-image:url(#{$maps}project_icon_transportation_hover.png)}
+        &.water{background-image:url(#{$maps}project_icon_water_hover.png)}
+        &.mining_related,&.mining{background-image:url(#{$maps}project_icon_mining_hover.png)}
+        &.information_communication_technologies,&.comm{background-image:url(#{$maps}project_icon_comm_hover.png)}
+        &.energy{background-image:url(#{$maps}project_icon_energy_hover.png)}
+        &.social{background-image:url(#{$maps}project_icon_social_hover.png)}
+        &.oilgas,&.oil_gas, &.map-oil-gas-circle{background-image:url(#{$maps}project_icon_oil_gas_hover.png)}
+        &.real_estate{background-image:url(#{$maps}project_icon_real_estate_hover.png)}
+        &.industrial{background-image:url(#{$maps}project_icon_industrial_hover.png)}
+        &.tourism_related{background-image:url(#{$maps}project_icon_tourism_related_hover.png)}
+        &.logistics{background-image:url(#{$maps}project_icon_logistics_hover.png)}
+        &.urban_design_planning,&.urban_planning_design, &.urban-planning-design,&.urban-design-planning{background-image:url(#{$maps}project_icon_urban_planning_design_hover.png)}
+      }
+      .title{color:#FFF;} 
+    }
+    &:last-child{
+      article{border:none;}
+    }
+  }
+
+  &.projects h2 {
+    margin-bottom: 8px;
+  }
+}
+.ps_1, .ps_2, .ps_3, .ps_4, .ps_5, .ps_6{display:inline-block; text-indent:-9999px; width:62px; height:13px;}
+.ps_1{background:url(#{$maps}project_stage_1.png) no-repeat;}
+.ps_2{background:url(#{$maps}project_stage_2.png) no-repeat;}
+.ps_3{background:url(#{$maps}project_stage_3.png) no-repeat;}
+.ps_4{background:url(#{$maps}project_stage_4.png) no-repeat;}
+.ps_5{background:url(#{$maps}project_stage_5.png) no-repeat;}
+.ps_6{background:url(#{$maps}project_stage_6.png) no-repeat;}
+
+.p_e_map{
+  width:689px; height:913px; float:left; background:#EEE;
+}
+
+.project_pin, .expert_pin{
+  // background:url(#{$maps}map_pin_empty.png) no-repeat;
+
+  background: #E6E5E6;
+  -moz-box-shadow:    0px 0px 2px 0px rgba(0,0,0,0.50), 0px 0px 2px 0px #D3D2D2, inset 0px 0px 0px 0px #979797, inset 1px 1px 1px 0px rgba(255,255,255,0.60);
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.50), 0px 0px 2px 0px #D3D2D2, inset 0px 0px 0px 0px #979797, inset 1px 1px 1px 0px rgba(255,255,255,0.60);
+  box-shadow:         0px 0px 2px 0px rgba(0,0,0,0.50), 0px 0px 2px 0px #D3D2D2, inset 0px 0px 0px 0px #979797, inset 1px 1px 1px 0px rgba(255,255,255,0.60);
+
+  width:38px;
+  height:38px;
+  border-radius: 50%;
+
+  .project_stage{position:absolute; top:-15px; left:3px;}
+  .budget{color:#000; @include rem(1.1); font-weight:bold; display:block; text-align:center; padding-top:40px;}
+  .lightning, .energy{background:url(#{$maps}pin_lightning.png) no-repeat 50% 50%;}
+  .water{background:url(#{$maps}pin_water.png) no-repeat 50% 50%;}
+
+/*
+transport
+energy
+water
+oilgas
+information_communication_technologies
+social
+mining_related
+urban_design_planning
+ */
+
+  .transport,.transportation{background:url(#{$maps}pin_transport.png) no-repeat 50% 50%;}
+  .mining_related,.mining{background:url(#{$maps}pin_mining.png) no-repeat 50% 50%}
+  .information_communication_technologies,.comm{background:url(#{$maps}pin_comm.png) no-repeat 50% 50%}
+  .social{background:url(#{$maps}pin_social.png) no-repeat 50% 50%}
+  .oilgas,.oil_gas, .map-oil-gas-circle{background:url(#{$maps}pin_oil.png) no-repeat 50% 50%;}
+  .urban_design_planning{background:url(#{$maps}pin_urban_design_planning.png) no-repeat 50% 50%;}
+
+  .number{position:absolute; left:-6px; top:-6px; width: 19px;height: 19px; z-index:2; color:#FFF; font-family:arial; font-weight:bold; @include rem(1.2); text-align:center;border: 1px solid #b3b3b5;border-radius: 10px;background-color: #353b45; line-height: 20px;}
+  &:hover, &.active {
+    // background:url(#{$maps}empty_pin_hover.png) no-repeat;
+    background-color: #5A5B60;
+    .budget{color:#FFF;}
+    // .number{background-color: #e9e9e9; color:#000;}
+  }
+}
+
+.expert_pin{position:relative; clear:both;
+  img{border-radius:180px; margin:auto; position:relative; top:3px; display:block; max-width:51px}
+}
+
+.numberedMarker {
+  .marker {
+    border-radius: 50%;
+    // border: 3px solid transparent;
+    color: #2e2e2e;
+    background-color: #E6E5E6;
+    font-weight: bold;
+    text-align: center;
+    @include rem(1.3);
+    line-height: 24px;
+    width: 24px;
+    -moz-box-shadow:    0px 0px 2px 0px rgba(0,0,0,0.50), 0px 0px 2px 0px #D3D2D2, inset 0px 0px 0px 0px #979797, inset 1px 1px 1px 0px rgba(255,255,255,0.60);
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.50), 0px 0px 2px 0px #D3D2D2, inset 0px 0px 0px 0px #979797, inset 1px 1px 1px 0px rgba(255,255,255,0.60);
+    box-shadow:         0px 0px 2px 0px rgba(0,0,0,0.50), 0px 0px 2px 0px #D3D2D2, inset 0px 0px 0px 0px #979797, inset 1px 1px 1px 0px rgba(255,255,255,0.60);
+  }
+
+  .number {
+    left: -2px;
+    top: 3px;
+    z-index: 2;
+  }
+
+  .transport {
+    background-color: #98CC63;
+    color: #FFF;
+    &:hover {
+      border-color: #98CC63;
+    }
+  }
+  .energy {
+    background-color: #FF992E;
+    color: #FFF;
+    &:hover {
+      border-color: #FF992E;
+    }
+  }
+  .water {
+    background-color: #2D99CD;
+    color: #FFF;
+    &:hover {
+      border-color: #2D99CD;
+    }
+  }
+  .oil_gas, .map-oil-gas-circle {
+    background-color: #669964;
+    color: #FFF;
+    &:hover {
+      border-color: #669964;
+    }
+  }
+  .information_communication_technologies {
+    background-color: #CE0701;
+    color: #FFF;
+    &:hover {
+      border-color: #CE0701;
+    }
+  }
+  .social {
+    background-color: #344691;
+    color: #FFF;
+    &:hover {
+      border-color: #344691;
+    }
+  }
+  .mining_related {
+    background-color: #670367;
+    color: #FFF;
+    &:hover {
+      border-color: #670367;
+    }
+  }
+
+  .real_estate {
+    background-color: #363636;
+    color: #FFF;
+    &:hover {
+      border-color: #363636;
+    }
+  }
+
+  .industrial {
+    background-color: #F7D065;
+    color: #FFF;
+    &:hover {
+      border-color: #F7D065;
+    }
+  }
+
+  .tourism_related {
+    background-color: #F48575;
+    color: #FFF;
+    &:hover {
+      border-color: #F48575;
+    }
+  }
+
+  .logistics { 
+    background-color: #445878; 
+    color: #FFF;
+    &:hover {
+      border-color: #445878;
+    }
+  }
+
+  .urban_planning_design {
+    background-color: #895100;
+    color: #FFF;
+    &:hover {
+      border-color: #895100;
+    }
+  }
+
+  &.active .marker, .marker:hover {
+    color: #2e2e2e;
+    background-color: #E6E5E6;
+  }
+
+}
+
+div.open_project, div.open_expert{position:absolute; bottom:-60px; left:-132px; display:none; z-index:9999;background:#FFF url(#{$maps}open_project_bg.png) repeat-y; width:331px; @include box-shadow(0 1px 1px rgba(0,0,0,.35)); clear:both;
+  button.close{z-index:9;position:absolute; right:5px; top:5px;color:#000; font-family:arial; font-weight:bold; @include rem(1.1); border: none;
+    &:hover, &:focus{background:#000; color:#FFF;}
+  }
+  .image {
+    width: 87px;
+    padding: 19px 15px;
+    float: left;
+    position: relative;
+    text-align: center;
+    img {
+      margin-bottom: 5px;
+    }
+    .stage {
+      line-height: 1;
+      display: block;
+      strong {
+        display: block;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .content {
+    width: 181px;
+    padding: 24px 15px 10px;
+    float: left;
+    position: relative;
+    h2 {
+      @include rem(1.6);
+      line-height: 1.2;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      font-weight: bold;
+    }
+    .title {
+      display: block;
+      line-height: 14px;
+    }
+  }
+  .location, .date-range, .dollars, .people {
+    @include rem(1.2);
+    display: block;
+    padding: 3px 0px 3px 20px;
+  }
+  .location {
+    background: url(#{$maps}map_pin.png) no-repeat 0 3px;
+  }
+  .date-range {
+    background: url(#{$maps}map_cal_1.png) no-repeat 0 5px;
+  }
+  .sponsor {
+    margin-top: 10px;
+    @include rem(1.2);
+    line-height: 1;
+    display: block;
+
+    strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  .number{
+    position: absolute;
+    margin: -10px 0 0 -10px;
+    width: 19px;
+    height: 19px;
+    background: #FFF !important;
+    color: #000;
+    font-family: arial;
+    font-weight: bold;
+    @include rem(1.2);
+    text-align: center;
+    border: 1px solid #b3b3b5;
+    border-radius: 10px;
+    &:hover, &:focus {
+      background:#FFF;
+    }
+  }
+  div.type {
+    background-color: #45474A;
+    color: #FFF;
+    @include rem(1.2);
+    padding: 16px 16px 16px 70px;
+
+    .price {
+      float: right;
+      color: #f6cf65;
+      font-weight: bold;
+    }
+
+    .sector {
+      display: block;
+      font-weight: bold;
+    }
+
+    p {
+      line-height: 1.1;
+      margin: 0;
+    }
+    &.energy {
+      background: #45474A url(#{$maps}lightning_large.png) no-repeat 16px 50%;
+    }
+    &.mining,&.mining_related {
+      background: #45474A url(#{$maps}mining_large.png) no-repeat 16px 50%;}
+    &.water{background:#45474A url(#{$maps}water_large.png) no-repeat 16px 50%;}
+    &.transport{background:#45474A url(#{$maps}transport_large.png) no-repeat 16px 50%;}
+    &.mining{background:#45474A url(#{$maps}mining_large.png) no-repeat 16px 50%}
+    &.comm, &.information_communication_technologies{background:#45474A url(#{$maps}comm_large.png) no-repeat 16px 50%}
+    &.social{background:#45474A url(#{$maps}social_large.png) no-repeat 16px 50%}
+    &.oil_gas, &.map-oil-gas-circle{background:#45474A url(#{$maps}oil_large.png) no-repeat 16px 50%}
+    &.real_estate{background:#45474A url(#{$maps}real_estate_large.png) no-repeat 10px 50%}
+    &.industrial{background:#45474A url(#{$maps}industrial_large.png) no-repeat 10px 50%}
+    &.tourism_related{background:#45474A url(#{$maps}tourism_related_large.png) no-repeat 10px 50%}
+    &.logistics{background:#45474A url(#{$maps}logistics_large.png) no-repeat 10px 50%}
+    &.urban_planning_design{background:#45474A url(#{$maps}urban_design_planning_large.png) no-repeat 10px 50%}
+  }
+  .view_expert,.view_project{position:relative;
+    a{display:block;color: #fff;@include rem(1.8);padding:20px;text-transform:uppercase; font-weight: bold;text-shadow: 0 1px 1px #1c4747;background:#74A9B9; text-align:center; text-decoration:none;
+      &:hover, &:focus{text-decoration:underline; }
+    }
+    .arrow{background:url(#{$maps}view_project_arrow.png) no-repeat 50% 0; width:100%; display:block; height:14px; position:absolute; bottom:-13px; }
+  }
+  .row{@extend .clear_fix;}
+}
+
+
+div.open_project {
+  .image {
+    padding-top: 24px;
+  }
+  .content h2 {margin-bottom: 10px;}
+}
+
+div.open_expert{
+  img{max-width:100%; border-radius:0;}
+  .c_info{display:block; margin-top:10px;}
+  .dollars, .people{padding:0 0 0 15px;}
+  .dollars{background:url(#{$maps}map_money.png) no-repeat 0 3px; }
+  .people{background:url(#{$maps}map_person.png) no-repeat 0 3px; }
+  p{line-height:1.1; margin:10px 0 0;
+    strong{display:block;}
+  }
+  div.type{
+    padding:8px 0;
+    span {
+      display:block;
+      width:33%;
+      float:left;
+      color:#FFF;
+      padding-top:60px;
+      text-align:center;
+      background-position:50% 10px;
+      background-repeat:no-repeat;
+      @include rem(1.1);
+
+      &.energy{background-image:url(#{$maps}lightning_large.png);}
+      &.mining,&.mining_related{background-image:url(#{$maps}mining_large.png);}
+      &.water{background-image:url(#{$maps}water_large.png);}
+      &.transport{background-image:url(#{$maps}transport_large.png);}
+      &.mining{background-image:url(#{$maps}mining_large.png)}
+      &.comm{background-image:url(#{$maps}comm_large.png)}
+      &.social{background-image:url(#{$maps}social_large.png)}
+      &.oil_gas, &.map-oil-gas-circle{background-image:url(#{$maps}oil_large.png)}
+      &.real_estate{background-image:url(#{$maps}real_estate_large.png)}
+      &.industrial{background-image:url(#{$maps}industrial_large.png)}
+      &.tourism_related{background-image: url(#{$maps}tourism_related_large.png)}
+      &.logistics{background-image:url(#{$maps}logistics_large.png)}
+      &.urban_design_planning{background-image:url(#{$maps}urban_design_planning_large.png)}
+    }
+    .sector {
+      font-weight: bold;
+    }
+  }
+}
+
+.open-leaflet{z-index:9999 !important;}
+
+// TEST ONLY
+#map_search {
+  div.new_map .result_info_top { display: none; }
+  #map_wrapper {overflow:hidden;}
+  footer {display:none !important; }
+}
+
+#col2 .show_me {
+  line-height: 18px;
+  margin-right: 6px;
+}
+
+#p_e_map .leaflet-top, #p_e_map .leaflet-bottom {
+  z-index: 450;
+}
+
+.map_filter.my_vip{padding-left:0;
+  #map_search{display:table; width:100%;}
+  .form_row{display:table-row;}
+  .input_group{float:none; margin-right:0; display:table-cell;
+    &.toggle_projects, &.toggle_experts{
+      display:none;
+    }
+    &.budget{width:22%;}
+  }
+  .form_control{margin-left:1px; width:auto; float:none; position:relative;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+
+  &.show_experts{
+    .input_group{
+      &.toggle_experts{display:table-cell;}
+    }
+  }
+
+  &.show_projects{
+    .input_group{
+      &.toggle_projects{display:table-cell;}
+    }
+  }
+}
+
+.my_vip{
+  .p_e_map{margin-bottom:20px;}
+}

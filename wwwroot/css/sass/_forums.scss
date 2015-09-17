@@ -1,0 +1,214 @@
+/*VIM - Marty Minton - FORUMS*/
+#forum {
+
+}
+nav.sub-nav {
+	background: #616574; width: 100%; text-align: center; position: relative; z-index: 9998;
+
+	.main {display: inline-block; position: relative;
+		a {display: block; padding: 9px 90px 9px 17px; color: #fff;font-family: $global-font; font-weight: bold; text-decoration: none;
+			background: url('#{$img-root}sub-nav-arrows.png') right 70px top 14px no-repeat;
+		}
+
+		&:hover {
+			ul {display: block;}
+			a {background: #fff url('#{$img-root}sub-nav-arrows.png') right 70px top -9px no-repeat; color: #414552;}
+		}
+
+		ul {display: none; position: absolute;top: 37px; left: 0; width: 100%; background: white;
+			li {width: 100%;
+				&:hover {
+					a {background: #f9f9fa !important; border-top: 1px solid #efefef; border-bottom: 1px solid #efefef; color: #2881be;}
+				}
+				a {background: none !important; padding: 9px 10px 9px 17px; font-size: 12px; font-weight: normal; text-align: left; border-top: 1px solid #fff; border-bottom: 1px solid #fff;}
+			}
+		}
+	}
+}
+
+//Grid System
+.grid { box-sizing: border-box;
+	&.cols-2 {display: block; float: left; padding-top: 15px; max-width: 620px;}
+	&.gray-bg {background: #f3f3f5;}
+	&.white-bg {background: #ffffff;}
+	&.details {padding-left: 20px;}
+	img {max-width: 100%;}
+}
+
+#forum {
+
+	.map_filter .form_control .select_list .select_control .map-dropdown {
+		top: 14px;
+	}
+
+	#search_text {width: 295px !important;}
+
+	.featured-forum {@extend .clear_fix; background-color: none;
+
+      &.hovered {background:#f3f3f5;
+        .details {background: #f3f3f5;}
+      }
+		.featured-image {margin:0 15px 15px 15px;}
+	}
+
+	.center_col {width:965px;}
+
+	#content {
+		h1 {
+			&.large {@include rem(2.4); padding: 20px 0 5px 0px; font-weight: bold; line-height: 6px;}
+			&.page-title {margin-bottom: 0; font-weight: bold;}
+			&.section-title {background: #414552; width: 100%; margin-bottom: 0; box-sizing: border-box; padding: 20px; color: #fff; font-weight: bold; @include rem(2.4); margin-top: 0;}
+		}
+
+		h3 {
+			&.forum-title {font-weight: bold; padding-bottom: 10px; border-bottom: 1px solid #e7e7e7; text-align: left;
+			a{color: #333333; text-decoration: none;}
+		}
+		}
+
+		ul.forum-details {list-style: none; width: 100%; text-align: left; padding:0; margin: 0 0 30px 0;
+			li {padding: 3px 0; width: 100%; color: #404151; font-family: $global-font; clear: both;
+				strong, span{min-width: 50px; display: block; float: left; margin-right: 20px;}
+			}
+		}
+	}
+}
+
+a {
+	&.button {border: 0; font-family: $global-font; border-radius:3px; position: relative; overflow: hidden; margin-right: 10px;
+		&.light_gray {background: #606577; color: #fff !important; text-shadow: #000 0 0 0 !important; filter: none !important;
+			&:hover {background: #696e81 !important;}
+		}
+		&.attend { padding-left: 50px;
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}icon-attend.png') no-repeat center center;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+		}
+
+		&.book { padding-left: 50px;
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}icon-book.png') no-repeat center center;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+		}
+
+		&.mail { padding-left: 50px; padding:9px 24px 9px 50px; border-radius:6px;
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}mail-icon.jpg') no-repeat center center;
+				border-radius:6px 0 0 6px;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+		}
+
+		&.ratings { padding-left: 50px; padding:9px 24px 9px 50px; border-radius:6px;
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}thumb-icon.png') no-repeat center center;
+				border-radius:6px 0 0 6px;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+		}
+
+		.ie-8-unfollow {
+		    	display: none;position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+				background: $base; z-index: 10000; padding:9px 24px 9px 50px; 
+		    }
+
+		&.follow { padding-left: 50px; padding:9px 24px 9px 50px; border-radius:6px; 
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}follow-icon.png') no-repeat center center;
+				border-radius:6px 0 0 6px;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+
+			&.unfollow {
+			    -moz-transition: none;
+				-webkit-transition: none;
+				-o-transition: none;
+				transition: none;
+
+		    &:after {
+		    	position: absolute;
+		        
+		        width: 78%;
+		        height: 50%;
+		        background: transparent;
+		        top: 0;
+		        left: 0;
+		        border-radius:6px;
+		        padding: 9px 0 9px 50px;
+		        z-index: 10;
+		        opacity: 0;
+		        content: "";
+		    }
+			&.just_changed{
+				&:hover, &:focus {
+					background: #606577 !important;
+		   			&:after {
+		    			display:none;
+		    		}
+		    	}
+			}
+		    &:hover {
+		    	//background: $base !important;
+		    	&:after {
+			        opacity: 1;filter: alpha(opacity=100);
+			        content: attr(data-unfollow);
+			        background: $base;
+		    	}
+
+		    	.ie-8-unfollow {
+					display: block; 
+				}
+		    	.lt-ie9 &{
+		    		&:after, &:before{display:none;}
+		    	}
+		    }
+
+		    
+		}
+		}
+
+		&.discussion {
+			padding-left: 50px; padding:9px 24px 9px 50px; border-radius:6px;
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}discussion-icon.png') no-repeat center center;
+				border-radius:6px 0 0 6px;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+		}
+
+		&.edit {
+			padding-left: 50px; padding:9px 24px 9px 50px; border-radius:6px;
+			&:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+				background: #696e81 url('#{$img-root}edit-icon.png') no-repeat center center; background-size: 50%;
+				border-radius:6px 0 0 6px;
+				@include box-shadow(inset 0px 1px 0px 0px #999);
+			}
+		}
+        &.project {
+            padding-left: 50px; padding:9px 24px 9px 50px; border-radius:6px;
+            &:before {position: absolute; content: ""; top: 0; left: 0; height: 100%; width: 40px;
+              background: #696e81 url('#{$img-root}project-icon.png') no-repeat center center; background-size: 50%;
+              border-radius:6px 0 0 6px;
+              @include box-shadow(inset 0px 1px 0px 0px #999);
+            }
+        }
+	}
+}
+
+#col2 .map_filter .form_control .select_list .select_control p {
+  padding-top: 0;
+
+}
+
+
+
+#registration {
+	margin: 10px 0;
+}
+
+.banner_image {width: 560px;}
+
+
+

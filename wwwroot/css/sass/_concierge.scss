@@ -1,0 +1,79 @@
+// BUILDING IN SEPERATE FILE
+
+#concierge {
+
+	textarea.error::-webkit-input-placeholder { color: red; }
+	textarea.error:-moz-placeholder { color: red; }
+	textarea.error:-ms-input-placeholder { color: red; }
+
+	a { text-decoration:none; }
+
+	font-family: "Open Sans", sans-serif; font-weight: normal;  font-size: 18px;
+	color: #fff; text-shadow: 0 -1px 1px #444; text-shadow: 0 -1px 1px rgba(#000,0.55);
+	position:fixed; bottom: 0; z-index: 490; width: 100%;
+
+	>div {
+		position: fixed; bottom: 0; left:0; right:0; height: 300px;
+		background: transparent url(/images/site/concierge_bg.png);  background: rgba(#2f333a,0.95);
+		.inner { position:relative; width: 905px; margin: 0 auto; padding: 22px 30px; line-height: 1.2;
+			.btn { margin-right: 21px;}
+			.close { background: url(/images/site/concierge_close_big.png); width: 30px; height: 30px; top: 13px; right: 0px; }
+		}
+	}
+
+	span { font-size: 12px; display: inline-block; }
+
+	.btn {float:right; margin: -1px 0 0 0; padding: 5px 27px;}
+	.close { position: absolute; top: -10px; right: -10px; text-indent: -9999px; z-index: 201;
+			background: url(/images/site/concierge_close.png); width: 20px; height: 20px; }
+
+	#c_action {
+		//display: none;
+
+		position: fixed;
+		top: 240px;
+		bottom: auto;
+		left: 0px;
+		border-radius: 0 3px 3px 0;
+		width: 115px;
+		height: auto;
+		font-weight:normal;
+		font-size: 12px;
+
+		margin: 0px; padding: 15px;
+		.close { position: absolute; top: 4px; right: 4px; }
+		.btn { padding: 7px 23px; float: none; text-align: center; line-height: 1;}
+		p { padding: 0; line-height: 1.2; margin: 20px 0; font-weight: bold; }
+		a { color: #39c; display:inline-block;  }
+	}
+
+	#c_form {
+		display: none;
+		line-height: 1.4;
+		textarea { width: 871px; height: 120px;}
+	}
+
+	#c_confirmation {
+		display: none;
+		background: transparent url(/images/site/concierge_bg_orange.png); background: rgba(#b73800,0.93);
+		.inner { padding-top: 100px; }
+	}
+
+}
+
+.lang_portuguese {
+	#concierge {
+		#c_action {
+			.btn { padding: 7px 9px; }
+		}
+	}
+}
+.lang_spanish {
+	#concierge {
+		#c_action {
+			.btn { padding: 7px 10px; }
+		}
+	}
+}
+
+
