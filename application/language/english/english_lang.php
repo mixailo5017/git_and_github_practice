@@ -190,7 +190,8 @@ $lang['Stage'] = 'Stage';
 $lang['ViewMore'] = 'View More';
 $lang['Noprojectsfound'] = 'No projects found';
 $lang['Noexpertisefound'] = 'No expertise found';
-$lang['ExpertsAttending'] = 'Experts Attending';
+$lang['ExpertsAttending'] = 'GViP Experts Attending';
+$lang['ExpertsAttendingIncludingNonGViP'] = 'Total Experts Attending';
 
 
 $lang['Search'] = 'Search';
