@@ -801,7 +801,7 @@ if (! function_exists('is_post_msize_exceeded')) {
         $config	= array(
             'upload_path' => '.' . $path,
             'allowed_types'	=> $allowed,
-            'max_size' => '10000',
+            'max_size' => '100000',
             'encrypt_name' => true
         );
 
