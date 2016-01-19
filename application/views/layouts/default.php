@@ -3,7 +3,7 @@
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="GViP is a global platform connecting infrastructure project developers with experts. GViP has over 800 projects and over 1000 experts. Sign up to connect with leading experts." />
+    <meta name="description" content="GViP is a global platform connecting infrastructure project developers with experts. GViP has over 1500 projects and over 1800 experts. Sign up to connect with leading experts." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--[if lt IE 9]>
@@ -23,6 +23,9 @@
     <?php }
     } ?>
     <title><?php echo empty($title) ? SITE_NAME : $title ?></title>
+
+    <?php // Optimizely ?>
+    <script src="//cdn.optimizely.com/js/4480070248.js"></script>
 
     <?php // Segment Analytics ?>
     <?php $this->load->view('templates/_segment_analytics', empty($page_analytics) ? array() : $page_analytics) ?>
