@@ -589,7 +589,9 @@
                         <!--[if IE 8]><span class="ie-8-unfollow">Unfollow</span><![endif]-->
                     </a>
                 <?php echo form_close(); ?>
-                <a href="#" id="project_send_message" class="button mail light_gray"><?php echo lang('Message') ?></a>
+                <?php if (!in_array($userdata['uid'], INTERNAL_USERS)) { ?>
+	                <a href="#" id="project_send_message" class="button mail light_gray"><?php echo lang('Message') ?></a>
+	            <?php } ?>
             <?php } ?>
             <?php if ($project['discussions_access']) { ?>
                 <a href="/projects/discussions/<?php echo $project['pid'] ?>" class="button discussion light_gray"><?php echo lang('Discussions') ?></a>
