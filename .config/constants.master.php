@@ -138,9 +138,10 @@ define('SITEMAP_TTL', 120);
 // Allows to enable or disable public project profiles feature
 define('PROJECT_PROFILES_ENABLED', TRUE);
 
-// Specifies which users' projects will be shown to the public
+// Used to determine which users' projects will be shown to the public, 
+// which project profiles will not show the project developer, etc.
 // Arrays in constants requires PHP 5.6. Defining them using the define statement only available from PHP 7.0.
-const INTERNAL_USERS = [24, 28, 37, 222, 492, 298, 426, 583, 586, 684, 813, 986, 1121, 1307, 1554, 1589, 1641, 1742, 1610];
+const INTERNAL_USERS = [24, 28, 37, 222, 492, 298, 426, 583, 586, 684, 741, 813, 986, 1121, 1307, 1554, 1589, 1641, 1742, 1610, 2104];
 
 // The number of seconds a reminder lasts
 define('REMINDER_EXPIRES', 60*60*2);

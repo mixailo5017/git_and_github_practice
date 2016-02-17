@@ -599,7 +599,7 @@
                 <a href="/projects/edit/<?php echo $slug ?>" class="button edit light_gray"><?php echo lang('EditProject');?></a>
             <?php } ?>
 
-			<?php if ($userdata['uid'] != 492 ) { ?>
+			<?php if (!in_array($userdata['uid'], INTERNAL_USERS)) { ?>
 			<section class="executive white_box" id="project_executive">
                 <h2><?php echo (($userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : lang('ProjectExecutive')) ?></h2>
 
