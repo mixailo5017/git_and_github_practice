@@ -18,7 +18,7 @@
         <nav class="m-nav nav-main">
             <ul>
                 <li class="<?php echo $segment == 'myvip' ? 'active' : '' ?>">
-                    <a href="/myvip"><span><?php echo lang('myVip') ?></span></a>
+                    <a href="/mygvip"><span><?php echo lang('myVip') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
                     <a href="/map"><span><?php echo lang('Map') ?></span></a>

@@ -1778,7 +1778,7 @@ if (! function_exists('redirect_after_login')) {
 	 */
 	function redirect_after_login()
 	{
-		$default = 'myvip';
+		$default = 'mygvip';
 
 		$CI =& get_instance();
 
