@@ -1592,12 +1592,12 @@ Footer Styles
 
 .main-footer .logo-cgla
 {
-    padding-top: 2px;
+    padding-top: 0px;
 }
 
 .main-footer .logo-gvip
 {
-    padding-top: 9px;
+    padding-top: 5px;
 }
 
 .main-footer address
@@ -1608,6 +1608,8 @@ Footer Styles
     line-height: 1.5em;
 
     text-align: left;
+
+    padding-top: 8px;
 
     color: #646871;
 }
