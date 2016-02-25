@@ -1,0 +1,18 @@
+# Environment settings
+.env
+
+# Cache folders
+application/cache/**
+wwwroot/cache/**
+backend/cache/**
+
+# Log folders
+application/logs/**
+backend/logs/**
+
+# User-uploaded content
+wwwroot/images/content_projects/**
+wwwroot/images/forum/**
+wwwroot/images/member_photos/**
+wwwroot/images/signup/**
+wwwroot/images/store/**
