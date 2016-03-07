@@ -17,7 +17,7 @@
         <?php if (Auth::check() && (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
         <nav class="m-nav nav-main">
             <ul>
-                <li class="<?php echo $segment == 'myvip' ? 'active' : '' ?>">
+                <li class="<?php echo $segment == 'mygvip' ? 'active' : '' ?>">
                     <a href="/mygvip"><span><?php echo lang('myVip') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
