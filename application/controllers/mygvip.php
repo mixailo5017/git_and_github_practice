@@ -1,6 +1,6 @@
 <?php if (! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Myvip extends CI_Controller {
+class Mygvip extends CI_Controller {
 
     protected $headerdata = array();
     protected $footer_data = array();
