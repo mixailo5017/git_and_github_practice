@@ -574,6 +574,11 @@ $lang['memberphoto'] = 'member photo';
 //project_edit.php
 $lang['ProjectPhoto'] = 'Project Photo';
 $lang['SeparateMessage'] = 'Separate each keyword with commas (ex: bridge, toll, construction)';
+$lang['CountryExplanation'] = 'Add some multi-language Country explanation here';
+$lang['LocationExplanation'] = 'Add some multi-language Location explanation here';
+$lang['DeveloperExplanation'] = 'Add some multi-language Developer explanation here';
+$lang['SponsorExplanation'] = 'Add some multi-language Sponsor explanation here';
+$lang['DetailExplanation'] = 'Add some multi-language Details explanation here';
 
 //projects_files.php
 $lang['File'] = 'File';
@@ -1010,7 +1015,7 @@ $lang['Help'] = 'Help';
 
 $lang['EmailNotUnique'] = 'There is already an account associated with that email address.';
 $lang['RegistrationEmailNotUnique'] = 'There is already an account with that email address. Please log in above or click Forgot your password.';
-$lang['Website'] = 'Website';
+$lang['Website'] = 'Project Website';
 $lang['ProjectTextSearchTip'] = 'Tip: Use quotes (&quot;Bhopal Metro&quot;) to narrow your search';
 $lang['ExpertTextSearchTip'] = 'Tip: Use quotes (&quot;Jason Jones&quot;) to narrow your search';
 

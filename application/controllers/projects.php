@@ -585,16 +585,24 @@ class Projects extends CI_Controller {
 
 		$editdata['photoerror'] = '';
 
+        $editdata['map_geom'] = $this->projects_model->get_geom($editdata['project']['pid']);
+
 		$this->breadcrumb->append_crumb(lang('B_PROJECTS'), '/projects');
 		$this->breadcrumb->append_crumb($editdata['project']['projectname'] . ' (edit)', "/projects/$slug");
 		$this->headerdata['breadcrumb'] = $this->breadcrumb->output();
 
         $this->headerdata['title'] = build_title($editdata['project']['projectname'] . ' (edit)');
 
+        // get map draw objects
+        $this->headerdata['header_extra'] .= $this->load->view('projects/leaflet-draw-js','',true);
+
         // Render the page
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('projects/projects_edit', $editdata);
-		$this->load->view('templates/footer', $this->dataLang);
+		$this->load->view('templates/footer', $this->footer_data);
+
+        // echo "<pre>"; var_dump($this->headerdata); exit;
+
 	}
 	
 	/**
@@ -2908,7 +2916,7 @@ class Projects extends CI_Controller {
         $this->headerdata['title'] = build_title($fundamentaldata['project']['projectname'] . ' (edit)');
 
         $this->headerdata['header_extra'] .= $this->load->view('projects/leaflet-draw-js','',true);
-		
+
 		// Render HTML Page from view direcotry
 		$this->load->view('templates/header',$this->headerdata);
 		$this->load->view('templates/tabcontent',$fundamentaldata);
@@ -3198,7 +3206,7 @@ class Projects extends CI_Controller {
         $start = $this->input->post('project_eststart', TRUE);
         $end = $this->input->post('project_estcompletion', TRUE);
 
-        if (empty($start) && empty($end)) {
+        if (!empty($start) || !empty($end)) {
             return true;
         }
 
