@@ -249,11 +249,12 @@
 										<div class="errormsg" id="err_project_photo"><?php echo $photoerror; ?></div>
 									<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
 									<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
+									<span class="example" style="float:left"><?php echo lang('PhotoExplanation');?></span>
 										
 									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
 									</div>
 
-									<div class="image_placeholder" style="margin-left: 35px; margin-top: -50px">
+									<div class="image_placeholder" style="margin-left: 5px; margin-top: -50px">
                                         <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
 									</div>									
 									
@@ -368,14 +369,14 @@
 
 						<?php echo form_label(lang('Est.Start') . ':', 'project_eststart', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mdY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
+							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
 							<div class="errormsg" id="err_project_eststart"><?php echo form_error('project_eststart') ?></div>
 						</div>
 						<br>
 						
 						<?php echo form_label(lang('Est.Completion') . ':', 'project_estcompletion', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mdY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px"'); ?>
+							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px"'); ?>
 							<div class="errormsg" id="err_project_estcompletion"><?php echo form_error('project_estcompletion') ?></div>
 						</div>
 						<br>
@@ -912,3 +913,9 @@
     });
 
 </script>
+
+<style>
+.ui-datepicker-calendar {
+    display: none;
+    }
+</style>

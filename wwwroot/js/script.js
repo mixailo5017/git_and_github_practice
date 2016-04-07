@@ -681,14 +681,24 @@ $(function() {
 		},
 		changeMonth: true,
 		changeYear: true,
+        showButtonPanel: true,
 		yearRange: '1950:2500',
-		dateFormat: "mm/dd/yy"
+		dateFormat: "mm/dd/yy",
+        altFormat: "mm/yy",
+        altField: "#project_eststart_picker",
+        altField: "#project_estcompletion_picker",
+        onClose: function(dateText, inst) { 
+            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+            var day = '01';
+            $(this).datepicker('setDate', new Date(year, month, day));
+        }
+    // });
 	}).change(function(){
 		$('#'+this.id.replace('_picker','')).val( $(this).val() + ' 00:00' );
 	}).each(function(){
 		 $(this).val( $(this).val().substring(0,10) );
 	});
-
 
 	$('.education_edit .education_edit_cancel').on('click',function(){
 		//log( 'yay' );

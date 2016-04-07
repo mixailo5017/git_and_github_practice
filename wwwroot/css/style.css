@@ -2317,6 +2317,8 @@ div.olControlZoom a:hover {
   color: #535760;
 }
 #projects span.example {
+  width: 380px;
+  word-wrap: break-word;
   display: block;
   font-size: 11px;
   font-size: 1.1rem;
