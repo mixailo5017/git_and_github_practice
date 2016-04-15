@@ -8,7 +8,7 @@ class Forums_model extends CI_Model {
     protected $select = 'f.id, title, start_date, end_date, category_id, fc.name AS category,
         register_url, venue, venue_address, venue_url, venue_lat, venue_lng,
         photo, banner, meeting_url, content, status, is_featured';
-
+protected $select_expert = 'f.id, title, f.sector';
     /**
      * @var array
      */
@@ -211,7 +211,7 @@ class Forums_model extends CI_Model {
      * @return array
      */
     public function members($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false) {
-        $this->members_base_query($id, $select, null, $order_by, $row_count);
+        $this->members_base_query($id, $select, null, $order_by, $row_count,TRUE);
 
         if (! is_null($limit)) {
             $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
@@ -453,6 +453,83 @@ class Forums_model extends CI_Model {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
     }
+    /*
+    *This function returns the size of the forum (i.e how many people) a integer value 
+    */
+  public function get_total_list($id){
+       
+        $this->members_base_query($id, null, null, null, true, false);
+        $this->db->order_by('uid');
+        
+        $rows = $this->db
+            ->get()
+            ->result();
+       
+   return count($rows);
+  }
+
+/**
+     * Get paginated list of users with filters applied
+     *
+     * @param int $limit How many records to return starting from offset
+     * @param int $offset How many records to skip
+     * @param array $filter country|discipline|sector|searchtext
+     * @param int $member_type
+     * @param int|null $sort Prerefined sort order (1, 2, 3)
+     * @return array
+     */
+    public function get_filter_user_list2($id,$limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null) {
+   
+        $rowc = true;
+        $select = 'm.uid, firstname, lastname, organization, m.title, userphoto, country, sector, discipline';
+        $this->members_base_query($id, $select, null, null, $rowc, false);
+        
+		if (!empty($filter['country'])) {
+            $this->db->where('m.country', $filter['country']);
+        }
+         if (! empty($filter['sector'])) {
+            $where = " m.uid IN (SELECT DISTINCT uid FROM exp_expertise_sector WHERE permission = 'All' AND status = " .
+                $this->db->escape(STATUS_ACTIVE) .
+                " AND sector = " . $this->db->escape($filter['sector']);
+            if (! empty($filter['subsector'])) {
+                $where .= " AND subsector = " . $this->db->escape($filter['subsector']);
+            }
+            $where .= ")";
+
+            $this->db->where($where, null, FALSE);
+        }
+        if (!empty($filter['discipline'])) {
+            $this->db->where('m.discipline', $filter['discipline']);
+        }
+     
+         if (! empty($filter['searchtext'])) {
+             $terms = split_terms2($filter['searchtext']);
+             $columns = array(
+                	'organization',
+                    'firstname',
+                    'lastname',
+                    'm.title'
+                  );
+            $where = where_like2($columns, $terms);
+            $this->db->where($where);
+        }
+        $this->db->group_by('m.uid');
+        
+        $rows = $this->db
+            ->limit($limit, $offset)
+            ->get()
+            ->result_array();
+            
+        $result = array(
+        	'filter_total' =>count($rows) > 0 ? (int) $rows[0]['row_count'] : 0, 
+        	'filter' => $rows  
+        );
+ 
+        return $result;
+       
+    }
+
+
 
     /**
      * Generates a base query for forum members (experts)
@@ -462,9 +539,10 @@ class Forums_model extends CI_Model {
      * @param null $where
      * @param null $order_by
      * @param bool $row_count
+     * @param bool $order_no sending it false with make the query not appear in alphabetical order
      * @return void
      */
-    private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false) {
+    private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false, $order_no) {
         $this->db
             ->from('exp_forum_member fm')
             ->join('exp_forums f', 'fm.forum_id = f.id')
@@ -488,27 +566,24 @@ class Forums_model extends CI_Model {
                     ->select("STRING_AGG(DISTINCT s.sector, ',' ORDER BY s.sector) sector", FALSE) // Now we add and expression for sector
                     ->join('exp_expertise_sector s', "m.uid = s.uid AND s.permission = 'All' AND s.status = " . $this->db->escape(STATUS_ACTIVE), 'left')
                     ->group_by(implode(',', $columns)); // And use column list for GROUP BY
-            } else {
-                $this->db->select($select);
-            }
-        }
-
+            }  else {
+                $this->db->select($select);   
+                } 
+             }
         $defaut_where = array(
             'f.id' => $id,
             'm.membertype' => 5,
             'm.status' => STATUS_ACTIVE
         );
-
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
-
+	   	if ($order_no == TRUE){
         $order_by = (! is_null($order_by)) ? $order_by : array('firstname' => 'asc', 'lastname' => 'asc');
         $this->apply_order_by($order_by);
-
+		}
         if ($row_count) {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
-
     }
 
     /**

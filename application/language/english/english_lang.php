@@ -177,7 +177,7 @@ $lang['CurrentProjects'] = 'Current Projects';
 /* forum_8Feb2013 no word */
 
 /* forum_expertise_list */
-$lang['ExpertAttendees'] = 'Expert Attendees';
+$lang['ExpertAttendees'] = 'Attendees';
 $lang['Sector'] = 'Sector';
 $lang['NoExpertisedplay'] = 'No Expertise found to display';
 
