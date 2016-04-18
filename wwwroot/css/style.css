@@ -611,6 +611,19 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   display: inline-block;
 }
 
+#profile_tabs label {
+  position: relative;
+}
+#profile_tabs .tooltip {
+  background: url(/images/site/icon_question_mark.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 540px;
+  top: 4px;
+  display: inline-block;
+}
+
 .tip-yellowsimple {
   z-index: 1000;
   text-align: left;
@@ -2311,13 +2324,15 @@ div.olControlZoom a:hover {
 }
 
 #projects span.note {
+  margin-top: -5px;
   display: block;
   font-size: 11px;
   font-size: 1.1rem;
   color: #535760;
 }
 #projects span.example {
-  width: 380px;
+  margin-bottom: 30px;
+  width: 360px;
   word-wrap: break-word;
   display: block;
   font-size: 11px;

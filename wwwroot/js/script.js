@@ -685,8 +685,8 @@ $(function() {
 		yearRange: '1950:2500',
 		dateFormat: "mm/dd/yy",
         altFormat: "mm/yy",
-        altField: "#project_eststart_picker",
-        altField: "#project_estcompletion_picker",
+        // altField: "#project_eststart_picker",
+        // altField: "#project_estcompletion_picker",
         onClose: function(dateText, inst) { 
             var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
             var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();

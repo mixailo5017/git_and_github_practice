@@ -294,8 +294,9 @@ class Signup extends CI_Controller
                 'lib/tipsy.css'
             );
             $page['scripts'] = array(
-                'filedrop.min.js',
-                'lib/filedrop-min.js',
+                // 'filedrop.min.js',
+                // 'lib/filedrop-min.js',
+                'filedrop.js',
                 'lib/cropper.min.js',
                 'lib/jquery.tipsy.js'
             );

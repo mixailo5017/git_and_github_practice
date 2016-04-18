@@ -574,7 +574,7 @@ $lang['memberphoto'] = 'member photo';
 //project_edit.php
 $lang['ProjectPhoto'] = 'Project Photo';
 $lang['SeparateMessage'] = "To help us connect you with experts or investors, enter 5 to 10 keywords that uniquely capture your project, separated by commas (e.g., bridge,toll,construction,suspension,PPP).";
-$lang['CountryExplanation'] = 'The location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.';
+$lang['CountryExplanation'] = 'The country in which the project is located. For trans-border projects, select the country in which the greater (or greatest) share of the project is located.';
 $lang['LocationExplanation'] = 'The location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.';
 $lang['DeveloperExplanation'] = "The project developer is the organization most directly responsible for managing the project's progression through its life-cycle. The project developer may be a public or private sector entity (and in some cases may be the same as the project sponsor).";
 $lang['SponsorExplanation'] = 'The project sponsor is the organization under whose authority the project is being developed. Often, this will be a public or quasi-public agency, like a Department of Transportation.';
@@ -1016,7 +1016,7 @@ $lang['Help'] = 'Help';
 
 $lang['EmailNotUnique'] = 'There is already an account associated with that email address.';
 $lang['RegistrationEmailNotUnique'] = 'There is already an account with that email address. Please log in above or click Forgot your password.';
-$lang['Website'] = 'Project Website';
+$lang['Website'] = 'Website';
 $lang['ProjectTextSearchTip'] = 'Tip: Use quotes (&quot;Bhopal Metro&quot;) to narrow your search';
 $lang['ExpertTextSearchTip'] = 'Tip: Use quotes (&quot;Jason Jones&quot;) to narrow your search';
 

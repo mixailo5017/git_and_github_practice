@@ -207,19 +207,17 @@
 		
 				<div id="tabs-1" class="col5_tab">
 						<div class="clearfix ">
-							<?php echo form_label(lang("Sponsor").":","project_sponsor",$opt["project_form"]["lbl_project_sponsor"]); ?>
+							<?php echo form_label(lang("Sponsor").':<a title="'.lang('SponsorExplanation').'" class="tooltip"></a>',"project_sponsor",$opt["project_form"]["lbl_project_sponsor"]); ?>
 							<div class="fld">
 								<?php echo form_input($opt["project_form"]["project_sponsor"]); ?>
 								<div class="errormsg" id="err_project_sponsor"><?php echo form_error("project_sponsor"); ?></div>
-								<span class="example" style="float:left"><?php echo lang('SponsorExplanation');?></span>
 							</div>
 							<br>
 							
-							<?php echo form_label(lang("Developer").":","project_developer",$opt["project_form"]["lbl_project_developer"]); ?>
+							<?php echo form_label(lang("Developer").':<a title="'.lang('DeveloperExplanation').'" class="tooltip"></a>',"project_developer",$opt["project_form"]["lbl_project_developer"]); ?>
 							<div class="fld">
 								<?php echo form_input($opt["project_form"]["project_developer"]); ?>
 								<div class="errormsg" id="err_project_developer"><?php echo form_error("project_developer"); ?></div>
-								<span class="example" style="float:left"><?php echo lang('DeveloperExplanation');?></span>
 							</div>
 							<br>
 	
@@ -243,18 +241,17 @@
 	
 							<div class="clearfix ">
 									
-									<?php echo form_label(lang("SelectanImage").":","",$opt["project_form"]["lbl_photo_description"]); ?>
+									<?php echo form_label(lang("SelectanImage").':<a title="'.lang('PhotoExplanation').'" class="tooltip"></a>',"",$opt["project_form"]["lbl_photo_description"]); ?>
 									<div class="fld">
 										<?php echo form_upload($opt["project_form"]["project_photo"]); ?>
 										<div class="errormsg" id="err_project_photo"><?php echo $photoerror; ?></div>
 									<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
 									<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
-									<span class="example" style="float:left"><?php echo lang('PhotoExplanation');?></span>
 										
 									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
 									</div>
 
-									<div class="image_placeholder" style="margin-left: 5px; margin-top: -50px">
+									<div class="image_placeholder" style="margin-left: 5px; padding-top: -50px">
                                         <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
 									</div>									
 									
@@ -279,17 +276,16 @@
 							<?php echo form_dropdown('project_meta_permissions', $opt["project_form"]["privacy_options"], $project["project_meta_permissions"]); ?>
 						</div>
 
-						<?php echo form_label(lang("Description").":","project_overview",$opt["project_form"]["lbl_project_overview"]); ?>
+						<?php echo form_label(lang("Description").':<a title="'.lang('DetailExplanation').'" class="tooltip"></a>',"project_overview",$opt["project_form"]["lbl_project_overview"]); ?>
 						<div class="fld">
 							<?php echo form_textarea($opt["project_form"]["project_overview"]); ?>
 							<div class="errormsg" id="err_project_overview"><?php echo form_error("project_overview"); ?></div>
-							<span class="example" style="float:left"><?php echo lang('DetailExplanation');?></span>
 							<?php /*
 							<div id="count_char" style="position:absolute; margin-top:-55px; right:13px; width:200px; color:#535760"><?php echo lang('Limit200');?></div> */ ?>
 						</div>
 						<br>
 						
-						<?php echo form_label(lang("Keywords").":","project_keywords",$opt["project_form"]["lbl_project_keywords"]); ?>
+						<?php echo form_label(lang("Keywords").':<a title="'.lang('SeparateMessage').'" class="tooltip"></a>',"project_keywords",$opt["project_form"]["lbl_project_keywords"]); ?>
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_keywords"]); ?>
 							<div class="errormsg" id="err_project_keywords"><?php echo form_error("project_keywords"); ?></div>
@@ -297,7 +293,7 @@
 						</div>
 						<br>
 
-						<?php echo form_label(lang("Country").":","project_country",$opt["project_form"]["lbl_project_country"]); ?>
+						<?php echo form_label(lang("Country").':<a title="'.lang('CountryExplanation').'" class="tooltip"></a>',"project_country",$opt["project_form"]["lbl_project_country"]); ?>
 						<div class="fld">
 							<?php  
 								$project_country_attr = 'id="project_country"';
@@ -305,15 +301,13 @@
 								echo form_dropdown('project_country', $project_country_options,$project["country"],$project_country_attr);
 							?>
 							<div class="errormsg" id="err_project_country"><?php echo form_error("project_country"); ?></div>
-							<span class="example" style="float:left"><?php echo lang('CountryExplanation');?></span>
 						</div>
 						<br>
 
-						<?php echo form_label(lang("Location").":","project_location",$opt["project_form"]["lbl_project_location"]); ?>
+						<?php echo form_label(lang("Location").':<a title="'.lang('LocationExplanation').'" class="tooltip"></a>',"project_location",$opt["project_form"]["lbl_project_location"]); ?>
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_location"]); ?>
 							<div class="errormsg" id="err_project_location"><?php echo form_error("project_location"); ?></div>
-							<span class="example" style="float:left"><?php echo lang('LocationExplanation');?></span>
 						</div>
 						<br>
 						
@@ -884,6 +878,31 @@
 				</div>
 
 			</div></div><!-- end #tabs -->
+
+			<div aria-labelledby="ui-dialog-title-dialog-message" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable ui-resizable" role="dialog" 		style="display: none; z-index: 1002; outline: 0px none; position: absolute; height: auto; width: 300px; top: 1050px; left: 558px;" tabindex="-1">
+				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+					<span id="ui-dialog-title-dialog-message" class="ui-dialog-title"><?php echo lang('Message');?></span>
+					<a class="ui-dialog-titlebar-close ui-corner-all" href=javascript:void(0); role="button">
+						<span class="ui-icon ui-icon-closethick"><?php echo lang('close');?></span>
+					</a>
+				</div>
+				<div id="dialog-message" class="ui-dialog-content ui-widget-content" scrollleft="0" scrolltop="0" style="width: auto; min-height: 12.8px; height: auto		;">
+					<?php echo lang('updatedMessage');?></div>
+				<div class="ui-resizable-handle ui-resizable-n"></div>
+				<div class="ui-resizable-handle ui-resizable-e"></div>
+				<div class="ui-resizable-handle ui-resizable-s"></div>
+				<div class="ui-resizable-handle ui-resizable-w"></div>
+				<div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se" style="z-index: 1001;"></div>
+				<div class="ui-resizable-handle ui-resizable-sw" style="z-index: 1002;"></div>
+				<div class="ui-resizable-handle ui-resizable-ne" style="z-index: 1003;"></div>
+				<div class="ui-resizable-handle ui-resizable-nw" style="z-index: 1004;"></div>
+				<div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix">
+					<div class="ui-dialog-buttonset">
+						<button aria-disabled="false" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" type="button">
+						<span class="ui-button-text"><?php echo lang('Ok');?></span></button>
+					</div>
+				</div>
+			</div>
 
 		</div><!-- end #col5 -->
 
