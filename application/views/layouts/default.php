@@ -3,7 +3,7 @@
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="GViP is a global platform connecting infrastructure project developers with experts. GViP has over 1500 projects and over 1800 experts. Sign up to connect with leading experts." />
+    <meta name="description" content="GViP is a global platform connecting infrastructure project developers with experts. GViP has over 1400 projects and over 2000 experts. Sign up to connect with leading experts." />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--[if lt IE 9]>
