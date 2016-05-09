@@ -133,7 +133,9 @@ class Signup extends CI_Controller
         $this->form_validation->set_rules('lastname', 'Last Name', 'trim|required');
         $this->form_validation->set_rules('title', 'Title', 'trim|required');
         $this->form_validation->set_rules('organization', 'Organization', 'trim|required');
+        // $this->form_validation->set_rules('OrgStructure', 'Org Structure', 'trim|required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
+        $this->form_validation->set_rules('city', 'City', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|strtolower|required|valid_email|is_unique[exp_members.email]');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[16]|matches[password_confirmation]');
         $this->form_validation->set_rules('password_confirmation', 'Password confirmation', 'required|min_length[6]|max_length[16]|matches[password]');
@@ -277,6 +279,14 @@ class Signup extends CI_Controller
                 'lib/filedrop-min.js',
                 'lib/cropper.min.js',
                 'lib/jquery.tipsy.js'
+            );
+        }
+
+        if ($step == 'edit') {
+            $page['scripts'] = array(
+                'lib/jquery-1.11.2.min.js',
+                'lib/mailcheck.min.js',
+                'checkmail.js'
             );
         }
 
