@@ -52,7 +52,7 @@
                     <div class="errormsg OrgStructure"><?php echo form_error('OrgStructure') ?></div>
                 </div>
 
-
+<script>/*  
                     <div id="expertise_sector_form_div" class="clearfix">
                         <h4><?php echo lang('expertise').':';?></h4>
                         
@@ -282,7 +282,7 @@
                         <?php echo form_close();?>
 
                     </div>
-
+*/</script>
 
                 <div class="anchor">
                     <label for="country" class="left_label">Country:</label>

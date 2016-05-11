@@ -19,11 +19,16 @@ $email.on('blur',function() {
             }
         },
         empty: function (element) {
-          var companyDomain = $email.val().substr($email.val().indexOf("@") + 1);
-          if (Mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || 
-            Mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
-            $hint.html('Using company specific emails is recommanded.');
-          }
+            if (!$hint.html()) {
+                var companyDomain = $email.val().substr($email.val().indexOf("@") + 1);
+                if (Mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || 
+                    Mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
+                    $hint.html('Using company specific emails is recommanded.');
+                    $hint.fadeOut(3000, function() {
+                        $hint.css('display', 'none').empty();
+                    });
+                }
+            }
         }
     });
 });

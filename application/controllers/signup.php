@@ -24,6 +24,8 @@ class Signup extends CI_Controller
 
         $this->load->model('signup_model');
 
+        $this->load->model('profile_model');
+
         $this->load->library('linkedin');
     }
 
@@ -83,6 +85,11 @@ class Signup extends CI_Controller
         if ($error) $data['error'] = $error;
 
         $signup = $this->signup_model->get();
+
+        // kaidi: specifically add for sector; from controllers/profile.php and profile model
+        // $sector_data = $this->profile_model->get_expert_sectors();
+        // if ($sector_data) $data['sector'] = $sector_data;
+
 
         // Process POST first
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -289,6 +296,9 @@ class Signup extends CI_Controller
                 'checkmail.js'
             );
         }
+        // echo "<pre>";
+        // var_dump($page['content']['sector']);
+        // echo "</pre>";
 
         $this->load->view('layouts/default', $page);
     }
