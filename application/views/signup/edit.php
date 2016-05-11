@@ -52,46 +52,236 @@
                     <div class="errormsg OrgStructure"><?php echo form_error('OrgStructure') ?></div>
                 </div>
 
-                <div class="anchor">
-                    <label for="sector" class="left_label">Sector:</label>
-                    <?php 
-                        $project_sector_main_attr   = 'id="sector"';
-                        $sector_options = array();
-                        $sector_opt = array();
-                        foreach(sectors() as $key=>$value)
-                        {
-                            $sector_options[$value] = $value;
-                            $sector_opt[$value]     = 'class="sector_main_'.$key.'"';
-                        }
-                        $sector_first           = array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
-                        //$sector_last          = array();
-                        $sector_last            = array('class'=>'hardcode','text'=>'Other','value'=>'Other');
-                        
-                        echo form_custom_dropdown('sector', $sector_options,$signup["sector"],$project_sector_main_attr,$sector_first,$sector_last);
-                    ?>
-                    <div class="errormsg" id="err_project_sector"><?php echo form_error("sector"); ?></div>
-                </div>
 
-                <div class="anchor">
-                    <label for="subsector" class="left_label">Subsector:</label>
-                    <?php 
-                        $project_sector_sub_attr    = 'id="project_sector_sub"';
-                        $subsector_options = array();
-                        $subsector_opt = array();
-                        foreach(subsectors() as $key=>$value)
+                    <div id="expertise_sector_form_div" class="clearfix">
+                        <h4><?php echo lang('expertise').':';?></h4>
+                        
+                        
+                        <div id="load_expertise_sector_form" class="clearfix">
+                        
+                        <?php 
+                        if(count($sector) > 0)
                         {
-                            foreach($value as $key2=>$value2)
-                            {
-                                $subsector_options[$value2]     = $value2;
-                                $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                        foreach($sector as $key=>$sec)
+                        {
+                            
+                            $editlink   = '/profile/form_load/expertise_sector_form/edit/'.$sec['id'];
+                            $deletelink = '/profile/delete_expert_sector/'.$sec['id'];
+                            $formlink = "profile/update_expert_sector/".$sec['id'];
+                            
+                        ?>
+        
+                        <div class="sector_edit">
+                                    
+                            
+                            <div id="sectorContainer">
+                            
+                            <div id="sector_row_<?php echo $sec["id"];?>" class="sector_row">
+                                
+                                <div class="clearfix">
+                                    <p class="left"><strong><?php echo $sec['sector'];?></strong> <br/>(<?php echo $sec['subsector'];?>)</p>
+                                        <a href="javascript:void(0);" id="delete_sector_<?php echo $sec["id"];?>" onclick="show_confirmation(this.id);" class="right delete"><?php echo lang('Delete');?></a>
+                                        <a href="javascript:void(0);" id="edit_sector_<?php echo $sec["id"];?>" class="right edit" onclick="rowtoggle(this.id);"><?php echo lang('Edit');?></a>
+                                        
+                                        <div class="delete_sector_<?php echo $sec["id"];?>" style="display:none;">
+                                            <a class="right confirm_yes" href="javascript:void(0);" onclick="delete_maxtrix_action('<?php echo $deletelink;?>','','sector_row_'+<?php echo $sec["id"];?>);"><?php echo lang('Yes');?></a>
+                                            <a class="right confirm_no" href="javascript:void(0);" id="reset_<?php echo $sec['id'];?>" onclick="reset_confirmation(this.id);"><?php echo lang('NO');?></a>
+                                        </div>
+
+                                </div>
+    
+                                <!-- end .view -->
+                                <div class="edit" style="display: none;">
+                                <?php echo form_open($formlink,array('id'=>'expertise_sector_form_'.$sec["id"],'name'=>'expertise_sector_form_'.$sec["id"],'method'=>'post','class'=>'ajax_form')); ?>
+                                <?php 
+                                            $opt['expertise_sector_form'] = array(
+                                                                        'lbl_sector_main' => array(
+                                                                            'class' => 'left_label_p'
+                                                                            ),
+                                                                        'lbl_sector_sub' => array(
+                                                                            'class' => 'left_label_p'
+                                                                            )
+                                                                        );
+                                            ?>                              
+                                    <div class="clearfix">
+                                    <?php echo form_label(lang('Sector').':', 'project_sector_main', $opt['expertise_sector_form']['lbl_sector_main']);
+                                     echo form_hidden('hdn_expert_sector_from_id',$sec["id"]);
+                                    ?>
+                                    
+                                    <div class="fld">
+                                    <?php
+                                        $project_sector_main_attr   = 'id="project_sector_main'.$sec["id"].'" onchange="sectorbind('.$sec["id"].');"';
+                                        $sector_option = array();
+                                        $sector_opt =array();
+                                        foreach(sectors() as $key=>$value)
+                                        {
+                                            $sector_options[$value] = $value;
+                                            $sector_opt[$value]     = 'class="sector_main_'.$key.'"';
+                                        }
+                                        $sector_first           = array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
+                                        $sector_last            = array();
+                                        
+                                        echo form_custom_dropdown('member_sector', $sector_options,$sec['sector'],$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
+                                    ?>
+                                    <div class="fld errormsg" style="clear:both;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <?php echo form_label(lang('Sub-Sector').':', 'project_sector_sub', $opt['expertise_sector_form']['lbl_sector_sub']);?>
+                                    <div class="fld" id="dynamicSubsector_<?php echo $sec["id"];?>">
+                                    <?php
+                                        $project_sector_sub_attr        = 'id="project_sector_sub'.$sec["id"].'" class="project_sub"';
+                                        $subsector_options  = array();
+                                        $subsector_opt      = array();
+                                        $selected_sector    = getsectorid("'".$sec['subsector']."'",1);
+                                        
+                                        foreach(subsectors() as $key=>$value)
+                                        {
+                                            foreach($value as $key2=>$value2)
+                                            {
+                                                if($key != $selected_sector)
+                                                {
+                                                    continue;
+                                                }
+                                                $subsector_options[$value2]     = $value2;
+                                                $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                                            }
+                                        }
+                                        $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
+                                        $subsector_last             = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
+                                        echo form_custom_dropdown('member_sub_sector', $subsector_options,$sec['subsector'],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
+                                    ?>
+                                        
+                                    </div>
+                                    <div class="fld errormsg" style="clear:both; margin-left:120px;"></div>
+                                    <div style="display:none">
+                
+                                        <?php echo form_label(lang('Sub-SectorOther').':', 'profile_sector_sub_other', $opt['general_info_form']['lbl_sub_sector_other']);?>                        
+                                        <div class="fld w587">
+                                            <?php echo form_input($opt['general_info_form']['member_sub_sector_other']);?>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="view clearfix">
+                                        <?php echo form_submit('submit', lang('UpdateSector'),'class = "light_green no_margin_left" id="btn_add_sector"  style="float:right;margin-right:10px;margin-bottom:10px;"');?>
+                                </div>
+                                </div>
+                                <!-- end .edit -->
+                                
+                                </div>
+                            
+                            </div>
+                                        
+                            <?php echo form_close();?>
+                                    
+                        </div>
+
+                        <?php
                             }
                         }
-                        $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
-                        $subsector_last             = array('class'=>'hardcode','value'=>'Other','text'=>'Other');
-                        echo form_custom_dropdown('subsector', $subsector_options,$signup["subsector"],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
-                    ?>
-                    <div class="errormsg" id="err_project_subsector"><?php echo form_error("subsector"); ?></div>
-                </div>
+                        ?>
+                        </div>
+                            
+                        <?php echo form_open('profile/add_expert_sector',array('id'=>'expertise_sector_form','name'=>'expertise_sector_form','method'=>'post','class'=>'ajax_form'));
+                        
+                            $opt['expertise_sector_form'] = array(
+                                    'lbl_sector_main' => array(
+                                        'class' => 'left_label'
+                                        ),
+                                    'lbl_sector_sub' => array(
+                                        'class' => 'left_label'
+                                        ),
+                                    'lbl_sub_sector_other' => array(
+                                        'class' => 'left_label'
+                                        ),
+    
+                                    'member_sub_sector_other'=> array(
+                                        'id'        => 'profile_sector_sub_other',
+                                        'name'      => 'member_sub_sector_other',
+                                        'value'     => '',
+                                        'disabled'  => 'disabled'
+                                        )
+    
+                                    );
+                        ?>                              
+                                <div id="sectorContainer">
+                                <div class="sector_row">
+                                    
+                                    <!-- end .view -->
+                                    <div class="edit clearfix" style="display: block;">
+                                    <div>
+                                        <?php
+                                            echo form_hidden_custom('hdn_expert_sector_number',count($sector),false,'id="hdn_expert_sector_number"');
+                                        ?>                      
+                                        <div style="text-align:center;" class="errormsg"></div>
+                                    </div>
+
+                                    <div>
+                                        <?php echo form_label(lang('Sector').':', 'project_sector_main', $opt['expertise_sector_form']['lbl_sector_main']);?>
+                                        <div class="fld">
+                                        <?php
+                                            $project_sector_main_attr   = 'id="project_sector_main"';
+                                            $sector_option = array();
+                                            $sector_opt =array();
+                                            foreach(sectors() as $key=>$value)
+                                            {
+                                                $sector_options[$value] = $value;
+                                                $sector_opt[$value]     = 'class="sector_main_'.$key.'"';
+                                            }
+                                            $sector_first           = array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
+                                            $sector_last            = array();
+                                            
+                                            echo form_custom_dropdown('member_sector', $sector_options,'',$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
+                                        ?>
+                                        <div class="fld errormsg" style="clear:both;"></div>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div>
+                                        <?php echo form_label(lang('Sub-Sector').':', 'project_sector_sub', $opt['expertise_sector_form']['lbl_sector_sub']);?>
+                                        <div class="fld">
+                                        <?php
+                                            $project_sector_sub_attr        = 'id="project_sector_sub"';
+                                            $subsector_options  = array();
+                                            $subsector_opt      = array();
+                                            foreach(subsectors() as $key=>$value)
+                                            {
+                                                foreach($value as $key2=>$value2)
+                                                {
+                                                    $subsector_options[$value2]     = $value2;
+                                                    $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                                                }
+                                            }
+                                            $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
+                                            $subsector_last             = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
+                                            echo form_custom_dropdown('member_sub_sector', $subsector_options,'',$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
+                                        ?>
+                                        <div class="fld errormsg" style="clear:both;"></div>
+                                        </div>
+                                        <div style="display:none">
+                
+                                            <?php echo form_label(lang('Sub-SectorOther').':', 'profile_sector_sub_other', $opt['expertise_sector_form']['lbl_sub_sector_other']);?>                        
+                                            <div class="fld w587">
+                                                <?php echo form_input($opt['expertise_sector_form']['member_sub_sector_other']);?>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!-- end .edit -->
+                                    <div class="view clearfix">
+                                            <?php echo form_submit('submit', lang('SaveSector'),'class = "light_green no_margin_left" id="btn_add_sector"  style="float:right;margin-right:10px;margin-bottom:10px;"');?>
+
+
+                                            </div>
+                                    </div>
+                                
+                                </div>
+                                
+                                
+                            <!-- end .sector_row -->
+                        <?php echo form_close();?>
+
+                    </div>
 
 
                 <div class="anchor">
@@ -109,7 +299,7 @@
                 <div class="anchor">
                     <label for="email" class="left_label">Email:</label>
                     <input type="email" name="email" value="<?php echo set_value('email', $signup['email']) ?>" id="email" placeholder="" >
-                    <div class="errormsg" id="suggestion"><?php echo form_error('email') ?></div>
+                    <div class="errormsg" id="hint"><?php echo form_error('email') ?></div>
                 </div>
 
                 <div class="anchor">
