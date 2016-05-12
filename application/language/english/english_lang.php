@@ -191,7 +191,6 @@ $lang['ViewMore'] = 'View More';
 $lang['Noprojectsfound'] = 'No projects found';
 $lang['Noexpertisefound'] = 'No expertise found';
 $lang['ExpertsAttending'] = 'GViP Experts Attending';
-$lang['ExpertsAttendingIncludingNonGViP'] = 'Total Experts Attending';
 
 
 $lang['Search'] = 'Search';

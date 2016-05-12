@@ -174,7 +174,6 @@ $lang['ViewMore'] = 'Voir plus';
 $lang['Noprojectsfound'] = 'Pas de projets trouv&eacute;s';
 $lang['Noexpertisefound'] = 'Aucune expertise trouv&eacute;';
 $lang['ExpertsAttending'] = 'Experts GViP qui participent';
-$lang['ExpertsAttendingIncludingNonGViP'] = 'Experts qui participent en total';
 
 
 $lang['Search'] = 'Recherche';

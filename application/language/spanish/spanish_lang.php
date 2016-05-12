@@ -208,7 +208,6 @@ $lang['Expertisremovedsuccessfully'] = 'Experto Eliminado Exitosamente';
 $lang['ExpertOrganizations'] = 'Organizaciones Expertas';
 $lang['Experts'] = 'Expertos';
 $lang['ExpertsAttending'] = 'Asistentes GViP';
-$lang['ExpertsAttendingIncludingNonGViP'] = 'Asistentes en total';
 $lang['ExpertSectordeletedsuccessfully'] = 'Sector de Expertise Eliminado Exitosamente';
 $lang['Feasibility'] = 'Viabilidad';
 $lang['feasibility'] = 'viabilidad';
