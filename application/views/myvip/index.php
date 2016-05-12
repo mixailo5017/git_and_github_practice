@@ -23,7 +23,7 @@
             </article>
             <?php } ?>
             <div class="more_link">
-                <a href="/myvip/myprojects"><?php echo lang('ViewMore') ?></a>
+                <a href="/mygvip/myprojects"><?php echo lang('ViewMore') ?></a>
             </div>
             <?php } else { ?>
                 <p class="not_found">
@@ -56,11 +56,11 @@
             </ul>
             <?php if (! empty($my_experts)) { ?>
             <div class="more_link">
-                <a href="/myvip/myexperts"><?php echo lang('ViewMore') ?></a>
+                <a href="/mygvip/myexperts"><?php echo lang('ViewMore') ?></a>
             </div>
             <?php } ?>
             <div class="more_link">
-                <a href="/myvip/myfollowers"><?php echo lang('ViewMyFollowers') ?></a>
+                <a href="/mygvip/myfollowers"><?php echo lang('ViewMyFollowers') ?></a>
             </div>
         </div>
 
@@ -82,7 +82,7 @@
                 <?php } ?>
             </ul>
             <div class="more_link">
-                <a href="/myvip/mydiscussions"><?php echo lang('ViewMore') ?></a>
+                <a href="/mygvip/mydiscussions"><?php echo lang('ViewMore') ?></a>
             </div>
         </div>
         <?php } ?>
