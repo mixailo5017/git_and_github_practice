@@ -146,7 +146,6 @@ $lang['Country'] = 'País';
 $lang['Noprojectsfound'] = 'Nenhum projeto encontrado';
 $lang['Noexpertisefound'] = 'Nenhuma perícia encontrado';
 $lang['ExpertsAttending'] = 'Participantes GViP';
-$lang['ExpertsAttendingIncludingNonGViP'] = 'Participantes em total';
 $lang['CaseStudies'] = 'Estudos de Caso';
 $lang['sphoto'] = '\'S photo';
 $lang['noexpAssoc'] = 'Nenhum especialista foi associado com';

@@ -1,6 +1,4 @@
 <section class="portlet">
-    <?php echo heading(lang("ExpertsAttendingIncludingNonGViP") . ": 500", 4); ?>
-
     <?php echo heading(lang("ExpertsAttending") . " ($total_rows)", 4); ?>
 
     <ul class="expert_list">
