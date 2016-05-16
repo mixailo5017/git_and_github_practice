@@ -13,6 +13,8 @@ class Signup_model extends CI_Model
         'title' => '',
         'organization' => '',
         'public_status' => '',
+        'sector' => '',
+        'subsector' => '',
         'country' => '',
         'city' => '',
         'password' => '',
@@ -51,10 +53,6 @@ class Signup_model extends CI_Model
      */
     public function update($data)
     {
-
-        var_dump($data);
-
-        // die();
 
         $current = $this->get();
 
@@ -100,5 +98,43 @@ class Signup_model extends CI_Model
     public function get_fields()
     {
         return $this->fields;
+    }
+    
+    /**
+     * Get List of Sectors 
+     * @return  array
+     */
+    public function get_sectors(){
+        $this->db->where("parentid ='0'");
+        $query_sector = $this->db->get('exp_sectors');
+        if ($query_sector->num_rows() > 0)
+        {
+            foreach($query_sector->result_array() as $row)
+            {
+                $result_sector[$row['sectorid']]    =   $row['sectorvalue'];
+            }
+
+            return $result_sector;
+        }
+
+    }
+
+    /**
+     * Get List of Subsectors 
+     * @return  array
+     */
+    public function get_subsectors()
+    {
+        $this->db->where("parentid !='0'");
+        $query = $this->db->get('exp_sectors');
+        if ($query->num_rows() > 0)
+        {
+            foreach($query->result_array() as $row)
+            {
+                $result[$row['sectorid']]   =   $row['sectorvalue'];
+            }
+
+            return $result;
+        }
     }
 }

@@ -47,9 +47,55 @@
                             'public'    => lang('Public'),
                             'private'   => lang('Private')
                         );
-                        echo form_dropdown('public_status', $member_public_options, $signup["public_status"], 'id="public_status"');
+                        echo form_dropdown('public_status', $member_public_options, $signup['public_status'], 'id="public_status"');
                     ?>
                     <div class="errormsg OrgStructure"><?php echo form_error('OrgStructure') ?></div>
+                </div>
+
+                <div class="anchor">
+                    <label for="project_sector_main" class="left_label">Sector:</label>
+                    <?php
+                        $project_sector_main_attr = 'id="project_sector_main"';
+                        $sector_option = array();
+                        $sector_opt =array();
+                        foreach(sectors() as $key=>$value)
+                        {
+                            $sector_option[$value] = $value;
+                            $sector_opt[$value]     = 'class="sector_main_'.$key.'"';
+                        }
+                        $sector_first           = array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
+                        $sector_last            = array();
+
+                        echo form_custom_dropdown('sector', $sector_option, $signup['sector'],$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
+                    ?>
+                    <div class="errormsg Sector"><?php echo form_error('Sector') ?></div>
+                </div>
+
+                <div class="anchor">
+                    <label for="project_sector_sub" class="left_label">Sub Sector:</label>
+                    <?php
+                        $project_sector_sub_attr        = 'id="project_sector_sub"';
+                        $subsector_options  = array();
+                        $subsector_opt      = array();
+                        // $selected_sector    = getsectorid("'".$signup['subsector']."'",1);
+                        
+                        foreach(subsectors() as $key=>$value)
+                        {
+                            foreach($value as $key2=>$value2)
+                            {
+                                // if($key != $selected_sector)
+                                // {
+                                //     continue;
+                                // }
+                                $subsector_options[$value2]     = $value2;
+                                $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                            }
+                        }
+                        $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
+                        $subsector_last             = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
+                        echo form_custom_dropdown('subsector', $subsector_options,$signup['subsector'],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
+                    ?>
+                    <div class="errormsg SubSector"><?php echo form_error('SubSector') ?></div>
                 </div>
 
 <script>/*  

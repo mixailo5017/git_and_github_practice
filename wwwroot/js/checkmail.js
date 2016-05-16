@@ -40,3 +40,37 @@ $hint.on('click', '.domain', function() {
     });
     return false;
 });
+
+
+
+// // Sector Subsector filters on listviews
+// function loadSubsectors($subsectors, sector) {
+//     $subsectors.html("");
+//     $subsectors.append("<option value=\"\">" + subsectors["first"] + "</option>");
+//     $.each(subsectors[sector], function(index, value) {
+//         $subsectors.append("<option value=\"" + value + "\">" + value + "</option>")
+//     });
+// }
+// $('form[name=search_form] select[name=sector]').change(function() {
+//     var $this = $(this),
+//         $subsectors = $('form[name=search_form] select[name=subsector]');
+//     loadSubsectors($subsectors, $this.val());
+// });
+
+// Project Sub-Sector Dynamic List Population
+var $project_sector_sub = $('#project_sector_sub option').not('.hardcode');
+var $project_sector_sub_holder = $project_sector_sub.clone();
+$project_sector_sub.remove().not('.hardcode');
+$('#project_sector_main').on("change",function() {
+    $('#project_sector_sub').removeAttr('disabled');
+    $('#project_sector_sub').focus();
+    var thisClass = $(this).find('option:selected').attr('class').replace('sector_main','project_sector_sub');
+    $('#project_sector_sub option').not('.hardcode').remove()
+    $('#project_sector_sub option:first').after( $project_sector_sub_holder.filter('.' + thisClass) );
+    // if($('#selected_sub_sector').length>0)
+    // {
+    //     if($('#selected_sub_sector').text()=="Other"){
+    //         $('#project_sector_sub').val("Other");
+    //     }
+    // }
+}).trigger("change");
