@@ -21,16 +21,16 @@
             </li>
             <li class="quote">
                 <p>&ldquo;Finally our industry has its own social business platform, this is really great!&rdquo;</p>
-                <p class="author"><span>Walter Kemmsies</span>Chief Economist, Moffatt & Nichol Engineers</p>
+                <p class="author"><span>Walter Kemmsies</span>Chief Strategist, U.S. Ports, Airports and Global Infrastructure Group, JLL</p>
             </li>
         </ul>
         <ul>
             <li class="photo">
-                <img src="/images/new/testimonial2.png" width="100" height="100" />
+                <img src="/images/new/testimonial4.jpg" width="100" height="100" />
             </li>
             <li class="quote">
-                <p>&ldquo;Your ability to pull together the public and private sectors — those producing projects, and those looking to participate in projects — is unique, it's a powerful tool.&rdquo;</p>
-                <p class="author"><span></span>Global Fund Manager</p>
+                <p>&ldquo;There is no other place on the web where this quality and quantity of decision makers for the major infrastructure projects globally are available to discuss partnering arrangements.&rdquo;</p>
+                <p class="author"><span>Chris Hussey</span>Director, Global Lead Generation, EcoSys</p>
             </li>
         </ul>
     </div>
