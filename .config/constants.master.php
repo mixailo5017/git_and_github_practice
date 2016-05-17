@@ -107,6 +107,7 @@ define("FORUM_EXPERT_LIMIT",  15);
 // Max number of projects shown in a sidebar of the forum detail view
 define("FORUM_PROJECT_LIMIT", 8);
 
+define('MAX_SUB_SECTOR', 6);  // Maximum number of subsectors of an expert
 define('MAX_CASE_STUDIES', 7); // Maximum number of case studies per user (expert advert)
 define('MAX_IMAGE_DIMENSIONS', 10915904); // Max width * hight before using fallback (placeholder) image
 
