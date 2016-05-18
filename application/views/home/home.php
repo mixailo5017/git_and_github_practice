@@ -29,7 +29,7 @@
                 <img src="/images/new/testimonial4.jpg" width="100" height="100" />
             </li>
             <li class="quote">
-                <p>&ldquo;There is no other place on the web where this quality and quantity of decision makers for the major infrastructure projects globally are available to discuss partnering arrangements.&rdquo;</p>
+                <p>&ldquo;GViP is becoming the LinkedIn of the infrastructure world.  It's a community where we all trust each other and are looking for ways to improve our projects and business relationships.  There is no other place on the web where this quality and quantity of decision makers for the major infrastructure projects globally are available to discuss partnering arrangements.&rdquo;</p>
                 <p class="author"><span>Chris Hussey</span>Director, Global Lead Generation, EcoSys</p>
             </li>
         </ul>
