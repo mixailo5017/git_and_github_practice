@@ -47,7 +47,7 @@
                             'public'    => lang('Public'),
                             'private'   => lang('Private')
                         );
-                        echo form_dropdown('public_status', $member_public_options, $signup['public_status'], 'id="public_status"');
+                        echo form_dropdown('public_status', $member_public_options, set_value('public_status', $signup['public_status']), 'id="public_status"');
                     ?>
                     <div class="errormsg OrgStructure"><?php echo form_error('OrgStructure') ?></div>
                 </div>
@@ -115,23 +115,18 @@
 
                         $subsector_options  = array();
                         $subsector_opt      = array();
-                        // $selected_sector    = getsectorid("'".$signup['subsector']."'",1);
                         
                         foreach(subsectors() as $key=>$value)
                         {
                             foreach($value as $key2=>$value2)
                             {
-                                // if($key != $selected_sector)
-                                // {
-                                //     continue;
-                                // }
                                 $subsector_options[$value2]     = $value2;
                                 $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
                             }
                         }
                         $last = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
 
-                        echo form_category_dropdown('sub-sector[]', $sector_option, $subsector_options,$signup['sub-sector'],$project_sector_sub_attr,$sector_opt,$subsector_opt, $last);
+                        echo form_category_dropdown('sub-sector[]', $sector_option, $subsector_options,set_value('sub-sector', $signup['sub-sector']),$project_sector_sub_attr,$sector_opt,$subsector_opt, $last);
                     ?>
                     <div class="errormsg SubSector"><?php echo form_error('SubSector') ?></div>
                 </div>

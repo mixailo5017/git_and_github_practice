@@ -11,7 +11,7 @@ $email.on('blur',function() {
                     + "@<a href='#' class='domain'><b><i>" + suggestion.domain + 
                     "</i></b></a></span>?";
                   
-                $hint.html(hint + "<br>Using company specific emails is recommanded.").fadeIn(150);
+                $hint.html(hint + "<br>Using company specific emails is recommended.").fadeIn(150);
             } else {
                 // Subsequent errors
                 $(".address").html(suggestion.address);
@@ -113,5 +113,9 @@ function modelMatcher (params, data) {
 }
 
 $(document).ready(function() {
-    $('#project_sector_sub_select2').select2({matcher: modelMatcher});
+    $('#project_sector_sub_select2').select2({
+        maximumSelectionLength: 6,
+        placeholder: '- Select Sector -',
+        matcher: modelMatcher
+    });
 });
