@@ -300,7 +300,8 @@ class Signup extends CI_Controller
 
         if ($step == 'edit') {
             $page['styles'] = array(
-                'lib/select2.min.css'
+                'lib/select2.min.css',
+                'select2.custom.css'
             );
             $page['scripts'] = array(
                 'lib/select2.full.min.js',

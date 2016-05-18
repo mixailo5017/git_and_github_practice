@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="anchor">
-                    <label for="OrgStructure" class="left_label">Org Structure:</label>
+                    <label for="public_status" class="left_label">Org Structure:</label>
                     <?php
                         $member_public_options = array(
                             ''          => lang('select'),
@@ -49,7 +49,7 @@
                         );
                         echo form_dropdown('public_status', $member_public_options, set_value('public_status', $signup['public_status']), 'id="public_status"');
                     ?>
-                    <div class="errormsg OrgStructure"><?php echo form_error('OrgStructure') ?></div>
+                    <div class="errormsg dropdown"><?php echo form_error('public_status') ?></div>
                 </div>
 
 <script>/*
@@ -100,7 +100,7 @@
                 </div>
 */</script>
                 <div class="anchor">
-                    <label for="project_sector_sub" class="left_label">Sub-Sector:</label>
+                    <label for="project_sector_sub" class="left_label">Sector(s):</label>
                     <?php
                         $project_sector_sub_attr        = 'id="project_sector_sub_select2" multiple="multiple"';
                         
@@ -128,14 +128,14 @@
 
                         echo form_category_dropdown('sub-sector[]', $sector_option, $subsector_options,set_value('sub-sector', $signup['sub-sector']),$project_sector_sub_attr,$sector_opt,$subsector_opt, $last);
                     ?>
-                    <div class="errormsg SubSector"><?php echo form_error('SubSector') ?></div>
+                    <div class="errormsg dropdown"><?php echo form_error('SubSector') ?></div>
                 </div>
 
 
                 <div class="anchor">
                     <label for="country" class="left_label">Country:</label>
                     <?php echo form_dropdown('country', country_dropdown(), set_value('country', $signup['country']), 'id="country"') ?>
-                    <div class="errormsg country"><?php echo form_error('country') ?></div>
+                    <div class="errormsg dropdown"><?php echo form_error('country') ?></div>
                 </div>
 
                 <div class="anchor">
