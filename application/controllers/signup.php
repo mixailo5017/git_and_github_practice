@@ -133,7 +133,8 @@ class Signup extends CI_Controller
         $this->form_validation->set_rules('lastname', 'Last Name', 'trim|required');
         $this->form_validation->set_rules('title', 'Title', 'trim|required');
         $this->form_validation->set_rules('organization', 'Organization', 'trim|required');
-        // $this->form_validation->set_rules('OrgStructure', 'Org Structure', 'trim|required');
+        $this->form_validation->set_rules('public_status', 'Org Structure', 'trim|required');
+        $this->form_validation->set_rules('sub-sector[]', 'Sector(s)', 'required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|strtolower|required|valid_email|is_unique[exp_members.email]');
@@ -215,14 +216,8 @@ class Signup extends CI_Controller
             $select2[$key] = explode(':', $signup['sub-sector'][$key]);
         }
 
-        echo "<pre>";
-        var_dump($expert);
-        echo "</pre>";
-
         $this->load->model('members_model');
         $new_id = $this->members_model->create($expert, $is_developer);
-
-        $this->load->model('members_model');
         $this->members_model->add_sector($select2, $new_id);
 
         // Move photo file

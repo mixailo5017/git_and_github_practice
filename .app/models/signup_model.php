@@ -13,8 +13,6 @@ class Signup_model extends CI_Model
         'title' => '',
         'organization' => '',
         'public_status' => '',
-        // 'sector' => '',
-        // 'subsector' => '',
         'sub-sector' => '',
         'country' => '',
         'city' => '',

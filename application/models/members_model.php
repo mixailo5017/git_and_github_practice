@@ -259,22 +259,16 @@ class Members_model extends CI_Model {
     public function add_sector($data, $uid)
     {
         foreach ($data as $key => $value) {
-            $formatted_data[$key] = array(
+            $formatted_data = array(
                 'uid'               => $uid,
-                'sector'            => $data[$key][0],
-                'subsector'         => $data[$key][1],
+                'sector'            => $value[0],
+                'subsector'         => $value[1],
                 'permission'        => 'All',
                 'status'            => '1'
             );
-            $result = $this->db->insert('exp_expertise_sector', $formatted_data[$key]);
+            $result = $this->db->insert('exp_expertise_sector', $formatted_data);
             if (! $result) return false;
         }
-
-        echo "<pre>";
-        var_dump($formatted_data);
-        echo "</pre>";
-
-        die();
 
     }
 

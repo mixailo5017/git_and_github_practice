@@ -307,28 +307,23 @@ if ( ! function_exists('form_custom_dropdown'))
 if ( ! function_exists('form_category_dropdown'))
 {
     /**
-     * Customized Drop-down Menu with select2.js
+     * Customized Drop-down Menu using option groups
      *
      * @param string $name
      * @param array $categories
      * @param array $options
-     * @param array $selected
      * @param string $extra
      * @param array $opt
      * @param array $opt2
      * @param array $last
      * @return    string
      */
-    function form_category_dropdown($name = '', $categories = array(), $options = array(), $selected = array(), $extra = '', $opt=array(), $opt2=array(), $last = array())
+    function form_category_dropdown($name = '', $categories = array(), $options = array(), $extra = '', $opt=array(), $opt2=array(), $last = array())
     {
-        if ( ! is_array($selected))
-        {
-            $selected = array($selected);
-        }
 
         if ($extra != '') $extra = ' '.$extra;
 
-        $multiple = (count($selected) > 1 && strpos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
+        $multiple = (strpos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : ''; // For now, always outputs the multiple option. TODO: detect whether more than one option is selected
 
         $form = '<select name="'.$name.'"'.$extra.$multiple.">\n";
 
@@ -343,10 +338,8 @@ if ( ! function_exists('form_category_dropdown'))
                 if (substr($opt2[$key2], 26) === substr($opt[$key], 19)) {
                     $key2 = (string) $key2;
                     $okey2 = isset($opt2[$key2]) ? $opt2[$key2] : '';
-                    
-                    $sel2 = (in_array($key2, $selected)) ? ' selected="selected"' : '';
 
-                    $form .= '<option value="'.$key.':'.$key2.'"'.$sel2.' '.$okey2.'>'.(string) $val2."</option>\n";
+                    $form .= '<option value="'.$key.':'.$key2.'"'.set_select($name, $key.':'.$key2).' '.$okey2.'>'.(string) $val2."</option>\n";
                 }             
             }
 
