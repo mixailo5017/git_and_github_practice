@@ -248,6 +248,38 @@ class Members_model extends CI_Model {
         return $result;
     }
 
+
+
+    /**
+     * Add sector, subsector pairs
+
+     * @param $data
+     * @return bool|int
+     */
+    public function add_sector($data, $uid)
+    {
+        foreach ($data as $key => $value) {
+            $formatted_data[$key] = array(
+                'uid'               => $uid,
+                'sector'            => $data[$key][0],
+                'subsector'         => $data[$key][1],
+                'permission'        => 'All',
+                'status'            => '1'
+            );
+            $result = $this->db->insert('exp_expertise_sector', $formatted_data[$key]);
+            if (! $result) return false;
+        }
+
+        echo "<pre>";
+        var_dump($formatted_data);
+        echo "</pre>";
+
+        die();
+
+    }
+
+
+
 //    public function following($member_id, $follower) {
 //        if (is_null($member_id) || is_null($follower)) {
 //            return false;

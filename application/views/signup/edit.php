@@ -40,15 +40,114 @@
                 </div>
 
                 <div class="anchor">
+                    <label for="OrgStructure" class="left_label">Org Structure:</label>
+                    <?php
+                        $member_public_options = array(
+                            ''          => lang('select'),
+                            'public'    => lang('Public'),
+                            'private'   => lang('Private')
+                        );
+                        echo form_dropdown('public_status', $member_public_options, set_value('public_status', $signup['public_status']), 'id="public_status"');
+                    ?>
+                    <div class="errormsg OrgStructure"><?php echo form_error('OrgStructure') ?></div>
+                </div>
+
+<script>/*
+                <div class="anchor">
+                    <label for="project_sector_main" class="left_label">Sector:</label>
+                    <?php
+                        $project_sector_main_attr = 'id="project_sector_main"';
+                        $sector_option = array();
+                        $sector_opt =array();
+                        foreach(sectors() as $key=>$value)
+                        {
+                            $sector_option[$value] = $value;
+                            $sector_opt[$value]     = 'class="sector_main_'.$key.'"';
+                        }
+                        $sector_first           = array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
+                        $sector_last            = array();
+
+                        echo form_custom_dropdown('sector', $sector_option, $signup['sector'],$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
+                    ?>
+                    <div class="errormsg Sector"><?php echo form_error('Sector') ?></div>
+                </div>
+
+                <div class="anchor">
+                    <label for="project_sector_sub" class="left_label">Sub Sector:</label>
+                    <?php
+                        $project_sector_sub_attr        = 'id="project_sector_sub"';
+                        $subsector_options  = array();
+                        $subsector_opt      = array();
+                        // $selected_sector    = getsectorid("'".$signup['subsector']."'",1);
+                        
+                        foreach(subsectors() as $key=>$value)
+                        {
+                            foreach($value as $key2=>$value2)
+                            {
+                                // if($key != $selected_sector)
+                                // {
+                                //     continue;
+                                // }
+                                $subsector_options[$value2]     = $value2;
+                                $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                            }
+                        }
+                        $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
+                        $subsector_last             = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
+                        echo form_custom_dropdown('subsector', $subsector_options,$signup['subsector'],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
+                    ?>
+                    <div class="errormsg SubSector"><?php echo form_error('SubSector') ?></div>
+                </div>
+*/</script>
+                <div class="anchor">
+                    <label for="project_sector_sub" class="left_label">Sub-Sector:</label>
+                    <?php
+                        $project_sector_sub_attr        = 'id="project_sector_sub_select2" multiple="multiple"';
+                        
+                        $sector_option = array();
+                        $sector_opt =array();
+                        foreach(sectors() as $key=>$value)
+                        {
+                            $sector_option[$value] = $value;
+                            $sector_opt[$value]     = 'class="sector_main_'.$key.'"';
+                        }
+
+
+                        $subsector_options  = array();
+                        $subsector_opt      = array();
+                        
+                        foreach(subsectors() as $key=>$value)
+                        {
+                            foreach($value as $key2=>$value2)
+                            {
+                                $subsector_options[$value2]     = $value2;
+                                $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                            }
+                        }
+                        $last = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
+
+                        echo form_category_dropdown('sub-sector[]', $sector_option, $subsector_options,set_value('sub-sector', $signup['sub-sector']),$project_sector_sub_attr,$sector_opt,$subsector_opt, $last);
+                    ?>
+                    <div class="errormsg SubSector"><?php echo form_error('SubSector') ?></div>
+                </div>
+
+
+                <div class="anchor">
                     <label for="country" class="left_label">Country:</label>
                     <?php echo form_dropdown('country', country_dropdown(), set_value('country', $signup['country']), 'id="country"') ?>
                     <div class="errormsg country"><?php echo form_error('country') ?></div>
                 </div>
 
                 <div class="anchor">
+                    <label for="city" class="left_label">City:</label>
+                    <input type="text" name="city" value="<?php echo set_value('city', $signup['city']) ?>" id="city" placeholder="">
+                    <div class="errormsg"><?php echo form_error('city') ?></div>
+                </div>
+
+                <div class="anchor">
                     <label for="email" class="left_label">Email:</label>
                     <input type="email" name="email" value="<?php echo set_value('email', $signup['email']) ?>" id="email" placeholder="" >
-                    <div class="errormsg"><?php echo form_error('email') ?></div>
+                    <div class="errormsg" id="hint"><?php echo form_error('email') ?></div>
                 </div>
 
                 <div class="anchor">

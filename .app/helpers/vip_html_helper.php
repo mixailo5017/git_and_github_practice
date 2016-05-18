@@ -304,6 +304,64 @@ if ( ! function_exists('form_custom_dropdown'))
 	}
 }
 
+if ( ! function_exists('form_category_dropdown'))
+{
+    /**
+     * Customized Drop-down Menu with select2.js
+     *
+     * @param string $name
+     * @param array $categories
+     * @param array $options
+     * @param array $selected
+     * @param string $extra
+     * @param array $opt
+     * @param array $opt2
+     * @param array $last
+     * @return    string
+     */
+    function form_category_dropdown($name = '', $categories = array(), $options = array(), $selected = array(), $extra = '', $opt=array(), $opt2=array(), $last = array())
+    {
+        if ( ! is_array($selected))
+        {
+            $selected = array($selected);
+        }
+
+        if ($extra != '') $extra = ' '.$extra;
+
+        $multiple = (count($selected) > 1 && strpos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
+
+        $form = '<select name="'.$name.'"'.$extra.$multiple.">\n";
+
+        foreach ($categories as $key => $val) {
+            $key = (string) $key;
+            $okey = isset($opt[$key]) ? $opt[$key] : '';
+
+            $form .= '<optgroup label="'.$key.'"'.$okey.'>';
+
+            foreach ($options as $key2 => $val2)
+            {
+                if (substr($opt2[$key2], 26) === substr($opt[$key], 19)) {
+                    $key2 = (string) $key2;
+                    $okey2 = isset($opt2[$key2]) ? $opt2[$key2] : '';
+                    
+                    $sel2 = (in_array($key2, $selected)) ? ' selected="selected"' : '';
+
+                    $form .= '<option value="'.$key.':'.$key2.'"'.$sel2.' '.$okey2.'>'.(string) $val2."</option>\n";
+                }             
+            }
+
+            $form .= '<option value="'.$key.':'.$last['value'].'" class="'.$last['class'].'" >'.(string) $last['text']."</option>\n";
+
+            $form .= '</optgroup>';            
+        }
+
+        $form .= '</select>';
+
+        return $form;
+    }
+
+}
+
 if ( ! function_exists('script_tag')) {
     /**
      * Script Tag

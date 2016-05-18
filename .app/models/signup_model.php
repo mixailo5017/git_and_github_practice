@@ -12,7 +12,12 @@ class Signup_model extends CI_Model
         'lastname' => '',
         'title' => '',
         'organization' => '',
+        'public_status' => '',
+        // 'sector' => '',
+        // 'subsector' => '',
+        'sub-sector' => '',
         'country' => '',
+        'city' => '',
         'password' => '',
         'userphoto' => ''
     );
@@ -49,6 +54,7 @@ class Signup_model extends CI_Model
      */
     public function update($data)
     {
+
         $current = $this->get();
 
         $updated = array_merge($current, array_intersect_key($data, $this->fields));

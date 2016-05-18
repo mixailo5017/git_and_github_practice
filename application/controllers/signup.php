@@ -133,7 +133,9 @@ class Signup extends CI_Controller
         $this->form_validation->set_rules('lastname', 'Last Name', 'trim|required');
         $this->form_validation->set_rules('title', 'Title', 'trim|required');
         $this->form_validation->set_rules('organization', 'Organization', 'trim|required');
+        // $this->form_validation->set_rules('OrgStructure', 'Org Structure', 'trim|required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
+        $this->form_validation->set_rules('city', 'City', 'trim|required');
         $this->form_validation->set_rules('email', 'Email', 'trim|strtolower|required|valid_email|is_unique[exp_members.email]');
         $this->form_validation->set_rules('password', 'Password', 'required|min_length[6]|max_length[16]|matches[password_confirmation]');
         $this->form_validation->set_rules('password_confirmation', 'Password confirmation', 'required|min_length[6]|max_length[16]|matches[password]');
@@ -193,7 +195,7 @@ class Signup extends CI_Controller
         //$signup = $this->signup_model->get();
         $is_developer = $signup['is_developer'];
 
-        $expert = array_diff_key($signup, array_flip(array('linkedin', 'is_developer')));
+        $expert = array_diff_key($signup, array_flip(array('linkedin', 'is_developer', 'sub-sector')));
 
         $expert['membertype'] = MEMBER_TYPE_MEMBER;
         $expert['status'] = STATUS_ACTIVE;
@@ -204,8 +206,24 @@ class Signup extends CI_Controller
         $expert['password'] = $encrypted['password'];
         $expert['salt'] = $encrypted['salt'];
 
+        // $expertise['sector'] = $signup['sector'];
+        // $expertise['subsector'] = $signup['subsector'];
+
+        $select2 = array();
+
+        foreach ($signup['sub-sector'] as $key => $value) {
+            $select2[$key] = explode(':', $signup['sub-sector'][$key]);
+        }
+
+        echo "<pre>";
+        var_dump($expert);
+        echo "</pre>";
+
         $this->load->model('members_model');
         $new_id = $this->members_model->create($expert, $is_developer);
+
+        $this->load->model('members_model');
+        $this->members_model->add_sector($select2, $new_id);
 
         // Move photo file
         if (! empty($expert['userphoto'])) {
@@ -279,6 +297,20 @@ class Signup extends CI_Controller
                 'lib/jquery.tipsy.js'
             );
         }
+
+        if ($step == 'edit') {
+            $page['styles'] = array(
+                'lib/select2.min.css'
+            );
+            $page['scripts'] = array(
+                'lib/select2.full.min.js',
+                'lib/mailcheck.min.js',
+                'checkmail.js'
+            );
+        }
+        // echo "<pre>";
+        // var_dump($page['content']['sector']);
+        // echo "</pre>";
 
         $this->load->view('layouts/default', $page);
     }

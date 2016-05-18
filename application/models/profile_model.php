@@ -814,7 +814,7 @@ class Profile_model extends CI_Model {
      */
 	public function add_expert_sector($numberof = 0)
 	{
-		if($numberof > 0 && $numberof >=6)
+		if($numberof > 0 && $numberof >=MAX_SUB_SECTOR)
 		{
 				$response = array();
 				$response["status"] 	= "error";
