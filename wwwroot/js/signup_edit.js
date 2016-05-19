@@ -38,29 +38,10 @@ $spellingHint.on('click', '.suggestion', function() {
     $spellingHint.fadeOut(300, function() {
         $(this).empty();
     });
-    $("#password").focus();
+    $("#discipline").focus();
     $email.change();
     return false;
 });
-
-
-// Project Sub-Sector Dynamic List Population
-var $project_sector_sub = $('#project_sector_sub option').not('.hardcode');
-var $project_sector_sub_holder = $project_sector_sub.clone();
-$project_sector_sub.remove().not('.hardcode');
-$('#project_sector_main').on("change",function() {
-    $('#project_sector_sub').removeAttr('disabled');
-    $('#project_sector_sub').focus();
-    var thisClass = $(this).find('option:selected').attr('class').replace('sector_main','project_sector_sub');
-    $('#project_sector_sub option').not('.hardcode').remove()
-    $('#project_sector_sub option:first').after( $project_sector_sub_holder.filter('.' + thisClass) );
-    // if($('#selected_sub_sector').length>0)
-    // {
-    //     if($('#selected_sub_sector').text()=="Other"){
-    //         $('#project_sector_sub').val("Other");
-    //     }
-    // }
-}).trigger("change");
 
 
 function modelMatcher (params, data) {

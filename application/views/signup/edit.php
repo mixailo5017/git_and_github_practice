@@ -30,9 +30,11 @@
                 <div class="anchor">
                     <label for="email" class="left_label">Email:</label>
                     <input type="email" name="email" value="<?php echo set_value('email', $signup['email']) ?>" id="email" placeholder="" >
-                    <div class="errormsg"><?php echo form_error('email') ?></div>
-                    <div class="errormsg"><label id="company-hint"></label></div>
-                    <div class="errormsg"><label id="spelling-hint"></label></div>
+                    <div class="errormsg">
+                        <?php echo form_error('email') ?>
+                        <label id="company-hint"></label>
+                        <label id="spelling-hint"></label>
+                    </div>
                 </div>
                 
                 <div class="anchor">
