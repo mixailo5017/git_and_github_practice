@@ -6,12 +6,12 @@ $email.on('blur',function() {
         suggested: function(element, suggestion) {
             if(!$hint.html()) {
                 // First error - fill in/show entire hint element
-                var hint = "Did you mean <span class='suggestion'>" +
+                var hint = "Did you mean <b><i><a href='#' class='suggestion'>" +
                     "<span class='address'>" + suggestion.address + "</span>"
-                    + "@<a href='#' class='domain'><b><i>" + suggestion.domain + 
+                    + "@<span class='domain'>" + suggestion.domain + 
                     "</i></b></a></span>?";
                   
-                $hint.html(hint + "<br>Using company specific emails is recommended.").fadeIn(150);
+                $hint.html(hint + "<br>Using company specific emails is recommended.").fadeIn(300);
             } else {
                 // Subsequent errors
                 $(".address").html(suggestion.address);
@@ -24,7 +24,7 @@ $email.on('blur',function() {
                 if (Mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || 
                     Mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
                     $hint.html('Using company specific emails is recommanded.');
-                    $hint.fadeOut(3000, function() {
+                    $hint.fadeOut(5000, function() {
                         $hint.css('display', 'none').empty();
                     });
                 }
@@ -32,10 +32,10 @@ $email.on('blur',function() {
         }
     });
 });
-$hint.on('click', '.domain', function() {
+$hint.on('click', '.suggestion', function() {
     // On click, fill in the field with the suggestion and remove the hint
     $email.val($(".suggestion").text());
-    $hint.fadeOut(200, function() {
+    $hint.fadeOut(300, function() {
         $(this).empty();
     });
     return false;
@@ -117,5 +117,11 @@ $(document).ready(function() {
         maximumSelectionLength: 6,
         placeholder: '- Select Sector -',
         matcher: modelMatcher
+    });
+    $('#public_status').select2({
+        minimumResultsForSearch: Infinity
+    });
+    $('#country').select2({
+        minimumResultsForSearch: Infinity
     });
 });

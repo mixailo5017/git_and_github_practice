@@ -49,7 +49,7 @@
                         );
                         echo form_dropdown('public_status', $member_public_options, set_value('public_status', $signup['public_status']), 'id="public_status"');
                     ?>
-                    <div class="errormsg public_status"><?php echo form_error('public_status') ?></div>
+                    <div class="errormsg dropdown"><?php echo form_error('public_status') ?></div>
                 </div>
 
 <script>/*
@@ -135,7 +135,7 @@
                 <div class="anchor">
                     <label for="country" class="left_label">Country:</label>
                     <?php echo form_dropdown('country', country_dropdown(), set_value('country', $signup['country']), 'id="country"') ?>
-                    <div class="errormsg country"><?php echo form_error('country') ?></div>
+                    <div class="errormsg dropdown"><?php echo form_error('country') ?></div>
                 </div>
 
                 <div class="anchor">
