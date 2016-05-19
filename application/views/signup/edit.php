@@ -17,19 +17,19 @@
 
                 <div class="anchor">
                     <label for="firstname" class="left_label">First Name:</label>
-                    <input type="text" name="firstname" value="<?php echo set_value('firstname', $signup['firstname']) ?>" id="firstname" placeholder="">
+                    <input type="text" name="firstname" value="<?php echo set_value('firstname', $signup['firstname']) ?>" id="firstname" placeholder="" required>
                     <div class="errormsg"><?php echo form_error('firstname') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="lastname" class="left_label">Last Name:</label>
-                    <input type="text" name="lastname" value="<?php echo set_value('lastname', $signup['lastname']) ?>" id="lastname" placeholder="">
+                    <input type="text" name="lastname" value="<?php echo set_value('lastname', $signup['lastname']) ?>" id="lastname" placeholder="" required>
                     <div class="errormsg"><?php echo form_error('lastname') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="email" class="left_label">Email:</label>
-                    <input type="email" name="email" value="<?php echo set_value('email', $signup['email']) ?>" id="email" placeholder="" >
+                    <input type="email" name="email" value="<?php echo set_value('email', $signup['email']) ?>" id="email" placeholder="" required>
                     <div class="errormsg">
                         <?php echo form_error('email') ?>
                         <label id="company-hint"></label>
@@ -40,7 +40,7 @@
                 <div class="anchor">
                     <label for="discipline" class="left_label">Discipline:</label>
                     <?php
-                        $discipline_attr = 'id="discipline"';
+                        $discipline_attr = 'id="discipline" required';
                         $discipline_options =  discipline_dropdown();
                         echo form_dropdown('discipline', $discipline_options,$signup['discipline'],$discipline_attr);
                     ?>
@@ -50,7 +50,7 @@
                 <div class="anchor">
                     <label for="project_sector_sub" class="left_label">Sector(s):</label>
                     <?php
-                        $project_sector_sub_attr        = 'id="project_sector_sub_select2" multiple="multiple"';
+                        $project_sector_sub_attr        = 'id="project_sector_sub_select2" multiple="multiple" required';
                         
                         $sector_option = array();
                         $sector_opt =array();
@@ -81,13 +81,13 @@
 
                 <div class="anchor">
                     <label for="title" class="left_label">Job Title:</label>
-                    <input type="text" name="title" value="<?php echo set_value('title', $signup['title']) ?>" id="title" placeholder="">
+                    <input type="text" name="title" value="<?php echo set_value('title', $signup['title']) ?>" id="title" placeholder="" required>
                     <div class="errormsg"><?php echo form_error('title') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="organization" class="left_label">Organization:</label>
-                    <input type="text" name="organization" value="<?php echo set_value('organization', $signup['organization']) ?>" id="organization" placeholder="">
+                    <input type="text" name="organization" value="<?php echo set_value('organization', $signup['organization']) ?>" id="organization" placeholder="" required>
                     <div class="errormsg"><?php echo form_error('organization') ?></div>
                 </div>
 
@@ -99,32 +99,32 @@
                             'public'    => lang('Public'),
                             'private'   => lang('Private')
                         );
-                        echo form_dropdown('public_status', $member_public_options, set_value('public_status', $signup['public_status']), 'id="public_status"');
+                        echo form_dropdown('public_status', $member_public_options, set_value('public_status', $signup['public_status']), 'id="public_status" required');
                     ?>
                     <div class="errormsg dropdown"><?php echo form_error('public_status') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="city" class="left_label">City:</label>
-                    <input type="text" name="city" value="<?php echo set_value('city', $signup['city']) ?>" id="city" placeholder="">
+                    <input type="text" name="city" value="<?php echo set_value('city', $signup['city']) ?>" id="city" placeholder="" required>
                     <div class="errormsg"><?php echo form_error('city') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="country" class="left_label">Country:</label>
-                    <?php echo form_dropdown('country', country_dropdown(), set_value('country', $signup['country']), 'id="country"') ?>
+                    <?php echo form_dropdown('country', country_dropdown(), set_value('country', $signup['country']), 'id="country" required') ?>
                     <div class="errormsg dropdown"><?php echo form_error('country') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="password" class="left_label">Password:</label>
-                    <input type="password" name="password" value="<?php echo set_value('password', $signup['password']) ?>" id="password" placeholder="" >
+                    <input type="password" name="password" value="<?php echo set_value('password', $signup['password']) ?>" id="password" placeholder="" required pattern=".{6,}" title="Let's keep you safe! Please use at least six characters.">
                     <div class="errormsg"><?php echo form_error('password') ?></div>
                 </div>
 
                 <div class="anchor">
                     <label for="password_confirmation" class="left_label">Confirm password:</label>
-                    <input type="password" name="password_confirmation" value="<?php echo set_value('password_confirmation', $signup['password']) ?>" id="password_confirmation" placeholder="">
+                    <input type="password" name="password_confirmation" value="<?php echo set_value('password_confirmation', $signup['password']) ?>" id="password_confirmation" placeholder="" required pattern=".{6,}" title="Let's keep you safe! Please use at least six characters.">
                     <div class="errormsg"><?php echo form_error('password_confirmation') ?></div>
                 </div>
 
