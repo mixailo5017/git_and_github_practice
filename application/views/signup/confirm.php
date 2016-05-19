@@ -31,6 +31,28 @@
                                 <td><?php echo $signup['lastname'] ?></td>
                             </tr>
                             <tr>
+                                <th>Email:</th>
+                                <td><?php echo $signup['email'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Discipline:</th>
+                                <td><?php echo $signup['discipline'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>Sector(s):</th>
+                                <td><?php 
+                                    $select2 = array();
+                                    $i = 0;
+                                    $len = count($signup['sub-sector']);
+                                    foreach ($signup['sub-sector'] as $key => $value) {
+                                        $select2[$key] = explode(':', $signup['sub-sector'][$key]);
+                                        if ($i == $len - 1) {echo implode(': ', $select2[$key]);}
+                                        else {echo implode(': ', $select2[$key]).'<br><br>';}
+                                        $i++;
+                                    }
+                                ?></td>
+                            </tr>
+                            <tr>
                                 <th>Title:</th>
                                 <td><?php echo $signup['title'] ?></td>
                             </tr>
@@ -39,13 +61,18 @@
                                 <td><?php echo $signup['organization'] ?></td>
                             </tr>
                             <tr>
+                                <th>Org Structure:</th>
+                                <td><?php echo $signup['public_status'] ?></td>
+                            </tr>
+                            <tr>
+                                <th>City:</th>
+                                <td><?php echo $signup['city'] ?></td>
+                            </tr>
+                            <tr>
                                 <th>Country:</th>
                                 <td><?php echo $signup['country'] ?></td>
                             </tr>
-                            <tr>
-                                <th>Email:</th>
-                                <td><?php echo $signup['email'] ?></td>
-                            </tr>
+
                         </table>
                     </div>
                 </div>
