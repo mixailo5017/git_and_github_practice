@@ -115,13 +115,12 @@ function modelMatcher (params, data) {
 $(document).ready(function() {
     $('#project_sector_sub_select2').select2({
         maximumSelectionLength: 6,
-        placeholder: '- Select Sector -',
+        placeholder: '- Type to Search -',
         matcher: modelMatcher
     });
     $('#public_status').select2({
         minimumResultsForSearch: Infinity
     });
-    $('#country').select2({
-        minimumResultsForSearch: Infinity
-    });
+    $('#discipline').select2();
+    $('#country').select2();
 });

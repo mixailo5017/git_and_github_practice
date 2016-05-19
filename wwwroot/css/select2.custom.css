@@ -6,18 +6,24 @@
 .select2-container .select2-selection {
 	min-height: 41px;
 	vertical-align: middle;
+	display: flex;
+	align-items: center; /* align vertical */
 }
 
-.select2-selection--single, .select2-selection__choice {
+.select2-selection--single {
 	position: relative;
 	vertical-align: middle;
-	padding-top: 5px;
 	padding-left: 2px;
 	font-family: 'Open Sans Bold';
 }
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+	font-family: 'Open Sans Bold';
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
 .select2-container .select2-search--inline .select2-search__field {
 	font-family: 'Open Sans Bold';
-    margin-top: 9px;
+    margin-top: -2px;
 	position: relative;
 	vertical-align: middle;
 	color: #373b43;
@@ -41,4 +47,21 @@
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
    color:    #373b43;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+[placeholder]:focus:-moz-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+[placeholder]:focus::-moz-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
+}
+[placeholder]:focus:-ms-input-placeholder {
+  transition: opacity 0.0s 0.0s ease; 
+  opacity: 0;
 }

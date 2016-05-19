@@ -134,6 +134,7 @@ class Signup extends CI_Controller
         $this->form_validation->set_rules('title', 'Title', 'trim|required');
         $this->form_validation->set_rules('organization', 'Organization', 'trim|required');
         $this->form_validation->set_rules('public_status', 'Org Structure', 'trim|required');
+        $this->form_validation->set_rules('discipline', 'Discipline', 'trim|required');
         $this->form_validation->set_rules('sub-sector[]', 'Sector(s)', 'required');
         $this->form_validation->set_rules('country', 'Country', 'trim|required');
         $this->form_validation->set_rules('city', 'City', 'trim|required');
