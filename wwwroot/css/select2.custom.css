@@ -21,6 +21,7 @@
 	margin-top: 0px;
 	margin-bottom: 2px;
 }
+
 .select2-container .select2-search--inline .select2-search__field {
 	font-family: 'Open Sans Bold';
     margin-top: -2px;
@@ -65,3 +66,18 @@
   transition: opacity 0.0s 0.0s ease; 
   opacity: 0;
 }
+
+/* Re-enable glow around boxes to show they are focused */
+
+.form span[class^="select2"]:active,
+.form span[class^="select2"]:focus,
+.form span[class*=" select2"]:active,
+.form span[class*=" select2"]:focus,
+.form .select2-container--focus,
+.form span.select2-container--focus span.select2-selection--multiple
+{
+    border: solid 1px #72b3e4;
+    background: #f8f8fa;
+    box-shadow: 0 0 3px rgba(95, 164, 215, .75);
+}
+
