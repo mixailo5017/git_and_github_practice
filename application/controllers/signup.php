@@ -301,7 +301,7 @@ class Signup extends CI_Controller
             $page['scripts'] = array(
                 'lib/select2.full.min.js',
                 'lib/mailcheck.min.js',
-                'checkmail.js'
+                'signup_edit.js'
             );
         }
         // echo "<pre>";

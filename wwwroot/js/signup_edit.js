@@ -1,43 +1,45 @@
 var $email = $('#email');
-var $hint = $("#hint");
-$email.on('blur',function() {
-    // $hint.css('display', 'none').empty();
+var $spellingHint = $("#spelling-hint");
+var $companyHint =$("#company-hint");
+
+var companyHint = "We recommend using your professional email address.";
+
+$email.focus(function() {
+  $spellingHint.empty();
+  $companyHint.empty();
+});
+
+$email.on('change',function() {
     $(this).mailcheck({
         suggested: function(element, suggestion) {
-            if(!$hint.html()) {
-                // First error - fill in/show entire hint element
-                var hint = "Did you mean <b><i><a href='#' class='suggestion'>" +
-                    "<span class='address'>" + suggestion.address + "</span>"
-                    + "@<span class='domain'>" + suggestion.domain + 
-                    "</i></b></a></span>?";
-                  
-                $hint.html(hint + "<br>Using company specific emails is recommended.").fadeIn(300);
-            } else {
-                // Subsequent errors
-                $(".address").html(suggestion.address);
-                $(".domain").html(suggestion.domain);
-            }
+            var hint = "Also, did you mean <b><i><a href='#' class='suggestion'>" +
+                "<span class='address'>" + suggestion.address + "</span>"
+                + "@<span class='domain'>" + suggestion.domain + 
+                "</i></b></a></span>?";
+              
+            $spellingHint.hide().html(hint).fadeIn(500);
+            $companyHint.hide().html(companyHint).fadeIn(500);
         },
         empty: function (element) {
-            if (!$hint.html()) {
-                var companyDomain = $email.val().substr($email.val().indexOf("@") + 1);
-                if (Mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || 
-                    Mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
-                    $hint.html('Using company specific emails is recommanded.');
-                    $hint.fadeOut(5000, function() {
-                        $hint.css('display', 'none').empty();
-                    });
-                }
+            var companyDomain = $email.val().substr($email.val().indexOf("@") + 1);
+            if (Mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || Mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
+                console.log("found a personal email address, spelled correctly");
+                $companyHint.hide().html(companyHint).fadeIn(500);
             }
+            else $companyHint.empty();
+
         }
     });
 });
-$hint.on('click', '.suggestion', function() {
+
+$spellingHint.on('click', '.suggestion', function() {
     // On click, fill in the field with the suggestion and remove the hint
     $email.val($(".suggestion").text());
-    $hint.fadeOut(300, function() {
+    $spellingHint.fadeOut(300, function() {
         $(this).empty();
     });
+    $("#password").focus();
+    $email.change();
     return false;
 });
 
