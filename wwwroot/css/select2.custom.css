@@ -22,6 +22,10 @@
 	margin-bottom: 2px;
 }
 
+li.select2-selection__choice {
+	font-size: 14px;
+}
+
 .select2-container .select2-search--inline .select2-search__field {
 	font-family: 'Open Sans Bold';
     margin-top: -2px;

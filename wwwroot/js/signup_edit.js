@@ -99,7 +99,8 @@ $(document).ready(function() {
     $('#project_sector_sub_select2').select2({
         maximumSelectionLength: 6,
         placeholder: '- Type to Search -',
-        matcher: modelMatcher
+        matcher: modelMatcher,
+        templateSelection: template
     });
     $('#public_status').select2({
         minimumResultsForSearch: Infinity
@@ -108,7 +109,10 @@ $(document).ready(function() {
     $('#country').select2();
 });
 
-
+// Function to return label values for subsector dropdown box. Adds name of sector in front of any subsectors called 'Other'
+function template(data, container) {
+  return (!data.text.indexOf('Other')) ? data.id.replace(':',' — ') : data.text;
+}
 
 
 var errorLabelsFromServer = $('div.errormsg label').filter(function () { // Filter removes any label elements that do not have any text inside them
