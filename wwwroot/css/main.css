@@ -3673,7 +3673,7 @@ body
     margin: 20px 0 0;
 }
 
-.form label
+.form label, .form ul
 {
     font-size: .875em;
 
@@ -3837,7 +3837,7 @@ body
     padding-top: 20px;
 }
 
-.errormsg label
+.errormsg label, .errormsg ul
 {
     width: 100%;
     margin: -14px 0 20px;
