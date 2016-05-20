@@ -32,6 +32,7 @@ li.select2-selection__choice {
 	position: relative;
 	vertical-align: middle;
 	color: #373b43;
+	font-size: 14px;
 }
 .select2-selection__arrow {
 	margin-top: 5px;
