@@ -1,6 +1,6 @@
 <section class="main-content container">
     <h1 class="h1-xl">Add Profile Info</h1>
-    <p>You're moving right along! Please add your profile information.</p>
+    <p>You're moving right along! Please share a little about yourself (all fields mandatory).</p>
 
     <?php $this->load->view('signup/_progress', array('step' => 'edit')) ?>
 
