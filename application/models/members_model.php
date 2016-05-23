@@ -261,8 +261,8 @@ class Members_model extends CI_Model {
         foreach ($data as $key => $value) {
             $formatted_data = array(
                 'uid'               => $uid,
-                'sector'            => $value[0],
-                'subsector'         => $value[1],
+                'sector'            => $value['sector'],
+                'subsector'         => $value['subsector'],
                 'permission'        => 'All',
                 'status'            => '1'
             );

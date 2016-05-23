@@ -211,7 +211,11 @@ class Signup extends CI_Controller
         $select2 = array();
 
         foreach ($signup['sub-sector'] as $key => $value) {
-            $select2[$key] = explode(':', $signup['sub-sector'][$key]);
+            $pieces = explode(':', $signup['sub-sector'][$key]);
+            $select2[$key] = array(
+                'sector' => $pieces[0],
+                'subsector' => $pieces[1]
+            );
         }
 
         $this->load->model('members_model');
@@ -237,6 +241,12 @@ class Signup extends CI_Controller
                 'firstName' => $expert['firstname'],
                 'lastName' => $expert['lastname'],
                 'email' => $expert['email'],
+                'Title' => $expert['title'],
+                'Organization Structure' => $expert['public_status'],
+                'Discipline' => $expert['discipline'],
+                'Sector(s)' => $select2,
+                'User Country' => $expert['country'],
+                'User City' => $expert['city'],
                 'Organization' => $expert['organization'],
                 'Profile Completion Index' => (int) $pci['pci'],
 //                'Rating Overall Average' => 0.0,
