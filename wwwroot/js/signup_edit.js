@@ -141,8 +141,7 @@ var validationSettings = {
           settings: {
               trigger: "focusout"
           }
-      },
-      debug: true
+      }
   };
 formToValidate.validate(validationSettings);
 
