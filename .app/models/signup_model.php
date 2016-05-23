@@ -14,7 +14,7 @@ class Signup_model extends CI_Model
         'organization' => '',
         'public_status' => '',
         'discipline' => '',
-        'sub-sector' => '',
+        'sub-sector' => array(),
         'country' => '',
         'city' => '',
         'password' => '',

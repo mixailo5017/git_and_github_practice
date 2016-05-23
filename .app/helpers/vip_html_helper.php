@@ -318,7 +318,7 @@ if ( ! function_exists('form_category_dropdown'))
      * @param array $last
      * @return    string
      */
-    function form_category_dropdown($name = '', $categories = array(), $options = array(), $extra = '', $opt=array(), $opt2=array(), $last = array())
+    function form_category_dropdown($name = '', $categories = array(), $options = array(), $selected = array(), $extra = '', $opt=array(), $opt2=array(), $last = array())
     {
 
         if ($extra != '') $extra = ' '.$extra;
@@ -339,7 +339,9 @@ if ( ! function_exists('form_category_dropdown'))
                     $key2 = (string) $key2;
                     $okey2 = isset($opt2[$key2]) ? $opt2[$key2] : '';
 
-                    $form .= '<option value="'.$key.':'.$key2.'"'.set_select($name, $key.':'.$key2).' '.$okey2.'>'.(string) $val2."</option>\n";
+                    $sel = in_array($key.':'.$key2, $selected) ? ' selected="selected"' : '';
+
+                    $form .= '<option value="'.$key.':'.$key2.'"'.$sel.' '.$okey2.'>'.(string) $val2."</option>\n";
                 }             
             }
 

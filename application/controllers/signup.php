@@ -208,9 +208,6 @@ class Signup extends CI_Controller
         $expert['password'] = $encrypted['password'];
         $expert['salt'] = $encrypted['salt'];
 
-        // $expertise['sector'] = $signup['sector'];
-        // $expertise['subsector'] = $signup['subsector'];
-
         $select2 = array();
 
         foreach ($signup['sub-sector'] as $key => $value) {
@@ -306,9 +303,6 @@ class Signup extends CI_Controller
                 'signup_edit.js'
             );
         }
-        // echo "<pre>";
-        // var_dump($page['content']['sector']);
-        // echo "</pre>";
 
         $this->load->view('layouts/default', $page);
     }

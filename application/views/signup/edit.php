@@ -74,7 +74,7 @@
                         }
                         $last = array('class'=>'hardcode','value'=>'Other','text'=>lang('Other'));
 
-                        echo form_category_dropdown('sub-sector[]', $sector_option, $subsector_options,$project_sector_sub_attr,$sector_opt,$subsector_opt, $last);
+                        echo form_category_dropdown('sub-sector[]', $sector_option, $subsector_options, $signup['sub-sector'], $project_sector_sub_attr,$sector_opt,$subsector_opt, $last);
                     ?>
                     <div class="errormsg dropdown"><?php echo form_error('sub-sector[]') ?></div>
                 </div>
