@@ -345,7 +345,9 @@ if ( ! function_exists('form_category_dropdown'))
                 }             
             }
 
-            $form .= '<option value="'.$key.':'.$last['value'].'" class="'.$last['class'].'" >'.(string) $last['text']."</option>\n";
+            $sel = in_array($key.':'.$last['value'], $selected) ? ' selected="selected"' : '';
+
+            $form .= '<option value="'.$key.':'.$last['value'].'"'.$sel.' class="'.$last['class'].'" >'.(string) $last['text']."</option>\n";
 
             $form .= '</optgroup>';            
         }
