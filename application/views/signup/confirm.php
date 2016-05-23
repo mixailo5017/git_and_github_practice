@@ -62,7 +62,7 @@
                             </tr>
                             <tr>
                                 <th>Org Structure:</th>
-                                <td><?php echo $signup['public_status'] ?></td>
+                                <td><?php echo ucfirst($signup['public_status']) ?></td>
                             </tr>
                             <tr>
                                 <th>City:</th>
