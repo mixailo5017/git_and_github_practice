@@ -244,7 +244,7 @@ class Signup extends CI_Controller
                 'Title' => $expert['title'],
                 'Organization Structure' => $expert['public_status'],
                 'Discipline' => $expert['discipline'],
-                'Sector(s)' => $select2,
+                'Sector(s)' => $signup['sub-sector'],
                 'User Country' => $expert['country'],
                 'User City' => $expert['city'],
                 'Organization' => $expert['organization'],

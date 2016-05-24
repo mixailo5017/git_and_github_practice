@@ -25,7 +25,7 @@
             $user_properties = array_merge($user_properties, $page_analytics['user_properties']);
         }
         ?>
-        window.analytics.identify(GVIP.App.Analytics.user_id, <?php echo json_encode($user_properties, JSON_FORCE_OBJECT) ?>, GVIP.App.Analytics.context);
+        window.analytics.identify(GVIP.App.Analytics.user_id, <?php echo json_encode($user_properties) ?>, GVIP.App.Analytics.context);
     <?php } ?>
 
     <?php
