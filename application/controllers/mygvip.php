@@ -122,7 +122,7 @@ class Mygvip extends CI_Controller {
         $total = count($discussions) > 0 ? $discussions[0]['row_count'] : 0;
 
         $config = array(
-            'base_url' => "/myvip/mydiscussions?limit=$limit",
+            'base_url' => "/mygvip/mydiscussions?limit=$limit",
             'total_rows' => $total,
             'per_page' => $limit,
             'num_links' => 1,
@@ -169,7 +169,7 @@ class Mygvip extends CI_Controller {
         $total = count($experts) > 0 ? (int) $experts[0]['row_count'] : 0;
 
         $config = array(
-            'base_url' => '/myvip/myfollowers?' . http_build_query(compact('limit')),
+            'base_url' => '/mygvip/myfollowers?' . http_build_query(compact('limit')),
             'total_rows' => $total,
             'per_page' => $limit,
             'num_links' => 1,
@@ -220,7 +220,7 @@ class Mygvip extends CI_Controller {
         $total = count($experts) > 0 ? (int) $experts[0]['row_count'] : 0;
 
         $config = array(
-            'base_url' => '/myvip/myexperts?' . http_build_query(compact('limit')),
+            'base_url' => '/mygvip/myexperts?' . http_build_query(compact('limit')),
             'total_rows' => $total,
             'per_page' => $limit,
             'num_links' => 1,
@@ -275,7 +275,7 @@ class Mygvip extends CI_Controller {
         $total = (count($rows) > 0) ? $rows[0]['row_count'] : 0;
 
         $config = array (
-            'base_url'   => '/myvip/myprojects?scope=' . urlencode($scope),
+            'base_url'   => '/mygvip/myprojects?scope=' . urlencode($scope),
             'total_rows' => $total,
             'per_page'   => $perpage,
             'next_link'	 => lang('Next') . '  ' . '&gt;',
