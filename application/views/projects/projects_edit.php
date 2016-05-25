@@ -251,7 +251,7 @@
 									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
 									</div>
 
-									<div class="image_placeholder" style="margin-left: 5px; padding-top: -50px">
+									<div class="image_placeholder" style="margin: 50px 0 0 -150px;">
                                         <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
 									</div>									
 									
@@ -289,7 +289,6 @@
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_keywords"]); ?>
 							<div class="errormsg" id="err_project_keywords"><?php echo form_error("project_keywords"); ?></div>
-							<span class="example" style="float:left"><?php echo lang('SeparateMessage');?></span>
 						</div>
 						<br>
 

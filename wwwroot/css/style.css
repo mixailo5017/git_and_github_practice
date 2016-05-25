@@ -615,7 +615,10 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   position: relative;
 }
 #profile_tabs .tooltip {
-  background: url(/images/site/icon_question_mark.png) no-repeat;
+  background-image: url(/images/site/icon_question_mark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px;
   width: 24px;
   height: 24px;
   position: absolute;
@@ -1047,7 +1050,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 #col5 input.light_green, #col5 input.light_red, #col5 input.light_gray, #col5 button.light_green, #col5 button.light_red, #col5 button.light_gray {
   width: inherit;
   padding: 7px 24px;
-  margin: 10px 0 0 120px;
+  margin: 10px 0 0 50px;
   min-width: 90px;
 }
 #col5 textarea {
