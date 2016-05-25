@@ -251,7 +251,7 @@
 									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
 									</div>
 
-									<div class="image_placeholder" style="margin: 50px 0 0 -150px;">
+									<div class="image_placeholder" style="margin: 80px 0 0 -300px;">
                                         <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
 									</div>									
 									
@@ -935,5 +935,8 @@
 <style>
 .ui-datepicker-calendar {
     display: none;
-    }
+}
+.selectize-input {
+    width: 363px;
+}
 </style>

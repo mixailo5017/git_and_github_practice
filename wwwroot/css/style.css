@@ -1050,7 +1050,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 #col5 input.light_green, #col5 input.light_red, #col5 input.light_gray, #col5 button.light_green, #col5 button.light_red, #col5 button.light_gray {
   width: inherit;
   padding: 7px 24px;
-  margin: 10px 0 0 50px;
+  margin: 10px 0 0 250px;
   min-width: 90px;
 }
 #col5 textarea {
