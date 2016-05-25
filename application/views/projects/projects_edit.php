@@ -362,14 +362,16 @@
 
 						<?php echo form_label(lang('Est.Start') . ':', 'project_eststart', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
+							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px; display:none"') ?>
+							<?php echo form_input('project_eststart_display', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker_display" class="sm_left datepicker_month_year" style="width:120px"') ?>
 							<div class="errormsg" id="err_project_eststart"><?php echo form_error('project_eststart') ?></div>
 						</div>
 						<br>
 						
 						<?php echo form_label(lang('Est.Completion') . ':', 'project_estcompletion', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px"'); ?>
+							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px; display:none"'); ?>
+							<?php echo form_input('project_estcompletion_display', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker_display" class="sm_left datepicker_month_year" style="width:120px"'); ?>
 							<div class="errormsg" id="err_project_estcompletion"><?php echo form_error('project_estcompletion') ?></div>
 						</div>
 						<br>
@@ -387,6 +389,7 @@
 									'construction'	=> lang('construction'),
 									'om' 			=> lang('om'),
 								);
+								$project_stage_options = array_map("ucfirst", $project_stage_options);
 								echo form_dropdown('project_stage', $project_stage_options,$project["stage"],$project_stage_attr);
 							?>
 							<div class="errormsg" id="err_project_stage"></div>
@@ -395,11 +398,10 @@
 
 						<hr />
 
-						<?php echo form_label(lang("TotalBudget") . ' ($MM):',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
+						<?php echo form_label(lang("TotalBudget") . ' ($MM):'.':<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
 							<div class="errormsg" id="err_project_budget_max"><?php echo form_error("project_budget_max"); ?></div>
-                            <span class="example" style="float:left"><?php echo lang('ProjectEditBudgetHelpMessage');?></span>
 						</div>
 						<br>
 
@@ -413,7 +415,7 @@
 									'Private'	=> lang('Private'),
 									'PPP'		=> lang('PPP'),
 									'Concession'=> lang('Concession'),
-									'Design, Build' => lang('Designb'),
+									'Design–Build' => lang('Designb'),
 									'Other'		=> lang('Other')
 								);
 								echo form_dropdown('project_financial', $project_financial_options,$project["financialstructure"],$project_financial_attr);

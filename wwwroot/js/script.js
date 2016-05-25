@@ -672,7 +672,7 @@ $(function() {
 	})
 
 	// project date pickers
-	$('.datepicker_month_year').datepicker({
+	$('#project_eststart_picker_display').datepicker({
 		beforeShow: function() {
 			var $date_picker = $('#ui-datepicker-div');
 			if( ! $date_picker.parent().hasClass('jqui')){
@@ -683,26 +683,56 @@ $(function() {
 		changeYear: true,
         showButtonPanel: true,
 		yearRange: '1950:2500',
-		dateFormat: "mm/dd/yy",
-        altFormat: "mm/yy",
-        // altField: "#project_eststart_picker",
-        // altField: "#project_estcompletion_picker",
+		dateFormat: "mm/yy",
+        altFormat: "mm/dd/yy",
+        altField: "#project_eststart_picker",
         onClose: function(dateText, inst) { 
             var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
             var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-            var day = '01';
-            $(this).datepicker('setDate', new Date(year, month, day));
+            $(this).datepicker('setDate', new Date(year, month, 1));
+            var date2 = $(this).datepicker('getDate');
+            $('#project_estcompletion_picker_display').datepicker('option', 'minDate', date2);
         }
-    // });
 	}).change(function(){
 		$('#'+this.id.replace('_picker','')).val( $(this).val() + ' 00:00' );
 	}).each(function(){
 		 $(this).val( $(this).val().substring(0,10) );
 	});
 
-	$('.education_edit .education_edit_cancel').on('click',function(){
-		//log( 'yay' );
-	});
+    // project date pickers
+    $('#project_estcompletion_picker_display').datepicker({
+        beforeShow: function() {
+            var $date_picker = $('#ui-datepicker-div');
+            if( ! $date_picker.parent().hasClass('jqui')){
+                $date_picker.wrap( $('<div/>').addClass('jqui') );
+            }
+        },
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        yearRange: '1950:2500',
+        dateFormat: "mm/yy",
+        altFormat: "mm/dd/yy",
+        altField: "#project_estcompletion_picker",
+        onClose: function(dateText, inst) { 
+            var eststart = $(this).datepicker('getDate');
+            var estcompletion = $(this).datepicker('getDate');
+            if (estcompletion <= eststart) {
+                var minDate = $(this).datepicker('option', 'minDate');
+                var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
+                var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
+                $(this).datepicker('setDate', new Date(year, month, 1));
+            }
+        }
+    }).change(function(){
+        $('#'+this.id.replace('_picker','')).val( $(this).val() + ' 00:00' );
+    }).each(function(){
+         $(this).val( $(this).val().substring(0,10) );
+    });
+
+    $('.education_edit .education_edit_cancel').on('click',function(){
+        //log( 'yay' );
+    });
 
 
 
