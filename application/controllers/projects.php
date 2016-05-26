@@ -3203,12 +3203,12 @@ class Projects extends CI_Controller {
      * @return bool
      */
     public function valid_period() {
-        $start = $this->input->post('project_eststart', TRUE);
-        $end = $this->input->post('project_estcompletion', TRUE);
+        $start = substr_replace($this->input->post('project_eststart', TRUE), "01/", 3, 0);
+        $end = substr_replace($this->input->post('project_estcompletion', TRUE), "01/", 3, 0);
 
-        if (!empty($start) || !empty($end)) {
-            return true;
-        }
+        // if (!empty($start) || !empty($end)) {
+        //     return true;
+        // }
 
         $is_valid = is_valid_period($start, $end, 'm/d/Y');
 

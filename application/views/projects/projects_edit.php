@@ -362,16 +362,14 @@
 
 						<?php echo form_label(lang('Est.Start') . ':', 'project_eststart', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px; display:none"') ?>
-							<?php echo form_input('project_eststart_display', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker_display" class="sm_left datepicker_month_year" style="width:120px"') ?>
+							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
 							<div class="errormsg" id="err_project_eststart"><?php echo form_error('project_eststart') ?></div>
 						</div>
 						<br>
 						
 						<?php echo form_label(lang('Est.Completion') . ':', 'project_estcompletion', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px; display:none"'); ?>
-							<?php echo form_input('project_estcompletion_display', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker_display" class="sm_left datepicker_month_year" style="width:120px"'); ?>
+							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px"'); ?>
 							<div class="errormsg" id="err_project_estcompletion"><?php echo form_error('project_estcompletion') ?></div>
 						</div>
 						<br>

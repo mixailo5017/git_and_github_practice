@@ -1135,6 +1135,10 @@ class Projects_model extends CI_Model {
 
         $location = $this->input->post('project_location', TRUE);
         $country = $this->input->post('project_country', TRUE);
+        $eststart = $this->input->post('project_eststart', TRUE);
+        $estcompletion = $this->input->post('project_estcompletion', TRUE);
+        if($eststart != "1111-11-11" && $eststart != "" ) { $eststart = substr_replace($eststart, "01/", 3, 0); } else { $eststart = ""; } 
+        if($estcompletion != "1111-11-11" && $estcompletion != "") { $estcompletion = substr_replace($estcompletion, "01/", 3, 0); } else { $estcompletion = ""; } 
 
         // If budget value is empty or equals to 0 set it explicitly to NULL
         // otherwise convert it to int
@@ -1158,8 +1162,8 @@ class Projects_model extends CI_Model {
 			'financialstructure_other' => $this->input->post('project_fs_other', TRUE),
 			'project_meta_permissions' => $this->input->post('project_meta_permissions', TRUE),
 			'stage'					=> $this->input->post('project_stage', TRUE),
-			'eststart'				=> DateFormat($this->input->post('project_eststart', TRUE), DATEFORMATDB, FALSE),
-			'estcompletion'			=> DateFormat($this->input->post('project_estcompletion', TRUE), DATEFORMATDB, FALSE),
+			'eststart'				=> DateFormat($eststart, DATEFORMATDB, FALSE),
+			'estcompletion'			=> DateFormat($estcompletion, DATEFORMATDB, FALSE),
 			'developer'		        => $this->input->post('project_developer', TRUE),
 			'sponsor'		        => $this->input->post('project_sponsor', TRUE),
             'website'		        => $this->input->post('website', TRUE),
