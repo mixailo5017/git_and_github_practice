@@ -553,8 +553,14 @@ $lang['emptyseat'] = 'Si&egrave;ge vide';
 $lang['memberphoto'] = 'Membre photo';
 
 /* project_edit.php */
-$lang['ProjectPhoto'] = 'Projet photo';
-$lang['SeparateMessage'] = 'S&eacute;parez chaque mot-cl&eacute; par des virgules (ex : pont , p&eacute;age, construction)';
+$lang['ProjectPhoto'] = 'Project Photo';
+$lang['SeparateMessage'] = "To help us connect you with experts or investors, enter 5 to 10 keywords that uniquely capture your project, separated by commas (e.g., bridge,toll,construction,suspension,PPP).";
+$lang['CountryExplanation'] = 'The country in which the project is located. For trans-border projects, select the country in which the greater (or greatest) share of the project is located.';
+$lang['LocationExplanation'] = 'The location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.';
+$lang['DeveloperExplanation'] = "The project developer is the organization most directly responsible for managing the project's progression through its life-cycle. The project developer may be a public or private sector entity (and in some cases may be the same as the project sponsor).";
+$lang['SponsorExplanation'] = 'The project sponsor is the organization under whose authority the project is being developed. Often, this will be a public or quasi-public agency, like a Department of Transportation.';
+$lang['DetailExplanation'] = 'Provide a brief summary (2–5 paragraphs) of your project, including a description of its objectives, major actions planned, and important background/contextual information.';
+$lang['PhotoExplanation'] = 'Upload a photo or graphic to represent your project.  This image will appear at the top of the project profile page and adjacent to the project name in search results, map views, and similar references to the project in the GViP platform.';
 
 /* projects_files.php */
 $lang['File'] = 'Dossier';

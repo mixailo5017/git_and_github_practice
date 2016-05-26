@@ -3,7 +3,7 @@
 $assets_major_version = '1';
 
 $config['assets'] = array(
-    'style.css'            => "$assets_major_version.8.0",
+    'style.css'            => "$assets_major_version.9.0",
     'script.js'            => "$assets_major_version.7.0",
     'map_search.js'        => "$assets_major_version.0.0",
     // Assets for redesigned pages

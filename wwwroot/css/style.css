@@ -626,6 +626,10 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   top: 4px;
   display: inline-block;
 }
+#profile_tabs #project_form_upload .tooltip {
+  top: 25px;
+
+}
 
 .tip-yellowsimple {
   z-index: 1000;

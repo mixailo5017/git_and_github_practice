@@ -954,7 +954,7 @@ $lang['MyProjectsIOwn'] = 'Projects I own';
 $lang['MyProjectsIFollow'] = 'Projects I follow';
 
 /* Project Profile Edit page*/
-$lang['ProjectEditBudgetHelpMessage'] = 'Empty or 0 (zero) value means the budget is to be determined (TBD)';
+$lang['ProjectEditBudgetHelpMessage'] = "If the project budget is yet to be determined, enter &quot;0&quot; in this field. The project profile will then display &quot;TBD&quot; in the budget field.";
 
 /* Pagination */
 $lang['First'] = 'First';
