@@ -276,7 +276,7 @@
 							<?php echo form_dropdown('project_meta_permissions', $opt["project_form"]["privacy_options"], $project["project_meta_permissions"]); ?>
 						</div>
 
-						<?php echo form_label(lang("Description").':<a title="'.lang('DetailExplanation').'" class="tooltip"></a>',"project_overview",$opt["project_form"]["lbl_project_overview"]); ?>
+						<?php echo form_label(lang("Description").'*:<a title="'.lang('DetailExplanation').'" class="tooltip"></a>',"project_overview",$opt["project_form"]["lbl_project_overview"]); ?>
 						<div class="fld">
 							<?php echo form_textarea($opt["project_form"]["project_overview"]); ?>
 							<div class="errormsg" id="err_project_overview"><?php echo form_error("project_overview"); ?></div>
@@ -285,14 +285,14 @@
 						</div>
 						<br>
 						
-						<?php echo form_label(lang("Keywords").':<a title="'.lang('SeparateMessage').'" class="tooltip"></a>',"project_keywords",$opt["project_form"]["lbl_project_keywords"]); ?>
+						<?php echo form_label(lang("Keywords").'*:<a title="'.lang('SeparateMessage').'" class="tooltip"></a>',"project_keywords",$opt["project_form"]["lbl_project_keywords"]); ?>
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_keywords"]); ?>
 							<div class="errormsg" id="err_project_keywords"><?php echo form_error("project_keywords"); ?></div>
 						</div>
 						<br>
 
-						<?php echo form_label(lang("Country").':<a title="'.lang('CountryExplanation').'" class="tooltip"></a>',"project_country",$opt["project_form"]["lbl_project_country"]); ?>
+						<?php echo form_label(lang("Country").'*:<a title="'.lang('CountryExplanation').'" class="tooltip"></a>',"project_country",$opt["project_form"]["lbl_project_country"]); ?>
 						<div class="fld">
 							<?php  
 								$project_country_attr = 'id="project_country"';
@@ -303,14 +303,14 @@
 						</div>
 						<br>
 
-						<?php echo form_label(lang("Location").':<a title="'.lang('LocationExplanation').'" class="tooltip"></a>',"project_location",$opt["project_form"]["lbl_project_location"]); ?>
+						<?php echo form_label(lang("Location").'*:<a title="'.lang('LocationExplanation').'" class="tooltip"></a>',"project_location",$opt["project_form"]["lbl_project_location"]); ?>
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_location"]); ?>
 							<div class="errormsg" id="err_project_location"><?php echo form_error("project_location"); ?></div>
 						</div>
 						<br>
 						
-						<?php echo form_label(lang("Sector").":","project_sector_main",$opt["project_form"]["lbl_project_sector_main"]); ?>
+						<?php echo form_label(lang("Sector")."*:","project_sector_main",$opt["project_form"]["lbl_project_sector_main"]); ?>
 						<div class="fld">
 							<?php 
 								$project_sector_main_attr	= 'id="project_sector_main"';
@@ -331,7 +331,7 @@
 						</div>
 						<br>
 							
-						<?php echo form_label(lang("Sub-Sector").":","project_sector_sub",$opt["project_form"]["lbl_project_sector_sub"]); ?>
+						<?php echo form_label(lang("Sub-Sector")."*:","project_sector_sub",$opt["project_form"]["lbl_project_sector_sub"]); ?>
 						<div class="fld">
 							<?php 
 								$project_sector_sub_attr	= 'id="project_sector_sub"';
@@ -351,7 +351,6 @@
 							?>
 							<div class="errormsg" id="err_project_subsector"><?php echo form_error("project_sector_sub"); ?></div>
 						</div>
-						<br>
 						<div  style="display:none">
                         	<?php echo form_label(lang("Other").":","project_sector_sub_other",$opt["project_form"]["lbl_project_sector_sub_other"]); ?>
 							<?php echo form_input($opt["project_form"]["project_sector_sub_other"]); ?>
@@ -374,7 +373,7 @@
 						</div>
 						<br>
 
-						<?php echo form_label(lang("Stage").":","project_stage",array("class"=>"left_label")); ?>
+						<?php echo form_label(lang("Stage")."*:","project_stage",array("class"=>"left_label")); ?>
 						<div class="fld">
 							<?php 
 								$project_stage_attr = 'id="project_stage"';
@@ -394,9 +393,7 @@
 						</div>
 						<br>
 
-						<hr />
-
-						<?php echo form_label(lang("TotalBudget") . ' ($MM):'.':<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
+						<?php echo form_label(lang("TotalBudget") . ' ($MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
 						<div class="fld">
 							<?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
 							<div class="errormsg" id="err_project_budget_max"><?php echo form_error("project_budget_max"); ?></div>

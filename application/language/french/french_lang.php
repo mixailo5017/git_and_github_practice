@@ -598,6 +598,7 @@ $lang['admin'] = 'admin';
 $lang['Admin'] = 'Admin';
 $lang['affairs'] = 'affaires';
 $lang['Affairs'] = 'Affaires';
+$lang['isCompleted_developer_sponsor'] = 'Veuillez spécifier le promoteur, le sponsor, ou bien tous les deux.';
 
 /* projects_fundamentals.php */
 $lang['Lng'] = 'Lng';

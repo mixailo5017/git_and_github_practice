@@ -433,6 +433,7 @@ $lang['SelectAStage'] = '- Seleccione una Etapa -';
 $lang['SelectASub-Sector'] = '- Seleccione un Sub-sector -';
 $lang['selectCaseStudies'] = 'Seleccione un caso de estudio para editar su contenido';
 $lang['SelectCountry'] = '- Seleccione un País -';
+$lang['isCompleted_developer_sponsor'] = 'Por favor especificar el desarrollador, el patrocinador, o ambos.';
 
 
 

@@ -382,6 +382,7 @@ $lang['Planning'] = 'Planejamento';
 $lang['procurement'] = 'procurement';
 $lang['Procurement'] = 'Procurement';
 
+$lang['isCompleted_developer_sponsor'] = 'Por favor, especifique o desenvolvedor, o patrocínio, ou ambos.';
 $lang['Admin'] = 'Admin';
 $lang['Affairs'] = 'Assuntos';
 $lang['file'] = 'arquivo';

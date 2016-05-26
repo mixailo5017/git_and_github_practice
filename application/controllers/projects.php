@@ -563,10 +563,10 @@ class Projects extends CI_Controller {
 			$this->form_validation->set_rules('project_location', lang('Location'), 'trim|required');
 			$this->form_validation->set_rules('project_sector_main', lang('Sector'), 'required');
 			$this->form_validation->set_rules('project_sector_sub', lang('Sub-Sector'), 'required');
-			$this->form_validation->set_rules('project_budget_max', lang('TotalBudget'), 'integer|greater_than[-1]');
+			$this->form_validation->set_rules('project_budget_max', lang('TotalBudget'), 'integer|greater_than[-1]|required');
 			$this->form_validation->set_rules('project_financial', lang('FinancialStructure'), 'required');
-            $this->form_validation->set_rules('project_developer', lang('Developer'), 'trim');
-            $this->form_validation->set_rules('project_sponsor', lang('Sponsor'), 'trim');
+            $this->form_validation->set_rules('project_developer', lang('Developer'), 'trim|callback_isCompleted_developer_sponsor');
+            $this->form_validation->set_rules('project_sponsor', lang('Sponsor'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('website', lang('ProjectWebsite'), 'trim|prep_url|max_length[255]');
 
             $this->form_validation->set_rules('project_eststart', lang('Est.Start'), 'trim|max_length[10]|callback_valid_period');
@@ -3213,6 +3213,25 @@ class Projects extends CI_Controller {
         $is_valid = is_valid_period($start, $end, 'm/d/Y');
 
         return $is_valid;
+    }
+
+    /**
+     * Callback validation rule
+     * Returns true if Developer OR Sponsor field has value
+     * Returens false if both are empty
+     *
+     * @return bool
+     */
+    public function isCompleted_developer_sponsor() {
+        $dev = $this->input->post('project_developer', TRUE);
+        $spon =   $this->input->post('project_sponsor', TRUE);
+
+        if (empty($dev) && empty($spon)) {
+            $this->form_validation->set_message('isCompleted_developer_sponsor', lang('isCompleted_developer_sponsor'));
+            return false;
+        }
+        else
+            return true;
     }
 
     /**

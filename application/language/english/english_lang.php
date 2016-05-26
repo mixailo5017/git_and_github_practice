@@ -623,6 +623,7 @@ $lang['admin'] = 'admin';
 $lang['Admin'] = 'Admin';
 $lang['affairs'] = 'affairs';
 $lang['Affairs'] = 'Affairs';
+$lang['isCompleted_developer_sponsor'] = 'Please specify either the developer, the sponsor, or both.';
 
 //projects_fundamentals.php
 $lang['Lng'] = 'Lng';
