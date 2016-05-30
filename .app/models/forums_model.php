@@ -473,7 +473,7 @@ class Forums_model extends CI_Model {
    return count($rows);
   }
 
-/**
+    /**
      * Get paginated list of users with filters applied
      *
      * @param int $limit How many records to return starting from offset
@@ -492,7 +492,7 @@ class Forums_model extends CI_Model {
 		if (!empty($filter['country'])) {
             $this->db->where('m.country', $filter['country']);
         }
-         if (! empty($filter['sector'])) {
+        if (! empty($filter['sector'])) {
             $where = " m.uid IN (SELECT DISTINCT uid FROM exp_expertise_sector WHERE permission = 'All' AND status = " .
                 $this->db->escape(STATUS_ACTIVE) .
                 " AND sector = " . $this->db->escape($filter['sector']);
@@ -507,14 +507,14 @@ class Forums_model extends CI_Model {
             $this->db->where('m.discipline', $filter['discipline']);
         }
      
-         if (! empty($filter['searchtext'])) {
-             $terms = split_terms2($filter['searchtext']);
-             $columns = array(
-                	'organization',
-                    'firstname',
-                    'lastname',
-                    'm.title'
-                  );
+        if (! empty($filter['searchtext'])) {
+            $terms = split_terms2($filter['searchtext']);
+            $columns = array(
+                'organization',
+                'firstname',
+                'lastname',
+                'm.title'
+            );
             $where = where_like2($columns, $terms);
             $this->db->where($where);
         }
