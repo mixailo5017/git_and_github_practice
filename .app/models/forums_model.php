@@ -8,7 +8,12 @@ class Forums_model extends CI_Model {
     protected $select = 'f.id, title, start_date, end_date, category_id, fc.name AS category,
         register_url, venue, venue_address, venue_url, venue_lat, venue_lng,
         photo, banner, meeting_url, content, status, is_featured';
-protected $select_expert = 'f.id, title, f.sector';
+
+    /**
+     * @var string
+     */
+    protected $select_expert = 'f.id, title, f.sector';
+
     /**
      * @var array
      */
@@ -566,10 +571,10 @@ protected $select_expert = 'f.id, title, f.sector';
                     ->select("STRING_AGG(DISTINCT s.sector, ',' ORDER BY s.sector) sector", FALSE) // Now we add and expression for sector
                     ->join('exp_expertise_sector s', "m.uid = s.uid AND s.permission = 'All' AND s.status = " . $this->db->escape(STATUS_ACTIVE), 'left')
                     ->group_by(implode(',', $columns)); // And use column list for GROUP BY
-            }  else {
+            } else {
                 $this->db->select($select);   
-                } 
-             }
+            } 
+        }
         $defaut_where = array(
             'f.id' => $id,
             'm.membertype' => 5,
@@ -578,8 +583,8 @@ protected $select_expert = 'f.id, title, f.sector';
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
 	   	if ($order_no == TRUE){
-        $order_by = (! is_null($order_by)) ? $order_by : array('firstname' => 'asc', 'lastname' => 'asc');
-        $this->apply_order_by($order_by);
+            $order_by = (! is_null($order_by)) ? $order_by : array('firstname' => 'asc', 'lastname' => 'asc');
+            $this->apply_order_by($order_by);
 		}
         if ($row_count) {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
