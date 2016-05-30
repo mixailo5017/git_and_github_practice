@@ -263,7 +263,7 @@ class Forums extends CI_Controller {
     }
 
     /**
-     * Display a paginated list of all experts (members) associated (attending) with the forum
+     * Display a paginated list of all experts (members) associated with (attending) the forum
      *
      * @param $id
      */
@@ -275,10 +275,10 @@ class Forums extends CI_Controller {
         if (empty($offset)) {
             $offset = 0;
         }
-          $filter = array(
+        $filter = array(
             'country' => $this->input->get_post('country', TRUE),
             'sector' => $this->input->get_post('sector', TRUE),
-             'subsector' => $this->input->get_post('subsector', TRUE),
+            'subsector' => $this->input->get_post('subsector', TRUE),
             'searchtext' => $this->input->get_post('searchtext', TRUE),
             'discipline' => $this->input->get_post('discipline', TRUE),
         );
@@ -294,7 +294,7 @@ class Forums extends CI_Controller {
 		
 		/* This fixes the 1 - 0 error if no users are found make offset 0*/ 
 		if ($total == 0 ){
-		$offset = -1;
+    		$offset = -1;
 		}
 		$sector_data = sector_subsectors();
         $subsectors = array();
@@ -304,14 +304,14 @@ class Forums extends CI_Controller {
             }
         }
  			
-        $config = array (
+        $config = array(
             'base_url'   => '/forums/experts/'.$id.'?'.http_build_query(array_merge($filter, compact('sort', 'limit'))),
             'total_rows' => $total,
             'num_links' => 1,
             'per_page'   => $limit,
             'next_link'	 => lang('Next') . '  ' . '&gt;',
             'prev_link'  => '&lt;' . '  ' . lang('Prev'),
-             'first_link' => lang('First'),
+            'first_link' => lang('First'),
             'last_link' =>  lang('Last'),
             'page_query_string' => TRUE
         );
@@ -322,7 +322,7 @@ class Forums extends CI_Controller {
         	'users'        => $users['filter'],
 			'filter_total' => $total,
             'filter'	   => $filter,
-             'sectors'      => array_keys($sector_data),
+            'sectors'      => array_keys($sector_data),
             'subsectors'   => $subsectors,
             'all_subsectors'   => $sector_data,
 			'filter_total' => $total,
@@ -341,8 +341,8 @@ class Forums extends CI_Controller {
 
         $this->headerdata['title'] = build_title(lang('ExpertAttendees'));
 
-	 // Analytics
-        // Check if we have any serach filters setup
+    	// Analytics
+        // Check if we have any search filters setup
         if (count(array_filter($filter)) > 0) {
             $event_properties = array(
                 'Category' => 'Forum Attendee',
