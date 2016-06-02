@@ -8,12 +8,8 @@ class Forums_model extends CI_Model {
     protected $select = 'f.id, title, start_date, end_date, category_id, fc.name AS category,
         register_url, venue, venue_address, venue_url, venue_lat, venue_lng,
         photo, banner, meeting_url, content, status, is_featured';
-
-    /**
-     * @var string
-     */
-    protected $select_expert = 'f.id, title, f.sector';
-
+    
+    
     /**
      * @var array
      */
