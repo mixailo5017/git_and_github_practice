@@ -77,7 +77,7 @@
                         'properties' => array(
                             array(lang('Country'), $val['country'],  1),
                             array(lang('Sector'),  $val['sector'], 1),
-                            array(lang('Discipline'),  $val['discipline'], 1)
+                            array(lang('Discipline'),  ucfirst($val['discipline']), 1)
                         ),
                         'last' => ($index == 3)
                     );
