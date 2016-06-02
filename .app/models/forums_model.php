@@ -216,7 +216,7 @@ class Forums_model extends CI_Model {
      * @return array
      */
     public function members($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false) {
-        $this->members_base_query($id, $select, null, $order_by, $row_count,TRUE);
+        $this->members_base_query($id, $select, null, $order_by, $row_count);
 
         if (! is_null($limit)) {
             $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
@@ -478,7 +478,7 @@ class Forums_model extends CI_Model {
         $select = 'm.uid, firstname, lastname, organization, m.title, userphoto, country, sector, discipline';
         $this->members_base_query($id, $select, null, null, $rowc);
         
-		if (!empty($filter['country'])) {
+        if (!empty($filter['country'])) {
             $this->db->where('m.country', $filter['country']);
         }
         if (! empty($filter['sector'])) {
@@ -571,7 +571,7 @@ class Forums_model extends CI_Model {
         );
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
-        
+
         $order_by = (! is_null($order_by)) ? $order_by : array('firstname' => 'asc', 'lastname' => 'asc');
         $this->apply_order_by($order_by);
 

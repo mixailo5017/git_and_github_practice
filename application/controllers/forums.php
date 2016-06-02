@@ -270,8 +270,15 @@ class Forums extends CI_Controller {
     public function experts($id) {
     
         $limit = view_check_limit($this->input->get_post('limit', TRUE));
-        $offset	= $this->input->get_post('per_page', TRUE);
+        $offset = $this->input->get_post('per_page', TRUE);
         $details = $this->forums_model->find($id, 'f.id, title');
+
+        if (empty($details))
+        {
+            redirect('forums', 'refresh');        
+            exit;     
+        }
+
         if (empty($offset)) {
             $offset = 0;
         }
@@ -315,19 +322,19 @@ class Forums extends CI_Controller {
         
         $this->load->library('pagination');
         $this->pagination->initialize($config);
-        $data	=	array(
-        	'users'        => $users['filter'],
-			'filter_total' => $total,
-            'filter'	   => $filter,
-            'sectors'      => array_keys($sector_data),
-            'subsectors'   => $subsectors,
-            'all_subsectors'   => $sector_data,
-			'filter_total' => $total,
-            'iduser'       => $id,
-            'limit'        => $limit,
-            'paging'     => $this->pagination->create_links(),
-            'page_from'  => $offset+1,
-        	'page_to'      =>  ($offset + $limit <= $total) ? $offset + $limit : $total
+        $data = array(
+            'users'         => $users['filter'],
+            'filter_total'  => $total,
+            'filter'        => $filter,
+            'sectors'       => array_keys($sector_data),
+            'subsectors'    => $subsectors,
+            'all_subsectors'=> $sector_data,
+            'filter_total'  => $total,
+            'iduser'        => $id,
+            'limit'         => $limit,
+            'paging'        => $this->pagination->create_links(),
+            'page_from'     => $offset+1,
+            'page_to'       => ($offset + $limit <= $total) ? $offset + $limit : $total
         );
 
         $this->breadcrumb->append_crumb(lang('B_FORUMS'), '/forums');
