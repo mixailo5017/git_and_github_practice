@@ -286,10 +286,7 @@ class Forums extends CI_Controller {
             $value = $value ? : '';
         });
 
-        $sort = 0;
-        $queryfortotalmembers = $this->forums_model->get_total_list($id); 
-        $sort = $queryfortotalmembers;
-        $users = $this->forums_model->get_filter_user_list2($id, $limit, $offset, $filter, MEMBER_TYPE_MEMBER, $sort);
+        $users = $this->forums_model->get_filter_user_list2($id, $limit, $offset, $filter, MEMBER_TYPE_MEMBER, null);
 		$total = $users['filter_total'];
 		
 		/* This fixes the 1 - 0 error if no users are found make offset 0*/ 
@@ -327,7 +324,6 @@ class Forums extends CI_Controller {
             'all_subsectors'   => $sector_data,
 			'filter_total' => $total,
             'iduser'       => $id,
-            'sort'         => $sort,
             'limit'        => $limit,
             'paging'     => $this->pagination->create_links(),
             'page_from'  => $offset+1,

@@ -458,32 +458,21 @@ class Forums_model extends CI_Model {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
     }
-    /*
-    *This function returns the size of the forum (i.e how many people) a integer value 
-    */
-  public function get_total_list($id){
-       
-        $this->members_base_query($id, null, null, null, true, false);
-        $this->db->order_by('uid');
-        
-        $rows = $this->db
-            ->get()
-            ->result();
-       
-   return count($rows);
-  }
-
+    
     /**
-     * Get paginated list of users with filters applied
+     * Get paginated list of users attending a forum, with filters applied
      *
+     * @param int $id ID of the forum
      * @param int $limit How many records to return starting from offset
      * @param int $offset How many records to skip
      * @param array $filter country|discipline|sector|searchtext
      * @param int $member_type
-     * @param int|null $sort Prerefined sort order (1, 2, 3)
+     * @param int|null $sort Prerefined sort order (TODO implement this in the future)
+     * 
      * @return array
      */
-    public function get_filter_user_list2($id,$limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null) {
+    public function get_filter_user_list2($id, $limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null)
+    {
    
         $rowc = true;
         $select = 'm.uid, firstname, lastname, organization, m.title, userphoto, country, sector, discipline';
@@ -501,7 +490,7 @@ class Forums_model extends CI_Model {
             }
             $where .= ")";
 
-            $this->db->where($where, null, FALSE);
+            $this->db->where($where, null, false);
         }
         if (!empty($filter['discipline'])) {
             $this->db->where('m.discipline', $filter['discipline']);
