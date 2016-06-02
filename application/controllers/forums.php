@@ -263,48 +263,78 @@ class Forums extends CI_Controller {
     }
 
     /**
-     * Display a paginated list of all experts (members) associated (attending) with the forum
+     * Display a paginated list of all experts (members) associated with (attending) the forum
      *
      * @param $id
      */
     public function experts($id) {
-
-        $perpage =	12;
-        $page = $this->input->get_post('per_page', TRUE);
-
+    
+        $limit = view_check_limit($this->input->get_post('limit', TRUE));
+        $offset = $this->input->get_post('per_page', TRUE);
         $details = $this->forums_model->find($id, 'f.id, title');
 
-        if (empty($details)) {
-            redirect('forums', 'refresh');
-            exit;
+        if (empty($details))
+        {
+            redirect('forums', 'refresh');        
+            exit;     
         }
 
-        $rows = $this->forums_model->members($id, 'm.uid, firstname, lastname, userphoto, m.title, organization, country, sector, discipline', null, $perpage, $page, true);
-        $total = (count($rows) > 0) ? $rows[0]['row_count'] : 0;
+        if (empty($offset)) {
+            $offset = 0;
+        }
+        $filter = array(
+            'country' => $this->input->get_post('country', TRUE),
+            'sector' => $this->input->get_post('sector', TRUE),
+            'subsector' => $this->input->get_post('subsector', TRUE),
+            'searchtext' => $this->input->get_post('searchtext', TRUE),
+            'discipline' => $this->input->get_post('discipline', TRUE),
+        );
+        array_walk($filter, function(&$value, $key) {
+            $value = $value ? : '';
+        });
 
-        $config = array (
-            'base_url'   => "/forums/experts/$id?",
+        $users = $this->forums_model->get_filter_user_list2($id, $limit, $offset, $filter, MEMBER_TYPE_MEMBER, null);
+		$total = $users['filter_total'];
+		
+		/* This fixes the 1 - 0 error if no users are found make offset 0*/ 
+		if ($total == 0 ){
+    		$offset = -1;
+		}
+		$sector_data = sector_subsectors();
+        $subsectors = array();
+        if (! empty($subsector)) {
+            if (isset($sector_data[$subsector])) {
+                $subsectors = $sector_data[$subsector];
+            }
+        }
+ 			
+        $config = array(
+            'base_url'   => '/forums/experts/'.$id.'?'.http_build_query(array_merge($filter, compact('sort', 'limit'))),
             'total_rows' => $total,
-            'per_page'   => $perpage,
+            'num_links' => 1,
+            'per_page'   => $limit,
             'next_link'	 => lang('Next') . '  ' . '&gt;',
             'prev_link'  => '&lt;' . '  ' . lang('Prev'),
-            'first_link' => FALSE,
-            'last_link'  => FALSE,
+            'first_link' => lang('First'),
+            'last_link' =>  lang('Last'),
             'page_query_string' => TRUE
         );
+        
         $this->load->library('pagination');
         $this->pagination->initialize($config);
-
-        $pages = $page != '' ? $page : 0;
-        $page_from = ($total < 1) ? 0 : ($pages + 1);
-        $page_to = (($pages + $perpage) <= $total) ? ($pages + $perpage) : $total;
-
-        $data	=	array(
-            'rows'       => $rows,
-            'total_rows' => $total,
-            'paging'     => $this->pagination->create_links(),
-            'page_from'  => $page_from,
-            'page_to'    => $page_to
+        $data = array(
+            'users'         => $users['filter'],
+            'filter_total'  => $total,
+            'filter'        => $filter,
+            'sectors'       => array_keys($sector_data),
+            'subsectors'    => $subsectors,
+            'all_subsectors'=> $sector_data,
+            'filter_total'  => $total,
+            'iduser'        => $id,
+            'limit'         => $limit,
+            'paging'        => $this->pagination->create_links(),
+            'page_from'     => $offset+1,
+            'page_to'       => ($offset + $limit <= $total) ? $offset + $limit : $total
         );
 
         $this->breadcrumb->append_crumb(lang('B_FORUMS'), '/forums');
@@ -314,11 +344,31 @@ class Forums extends CI_Controller {
 
         $this->headerdata['title'] = build_title(lang('ExpertAttendees'));
 
+    	// Analytics
+        // Check if we have any search filters setup
+        if (count(array_filter($filter)) > 0) {
+            $event_properties = array(
+                'Category' => 'Forum Attendee',
+                'Found' => $total
+            );
+            foreach ($filter as $key => $value) {
+                if (! empty($value)) {
+                    $event_properties[ucfirst($key)] = $value;
+                }
+            }
+
+            $this->headerdata['page_analytics'] = array(
+                'event' => array(
+                    'name' => 'Searched',
+                    'properties' => $event_properties
+                )
+            );
+        }
+        
         // Render the page
         $this->load->view('templates/header', $this->headerdata);
         $this->load->view('forums/experts', $data);
         $this->load->view('templates/footer', $this->footer_data);
-
     }
 
     /**

@@ -16,3 +16,6 @@ wwwroot/images/forum/**
 wwwroot/images/member_photos/**
 wwwroot/images/signup/**
 wwwroot/images/store/**
+
+# Development files
+*.sublime-*

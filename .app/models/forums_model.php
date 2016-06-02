@@ -8,7 +8,8 @@ class Forums_model extends CI_Model {
     protected $select = 'f.id, title, start_date, end_date, category_id, fc.name AS category,
         register_url, venue, venue_address, venue_url, venue_lat, venue_lng,
         photo, banner, meeting_url, content, status, is_featured';
-
+    
+    
     /**
      * @var array
      */
@@ -453,6 +454,72 @@ class Forums_model extends CI_Model {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
     }
+    
+    /**
+     * Get paginated list of users attending a forum, with filters applied
+     *
+     * @param int $id ID of the forum
+     * @param int $limit How many records to return starting from offset
+     * @param int $offset How many records to skip
+     * @param array $filter country|discipline|sector|searchtext
+     * @param int $member_type
+     * @param int|null $sort Prerefined sort order (TODO implement this in the future)
+     * 
+     * @return array
+     */
+    public function get_filter_user_list2($id, $limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null)
+    {
+   
+        $rowc = true;
+        $select = 'm.uid, firstname, lastname, organization, m.title, userphoto, country, sector, discipline';
+        $this->members_base_query($id, $select, null, null, $rowc);
+        
+        if (!empty($filter['country'])) {
+            $this->db->where('m.country', $filter['country']);
+        }
+        if (! empty($filter['sector'])) {
+            $where = " m.uid IN (SELECT DISTINCT uid FROM exp_expertise_sector WHERE permission = 'All' AND status = " .
+                $this->db->escape(STATUS_ACTIVE) .
+                " AND sector = " . $this->db->escape($filter['sector']);
+            if (! empty($filter['subsector'])) {
+                $where .= " AND subsector = " . $this->db->escape($filter['subsector']);
+            }
+            $where .= ")";
+
+            $this->db->where($where, null, false);
+        }
+        if (!empty($filter['discipline'])) {
+            $this->db->where('m.discipline', $filter['discipline']);
+        }
+     
+        if (! empty($filter['searchtext'])) {
+            $terms = split_terms2($filter['searchtext']);
+            $columns = array(
+                'organization',
+                'firstname',
+                'lastname',
+                'm.title'
+            );
+            $where = where_like2($columns, $terms);
+            $this->db->where($where);
+        }
+        $this->db->group_by('m.uid');
+        
+        $rows = $this->db
+            ->limit($limit, $offset)
+            ->get()
+            ->result_array();
+            
+        $result = array(
+        	'filter_total' =>count($rows) > 0 ? (int) $rows[0]['row_count'] : 0, 
+        	'filter' => $rows  
+        );
+ 
+        return $result;
+       
+    }
+
+
 
     /**
      * Generates a base query for forum members (experts)
@@ -462,6 +529,7 @@ class Forums_model extends CI_Model {
      * @param null $where
      * @param null $order_by
      * @param bool $row_count
+     * 
      * @return void
      */
     private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false) {
@@ -492,13 +560,11 @@ class Forums_model extends CI_Model {
                 $this->db->select($select);
             }
         }
-
         $defaut_where = array(
             'f.id' => $id,
             'm.membertype' => 5,
             'm.status' => STATUS_ACTIVE
         );
-
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
 
@@ -508,7 +574,6 @@ class Forums_model extends CI_Model {
         if ($row_count) {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
-
     }
 
     /**
