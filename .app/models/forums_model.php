@@ -476,7 +476,7 @@ class Forums_model extends CI_Model {
    
         $rowc = true;
         $select = 'm.uid, firstname, lastname, organization, m.title, userphoto, country, sector, discipline';
-        $this->members_base_query($id, $select, null, null, $rowc, false);
+        $this->members_base_query($id, $select, null, null, $rowc);
         
 		if (!empty($filter['country'])) {
             $this->db->where('m.country', $filter['country']);
@@ -533,10 +533,10 @@ class Forums_model extends CI_Model {
      * @param null $where
      * @param null $order_by
      * @param bool $row_count
-     * @param bool $order_no sending it false with make the query not appear in alphabetical order
+     * 
      * @return void
      */
-    private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false, $order_no) {
+    private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false) {
         $this->db
             ->from('exp_forum_member fm')
             ->join('exp_forums f', 'fm.forum_id = f.id')
@@ -561,8 +561,8 @@ class Forums_model extends CI_Model {
                     ->join('exp_expertise_sector s', "m.uid = s.uid AND s.permission = 'All' AND s.status = " . $this->db->escape(STATUS_ACTIVE), 'left')
                     ->group_by(implode(',', $columns)); // And use column list for GROUP BY
             } else {
-                $this->db->select($select);   
-            } 
+                $this->db->select($select);
+            }
         }
         $defaut_where = array(
             'f.id' => $id,
@@ -571,10 +571,10 @@ class Forums_model extends CI_Model {
         );
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
-	   	if ($order_no == TRUE){
-            $order_by = (! is_null($order_by)) ? $order_by : array('firstname' => 'asc', 'lastname' => 'asc');
-            $this->apply_order_by($order_by);
-		}
+        
+        $order_by = (! is_null($order_by)) ? $order_by : array('firstname' => 'asc', 'lastname' => 'asc');
+        $this->apply_order_by($order_by);
+
         if ($row_count) {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
