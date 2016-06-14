@@ -534,7 +534,7 @@ $lang['ErrorwhileupdatingthisFiles'] = 'Erro ao atualizar esta Arquivos';
 
 $lang['AddOrganizations'] = 'Adicione Organizações';
 $lang['Updatepassword'] = 'atualização de senha';
-$lang['ExpertiseEducation']	= "Educação perícia";
+$lang['ExpertiseEducation']	= "Educação/perícia";
 $lang['State'] = 'Estado';	
 $lang['Next'] = 'Próximo';
 $lang['Prev'] = 'Anterior';

@@ -818,7 +818,7 @@ $lang['Commentaddedsuccessfully'] = 'Comment added successfully.';
 
 $lang['AddOrganizations'] = 'Add Organizations';
 $lang['Updatepassword'] = 'Update Password';
-$lang['ExpertiseEducation']	= "Expertise Education";
+$lang['ExpertiseEducation']	= "Expertise/Education";
 $lang['State'] = 'State';	
 $lang['Next'] = 'Next';
 $lang['Prev'] = 'Prev';
