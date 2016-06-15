@@ -800,7 +800,7 @@ $lang['Commentaddedsuccessfully'] = 'Commentaire ajout&eacute; avec succ&egrave;
 
 $lang['AddOrganizations'] = 'Ajouter organisations';
 $lang['Updatepassword'] = 'Mettre à jour Mot de passe';
-$lang['ExpertiseEducation'] = 'Expertise &eacute;ducation';
+$lang['ExpertiseEducation'] = 'Expertise/&eacute;ducation';
 $lang['State'] = '&eacute;tat';
 $lang['Next'] = 'Suivant';
 $lang['Prev'] = 'Pr&eacute;c&eacute;dent';
