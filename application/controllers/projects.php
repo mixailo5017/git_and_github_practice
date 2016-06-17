@@ -564,7 +564,6 @@ class Projects extends CI_Controller {
 			$this->form_validation->set_rules('project_sector_main', lang('Sector'), 'required');
 			$this->form_validation->set_rules('project_sector_sub', lang('Sub-Sector'), 'required');
 			$this->form_validation->set_rules('project_budget_max', lang('TotalBudget'), 'integer|greater_than[-1]|required');
-			$this->form_validation->set_rules('project_financial', lang('FinancialStructure'), 'required');
             $this->form_validation->set_rules('project_developer', lang('Developer'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('project_sponsor', lang('Sponsor'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('website', lang('ProjectWebsite'), 'trim|prep_url|max_length[255]');
