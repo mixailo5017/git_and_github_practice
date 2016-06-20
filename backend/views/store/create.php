@@ -31,7 +31,7 @@
                         'id'	=> 'url',
                         'value' => set_value('url'),
                         'name'	=> 'url',
-                        'placeholder' => 'http://store.gvip.io/product/strategic-partnership/'
+                        'placeholder' => 'https://store.gvip.io/product/strategic-partnership/'
                     )); ?>
                     <div class="errormsg" id="err_url"><?php echo form_error('url'); ?></div>
                 </div>
