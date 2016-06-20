@@ -7,7 +7,7 @@
                 <?php if (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down()) { ?>
                 <a href="/terms">Terms Of Service</a> | <a href="/privacy">Privacy Policy</a> |
                 <?php } ?>
-                <a href="//store.globalvipprojects.com" target="_blank">GViP Store</a>
+                <a href="//store.gvip.io" target="_blank">GViP Store</a>
             </p>
 	    </address>
 	    <div class="logo-gvip"><a href="/"><img src="/images/new/logo-invert.png" /></a></div>

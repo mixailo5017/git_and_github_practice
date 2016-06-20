@@ -36,7 +36,7 @@
                     <a href="/companies"><span><?php echo lang('Lightning') ?></span></a>
                 </li>
                 <li>
-                    <a href="http://store.globalvipprojects.com" target="_blank"><span><?php echo lang('store') ?></span></a>
+                    <a href="http://store.gvip.io" target="_blank"><span><?php echo lang('store') ?></span></a>
                 </li>
             </ul>
         </nav>
