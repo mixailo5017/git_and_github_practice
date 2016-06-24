@@ -24,9 +24,6 @@
     } ?>
     <title><?php echo empty($title) ? SITE_NAME : $title ?></title>
 
-    <?php // Optimizely ?>
-    <script src="//cdn.optimizely.com/js/4480070248.js"></script>
-
     <?php // Segment Analytics ?>
     <?php $this->load->view('templates/_segment_analytics', empty($page_analytics) ? array() : $page_analytics) ?>
 
@@ -58,6 +55,9 @@
     <?php }
 } ?>
 <script src="/js/main.js<?php echo asset_version('main.js') ?>"></script>
+
+<?php // Optimizely ?>
+<script src="//cdn.optimizely.com/js/4480070248.js"></script>
 
 <?php // Extra stuff that we want to inject into body tags ?>
 <?php if (! empty($footer_extra)) echo $footer_extra ?>
