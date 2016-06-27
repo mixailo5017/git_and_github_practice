@@ -109,9 +109,9 @@ $(document).ready(function() {
     $('#country').select2();
 });
 
-// Function to return label values for subsector dropdown box. Adds name of sector in front of any subsectors called 'Other'
+// Function to return label values for subsector dropdown box. Adds name of sector in front of subsector
 function template(data, container) {
-  return (!data.text.indexOf('Other')) ? data.id.replace(':',' — ') : data.text;
+  return data.id.replace(':',' — ');
 }
 
 
