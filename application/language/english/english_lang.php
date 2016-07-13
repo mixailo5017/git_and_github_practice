@@ -132,6 +132,7 @@ $lang['Organization'] = 'Organization';
 $lang['Overview'] = 'Overview';
 $lang['Map'] = 'Map';
 $lang['KeyServices']= 'Key Services';
+$lang['WEBScore'] = 'Wider Economic Benefits Score';
 
 
 

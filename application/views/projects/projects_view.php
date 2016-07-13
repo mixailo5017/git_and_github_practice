@@ -107,8 +107,8 @@
                                     N/A
                                 <?php } ?>
                             </td>
-                            <th></th>
-                            <td></td>
+                            <th><?php echo lang('WEBScore') ?>:</th>
+                            <td><?php echo $project['webscore'] ?></td>
                         </tr>
 					</table>
                 </div>
