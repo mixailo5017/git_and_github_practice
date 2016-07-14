@@ -108,7 +108,7 @@
                                 <?php } ?>
                             </td>
                             <th><?php echo lang('WEBScore') ?>:</th>
-                            <td><?php echo $project['webscore'] ?></td>
+                            <td><?php echo isset($project['webscore']) ? $project['webscore'] : 'N/A' ?></td>
                         </tr>
 					</table>
                 </div>
