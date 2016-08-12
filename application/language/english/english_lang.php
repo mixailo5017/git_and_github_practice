@@ -1037,3 +1037,6 @@ $lang['HowKnowledgeable'] = 'How <strong>knowledgeable</strong> is this person?'
 $lang['AddRating'] = 'Add Rating';
 $lang['ThankYouHeader'] = 'Thank you!';
 $lang['ThankYouBody'] = 'Your expert ratings are critical for building trust in the marketplace!';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';

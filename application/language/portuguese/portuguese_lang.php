@@ -759,3 +759,6 @@ $lang['HowKnowledgeable'] = 'É bem <strong>informada</strong> esta pessoa?';
 $lang['AddRating'] = 'Adicionar avaliação';
 $lang['ThankYouHeader'] = 'Obrigado!';
 $lang['ThankYouBody'] = 'Suas avaliações são críticas para fomentar a confiança no mercado!';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brasil Perguntas Frequentes';
