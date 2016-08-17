@@ -32,13 +32,7 @@
             </li>
         <?php
             }
-        } else {
-        ?>
-            <li class="clearfix" style="list-style-type:none;">
-                <?php echo lang('Noexpertisefound');?>
-            </li>
-        <?php
-        }
+        } 
         ?>
     </ul>
 </section><!-- end .portlet -->
