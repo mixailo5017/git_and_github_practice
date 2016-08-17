@@ -146,6 +146,10 @@ define('PROJECT_PROFILES_ENABLED', TRUE);
 // Arrays in constants requires PHP 5.6. Defining them using the define statement only available from PHP 7.0.
 const INTERNAL_USERS = [24, 28, 37, 222, 492, 298, 426, 583, 586, 684, 741, 813, 986, 1121, 1307, 1342, 1554, 1578, 1589, 1641, 1742, 1610, 1821, 1986, 2104];
 
+// The user ID of the official Brazilian government user account
+// Used to determine whether to display the Project Feed
+define('BRAZIL_USER_ID', 2636);
+
 // The number of seconds a reminder lasts
 define('REMINDER_EXPIRES', 60*60*2);
 // Constant representing a successfully sent reminder.

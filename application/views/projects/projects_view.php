@@ -40,6 +40,10 @@
 
 			</div><!-- end #tabs -->
 
+			<?php 
+			// Don't show Project Feed on official Brazilian projects
+			if ($userdata['uid'] != BRAZIL_USER_ID) {
+			?>
 			<div class="comments white_box pull_up_white">
 				<h2><?php echo lang('ProjectUpdatesTitle') ?></h2>
                 <?php
@@ -75,12 +79,13 @@
 				<ul class="feed updates">
                     <!-- Populated in JS -->
 				</ul>
-        <div class="center">
-          <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
-            <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
-            <?php echo form_close() ?>
-        </div>
+		        <div class="center">
+		          <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
+		            <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
+		            <?php echo form_close() ?>
+		        </div>
 			</div>
+			<?php } ?>
 		</div><!-- end #col2 -->
 
 		<div id="col3" class="projects">
