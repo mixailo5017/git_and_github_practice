@@ -1,5 +1,5 @@
 <section class="portlet">
-    <?php echo heading(lang("ExpertsAttending") . " ($total_rows)", 4); ?>
+    <?php if ($total_rows > 0) echo heading(lang("ExpertsAttending") . " ($total_rows)", 4); ?>
 
     <ul class="expert_list">
     <?php
