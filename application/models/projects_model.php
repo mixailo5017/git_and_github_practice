@@ -1179,6 +1179,7 @@ class Projects_model extends CI_Model {
 			'stage'					=> $this->input->post('project_stage', TRUE),
 			'eststart'				=> DateFormat($eststart, DATEFORMATDB, FALSE),
 			'estcompletion'			=> DateFormat($estcompletion, DATEFORMATDB, FALSE),
+            'stage_elaboration'     => $this->input->post('project_stage_elaboration', TRUE),
 			'developer'		        => $this->input->post('project_developer', TRUE),
 			'sponsor'		        => $this->input->post('project_sponsor', TRUE),
             'website'		        => $this->input->post('website', TRUE),

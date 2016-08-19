@@ -467,6 +467,7 @@ $lang['sProjects'] = 'S de Proyectos';
 $lang['sRatings'] = 'S Ratings';
 $lang['Ratings'] = 'Valoraciones';
 $lang['Stage'] = 'Etapa';
+$lang['StageElaboration'] = 'Más Detalles';
 $lang['State'] = 'Estado';
 $lang['store'] = 'Tienda';
 $lang['Status'] = 'Estado';

@@ -13,7 +13,10 @@
                     <table class="overview_table">
                         <tr>
                             <th><?php echo lang('Stage');?>:</th>
-                            <td><?php if ($project['projectdata']['stage'] != '' ){if($project['projectdata']['stage'] == "om") {echo "Operation &amp; Maintenance"; } else {echo ucfirst($project['projectdata']['stage']);}} else { echo "N/A";} ?></td>
+                            <td>
+                                <?php if ($project['projectdata']['stage'] != '' ){if($project['projectdata']['stage'] == "om") {echo "Operation &amp; Maintenance"; } else {echo ucfirst($project['projectdata']['stage']);}} else { echo "N/A";} ?>
+                                <?php if ($project['projectdata']['stage_elaboration'] != '') { echo ' (' . $project['projectdata']['stage_elaboration'] . ')'; } ?>
+                            </td>
                             <th><?php echo lang('Location');?>:</th>
                             <td class="city_state"><?php echo $project['prettylocation']; ?></td>
                         </tr>

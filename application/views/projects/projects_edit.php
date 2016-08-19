@@ -407,6 +407,16 @@
                             </div>
                             <br>
 
+                            <?php echo form_label(lang("StageElaboration").":","project_stage_elaboration",array("class"=>"left_label")); ?>
+                            <div class="fld">
+                                <?php 
+                                    $project_stage_elaboration_attr = 'id="project_stage_elaboration"';
+                                    echo form_input('project_stage_elaboration', set_value('project_stage_elaboration', $project["stage_elaboration"]), $project_stage_attr);
+                                ?>
+                                <div class="errormsg" id="err_project_stage"></div>
+                            </div>
+                            <br>
+
                             <?php echo form_label(lang("TotalBudget") . ' (US$ MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
                             <div class="fld">
                                 <?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
@@ -438,7 +448,6 @@
                                 <?php echo form_input($opt["project_form"]["project_fs_other"]); ?>
                                 <div class="errormsg" id="err_project_fs_other"></div>
                             </div>
-
 
                             <div id="stage_accordion" class="accordion" style="display:none">
                                 
