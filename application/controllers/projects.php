@@ -576,6 +576,7 @@ class Projects extends CI_Controller
             $this->form_validation->set_rules('project_developer', lang('Developer'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('project_sponsor', lang('Sponsor'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('website', lang('ProjectWebsite'), 'trim|prep_url|max_length[255]');
+            $this->form_validation->set_rules('project_stage_elaboration', lang('StageElaboration'), 'trim|max_length[255]');
             $this->form_validation->set_rules('project_eststart', lang('Est.Start'), 'trim|callback_valid_monthyear_format|callback_valid_period');
             $this->form_validation->set_rules('project_estcompletion', lang('Est.Completion'), 'trim|callback_valid_monthyear_format|callback_valid_period');
 
