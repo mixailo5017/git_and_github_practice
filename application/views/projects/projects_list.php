@@ -77,7 +77,7 @@
                     </a>
 					<div style="font-size:13px;padding:8px 12px 0px 12px;"><?php echo $project['projectname'] ?></div>
 					<?php if ($project['uid'] == BRAZIL_USER_ID) { ?>
-						<div style="font-size:13px;padding:8px 12px 0px 12px;">&#x2713; Official Government Project</div>
+						<div style="font-size:13px;padding:8px 12px 0px 12px;"><strong>&#x2713; Official Government Project</strong></div>
 					<?php } ?>
 					<div style="padding: 8px 12px;">
 						<strong><?php echo lang('Country') ?>:</strong>&nbsp; <?php echo $project['country'] != '' ? $project['country'] : "&mdash;"; ?><br>
