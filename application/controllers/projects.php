@@ -47,6 +47,7 @@ class Projects extends CI_Controller
 
         $this->sort_options = array(
             1 => lang('SortAlphabetically'),
+            2 => lang('SortRecentlyUpdatedFirst')
         );
 
         // TODO: Revisit this logic to use array of events
