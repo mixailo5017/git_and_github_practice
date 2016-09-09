@@ -969,6 +969,7 @@ $lang['SortMostRelevant'] = 'Most relevant';
 $lang['SortAlphabetically'] = 'Alphabetically';
 $lang['SortRecentlyJoinedFirst'] = 'Recently joined first';
 $lang['HighestRatedFirst'] = 'Highest rated first';
+$lang['SortRecentlyUpdatedFirst'] = 'Recently updated first';
 
 /* Map content type dropdown */
 $lang['MapContentMyProjects'] = 'My Projects';
