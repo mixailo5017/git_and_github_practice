@@ -877,209 +877,239 @@ class Projects extends CI_Controller
         sendResponse($response);
         exit;
     }
-    
-    /**
-    * Update Project Name
-    * update new project name
+	
+	/**
+	* Update Project Name
+	* update new project name
+	*
+	* @param string
     *
-    * @param string
-    *
-    */
-    public function updatename($params)
-    {
-        $this->projects_model->updateprojectname($params, $this->uid);
-    }
-    
-    
+	*/
+	public function updatename($params)
+	{
+		$this->projects_model->updateprojectname($params, $this->uid);
+	}
+	
+	
+	/**
+	* Update Legal Info
+	* update new legal info
+	*
+	* @access public
+	* @param string
+	*/
+
+	public function add_legal($params)
+	{
+		$this->projects_model->add_legal($params, $this->uid);
+	}
+
+
     /**
-    * Update Legal Info
-    * update new legal info
+    * Update Procurement Process
+    * update new Procurement Process
     *
     * @access public
     * @param string
     */
-
-    public function add_legal($params)
+    public function add_procurement_process($params)
     {
-        $this->projects_model->add_legal($params, $this->uid);
+        $this->projects_model->add_procurement_process($params, $this->uid);
     }
-    
-    
-    /**
-    * Add Executive
-    * Add new executive for selected project
-    *
-    * @access public
-    * @param string
-    */
-    public function add_executive($params)
-    {
-        $this->form_validation->set_error_delimiters('<label>', '</label>');
-        $this->form_validation->set_rules('project_executives_name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('project_executives_company', 'Company', 'trim|required');
-        $this->form_validation->set_rules('project_executives_role', 'Role', 'trim|required');
-        //$this->form_validation->set_rules('project_executives_role_other', 'Other', 'trim|required');
-        $this->form_validation->set_rules('project_executives_email', 'Email', 'trim|required|valid_email');
+	
+	
+	/**
+	* Add Executive
+	* Add new executive for selected project
+	*
+	* @access public
+	* @param string
+	*/
+	public function add_executive($params)
+	{
+		$this->form_validation->set_error_delimiters('<label>', '</label>');
+		$this->form_validation->set_rules('project_executives_name', 'Name', 'trim|required');
+		$this->form_validation->set_rules('project_executives_company', 'Company', 'trim|required');
+		$this->form_validation->set_rules('project_executives_role', 'Role', 'trim|required');
+		//$this->form_validation->set_rules('project_executives_role_other', 'Other', 'trim|required');
+		$this->form_validation->set_rules('project_executives_email', 'Email', 'trim|required|valid_email');
 
-        if ($this->form_validation->run() === true) {
-            $this->projects_model->add_executive($params, $this->uid);
-        } else {
-            $response = array();
-            $response["status"]    = "error";
-            $response["message"]    = array('project_executives_name'=>form_error('project_executives_name'),
-                                            'project_executives_company'=>form_error('project_executives_company'),
-                                            'project_executives_role'=>form_error('project_executives_role'),
-                                            'project_executives_email'=>form_error('project_executives_email')
-                                    );
-            $response["isload"]    = "no";
-            //'project_executives_role_other'=>form_error('project_executives_role_other'),
+		if($this->form_validation->run() === TRUE)
+		{
+			$this->projects_model->add_executive($params,$this->uid);
+		}
+		else
+		{
+			$response = array();
+			$response["status"] 	= "error";
+			$response["message"] 	= array('project_executives_name'=>form_error('project_executives_name'),
+											'project_executives_company'=>form_error('project_executives_company'),
+											'project_executives_role'=>form_error('project_executives_role'),
+											'project_executives_email'=>form_error('project_executives_email')
+									);
+			$response["isload"] 	= "no";
+			//'project_executives_role_other'=>form_error('project_executives_role_other'),
+											
+					
+			//header('Content-type: application/json');
+			echo json_encode($response);
+		}
+	}
+	
+	/**
+	* Update Executive
+	* update executive for selected project
+	*
+	* @access public
+	* @param string
+	*/
+	public function update_executive($params)
+	{
+		$this->form_validation->set_error_delimiters('<label>', '</label>');
+		$this->form_validation->set_rules('project_executives_name', 'Name', 'trim|required');
+		$this->form_validation->set_rules('project_executives_company', 'Company', 'trim|required');
+		$this->form_validation->set_rules('project_executives_role', 'Role', 'trim|required');
+		$this->form_validation->set_rules('project_executives_email', 'Email', 'trim|required|valid_email');
 
-                    
-            //header('Content-type: application/json');
-            echo json_encode($response);
-        }
-    }
-    
-    /**
-    * Update Executive
-    * update executive for selected project
-    *
-    * @access public
-    * @param string
-    */
-    public function update_executive($params)
-    {
-        $this->form_validation->set_error_delimiters('<label>', '</label>');
-        $this->form_validation->set_rules('project_executives_name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('project_executives_company', 'Company', 'trim|required');
-        $this->form_validation->set_rules('project_executives_role', 'Role', 'trim|required');
-        $this->form_validation->set_rules('project_executives_email', 'Email', 'trim|required|valid_email');
+		if($this->form_validation->run() === TRUE)
+		{
+			$this->projects_model->update_executive($params,$this->uid);
+		}
+		else
+		{
+			$response = array();
+			$response["status"] 	= "error";
+			$response["message"] 	= array('project_executives_name'=>form_error('project_executives_name'),
+											'project_executives_company'=>form_error('project_executives_company'),
+											'project_executives_role'=>form_error('project_executives_role'),
+											'project_executives_email'=>form_error('project_executives_email')
+									);
+			$response["isload"] 	= "no";
+						
+			//header('Content-type: application/json');
+			echo json_encode($response);
+		}
+	}
+	
+	
+	/**
+	* Add Organization
+	* Add new organization for selected project
+	*
+	* @access public
+	* @param string
+	*/
+	public function add_organization($params)
+	{
+		$this->form_validation->set_error_delimiters('<label>', '</label>');
+		$this->form_validation->set_rules('project_organizations_company', 'Company', 'trim|required');
+		$this->form_validation->set_rules('project_organizations_role', 'Role', 'trim|required');
+		$this->form_validation->set_rules('project_organizations_contact', 'Contact', 'trim|required');
+		$this->form_validation->set_rules('project_organizations_email', 'Email', 'trim|required|valid_email');
 
-        if ($this->form_validation->run() === true) {
-            $this->projects_model->update_executive($params, $this->uid);
-        } else {
-            $response = array();
-            $response["status"]    = "error";
-            $response["message"]    = array('project_executives_name'=>form_error('project_executives_name'),
-                                            'project_executives_company'=>form_error('project_executives_company'),
-                                            'project_executives_role'=>form_error('project_executives_role'),
-                                            'project_executives_email'=>form_error('project_executives_email')
-                                    );
-            $response["isload"]    = "no";
-                        
-            //header('Content-type: application/json');
-            echo json_encode($response);
-        }
-    }
-    
-    
-    /**
-    * Add Organization
-    * Add new organization for selected project
-    *
-    * @access public
-    * @param string
-    */
-    public function add_organization($params)
-    {
-        $this->form_validation->set_error_delimiters('<label>', '</label>');
-        $this->form_validation->set_rules('project_organizations_company', 'Company', 'trim|required');
-        $this->form_validation->set_rules('project_organizations_role', 'Role', 'trim|required');
-        $this->form_validation->set_rules('project_organizations_contact', 'Contact', 'trim|required');
-        $this->form_validation->set_rules('project_organizations_email', 'Email', 'trim|required|valid_email');
+		if($this->form_validation->run() === TRUE)
+		{
+			$this->projects_model->add_organization($params,$this->uid);
+		}
+		else
+		{
+			$response = array();
+			$response["status"] 	= "error";
+			$response["message"] 	= array('project_organizations_company'=>form_error('project_organizations_company'),
+											'project_organizations_role'=>form_error('project_organizations_role'),
+											'project_organizations_contact'=>form_error('project_organizations_contact'),
+											'project_organizations_email'=>form_error('project_organizations_email')
+									);
+			$response["isload"] 	= "no";
+						
+			//header('Content-type: application/json');
+			echo json_encode($response);
+		}
+	}
+	
+	
+	
+	public function update_orgExpert($params)
+	{
+		$this->form_validation->set_error_delimiters('<label>', '</label>');
+		$this->form_validation->set_rules('project_expAdv', 'Organization', 'trim|required');
+		if($this->form_validation->run() === TRUE)
+		{
+			$this->projects_model->update_orgExpert($params);
+		}
+		else
+		{
+			$response = array();
+			$response["status"] 	= "error";
+			$response["message"] 	= array('project_expAdv'=>form_error('project_expAdv'));
+			$response["isload"] 	= "no";
+						
+			//header('Content-type: application/json');
+			echo json_encode($response);
+		}
 
-        if ($this->form_validation->run() === true) {
-            $this->projects_model->add_organization($params, $this->uid);
-        } else {
-            $response = array();
-            $response["status"]    = "error";
-            $response["message"]    = array('project_organizations_company'=>form_error('project_organizations_company'),
-                                            'project_organizations_role'=>form_error('project_organizations_role'),
-                                            'project_organizations_contact'=>form_error('project_organizations_contact'),
-                                            'project_organizations_email'=>form_error('project_organizations_email')
-                                    );
-            $response["isload"]    = "no";
-                        
-            //header('Content-type: application/json');
-            echo json_encode($response);
-        }
-    }
-    
-    
-    
-    public function update_orgExpert($params)
-    {
-        $this->form_validation->set_error_delimiters('<label>', '</label>');
-        $this->form_validation->set_rules('project_expAdv', 'Organization', 'trim|required');
-        if ($this->form_validation->run() === true) {
-            $this->projects_model->update_orgExpert($params);
-        } else {
-            $response = array();
-            $response["status"]    = "error";
-            $response["message"]    = array('project_expAdv'=>form_error('project_expAdv'));
-            $response["isload"]    = "no";
-                        
-            //header('Content-type: application/json');
-            echo json_encode($response);
-        }
-    }
-    
-    /**
-    * Update Organization
-    * update organization for selected project
-    *
-    * @access public
-    * @param string
-    */
-    public function update_organization($params)
-    {
-        $this->form_validation->set_error_delimiters('<label>', '</label>');
-        $this->form_validation->set_rules('project_organizations_company', 'Company', 'trim|required');
-        $this->form_validation->set_rules('project_organizations_role', 'Role', 'trim|required');
-        $this->form_validation->set_rules('project_organizations_contact', 'Contact', 'trim|required');
-        $this->form_validation->set_rules('project_organizations_email', 'Email', 'trim|required|valid_email');
+	}
+	
+	/**
+	* Update Organization
+	* update organization for selected project
+	*
+	* @access public
+	* @param string
+	*/
+	public function update_organization($params)
+	{
+		$this->form_validation->set_error_delimiters('<label>', '</label>');
+		$this->form_validation->set_rules('project_organizations_company', 'Company', 'trim|required');
+		$this->form_validation->set_rules('project_organizations_role', 'Role', 'trim|required');
+		$this->form_validation->set_rules('project_organizations_contact', 'Contact', 'trim|required');
+		$this->form_validation->set_rules('project_organizations_email', 'Email', 'trim|required|valid_email');
 
-        if ($this->form_validation->run() === true) {
-            $this->projects_model->update_organization($params, $this->uid);
-        } else {
-            $response = array();
-            $response["status"]    = "error";
-            $response["message"]    = array('project_organizations_company'=>form_error('project_organizations_company'),
-                                            'project_organizations_role'=>form_error('project_organizations_role'),
-                                            'project_organizations_contact'=>form_error('project_organizations_contact'),
-                                            'project_organizations_email'=>form_error('project_organizations_email')
-                                    );
-            $response["isload"]    = "no";
-                        
-            //header('Content-type: application/json');
-            echo json_encode($response);
-        }
-    }
+		if($this->form_validation->run() === TRUE)
+		{
+			$this->projects_model->update_organization($params,$this->uid);
+		}
+		else
+		{
+			$response = array();
+			$response["status"] 	= "error";
+			$response["message"] 	= array('project_organizations_company'=>form_error('project_organizations_company'),
+											'project_organizations_role'=>form_error('project_organizations_role'),
+											'project_organizations_contact'=>form_error('project_organizations_contact'),
+											'project_organizations_email'=>form_error('project_organizations_email')
+									);
+			$response["isload"] 	= "no";
+						
+			//header('Content-type: application/json');
+			echo json_encode($response);
+		}
+	}
 
-    /**
-    * Delete Organization
-    * Method call delete existing organization of project
-    *
-    * @access public
-    * @param int
-    *
-    */
-    public function delete_organization($params)
-    {
-        if ($params != "") {
-            $this->projects_model->delete_organization($params, $this->uid);
-        }
-    }
+	/**
+	* Delete Organization 
+	* Method call delete existing organization of project
+	*
+	* @access public
+	* @param int
+	*
+	*/
+	public function delete_organization($params)
+	{
+		if($params != "")
+		{
+			$this->projects_model->delete_organization($params,$this->uid);
+		}
+	}
 
-    /**
-    * Add Engineering
-    * Add new engineering for selected project
-    *
-    * @access public
-    * @param string
-    */
-    public function add_engineering($params)
-    {
+	/**
+	* Add Engineering
+	* Add new engineering for selected project
+	*
+	* @access public
+	* @param string
+	*/
+	public function add_engineering($params)
+	{
         $response = array(
             'status' => 'error',
             'isload' => 'no',

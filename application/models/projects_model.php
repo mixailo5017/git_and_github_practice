@@ -1384,13 +1384,49 @@ class Projects_model extends CI_Model {
 		else
 		{
 			$response["status"] 	= "error";
-			$response["message"] 	= $this->dataLang['lang']['ErrorwhileupdatingLegalInfo'];
+			$response["message"] 	= $this->dataLang['lang']['ErrorwhileupdatingProfile'];
 			$response["remove"] 	= true;
 
 		}
 		//header('Content-type: application/json');
 		echo json_encode($response);
 	}
+
+    /**
+     * Add Procurement Process
+     *
+     * @access  public
+     * @param   int
+     * @return  array
+     */
+    public function add_procurement_process($slug,$uid)
+    {
+        $response = array();
+        $update_data = array(
+            'procurement_criteria' => $this->input->post("project_procurement_criteria")
+        );
+        $this->db->where(array('uid'=> $uid,'slug'=>$slug));
+
+        if($this->db->update('exp_projects', $update_data))
+        {
+            $response["issubmit"] = FALSE;
+            $response["status"]     = "success";
+            $response["message"]    = $this->dataLang['lang']['Projectinfoupdatesuccessful'];
+            $response["remove"]     = true;
+            $response["isload"]     = "no";
+            //$response["isreset"]  = "yes";
+            //$response["loaddata"]     = $this->load->view("loader",array("val"=>$executivedata,"formname"=>"project_executives","slug"=>$slug));
+        }
+        else
+        {
+            $response["status"]     = "error";
+            $response["message"]    = $this->dataLang['lang']['ErrorwhileupdatingProfile'];
+            $response["remove"]     = true;
+
+        }
+        //header('Content-type: application/json');
+        echo json_encode($response);
+    }
 
 	/**
 	 * Get executive

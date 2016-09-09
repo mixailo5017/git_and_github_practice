@@ -118,6 +118,8 @@ $route['projects/update_project_location/(:any)']   = "projects/update_project_l
 $route['projects/add_financial/(:any)']	= "projects/add_financial/$1";
 
 $route['projects/add_legal/(:any)']	= "projects/add_legal/$1";
+$route['projects/add_procurement_process/(:any)']	= "projects/add_procurement_process/$1";
+
 $route['projects/load_tab/(:any)']	= "projects/load_tab/$1";
 
 $route['projects/form_load/(:any)']	= "projects/form_load/$1";

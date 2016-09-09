@@ -2,14 +2,63 @@
 <div id="profile_tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all project_form" style="display: block;">
 
 				<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1"><?php echo lang('Machinery');?></a></li>
-					<li class="ui-state-default ui-corner-top"><a href="#tabs-2"><?php echo lang('KeyTechnology');?></a></li>
-					<li class="ui-state-default ui-corner-top"><a href="#tabs-3"><?php echo lang('KeyServices');?></a></li>
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1"><?php echo lang('Process');?></a></li>
+					<li class="ui-state-default ui-corner-top"><a href="#tabs-2"><?php echo lang('Machinery');?></a></li>
+					<li class="ui-state-default ui-corner-top"><a href="#tabs-3"><?php echo lang('KeyTechnology');?></a></li>
+					<li class="ui-state-default ui-corner-top"><a href="#tabs-4"><?php echo lang('KeyServices');?></a></li>
 					
 				</ul>
 
 		
 				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1">
+
+					<div class="clearfix">
+						<?php echo form_open('projects/add_procurement_process/' . $slug, array(
+			                'id' => 'project_procurement_process_form',
+			                'name' => 'project_procurement_process_form',
+			                'method' => 'post',
+			                'class' => 'ajax_form topupdate')) ?>
+
+
+			            <?php
+
+			            $opt['project_procurement_process_form'] = array(
+												'lbl_project_auction_criteria' => array(
+													'class' => 'left_label'
+												),
+												'project_auction_criteria'	=> array(
+													'name' 		=> 'project_auction_criteria',
+													'id' 		=> 'project_auction_criteria',
+													'value'		=> '' //TODO: Populate with saved value
+												)
+											);
+						?>
+
+						<?php echo form_label(lang('AuctionDate') . ':', 'project_auction_date', array('class' => 'left_label')) ?>
+						<div class="fld">
+							<?php echo form_input('project_auction_date', set_value('project_auction_date'), 'placeholder="' . lang('mdY') . '" id="project_auction_date_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
+							<div class="errormsg" id="err_project_auction_date"><?php echo form_error('project_auction_date') ?></div>
+						</div>
+						<br>
+
+						<?php echo form_label(lang("AuctionCriteria").":","project_auction_criteria",$opt["project_procurement_process_form"]["lbl_project_auction_criteria"]); ?>
+						<div class="fld">
+							<?php echo form_input($opt["project_procurement_process_form"]["project_auction_criteria"]); ?>
+							<div class="errormsg" id="err_project_auction_criteria"><?php echo form_error("project_auction_criteria"); ?></div>
+						</div>
+						<br>
+
+						<?php echo form_close();?>
+
+					</div>
+
+
+					
+
+				</div>
+
+
+				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-2">
 
 					<div class="clearfix matrix_dropdown project_machinery">
 						<ul id="load_machinery_form">
@@ -198,7 +247,7 @@
 				</div>
 
 		
-				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-2">
+				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
 				
 					<div class="clearfix matrix_dropdown project_procurement_technology">
 					
@@ -390,7 +439,7 @@
 				</div>
 
 		
-				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
+				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-4">
 				
 					<div class="clearfix matrix_dropdown project_procurement_services">
 												
