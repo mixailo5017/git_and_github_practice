@@ -97,6 +97,7 @@ $lang['Political'] = 'Política';
 $lang['Companies'] = 'Empresas';
 $lang['Owners'] = 'Proprietários';
 $lang['Machinery'] = 'Máquinas';
+$lang['Process'] = 'Processo';
 $lang['ProcurementProcess'] = 'Processo de Aquisição';
 $lang['FinancialInformation'] = 'Informação Financeira';
 $lang['KeyTechnology'] = 'Tecnologia Key';
