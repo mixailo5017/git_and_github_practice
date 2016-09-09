@@ -3103,7 +3103,7 @@ class Projects extends CI_Controller
     private function check_sort($value)
     {
         $allowed = array_keys($this->sort_options);
-        $default = 1;
+        $default = 2;
 
         if (in_array($value, $allowed)) {
             return $value;
