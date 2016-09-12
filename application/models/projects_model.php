@@ -1403,7 +1403,8 @@ class Projects_model extends CI_Model {
     {
         $response = array();
         $update_data = array(
-            'procurement_criteria' => $this->input->post("project_procurement_criteria")
+            'procurement_criteria' => $this->input->post("project_auction_criteria"),
+            'procurement_date' => $this->input->post("project_auction_date")
         );
         $this->db->where(array('uid'=> $uid,'slug'=>$slug));
 
