@@ -44,7 +44,7 @@
                 </p>
                 <p>
                     To learn more, <a href="<?php echo base_url() . 'expertise/' . $follower['uid'] ?>">view <?php echo $follower['fullname'] ?>'s profile</a>. <br>
-                    Or, <a href="<?php echo base_url() . 'myvip/myfollowers' ?>">see all your followers</a>.
+                    Or, <a href="<?php echo base_url() . 'mygvip/myfollowers' ?>">see all your followers</a>.
                 </p>
 
                 <div>
