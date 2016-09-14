@@ -4359,14 +4359,16 @@ class Projects_model extends CI_Model {
 
 		return $participants_data;
 	}
-	public function get_procurement_data($slug,$uid)
+	
+    public function get_procurement_data($slug,$uid)
 	{
 		$procurement_data = array();
 
-		$this->db->select(array('pid','stage','uid','projectname','slug'));
-		$qryproj = $this->db->get_where("exp_projects",array("slug"=>$slug,"uid"=>$uid));
+		$this->db->select(array('pid','stage','uid','projectname','slug', 'procurement_criteria', 'procurement_date'));
+		$qryproj = $this->db->get_where("exp_projects", array("slug"=>$slug,"uid"=>$uid));
 		$procurement_data = $qryproj->row_array();
 		$qryproj->free_result();
+
 		$procurement_data['machinery'] = $this->get_machinery($slug,$uid);
 		$procurement_data['procurement_technology'] = $this->get_procurement_technology($slug,$uid);
 		$procurement_data['procurement_services'] = $this->get_procurement_services($slug,$uid);
@@ -4375,6 +4377,7 @@ class Projects_model extends CI_Model {
 		return $procurement_data;
 
 	}
+
 	public function get_files_data($slug,$uid)
 	{
 		$files_data = array();

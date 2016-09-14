@@ -2995,26 +2995,29 @@ class Projects extends CI_Controller
         $this->load->view('templates/footer', $this->dataLang);
     }
 
-    /**
-    * Edit Procurement
-    * Edit procurement tab for Project Edit
-    *
-    * @access public
-    * @param string
-    */
-    public function edit_procurement($params)
-    {
-        $slug = $params;
-        $this->pid = $this->projects_model->check_user_project($slug, $this->uid);
-        
-        $procurementdata['slug'] = $slug;
-        $procurementdata['vtab_position'] = 5;
-        $procurementdata['project'] = $this->projects_model->get_procurement_data($slug, $this->uid);
-        $procurementdata['main_content'] = 'projects/projects_procurement';
-        
-        $this->breadcrumb->append_crumb(lang('B_PROJECTS'), '/projects');
-        $this->breadcrumb->append_crumb($procurementdata['project']['projectname'] . ' (edit)', "/projects/$slug");
-        $this->headerdata['breadcrumb'] = $this->breadcrumb->output();
+
+	/**
+	* Edit Procurement
+	* Edit procurement tab for Project Edit
+	*
+	* @access public
+	* @param string
+	*/
+	public function edit_procurement($params)
+	{
+		$slug = $params;
+		$this->pid = $this->projects_model->check_user_project($slug,$this->uid);
+		
+		$procurementdata['slug'] = $slug;
+		$procurementdata['vtab_position'] = 5;
+		$procurementdata['project'] = $this->projects_model->get_procurement_data($slug,$this->uid);
+        $procurementdata['project']['procurement_date'] = $this->cleanDate($procurementdata['project']['procurement_date']);
+
+		$procurementdata['main_content'] = 'projects/projects_procurement';
+		
+		$this->breadcrumb->append_crumb(lang('B_PROJECTS'), '/projects');
+		$this->breadcrumb->append_crumb($procurementdata['project']['projectname'] . ' (edit)', "/projects/$slug");
+		$this->headerdata['breadcrumb'] = $this->breadcrumb->output();
 
         $this->headerdata['title'] = build_title($procurementdata['project']['projectname'] . ' (edit)');
         
