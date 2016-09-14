@@ -596,8 +596,11 @@ class Projects extends CI_Controller
             }
         }
 
-        $editdata['project'] = $this->projects_model->get_project_data($slug, $this->uid);
-        $editdata['proj_org'] = $this->projects_model->get_project_organization($this->pid);
+		$editdata['project'] = $this->projects_model->get_project_data($slug,$this->uid);
+        $editdata['project']['eststart'] = $this->cleanDate($editdata['project']['eststart']);
+        $editdata['project']['estcompletion'] = $this->cleanDate($editdata['project']['estcompletion']);
+
+		$editdata['proj_org'] = $this->projects_model->get_project_organization($this->pid);
 
         $editdata['photoerror'] = '';
 
@@ -613,23 +616,36 @@ class Projects extends CI_Controller
         $this->headerdata['header_extra'] .= $this->load->view('projects/leaflet-draw-js', '', true);
 
         // Render the page
-        $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('projects/projects_edit', $editdata);
-        $this->load->view('templates/footer', $this->footer_data);
-
-        // echo "<pre>"; var_dump($this->headerdata); exit;
-    }
-    
+		$this->load->view('templates/header', $this->headerdata);
+		$this->load->view('projects/projects_edit', $editdata);
+		$this->load->view('templates/footer', $this->dataLang);
+	}
+	
     /**
-    * Listing Method
-    * Method call for Project Listing Page
-    *
-    * @access public
-    */
-    public function index()
+     * Takes a date value (e.g. from the database) and changes it to blank if it is 1111-11-11
+     * @param  string $date Stored date (1111-11-11 indicates null)
+     * @return string       Human-readable date (blank or a real date)
+     */
+    private function cleanDate($date)
     {
+        if ($date != "1111-11-11" && $date != "" ) {
+            return DateFormat($date, DATEFORMAT_MONTHONLY, FALSE);
+        } else {
+            return "";
+        } 
+    }
+
+
+	/**
+	* Listing Method 
+	* Method call for Project Listing Page
+	*
+	* @access public
+	*/
+	public function index()
+	{
         $limit = view_check_limit($this->input->get_post('limit', true));
-        $offset    = $this->input->get_post('per_page', true);
+        $offset	= $this->input->get_post('per_page', true);
         if (empty($offset)) {
             $offset = 0;
         }

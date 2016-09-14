@@ -1,7 +1,6 @@
 <div id="content" class="clearfix">
         <?php
-            if($project["eststart"] != "1111-11-11" && $project["eststart"] != "" ) { $eststart = DateFormat($project["eststart"],DATEFORMAT_MONTHONLY,FALSE); } else { $eststart = ""; } 
-            if($project["estcompletion"] != "1111-11-11" && $project["estcompletion"] != "") { $estcompletion = DateFormat($project["estcompletion"],DATEFORMAT_MONTHONLY,FALSE); } else { $estcompletion = ""; } 
+            
             $opt["project_form"] = array(
                     'title' => array(
                         'id'    => 'title_input',
@@ -114,7 +113,7 @@
                     'project_eststart' => array(
                         'id'          => 'project_eststart_picker',
                         'name'        => 'project_eststart',
-                        'value'       => set_value('project_eststart', $eststart),
+                        'value'       => set_value('project_eststart', $project["eststart"]),
                         'class'       => 'sm_left',
                         'style'       => 'width:120px',
                         'placeholder' => lang('mY'),
@@ -127,7 +126,7 @@
                     'project_estcompletion' => array(
                         'id'          => 'project_estcompletion_picker',
                         'name'        => 'project_estcompletion',
-                        'value'       => set_value('project_estcompletion', $estcompletion),
+                        'value'       => set_value('project_estcompletion', $project["estcompletion"]),
                         'class'       => 'sm_left',
                         'style'       => 'width:120px',
                         'placeholder' => lang('mY'),
@@ -248,6 +247,7 @@
                                     </div>
                             </div>
                             <?php echo form_close();?>
+
                         </div>
                         <br>
 
