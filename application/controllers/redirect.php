@@ -2,8 +2,16 @@
     exit('No direct script access allowed');
 }
 
+/** 
+ * Takes the requested URI, performs a lookup, and redirects to the specified
+ * destination, provided one was found. If not, sends a 404 response.
+ */
 class Redirect extends CI_Controller
 {
+    /**
+     * Keys correspond to the requested URI, values state which URI the user should be redirected to.
+     * @var array
+     */
     protected $uriLookup = [
         'myvip' => 'mygvip',
         'myvip/myfollowers' => 'mygvip/myfollowers',
