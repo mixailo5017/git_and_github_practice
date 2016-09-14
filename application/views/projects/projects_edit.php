@@ -411,9 +411,9 @@
                             <div class="fld">
                                 <?php 
                                     $project_stage_elaboration_attr = 'id="project_stage_elaboration"';
-                                    echo form_input('project_stage_elaboration', set_value('project_stage_elaboration', $project["stage_elaboration"]), $project_stage_attr);
+                                    echo form_input('project_stage_elaboration', set_value('project_stage_elaboration', $project["stage_elaboration"]), $project_stage_elaboration_attr);
                                 ?>
-                                <div class="errormsg" id="err_project_stage"></div>
+                                <div class="errormsg" id="err_project_stage_elaboration"></div>
                             </div>
                             <br>
 
