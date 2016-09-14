@@ -1,6 +1,7 @@
 <?php  if (! defined('BASEPATH')) exit('No direct script access allowed');
 
 $route['myvip'] = "redirect";
+$route['myvip/(:any)'] = "redirect";
 
 $route['default_controller'] = "home";
 $route['404_override'] = 'pages/error_404';
