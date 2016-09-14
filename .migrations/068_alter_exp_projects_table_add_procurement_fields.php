@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_alter_exp_projects_table extends CI_Migration {
+class Migration_alter_exp_projects_table_add_procurement_fields extends CI_Migration {
 
     protected $table = 'exp_projects';
 
