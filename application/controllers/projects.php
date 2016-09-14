@@ -914,7 +914,24 @@ class Projects extends CI_Controller
     */
     public function add_procurement_process($params)
     {
-        $this->projects_model->add_procurement_process($params, $this->uid);
+        $this->form_validation->set_error_delimiters('<label>', '</label>');
+        $this->form_validation->set_rules('project_auction_criteria', 'Auction Criteria', 'trim|max_length[255]');
+
+        // If the form validation passes, pass control to the model to try and save the data, and send a response. Otherwise, send an error response.
+        if($this->form_validation->run() === TRUE)
+        {
+            $this->projects_model->add_procurement_process($params, $this->uid);
+        }
+        else
+        {
+            $response = array();
+            $response["status"]     = "error";
+            $response["message"]    = array('project_auction_criteria'=>form_error('project_auction_criteria')
+                                    );
+            $response["isload"]     = "no";
+
+            echo json_encode($response);
+        }
     }
 	
 	
