@@ -386,15 +386,16 @@ class Projects extends CI_Controller
 
         $viewdata['project']['isfollowing'] = $model->isfollowing($pid, $this->uid); // Is current user following the project
         $viewdata['project']['projectdata'] = $model->get_project_data($slug, $userid);
-        $viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
-        $viewdata['project']['financial'] = $model->get_financial_data($slug, $userid);
-        $viewdata['project']['regulatory'] = $model->get_regulatory_data($slug, $userid);
-        $viewdata['project']['participants'] = $model->get_participants_data($slug, $userid);
-        $viewdata['project']['procurement'] = $model->get_procurement_data($slug, $userid);
-        $viewdata['project']['files'] = $model->get_files_data($slug, $userid);
-        $viewdata['project']['ad'] = $model->get_ad_data();
-        $viewdata['project']['comment'] = $model->get_project_comment($slug, $userid);
-        $viewdata['project']['assessment'] = $model->get_project_assessment($slug, $userid);
+		$viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
+		$viewdata['project']['financial'] = $model->get_financial_data($slug, $userid);
+		$viewdata['project']['regulatory'] = $model->get_regulatory_data($slug, $userid);
+		$viewdata['project']['participants'] = $model->get_participants_data($slug, $userid);
+		$viewdata['project']['procurement'] = $model->get_procurement_data($slug, $userid);
+        $viewdata['project']['procurement']['procurement_date'] = $this->cleanDate($viewdata['project']['procurement']['procurement_date']);
+		$viewdata['project']['files'] = $model->get_files_data($slug, $userid);
+		$viewdata['project']['ad'] = $model->get_ad_data();
+		$viewdata['project']['comment'] = $model->get_project_comment($slug, $userid);
+		$viewdata['project']['assessment'] = $model->get_project_assessment($slug, $userid);
 
         // Generate a random number to display as the WEB score
         // $viewdata['project']['webscore'] = rand(150, 1000);
@@ -426,7 +427,11 @@ class Projects extends CI_Controller
         // Determine which sections of the project profile have data,
         // and hence should be displayed
         $viewdata['project_sections'] = [];
-        if (! ($viewdata['project']['procurement']['totalprocurement'] == 0)) {
+        if (! (
+                $viewdata['project']['procurement']['totalprocurement'] == 0 &&
+                $viewdata['project']['procurement']['procurement_date'] == '' &&
+                $viewdata['project']['procurement']['procurement_criteria'] == ''
+                )) {
             $viewdata['project_sections']['procurement'] = true;   
         }
         if (! ($viewdata['project']['financial']['totalfinancial'] == 0)) {
