@@ -1,5 +1,11 @@
                 <h2><?php echo lang('Procurement')  ?></h2>
                 <div id="tabs-5" class="col2_tab">
+                    <?php if (($project['procurement']['procurement_date'] != '') || ($project['procurement']['procurement_criteria'] != '')) { ?>
+                        <h3><?php echo lang('Process');?></h3>
+                        <?php if ($project['procurement']['procurement_criteria'] != '') { ?><p><strong><?php echo lang('AuctionCriteria') . ': '; ?></strong><?php echo $project['procurement']['procurement_criteria']; ?></p><?php } ?>
+                        <?php if ($project['procurement']['procurement_date'] != '') { ?><p><strong><?php echo lang('AuctionDate') . ': '; ?></strong><?php echo $project['procurement']['procurement_date']; ?></p><?php } ?>
+                    <?php } ?>
+
                     <?php if (count($project['procurement']['machinery']) >0) { ?>
 
                     <h3><?php echo lang('Machinery');?></h3>
