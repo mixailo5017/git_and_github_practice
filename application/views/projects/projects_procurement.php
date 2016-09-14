@@ -29,14 +29,14 @@
 												'project_auction_criteria'	=> array(
 													'name' 		=> 'project_auction_criteria',
 													'id' 		=> 'project_auction_criteria',
-													'value'		=> '' //TODO: Populate with saved value
+													'value'		=> set_value('project_auction_criteria', $project['procurement_criteria'])
 												)
 											);
 						?>
 
 						<?php echo form_label(lang('AuctionDate') . ':', 'project_auction_date', array('class' => 'left_label')) ?>
 						<div class="fld">
-							<?php echo form_input('project_auction_date', set_value('project_auction_date'), 'placeholder="' . lang('mdY') . '" id="project_auction_date_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
+							<?php echo form_input('project_auction_date', set_value('project_auction_date', $project['procurement_date']), 'placeholder="' . lang('mdY') . '" id="project_auction_date_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
 							<div class="errormsg" id="err_project_auction_date"><?php echo form_error('project_auction_date') ?></div>
 						</div>
 						<br>
