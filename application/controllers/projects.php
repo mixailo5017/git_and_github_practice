@@ -3112,7 +3112,7 @@ class Projects extends CI_Controller {
     {
         $this->form_validation->set_error_delimiters('<label>', '</label>');
         $this->form_validation->set_rules('project_roi_name', 'Name', 'trim|required');
-        $this->form_validation->set_rules('project_roi_percent', 'Percent', 'trim|required|integer');
+        $this->form_validation->set_rules('project_roi_percent', 'Percent', 'trim|required|numeric');
         $this->form_validation->set_rules('project_roi_type', 'Type', 'trim|required');
         $this->form_validation->set_rules('project_roi_approach', 'Approach', 'trim|required');
     }
