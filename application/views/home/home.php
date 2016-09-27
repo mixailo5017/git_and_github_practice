@@ -14,7 +14,7 @@
 
 <section class="testimonials">
     <div class="container">
-        <h2 class="h2-std">To date we've connected <?php echo empty($counters['experts']) ? 1091 : $counters['experts'] ?> experts with <?php echo empty($counters['projects']) ? 838 : $counters['projects'] ?> projects across <?php echo empty($counters['countries']) ? 88 : $counters['countries'] ?> countries!</h2>
+        <h2 class="h2-std" data-socialimpact="We've created approximately 64 million jobs.">To date we've connected <?php echo empty($counters['experts']) ? 1091 : $counters['experts'] ?> experts with <?php echo empty($counters['projects']) ? 838 : $counters['projects'] ?> projects across <?php echo empty($counters['countries']) ? 88 : $counters['countries'] ?> countries!</h2>
         <ul>
             <li class="photo">
                 <img src="/images/new/testimonial3.png" width="100" height="100" />
