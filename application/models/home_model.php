@@ -36,7 +36,7 @@ class Home_model extends CI_Model {
 		( SELECT COUNT(*) FROM members WHERE membertype = ?) experts,
 		( SELECT COUNT(*) FROM projects ) projects,
 		( SELECT (round(SUM(totalbudget) / 1E6, 1)) FROM totalvalue ) totalvalue," . // Convert total dollars from millions to trillions, one decimal point
-		"( SELECT (floor(totalbudget / 1E3 * 30000 / 1E6)) FROM totalvalue ) jobs," . // 30,000 jobs created per $1bn invested
+		"( SELECT (floor(totalbudget / 1E3 * 8000 / 1E6)) FROM totalvalue ) jobs," . // 8,000 jobs created per $1bn invested
 		"( SELECT COUNT(*) FROM (
 			SELECT country FROM members WHERE country IS NOT NULL AND country <> ''
 			 UNION
