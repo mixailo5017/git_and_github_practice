@@ -24,11 +24,20 @@ class Home_model extends CI_Model {
 			  FROM exp_projects p JOIN members m
 				ON p.uid = m.uid
 			 WHERE p.isdeleted = ?
+		), totalvalue AS (
+			SELECT (SUM(totalbudget)) AS totalbudget
+			  FROM exp_projects p
+			  JOIN exp_members m ON (m.uid = p.uid)
+			 WHERE p.isdeleted = ?
+			   AND m.status = ?
+			   AND ((totalbudget <= 50E3) OR (p.uid = 492))
 		)
 		SELECT
 		( SELECT COUNT(*) FROM members WHERE membertype = ?) experts,
 		( SELECT COUNT(*) FROM projects ) projects,
-		( SELECT COUNT(*) FROM (
+		( SELECT (round(SUM(totalbudget) / 1E6, 1)) FROM totalvalue ) totalvalue," . // Convert total dollars from millions to trillions, one decimal point
+		"( SELECT (floor(totalbudget / 1E3 * 30000 / 1E6)) FROM totalvalue ) jobs," . // 30,000 jobs created per $1bn invested
+		"( SELECT COUNT(*) FROM (
 			SELECT country FROM members WHERE country IS NOT NULL AND country <> ''
 			 UNION
 			SELECT country FROM projects WHERE country IS NOT NULL AND country <> ''
@@ -40,6 +49,8 @@ class Home_model extends CI_Model {
             MEMBER_TYPE_EXPERT_ADVERT,
 			STATUS_ACTIVE,
 			'0',
+			'0',
+			STATUS_ACTIVE,
 			MEMBER_TYPE_MEMBER, // Exclude ligtning companies
 		);
 
