@@ -149,6 +149,9 @@ const INTERNAL_USERS = [24, 28, 37, 222, 492, 298, 426, 583, 586, 684, 741, 813,
 // The user ID of the official Brazilian government user account
 // Used to determine whether to display the Project Feed
 define('BRAZIL_USER_ID', 2636);
+// The forum ID of the official Brazilian government 
+// community page. Used for the /brazil route
+define('BRAZIL_FORUM_ID', 19);
 
 // The number of seconds a reminder lasts
 define('REMINDER_EXPIRES', 60*60*2);

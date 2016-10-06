@@ -189,4 +189,5 @@ $route['sitemap.xml'] = "pages/index/sitemap";
 $route['p/(:any)'] = "publicprofiles/projects/$1";
 
 // GViP Brazil
+$route['brazil'] = "forums/show/" . BRAZIL_FORUM_ID;
 $route['brazil/faq'] = "pages/index/brazilfaq";
