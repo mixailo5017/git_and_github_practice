@@ -615,7 +615,7 @@ $(function() {
 	$('#header_bread_crumb li a:last').css('background', 'none');
 
 	//activate tabs
-	$('#profile_tabs, #project_tabs').tabs({ fx: { opacity: 'toggle', duration: 100}, select: add_tab_to_submit, create: show_tabs });
+	$('#profile_tabs').tabs({ fx: { opacity: 'toggle', duration: 100}, select: add_tab_to_submit, create: show_tabs });
 
 	$('.edit_project').click(function() {
 
@@ -634,8 +634,8 @@ $(function() {
 
 	 // show tabs after init
 	function show_tabs(event, ui){
-		$('#profile_tabs, #project_tabs').fadeIn();
-		var tab = $('#profile_tabs .ui-tabs-panel, #project_tabs .ui-tabs-panel').filter(':not(".ui-tabs-hide")').attr('id');
+		$('#profile_tabs').fadeIn();
+		var tab = $('#profile_tabs .ui-tabs-panel').filter(':not(".ui-tabs-hide")').attr('id');
 		$ret.val( ret_val + '#' + tab );
 	}
 
