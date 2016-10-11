@@ -16,7 +16,7 @@
 					echo $limited_description;
                     if (mb_strlen($limited_description) < mb_strlen($project['projectdata']['description'])) {
                     ?>
-                        <span class="text-cut">...</span>
+                        <span class="text-cut">…</span>
                         <button type="button" class="show"><?php echo lang('ShowMore') ?></button>
                         <span class="overflow-text">
                         	<?php echo mb_substr($project['projectdata']['description'], mb_strlen($limited_description) + 1) ?>
