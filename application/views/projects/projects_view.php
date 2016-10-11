@@ -13,13 +13,13 @@
                     <?php
 					$this->load->helper('text');
                     $limited_description = word_limiter($project['projectdata']['description'], 100, '');
-					echo $limited_description;
+					echo nl2br($limited_description);
                     if (mb_strlen($limited_description) < mb_strlen($project['projectdata']['description'])) {
                     ?>
-                        <span class="text-cut">...</span>
+                        <span class="text-cut">…</span>
                         <button type="button" class="show"><?php echo lang('ShowMore') ?></button>
                         <span class="overflow-text">
-                        	<?php echo mb_substr($project['projectdata']['description'], mb_strlen($limited_description) + 1) ?>
+                        	<?php echo nl2br(mb_substr($project['projectdata']['description'], mb_strlen($limited_description) + 1)) ?>
                         	<button type="button" class="hide"><?php echo lang('ShowLess') ?></button>
                         </span>
                     <?php
