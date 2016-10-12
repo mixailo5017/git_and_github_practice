@@ -29,23 +29,14 @@
 			</section><!-- end .portlet -->
 
 			<div id="project_tabs" class="white_box">
-			<?php
-            $style_fundamental  = (($project['fundamental']['totalfundamental']-count($project['fundamental']["map_point"])) == 0) ? 'style="display:none;"' : 'style="display:block;"';
-            $style_financial    = ($project['financial']['totalfinancial'] == 0) ? 'style="display:none;"' : 'style="display:block;"';
-            $style_regulatory   = ($project['regulatory']['totalregulatory'] == 0) ? 'style="display:none;"' : 'style="display:block;"';
-            $style_participants = ($project['participants']['totalparticipants'] == 0) ? 'style="display:none;"' : 'style="display:block;"';
-            $style_procurement  = ($project['procurement']['totalprocurement'] == 0) ? 'style="display:none;"' : 'style="display:block;"';
-            $style_files 		= ($project['files']['totalfiles'] == 0) ? 'style="display:none;"' : 'style="display:block;"';
-			?>
+			
+				<?php $this->load->view('projects/projects_view/overview', $project); ?>
+				<?php 
+					foreach ($project_sections as $section => $appears) {
+						$this->load->view("projects/projects_view/$section", $project);
+					}
+				?>
 
-
-	            <?php $this->load->view('projects/projects_view/overview', $project); ?>
-				<?php $this->load->view('projects/projects_view/procurement', $project); ?>
-				<?php $this->load->view('projects/projects_view/fundamentals', $project); ?>
-				<?php $this->load->view('projects/projects_view/financial', $project); ?>
-				<?php $this->load->view('projects/projects_view/regulatory', $project); ?>
-				<?php $this->load->view('projects/projects_view/participants', $project); ?>
-				<?php $this->load->view('projects/projects_view/files', $project); ?>
 
 			</div><!-- end #tabs -->
 
