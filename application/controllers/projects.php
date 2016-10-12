@@ -417,6 +417,9 @@ class Projects extends CI_Controller {
         // Determine which sections of the project profile have data,
         // and hence should be displayed
         $viewdata['project_sections'] = [];
+        if (! ($viewdata['project']['procurement']['totalprocurement'] == 0)) {
+            $viewdata['project_sections']['procurement'] = true;   
+        }
         if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
             $viewdata['project_sections']['fundamentals'] = true;
         }
@@ -428,9 +431,6 @@ class Projects extends CI_Controller {
         }
         if (! ($viewdata['project']['participants']['totalparticipants'] == 0)) {
             $viewdata['project_sections']['participants'] = true;   
-        }
-        if (! ($viewdata['project']['procurement']['totalprocurement'] == 0)) {
-            $viewdata['project_sections']['procurement'] = true;   
         }
         if (! ($viewdata['project']['files']['totalfiles'] == 0)) {
             $viewdata['project_sections']['files'] = true;   

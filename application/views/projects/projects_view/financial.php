@@ -1,9 +1,11 @@
                 <h2><?php echo lang('Financial')    ?></h2>
                 <div id="tabs-3" class="col2_tab">
-                    <h3><?php echo lang('FinancialStructure'); ?></h3>
                     <?php if (count($project['financial']['financial'])>0) { ?>
-                        <p><strong><?php echo lang('FinancialStructure');?> -</strong><?php if ($project['financial']['financial']['name'] != '') { echo $project['financial']['financial']['name'];} else { echo "N/A";} ?></p>
-                        <p><?php if ($project['financial']['financial']['contactinfo'] != '') { echo $project['financial']['financial']['contactinfo']; } else { echo "N/A";} ?></p>
+                        <h3><?php echo lang('FinancialStructure'); ?></h3>
+                        <p><strong><?php echo lang('FinancialStructure');?> - </strong><?php if ($project['financial']['financial']['name'] != '') { echo $project['financial']['financial']['name'];} else { echo "N/A";} ?></p>
+                        <?php if ($project['financial']['financial']['contactinfo'] != '') { ?>
+                            <p><?php echo $project['financial']['financial']['contactinfo']; ?></p>
+                        <?php } ?>
                     <?php } ?>
 
                     <?php if (count($project['financial']['fund_sources']) >0) { ?>
@@ -25,7 +27,7 @@
                                 </tr>
                             <?php } ?>
                         </table>
-                     <?php } ?>
+                    <?php } ?>
 
                     <?php if (count($project['financial']['roi']) >0) { ?>
                     <h3><?php echo lang('ReturnonInvestment'); ?></h3>
