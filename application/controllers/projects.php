@@ -414,6 +414,28 @@ class Projects extends CI_Controller {
 		$viewdata['project']['isaddcomment'] = $userid == $this->uid ? TRUE : FALSE;
 		$viewdata['project']['prettylocation'] = $model->get_city_state($slug, $userid);
 
+        // Determine which sections of the project profile have data,
+        // and hence should be displayed
+        $viewdata['project_sections'] = [];
+        if (! ($viewdata['project']['procurement']['totalprocurement'] == 0)) {
+            $viewdata['project_sections']['procurement'] = true;   
+        }
+        if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
+            $viewdata['project_sections']['fundamentals'] = true;
+        }
+        if (! ($viewdata['project']['financial']['totalfinancial'] == 0)) {
+            $viewdata['project_sections']['financial'] = true;
+        }
+        if (! ($viewdata['project']['regulatory']['totalregulatory'] == 0)) {
+            $viewdata['project_sections']['regulatory'] = true;
+        }
+        if (! ($viewdata['project']['participants']['totalparticipants'] == 0)) {
+            $viewdata['project_sections']['participants'] = true;   
+        }
+        if (! ($viewdata['project']['files']['totalfiles'] == 0)) {
+            $viewdata['project_sections']['files'] = true;   
+        }
+
 		$viewdata['isAdminorOwner'] = $this->isAdminOrOwner($userid);
 		$viewdata['map_geom'] = $model->get_geom($pid);
 
