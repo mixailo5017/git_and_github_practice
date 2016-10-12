@@ -1836,6 +1836,13 @@ div.olControlZoom a:hover {
   padding: 1em 1.4em;
   /*background: none;*/
 }
+
+#project_tabs h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  font-weight: bold;
+}
+
 #project_tabs.ui-tabs .ui-tabs-hide {
   display: none !important;
 }

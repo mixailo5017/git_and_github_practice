@@ -1,4 +1,3 @@
-                <h2><?php echo lang('Overview')    ?></h2>
                 <div id="tabs-1" class="col2_tab">
                     <?php if (($project['projectdata']['lat'] && $project['projectdata']['lng']) || $isAdminorOwner ) { ?>
                         <div class="map_box clearfix">
