@@ -13,70 +13,108 @@ $(window).load(function() {
 $(function() {
 
     //project description toggle
-    $('.project-description').on('click', '.show', function(){
-    	$(this).siblings('.text-cut').hide();
-    	$(this).hide();
-    	$('.project-description .overflow-text').slideToggle();
+    $('.project-description').on('click', '.show', function() {
+        $(this).siblings('.text-cut').hide();
+        $(this).hide();
+        $('.project-description .overflow-text').slideToggle();
     });
-    $('.project-description').on('click', '.hide', function(){
-    	$('.project-description .show, .project-description .text-cut').show();
-    	$('.project-description .overflow-text').slideToggle();
-    	$("html, body").animate({ scrollTop: 0 }, "slow");
+    $('.project-description').on('click', '.hide', function() {
+        $('.project-description .show, .project-description .text-cut').show();
+        $('.project-description .overflow-text').slideToggle();
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
     });
 
     var $meter = $("#meter");
     //progress bar dismiss
     $meter.find("button").click(function() {
         dismissPCI();
-        $meter.animate({height: 0, opacity: 0}, "fast", function() {
+        $meter.animate({
+            height: 0,
+            opacity: 0
+        }, "fast", function() {
             $(this).slideUp();
         });
     });
 
-/*
-    if($('html').hasClass("lt-ie9") === true){
-       // Append upgrade banner to body
-    }
-*/
-	$('textarea.tinymce').tinymce({
-		// Location of TinyMCE script
-		script_url : '/js/tiny_mce/tiny_mce.js',
+    /*
+        if($('html').hasClass("lt-ie9") === true){
+           // Append upgrade banner to body
+        }
+    */
+    $('textarea.tinymce').tinymce({
+        // Location of TinyMCE script
+        script_url: '/js/tiny_mce/tiny_mce.js',
 
-		// General options
-		theme : "advanced",
-		width :	$('textarea.tinymce').data('width') || "900",
-		plugins : "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+        // General options
+        theme: "advanced",
+        width: $('textarea.tinymce').data('width') || "900",
+        plugins: "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
         // Allow iframe tag
         extended_valid_elements: "iframe[class|src|alt|title|width|height|align|name|frameborder|allowfullscreen]",
-		// Theme options
-		theme_advanced_buttons1 : "bold,italic,underline,,bullist,numlist,outdent,indent,justifyleft,justifycenter,justifyright,|,link,unlink,anchor,image,media,|,formatselect,|,code",
-		theme_advanced_toolbar_location : "top",
-		theme_advanced_toolbar_align : "left",
-		theme_advanced_statusbar_location : "bottom",
-		theme_advanced_resizing : false,
+        // Theme options
+        theme_advanced_buttons1: "bold,italic,underline,,bullist,numlist,outdent,indent,justifyleft,justifycenter,justifyright,|,link,unlink,anchor,image,media,|,formatselect,|,code",
+        theme_advanced_toolbar_location: "top",
+        theme_advanced_toolbar_align: "left",
+        theme_advanced_statusbar_location: "bottom",
+        theme_advanced_resizing: false,
 
-		 formats : {
-              alignleft : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'left'},
-              aligncenter : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'center'},
-              alignright : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'right'},
-              alignfull : {selector : 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img', classes : 'full'},
-              bold : {inline : 'span', 'classes' : 'bold'},
-              italic : {inline : 'span', 'classes' : 'italic'},
-              underline : {inline : 'span', 'classes' : 'underline', exact : true},
-              strikethrough : {inline : 'del'},
-              customformat : {inline : 'span', styles : {color : '#00ff00', fontSize : '20px'}, attributes : {title : 'My custom format'}}
-    		  },
+        formats: {
+            alignleft: {
+                selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img',
+                classes: 'left'
+            },
+            aligncenter: {
+                selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img',
+                classes: 'center'
+            },
+            alignright: {
+                selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img',
+                classes: 'right'
+            },
+            alignfull: {
+                selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img',
+                classes: 'full'
+            },
+            bold: {
+                inline: 'span',
+                'classes': 'bold'
+            },
+            italic: {
+                inline: 'span',
+                'classes': 'italic'
+            },
+            underline: {
+                inline: 'span',
+                'classes': 'underline',
+                exact: true
+            },
+            strikethrough: {
+                inline: 'del'
+            },
+            customformat: {
+                inline: 'span',
+                styles: {
+                    color: '#00ff00',
+                    fontSize: '20px'
+                },
+                attributes: {
+                    title: 'My custom format'
+                }
+            }
+        },
 
-		// Example content CSS (should be your site CSS)
-		content_css : "/css/content.css",
+        // Example content CSS (should be your site CSS)
+        content_css: "/css/content.css",
 
-		// Drop lists for link/image/media/template dialogs
-		template_external_list_url : "lists/template_list.js",
-		external_link_list_url : "lists/link_list.js",
-		external_image_list_url : "lists/image_list.js",
-		media_external_list_url : "lists/media_list.js"
+        // Drop lists for link/image/media/template dialogs
+        template_external_list_url: "lists/template_list.js",
+        external_link_list_url: "lists/link_list.js",
+        external_image_list_url: "lists/image_list.js",
+        media_external_list_url: "lists/media_list.js"
 
-	});
+    });
 
 
     // Prevent clicking on View button when the Case Study has Draft status
@@ -117,7 +155,7 @@ $(function() {
 
         txt.addClass('txtstuff');
 
-        txt.on('keyup', function () {
+        txt.on('keyup', function() {
             content = $(this).val();
             content = content.replace(/\n/g, '');
 
@@ -143,11 +181,11 @@ $(function() {
         // Clear the errors
         $errors.html("");
 
-        if (! isUpdateContentValid(content)) {
+        if (!isUpdateContentValid(content)) {
             return false;
         }
-        postData.author  = $form.find("input[name=author]").val();
-        postData.type    = $form.find("input[name=type]").val();
+        postData.author = $form.find("input[name=author]").val();
+        postData.type = $form.find("input[name=type]").val();
         postData.content = cleanUpdateContent(content);
 
         if ($form.find("input[name=reply_to]")) {
@@ -168,7 +206,7 @@ $(function() {
             }
         }).fail(function() {
             $errors.html("<label>Error occurred while trying to post an update.</label>")
-//            alert("Error while trying to post an update");
+                //            alert("Error while trying to post an update");
         }).always(function(e) {
             if (typeof callback == 'function') {
                 callback();
@@ -219,7 +257,7 @@ $(function() {
             lastId = 0,
             html = "";
 
-        if (! reload && $last != undefined) {
+        if (!reload && $last != undefined) {
             lastId = $last.attr('data-id') == undefined ? 0 : $last.attr('data-id');
         }
 
@@ -280,7 +318,7 @@ $(function() {
     loadUpdates($("#projects form[name=updates_view_more]"));
 
     function cleanUpdateContent(content) {
-        if (content === undefined ) {
+        if (content === undefined) {
             return '';
         }
         // Remove all vertival space and trim leading and trailing spaces
@@ -290,7 +328,8 @@ $(function() {
 
     function isUpdateContentValid(content) {
         content = cleanUpdateContent(content);
-        var min = 6, max = 1024;
+        var min = 6,
+            max = 1024;
 
         if (content.length < min || content.length > max) {
             return false;
@@ -304,10 +343,10 @@ $(function() {
         var $content = $form.find("textarea.post-comment"),
             $submit = $form.find("input[type=submit]");
 
-           
+
         if (isUpdateContentValid($content.val()) && $form.hasClass('data-submitting-in-progress') === false) {
             $submit.removeAttr("disabled");
-           
+
         } else {
             $submit.attr("disabled", "disabled");
         }
@@ -325,8 +364,8 @@ $(function() {
                 $this.find("input[type=submit]").attr("disabled", "disabled");
             }
             return false;
-        }else{
-        	$(this).closest('form').removeClass("data-submitting-in-progress");
+        } else {
+            $(this).closest('form').removeClass("data-submitting-in-progress");
         }
     });
 
@@ -344,9 +383,9 @@ $(function() {
         var $form = $(this);
 
         // Prevent double submissions
-        
+
         if ($form.hasClass("data-submitting-in-progress") === true) {
-        	return false;
+            return false;
         }
 
         $form.addClass("data-submitting-in-progress");
@@ -374,7 +413,7 @@ $(function() {
         }
 
         var $action = $form.find("input[type=hidden][name=action]"),
-            action  = $action.val(),
+            action = $action.val(),
             context = $form.find("input[type=hidden][name=context]").val(),
             $submit = $form.find("a[name=submit] .follow-text"),
             url = hosturl + "/" + context + "/" + action;
@@ -393,7 +432,7 @@ $(function() {
                 $submit.parent().attr("data-unfollow", unfollowText);
 
                 if ($submit.parent().attr("data-unfollow") != "") {
-                    $submit.parent().addClass('unfollow').addClass('just_changed').mouseleave(function(){
+                    $submit.parent().addClass('unfollow').addClass('just_changed').mouseleave(function() {
                         $('.just_changed').removeClass('just_changed');
                     });
                 } else {
@@ -413,9 +452,9 @@ $(function() {
     }
 
     // Follow/Unfollow button implemented as an anchor. Therefore we need to trigger the submit event for the form
-	$("form[name=follow_form] a[name=submit]").click(function(e) {
-		e.preventDefault();
-		$(this).parents("form[name=follow_form]").submit();
+    $("form[name=follow_form] a[name=submit]").click(function(e) {
+        e.preventDefault();
+        $(this).parents("form[name=follow_form]").submit();
         return false;
     });
 
@@ -447,8 +486,8 @@ $(function() {
 
     /* scroll to */
     var scroll_to = $('div.scroll_to');
-    if(scroll_to.length){
-        scroll_to.find('a').click(function(){
+    if (scroll_to.length) {
+        scroll_to.find('a').click(function() {
             var where = $(this).attr('href');
             scrollIt($(where));
             return false;
@@ -457,43 +496,43 @@ $(function() {
     /* end scroll to */
 
     /* Edit Seats & search filter */
-	var $seat_portlets = $('.seat_portlets'),
-		$search_filter = $('.search_filter');
+    var $seat_portlets = $('.seat_portlets'),
+        $search_filter = $('.search_filter');
 
-	if($seat_portlets.length){
+    if ($seat_portlets.length) {
 
-		var $inviteButton = $('.invite').find('.button'),
-			$cancelButton = $('.invite_form').find('a.cancel');
+        var $inviteButton = $('.invite').find('.button'),
+            $cancelButton = $('.invite_form').find('a.cancel');
 
-			$inviteButton.click(function(){
-				$(this).closest('.invite').hide().next('.invite_form').show();
-				return false;
-			});
+        $inviteButton.click(function() {
+            $(this).closest('.invite').hide().next('.invite_form').show();
+            return false;
+        });
 
-			$cancelButton.click(function(){
-				$(this).closest('.invite_form').hide().prev('.invite').show();
-				return false;
-			});
-	}
+        $cancelButton.click(function() {
+            $(this).closest('.invite_form').hide().prev('.invite').show();
+            return false;
+        });
+    }
 
-	if($search_filter.length){
-		var $sfd = $('.search_filter_drop'),
-			$sfh = $('input.search-filter-hidden'),
-			$current = $('span.current', $search_filter);
+    if ($search_filter.length) {
+        var $sfd = $('.search_filter_drop'),
+            $sfh = $('input.search-filter-hidden'),
+            $current = $('span.current', $search_filter);
 
-			$sfd.find('a').click(function(){
-				var data_filter = $(this).attr('data-filter-value'),
-					text = $(this).text();
+        $sfd.find('a').click(function() {
+            var data_filter = $(this).attr('data-filter-value'),
+                text = $(this).text();
 
-				$current.text(text);
-				$sfh.attr('value', data_filter);
-				return false;
-			});
-	}
-	/* end Edit Seats */
+            $current.text(text);
+            $sfh.attr('value', data_filter);
+            return false;
+        });
+    }
+    /* end Edit Seats */
 
     var $tooltip = $(".tooltip");
-	if ($tooltip.length > 0) {
+    if ($tooltip.length > 0) {
         $tooltip.poshytip({
             className: "tip-yellowsimple",
             showTimeout: 1,
@@ -504,191 +543,196 @@ $(function() {
         });
     }
 
-		// no entries message on project search
-	if( ! $('.project_entries .project_listing').size() ){
-		$('.project_entries').html('<p>'+lang['SearchNoProject']+'</p>')}
-
-
-	// USER search form
-	$('#projects_search_form, #user_search_form').submit(function(){
-		$('select', this).each(function(){
-			if( $(this).val() == '' ){$(this).attr('disabled','disabled');}
-		});
-	})
-
-	$(".accordion").accordion({
-		autoHeight: false,
-		navigation: true,
-		change: show_stage_status,
-		create: show_stage_status
-	});
-
-	function show_stage_status() {
-		$('#stage_accordion .ui-accordion-content.ui-accordion-content-active').css('overflow','visible');
-	}
-
-
-	// only allow one open Project Stage
-	$('.stage_status_select').change(function(){
-
-		if( $('option:selected', this).val() == 'Open' ){
-
-			$('#stage_accordion h3.ui-accordion-header a span').remove();
-
-			$(this).parents('div.ui-accordion-content').prev('h3').find('a').append( '<span>open</span>' );
-
-			$('.stage_status_select').val('Closed');
-			$(this).val('Open');
-		}
-
-	}).each(function(){
-		if( $('option:selected', this).val() == 'Open' ){
-
-			$('#stage_accordion h3.ui-accordion-header a span').remove();
-
-			$(this).parents('div.ui-accordion-content').prev('h3').find('a').append( '<span>open</span>' );
-
-			$('.stage_status_select').val('Closed');
-			$(this).val('Open');
-		}
-	});
-
-	// start inits
-	edu_listing_init();
-	ajax_form_init();
-
-
-	// Project Sub-Sector Dynamic List Population
-	var $project_sector_sub = $('#project_sector_sub option').not('.hardcode');
-	var $project_sector_sub_holder = $project_sector_sub.clone();
-
-	$project_sector_sub.remove().not('.hardcode');
-
-	$('#project_sector_main').live("change",function() {
-
-		$('#project_sector_sub').removeAttr('disabled');
-		$('#project_sector_sub').focus();
-
-		var thisClass = $(this).find('option:selected').attr('class').replace('sector_main','project_sector_sub');
-		$('#project_sector_sub option').not('.hardcode').remove()
-		$('#project_sector_sub option:first').after( $project_sector_sub_holder.filter('.' + thisClass) );
-		if($('#selected_sub_sector').length>0)
-		{
-			if($('#selected_sub_sector').text()=="Other"){
-				$('#project_sector_sub').val("Other");
-			}
-		}
-	}).trigger("change");
-
-
-	// Sub-Sector "Other" Text Input
-	// included in profile/_general_info_form to reset
-	$('#project_sector_sub').change(function() {
-		var $other = $('#project_sector_sub_other');
-		if($('option:selected', this).val()==='Other') {$other.parent().show().end().removeAttr('disabled').focus();}
-		else {
-			$other.parent().hide().end().val('').attr('disabled', 'disabled');
-		}
-	}).trigger('change');
-
-	// Financial Structure "Other" Text Input
-	$('#project_financial').change(function() {
-		var $other = $('#project_fs_other');
-		if($('option:selected', this).val()==='Other') {$other.parent().show().end().removeAttr('disabled').focus();}
-		else {
-			$other.parent().hide().end().val('').attr('disabled', 'disabled');
-		}
-
-	}).trigger('change');
-
-	/*
-	$('.target').change(function() {
-	  alert('Handler for .change() called.');
-	});
-	*/
-
-	// save return value
-	$ret = $('input[name="return"]');
-	ret_val = $ret.val();
-
-	//remove last arrow from header bread crumb
-	$('#header_bread_crumb li a:last').css('background', 'none');
-
-	//activate tabs
-	$('#profile_tabs, #project_tabs').tabs({ 
-        fx: { opacity: 'toggle', duration: 100}, 
-        select: add_tab_to_submit, 
-        create: show_tabs,
-        show: show_different_tab });
-
-	$('.edit_project').click(function() {
-
-		$("#profile_tabs").tabs({ selected: 2 });
-
-	})
-
-
-
-	// add_tab_to_submit - append tab hash to return value. This code is run each time someone switches tab
-	function add_tab_to_submit(event, ui) {
-
-		$ret.val( ret_val + ui.tab.hash );
-
-	}
-
-    function show_different_tab(event, ui) {
-        
-        // If the user is switching to a tab with a map, redraw it (since it doesn't work if initially drawn when hidden)
-        if ( typeof thisMap != 'undefined' && thisMap != undefined) {
-            thisMap.invalidateSize();
-        }
+    // no entries message on project search
+    if (!$('.project_entries .project_listing').size()) {
+        $('.project_entries').html('<p>' + lang['SearchNoProject'] + '</p>')
     }
 
-	 // show tabs after init
-	function show_tabs(event, ui){
-		$('#profile_tabs').fadeIn();
-		var tab = $('#profile_tabs .ui-tabs-panel').filter(':not(".ui-tabs-hide")').attr('id');
-		$ret.val( ret_val + '#' + tab );
-	}
 
-	// submit for on update profile button click
-	$('#update_project').click(function(e){
-		formsubmit = $("#project_name_form").submit();
+    // USER search form
+    $('#projects_search_form, #user_search_form').submit(function() {
+        $('select', this).each(function() {
+            if ($(this).val() == '') {
+                $(this).attr('disabled', 'disabled');
+            }
+        });
+    })
 
-		e.preventDefault();
-	})
+    $(".accordion").accordion({
+        autoHeight: false,
+        navigation: true,
+        change: show_stage_status,
+        create: show_stage_status
+    });
 
-	// project member select
-	$(".chzn-select").chosen({no_results_text: lang['Noresultsmatched']});
+    function show_stage_status() {
+        $('#stage_accordion .ui-accordion-content.ui-accordion-content-active').css('overflow', 'visible');
+    }
+
+
+    // only allow one open Project Stage
+    $('.stage_status_select').change(function() {
+
+        if ($('option:selected', this).val() == 'Open') {
+
+            $('#stage_accordion h3.ui-accordion-header a span').remove();
+
+            $(this).parents('div.ui-accordion-content').prev('h3').find('a').append('<span>open</span>');
+
+            $('.stage_status_select').val('Closed');
+            $(this).val('Open');
+        }
+
+    }).each(function() {
+        if ($('option:selected', this).val() == 'Open') {
+
+            $('#stage_accordion h3.ui-accordion-header a span').remove();
+
+            $(this).parents('div.ui-accordion-content').prev('h3').find('a').append('<span>open</span>');
+
+            $('.stage_status_select').val('Closed');
+            $(this).val('Open');
+        }
+    });
+
+    // start inits
+    edu_listing_init();
+    ajax_form_init();
+
+
+    // Project Sub-Sector Dynamic List Population
+    var $project_sector_sub = $('#project_sector_sub option').not('.hardcode');
+    var $project_sector_sub_holder = $project_sector_sub.clone();
+
+    $project_sector_sub.remove().not('.hardcode');
+
+    $('#project_sector_main').live("change", function() {
+
+        $('#project_sector_sub').removeAttr('disabled');
+        $('#project_sector_sub').focus();
+
+        var thisClass = $(this).find('option:selected').attr('class').replace('sector_main', 'project_sector_sub');
+        $('#project_sector_sub option').not('.hardcode').remove()
+        $('#project_sector_sub option:first').after($project_sector_sub_holder.filter('.' + thisClass));
+        if ($('#selected_sub_sector').length > 0) {
+            if ($('#selected_sub_sector').text() == "Other") {
+                $('#project_sector_sub').val("Other");
+            }
+        }
+    }).trigger("change");
+
+
+    // Sub-Sector "Other" Text Input
+    // included in profile/_general_info_form to reset
+    $('#project_sector_sub').change(function() {
+        var $other = $('#project_sector_sub_other');
+        if ($('option:selected', this).val() === 'Other') {
+            $other.parent().show().end().removeAttr('disabled').focus();
+        } else {
+            $other.parent().hide().end().val('').attr('disabled', 'disabled');
+        }
+    }).trigger('change');
+
+    // Financial Structure "Other" Text Input
+    $('#project_financial').change(function() {
+        var $other = $('#project_fs_other');
+        if ($('option:selected', this).val() === 'Other') {
+            $other.parent().show().end().removeAttr('disabled').focus();
+        } else {
+            $other.parent().hide().end().val('').attr('disabled', 'disabled');
+        }
+
+    }).trigger('change');
+
+    /*
+    $('.target').change(function() {
+      alert('Handler for .change() called.');
+    });
+    */
+
+    // save return value
+    $ret = $('input[name="return"]');
+    ret_val = $ret.val();
+
+    //remove last arrow from header bread crumb
+    $('#header_bread_crumb li a:last').css('background', 'none');
+
+    //activate tabs
+    $('#profile_tabs, #project_tabs').tabs({
+        fx: {
+            opacity: 'toggle',
+            duration: 100
+        },
+        select: add_tab_to_submit,
+        create: show_tabs
+    });
+
+    $('.edit_project').click(function() {
+
+        $("#profile_tabs").tabs({
+            selected: 2
+        });
+
+    })
+
+
+
+    // add_tab_to_submit - append tab hash to return value. This code is run each time someone switches tab
+    function add_tab_to_submit(event, ui) {
+
+        $ret.val(ret_val + ui.tab.hash);
+
+    }
+
+    // show tabs after init
+    function show_tabs(event, ui) {
+        $('#profile_tabs, #project_tabs').fadeIn();
+        var tab = $('#profile_tabs .ui-tabs-panel, #project_tabs .ui-tabs-panel').filter(':not(".ui-tabs-hide")').attr('id');
+        $ret.val(ret_val + '#' + tab);
+    }
+
+    // submit for on update profile button click
+    $('#update_project').click(function(e) {
+        formsubmit = $("#project_name_form").submit();
+
+        e.preventDefault();
+    })
+
+    // project member select
+    $(".chzn-select").chosen({
+        no_results_text: lang['Noresultsmatched']
+    });
 
 
 
 
-	// disable the submit function on the create a new project button
-	// this will be changed in future releases
-	// changed for cancel button click to go on project list page
-	//$("#new_project .lmol").click(function(e) {e.preventDefault();});
+    // disable the submit function on the create a new project button
+    // this will be changed in future releases
+    // changed for cancel button click to go on project list page
+    //$("#new_project .lmol").click(function(e) {e.preventDefault();});
 
-	//clean up profile_actions portlet
-	$('#profile_actions a:last').css('border-bottom', 'none');
+    //clean up profile_actions portlet
+    $('#profile_actions a:last').css('border-bottom', 'none');
 
-	// Submit create profile form from anchor
-	$('form#profile_upload_image a#submit_upload').click(function(){$('form#profile_upload_image').submit();})
+    // Submit create profile form from anchor
+    $('form#profile_upload_image a#submit_upload').click(function() {
+        $('form#profile_upload_image').submit();
+    })
 
-	/* Profile Edit Submit Button */
+    /* Profile Edit Submit Button */
 
-	// Submit update profile from from anchor
-	$('a#update_profile').click(function(){
-		//$('.ui-tabs-panel:visible form').submit();
-		// log($('.ui-tabs-panel:visible form'));
-	})
+    // Submit update profile from from anchor
+    $('a#update_profile').click(function() {
+        //$('.ui-tabs-panel:visible form').submit();
+        // log($('.ui-tabs-panel:visible form'));
+    })
 
     // project date pickers
     $('.datepicker_month_year').datepicker({
         beforeShow: function() {
             var $date_picker = $('#ui-datepicker-div');
-            if( ! $date_picker.parent().hasClass('jqui')){
-                $date_picker.wrap( $('<div/>').addClass('jqui') );
+            if (!$date_picker.parent().hasClass('jqui')) {
+                $date_picker.wrap($('<div/>').addClass('jqui'));
             }
         },
         changeMonth: true,
@@ -696,374 +740,512 @@ $(function() {
         showButtonPanel: true,
         yearRange: '1950:2500',
         dateFormat: "mm/yy",
-        onClose: function(dateText, inst) { 
+        onClose: function(dateText, inst) {
             var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
             var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
             var day = '01';
             $(this).datepicker('setDate', new Date(year, month, day));
         }
-    }).change(function(){
-        $('#'+this.id.replace('_picker','')).val( $(this).val() + ' 00:00' );
-    }).each(function(){
-         $(this).val( $(this).val().substring(0,10) );
+    }).change(function() {
+        $('#' + this.id.replace('_picker', '')).val($(this).val() + ' 00:00');
+    }).each(function() {
+        $(this).val($(this).val().substring(0, 10));
     });
 
-    $('.education_edit .education_edit_cancel').on('click',function(){
+    $('.education_edit .education_edit_cancel').on('click', function() {
         //log( 'yay' );
     });
 
 
 
-	/*$('a.edit').on('click',function(e){
-		//log( 'yay' );
-		e.preventDefault();
-		var $edit_div = $(this).parent().next('div.edit');
-		console.log($edit_div);
-		$edit_div.slideToggle();
+    /*$('a.edit').on('click',function(e){
+    	//log( 'yay' );
+    	e.preventDefault();
+    	var $edit_div = $(this).parent().next('div.edit');
+    	console.log($edit_div);
+    	$edit_div.slideToggle();
 
-		if( $(this).hasClass('project_row_add')){
-		//	log( 'project_row_add' );
-			$edit_div.find('.project_new_row').removeAttr('disabled');
-		}
+    	if( $(this).hasClass('project_row_add')){
+    	//	log( 'project_row_add' );
+    		$edit_div.find('.project_new_row').removeAttr('disabled');
+    	}
 
-	});*/
-
-
-	// project edit matrix dropdowns
-	/*$('a.edit').click(function(e){
-		e.preventDefault();
-		var $edit_div = $(this).parent().next('div.edit');
-		console.log($edit_div);
-		$edit_div.slideToggle();
-
-		if( $(this).hasClass('project_row_add')){
-		//	log( 'project_row_add' );
-			$edit_div.find('.project_new_row').removeAttr('disabled');
-		}
-	});*/
-
-	$('.matrix_dropdown a.upload_new').click(function(e){
-		e.preventDefault();
-
-		$(this).parent().parent().next().next('div.new_version').slideToggle();
-
-	});
-
-	$('#project_form').submit(function(){
-
-		// disable unused file inputs
-		$('input[type="file"]').each(function(){
-			//if( ! $(this).val() ){$(this).attr('disabled','disabled');}
-			//log( $(this) );
-		});
-
-		$('select.chzn-select').each(function(){
-			field_name =  '#default_' + $(this).attr('name').replace('[]','');
-			$more = $(field_name).val().split('|');
-			//log( $field );
-			if( $arr = $(this).val() ){
-				 $(this).val( $.unique($arr.concat($more)) );
-			}
-		});
-		//return false;
-	})
-
-	// Matix file replace
-	$('input[type="file"]').change(function(){
-		if( $(this).val() ){
-			file_input_name = $(this).attr('name');
-			hidden_input_name = file_input_name.substring(0, file_input_name.length - 1) + '_hidden';
-
-			$hidden = $('input[name="' + hidden_input_name + '"]').val('');
+    });*/
 
 
-		}
-	})
+    // project edit matrix dropdowns
+    /*$('a.edit').click(function(e){
+    	e.preventDefault();
+    	var $edit_div = $(this).parent().next('div.edit');
+    	console.log($edit_div);
+    	$edit_div.slideToggle();
 
-	// Matix file replace
-	$('#project_form input[type="file"]').change(function(){
-		if( $(this).val() ){
-			file_input_name = $(this).attr('name');
-			hidden_input_name = file_input_name + '_hidden';
+    	if( $(this).hasClass('project_row_add')){
+    	//	log( 'project_row_add' );
+    		$edit_div.find('.project_new_row').removeAttr('disabled');
+    	}
+    });*/
 
-			$hidden = $('input[name="' + hidden_input_name + '"]').val($(this).val());
+    $('.matrix_dropdown a.upload_new').click(function(e) {
+        e.preventDefault();
+
+        $(this).parent().parent().next().next('div.new_version').slideToggle();
+
+    });
+
+    $('#project_form').submit(function() {
+
+        // disable unused file inputs
+        $('input[type="file"]').each(function() {
+            //if( ! $(this).val() ){$(this).attr('disabled','disabled');}
+            //log( $(this) );
+        });
+
+        $('select.chzn-select').each(function() {
+            field_name = '#default_' + $(this).attr('name').replace('[]', '');
+            $more = $(field_name).val().split('|');
+            //log( $field );
+            if ($arr = $(this).val()) {
+                $(this).val($.unique($arr.concat($more)));
+            }
+        });
+        //return false;
+    })
+
+    // Matix file replace
+    $('input[type="file"]').change(function() {
+        if ($(this).val()) {
+            file_input_name = $(this).attr('name');
+            hidden_input_name = file_input_name.substring(0, file_input_name.length - 1) + '_hidden';
+
+            $hidden = $('input[name="' + hidden_input_name + '"]').val('');
 
 
-		}
-	})
+        }
+    })
+
+    // Matix file replace
+    $('#project_form input[type="file"]').change(function() {
+        if ($(this).val()) {
+            file_input_name = $(this).attr('name');
+            hidden_input_name = file_input_name + '_hidden';
+
+            $hidden = $('input[name="' + hidden_input_name + '"]').val($(this).val());
 
 
-	ajax_delete_init();
+        }
+    })
 
-	$('div.edit input[type="reset"]').click(function(e){
-		e.preventDefault();
-		$(this).parent().parent('div.edit').slideToggle();
-	})
 
-	// Form Validation
-	//$('#member_form').validate({
-	//	rules: {
-	//		member_first_name: 'required',
-	//		member_last_name: 'required',
-	//		email: {required: true, email: true},
-	//		member_organization: 'required',
-	//		register_password: {required: true,minlength: 6,maxlength: 16},
-     //       password_confirm: {required: true, minlength: 4,maxlength:16, equalTo: "#register_password" }
-	//	},
-	//	messages: {
-	//		member_first_name: lang['FirstNameReq'],
-	//		member_last_name: "Last Name is Required.",
-	//		email: {required:lang['EmailReq'], email:lang['EmailNotValid']},
-	//		member_organization: lang['OrganizationReq'],
-	//		register_password: {required: lang['PasswordReq'],minlength: lang['Passwordatleast']},
-	//		password_confirm: {required: lang['ConfPassReq'],minlength: lang['Passwordatleast'], equalTo: lang['EnterSamePass'] }
+    ajax_delete_init();
+
+    $('div.edit input[type="reset"]').click(function(e) {
+        e.preventDefault();
+        $(this).parent().parent('div.edit').slideToggle();
+    })
+
+    // Form Validation
+    //$('#member_form').validate({
+    //	rules: {
+    //		member_first_name: 'required',
+    //		member_last_name: 'required',
+    //		email: {required: true, email: true},
+    //		member_organization: 'required',
+    //		register_password: {required: true,minlength: 6,maxlength: 16},
+    //       password_confirm: {required: true, minlength: 4,maxlength:16, equalTo: "#register_password" }
+    //	},
+    //	messages: {
+    //		member_first_name: lang['FirstNameReq'],
+    //		member_last_name: "Last Name is Required.",
+    //		email: {required:lang['EmailReq'], email:lang['EmailNotValid']},
+    //		member_organization: lang['OrganizationReq'],
+    //		register_password: {required: lang['PasswordReq'],minlength: lang['Passwordatleast']},
+    //		password_confirm: {required: lang['ConfPassReq'],minlength: lang['Passwordatleast'], equalTo: lang['EnterSamePass'] }
     //
-	//	},
-	//	errorPlacement: function(error, element) {
-	//		error.appendTo( element.parent().find(".errormsg") );
-	//	}
-	//});
+    //	},
+    //	errorPlacement: function(error, element) {
+    //		error.appendTo( element.parent().find(".errormsg") );
+    //	}
+    //});
 
 
-// Form Validation
-	$('#email_settings_form').validate({
-		rules: {
-			es_username: {required: true, email: true},
-			register_password: {required: true,minlength: 6,maxlength: 16},
+    // Form Validation
+    $('#email_settings_form').validate({
+        rules: {
+            es_username: {
+                required: true,
+                email: true
+            },
+            register_password: {
+                required: true,
+                minlength: 6,
+                maxlength: 16
+            },
         },
-		messages: {
-			es_username: {required:lang['EmailReq'], email:lang['EmailNotValid']},
-			es_password: {required: lang['PasswordReq'],minlength: lang['Passwordatleast']},
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
-	});
-
-// Form Validation
-	$('#password_settings_form').validate({
-		rules: {
-			ps_currentpass : {required: true,minlength: 6,maxlength: 16},
-			ps_newpassword : {required: true,minlength: 6,maxlength: 16},
-		 	ps_confpassword: {required: true, minlength: 4,maxlength:16, equalTo: "#ps_newpassword" }
+        messages: {
+            es_username: {
+                required: lang['EmailReq'],
+                email: lang['EmailNotValid']
+            },
+            es_password: {
+                required: lang['PasswordReq'],
+                minlength: lang['Passwordatleast']
+            },
         },
-		messages: {
-			ps_currentpass: {required:lang['PasswordReq'],minlength: lang['Passwordatleast']},
-			ps_newpassword: {required: lang['PasswordReq'],minlength: lang['Passwordatleast']},
-			ps_confpassword: {required: lang['ConfPassReq'],minlength: lang['Passwordatleast'], equalTo: lang['EnterSamePass'] }
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
-	});
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
+    });
+
+    // Form Validation
+    $('#password_settings_form').validate({
+        rules: {
+            ps_currentpass: {
+                required: true,
+                minlength: 6,
+                maxlength: 16
+            },
+            ps_newpassword: {
+                required: true,
+                minlength: 6,
+                maxlength: 16
+            },
+            ps_confpassword: {
+                required: true,
+                minlength: 4,
+                maxlength: 16,
+                equalTo: "#ps_newpassword"
+            }
+        },
+        messages: {
+            ps_currentpass: {
+                required: lang['PasswordReq'],
+                minlength: lang['Passwordatleast']
+            },
+            ps_newpassword: {
+                required: lang['PasswordReq'],
+                minlength: lang['Passwordatleast']
+            },
+            ps_confpassword: {
+                required: lang['ConfPassReq'],
+                minlength: lang['Passwordatleast'],
+                equalTo: lang['EnterSamePass']
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
+    });
 
 
 
-	$('#header_login').validate({
-		rules: {
-			username: {required: true, email: true},
-			password: 'required'
-		},
-		messages: {
-			username: {required:lang['EmailReq'],email:lang['EnterValidEmail']},
-			password: lang['PasswordReq']
-		},
-		errorPlacement: function(error, element) {
-			$("#u0").show();
-			$("#pd0u0").hide();
-			//console.log(element.parent());
-			//error.appendTo( $("#pd0u0") );
-			//alert(element.attr("name"));
-			$("."+element.attr("name")+"_errormsg").html(error);
-		}
-	});
+    $('#header_login').validate({
+        rules: {
+            username: {
+                required: true,
+                email: true
+            },
+            password: 'required'
+        },
+        messages: {
+            username: {
+                required: lang['EmailReq'],
+                email: lang['EnterValidEmail']
+            },
+            password: lang['PasswordReq']
+        },
+        errorPlacement: function(error, element) {
+            $("#u0").show();
+            $("#pd0u0").hide();
+            //console.log(element.parent());
+            //error.appendTo( $("#pd0u0") );
+            //alert(element.attr("name"));
+            $("." + element.attr("name") + "_errormsg").html(error);
+        }
+    });
 
-	$('#new_project').validate({
-		rules: {
-			title: 'required'
-		},
-		messages: {
-			title: lang['TitleReq']
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
+    $('#new_project').validate({
+        rules: {
+            title: 'required'
+        },
+        messages: {
+            title: lang['TitleReq']
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
 
-	});
+    });
 
-	$('#general_photo_form').validate({
-		rules: {
-			photo_filename: 'required'
-		},
-		messages: {
-			photo_filename:lang['PhotoReq']
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
+    $('#general_photo_form').validate({
+        rules: {
+            photo_filename: 'required'
+        },
+        messages: {
+            photo_filename: lang['PhotoReq']
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
 
-	});
-
-
-	$('#general_video_form').validate({
-		rules: {
-			member_video: { required: true, url: true }
-		},
-		messages: {
-			member_video: {required:lang['VideoReq'],url:lang['VideoUrlNotValid']}
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
-
-	});
-
-	$('#general_info_form').validate({
-		rules: {
-			member_first_name: { required: true},
-			member_last_name: { required: true},
-			member_title: { required: true},
-			member_organization: { required: true},
-		},
-		messages: {
-			member_first_name: {required:lang['FirstNameReq']},
-			member_last_name: {required:lang['LastNameReq']},
-			member_title: {required:lang['TitleReq']},
-			member_organization: {required: lang['OrganizationReq']},
-
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
-
-	});
+    });
 
 
-	$('#expertise_education_form').validate({
-		rules: {
-			education_university: { required: true},
-			education_degree: { required: true},
-			education_major: { required: true},
-		},
-		messages: {
-			education_university: { required: lang['UniversityReq']},
-			education_degree: { required: lang['DegreeReq']},
-			education_major: { required: lang['MajorReq']},
+    $('#general_video_form').validate({
+        rules: {
+            member_video: {
+                required: true,
+                url: true
+            }
+        },
+        messages: {
+            member_video: {
+                required: lang['VideoReq'],
+                url: lang['VideoUrlNotValid']
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
 
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
+    });
 
-	});
+    $('#general_info_form').validate({
+        rules: {
+            member_first_name: {
+                required: true
+            },
+            member_last_name: {
+                required: true
+            },
+            member_title: {
+                required: true
+            },
+            member_organization: {
+                required: true
+            },
+        },
+        messages: {
+            member_first_name: {
+                required: lang['FirstNameReq']
+            },
+            member_last_name: {
+                required: lang['LastNameReq']
+            },
+            member_title: {
+                required: lang['TitleReq']
+            },
+            member_organization: {
+                required: lang['OrganizationReq']
+            },
 
-	$('#project_name_form').validate({
-		rules: {
-			title_input: { required: true},
-		},
-		messages: {
-			title_input: { required: '*'},
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
-	});
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
 
-	$('#project_form_main').validate({
-		rules: {
-			//project_overview: { required: true,maxlength: 200},
-			project_overview: { required: true},
-			project_keywords: { required: true},
-			project_country: { required: true},
-			project_location: { required: true},
-			project_sector_main: { required: true },
-			project_sector_sub: { required: true },
-			project_budget_max: { digits: true, min: 0 },
-			project_financial: { required: true }
-		},
-		messages: {
-			//project_overview: { required: lang['DescReq'],maxlength: lang['Desc200']},
-			project_overview: { required: lang['DescReq']},
-			project_keywords: { required: lang['KeywordReq'] },
-			project_country: { required: lang['CountryReq']},
-			project_location: { required: lang['LocationReq'] },
-			project_sector_main: {required: lang['SectorReq']},
-			project_sector_sub: { required: lang['SubSectorReq']},
-//			project_budget_max: { required: lang['BudgetReq']},
-			project_financial: { required: lang['FinancialReq']}
+    });
 
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
-	});
 
-	$("#executive_form").validate({
-		rules: {
-			project_executives_name: { required: true},
-			project_executives_company: { required: true},
-			project_executives_role: { required: true},
-			project_executives_email: { required: true,email: true},
-		},
-		messages: {
-			project_executives_name: { required: lang['NameReq']},
-			project_executives_company: { required: lang['CompanyReq']},
-			project_executives_role: { required: lang['RoleReq'] },
-			project_executives_email: { required: lang['EmailReq'], email: lang['EmailNotValid'] },
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
+    $('#expertise_education_form').validate({
+        rules: {
+            education_university: {
+                required: true
+            },
+            education_degree: {
+                required: true
+            },
+            education_major: {
+                required: true
+            },
+        },
+        messages: {
+            education_university: {
+                required: lang['UniversityReq']
+            },
+            education_degree: {
+                required: lang['DegreeReq']
+            },
+            education_major: {
+                required: lang['MajorReq']
+            },
 
-	});
-	$("#map_points_form").validate({
-		rules: {
-			project_map_points_mapname: { required: true}
-		},
-		messages: {
-			project_map_points_mapname: { required: lang['NameReq']}
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
 
-	});
+    });
 
-	$("#forgot_password_form").validate({
-		rules: {
-			email: { required: true, email: true},
-		},
-		messages: {
-			email: { required: lang['EmailReq'], email: lang['EmailNotValid']}
-		},
-		errorPlacement: function(error, element) {
-			error.appendTo( element.parent().find(".errormsg") );
-		}
+    $('#project_name_form').validate({
+        rules: {
+            title_input: {
+                required: true
+            },
+        },
+        messages: {
+            title_input: {
+                required: '*'
+            },
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
+    });
 
-	});
+    $('#project_form_main').validate({
+        rules: {
+            //project_overview: { required: true,maxlength: 200},
+            project_overview: {
+                required: true
+            },
+            project_keywords: {
+                required: true
+            },
+            project_country: {
+                required: true
+            },
+            project_location: {
+                required: true
+            },
+            project_sector_main: {
+                required: true
+            },
+            project_sector_sub: {
+                required: true
+            },
+            project_budget_max: {
+                digits: true,
+                min: 0
+            },
+            project_financial: {
+                required: true
+            }
+        },
+        messages: {
+            //project_overview: { required: lang['DescReq'],maxlength: lang['Desc200']},
+            project_overview: {
+                required: lang['DescReq']
+            },
+            project_keywords: {
+                required: lang['KeywordReq']
+            },
+            project_country: {
+                required: lang['CountryReq']
+            },
+            project_location: {
+                required: lang['LocationReq']
+            },
+            project_sector_main: {
+                required: lang['SectorReq']
+            },
+            project_sector_sub: {
+                required: lang['SubSectorReq']
+            },
+            //			project_budget_max: { required: lang['BudgetReq']},
+            project_financial: {
+                required: lang['FinancialReq']
+            }
 
-	$(".projects .more").click(function(){
-		$(".hiddenproject").toggle("blind",function(){
-			$(".projects .more").find("a").text($(this).is(':visible') ? lang['ShowLess'] : lang['ShowMore']);
-		});
-	});
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
+    });
 
-	$(".frontfiles_tr").click(function(){
-		var filelink = $(this).find('.frontfiles_link').attr('href');
-		if (filelink)
-		{
-			window.open(filelink);
-		}
-	});
+    $("#executive_form").validate({
+        rules: {
+            project_executives_name: {
+                required: true
+            },
+            project_executives_company: {
+                required: true
+            },
+            project_executives_role: {
+                required: true
+            },
+            project_executives_email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            project_executives_name: {
+                required: lang['NameReq']
+            },
+            project_executives_company: {
+                required: lang['CompanyReq']
+            },
+            project_executives_role: {
+                required: lang['RoleReq']
+            },
+            project_executives_email: {
+                required: lang['EmailReq'],
+                email: lang['EmailNotValid']
+            },
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
 
-	// Sub-Sector "Other" Text Input
-	// included in profile/_general_info_form to reset
+    });
+    $("#map_points_form").validate({
+        rules: {
+            project_map_points_mapname: {
+                required: true
+            }
+        },
+        messages: {
+            project_map_points_mapname: {
+                required: lang['NameReq']
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
+
+    });
+
+    $("#forgot_password_form").validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+        },
+        messages: {
+            email: {
+                required: lang['EmailReq'],
+                email: lang['EmailNotValid']
+            }
+        },
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent().find(".errormsg"));
+        }
+
+    });
+
+    $(".projects .more").click(function() {
+        $(".hiddenproject").toggle("blind", function() {
+            $(".projects .more").find("a").text($(this).is(':visible') ? lang['ShowLess'] : lang['ShowMore']);
+        });
+    });
+
+    $(".frontfiles_tr").click(function() {
+        var filelink = $(this).find('.frontfiles_link').attr('href');
+        if (filelink) {
+            window.open(filelink);
+        }
+    });
+
+    // Sub-Sector "Other" Text Input
+    // included in profile/_general_info_form to reset
 
     function member_email_dialog() {
         $("#model_email_div").dialog("open");
     }
 
-	$("#member_send_message").click(function() {
+    $("#member_send_message").click(function() {
         member_email_dialog();
     });
 
@@ -1072,45 +1254,46 @@ $(function() {
     });
 
     $("#model_email_div").dialog({
-		autoOpen: false,
-		width: 400,
-		modal: true,
-		buttons: {
-		    "Send Mail": function(data) {
+        autoOpen: false,
+        width: 400,
+        modal: true,
+        buttons: {
+            "Send Mail": function(data) {
                 var recipient = $("#hdn_to").val(),
                     sender = $("#hdn_from").val();
 
                 if (recipient == sender) {
-		    		cannot_send_message();
-		    		return false;
-		    	}
+                    cannot_send_message();
+                    return false;
+                }
 
-	            $("#model_email_form").submit();
+                $("#model_email_form").submit();
                 $("#model_esubject").val("");
                 $("#model_emessage").val("");
 
-	            $(this).dialog("close");
-		    },
-		    Cancel: function() {
-		        $(this).dialog("close");
-		    }
-		}
-	});
+                $(this).dialog("close");
+            },
+            Cancel: function() {
+                $(this).dialog("close");
+            }
+        }
+    });
 
-	$("#education_degree").live("change",function() {
-		if($('option:selected', this).val()==='Other') {$(this).parent().parent().next().show().find("input").focus();}
-		else {
-			$(this).parent().parent().next().hide().find("input").val('');
-		}
+    $("#education_degree").live("change", function() {
+        if ($('option:selected', this).val() === 'Other') {
+            $(this).parent().parent().next().show().find("input").focus();
+        } else {
+            $(this).parent().parent().next().hide().find("input").val('');
+        }
 
-	});
+    });
 
     // Featured Forum hover effect
     var $featuredForum = $(".featured-forum");
     if ($featuredForum.length) {
-        $(".forum-title a, .featured-image", $featuredForum).hover(function(){
-           $(this).closest('.featured-forum').addClass('hovered');
-        },function(){
+        $(".forum-title a, .featured-image", $featuredForum).hover(function() {
+            $(this).closest('.featured-forum').addClass('hovered');
+        }, function() {
             $(this).closest('.featured-forum').removeClass('hovered');
         });
     }
@@ -1153,20 +1336,20 @@ $(function() {
         summary_color = 'black',
         rate_color = '#44a6e3',
         dim = 20;
-        // Scoreboard
-        var mainScore = 0;
-        var helpScore = 0;
-        var resScore = 0;
-        var knowScore = 0;
+    // Scoreboard
+    var mainScore = 0;
+    var helpScore = 0;
+    var resScore = 0;
+    var knowScore = 0;
 
     if ($ratings.length > 0) {
-        if($score.html() != "") {
+        if ($score.html() != "") {
             mainScore = Number($score.html());
             helpScore = Number($helpPoints.html());
             resScore = Number($resPoints.html());
             knowScore = Number($knowPoints.html());
         }
-        $(".rating-block form[name=rate_expert_form]").submit(function(e){
+        $(".rating-block form[name=rate_expert_form]").submit(function(e) {
 
             e.preventDefault();
 
@@ -1208,14 +1391,13 @@ $(function() {
                 }
             }).fail(function() {
                 $errors.html("Error occurred while trying to post the ratings.")
-            }).always(function(e) {
-            });
+            }).always(function(e) {});
 
             return false;
         });
 
         // jRate
-        $(".rating-block header").click(function () {
+        $(".rating-block header").click(function() {
             expertToggleCheck($(this).closest('.rating-block'));
         });
 
@@ -1225,12 +1407,12 @@ $(function() {
                 //$(".rating-details", $this).slideUp(200);
                 $(".rating-details", $this).hide();
                 $(".toggle-desc", $this).text(lang["ShowMore"] + "/" + lang["RateExpert"]);
-            }else {
+            } else {
 
                 $(".toggle", $this).addClass('icon-expand-less').removeClass('icon-expand-more');
                 //$(".rating-details", $this).slideDown(200);
-                $(".toggle-desc",$this).text(lang["ShowLess"]);
-                $(".rating-details",$this).show();
+                $(".toggle-desc", $this).text(lang["ShowLess"]);
+                $(".rating-details", $this).show();
             }
         }
 
@@ -1301,7 +1483,7 @@ $(function() {
                 precision: 0,
                 width: dim,
                 height: dim,
-                onSet: function (rating) {
+                onSet: function(rating) {
                     $('input[type="hidden"][name="ratings[1]"]').val(rating);
                 }
             });
@@ -1315,7 +1497,7 @@ $(function() {
                 precision: 0,
                 width: dim,
                 height: dim,
-                onSet: function (rating) {
+                onSet: function(rating) {
                     $('input[type="hidden"][name="ratings[2]"]').val(rating);
                 }
             });
@@ -1329,21 +1511,21 @@ $(function() {
                 precision: 0,
                 width: dim,
                 height: dim,
-                onSet: function (rating) {
+                onSet: function(rating) {
                     $('input[type="hidden"][name="ratings[3]"]').val(rating);
                 }
             });
         }
 
         rateStarz();
-        if($('.voting').length) {
+        if ($('.voting').length) {
             voteStarz();
         }
 
         function activateExpert() {
             var all = false;
             var $button = $('div.voting .btn');
-            $.each($('div.voting input[type="hidden"]'), function () {
+            $.each($('div.voting input[type="hidden"]'), function() {
                 if ($(this).val() === "0") {
                     $button.addClass('inactive');
                     all = false;
@@ -1357,7 +1539,7 @@ $(function() {
             }
         }
 
-        $('div.voting .inactive').on('click', function (e) {
+        $('div.voting .inactive').on('click', function(e) {
             if ($(this).hasClass('inactive')) {
                 e.preventDefault();
             }
@@ -1368,7 +1550,7 @@ $(function() {
         $knowVote.on('click', activateExpert);
     }
 
-    if($('.main-header .nav-main')) {
+    if ($('.main-header .nav-main')) {
         var docWidth = $(window).width(),
             userTimer,
             mobileMenuState = 'closed',
@@ -1381,30 +1563,30 @@ $(function() {
             $langIcon = $('.active-language'),
             $activeLang = $('.m-language .active img').attr('src');
 
-            $langIcon.attr('src', $activeLang);
+        $langIcon.attr('src', $activeLang);
     }
-/*
-    $(window).resize(function() {
-        rateStarz();
-    });
-*/
+    /*
+        $(window).resize(function() {
+            rateStarz();
+        });
+    */
 });
 
-function checkLength( o, n, min, max ) {
-    if ( o.val().length > max || o.val().length < min ) {
-        o.addClass( "ui-state-error" );
-        updateTips( "Length of " + n + " must be between " +
-            min + " and " + max + "." );
+function checkLength(o, n, min, max) {
+    if (o.val().length > max || o.val().length < min) {
+        o.addClass("ui-state-error");
+        updateTips("Length of " + n + " must be between " +
+            min + " and " + max + ".");
         return false;
     } else {
         return true;
     }
 }
 
-function checkRegexp( o, regexp, n ) {
-    if ( !( regexp.test( o.val() ) ) ) {
-        o.addClass( "ui-state-error" );
-        updateTips( n );
+function checkRegexp(o, regexp, n) {
+    if (!(regexp.test(o.val()))) {
+        o.addClass("ui-state-error");
+        updateTips(n);
         return false;
     } else {
         return true;
@@ -1412,69 +1594,73 @@ function checkRegexp( o, regexp, n ) {
 }
 
 
-	function ajax_delete_init()
-	{
-		// delete matrix row
-		$('.matrix_dropdown a.delete').click(function(e){
+function ajax_delete_init() {
+    // delete matrix row
+    $('.matrix_dropdown a.delete').click(function(e) {
 
-			$li_row 	= $(this).parents('li');
-			li_row_id 	= $li_row.attr('id');
-			row_id 		= $li_row.attr('id').replace('row_id_','');
-			link 		= $(this).attr('href');
+        $li_row = $(this).parents('li');
+        li_row_id = $li_row.attr('id');
+        row_id = $li_row.attr('id').replace('row_id_', '');
+        link = $(this).attr('href');
 
-			$message 	= lang['AreYouSure'];
+        $message = lang['AreYouSure'];
 
-			var buttons = {
-					"Yes": function() {
-						delete_maxtrix_action(link, row_id, li_row_id);
-						$( this ).dialog( "close" );
-					},
-					"No": function() {
-						$( this ).dialog( "close" );
-					}
-				}
+        var buttons = {
+            "Yes": function() {
+                delete_maxtrix_action(link, row_id, li_row_id);
+                $(this).dialog("close");
+            },
+            "No": function() {
+                $(this).dialog("close");
+            }
+        }
 
-			create_message($message, { buttons: buttons, title: lang['Delete'] });
+        create_message($message, {
+            buttons: buttons,
+            title: lang['Delete']
+        });
 
-		});
-	}
+    });
+}
 
-	// DELETE MATRIX ROW FUNCTIONS
-	function delete_maxtrix_action(link, row_id, li_row_id) {
+// DELETE MATRIX ROW FUNCTIONS
+function delete_maxtrix_action(link, row_id, li_row_id) {
 
-		var new_link = hosturl+'/' + link.replace('#','')+'/'+row_id;
+    var new_link = hosturl + '/' + link.replace('#', '') + '/' + row_id;
 
-		$.ajax({
-			url: new_link,
-			type: "GET",
-			data: {},
-			dataType: "json",
-			success: function(data) {
-				if (data.remove) {
-					if(data.formname == 'expertise_sector_form') {
-						$('#hdn_expert_sector_number').val(Number($('#hdn_expert_sector_number').val())-1);
-                        updatePCI();
-                    }
-					$('#'+li_row_id).fadeOut();
-				}
-  			}
-		});
-	}
+    $.ajax({
+        url: new_link,
+        type: "GET",
+        data: {},
+        dataType: "json",
+        success: function(data) {
+            if (data.remove) {
+                if (data.formname == 'expertise_sector_form') {
+                    $('#hdn_expert_sector_number').val(Number($('#hdn_expert_sector_number').val()) - 1);
+                    updatePCI();
+                }
+                $('#' + li_row_id).fadeOut();
+            }
+        }
+    });
+}
 
-	// DELETE EDUCATION ENTRY FUNCTIONS
-	function delete_education_action(link, entry_id) {
+// DELETE EDUCATION ENTRY FUNCTIONS
+function delete_education_action(link, entry_id) {
 
-		var ACT = hosturl + link;
+    var ACT = hosturl + link;
 
-		$.get(link, function(loaddata) {
-			if( loaddata.remove ){$('#education_'+entry_id).fadeOut();}
+    $.get(link, function(loaddata) {
+        if (loaddata.remove) {
+            $('#education_' + entry_id).fadeOut();
+        }
 
-		});
-        // Update curent user's Profile Completeness Index
-        updatePCI();
-	}
+    });
+    // Update curent user's Profile Completeness Index
+    updatePCI();
+}
 
-	/*function delete_education_action(link,name) {
+/*function delete_education_action(link,name) {
 
 		var entry_id = link.replace('/profile/form_load/'+name+'/delete/','');
 		var url = 'http://vip.concept.com' + link;
@@ -1499,632 +1685,636 @@ function checkRegexp( o, regexp, n ) {
   			}
 		});*/
 
-	/*}*/
+/*}*/
 
 
-	// EDIT EDUCATION ENTRY FUNCTIONS
-	function edit_education_action(link, entry_id) {
-		//var entry_id = link.replace('/profile/form_load/'+name+'/edit/','');
-		var url = 'http://vip.concept.com' + link;
+// EDIT EDUCATION ENTRY FUNCTIONS
+function edit_education_action(link, entry_id) {
+    //var entry_id = link.replace('/profile/form_load/'+name+'/edit/','');
+    var url = 'http://vip.concept.com' + link;
 
-		$.get(link, function(loaddata) {
-			if($('.education_edit'))
-			{
-				$('.education_edit').remove();
-			}
-			$('#education_'+entry_id).append(loaddata);
-
-
-				ajax_form_init();
-
-		});
-	}
-
-	// Wrapper for ajax form to call on reloads
-	function ajax_form_init() {
-
-		$('form.ajax_form').unbind('submit');
-
-		// bind submit handler to form
-		$('form.ajax_form').submit(function(e) {
-
-			// prevent native submit
-			e.preventDefault();
+    $.get(link, function(loaddata) {
+        if ($('.education_edit')) {
+            $('.education_edit').remove();
+        }
+        $('#education_' + entry_id).append(loaddata);
 
 
-			if($(this).validate().form() == true)
-			{
-				// define spinner
-				var $spinner = $('<div/>')
-					.html( $('<img class="spinner" src="/images/site/loader.gif" alt="spinner" width="34" />') )
-					.css({'display':'inline'});
+        ajax_form_init();
 
-				// prevent multiple submits
-				var $btn = $('input[type="submit"]', this);
-				var text = $btn.val();
+    });
+}
 
-				if($(this).attr('id') != "comment_form") {
-					$btn.val('Please Wait').removeClass('light_green').addClass('light_gray').attr('disabled', true).after( $spinner );
-				}
+// Wrapper for ajax form to call on reloads
+function ajax_form_init() {
 
-				// get form id and div id
-				var name = $(this).attr('id');
-				var target = '#' + name.substr(1, name.length);
+    $('form.ajax_form').unbind('submit');
 
-				$(this).ajaxSubmit({
-					dataType: "json",
-					beforeSubmit: function(){
-						//$(this).validate();
-					 },
-					success: function(page, status) {
-                        var message;
-						//$return_page = $(page);
-						//$message = $return_page.find('body#alert_message');
-						$message = page.message;
+    // bind submit handler to form
+    $('form.ajax_form').submit(function(e) {
 
-						// Success
-						if (page.message || name == 'education_list' || name == 'expertise_education_form' ) {
-							if (page.status == "success") {
-                                // case study
-                                if (page.casestudyid) {
-                                    var element = '#' + name + ' input[name="hdn_casestudyid"]';
-                                    $(element).val(page.casestudyid);
+        // prevent native submit
+        e.preventDefault();
 
-                                    var cancel = '#' + name + ' button[name="case_cancel"]';
-                                    $(cancel).remove();
+
+        if ($(this).validate().form() == true) {
+            // define spinner
+            var $spinner = $('<div/>')
+                .html($('<img class="spinner" src="/images/site/loader.gif" alt="spinner" width="34" />'))
+                .css({
+                    'display': 'inline'
+                });
+
+            // prevent multiple submits
+            var $btn = $('input[type="submit"]', this);
+            var text = $btn.val();
+
+            if ($(this).attr('id') != "comment_form") {
+                $btn.val('Please Wait').removeClass('light_green').addClass('light_gray').attr('disabled', true).after($spinner);
+            }
+
+            // get form id and div id
+            var name = $(this).attr('id');
+            var target = '#' + name.substr(1, name.length);
+
+            $(this).ajaxSubmit({
+                dataType: "json",
+                beforeSubmit: function() {
+                    //$(this).validate();
+                },
+                success: function(page, status) {
+                    var message;
+                    //$return_page = $(page);
+                    //$message = $return_page.find('body#alert_message');
+                    $message = page.message;
+
+                    // Success
+                    if (page.message || name == 'education_list' || name == 'expertise_education_form') {
+                        if (page.status == "success") {
+                            // case study
+                            if (page.casestudyid) {
+                                var element = '#' + name + ' input[name="hdn_casestudyid"]';
+                                $(element).val(page.casestudyid);
+
+                                var cancel = '#' + name + ' button[name="case_cancel"]';
+                                $(cancel).remove();
+                            }
+
+                            $(".errormsg").html("");
+
+                            message = page.message || 'Profile Updated';
+
+                            //after submitting invite form for available seat
+                            if (name == 'invite_seats_form') {
+                                //$('#invite_seats_form').closest('.invite_form').hide().prev('.invite').show();
+                                create_message(message, {
+                                    isredirect: true
+                                });
+                            } else if (page.imgpath && page.imgpath != "") {
+                                //create_message( message,{isredirect:true} );
+
+                                $(".uploaded_img").attr("src", page.imgpath);
+                                $("#photo_filename").val("");
+                                if ($("#without_photo")) {
+                                    $("#without_photo").hide();
                                 }
-
-								$(".errormsg").html("");
-
-								message = page.message || 'Profile Updated';
-
-								//after submitting invite form for available seat
-								if(name=='invite_seats_form') {
-									//$('#invite_seats_form').closest('.invite_form').hide().prev('.invite').show();
-									create_message(message,{isredirect:true});
-								} else if (page.imgpath && page.imgpath != "") {
-									//create_message( message,{isredirect:true} );
-
-									$(".uploaded_img").attr("src",page.imgpath);
-									$("#photo_filename").val("");
-									if ($("#without_photo")) {$("#without_photo").hide();}
-									if ($("#with_photo")) {$("#with_photo").show();}
-									if (page.headerimgpath && page.headerimgpath != "") {
-										$("#header_userphoto").attr("src",page.headerimgpath);
-									}
-								} else if (page.isreload == "yes") {
-									create_message( message );
-								} else if (page.isload == "yes" && page.loadurl != "") {
-									if(name=='expertise_sector_form') {
-										$('#hdn_expert_sector_number').val(Number($('#hdn_expert_sector_number').val()) + 1);
-									}
-									$.get(page.loadurl, function(loaddata) {
-										$('#load_'+page.listdiv).html(loaddata);
-
-										if($('#'+page.listdiv).parent().attr('class') == 'edit add_new') {
-											$('#'+page.listdiv).parent().hide();
-										}
-
-										ajax_form_init();
-										edu_listing_init();
-										ajax_delete_init();
-                                        // Is nolonger used
-                                        //if ($('.comment')) {
-											//$('.comment').CommentEditor();
-                                        //}
-									});
-								} else if (page.isredirect == 'yes') {
-									create_message(message, {isredirect:true});
-								} else {
-									create_message(message);
-								}
-
-								//ajax_form_init();
-								//edu_listing_init();
-								//$('.education_edit').remove();
-
-                                // Analytics
-                                if (page.analytics) {
-                                    segmentAnalytics(page.analytics);
+                                if ($("#with_photo")) {
+                                    $("#with_photo").show();
                                 }
+                                if (page.headerimgpath && page.headerimgpath != "") {
+                                    $("#header_userphoto").attr("src", page.headerimgpath);
+                                }
+                            } else if (page.isreload == "yes") {
+                                create_message(message);
+                            } else if (page.isload == "yes" && page.loadurl != "") {
+                                if (name == 'expertise_sector_form') {
+                                    $('#hdn_expert_sector_number').val(Number($('#hdn_expert_sector_number').val()) + 1);
+                                }
+                                $.get(page.loadurl, function(loaddata) {
+                                    $('#load_' + page.listdiv).html(loaddata);
 
-							} else {
-								//after submitting invite form for available seat
-								if (name == 'invite_seats_form') {
-									if (page.status == 'custom_error') {
-										create_message(page.message, {isredirect:true});
-									} else {
-										//create_message( page.message );
-										window.location.href = hosturl + '/profile/edit_seats';
-									}
-								} else {
-									$.each( page.message , function(formelement, errormsg) {
-									  // $("form#"+formelement).parent().find(".errormsg").html(errormsg);
-									   $("#" + name + " #" + formelement).next(".errormsg").html(errormsg);
-									});
-								}
-							}
-                            // It looks like it's no longer needed
-							if (name != "comment_form") {
-								$btn.val(text)
-								.removeClass('light_gray')
-								.addClass('light_green')
-								.removeAttr('disabled');
-							}
+                                    if ($('#' + page.listdiv).parent().attr('class') == 'edit add_new') {
+                                        $('#' + page.listdiv).parent().hide();
+                                    }
 
-							$('img.spinner').remove();
+                                    ajax_form_init();
+                                    edu_listing_init();
+                                    ajax_delete_init();
+                                    // Is nolonger used
+                                    //if ($('.comment')) {
+                                    //$('.comment').CommentEditor();
+                                    //}
+                                });
+                            } else if (page.isredirect == 'yes') {
+                                create_message(message, {
+                                    isredirect: true
+                                });
+                            } else {
+                                create_message(message);
+                            }
 
-							/*$.get('/profile/' + name, function(data) {
-								$(target).replaceWith(data);
+                            //ajax_form_init();
+                            //edu_listing_init();
+                            //$('.education_edit').remove();
 
-								create_message( message );
+                            // Analytics
+                            if (page.analytics) {
+                                segmentAnalytics(page.analytics);
+                            }
 
-								ajax_form_init();
-								edu_listing_init();
-
-							});*/
-
-
-						} else if(page.issubmit && page.issubmit != '') {
-							$("#title_input_hidden").val($("#title_input").val());
-							//$('#'+page.formname+'').submit();
-							$('.topupdate').submit();
-						} else {
-
-							$return_page = $(page);
-
-							$error = $return_page.find('#col5 .inner ul');
-
-							$('body').append( create_message( $error.html() , { close: true } ) );
-
-							$btn.val( text )
-								.removeClass('light_gray')
-								.addClass('light_green')
-								.removeAttr('disabled');
-
-							$('img.spinner').remove();
-						}
-
-						if (page.isreset && page.isreset == 'yes') {
-							resetForm($('#'+name));
-						}
-
-                        // Trap all updates for member (expert) profile
-                        var currentPath = window.location.pathname;
-                        if (currentPath.substring(0, 25) == "/profile/account_settings") {
-                            updatePCI();
+                        } else {
+                            //after submitting invite form for available seat
+                            if (name == 'invite_seats_form') {
+                                if (page.status == 'custom_error') {
+                                    create_message(page.message, {
+                                        isredirect: true
+                                    });
+                                } else {
+                                    //create_message( page.message );
+                                    window.location.href = hosturl + '/profile/edit_seats';
+                                }
+                            } else {
+                                $.each(page.message, function(formelement, errormsg) {
+                                    // $("form#"+formelement).parent().find(".errormsg").html(errormsg);
+                                    $("#" + name + " #" + formelement).next(".errormsg").html(errormsg);
+                                });
+                            }
                         }
-					}
-				})
-			}
-		});
-	}
+                        // It looks like it's no longer needed
+                        if (name != "comment_form") {
+                            $btn.val(text)
+                                .removeClass('light_gray')
+                                .addClass('light_green')
+                                .removeAttr('disabled');
+                        }
 
-    function segmentAnalytics(data)
-    {
-        if (data.user_properties) {
-            //var userId = parseInt(data.id, 10); // Make sure id that came is of type int
-            window.analytics.identify(GVIP.App.Analytics.user_id, data.user_properties, GVIP.App.Analytics.context);
+                        $('img.spinner').remove();
+
+                        /*$.get('/profile/' + name, function(data) {
+                        	$(target).replaceWith(data);
+
+                        	create_message( message );
+
+                        	ajax_form_init();
+                        	edu_listing_init();
+
+                        });*/
+
+
+                    } else if (page.issubmit && page.issubmit != '') {
+                        $("#title_input_hidden").val($("#title_input").val());
+                        //$('#'+page.formname+'').submit();
+                        $('.topupdate').submit();
+                    } else {
+
+                        $return_page = $(page);
+
+                        $error = $return_page.find('#col5 .inner ul');
+
+                        $('body').append(create_message($error.html(), {
+                            close: true
+                        }));
+
+                        $btn.val(text)
+                            .removeClass('light_gray')
+                            .addClass('light_green')
+                            .removeAttr('disabled');
+
+                        $('img.spinner').remove();
+                    }
+
+                    if (page.isreset && page.isreset == 'yes') {
+                        resetForm($('#' + name));
+                    }
+
+                    // Trap all updates for member (expert) profile
+                    var currentPath = window.location.pathname;
+                    if (currentPath.substring(0, 25) == "/profile/account_settings") {
+                        updatePCI();
+                    }
+                }
+            })
+        }
+    });
+}
+
+function segmentAnalytics(data) {
+    if (data.user_properties) {
+        //var userId = parseInt(data.id, 10); // Make sure id that came is of type int
+        window.analytics.identify(GVIP.App.Analytics.user_id, data.user_properties, GVIP.App.Analytics.context);
+    }
+
+    if (data.event) {
+        window.analytics.track(data.event.name, data.event.properties, GVIP.App.Analytics.context);
+    }
+}
+
+function dismissPCI() {
+    var url = hosturl + "/profile/dismiss_pci",
+        postData = {
+            "dismiss_pci": "dismiss_pci"
+        },
+        posting = $.post(url, postData, "json");
+    //posting.done(function(data) {
+    //}).fail(function() {
+    //});
+}
+
+// Load and update current user's Profile Completeness Index
+function updatePCI() {
+    var $pci = $("span.profile_edit_pci"),
+        url = hosturl + "/profile/pci";
+
+    if ($pci.length == 0) return;
+
+    var getting = $.get(url, null, "json");
+
+    getting.done(function(data) {
+        if (data && data.pci && data.pci != "") {
+            $pci.text(data.pci);
+        }
+    }).fail(function() {
+        alert("Error while trying to get PCI.");
+    });
+
+    // Dismiss PCI meter whenever a user makes any change in the profile
+    dismissPCI();
+}
+
+// Jquery Dialog box
+function create_message(message, options) {
+
+    var options = options || {};
+    var close = options.close || false;
+    var isredirect = options.isredirect || false;
+    var url = $(location).attr('href');
+    //var pathname	= url.replace("#","");
+    var pathname = url.split("#");
+    var title = options.title || 'Message';
+    var buttons = options.buttons || {
+            Ok: function() {
+                if (isredirect) {
+                    window.location.href = pathname[0];
+                } else {
+                    $(this).dialog("close");
+                }
+            }
+        }
+        /*
+        $close = $('<a/>')
+        	.html('close')
+        	.attr('href','javascript: $(\'#full_page\').remove()')
+        	.css({'position':'absolute','top':'5px','right':'5px'});
+
+        $message_block 	= $('<div/>')
+        	.attr('id','full_page_message')
+        	.html( $('<p/>').html( message ) )
+        	.css({'width':'500px','height':'300px','margin':'200px auto 0 auto', 'background':'gray','position':'relative'});
+
+        if( close ) $message_block.append($close);
+
+        $full_page 	= $('<div/>')
+        	.attr('id','full_page')
+        	.css({'z-index':999,'position':'fixed','top':0,'left':0,'width':'100%','height':'100%','background':'rgba(0,0,0,0.3)'})
+        	.html( $message_block );
+
+        //return $full_page;
+        */
+
+    $dialog = $('#dialog-message')
+        .attr('title', title)
+        .html(message)
+
+    $("#dialog-message").dialog({
+        modal: true,
+        buttons: buttons
+    });
+
+}
+
+//change style on click for deleting education
+function edu_listing_init() {
+
+    //log( 'edu_listing_init' );
+
+    $('.edu_listing .delete, .edu_listing .edit').unbind('click');
+
+    $('.edu_listing .delete, .edu_listing .edit').click(function(event) {
+
+        event.preventDefault();
+
+        var target = $(this).parents('.edu_listing');
+        var btn = $(this);
+
+        if (btn.hasClass('delete')) {
+            //clicked delete or yes
+
+            if (btn.html() == 'Yes') {
+                // run ajax delete
+
+                delete_education_action(btn.attr('href'), target.attr('id').replace('education_', ''));
+
+                //window.location = '';
+                return false;
+            }
+
+            btn.html('Yes');
+            target.find('.edit').html('No');
+            target.addClass('active');
+
+        } else {
+            //clicked edit or no
+
+            if (btn.html() == "Edit") {
+                if (!$('.education_edit', target).size()) {
+                    edit_education_action(btn.attr('href'), target.attr('id').replace('education_', ''));
+                    $('.education_edit_cancel').click(function() {
+                        log('yay');
+                    });
+                }
+
+                //window.location = btn.attr('href');
+                return false;
+            } else if (btn.html() == "No") {
+                if ($('.education_edit')) {
+                    $('.education_edit').hide();
+                }
+            }
+
+            btn.html('Edit');
+            target.find('.delete').html('Delete');
+            target.removeClass('active');
+
         }
 
-        if (data.event) {
-            window.analytics.track(data.event.name, data.event.properties, GVIP.App.Analytics.context);
+    });
+
+}
+
+
+function changestage(el) {
+    if (el.value == "Open") {
+        stagearr = el.name.split("_");
+        $("#select_stage").val(stagearr[1]);
+    } else {
+        $("#select_stage").val("");
+    }
+}
+
+
+function rowtoggle(id2) {
+
+    var $edit_div = $('#' + id2).parent().next('div.edit');
+
+    $edit_div.slideToggle();
+
+    if ($('#' + id2).hasClass('project_row_add')) {
+        //	log( 'project_row_add' );
+        $edit_div.find('.project_new_row').removeAttr('disabled');
+    }
+}
+
+function edu_rowtoggle(id2) {
+
+    var $edit_div = $('#' + id2).parent().next('div.education_edit');
+
+    $edit_div.slideToggle();
+
+    if ($('#' + id2).hasClass('project_row_add')) {
+        //	log( 'project_row_add' );
+        $edit_div.find('.project_new_row').removeAttr('disabled');
+    }
+}
+
+function tabload(url) {
+    $('#tabContainer').load(url);
+}
+
+function sectorbind(secid) {
+    selectedid = $('#project_sector_main' + secid).find('option:selected').attr('class').replace('sector_main_', '');
+
+    var link = hosturl + '/profile/form_load/get_subsector_ddl/' + selectedid;
+
+    $('#dynamicSubsector_' + secid).load(link);
+}
+
+
+function resetForm($form) {
+    $form.find('input:text, input:password, input:file, select, textarea').val('');
+    $form.find('input:radio, input:checkbox')
+        .removeAttr('checked').removeAttr('selected');
+}
+
+function show_confirmation(confirmid) {
+    $('#' + confirmid).parent().parent().addClass('active');
+
+    $('#' + confirmid).parent().find('a.edit').hide();
+    $('#' + confirmid).parent().find('a.delete').hide();
+
+    $('.' + confirmid).show();
+}
+
+function reset_confirmation(confirmid) {
+    $('#' + confirmid).parent().parent().parent().removeClass('active');
+    $('#' + confirmid).parent().parent().find('a.edit').show();
+    $('#' + confirmid).parent().parent().find('a.delete').show();
+
+    $('#' + confirmid).parent().hide();
+}
+
+// resend_invite_seat
+function resend_invite_seat(link, entry_id) {
+    var ACT = hosturl + link + entry_id;
+
+    $.getJSON(ACT, function(loaddata) {
+        create_message(loaddata.message, {
+            isredirect: true
+        });
+    });
+
+}
+
+// resend_invite_seat
+function remove_seat(link, entry_id) {
+    var ACT = hosturl + link + entry_id;
+
+    $.getJSON(ACT, function(loaddata) {
+        create_message(loaddata.message, {
+            isredirect: true
+        });
+        //window.location.href= hosturl + '/profile/edit_seats';
+    });
+}
+
+// project_executive_other
+function project_executive_other(ddlrole) {
+    if (ddlrole.value == 'Other') {
+        $(ddlrole).parent().next('.role_other').show();
+    } else {
+        $(ddlrole).parent().next('.role_other').hide();
+    }
+}
+
+
+function edit_case_studies(clickid) {
+    //alert(clickid);
+    $(clickid).closest('.edit_portlet').hide();
+    $(clickid).parent().parent().next('.add_case_study').show();
+
+}
+
+function delete_case_studies(link, clickid) {
+    if (link.length > 0) {
+        var ACT = hosturl + link;
+        $.get(link, function(loaddata) {
+            if (loaddata.remove) {
+                create_message(loaddata.message, {
+                    isredirect: true
+                });
+            }
+        });
+    }
+}
+
+function accept_projExpadv_req(link, ownerid, projid) {
+    if (link.length > 0) {
+        var ACT = hosturl + link + ownerid + '/' + projid;
+        $.get(ACT, function(loaddata) {
+            if (loaddata.status) {
+                var url = $(location).attr('href');
+                //var pathname	= url.replace("#","");
+
+                $("#accept_prj_" + ownerid).css("background-position", "0px -48px");
+                $("#cancel_prj_" + ownerid).css("background-position", "0px 0px");
+                //window.location.href = url;
+            }
+        });
+    }
+}
+
+function reject_projExpadv_req(link, ownerid, projid) {
+    if (link.length > 0) {
+        var ACT = hosturl + link + ownerid + '/' + projid;
+        $.get(ACT, function(loaddata) {
+            if (loaddata.status) {
+                var url = $(location).attr('href');
+                //var pathname	= url.replace("#","");
+                $("#accept_prj_" + ownerid).css("background-position", "0px 0px");
+                $("#cancel_prj_" + ownerid).css("background-position", "0px -48px");
+                //window.location.href = url;
+            }
+        });
+    }
+}
+
+
+
+
+function cancle_case_studies(clickid) {
+    var formid = clickid.form.id;
+    $('#' + formid).parent().prev('.edit_portlet').show();
+    $('#' + formid).parent().hide();
+    //$(clickid).prev('.edit_portlet').show();
+    //$(clickid).parent().parent().next('.add_case_study').show();
+}
+
+function cannot_send_message() {
+    var modelmsg = lang['CantSend'];
+    create_message(modelmsg, {
+        isredirect: true
+    });
+}
+
+function scrollIt(where) {
+    $('html,body').animate({
+            scrollTop: where.offset().top
+        },
+        500
+    );
+}
+
+function changeLanguage(language, callback) {
+
+    var posting = $.post('/language', {
+        language: language
+    }, "json");
+
+    posting.done(function(data) {
+        if (typeof callback == 'function') {
+            callback();
         }
+        location.reload();
+    }).fail(function() {
+        //
+    }).always(function(e) {
+        //
+    });
+}
+
+// --------------------------
+//		CONCIERGE FORM
+
+var $concierge = $('#concierge'),
+    $c_action = $('#c_action'),
+    $c_form = $('#c_form'),
+    $c_confirmation = $('#c_confirmation'),
+    $close_btn = $('.close, .close_btn', $concierge),
+    $textbox = $('textarea', $c_form),
+    post_link = '/api/concierge_question';
+
+$close_btn.click(function() {
+    $(this).closest('.view').fadeOut();
+    return false;
+});
+
+$('.btn, .form-link', $c_action).click(function() {
+    $c_action.fadeOut();
+    $c_form.fadeIn();
+    return false;
+});
+
+$textbox.keyup(function() {
+    var $btn = $('.btn', $c_form),
+        text = $textbox.val();
+    if (text.length > 0) {
+        $btn.removeClass('light_gray').addClass('light_orange');
+    } else {
+        $btn.removeClass('light_orange').addClass('light_gray');
     }
+});
 
-    function dismissPCI()
-    {
-        var url = hosturl + "/profile/dismiss_pci",
-            postData = { "dismiss_pci": "dismiss_pci" },
-            posting = $.post(url, postData, "json");
-        //posting.done(function(data) {
-        //}).fail(function() {
-        //});
-    }
-
-    // Load and update current user's Profile Completeness Index
-    function updatePCI()
-    {
-        var $pci = $("span.profile_edit_pci"),
-            url = hosturl + "/profile/pci";
-
-        if ($pci.length == 0) return;
-
-        var getting = $.get(url, null, "json");
-
-        getting.done(function(data) {
-            if (data && data.pci && data.pci != "") {
-                $pci.text(data.pci);
-            }
-        }).fail(function() {
-            alert("Error while trying to get PCI.");
+$('.btn', $c_form).click(function() {
+    var text = $textbox.val();
+    if (text == '') {
+        //$textbox.attr('placeholder','Please add your question.');
+        $textbox.addClass('error');
+    } else {
+        var req = $.ajax({
+            url: post_link,
+            type: "GET",
+            data: {
+                'message': text
+            },
+            dataType: "json"
         });
 
-        // Dismiss PCI meter whenever a user makes any change in the profile
-        dismissPCI();
-    }
-
-	// Jquery Dialog box
-	function create_message(message, options){
-
-		var options 	= options || {};
-		var close 		= options.close || false;
-		var isredirect 	= options.isredirect || false;
-		var url		 	= $(location).attr('href');
-		//var pathname	= url.replace("#","");
-		var pathname	= url.split("#");
-		var title = options.title || 'Message';
-		var buttons = options.buttons || { Ok: function() { if(isredirect){window.location.href = pathname[0];}else{ $( this ).dialog( "close" );} } }
-		/*
-		$close = $('<a/>')
-			.html('close')
-			.attr('href','javascript: $(\'#full_page\').remove()')
-			.css({'position':'absolute','top':'5px','right':'5px'});
-
-		$message_block 	= $('<div/>')
-			.attr('id','full_page_message')
-			.html( $('<p/>').html( message ) )
-			.css({'width':'500px','height':'300px','margin':'200px auto 0 auto', 'background':'gray','position':'relative'});
-
-		if( close ) $message_block.append($close);
-
-		$full_page 	= $('<div/>')
-			.attr('id','full_page')
-			.css({'z-index':999,'position':'fixed','top':0,'left':0,'width':'100%','height':'100%','background':'rgba(0,0,0,0.3)'})
-			.html( $message_block );
-
-		//return $full_page;
-		*/
-
-		$dialog = $('#dialog-message')
-					.attr('title',title)
-					.html( message )
-
-		$( "#dialog-message" ).dialog({
-			modal: true,
-			buttons: buttons
-		});
-
-	}
-
-	//change style on click for deleting education
-	function edu_listing_init(){
-
-		//log( 'edu_listing_init' );
-
-		$('.edu_listing .delete, .edu_listing .edit').unbind('click');
-
-		$('.edu_listing .delete, .edu_listing .edit').click(function(event) {
-
-			event.preventDefault();
-
-			var target = $(this).parents('.edu_listing');
-			var btn = $(this);
-
-			if (btn.hasClass('delete')) {
-				//clicked delete or yes
-
-				if (btn.html() == 'Yes') {
-					// run ajax delete
-
-					delete_education_action( btn.attr('href'), target.attr('id').replace('education_','') );
-
-					//window.location = '';
-					return false;
-				}
-
-				btn.html('Yes');
-				target.find('.edit').html('No');
-				target.addClass('active');
-
-			} else {
-				//clicked edit or no
-
-				if (btn.html() == "Edit") {
-					if( ! $('.education_edit', target).size() ){
-						edit_education_action( btn.attr('href'), target.attr('id').replace('education_',''));
-						$('.education_edit_cancel').click(function(){log('yay');});
-					}
-
-					//window.location = btn.attr('href');
-					return false;
-				}
-				else if(btn.html() == "No") {
-					if($('.education_edit'))
-					{
-						$('.education_edit').hide();
-					}
-				}
-
-				btn.html('Edit');
-				target.find('.delete').html('Delete');
-				target.removeClass('active');
-
-			}
-
-		});
-
-	}
-
-
-	function changestage(el)
-	{
-		if(el.value == "Open")
-		{
-			stagearr = el.name.split("_");
-			$("#select_stage").val(stagearr[1]);
-		}
-		else
-		{
-			$("#select_stage").val("");
-		}
-	}
-
-
-	function rowtoggle(id2)
-	{
-
-			var $edit_div = $('#'+id2).parent().next('div.edit');
-
-			$edit_div.slideToggle();
-
-			if( $('#'+id2).hasClass('project_row_add')){
-			//	log( 'project_row_add' );
-				$edit_div.find('.project_new_row').removeAttr('disabled');
-			}
-	}
-
-	function edu_rowtoggle(id2)
-	{
-
-			var $edit_div = $('#'+id2).parent().next('div.education_edit');
-
-			$edit_div.slideToggle();
-
-			if( $('#'+id2).hasClass('project_row_add')){
-			//	log( 'project_row_add' );
-				$edit_div.find('.project_new_row').removeAttr('disabled');
-			}
-	}
-
-	function tabload(url)
-	{
-	 	$('#tabContainer').load(url);
-	}
-
-	function sectorbind(secid)
-	{
-			 selectedid = $('#project_sector_main'+secid).find('option:selected').attr('class').replace('sector_main_','');
-
-			var link = hosturl+'/profile/form_load/get_subsector_ddl/'+selectedid;
-
-			$('#dynamicSubsector_'+secid).load(link);
-	}
-
-
-	function resetForm($form) {
-	    $form.find('input:text, input:password, input:file, select, textarea').val('');
-	    $form.find('input:radio, input:checkbox')
-	         .removeAttr('checked').removeAttr('selected');
-	}
-
-	function show_confirmation(confirmid)
-	{
-		$('#'+confirmid).parent().parent().addClass('active');
-
-		$('#'+confirmid).parent().find('a.edit').hide();
-		$('#'+confirmid).parent().find('a.delete').hide();
-
-		$('.'+confirmid).show();
-	}
-
-	function reset_confirmation(confirmid)
-	{
-		$('#'+confirmid).parent().parent().parent().removeClass('active');
-		$('#'+confirmid).parent().parent().find('a.edit').show();
-		$('#'+confirmid).parent().parent().find('a.delete').show();
-
-		$('#'+confirmid).parent().hide();
-	}
-
-	// resend_invite_seat
-	function resend_invite_seat(link,entry_id) {
-	var ACT = hosturl + link +entry_id;
-
-	$.getJSON(ACT, function(loaddata) {
-		create_message( loaddata.message,{isredirect:true});
-	});
-
-	}
-
-	// resend_invite_seat
-	function remove_seat(link,entry_id) {
-	var ACT = hosturl + link +entry_id;
-
-	$.getJSON(ACT, function(loaddata) {
-		create_message( loaddata.message ,{isredirect:true});
-		//window.location.href= hosturl + '/profile/edit_seats';
-	});
-	}
-
-	// project_executive_other
-	function project_executive_other(ddlrole){
-		if(ddlrole.value == 'Other')
-		{
-			$(ddlrole).parent().next('.role_other').show();
-		}
-		else
-		{
-			$(ddlrole).parent().next('.role_other').hide();
-		}
-	}
-
-
-	function edit_case_studies(clickid)
-	{
-		//alert(clickid);
-		$(clickid).closest('.edit_portlet').hide();
-		$(clickid).parent().parent().next('.add_case_study').show();
-
-	}
-
-	function delete_case_studies(link,clickid)
-	{
-		if(link.length > 0)
-		{
-			var ACT = hosturl + link;
-			$.get(link, function(loaddata) {
-				if(loaddata.remove){create_message(loaddata.message,{isredirect:true});}
-			});
-		}
-	}
-
-	function accept_projExpadv_req(link,ownerid,projid)
-	{
-		if(link.length > 0)
-		{
-			var ACT = hosturl + link + ownerid +'/'+projid;
-			$.get(ACT, function(loaddata) {
-				if(loaddata.status){
-					var url		 	= $(location).attr('href');
-					//var pathname	= url.replace("#","");
-
-				 	$("#accept_prj_"+ownerid).css("background-position","0px -48px");
-				 	$("#cancel_prj_"+ownerid).css("background-position","0px 0px");
-				 	//window.location.href = url;
-				 }
-			});
-		}
-	}
-
-	function reject_projExpadv_req(link,ownerid,projid)
-	{
-		if(link.length > 0)
-		{
-			var ACT = hosturl + link + ownerid +'/'+projid;
-			$.get(ACT, function(loaddata) {
-				if(loaddata.status){
-					var url		 	= $(location).attr('href');
-					//var pathname	= url.replace("#","");
-				 	$("#accept_prj_"+ownerid).css("background-position","0px 0px");
-				 	$("#cancel_prj_"+ownerid).css("background-position","0px -48px");
-				 	//window.location.href = url;
-				}
-			});
-		}
-	}
-
-
-
-
-	function cancle_case_studies(clickid)
-	{
-		var formid = clickid.form.id;
-		$('#'+formid).parent().prev('.edit_portlet').show();
-		$('#'+formid).parent().hide();
-		//$(clickid).prev('.edit_portlet').show();
-		//$(clickid).parent().parent().next('.add_case_study').show();
-	}
-
-	function cannot_send_message()
-	{
-		var modelmsg = lang['CantSend'];
-		create_message( modelmsg,{isredirect:true});
-	}
-
-	function scrollIt(where) {
-		$('html,body').animate(
-			{scrollTop: where.offset().top},
-			500
-		  );
-	}
-
-	function changeLanguage(language, callback) {
-
-        var posting = $.post('/language', { language: language }, "json");
-
-        posting.done(function(data) {
-            if (typeof callback == 'function') {
-                callback();
+        req.done(function(data) {
+
+            if (data.status == 'success') {
+                $c_form.fadeOut();
+                $c_confirmation.fadeIn();
             }
-            location.reload();
-        }).fail(function() {
-            //
-        }).always(function(e) {
-            //
+            if (data.status == 'error') {
+                alert(data.message);
+            }
         });
-	}
 
-	// --------------------------
-	//		CONCIERGE FORM
+        req.fail(function(x, y, z) {
+            alert('error');
+        });
 
-	var $concierge		= $('#concierge'),
-		$c_action		= $('#c_action'),
-		$c_form			= $('#c_form'),
-		$c_confirmation	= $('#c_confirmation'),
-		$close_btn		= $('.close, .close_btn', $concierge),
-		$textbox 		= $('textarea',$c_form),
-		post_link 		= '/api/concierge_question';
+        req.always(function(x, y, z) {});
 
-		$close_btn.click(function(){
-			$(this).closest('.view').fadeOut();
-			return false;
-		});
-
-		$('.btn, .form-link',$c_action).click(function(){
-			$c_action.fadeOut();
-			$c_form.fadeIn();
-			return false;
-		});
-
-		$textbox.keyup(function(){
-			var $btn = $('.btn', $c_form),
-				text = $textbox.val();
-			if( text.length > 0 ) {
-				$btn.removeClass('light_gray').addClass('light_orange');
-			} else {
-				$btn.removeClass('light_orange').addClass('light_gray');
-			}
-		});
-
-		$('.btn',$c_form).click(function(){
-			var	text = $textbox.val();
-			if( text == '' ){
-				//$textbox.attr('placeholder','Please add your question.');
-				$textbox.addClass('error');
-			} else {
-				var req = $.ajax({
-					url: post_link,
-					type: "GET",
-					data: { 'message': text },
-					dataType: "json"
-				});
-
-				req.done(function(data) {
-
-					if( data.status == 'success'){
-						$c_form.fadeOut();
-						$c_confirmation.fadeIn();
-					}
-					if( data.status == 'error'){
-						alert(data.message);
-					}
-				});
-
-				req.fail(function(x,y,z){
-					alert('error');
-				});
-
-				req.always(function(x,y,z){ });
-
-			}
-			return false;
-		});
-
-
-
-
-
-
-
-
+    }
+    return false;
+});
