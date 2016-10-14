@@ -1005,6 +1005,13 @@ var AdvancedMapDraw = L.Class.extend({
 
         // jQuery events
         $('.map_box').on('click', '.toggleEdit', $.proxy(this._togglProjectEdit, this));
+        $('#profile_tabs').on('tabsshow', function() {
+        	thisMap.invalidateSize();
+        	if (am.fm.enabled === false) {
+        		am.fm._disable(false);
+        	}
+        	am.fm.marker.getPopup().update();
+        });
     },
 
     _eventsOff: function() {
@@ -1015,7 +1022,8 @@ var AdvancedMapDraw = L.Class.extend({
 
         // jQuery events
         $('.map_box').off('click', '.toggleEdit', $.proxy(this._togglProjectEdit, this));
-    }
+    },
+
 });
 
 var FixedMarker = L.Class.extend({
@@ -1246,7 +1254,7 @@ var FixedMarker = L.Class.extend({
 });
 
 var pathname = window.location.pathname;
-var thisMap;
+var thisMap, am;
 
 $(function(window) {
     if (typeof mapCoords !== "undefined" && mapCoords instanceof Array) {
@@ -1301,7 +1309,7 @@ $(function(window) {
         } else {
 
             if (pathname.indexOf('/edit') > 0) {
-                var am = new AdvancedMapDraw(thisMap, {
+                am = new AdvancedMapDraw(thisMap, {
                     slug: slug,
                     mapData: map_geom
                 });
