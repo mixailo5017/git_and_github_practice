@@ -615,7 +615,11 @@ $(function() {
 	$('#header_bread_crumb li a:last').css('background', 'none');
 
 	//activate tabs
-	$('#profile_tabs').tabs({ fx: { opacity: 'toggle', duration: 100}, select: add_tab_to_submit, create: show_tabs });
+	$('#profile_tabs, #project_tabs').tabs({ 
+        fx: { opacity: 'toggle', duration: 100}, 
+        select: add_tab_to_submit, 
+        create: show_tabs,
+        show: show_different_tab });
 
 	$('.edit_project').click(function() {
 
@@ -625,12 +629,20 @@ $(function() {
 
 
 
-	// add_tab_to_submit - append tab hash to return value
+	// add_tab_to_submit - append tab hash to return value. This code is run each time someone switches tab
 	function add_tab_to_submit(event, ui) {
 
 		$ret.val( ret_val + ui.tab.hash );
 
 	}
+
+    function show_different_tab(event, ui) {
+        
+        // If the user is switching to a tab with a map, redraw it (since it doesn't work if initially drawn when hidden)
+        if ( typeof thisMap != 'undefined' && thisMap != undefined) {
+            thisMap.invalidateSize();
+        }
+    }
 
 	 // show tabs after init
 	function show_tabs(event, ui){
