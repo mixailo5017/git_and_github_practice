@@ -205,71 +205,71 @@
 					echo ul($tablist);
 				?>
 		
-				<div id="tabs-1" class="col5_tab">
-						<div class="clearfix ">
-							<?php echo form_label(lang("Sponsor").':<a title="'.lang('SponsorExplanation').'" class="tooltip"></a>',"project_sponsor",$opt["project_form"]["lbl_project_sponsor"]); ?>
-							<div class="fld">
-								<?php echo form_input($opt["project_form"]["project_sponsor"]); ?>
-								<div class="errormsg" id="err_project_sponsor"><?php echo form_error("project_sponsor"); ?></div>
-							</div>
-							<br>
-							
-							<?php echo form_label(lang("Developer").':<a title="'.lang('DeveloperExplanation').'" class="tooltip"></a>',"project_developer",$opt["project_form"]["lbl_project_developer"]); ?>
-							<div class="fld">
-								<?php echo form_input($opt["project_form"]["project_developer"]); ?>
-								<div class="errormsg" id="err_project_developer"><?php echo form_error("project_developer"); ?></div>
-							</div>
-							<br>
-	
-                        	<?php echo form_label(lang('Website') . ':', 'website', array('class' => 'left_label')) ?>
-                        	<div class="fld">
-                        	    <?php echo form_input('website', set_value('website', $project['website'])) ?>
-                        	    <div class="errormsg" id="err_website"><?php echo form_error('website') ?></div>
-                        	</div>
-                        	<br>
-
-							<!-- <?php echo lang("ProjectPhoto").": "; ?> -->
-							<?php echo form_label(lang('ProjectPhoto') . ':', 'projectphoto', array('class' => 'left_label')) ?>
-							
-							<?php echo form_open_multipart("projects/upload_projectphoto/".$slug."",array("id"=>"project_form_upload","name"=>"project_form_upload","class"=>"ajax_form")); ?>
-							
-							<div class="permissions_block" style="display:none">
-								<div class="arrow"></div>
-								<?php echo form_label(lang("Privacy").":","project_photos_permissions",$opt["project_form"]["lbl_photo_privacy"]); ?>
-								<?php echo form_dropdown('project_photos_permissions', $opt["project_form"]["privacy_options"],$project["project_photos_permissions"]); ?>
-							</div>
-	
-							<div class="clearfix ">
-									
-									<?php echo form_label(lang("SelectanImage").':<a title="'.lang('PhotoExplanation').'" class="tooltip"></a>',"",$opt["project_form"]["lbl_photo_description"]); ?>
-									<div class="fld">
-										<?php echo form_upload($opt["project_form"]["project_photo"]); ?>
-										<div class="errormsg" id="err_project_photo"><?php echo $photoerror; ?></div>
-									<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
-									<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
-										
-									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
-									</div>
-
-									<div class="image_placeholder" style="margin: 80px 0 0 -300px;">
-                                        <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
-									</div>									
-									
-							</div>
-							<?php echo form_close();?>
+				<div id="tabs-1" class="col5_tab" style="display: flex; flex-direction: column;">
+					
+					<div class="clearfix" style="order: 2">
+						
+						<?php echo form_label(lang('ProjectPhoto') . ':', 'projectphoto', array('class' => 'left_label')) ?>
+						
+						<?php echo form_open_multipart("projects/upload_projectphoto/".$slug."",array("id"=>"project_form_upload","name"=>"project_form_upload","class"=>"ajax_form")); ?>
+						
+						<div class="permissions_block" style="display:none">
+							<div class="arrow"></div>
+							<?php echo form_label(lang("Privacy").":","project_photos_permissions",$opt["project_form"]["lbl_photo_privacy"]); ?>
+							<?php echo form_dropdown('project_photos_permissions', $opt["project_form"]["privacy_options"],$project["project_photos_permissions"]); ?>
 						</div>
-						<br>
 
-					<div class="clearfix">
+						<div class="clearfix">
+								
+								<?php echo form_label(lang("SelectanImage").':<a title="'.lang('PhotoExplanation').'" class="tooltip"></a>',"",$opt["project_form"]["lbl_photo_description"]); ?>
+								<div class="fld">
+									<?php echo form_upload($opt["project_form"]["project_photo"]); ?>
+									<div class="errormsg" id="err_project_photo"><?php echo $photoerror; ?></div>
+								<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
+								<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
+									
+								<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
+								</div>
+
+								<div class="image_placeholder" style="margin: 80px 0 0 -300px;">
+                                    <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
+								</div>									
+								
+						</div>
+						<?php echo form_close();?>
+					</div>
+					<br>
+
+					<div class="clearfix" style="order: 1">
 						<?php echo form_open_multipart("projects/edit/".$slug."",array("id"=>"project_form_main","class"=>"project_form topupdate")); ?>
 						<div class="hiddenFields">
 							<?php echo form_hidden("return","projects/edit/".$slug); ?>
 							<?php echo form_hidden_custom("select_stage",$project["stage"],FALSE,"id='select_stage'"); ?>
 							<?php echo form_hidden_custom("title_input_hidden",$project["projectname"],FALSE,"id='title_input_hidden'"); ?>
 						</div>
+						<?php echo form_label(lang("Sponsor").':<a title="'.lang('SponsorExplanation').'" class="tooltip"></a>',"project_sponsor",$opt["project_form"]["lbl_project_sponsor"]); ?>
+						<div class="fld">
+							<?php echo form_input($opt["project_form"]["project_sponsor"]); ?>
+							<div class="errormsg" id="err_project_sponsor"><?php echo form_error("project_sponsor"); ?></div>
+						</div>
+						<br>
+						
+						<?php echo form_label(lang("Developer").':<a title="'.lang('DeveloperExplanation').'" class="tooltip"></a>',"project_developer",$opt["project_form"]["lbl_project_developer"]); ?>
+						<div class="fld">
+							<?php echo form_input($opt["project_form"]["project_developer"]); ?>
+							<div class="errormsg" id="err_project_developer"><?php echo form_error("project_developer"); ?></div>
+						</div>
+						<br>
 
-						<!-- <h3><?php echo lang('ProjectDetails') . ':' ?></h3> -->
+                    	<?php echo form_label(lang('Website') . ':', 'website', array('class' => 'left_label')) ?>
+                    	<div class="fld">
+                    	    <?php echo form_input('website', set_value('website', $project['website'])) ?>
+                    	    <div class="errormsg" id="err_website"><?php echo form_error('website') ?></div>
+                    	</div>
+                    	<br>
+					</div>
 
+					<div class="clearfix" style="order: 3">
 						<div class="permissions_block" style="display:none">
 							<div class="arrow"></div>
 							<?php echo form_label(lang("Privacy").":","project_meta_permissions",$opt["project_form"]["lbl_project_meta_permissions"]); ?>
@@ -482,7 +482,7 @@
 					</div>
 					<br>
 
-					<div class="clearfix" id="form_submit" style="float: middle; margin: auto">
+					<div class="clearfix" id="form_submit" style="float: middle; margin: auto; order: 4">
 						<?php echo form_submit(array("name"=>"Update","class"=>"light_green btn_lml","value"=>lang("UpdateProject"))); ?>
 					</div>
 
