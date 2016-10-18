@@ -205,288 +205,291 @@
 					echo ul($tablist);
 				?>
 		
-				<div id="tabs-1" class="col5_tab" style="display: flex; flex-direction: column;">
+				<div id="tabs-1" class="col5_tab">
+
+					<div style="display: flex; flex-direction: column;"><?php /* Put contents of this tab into a flexbox so that content from two separate forms can intermingle on the screen but not in the HTML */ ?>
 					
-					<div class="clearfix" style="order: 2">
-						
-						<?php echo form_label(lang('ProjectPhoto') . ':', 'projectphoto', array('class' => 'left_label')) ?>
-						
-						<?php echo form_open_multipart("projects/upload_projectphoto/".$slug."",array("id"=>"project_form_upload","name"=>"project_form_upload","class"=>"ajax_form")); ?>
-						
-						<div class="permissions_block" style="display:none">
-							<div class="arrow"></div>
-							<?php echo form_label(lang("Privacy").":","project_photos_permissions",$opt["project_form"]["lbl_photo_privacy"]); ?>
-							<?php echo form_dropdown('project_photos_permissions', $opt["project_form"]["privacy_options"],$project["project_photos_permissions"]); ?>
-						</div>
-
-						<div class="clearfix">
-								
-								<?php echo form_label(lang("SelectanImage").':<a title="'.lang('PhotoExplanation').'" class="tooltip"></a>',"",$opt["project_form"]["lbl_photo_description"]); ?>
-								<div class="fld">
-									<?php echo form_upload($opt["project_form"]["project_photo"]); ?>
-									<div class="errormsg" id="err_project_photo"><?php echo $photoerror; ?></div>
-								<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
-								<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
-									
-								<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
-								</div>
-
-								<div class="image_placeholder" style="margin: 80px 0 0 -300px;">
-                                    <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
-								</div>									
-								
-						</div>
-						<?php echo form_close();?>
-					</div>
-					<br>
-
-					<div class="clearfix" style="order: 1">
-						<?php echo form_open_multipart("projects/edit/".$slug."",array("id"=>"project_form_main","class"=>"project_form topupdate")); ?>
-						<div class="hiddenFields">
-							<?php echo form_hidden("return","projects/edit/".$slug); ?>
-							<?php echo form_hidden_custom("select_stage",$project["stage"],FALSE,"id='select_stage'"); ?>
-							<?php echo form_hidden_custom("title_input_hidden",$project["projectname"],FALSE,"id='title_input_hidden'"); ?>
-						</div>
-						<?php echo form_label(lang("Sponsor").':<a title="'.lang('SponsorExplanation').'" class="tooltip"></a>',"project_sponsor",$opt["project_form"]["lbl_project_sponsor"]); ?>
-						<div class="fld">
-							<?php echo form_input($opt["project_form"]["project_sponsor"]); ?>
-							<div class="errormsg" id="err_project_sponsor"><?php echo form_error("project_sponsor"); ?></div>
-						</div>
-						<br>
-						
-						<?php echo form_label(lang("Developer").':<a title="'.lang('DeveloperExplanation').'" class="tooltip"></a>',"project_developer",$opt["project_form"]["lbl_project_developer"]); ?>
-						<div class="fld">
-							<?php echo form_input($opt["project_form"]["project_developer"]); ?>
-							<div class="errormsg" id="err_project_developer"><?php echo form_error("project_developer"); ?></div>
-						</div>
-						<br>
-
-                    	<?php echo form_label(lang('Website') . ':', 'website', array('class' => 'left_label')) ?>
-                    	<div class="fld">
-                    	    <?php echo form_input('website', set_value('website', $project['website'])) ?>
-                    	    <div class="errormsg" id="err_website"><?php echo form_error('website') ?></div>
-                    	</div>
-                    	<br>
-					</div>
-
-					<div class="clearfix" style="order: 3">
-						<div class="permissions_block" style="display:none">
-							<div class="arrow"></div>
-							<?php echo form_label(lang("Privacy").":","project_meta_permissions",$opt["project_form"]["lbl_project_meta_permissions"]); ?>
-							<?php echo form_dropdown('project_meta_permissions', $opt["project_form"]["privacy_options"], $project["project_meta_permissions"]); ?>
-						</div>
-
-						<?php echo form_label(lang("Description").'*:<a title="'.lang('DetailExplanation').'" class="tooltip"></a>',"project_overview",$opt["project_form"]["lbl_project_overview"]); ?>
-						<div class="fld">
-							<?php echo form_textarea($opt["project_form"]["project_overview"]); ?>
-							<div class="errormsg" id="err_project_overview"><?php echo form_error("project_overview"); ?></div>
-							<?php /*
-							<div id="count_char" style="position:absolute; margin-top:-55px; right:13px; width:200px; color:#535760"><?php echo lang('Limit200');?></div> */ ?>
-						</div>
-						<br>
-						
-						<?php echo form_label(lang("Keywords").'*:<a title="'.lang('SeparateMessage').'" class="tooltip"></a>',"project_keywords",$opt["project_form"]["lbl_project_keywords"]); ?>
-						<div class="fld">
-							<?php echo form_input($opt["project_form"]["project_keywords"]); ?>
-							<div class="errormsg" id="err_project_keywords"><?php echo form_error("project_keywords"); ?></div>
-						</div>
-						<br>
-
-						<?php echo form_label(lang("Country").'*:<a title="'.lang('CountryExplanation').'" class="tooltip"></a>',"project_country",$opt["project_form"]["lbl_project_country"]); ?>
-						<div class="fld">
-							<?php  
-								$project_country_attr = 'id="project_country"';
-								$project_country_options = country_dropdown();
-								echo form_dropdown('project_country', $project_country_options,$project["country"],$project_country_attr);
-							?>
-							<div class="errormsg" id="err_project_country"><?php echo form_error("project_country"); ?></div>
-						</div>
-						<br>
-
-						<?php echo form_label(lang("Location").'*:<a title="'.lang('LocationExplanation').'" class="tooltip"></a>',"project_location",$opt["project_form"]["lbl_project_location"]); ?>
-						<div class="fld">
-							<?php echo form_input($opt["project_form"]["project_location"]); ?>
-							<div class="errormsg" id="err_project_location"><?php echo form_error("project_location"); ?></div>
-						</div>
-						<br>
-						
-						<?php echo form_label(lang("Sector")."*:","project_sector_main",$opt["project_form"]["lbl_project_sector_main"]); ?>
-						<div class="fld">
-							<?php 
-								$project_sector_main_attr	= 'id="project_sector_main"';
-								$sector_options = array();
-								$sector_opt = array();
-								foreach(sectors() as $key=>$value)
-								{
-									$sector_options[$value] = $value;
-									$sector_opt[$value] 	= 'class="sector_main_'.$key.'"';
-								}
-								$sector_first			= array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
-								//$sector_last			= array();
-								$sector_last			= array('class'=>'hardcode','text'=>'Other','value'=>'Other');
-								
-								echo form_custom_dropdown('project_sector_main', $sector_options,$project["sector"],$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
-							?>
-							<div class="errormsg" id="err_project_sector"><?php echo form_error("project_sector_main"); ?></div>
-						</div>
-						<br>
+						<div class="clearfix" style="order: 2">
 							
-						<?php echo form_label(lang("Sub-Sector")."*:","project_sector_sub",$opt["project_form"]["lbl_project_sector_sub"]); ?>
-						<div class="fld">
-							<?php 
-								$project_sector_sub_attr	= 'id="project_sector_sub"';
-								$subsector_options = array();
-								$subsector_opt = array();
-								foreach(subsectors() as $key=>$value)
-								{
-									foreach($value as $key2=>$value2)
-									{
-										$subsector_options[$value2] 	= $value2;
-										$subsector_opt[$value2] 		= 'class="project_sector_sub_'.$key.'"';
-									}
-								}
-								$subsector_first			= array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
-								$subsector_last				= array('class'=>'hardcode other','value'=>'Other','text'=>'Other');
-								echo form_custom_dropdown('project_sector_sub', $subsector_options,$project["subsector"],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
-							?>
-							<div class="errormsg" id="err_project_subsector"><?php echo form_error("project_sector_sub"); ?></div>
-						</div>
-						<div  style="display:none">
-                        	<?php echo form_label(lang("Other").":","project_sector_sub_other",$opt["project_form"]["lbl_project_sector_sub_other"]); ?>
-							<?php echo form_input($opt["project_form"]["project_sector_sub_other"]); ?>
-							<div class="errormsg" id="err_project_subsector_other"></div>
-                            <span id="selected_sub_sector" style="display:none"><?php echo $project["subsector"];?></span>
-                        </div>
-						<br>
-
-						<?php echo form_label(lang('Est.Start') . ':', 'project_eststart', array('class' => 'left_label')) ?>
-						<div class="fld">
-							<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
-							<div class="errormsg" id="err_project_eststart"><?php echo form_error('project_eststart') ?></div>
-						</div>
-						<br>
-						
-						<?php echo form_label(lang('Est.Completion') . ':', 'project_estcompletion', array('class' => 'left_label')) ?>
-						<div class="fld">
-							<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px"'); ?>
-							<div class="errormsg" id="err_project_estcompletion"><?php echo form_error('project_estcompletion') ?></div>
-						</div>
-						<br>
-
-						<?php echo form_label(lang("Stage")."*:","project_stage",array("class"=>"left_label")); ?>
-						<div class="fld">
-							<?php 
-								$project_stage_attr = 'id="project_stage"';
-								$project_stage_options = array(
-									''			=> lang('SelectAStage'),
-									'conceptual'	=> lang('conceptual'),
-									'feasibility'	=> lang('feasibility'),
-									'planning'		=> lang('planning'),
-									'procurement'	=> lang('procurement'),
-									'construction'	=> lang('construction'),
-									'om' 			=> lang('om'),
-								);
-								$project_stage_options = array_map("ucfirst", $project_stage_options);
-								echo form_dropdown('project_stage', $project_stage_options,$project["stage"],$project_stage_attr);
-							?>
-							<div class="errormsg" id="err_project_stage"></div>
-						</div>
-						<br>
-
-						<?php echo form_label(lang("TotalBudget") . ' ($MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
-						<div class="fld">
-							<?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
-							<div class="errormsg" id="err_project_budget_max"><?php echo form_error("project_budget_max"); ?></div>
-						</div>
-						<br>
-
-						<?php echo form_label(lang("FinancialStructure").":","project_financial",$opt["project_form"]["lbl_project_financial"]); ?>	
-						<div class="fld">
-							<?php
-								$project_financial_attr = 'id="project_financial"';
-								$project_financial_options = array(
-									''			=> lang('SelectOne'),
-									'Public'	=> lang('Public'),
-									'Private'	=> lang('Private'),
-									'PPP'		=> lang('PPP'),
-									'Concession'=> lang('Concession'),
-									'Design–Build' => lang('Designb'),
-									'Other'		=> lang('Other')
-								);
-								echo form_dropdown('project_financial', $project_financial_options,$project["financialstructure"],$project_financial_attr);
-							?>
-							<div class="errormsg" id="err_project_financial"><?php echo form_error("project_financial"); ?></div>
-						</div>
-						<br>
-						
-						<div style="display:none">
-							<?php echo form_label(lang("Other").":","project_fs_other",$opt["project_form"]["lbl_project_fs_other"]); ?>
-							<?php echo form_input($opt["project_form"]["project_fs_other"]); ?>
-							<div class="errormsg" id="err_project_fs_other"></div>
-						</div>
-
-
-						<div id="stage_accordion" class="accordion" style="display:none">
+							<?php echo form_label(lang('ProjectPhoto') . ':', 'projectphoto', array('class' => 'left_label')) ?>
 							
-							<?php
-								/*$stagearr = array(
-									array('name' => 'Conceptual','id' => 'conceptual'),
-									array('name' => 'Feasibility','id' => 'feasibility'),
-									array('name' => 'Planning','id' => 'planning'),
-									array('name' => 'Construction','id' => 'construction'),	
-									array('name' => 'Operation & Maintenance','id' => 'om')	
-								);
-								foreach($stagearr as $key=>$value)
-								{
-							?>
-							<?php echo heading('<a href="#">'.$value["name"].'</a>',3); ?>
-							<div>
-								
-								<div class="stage_status">
-									<?php echo form_label("Status"); ?>	
-									<?php
-										$stage_status_attr = 'class="stage_status_select" onchange="changestage(this)"';
-										$stage_status_options = array(
-											'Closed'	=> 'Closed',
-											'Open'		=> 'Open',
-											'Complete'	=> 'Complete'
-										);
-										echo form_dropdown('ps_'.$value["id"].'_status', $stage_status_options,$project["".$value["id"]."_status"],$stage_status_attr);
-										
-									?>
-								</div>
-
-								<?php echo form_label("Date","",$opt["project_form"]["lbl_stage_date"]); ?>	
-									
-								<?php echo form_input(array("id"=>"ps_".$value["id"]."_date_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_from"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT):"")); ?>	
-									<?php echo form_hidden_custom("ps_".$value["id"]."_date",DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date'"); ?>	
-								<span>to</span>
-								<?php echo form_input(array("id"=>"ps_".$value["id"]."_date2_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_to"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT):"")); ?>	
-									<?php echo form_hidden_custom("ps_".$value["id"]."_date2",DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date2'"); ?>	
-								<br>	
-
-								<?php echo form_label("Budget","",$opt["project_form"]["lbl_stage_budget"]); ?>
-								<?php echo form_input(array("id"=>"ps_".$value["id"]."_budget","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_from"]!="0"?$project["".$value["id"]."_budget_from"]:"","name"=>"ps_".$value["id"]."_budget")); ?><span>to</span>
-								<?php echo form_input(array("id"=>"ps_".$value["id"]."_budget2","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_to"]!=""?$project["".$value["id"]."_budget_to"]:"","name"=>"ps_".$value["id"]."_budget2")); ?>
-								<br>
-
-								<?php echo form_label("Comments","",$opt["project_form"]["lbl_stage_comments"]); ?>	
-								<?php echo form_textarea(array("name"=>"ps_".$value["id"]."_comments","id"=>"ps_".$value["id"]."_comments","cols"=>"30","rows"=>"10","value"=>$project["".$value["id"]."_comments"]));?>
-
+							<?php echo form_open_multipart("projects/upload_projectphoto/".$slug."",array("id"=>"project_form_upload","name"=>"project_form_upload","class"=>"ajax_form")); ?>
+							
+							<div class="permissions_block" style="display:none">
+								<div class="arrow"></div>
+								<?php echo form_label(lang("Privacy").":","project_photos_permissions",$opt["project_form"]["lbl_photo_privacy"]); ?>
+								<?php echo form_dropdown('project_photos_permissions', $opt["project_form"]["privacy_options"],$project["project_photos_permissions"]); ?>
 							</div>
-							<?php
-								}*/
-							?>		
+
+							<div class="clearfix">
+									
+									<?php echo form_label(lang("SelectanImage").':<a title="'.lang('PhotoExplanation').'" class="tooltip"></a>',"",$opt["project_form"]["lbl_photo_description"]); ?>
+									<div class="fld">
+										<?php echo form_upload($opt["project_form"]["project_photo"]); ?>
+										<div class="errormsg" id="err_project_photo"><?php echo $photoerror; ?></div>
+									<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
+									<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
+										
+									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
+									</div>
+
+									<div class="image_placeholder" style="margin: 80px 0 0 -300px;">
+	                                    <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
+									</div>									
+									
+							</div>
+							<?php echo form_close();?>
 						</div>
-					
-					</div>
-					<br>
+						<br>
 
-					<div class="clearfix" id="form_submit" style="float: middle; margin: auto; order: 4">
-						<?php echo form_submit(array("name"=>"Update","class"=>"light_green btn_lml","value"=>lang("UpdateProject"))); ?>
-					</div>
+						<div class="clearfix" style="order: 1">
+							<?php echo form_open_multipart("projects/edit/".$slug."",array("id"=>"project_form_main","class"=>"project_form topupdate")); ?>
+							<div class="hiddenFields">
+								<?php echo form_hidden("return","projects/edit/".$slug); ?>
+								<?php echo form_hidden_custom("select_stage",$project["stage"],FALSE,"id='select_stage'"); ?>
+								<?php echo form_hidden_custom("title_input_hidden",$project["projectname"],FALSE,"id='title_input_hidden'"); ?>
+							</div>
+							<?php echo form_label(lang("Sponsor").':<a title="'.lang('SponsorExplanation').'" class="tooltip"></a>',"project_sponsor",$opt["project_form"]["lbl_project_sponsor"]); ?>
+							<div class="fld">
+								<?php echo form_input($opt["project_form"]["project_sponsor"]); ?>
+								<div class="errormsg" id="err_project_sponsor"><?php echo form_error("project_sponsor"); ?></div>
+							</div>
+							<br>
+							
+							<?php echo form_label(lang("Developer").':<a title="'.lang('DeveloperExplanation').'" class="tooltip"></a>',"project_developer",$opt["project_form"]["lbl_project_developer"]); ?>
+							<div class="fld">
+								<?php echo form_input($opt["project_form"]["project_developer"]); ?>
+								<div class="errormsg" id="err_project_developer"><?php echo form_error("project_developer"); ?></div>
+							</div>
+							<br>
 
-					<?php echo form_close(); ?>
+	                    	<?php echo form_label(lang('Website') . ':', 'website', array('class' => 'left_label')) ?>
+	                    	<div class="fld">
+	                    	    <?php echo form_input('website', set_value('website', $project['website'])) ?>
+	                    	    <div class="errormsg" id="err_website"><?php echo form_error('website') ?></div>
+	                    	</div>
+	                    	<br>
+						</div>
+
+						<div class="clearfix" style="order: 3">
+							<div class="permissions_block" style="display:none">
+								<div class="arrow"></div>
+								<?php echo form_label(lang("Privacy").":","project_meta_permissions",$opt["project_form"]["lbl_project_meta_permissions"]); ?>
+								<?php echo form_dropdown('project_meta_permissions', $opt["project_form"]["privacy_options"], $project["project_meta_permissions"]); ?>
+							</div>
+
+							<?php echo form_label(lang("Description").'*:<a title="'.lang('DetailExplanation').'" class="tooltip"></a>',"project_overview",$opt["project_form"]["lbl_project_overview"]); ?>
+							<div class="fld">
+								<?php echo form_textarea($opt["project_form"]["project_overview"]); ?>
+								<div class="errormsg" id="err_project_overview"><?php echo form_error("project_overview"); ?></div>
+								<?php /*
+								<div id="count_char" style="position:absolute; margin-top:-55px; right:13px; width:200px; color:#535760"><?php echo lang('Limit200');?></div> */ ?>
+							</div>
+							<br>
+							
+							<?php echo form_label(lang("Keywords").'*:<a title="'.lang('SeparateMessage').'" class="tooltip"></a>',"project_keywords",$opt["project_form"]["lbl_project_keywords"]); ?>
+							<div class="fld">
+								<?php echo form_input($opt["project_form"]["project_keywords"]); ?>
+								<div class="errormsg" id="err_project_keywords"><?php echo form_error("project_keywords"); ?></div>
+							</div>
+							<br>
+
+							<?php echo form_label(lang("Country").'*:<a title="'.lang('CountryExplanation').'" class="tooltip"></a>',"project_country",$opt["project_form"]["lbl_project_country"]); ?>
+							<div class="fld">
+								<?php  
+									$project_country_attr = 'id="project_country"';
+									$project_country_options = country_dropdown();
+									echo form_dropdown('project_country', $project_country_options,$project["country"],$project_country_attr);
+								?>
+								<div class="errormsg" id="err_project_country"><?php echo form_error("project_country"); ?></div>
+							</div>
+							<br>
+
+							<?php echo form_label(lang("Location").'*:<a title="'.lang('LocationExplanation').'" class="tooltip"></a>',"project_location",$opt["project_form"]["lbl_project_location"]); ?>
+							<div class="fld">
+								<?php echo form_input($opt["project_form"]["project_location"]); ?>
+								<div class="errormsg" id="err_project_location"><?php echo form_error("project_location"); ?></div>
+							</div>
+							<br>
+							
+							<?php echo form_label(lang("Sector")."*:","project_sector_main",$opt["project_form"]["lbl_project_sector_main"]); ?>
+							<div class="fld">
+								<?php 
+									$project_sector_main_attr	= 'id="project_sector_main"';
+									$sector_options = array();
+									$sector_opt = array();
+									foreach(sectors() as $key=>$value)
+									{
+										$sector_options[$value] = $value;
+										$sector_opt[$value] 	= 'class="sector_main_'.$key.'"';
+									}
+									$sector_first			= array('class'=>'hardcode','text'=>lang('SelectASector'),'value'=>'');
+									//$sector_last			= array();
+									$sector_last			= array('class'=>'hardcode','text'=>'Other','value'=>'Other');
+									
+									echo form_custom_dropdown('project_sector_main', $sector_options,$project["sector"],$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
+								?>
+								<div class="errormsg" id="err_project_sector"><?php echo form_error("project_sector_main"); ?></div>
+							</div>
+							<br>
+								
+							<?php echo form_label(lang("Sub-Sector")."*:","project_sector_sub",$opt["project_form"]["lbl_project_sector_sub"]); ?>
+							<div class="fld">
+								<?php 
+									$project_sector_sub_attr	= 'id="project_sector_sub"';
+									$subsector_options = array();
+									$subsector_opt = array();
+									foreach(subsectors() as $key=>$value)
+									{
+										foreach($value as $key2=>$value2)
+										{
+											$subsector_options[$value2] 	= $value2;
+											$subsector_opt[$value2] 		= 'class="project_sector_sub_'.$key.'"';
+										}
+									}
+									$subsector_first			= array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
+									$subsector_last				= array('class'=>'hardcode other','value'=>'Other','text'=>'Other');
+									echo form_custom_dropdown('project_sector_sub', $subsector_options,$project["subsector"],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
+								?>
+								<div class="errormsg" id="err_project_subsector"><?php echo form_error("project_sector_sub"); ?></div>
+							</div>
+							<div  style="display:none">
+	                        	<?php echo form_label(lang("Other").":","project_sector_sub_other",$opt["project_form"]["lbl_project_sector_sub_other"]); ?>
+								<?php echo form_input($opt["project_form"]["project_sector_sub_other"]); ?>
+								<div class="errormsg" id="err_project_subsector_other"></div>
+	                            <span id="selected_sub_sector" style="display:none"><?php echo $project["subsector"];?></span>
+	                        </div>
+							<br>
+
+							<?php echo form_label(lang('Est.Start') . ':', 'project_eststart', array('class' => 'left_label')) ?>
+							<div class="fld">
+								<?php echo form_input('project_eststart', set_value('project_eststart'), 'placeholder="' . lang('mY') . '" id="project_eststart_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
+								<div class="errormsg" id="err_project_eststart"><?php echo form_error('project_eststart') ?></div>
+							</div>
+							<br>
+							
+							<?php echo form_label(lang('Est.Completion') . ':', 'project_estcompletion', array('class' => 'left_label')) ?>
+							<div class="fld">
+								<?php echo form_input('project_estcompletion', set_value('project_estcompletion'), 'placeholder="' . lang('mY') . '" id="project_estcompletion_picker" class="sm_left datepicker_month_year" style="width:120px"'); ?>
+								<div class="errormsg" id="err_project_estcompletion"><?php echo form_error('project_estcompletion') ?></div>
+							</div>
+							<br>
+
+							<?php echo form_label(lang("Stage")."*:","project_stage",array("class"=>"left_label")); ?>
+							<div class="fld">
+								<?php 
+									$project_stage_attr = 'id="project_stage"';
+									$project_stage_options = array(
+										''			=> lang('SelectAStage'),
+										'conceptual'	=> lang('conceptual'),
+										'feasibility'	=> lang('feasibility'),
+										'planning'		=> lang('planning'),
+										'procurement'	=> lang('procurement'),
+										'construction'	=> lang('construction'),
+										'om' 			=> lang('om'),
+									);
+									$project_stage_options = array_map("ucfirst", $project_stage_options);
+									echo form_dropdown('project_stage', $project_stage_options,$project["stage"],$project_stage_attr);
+								?>
+								<div class="errormsg" id="err_project_stage"></div>
+							</div>
+							<br>
+
+							<?php echo form_label(lang("TotalBudget") . ' ($MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
+							<div class="fld">
+								<?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
+								<div class="errormsg" id="err_project_budget_max"><?php echo form_error("project_budget_max"); ?></div>
+							</div>
+							<br>
+
+							<?php echo form_label(lang("FinancialStructure").":","project_financial",$opt["project_form"]["lbl_project_financial"]); ?>	
+							<div class="fld">
+								<?php
+									$project_financial_attr = 'id="project_financial"';
+									$project_financial_options = array(
+										''			=> lang('SelectOne'),
+										'Public'	=> lang('Public'),
+										'Private'	=> lang('Private'),
+										'PPP'		=> lang('PPP'),
+										'Concession'=> lang('Concession'),
+										'Design–Build' => lang('Designb'),
+										'Other'		=> lang('Other')
+									);
+									echo form_dropdown('project_financial', $project_financial_options,$project["financialstructure"],$project_financial_attr);
+								?>
+								<div class="errormsg" id="err_project_financial"><?php echo form_error("project_financial"); ?></div>
+							</div>
+							<br>
+							
+							<div style="display:none">
+								<?php echo form_label(lang("Other").":","project_fs_other",$opt["project_form"]["lbl_project_fs_other"]); ?>
+								<?php echo form_input($opt["project_form"]["project_fs_other"]); ?>
+								<div class="errormsg" id="err_project_fs_other"></div>
+							</div>
+
+
+							<div id="stage_accordion" class="accordion" style="display:none">
+								
+								<?php
+									/*$stagearr = array(
+										array('name' => 'Conceptual','id' => 'conceptual'),
+										array('name' => 'Feasibility','id' => 'feasibility'),
+										array('name' => 'Planning','id' => 'planning'),
+										array('name' => 'Construction','id' => 'construction'),	
+										array('name' => 'Operation & Maintenance','id' => 'om')	
+									);
+									foreach($stagearr as $key=>$value)
+									{
+								?>
+								<?php echo heading('<a href="#">'.$value["name"].'</a>',3); ?>
+								<div>
+									
+									<div class="stage_status">
+										<?php echo form_label("Status"); ?>	
+										<?php
+											$stage_status_attr = 'class="stage_status_select" onchange="changestage(this)"';
+											$stage_status_options = array(
+												'Closed'	=> 'Closed',
+												'Open'		=> 'Open',
+												'Complete'	=> 'Complete'
+											);
+											echo form_dropdown('ps_'.$value["id"].'_status', $stage_status_options,$project["".$value["id"]."_status"],$stage_status_attr);
+											
+										?>
+									</div>
+
+									<?php echo form_label("Date","",$opt["project_form"]["lbl_stage_date"]); ?>	
+										
+									<?php echo form_input(array("id"=>"ps_".$value["id"]."_date_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_from"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT):"")); ?>	
+										<?php echo form_hidden_custom("ps_".$value["id"]."_date",DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date'"); ?>	
+									<span>to</span>
+									<?php echo form_input(array("id"=>"ps_".$value["id"]."_date2_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_to"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT):"")); ?>	
+										<?php echo form_hidden_custom("ps_".$value["id"]."_date2",DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date2'"); ?>	
+									<br>	
+
+									<?php echo form_label("Budget","",$opt["project_form"]["lbl_stage_budget"]); ?>
+									<?php echo form_input(array("id"=>"ps_".$value["id"]."_budget","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_from"]!="0"?$project["".$value["id"]."_budget_from"]:"","name"=>"ps_".$value["id"]."_budget")); ?><span>to</span>
+									<?php echo form_input(array("id"=>"ps_".$value["id"]."_budget2","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_to"]!=""?$project["".$value["id"]."_budget_to"]:"","name"=>"ps_".$value["id"]."_budget2")); ?>
+									<br>
+
+									<?php echo form_label("Comments","",$opt["project_form"]["lbl_stage_comments"]); ?>	
+									<?php echo form_textarea(array("name"=>"ps_".$value["id"]."_comments","id"=>"ps_".$value["id"]."_comments","cols"=>"30","rows"=>"10","value"=>$project["".$value["id"]."_comments"]));?>
+
+								</div>
+								<?php
+									}*/
+								?>		
+							</div>
+						
+						</div>
+						<br>
+
+						<div class="clearfix" id="form_submit" style="float: middle; margin: auto; order: 4">
+							<?php echo form_submit(array("name"=>"Update","class"=>"light_green btn_lml","value"=>lang("UpdateProject"))); ?>
+						</div>
+
+						<?php echo form_close(); ?>
+					</div>
 				</div>
 
 
