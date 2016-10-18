@@ -2351,9 +2351,10 @@ div.olControlZoom a:hover {
   width: 150px;
   height: 150px;
   float: left;
+  clear: both;
   background: #ccc;
   border-radius: 3px;
-  margin-right: 20px;
+  margin: 0 20px 0 170px;
 }
 
 .left_label {
@@ -4623,6 +4624,10 @@ a.external {
 
 #btn_add_sector {
   margin: 6px 0;
+}
+
+#btn_upload_project_image {
+  margin: 60px 0 60px 30px !important;
 }
 
 #forgot_password input {

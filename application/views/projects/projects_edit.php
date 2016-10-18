@@ -26,7 +26,8 @@
 					'photo_submit' => array(
 						'name'	=> 'photo_submit',
 						'value' => lang('Upload'),
-						'class'	=> 'photo_submit light_green'
+						'class'	=> 'photo_submit light_green',
+						'id'    => 'btn_upload_project_image'
 					),
 					'lbl_project_meta_permissions' => array(
 						'class'	=> 'above_label'
@@ -230,13 +231,14 @@
 									<?php echo form_hidden("project_phot_hidden",$project["projectphoto"]); ?>
 									<span class="note"><?php echo lang('Compatiblefiletypes');?>: JPEG, GIF, PNG</span>
 										
-									<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
 									</div>
 
-									<div class="image_placeholder" style="margin: 80px 0 0 -300px;">
-	                                    <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
-									</div>									
-									
+									<div style="clear: both">
+										<div class="image_placeholder">
+		                                    <img src="<?php echo project_image($project['projectphoto'], 150) ?>" alt="Project's photo" class="uploaded_img">
+										</div>
+										<?php echo form_submit($opt["project_form"]["photo_submit"]);  ?>
+									</div>
 							</div>
 							<?php echo form_close();?>
 						</div>
