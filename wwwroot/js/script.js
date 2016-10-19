@@ -692,7 +692,7 @@ $(function() {
     }
 
     // submit for on update profile button click
-    $('#update_project').click(function(e) {
+    $('.update_project').click(function(e) {
         formsubmit = $("#project_name_form").submit();
 
         e.preventDefault();
@@ -726,31 +726,6 @@ $(function() {
         //$('.ui-tabs-panel:visible form').submit();
         // log($('.ui-tabs-panel:visible form'));
     })
-
-    // project date pickers
-    $('.datepicker_month_year').datepicker({
-        beforeShow: function() {
-            var $date_picker = $('#ui-datepicker-div');
-            if (!$date_picker.parent().hasClass('jqui')) {
-                $date_picker.wrap($('<div/>').addClass('jqui'));
-            }
-        },
-        changeMonth: true,
-        changeYear: true,
-        showButtonPanel: true,
-        yearRange: '1950:2500',
-        dateFormat: "mm/yy",
-        onClose: function(dateText, inst) {
-            var month = $("#ui-datepicker-div .ui-datepicker-month :selected").val();
-            var year = $("#ui-datepicker-div .ui-datepicker-year :selected").val();
-            var day = '01';
-            $(this).datepicker('setDate', new Date(year, month, day));
-        }
-    }).change(function() {
-        $('#' + this.id.replace('_picker', '')).val($(this).val() + ' 00:00');
-    }).each(function() {
-        $(this).val($(this).val().substring(0, 10));
-    });
 
     $('.education_edit .education_edit_cancel').on('click', function() {
         //log( 'yay' );
