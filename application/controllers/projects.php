@@ -3158,10 +3158,10 @@ class Projects extends CI_Controller
     public function valid_monthyear_format($value)
     {
         $regex = "#^[01]\d/(19|20|21)\d{2}$#";
-        if (! preg_match($regex, $value)) {
-            return false;
-        } else {
+        if (preg_match($regex, $value) || $value == '') {
             return true;
+        } else {
+            return false;
         }
     }
 
