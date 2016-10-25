@@ -24,7 +24,9 @@ $lang['decimal'] = 'Le champ %s doit contenir un nombre d&eacute;cimal.';
 $lang['less_than'] = 'Le champ %s doit contenir un nombre inf&eacute;rieur &agrave; % s.';
 $lang['greater_than'] = 'Le champ %s doit contenir un nombre sup&eacute;rieur &agrave; % s.';
 
-$lang['valid_period'] = "Le champ de l'% doit être dans un format approprié et la date de départ doit être inférieure ou égale à la date de fin.";
+$lang['valid_period'] = "Vous avez spécifié une date de fin qui précède la date de départ.";
+$lang['isCompleted_developer_sponsor'] = 'Veuillez spécifier le promoteur, le sponsor, ou bien tous les deux.';
+$lang['valid_monthyear_format'] = "Veuillez spécifier une date dans le format MM/AAAA.";
 
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/english/form_validation_lang.php */

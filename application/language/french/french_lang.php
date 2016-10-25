@@ -553,14 +553,14 @@ $lang['emptyseat'] = 'Si&egrave;ge vide';
 $lang['memberphoto'] = 'Membre photo';
 
 /* project_edit.php */
-$lang['ProjectPhoto'] = 'Project Photo';
-$lang['SeparateMessage'] = "To help us connect you with experts or investors, enter 5 to 10 keywords that uniquely capture your project, separated by commas (e.g., bridge,toll,construction,suspension,PPP).";
-$lang['CountryExplanation'] = 'The country in which the project is located. For trans-border projects, select the country in which the greater (or greatest) share of the project is located.';
-$lang['LocationExplanation'] = 'The location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.';
-$lang['DeveloperExplanation'] = "The project developer is the organization most directly responsible for managing the project's progression through its life-cycle. The project developer may be a public or private sector entity (and in some cases may be the same as the project sponsor).";
-$lang['SponsorExplanation'] = 'The project sponsor is the organization under whose authority the project is being developed. Often, this will be a public or quasi-public agency, like a Department of Transportation.';
-$lang['DetailExplanation'] = 'Provide a brief summary (2–5 paragraphs) of your project, including a description of its objectives, major actions planned, and important background/contextual information.';
-$lang['PhotoExplanation'] = 'Upload a photo or graphic to represent your project.  This image will appear at the top of the project profile page and adjacent to the project name in search results, map views, and similar references to the project in the GViP platform.';
+$lang['ProjectPhoto'] = 'Photo du projet';
+$lang['SeparateMessage'] = "Pour nous aider à vous connecter avec des experts ou des investisseurs, entrez 5 à 10 mots-clés (ou expressions) qui captent uniquement votre projet. Par exemple: pont, péage, construction, suspension, PPP.";
+$lang['CountryExplanation'] = 'Le pays dans lequel le projet est situé. Pour les projets transfrontaliers, sélectionnez le pays dans lequel la plus grande part du projet est située.';
+$lang['LocationExplanation'] = "Si vous entrez l'emplacement ici, cliquez sur Mise à jour du projet, puis cliquez sur l'onglet Carte pour affiner. Alternativement, vous pouvez utiliser la carte directement pour localiser l'emplacement. <br/><br/>Entrez l'emplacement du projet en utilisant la ville, état ou province, et de l'information du pays, selon le cas. Pour les projets qui relient deux ou plusieurs endroits (ou englobent une grande surface), entrez un emplacement de point représentatif dans ce champs et utilisez l'outil de cartographie pour illustrer l'empreinte géographique du projet.";
+$lang['DeveloperExplanation'] = "Le promoteur du projet est l'organisation la plus directement responsable de la gestion de la progression du projet à travers son cycle de vie. Le promoteur du projet peut être une entité du secteur public ou privé (et dans certains cas, peut être le même que le promoteur du projet).";
+$lang['SponsorExplanation'] = "Le promoteur du projet est l'organisation sous l'autorité duquel le projet est en cours d'élaboration. Souvent, ce sera un organisme public ou quasi-public, comme un ministère des Transports.";
+$lang['DetailExplanation'] = 'Fournissez un bref résumé (2-5 paragraphes) de votre projet, y compris une description de ses objectifs, les principales actions prévues, et les antécédents importants / informations contextuelles.';
+$lang['PhotoExplanation'] = 'Ajoutez une photo ou un graphique pour représenter votre projet. Cette image apparaîtra en haut de la page de profil de projet et à côté du nom du projet dans les résultats de recherche, carte des vues et des références similaires au projet de la plate-forme GViP.';
 
 /* projects_files.php */
 $lang['File'] = 'Dossier';
@@ -604,7 +604,6 @@ $lang['admin'] = 'admin';
 $lang['Admin'] = 'Admin';
 $lang['affairs'] = 'affaires';
 $lang['Affairs'] = 'Affaires';
-$lang['isCompleted_developer_sponsor'] = 'Veuillez spécifier le promoteur, le sponsor, ou bien tous les deux.';
 
 /* projects_fundamentals.php */
 $lang['Lng'] = 'Lng';
@@ -990,6 +989,7 @@ $lang['WEBScore'] = 'Score Bénéfices Économiques Élargis';
 $lang['ProjectTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Bhopal Metro&quot;) pour affiner votre recherche';
 $lang['ExpertTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Jason Jones&quot;) pour affiner votre recherche';
 
+$lang['mY'] = 'MM/AAAA';
 $lang['mdY'] = 'MM/JJ/AAAA';
 $lang['LoginFailed'] = 'Incorrect email and/or password.';
 
