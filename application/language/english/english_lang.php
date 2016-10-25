@@ -573,9 +573,9 @@ $lang['memberphoto'] = 'member photo';
 
 //project_edit.php
 $lang['ProjectPhoto'] = 'Project Photo';
-$lang['SeparateMessage'] = "To help us connect you with experts or investors, enter 5 to 10 keywords that uniquely capture your project, separated by commas (e.g., bridge,toll,construction,suspension,PPP).";
+$lang['SeparateMessage'] = "To help us connect you with experts or investors, enter 5 to 10 keywords (or phrases) that uniquely capture your project. For example: bridge, toll, construction, suspension, PPP.";
 $lang['CountryExplanation'] = 'The country in which the project is located. For trans-border projects, select the country in which the greater (or greatest) share of the project is located.';
-$lang['LocationExplanation'] = 'The location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.';
+$lang['LocationExplanation'] = "If you enter the location here, click Update Project and then go to the Map tab to fine-tune. Alternatively, you can use the map directly to pinpoint the location.<br/><br/>Enter the location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.";
 $lang['DeveloperExplanation'] = "The project developer is the organization most directly responsible for managing the project's progression through its life-cycle. The project developer may be a public or private sector entity (and in some cases may be the same as the project sponsor).";
 $lang['SponsorExplanation'] = 'The project sponsor is the organization under whose authority the project is being developed. Often, this will be a public or quasi-public agency, like a Department of Transportation.';
 $lang['DetailExplanation'] = 'Provide a brief summary (2–5 paragraphs) of your project, including a description of its objectives, major actions planned, and important background/contextual information.';
@@ -623,7 +623,6 @@ $lang['admin'] = 'admin';
 $lang['Admin'] = 'Admin';
 $lang['affairs'] = 'affairs';
 $lang['Affairs'] = 'Affairs';
-$lang['isCompleted_developer_sponsor'] = 'Please specify either the developer, the sponsor, or both.';
 
 //projects_fundamentals.php
 $lang['Lng'] = 'Lng';
