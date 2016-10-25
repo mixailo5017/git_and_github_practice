@@ -109,23 +109,27 @@
                         'class' => 'left_label'
                     ),
                     'project_eststart' => array(
-                        'id'    => 'project_estsrart_picker',
-                        'name'  => 'project_estsrart',
-                        'value' => $eststart,
-                        'class' => 'sm_left datepicker_month_year',
-                        'style' => 'width:120px',
-                        'placeholder' => lang('mdY')
+                        'id'          => 'project_eststart_picker',
+                        'name'        => 'project_eststart',
+                        'value'       => set_value('project_eststart', $eststart),
+                        'class'       => 'sm_left',
+                        'style'       => 'width:120px',
+                        'placeholder' => lang('mY'),
+                        'pattern'     => '\d{2}/\d{4}',
+                        'title'       => lang('valid_monthyear_format')
                     ),
                     'lbl_project_estcompletion' => array(
                         'class' => 'left_label'
                     ),
                     'project_estcompletion' => array(
-                        'id'    => 'project_estcompletion_picker',
-                        'name'  => 'project_estcompletion',
-                        'value' => $estcompletion,
-                        'class' => 'sm_left datepicker_month_year',
-                        'style' => 'width:120px',
-                        'placeholder' => lang('mdY')
+                        'id'          => 'project_estcompletion_picker',
+                        'name'        => 'project_estcompletion',
+                        'value'       => set_value('project_estcompletion', $estcompletion),
+                        'class'       => 'sm_left',
+                        'style'       => 'width:120px',
+                        'placeholder' => lang('mY'),
+                        'pattern'     => '\d{2}/\d{4}',
+                        'title'       => lang('valid_monthyear_format')
                     ),
                     'lbl_project_developer' => array(
                         'class' => 'left_label' 
@@ -365,32 +369,14 @@
 
                             <?php echo form_label(lang('Est.Start') . ':', 'project_eststart', array('class' => 'left_label')) ?>
                             <div class="fld">
-                                <?php echo form_input([
-                                    'name'        => 'project_eststart',
-                                    'value'       => set_value('project_eststart'),
-                                    'placeholder' => lang('mY'),
-                                    'id'          => 'project_eststart_picker',
-                                    'class'       => 'sm_left',
-                                    'style'       => 'width:120px',
-                                    'pattern'     => '\d{2}/\d{4}',
-                                    'title'       => lang('valid_monthyear_format')
-                                    ]) ?>
+                                <?php echo form_input($opt['project_form']['project_eststart']) ?>
                                 <div class="errormsg" id="err_project_eststart"><?php echo form_error('project_eststart') ?></div>
                             </div>
                             <br>
                             
                             <?php echo form_label(lang('Est.Completion') . ':', 'project_estcompletion', array('class' => 'left_label')) ?>
                             <div class="fld">
-                                <?php echo form_input([
-                                    'name'        => 'project_estcompletion',
-                                    'value'       => set_value('project_estcompletion'),
-                                    'placeholder' => lang('mY'),
-                                    'id'          => 'project_estcompletion_picker',
-                                    'class'       => 'sm_left',
-                                    'style'       => 'width:120px',
-                                    'pattern'     => '\d{2}/\d{4}',
-                                    'title'       => lang('valid_monthyear_format')
-                                    ]); ?>
+                                <?php echo form_input($opt['project_form']['project_estcompletion']); ?>
 
                                 <div class="errormsg" id="err_project_estcompletion"><?php echo form_error('project_estcompletion') ?></div>
                             </div>
