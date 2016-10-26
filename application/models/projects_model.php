@@ -1137,8 +1137,23 @@ class Projects_model extends CI_Model {
         $country = $this->input->post('project_country', TRUE);
         $eststart = $this->input->post('project_eststart', TRUE);
         $estcompletion = $this->input->post('project_estcompletion', TRUE);
-        if($eststart != "1111-11-11" && $eststart != "" ) { $eststart = substr_replace($eststart, "01/", 3, 0); } else { $eststart = ""; } 
-        if($estcompletion != "1111-11-11" && $estcompletion != "") { $estcompletion = substr_replace($estcompletion, "01/", 3, 0); } else { $estcompletion = ""; } 
+        
+        // Clean dates ready to feed into DateFormat. 1111-11-11 should be fed into DateFormat as blank, 
+        // and month-only dates should be padded using the first day of the month (so 04/2016 becomes 04/01/2016)
+        if ($eststart != "1111-11-11" && $eststart != "" ) {
+            if (strlen($eststart) == 7) {
+                $eststart = substr_replace($eststart, "01/", 3, 0);
+            }
+        } else {
+            $eststart = "";
+        }
+        if ($estcompletion != "1111-11-11" && $estcompletion != "") {
+            if (strlen($estcompletion) == 7) {
+                $estcompletion = substr_replace($estcompletion, "01/", 3, 0);
+            }
+        } else {
+            $estcompletion = "";
+        }
 
         // If budget value is empty or equals to 0 set it explicitly to NULL
         // otherwise convert it to int
