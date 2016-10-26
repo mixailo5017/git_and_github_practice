@@ -91,7 +91,8 @@ define("DATEFORMATDB","%y-%m-%d");
 |------------------------------------------------------------------------
 */
 define('SITE_NAME', 'GViP');
-define('DATEFORMATVIEW', 'M d, Y');
+define('DATEFORMATVIEW', 'M j, Y');
+define('DATEFORMATVIEW_MONTHONLY', 'F Y');
 define('ADMIN_EMAIL', 'no-reply@gvip.io');
 define('ADMIN_EMAIL_NAME', SITE_NAME);
 define('CGLA_NAME', 'CG/LA Infrastructure');
