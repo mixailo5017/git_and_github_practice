@@ -890,7 +890,7 @@ if (! function_exists('is_post_msize_exceeded')) {
     * convert passed Date/DateTime to requested Format
     * If input is non-blank, function infers input format from requested output format
     * If input is blank, function returns '1111-11-11'
-    * 
+    *
     * @access public
     * @param  string  $date           Input date
     * @param  string  $format         Output format
