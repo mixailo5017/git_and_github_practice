@@ -1,7 +1,7 @@
 <div id="content" class="clearfix">
         <?php
-            if($project["eststart"] != "1111-11-11" && $project["eststart"] != "" ) { $eststart = DateFormat($project["eststart"],DATEFORMAT,FALSE); } else { $eststart = ""; } 
-            if($project["estcompletion"] != "1111-11-11" && $project["estcompletion"] != "") { $estcompletion = DateFormat($project["estcompletion"],DATEFORMAT,FALSE); } else { $estcompletion = ""; } 
+            if($project["eststart"] != "1111-11-11" && $project["eststart"] != "" ) { $eststart = DateFormat($project["eststart"],DATEFORMAT_MONTHONLY,FALSE); } else { $eststart = ""; } 
+            if($project["estcompletion"] != "1111-11-11" && $project["estcompletion"] != "") { $estcompletion = DateFormat($project["estcompletion"],DATEFORMAT_MONTHONLY,FALSE); } else { $estcompletion = ""; } 
             $opt["project_form"] = array(
                     'title' => array(
                         'id'    => 'title_input',
