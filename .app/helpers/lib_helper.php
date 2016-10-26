@@ -902,20 +902,21 @@ if (! function_exists('is_post_msize_exceeded')) {
         $formatteddate = null;
         $time = '';
         if ($date != "") {
-            if ($format == DATEFORMAT) { // Expects input format YYYY-MM-DD
-                $year    = substr($date, 0, 4);
-                $month    = substr($date, 5, 2);
-                $day    = substr($date, 8, 2);
-            } elseif ($format == DATEFORMATDB) { // Expects input format MM/DD/YYYY
-                $year    = substr($date, 6, 4);
-                $month    = substr($date, 0, 2);
-                $day    = substr($date, 3, 2);
-            } elseif ($format == DATEFORMATVIEW) { // Expects input format YYYY-MM-DD
-                $year    = substr($date, 0, 4);
-                $month    = substr($date, 5, 2);
-                $day    = substr($date, 8, 2);
-            } else {
-                return "";
+            switch ($format) {
+                case DATEFORMAT:
+                case DATEFORMAT_MONTHONLY:
+                case DATEFORMATVIEW: // Expects input format YYYY-MM-DD
+                    $year  = substr($date, 0, 4);
+                    $month = substr($date, 5, 2);
+                    $day   = substr($date, 8, 2);
+                    break;
+                case DATEFORMATDB: // Expects input format MM/DD/YYYY
+                    $year  = substr($date, 6, 4);
+                    $month = substr($date, 0, 2);
+                    $day   = substr($date, 3, 2);
+                    break;
+                default:
+                    return "";
             }
             
             if ($istime) {
