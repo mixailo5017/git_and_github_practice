@@ -3110,20 +3110,16 @@ class Projects extends CI_Controller
     /**
      * Callback validation rule for an interval
      * Returns true if both start_date and end_date are valid dates
-     * and start_date >= end_date
+     * and start_date >= end_date, or if either is blank
      *
      * @return bool
      */
     public function valid_period()
     {
-        $start = substr_replace($this->input->post('project_eststart', true), "01/", 3, 0);
-        $end = substr_replace($this->input->post('project_estcompletion', true), "01/", 3, 0);
+        $start = $this->input->post('project_eststart', true);
+        $end = $this->input->post('project_estcompletion', true);
 
-        // if (!empty($start) || !empty($end)) {
-        //     return true;
-        // }
-
-        $is_valid = is_valid_period($start, $end, 'm/d/Y');
+        $is_valid = is_valid_period($start, $end, 'm/Y');
 
         return $is_valid;
     }

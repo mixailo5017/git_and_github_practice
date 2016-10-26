@@ -1893,42 +1893,41 @@ if (! function_exists('simple_mail_content')) {
 }
 
 if (! function_exists('is_valid_period')) {
-    /**
-     * Returns true if both $start and $end are valid dates
-     * and start_date > end_date
-     *
-     * @param $start
-     * @param $end
-     * @param null $format
-     * @return bool
-     */
-    function is_valid_period($start, $end, $format = null)
-    {
-        if (empty($start) || empty($end)) {
-            return false;
-        }
+	/**
+	 * Returns true if either:
+     * A) one or both of $start and $end is empty, OR
+     * B) both $start and $end are valid dates AND $start < $end
+	 *
+	 * @param $start
+	 * @param $end
+	 * @param null $format
+	 * @return bool
+	 */
+	function is_valid_period($start, $end, $format = null)
+	{
+		if (empty($start) || empty($end)) {
+			return true;
+		}
 
-        try {
-            if (!empty($format)) {
-                $dt_start = DateTime::createFromFormat($format, $start);
-            } else {
-                $dt_start = new DateTime($start);
-            }
-            if (!empty($format)) {
+		try {
+			if (!empty($format)) {
+				$dt_start = DateTime::createFromFormat($format, $start);
                 $dt_end = DateTime::createFromFormat($format, $end);
-            } else {
+			} else {
+				$dt_start = new DateTime($start);
                 $dt_end = new DateTime($end);
-            }
+			}
+			
+			if (!$dt_start || !$dt_end || $dt_start > $dt_end) {
+				return false;
+			}
 
-            if (!$dt_start || !$dt_end || $dt_start > $dt_end) {
-                return false;
-            }
+			return true;
 
-            return true;
-        } catch (Exception $e) {
-            return false;
-        }
-    }
+		} catch (Exception $e) {
+			return false;
+		}
+	}
 }
 
 if (! function_exists('reminder_token')) {
