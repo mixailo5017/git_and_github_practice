@@ -4,7 +4,7 @@
 
     /**
     * _htmlentities()
-    * 	return htmlentities using global settings
+    *   return htmlentities using global settings
     *
     * @access public
     * @param user object
@@ -143,7 +143,7 @@
         }
     }
 
-	/**
+    /**
     * die_json()
     * set headers to json and encode array/obj
     *
@@ -824,7 +824,7 @@ if (! function_exists('is_post_msize_exceeded')) {
             'upload_path' => '.' . $path,
             'allowed_types'    => 'gif|jpg|png|jpeg',
             'max_size' => '5120',
-            // 'max_width'	=> '1024',
+            // 'max_width'  => '1024',
             // 'max_height' => '768',
             'encrypt_name' => true
         );
@@ -884,30 +884,33 @@ if (! function_exists('is_post_msize_exceeded')) {
         }
     }
     
+
     /**
     * Date Format Function
     * convert passed Date/DateTime to requested Format
-    *
+    * If input is non-blank, function infers input format from requested output format
+    * If input is blank, function returns '1111-11-11'
+    * 
     * @access public
-    * @param string
-    * @param string
-    * @param boolean
-    * @return string
+    * @param  string  $date           Input date
+    * @param  string  $format         Output format
+    * @param  boolean $istime         Whether to include time at end of output (requires time to be included in input)
+    * @return string                  Output
     */
     function DateFormat($date, $format, $istime=false)
     {
         $formatteddate = null;
         $time = '';
         if ($date != "") {
-            if ($format == DATEFORMAT) {
+            if ($format == DATEFORMAT) { // Expects input format YYYY-MM-DD
                 $year    = substr($date, 0, 4);
                 $month    = substr($date, 5, 2);
                 $day    = substr($date, 8, 2);
-            } elseif ($format == DATEFORMATDB) {
+            } elseif ($format == DATEFORMATDB) { // Expects input format MM/DD/YYYY
                 $year    = substr($date, 6, 4);
                 $month    = substr($date, 0, 2);
                 $day    = substr($date, 3, 2);
-            } elseif ($format == DATEFORMATVIEW) {
+            } elseif ($format == DATEFORMATVIEW) { // Expects input format YYYY-MM-DD
                 $year    = substr($date, 0, 4);
                 $month    = substr($date, 5, 2);
                 $day    = substr($date, 8, 2);
@@ -1643,7 +1646,7 @@ if (! function_exists('auth_check')) {
     {
         $CI =& get_instance();
 
-//		if (! sess_var('logged_in')) {
+//      if (! sess_var('logged_in')) {
         if (! $CI->auth->check()) {
             // If it is an AJAX call return 403 error
             if ($CI->input->is_ajax_request()) {
@@ -1693,7 +1696,7 @@ if (! function_exists('logout')) {
             show_error('Forbidden.', 403);
         }
 
-//		$userid = (int) sess_var('uid');
+//      $userid = (int) sess_var('uid');
 //
 //        $update = array('lastlogout' => time());
 //        $CI->db
@@ -1715,7 +1718,7 @@ if (! function_exists('logout')) {
 //        if ((sess_var('admin_logged_in') && sess_var('admin_type')) && sess_var('admin_type') == '1') {
 //            //$this->session->sess_destroy();
 ////            redirect('admin.php/members/view_all_members', 'refresh');
-//			redirect('/');
+//          redirect('/');
 //        }
 
         if ($deleted) {
@@ -1738,10 +1741,10 @@ if (! function_exists('redirect_after_login')) {
 
         $CI =& get_instance();
 
-//		// First timer
-//		if (sess_var('lastlogin') == 0) {
-//			redirect('profile/account_settings', 'refresh');
-//		}
+//      // First timer
+//      if (sess_var('lastlogin') == 0) {
+//          redirect('profile/account_settings', 'refresh');
+//      }
 
         $intended = $CI->session->flashdata('intended');
         if (! empty($intended)) {
