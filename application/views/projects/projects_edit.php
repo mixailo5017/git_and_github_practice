@@ -39,7 +39,7 @@
                         'name'  => 'project_overview',
                         'style' => 'width:345px;',
                         'id'    =>'project_overview',
-                        'value' => $project["description"]
+                        'value' => set_value('project_overview', $project["description"])
                     ),
                     'lbl_project_keywords' => array(
                         'class' => 'left_label'
@@ -47,7 +47,7 @@
                     'project_keywords' => array(
                         'id'    => 'project_keywords',
                         'name'  => 'project_keywords',
-                        'value' => $project["keywords"]
+                        'value' => set_value('project_keywords', $project["keywords"])
                     ),
                     'lbl_project_country' => array(
                         'class' => 'left_label'
@@ -58,7 +58,7 @@
                     'project_location' => array(
                         'id'    => 'project_location',
                         'name'  => 'project_location',
-                        'value' => $project["location"]
+                        'value' => set_value('project_location', $project["location"])
                     ),
                     'lbl_project_sector_main' => array(
                         'class' => 'left_label'
@@ -73,7 +73,7 @@
                         'id'    => 'project_sector_sub_other',
                         'name'  => 'project_sector_sub_other',
                         'disabled' => 'disabled',
-                        'value' => $project["subsector_other"]
+                        'value' => set_value('project_sector_sub_other', $project["subsector_other"])
                     ),
                     'lbl_project_budget_max' => array(
                         'class' => 'left_label' 
@@ -82,7 +82,7 @@
                         'id'    => 'project_budget_max',
                         'name'  => 'project_budget_max',
 //                      'value' => CURRENCY.$project["totalbudget"]
-                        'value' => $project["totalbudget"]
+                        'value' => set_value('project_budget_max', $project["totalbudget"])
                     ),
                     'lbl_project_financial' => array(
                         'class' => 'left_label'
@@ -94,7 +94,7 @@
                         'id'    => 'project_fs_other',
                         'name'  => 'project_fs_other',
                         'disabled' => 'disabled',
-                        'value' => $project["financialstructure_other"]
+                        'value' => set_value('project_fs_other', $project["financialstructure_other"])
                     ),
                     'lbl_stage_date' => array(
                         'class' => 'left_label' 
@@ -137,7 +137,7 @@
                     'project_developer' => array(
                         'id'    => 'project_developer',
                         'name'  => 'project_developer',
-                        'value' => $project["developer"]
+                        'value' => set_value('project_developer', $project["developer"])
                     ),
                     'lbl_project_sponsor' => array(
                         'class' => 'left_label' 
@@ -145,7 +145,7 @@
                     'project_sponsor' => array(
                         'id'    => 'project_sponsor',
                         'name'  => 'project_sponsor',
-                        'value' => $project["sponsor"]
+                        'value' => set_value('project_sponsor', $project["sponsor"])
                     )
                  );
         ?>
@@ -305,7 +305,7 @@
                                 <?php  
                                     $project_country_attr = 'id="project_country"';
                                     $project_country_options = country_dropdown();
-                                    echo form_dropdown('project_country', $project_country_options,$project["country"],$project_country_attr);
+                                    echo form_dropdown('project_country', $project_country_options, set_value('project_country', $project["country"]), $project_country_attr);
                                 ?>
                                 <div class="errormsg" id="err_project_country"><?php echo form_error("project_country"); ?></div>
                             </div>
@@ -415,15 +415,15 @@
                                 <?php
                                     $project_financial_attr = 'id="project_financial"';
                                     $project_financial_options = array(
-                                        ''          => lang('SelectOne'),
-                                        'Public'    => lang('Public'),
-                                        'Private'   => lang('Private'),
-                                        'PPP'       => lang('PPP'),
-                                        'Concession'=> lang('Concession'),
+                                        ''             => lang('SelectOne'),
+                                        'Public'       => lang('Public'),
+                                        'Private'      => lang('Private'),
+                                        'PPP'          => lang('PPP'),
+                                        'Concession'   => lang('Concession'),
                                         'Design–Build' => lang('Designb'),
-                                        'Other'     => lang('Other')
+                                        'Other'        => lang('Other')
                                     );
-                                    echo form_dropdown('project_financial', $project_financial_options,$project["financialstructure"],$project_financial_attr);
+                                    echo form_dropdown('project_financial', $project_financial_options, set_value('project_financial', $project["financialstructure"]), $project_financial_attr);
                                 ?>
                                 <div class="errormsg" id="err_project_financial"><?php echo form_error("project_financial"); ?></div>
                             </div>
