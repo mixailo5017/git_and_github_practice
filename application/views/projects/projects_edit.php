@@ -360,6 +360,7 @@
                                 <div class="errormsg" id="err_project_subsector"><?php echo form_error("project_sector_sub"); ?></div>
                             </div>
                             <div  style="display:none">
+                                <br>
                                 <?php echo form_label(lang("Other").":","project_sector_sub_other",$opt["project_form"]["lbl_project_sector_sub_other"]); ?>
                                 <?php echo form_input($opt["project_form"]["project_sector_sub_other"]); ?>
                                 <div class="errormsg" id="err_project_subsector_other"></div>
