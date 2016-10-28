@@ -400,7 +400,7 @@
                                     $project_stage_options = array_map("ucfirst", $project_stage_options);
                                     echo form_dropdown('project_stage', $project_stage_options, set_value('project_stage', $project["stage"]), $project_stage_attr);
                                 ?>
-                                <div class="errormsg" id="err_project_stage"></div>
+                                <div class="errormsg" id="err_project_stage"><?php echo form_error('project_stage') ?></div>
                             </div>
                             <br>
 
