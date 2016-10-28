@@ -333,7 +333,8 @@
                                     //$sector_last          = array();
                                     $sector_last            = array('class'=>'hardcode','text'=>'Other','value'=>'Other');
                                     
-                                    echo form_custom_dropdown('project_sector_main', $sector_options,$project["sector"],$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
+                                    // var_dump($sector_options); echo "\n"; var_dump(set_value('project_sector_main', $project["sector"])); die;
+                                    echo form_custom_dropdown('project_sector_main', $sector_options, set_value('project_sector_main', $project["sector"]),$project_sector_main_attr,$sector_opt,$sector_first,$sector_last);
                                 ?>
                                 <div class="errormsg" id="err_project_sector"><?php echo form_error("project_sector_main"); ?></div>
                             </div>
@@ -355,7 +356,7 @@
                                     }
                                     $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
                                     $subsector_last             = array('class'=>'hardcode other','value'=>'Other','text'=>'Other');
-                                    echo form_custom_dropdown('project_sector_sub', $subsector_options,$project["subsector"],$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
+                                    echo form_custom_dropdown('project_sector_sub', $subsector_options, set_value('project_sector_sub', $project["subsector"]),$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
                                 ?>
                                 <div class="errormsg" id="err_project_subsector"><?php echo form_error("project_sector_sub"); ?></div>
                             </div>
@@ -397,7 +398,7 @@
                                         'om'           => lang('om'),
                                     );
                                     $project_stage_options = array_map("ucfirst", $project_stage_options);
-                                    echo form_dropdown('project_stage', $project_stage_options,$project["stage"],$project_stage_attr);
+                                    echo form_dropdown('project_stage', $project_stage_options, set_value('project_stage', $project["stage"]), $project_stage_attr);
                                 ?>
                                 <div class="errormsg" id="err_project_stage"></div>
                             </div>

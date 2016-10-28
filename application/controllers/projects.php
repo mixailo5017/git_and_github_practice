@@ -572,12 +572,19 @@ class Projects extends CI_Controller
             $this->form_validation->set_rules('project_sector_main', lang('Sector'), 'required');
             $this->form_validation->set_rules('project_sector_sub', lang('Sub-Sector'), 'required');
             $this->form_validation->set_rules('project_budget_max', lang('TotalBudget'), 'integer|greater_than[-1]|required');
+            $this->form_validation->set_rules('project_stage', lang('Stage'), 'required');
             $this->form_validation->set_rules('project_developer', lang('Developer'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('project_sponsor', lang('Sponsor'), 'trim|callback_isCompleted_developer_sponsor');
             $this->form_validation->set_rules('website', lang('ProjectWebsite'), 'trim|prep_url|max_length[255]');
-
             $this->form_validation->set_rules('project_eststart', lang('Est.Start'), 'trim|callback_valid_monthyear_format|callback_valid_period');
             $this->form_validation->set_rules('project_estcompletion', lang('Est.Completion'), 'trim|callback_valid_monthyear_format|callback_valid_period');
+
+            // The following group of empty rules is required solely to work around a bug in CI 2
+            // which means that set_value will not return the value from POST if validation
+            // is in place but no rule is set for the specific field
+            $this->form_validation->set_rules('project_financial', lang('FinancialStructure'), '');
+            $this->form_validation->set_rules('project_fs_other', lang('Other'), '');
+
 
             if ($this->form_validation->run() === true) {
                 $this->projects_model->update_project($slug, $this->uid);
