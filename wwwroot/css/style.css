@@ -1015,6 +1015,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 #col5 img {
   margin: 0 20px 0 0;
 }
+
 #col5 .comment {
   color: #87898e;
   margin-top: 0;
@@ -2354,7 +2355,7 @@ div.olControlZoom a:hover {
   clear: both;
   background: #ccc;
   border-radius: 3px;
-  margin: 0 20px 0 170px;
+  margin: 10px 20px 10px 170px;
 }
 
 .left_label {
