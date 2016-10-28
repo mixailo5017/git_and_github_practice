@@ -272,7 +272,7 @@ if ( ! function_exists('form_custom_dropdown'))
 			}
 		}
 
-		if ($extra != '') $extra = ' '.$extra;
+        if ($extra != '') $extra = ' '.$extra;
 
 		$multiple = (count($selected) > 1 && strpos($extra, 'multiple') === FALSE) ? ' multiple="multiple"' : '';
 
@@ -288,14 +288,24 @@ if ( ! function_exists('form_custom_dropdown'))
 			$key = (string) $key;
 			$okey = isset($opt[$key]) ? $opt[$key] : '';
 			
-			$sel = (in_array($key, $selected)) ? ' selected="selected"' : '';
+			if (in_array(htmlspecialchars($key), $selected, true) || in_array($key, $selected, true)) {
+                $sel = ' selected="selected"';
+            } else {
+                $sel = '';
+            }
 
 			$form .= '<option value="'.$key.'"'.$sel.' '.$okey.'>'.(string) $val."</option>\n";
 		}
 		
 		if(count($last)> 0)
 		{
-			$form .= '<option value="'.$last['value'].'" class="'.$last['class'].'" >'.(string) $last['text']."</option>\n";
+			if ( in_array($last['value'], $selected) || in_array(htmlspecialchars($last['value']), $selected) ) {
+                $sel = ' selected="selected"';
+            } else {
+                $sel = '';
+            }
+
+            $form .= '<option value="'.$last['value'].'" class="'.$last['class'].'"'.$sel.' >'.(string) $last['text']."</option>\n";
 		}
 
 		$form .= '</select>';
