@@ -1,8 +1,7 @@
 <div id="profile_tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all project_form" style="display: block;">
 
 	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1"><?php echo lang('Maps');?></a></li><!-- lable like=> Maps / Geo-Tagging-->
-		<li class="ui-state-default ui-corner-top"><a href="#tabs-2"><?php echo lang('Engineering');?></a></li>
+		<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-2"><?php echo lang('Engineering');?></a></li>
 		<li class="ui-state-default ui-corner-top"><a href="#tabs-3"><?php echo lang('DesignIssues');?></a></li>
 		<li class="ui-state-default ui-corner-top"><a href="#tabs-4"><?php echo lang('Environment');?></a></li>
 		<li class="ui-state-default ui-corner-top"><a href="#tabs-5"><?php echo lang('OtherStudies');?></a></li>
@@ -302,49 +301,6 @@
 		</div>
 
 	</div>
-
-	<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-1" style="">
-			<div class="map_box clearfix">
-				<style type="text/css">
-					#project-map{
-						width: 745px;
-						height: 456px;
-					}
-				</style>
-
-				<div id="project-map" style="height: 456px; width: 745px;"></div>
-
-				<div class="clearfix">
-					<p class="left coord"><span class="geo"></span>
-						<strong>Project location:</strong> 
-						<span class="address">
-							<?php
-							if($project['projectdata']['location']!= ''){
-							?>
-							<?php
-								echo $project['projectdata']['location'];
-
-							} else {
-								echo "N/A";
-							}
-							echo "</span>";
-
-							if ($project['projectdata']['location']!= '') {
-							?>
-								<a class="edit_location toggleEdit">Edit location</a>
-								<a class="save_location" style="display: none;">Save</a>
-								<a class="cancel_location toggleEdit" style="display: none;">Cancel</a>
-							<?php
-							}
-							?>
-					</p>
-				</div>
-			</div>
-
-
-	</div>
-
-
 
 	<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3" style="">
 
@@ -960,8 +916,6 @@
 </div>
 
 <script>
-	var mapCoords = [<?php echo $project['projectdata']['lat'],',', $project['projectdata']['lng'];?>];
 	var isAdmin = true;
 	var slug = '<?php echo $slug; ?>';
-	var map_geom = <?php echo json_encode($map_geom); ?>;
 </script>

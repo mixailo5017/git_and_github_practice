@@ -2826,10 +2826,6 @@ class Projects extends CI_Controller
         $fundamentaldata['project'] = $this->projects_model->get_fundamental_data($slug, $this->uid);
         $fundamentaldata['project']['projectdata'] = $this->projects_model->get_project_data($slug, $this->uid);
         $fundamentaldata['main_content'] = 'projects/projects_fundamental';
-        
-
-        // get map draw objects
-        $fundamentaldata['map_geom'] = $this->projects_model->get_geom($fundamentaldata['project']['pid']);
 
         $this->breadcrumb->append_crumb(lang('B_PROJECTS'), '/projects');
         $this->breadcrumb->append_crumb($fundamentaldata['project']['projectname'] . ' (edit)', "/projects/$slug");
