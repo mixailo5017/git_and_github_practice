@@ -164,6 +164,12 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 	.tooltip{background:url(#{$site}icon_question_mark.png) no-repeat;width:24px;height: 24px;position: absolute;left:503px;top:16px;display: inline-block;}
 }
 
+#profile_tabs{
+	label{position:relative;}
+	.tooltip{background:url(#{$site}icon_question_mark.png) center no-repeat;padding: 0px;width:24px;height: 24px;position: absolute;left:540px;top:4px;display: inline-block;}
+	#project_form_upload .tooltip {top: 25px;}
+}
+
 .tip-yellowsimple {z-index:1000;text-align:left;border:1px solid #c7bf93;border-radius:4px;padding:6px 8px;min-width:50px;max-width:300px;color:#000;background-color:#fff9c9;
 
 	 // - If you set a background-image, border/padding/background-color will be ingnored.
@@ -334,8 +340,10 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 	label { font-weight: bold; }
 	#title_input { width:600px !important;border:1px solid #ddd;}
 	textarea,  input[type="text"], input[type="file"],  .matrix_dropdown select { padding: 8px;  border-radius: 3px; width: 345px; margin-bottom: 10px; border:1px solid #B3B8C1; }
-	input.light_green, input.light_red, input.light_gray, button.light_green, button.light_red, button.light_gray { width: inherit; padding: 7px 24px; margin: 10px 0 0 120px; min-width:90px; }
-	textarea { height: 100px; width: 510px; margin-bottom: 38px; }
+	input.light_green, input.light_red, input.light_gray, button.light_green, button.light_red, button.light_gray { width: inherit; padding: 7px 24px; margin: 10px 0 0 250px; min-width:90px; }
+	textarea { height: 100px; width: 510px; margin-bottom: 38px; 
+		&[name='project_overview'] { margin-bottom: 50px;}
+	}
 	.project { border: 1px solid #b3b8c1;border-radius: 3px;  margin-bottom: 12px;
 		&:hover { background: #f1f1f3; }
 		img { margin: 4px 14px 4px 4px; }
@@ -904,11 +912,11 @@ $bllw: $llwide+20;
 #projects .left_label {width: 150px;}
 #projects hr {margin: 30px 0;clear:both;}
 #projects span{
-	&.note {display: block;@include rem(1.1);color: #535760;}
-	&.example{display: block;@include rem(1.1);color: #535760;}
+	&.note {margin-top: -5px;display: block;@include rem(1.1);color: #535760;}
+	&.example{margin-bottom: 30px;width: 360px;word-wrap: break-word;display: block;@include rem(1.1);color: #535760;}
 }
 
-#projects .image_placeholder {width:150px;height:150px;float:left;background: #ccc;border-radius: 3px;margin-right:20px;}
+#projects .image_placeholder {width:150px;height:150px;float:left;clear:both;background: #ccc;border-radius: 3px;margin: 10px 20px 10px 170px;}
 .left_label {font-weight: normal !important;}
 .above_label {display: block;font-weight: normal !important;}
 .permissions_block {
