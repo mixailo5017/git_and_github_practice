@@ -22,3 +22,6 @@ wwwroot/images/store/**
 
 # Mac OSX system files
 .DS_Store
+
+# Build artefacts
+wwwroot/.sass-cache/**
