@@ -1,0 +1,25 @@
+{
+  "name": "gvip",
+  "version": "1.0.0",
+  "description": "Transition from LMO to internal front-end dev tools",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gvipio/gvip.git"
+  },
+  "keywords": [
+    "gvip"
+  ],
+  "author": "Michael Pavey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gvipio/gvip/issues"
+  },
+  "homepage": "https://github.com/gvipio/gvip#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
