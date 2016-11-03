@@ -12,5 +12,5 @@ gulp.task('compass', function() {
       css: 'css',
       sass: 'css/sass'
     }))
-    .pipe(gulp.dest('tmp'));
+    .pipe(gulp.dest('css'));
 });
