@@ -1,0 +1,62 @@
+@@include('../partials/header-top.html')
+<body class="onboarding add-profile">
+@@include('../partials/header.html')
+
+<section class="main-content container">
+	<h1 class="h1-xl">Add Profile Info</h1>
+	<p>You're moving right along! Please add your profile information.</p>
+
+@@include('../partials/reg-progress.html')
+
+	<div class="form-cta">
+		<div class="interior">
+			
+			<h2 class="h3-std">Profile Information.</h2>
+			<div class="down-arrow"></div>
+			<p>Please add your profile information.</p>	
+
+			<form action="#" method="post" accept-charset="utf-8" id="member_form" name="join_network" class="form">
+				<div class="anchor">         
+		            <label for="f1" class="left_label">First Name:</label>
+	                <input type="text" name="member_first_name" value="" id="f1" placeholder=""><div class="errormsg"></div>
+		        </div>
+
+		        <div class="anchor">
+		            <label for="f2" class="left_label">Last Name:</label>
+		            <input type="text" name="member_last_name" value="" id="f2" placeholder=""><div class="errormsg"></div>
+		        </div>
+
+		        <div class="anchor">
+		            <label for="f3" class="left_label">Title:</label>
+	            	<input type="text" name="title" value="" id="f3" placeholder=""><div class="errormsg"></div>
+		        </div>
+
+		        <div class="anchor">
+		            <label for="f4" class="left_label">Organization:</label>
+	                <input type="text" name="member_organization" value="" id="f4" placeholder=""><div class="errormsg"></div>
+		        </div>
+
+		        <div class="anchor">
+		            <label for="f5" class="left_label">Country:</label>
+	                <input type="text" name="member_country" value="" id="f5" placeholder=""><div class="errormsg"></div>
+		        </div>
+				<p>You're almost there! It's time to create a password.</p>
+		        <div class="anchor">
+		            <label for="f6" class="left_label">Password:</label>
+	                <input type="password" name="register_password" value="" id="f6" placeholder="" ><div class="errormsg"></div>
+		        </div>
+
+		        <div class="anchor">
+		            <label for="f7" class="left_label">Confirm:</label>
+		            <input type="password" name="password_confirm" value="" id="f7" placeholder="">
+		            <div class="errormsg"></div>
+		        </div>
+		        <div class="form-buttons">
+		        	<input type="reset" name="back" value="Back" class="btn std clear" value="Back" />
+		            <input type="submit" name="create_submit" class="btn std lt-green" value="Next" />
+		        </div>
+		    </form>
+		    </div>
+	    </div>
+</section>
+@@include('../partials/footer.html')

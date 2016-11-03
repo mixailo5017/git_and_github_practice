@@ -1,0 +1,1001 @@
+ /*doc
+---
+title: Testimonials
+name: testimonials
+category: Front Page Components
+---
+
+Testimonials can use either of the markup schemes listed below.
+
+```html_example
+<div class="m-testimonial">
+	<figure class="photo">
+		<img src="../../images/new/testimonial3.png" width="100" height="100">
+	</figure>
+	<blockquote class="quote">
+		<p>“Finally our industry has its own social business platform, this is really great!”</p>
+        <footer>
+        	<p><span>Walter Kemmsies</span>Chief Economist, Moffatt &amp; Nichol Engineers</p>
+        </footer>
+	</blockquote>
+</div>
+
+<div class="m-testimonial">
+	<figure class="photo">
+		<img src="../../images/new/testimonial3.png" width="100" height="100">
+	</figure>
+	<blockquote class="quote">
+		<p>“Finally our industry has its own social business platform, this is really great!”</p>
+        <footer>
+        	<p><span>Walter Kemmsies</span>Chief Economist, Moffatt &amp; Nichol Engineers</p>
+        </footer>
+	</blockquote>
+</div>
+
+<ul>
+	<li class="m-testimonial">
+		<figure class="photo">
+			<img src="../../images/new/testimonial3.png" width="100" height="100">
+		</figure>
+		<blockquote class="quote">
+			<p>“Finally our industry has its own social business platform, this is really great!”</p>
+	        <footer>
+	        	<p><span>Walter Kemmsies</span>Chief Economist, Moffatt &amp; Nichol Engineers</p>
+	        </footer>
+		</blockquote>
+	</li>
+	<li class="m-testimonial">
+		<figure class="photo">
+			<img src="../../images/new/testimonial3.png" width="100" height="100">
+		</figure>
+		<blockquote class="quote">
+			<p>“Finally our industry has its own social business platform, this is really great!”</p>
+	        <footer>
+	        	<p><span>Walter Kemmsies</span>Chief Economist, Moffatt &amp; Nichol Engineers</p>
+	        </footer>
+		</blockquote>
+	</li>
+</ul>
+
+```
+*/
+ 
+.btn{margin-bottom: 5px; display:inline-block;}
+
+
+/*doc
+---
+title: Call to Action
+name: cta
+category: Front Page Components
+---
+
+
+
+```html_example 
+<div class="green cta-box">
+    <h3 class="h3-std">Connect with Global Expertise</h3>
+    <p>Build a powerful community of infrastructure experts — bring the global expert community, public and private, to your fingertips, your dashboard, whenever you want.</p>
+</div>
+
+<div class="cta-box green-alt">
+    <h3 class="h3-std">Connect with Global Expertise</h3>
+    <p>Build a powerful community of infrastructure experts — bring the global expert community, public and private, to your fingertips, your dashboard, whenever you want.</p>
+</div>
+
+<div class="m-cta-box cta-box blue">
+    <h1 class="cta-title">Connect with Global Expertise</h1>
+    <p>Build a powerful community of infrastructure experts — bring the global expert community, public and private, to your fingertips, your dashboard, whenever you want.</p>
+</div> 
+ ```  
+*/
+
+
+/*doc
+---
+title: Project Cards
+name: cards
+category: Front Page Components
+---
+
+Project cards are inactive at 50% scale and opacity by default. Adding the 'Active' class will make them display full size. 
+Position information is set with an additional class on 'article'. In this case, card-1, card-2, and card-3 are used.
+
+Active:
+
+```html_example
+<div class="holo-cards-display">
+	<article class="active card">
+		<div class="card-interior">
+		    <h4 class="h3-std">Street Lighting PPP</h4>
+		    <div class="img">
+		        <span class="badge power"><span></span></span>
+		        <img src="/images/new/lights.jpg">
+		    </div>
+		    <ul class="stats">
+		        <li class="figure">440</li>
+		        <li class="labels">
+		            <p>mm</p>
+		            <p class="currency">USD</p>
+		        </li>
+		    </ul>
+		    <dl>
+		        <dt>Stage:</dt>
+		        <dd>Planning</dd>
+		        <dt>Location:</dt>
+		        <dd>Belo Horizonte, Brazil</dd>
+		        <dt>Sector:</dt>
+		        <dd>Energy</dd>
+		    </dl>
+		</div>
+	</article>
+	<article class="card active">
+        <div class="card-interior">
+            <h4 class="h3-std">New Airport in Mexico City</h4>
+            <div class="img">
+                <span class="badge logistics"><span></span></span>
+                <img src="/images/new/airfield.jpg" width="250" height="175" />
+            </div>
+            <ul class="stats">
+                <li class="figure">4000</li>
+                <li class="labels">
+                    <p>mm</p>
+                    <p class="currency">USD</p>
+                </li>
+            </ul>
+            <dl>
+                <dt>Stage:</dt>
+                <dd>Planning</dd>
+                <dt>Location:</dt>
+                <dd>Mexico City, Mexico</dd>
+                <dt>Sector:</dt>
+                <dd>Airports and Logistics</dd>
+            </dl>
+        </div>
+    </article>
+    <article class="card active">
+        <div class="card-interior">
+            <h4 class="h3-std">Oakajee Port</h4>
+            <div class="img">
+                <span class="badge logistics"><span></span></span>
+                <img src="/images/new/ship.jpg" width="250" height="175" />
+            </div>
+            <ul class="stats">
+                <li class="figure">3400</li>
+                <li class="labels">
+                    <p>mm</p>
+                    <p class="currency">USD</p>
+                </li>
+            </ul>
+            <dl>
+                <dt>Stage:</dt>
+                <dd>Planning</dd>
+                <dt>Location:</dt>
+                <dd>Western Australia</dd>
+                <dt>Sector:</dt>
+                <dd>Ports and Logistics</dd>
+            </dl>
+        </div>
+    </article>
+</div>
+```
+
+Inactive:
+
+```html_example
+<div class="holo-cards-display">
+	<article class="card">
+		<div class="card-interior">
+		    <h4 class="h3-std">Street Lighting PPP</h4>
+		    <div class="img">
+		        <span class="badge power"><span></span></span>
+		        <img src="/images/new/lights.jpg">
+		    </div>
+		    <ul class="stats">
+		        <li class="figure">440</li>
+		        <li class="labels">
+		            <p>mm</p>
+		            <p class="currency">USD</p>
+		        </li>
+		    </ul>
+		    <dl>
+		        <dt>Stage:</dt>
+		        <dd>Planning</dd>
+		        <dt>Location:</dt>
+		        <dd>Belo Horizonte, Brazil</dd>
+		        <dt>Sector:</dt>
+		        <dd>Energy</dd>
+		    </dl>
+		</div>
+	</article>
+	<article class="card">
+        <div class="card-interior">
+            <h4 class="h3-std">New Airport in Mexico City</h4>
+            <div class="img">
+                <span class="badge logistics"><span></span></span>
+                <img src="/images/new/airfield.jpg" width="250" height="175" />
+            </div>
+            <ul class="stats">
+                <li class="figure">4000</li>
+                <li class="labels">
+                    <p>mm</p>
+                    <p class="currency">USD</p>
+                </li>
+            </ul>
+            <dl>
+                <dt>Stage:</dt>
+                <dd>Planning</dd>
+                <dt>Location:</dt>
+                <dd>Mexico City, Mexico</dd>
+                <dt>Sector:</dt>
+                <dd>Airports and Logistics</dd>
+            </dl>
+        </div>
+    </article>
+    <article class="card">
+        <div class="card-interior">
+            <h4 class="h3-std">Oakajee Port</h4>
+            <div class="img">
+                <span class="badge logistics"><span></span></span>
+                <img src="/images/new/ship.jpg" width="250" height="175" />
+            </div>
+            <ul class="stats">
+                <li class="figure">3400</li>
+                <li class="labels">
+                    <p>mm</p>
+                    <p class="currency">USD</p>
+                </li>
+            </ul>
+            <dl>
+                <dt>Stage:</dt>
+                <dd>Planning</dd>
+                <dt>Location:</dt>
+                <dd>Western Australia</dd>
+                <dt>Sector:</dt>
+                <dd>Ports and Logistics</dd>
+            </dl>
+        </div>
+    </article>
+</div>
+```
+
+*/
+
+
+/*doc
+---
+title: Form Wrapper
+name: form
+category: Form Components
+---
+
+<h3>Under Construction</h3>
+
+The code below is under revision to make the form sections more modular. This is pending review and will probably be
+implemented when we move forward with a full rebuild of the site.
+
+The wrapper itself is created with a pair of block-level elements with classes of 'm-form-wrap' and 'form-interior' to create
+the proper layout. Additional form styles are contained within the form itself, so long as it's given a class of
+'form'.
+
+```html_example
+<div class="m-form-wrap">
+    <div class="form-interior">
+        <form action="#" method="post" accept-charset="utf-8" name="Example_form" class="form">
+        	<div class="form-item">
+        		<label for="example" class="left_label">Example:</label>
+				<input type="text" name="example" placeholder="This is a basic example" />
+				<div class="errormsg"><label>This is the error message. It will appear when something goes wrong.</label></div>
+			</div>
+        </form>
+    </div>
+</div>
+```
+
+<h3>Registration Form Examples</h3>
+
+```html_example
+<div class="m-form-wrap">
+    <div class="form-interior">
+        <form action="javascript:alert('Login Form');" method="post" accept-charset="utf-8" name="login_form" class="form"><div class="error-head">Error. Something's messed up.</div>
+            <div class="form-item">
+                <label for="email" class="left_label">Email:</label>
+                <input type="email" name="email" value="" placeholder="" autocomplete="off" >
+                <div class="errormsg"><label>Error. @aol.com is not an email address.</label></div>
+            </div>
+            <div class="form-item">
+                <label for="password" class="left_label">Password:</label>
+                <input type="password" name="password" value="" placeholder="" autocomplete="off">
+                <div class="errormsg"><label>Error. You forgot your password, didn't you?</label></div>
+            </div>
+            <div class="form-meta field-align form-item">
+                <div class="split-left"><input type="checkbox" name="remember" checked="checked">Remember Me</div>
+                <div class="split-right"><a href="/password/remind">Forgot your password?</a></div>
+            </div>
+            <div class="form-buttons field-align">
+                <input type="submit" value="Sign In" class="btn std lt-blue">
+            </div>
+        </form>        
+    </div>
+</div>
+
+<hr />
+
+<div class="m-form-wrap">
+    <div class="form-interior">
+        <form action="javascript:alert('Sign Up');" method="post" accept-charset="utf-8" name="signup_start" class="">
+        <div class="error-head">Error. Not sure how this page will generate an error.</div>
+            <h2 class="h3-std m-align-center">Are you a project developer?</h2>
+            <div class="form-item">
+                <label>
+                    <span class="input"><input type="radio" name="is_developer" value="1">
+                    </span> <span class="dialogue">Yes. I belong to a project owner organization and manage one or more projects.</span>
+                </label>
+            </div>
+            <div class="form-item">
+                <label>
+                    <span class="input"><input type="radio" name="is_developer" value="0" checked="checked">
+                    </span> <span class="dialogue">No. I help make projects happen from the other side.</span>
+                </label>
+                <div class="errormsg"></div>
+            </div>
+           	<div class="form-item m-align-center form-desc">
+            	<p>Everyone gets the full GViP experience.<br>Understanding your role helps us customize GViP to your needs.</p>
+            </div>
+            <div class="form-buttons m-align-center">
+                <input type="submit" name="linkedin" class="btn icon-linkedin lt-blue" value="Get my info from LinkedIn">
+                <input type="submit" name="manual" class="btn std dk-green" value="I'll type it in">
+            </div>
+        </form>        
+    </div>
+</div>
+
+<hr />
+
+<div class="m-form-wrap">
+    <div class="form-interior">
+        <form action="javascript:alert('Registration Form');" method="post" accept-charset="utf-8" name="signup_edit" class="form">
+            <div class="error-head">Error. Something went wrong.</div>
+
+            <div class="form-item">
+                <label for="firstname" class="left_label">First Name:</label>
+                <input type="text" name="firstname" value="adsfjhadsfj" id="firstname" placeholder="" style="cursor: auto; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHklEQVQ4EaVTO26DQBD1ohQWaS2lg9JybZ+AK7hNwx2oIoVf4UPQ0Lj1FdKktevIpel8AKNUkDcWMxpgSaIEaTVv3sx7uztiTdu2s/98DywOw3Dued4Who/M2aIx5lZV1aEsy0+qiwHELyi+Ytl0PQ69SxAxkWIA4RMRTdNsKE59juMcuZd6xIAFeZ6fGCdJ8kY4y7KAuTRNGd7jyEBXsdOPE3a0QGPsniOnnYMO67LgSQN9T41F2QGrQRRFCwyzoIF2qyBuKKbcOgPXdVeY9rMWgNsjf9ccYesJhk3f5dYT1HX9gR0LLQR30TnjkUEcx2uIuS4RnI+aj6sJR0AM8AaumPaM/rRehyWhXqbFAA9kh3/8/NvHxAYGAsZ/il8IalkCLBfNVAAAAABJRU5ErkJggg==); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat;">
+                <div class="errormsg">Error, not your first name</div>
+            </div>
+
+            <div class="form-item">
+                <label for="lastname" class="left_label">Last Name:</label>
+                <input type="text" name="lastname" value="jhasjfhasjh" id="lastname" placeholder="">
+                <div class="errormsg">Error, not your last name</div>
+            </div>
+
+            <div class="form-item">
+                <label for="title" class="left_label">Job Title:</label>
+                <input type="text" name="title" value="ajfhajsdfhasdjh" id="title" placeholder="">
+                <div class="errormsg">Error, not your job</div>
+            </div>
+
+            <div class="form-item">
+                <label for="organization" class="left_label">Organization:</label>
+                <input type="text" name="organization" value="jhjkhdjashdf" id="organization" placeholder="">
+                <div class="errormsg">Error, not your organization</div>
+            </div>
+
+            <div class="form-item">
+                <label for="country" class="left_label">Country:</label>
+                <select name="country" id="country">
+					<option value="">- Select Country -</option>
+					<option value="United States">United States</option>
+					<option value="Afghanistan">Afghanistan</option>
+					<option value="Albania">Albania</option>
+					<option value="Algeria">Algeria</option>
+					<option value="Andorra">Andorra</option>
+					<option value="Angola">Angola</option>
+					<option value="Antigua &amp; Deps">Antigua &amp; Deps</option>
+					<option value="Argentina">Argentina</option>
+					<option value="Armenia">Armenia</option>
+					<option value="Australia">Australia</option>
+					<option value="Austria">Austria</option>
+					<option value="Azerbaijan">Azerbaijan</option>
+					<option value="Bahamas">Bahamas</option>
+					<option value="Bahrain">Bahrain</option>
+					<option value="Bangladesh">Bangladesh</option>
+					<option value="Barbados">Barbados</option>
+					<option value="Belarus">Belarus</option>
+					<option value="Belgium">Belgium</option>
+					<option value="Belize">Belize</option>
+					<option value="Benin">Benin</option>
+					<option value="Bhutan">Bhutan</option>
+					<option value="Bolivia">Bolivia</option>
+					<option value="Bosnia Herzegovina">Bosnia Herzegovina</option>
+					<option value="Botswana">Botswana</option>
+					<option value="Brazil">Brazil</option>
+					<option value="Brunei">Brunei</option>
+					<option value="Bulgaria">Bulgaria</option>
+					<option value="Burkina">Burkina</option>
+					<option value="Burundi">Burundi</option>
+					<option value="Cambodia">Cambodia</option>
+					<option value="Cameroon">Cameroon</option>
+					<option value="Canada">Canada</option>
+					<option value="Cape Verde">Cape Verde</option>
+					<option value="Central African Rep">Central African Rep</option>
+					<option value="Chad">Chad</option>
+					<option value="Chile">Chile</option>
+					<option value="China">China</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Comoros">Comoros</option>
+					<option value="Congo">Congo</option>
+					<option value="Congo {Democratic Rep}">Congo {Democratic Rep}</option>
+					<option value="Costa Rica">Costa Rica</option>
+					<option value="Croatia">Croatia</option>
+					<option value="Cuba">Cuba</option>
+					<option value="Cyprus">Cyprus</option>
+					<option value="Czech Republic">Czech Republic</option>
+					<option value="Denmark">Denmark</option>
+					<option value="Djibouti">Djibouti</option>
+					<option value="Dominica">Dominica</option>
+					<option value="Dominican Republic">Dominican Republic</option>
+					<option value="East Timor">East Timor</option>
+					<option value="Ecuador">Ecuador</option>
+					<option value="Egypt">Egypt</option>
+					<option value="El Salvador">El Salvador</option>
+					<option value="Equatorial Guinea">Equatorial Guinea</option>
+					<option value="Eritrea">Eritrea</option>
+					<option value="Estonia">Estonia</option>
+					<option value="Ethiopia">Ethiopia</option>
+					<option value="Fiji">Fiji</option>
+					<option value="Finland">Finland</option>
+					<option value="France">France</option>
+					<option value="Gabon">Gabon</option>
+					<option value="Gambia">Gambia</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Germany">Germany</option>
+					<option value="Ghana">Ghana</option>
+					<option value="Greece">Greece</option>
+					<option value="Grenada">Grenada</option>
+					<option value="Guatemala">Guatemala</option>
+					<option value="Guinea">Guinea</option>
+					<option value="Guinea-Bissau">Guinea-Bissau</option>
+					<option value="Guyana">Guyana</option>
+					<option value="Haiti">Haiti</option>
+					<option value="Honduras">Honduras</option>
+					<option value="Hungary">Hungary</option>
+					<option value="Iceland">Iceland</option>
+					<option value="India">India</option>
+					<option value="Indonesia">Indonesia</option>
+					<option value="Iran">Iran</option>
+					<option value="Iraq">Iraq</option>
+					<option value="Ireland {Republic}">Ireland {Republic}</option>
+					<option value="Israel">Israel</option>
+					<option value="Italy">Italy</option>
+					<option value="Ivory Coast">Ivory Coast</option>
+					<option value="Jamaica">Jamaica</option>
+					<option value="Japan">Japan</option>
+					<option value="Jordan">Jordan</option>
+					<option value="Kazakhstan" selected="selected">Kazakhstan</option>
+					<option value="Kenya">Kenya</option>
+					<option value="Kiribati">Kiribati</option>
+					<option value="Korea North">Korea North</option>
+					<option value="Korea South">Korea South</option>
+					<option value="Kosovo">Kosovo</option>
+					<option value="Kuwait">Kuwait</option>
+					<option value="Kyrgyzstan">Kyrgyzstan</option>
+					<option value="Laos">Laos</option>
+					<option value="Latvia">Latvia</option>
+					<option value="Lebanon">Lebanon</option>
+					<option value="Lesotho">Lesotho</option>
+					<option value="Liberia">Liberia</option>
+					<option value="Libya">Libya</option>
+					<option value="Liechtenstein">Liechtenstein</option>
+					<option value="Lithuania">Lithuania</option>
+					<option value="Luxembourg">Luxembourg</option>
+					<option value="Macedonia">Macedonia</option>
+					<option value="Madagascar">Madagascar</option>
+					<option value="Malawi">Malawi</option>
+					<option value="Malaysia">Malaysia</option>
+					<option value="Maldives">Maldives</option>
+					<option value="Mali">Mali</option>
+					<option value="Malta">Malta</option>
+					<option value="Marshall Islands">Marshall Islands</option>
+					<option value="Mauritania">Mauritania</option>
+					<option value="Mauritius">Mauritius</option>
+					<option value="Mexico">Mexico</option>
+					<option value="Micronesia">Micronesia</option>
+					<option value="Moldova">Moldova</option>
+					<option value="Monaco">Monaco</option>
+					<option value="Mongolia">Mongolia</option>
+					<option value="Montenegro">Montenegro</option>
+					<option value="Morocco">Morocco</option>
+					<option value="Mozambique">Mozambique</option>
+					<option value="Myanmar, {Burma}">Myanmar, {Burma}</option>
+					<option value="Namibia">Namibia</option>
+					<option value="Nauru">Nauru</option>
+					<option value="Nepal">Nepal</option>
+					<option value="Netherlands">Netherlands</option>
+					<option value="New Zealand">New Zealand</option>
+					<option value="Nicaragua">Nicaragua</option>
+					<option value="Niger">Niger</option>
+					<option value="Nigeria">Nigeria</option>
+					<option value="Norway">Norway</option>
+					<option value="Oman">Oman</option>
+					<option value="Pakistan">Pakistan</option>
+					<option value="Palau">Palau</option>
+					<option value="Panama">Panama</option>
+					<option value="Papua New Guinea">Papua New Guinea</option>
+					<option value="Paraguay">Paraguay</option>
+					<option value="Peru">Peru</option>
+					<option value="Philippines">Philippines</option>
+					<option value="Poland">Poland</option>
+					<option value="Portugal">Portugal</option>
+					<option value="Qatar">Qatar</option>
+					<option value="Romania">Romania</option>
+					<option value="Russian Federation">Russian Federation</option>
+					<option value="Rwanda">Rwanda</option>
+					<option value="St Kitts &amp; Nevis">St Kitts &amp; Nevis</option>
+					<option value="St Lucia">St Lucia</option>
+					<option value="Saint Vincent &amp; the Grenadines">Saint Vincent &amp; the Grenadines</option>
+					<option value="Samoa">Samoa</option>
+					<option value="San Marino">San Marino</option>
+					<option value="Sao Tome &amp; Principe">Sao Tome &amp; Principe</option>
+					<option value="Saudi Arabia">Saudi Arabia</option>
+					<option value="Senegal">Senegal</option>
+					<option value="Serbia">Serbia</option>
+					<option value="Seychelles">Seychelles</option>
+					<option value="Sierra Leone">Sierra Leone</option>
+					<option value="Singapore">Singapore</option>
+					<option value="Slovakia">Slovakia</option>
+					<option value="Slovenia">Slovenia</option>
+					<option value="Solomon Islands">Solomon Islands</option>
+					<option value="Somalia">Somalia</option>
+					<option value="South Africa">South Africa</option>
+					<option value="South Sudan">South Sudan</option>
+					<option value="Spain">Spain</option>
+					<option value="Sri Lanka">Sri Lanka</option>
+					<option value="Sudan">Sudan</option>
+					<option value="Suriname">Suriname</option>
+					<option value="Swaziland">Swaziland</option>
+					<option value="Sweden">Sweden</option>
+					<option value="Switzerland">Switzerland</option>
+					<option value="Syria">Syria</option>
+					<option value="Taiwan">Taiwan</option>
+					<option value="Tajikistan">Tajikistan</option>
+					<option value="Tanzania">Tanzania</option>
+					<option value="Thailand">Thailand</option>
+					<option value="Togo">Togo</option>
+					<option value="Tonga">Tonga</option>
+					<option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option>
+					<option value="Tunisia">Tunisia</option>
+					<option value="Turkey">Turkey</option>
+					<option value="Turkmenistan">Turkmenistan</option>
+					<option value="Tuvalu">Tuvalu</option>
+					<option value="Uganda">Uganda</option>
+					<option value="Ukraine">Ukraine</option>
+					<option value="United Arab Emirates">United Arab Emirates</option>
+					<option value="United Kingdom">United Kingdom</option>
+					<option value="Uruguay">Uruguay</option>
+					<option value="Uzbekistan">Uzbekistan</option>
+					<option value="Vanuatu">Vanuatu</option>
+					<option value="Vatican City">Vatican City</option>
+					<option value="Venezuela">Venezuela</option>
+					<option value="Vietnam">Vietnam</option>
+					<option value="Yemen">Yemen</option>
+					<option value="Zambia">Zambia</option>
+					<option value="Zimbabwe">Zimbabwe</option>
+				</select>                    
+			<div class="errormsg">Error, not your country</div>
+            </div>
+
+            <div class="form-item">
+                <label for="email" class="left_label">Email:</label>
+                <input type="email" name="email" value="me@ajfjhaf.net" id="email" placeholder="">
+                <div class="errormsg">Error, not your email</div>
+            </div>
+
+            <div class="form-item">
+                <label for="password" class="left_label">Password:</label>
+                <input type="password" name="password" id="password">
+                <div class="errormsg">Error, 'password' is not a password</div>
+            </div>
+
+            <div class="form-item">
+                <label for="password_confirmation" class="left_label">Confirm password:</label>
+                <input type="password" name="password_confirmation" id="password_confirmation">
+                <div class="errormsg">Error, you speled password wrong</div>
+            </div>
+
+            <div class="form-buttons m-align-right">
+                <a href="#" class="btn std clear">Back</a>
+                <input type="submit" name="submit" class="btn std dk-green" value="Next">
+            </div>
+        </form>        
+    </div>
+</div>
+
+<hr />
+
+<div class="m-form-wrap">
+    <div class="form-interior">
+        <div class="error-head">Error: File must be a 'jpg', 'png', or 'gif'</div>
+        	<form action="http://gvip.local/signup/pickphoto" method="post" accept-charset="utf-8" name="signup_photo" class="form" enctype="multipart/form-data">  
+            <div id="zone" class="filedrop signup-info">
+                <p class="progress"><span id="bar_zone"></span></p>
+                <div class="crop-zone">
+                    <div class="crop-wrap">
+                    	<img src="/cache/made/images/site/profile_image_placeholder_198_198_ffffff_all_3_s_c1.png" alt="Expert's photo">
+                	</div>
+                    <div class="crop-controls" style="visibility: visible !important; display: none !important;">                            
+                        <button class="btn ico lt-blue" data-method="rotate" data-option="-90" id="rotateLeft" original-title="Rotate Left" type="button"><span class="icon icon-rotate-left"></span></button>
+                        <button class="btn ico lt-blue" data-method="rotate" data-option="90" id="rotateRight" original-title="Rotate Right" type="button"><span class="icon icon-rotate-right"></span></button>   
+                    </div>
+                    <div class="crop-confirm" style="visibility: visible !important; display: none !important;">
+                        <button class="btn std" data-method="remove" data-option="true" id="removeImage" type="button">Remove Image</button>
+                        <button class="btn std" data-method="none" id="saveImage" type="button">Save Image</button>
+                    </div>
+                </div>
+                <footer class="drop-meta m-align-center">
+                    <p class="inst">Drop an image file here to upload<br>or</p>
+                    <input type="button" class="btn std input-file" data-id="userphoto" value="Select File">
+                    <div id="basicUpload" style="display: none; padding: 10px;">
+                        <div class="form-buttons centered">
+                        	<div class="file-upload btn">
+                        		<span>Select File</span>
+                            	<input type="file" name="fd-file">
+                        	</div>
+                        	<input type="submit" name="upload_photo" id="upload_photo" value="Upload Image" class="btn dk-green">
+                    	</div>
+                    </div>
+                    <p class="subline">Supported file types: JPEG, GIF, PNG. Max file size is 5MB.</p>
+                </footer>
+            </div>                
+            <div class="form-buttons m-align-center">
+                <a href="#" class="btn std clear">Back</a>
+                <a href="#" class="btn std dk-green" >Next</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<div class="m-form-wrap">
+    <div class="form-interior">         
+        <form action="#" method="post" accept-charset="utf-8" id="member_form" name="join_network" class="form">
+        <p>You can update your profile information at any time from your Account Settings.</p>
+        <div class="confirm-info">
+                <div class="cropped-photo">
+                <img src="/cache/made/images/signup/3b0e870c56b0efa99d6ddd4e2072249e_198_198_ffffff_all_3_s_c1.png" alt="Expert's photo">
+                </div>
+                <div class="review">
+                    <table>
+                        <tr>
+                            <th>First Name:</th>
+                            <td>Walter</td>
+                        </tr>
+                        <tr>
+                            <th>Last Name:</th>
+                            <td>White</td>
+                        </tr>
+                        <tr>
+                            <th>Title:</th>
+                            <td>Heisenberg</td>
+                        </tr>
+                        <tr>
+                            <th>Organization:</th>
+                            <td>Vamanos Pest Control</td>
+                        </tr>
+                        <tr>
+                            <th>Country:</th>
+                            <td>New Mexico</td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td>heisenberg@aol.com</td>
+                        </tr>
+                	</table>
+                </div>
+            </div>
+            <div class="form-item form-buttons m-align-center">
+                <a href="/signup/pickphoto" class="btn std clear">Back</a>
+                <input type="submit" name="submit" class="btn std dk-green" value="Create Account">
+            </div>
+            <div class="form-desc m-align-right">By Clicking <strong>Create Account</strong> I agree to the <a href="/terms" target="_blank">Terms of Service</a> and <a href="/privacy" target="_blank">Privacy Policy</a></div>
+        </form>
+    </div>
+</div>
+
+```
+*/
+
+/*--
+	Form Modules
+	--*/
+.m-form-wrap {
+	width: 75%;
+	margin: 0 auto;
+	background: rgba(255,255,255,0.8);
+	border-radius: 10px;
+	border: 5px solid $lt-aqua-border;
+	box-shadow: inset 0.5px 0.9px 0 rgba(255, 255, 255, 0.6);
+
+	h2 {
+		margin-bottom: 20px;
+	}
+
+	.form-interior {
+		border: 1px solid $dk-aqua-border;
+		border-radius: 5px;
+		padding: 50px 10% 40px;
+
+		@include mq($max,$palm) {
+			word-wrap: break-word;
+			padding-bottom: 20px;
+		}
+	}
+	.form {
+		width: 100%;
+		margin: 0;
+
+		input[type='text'], input[type='email'], input[type='password'], select, option {
+			float: right;
+			width: 82.5%;
+			background: #FFF;
+			border: 1px solid $reg-form-border;
+			border-radius: 2px;
+			padding: 10px;
+			margin: 0px;
+			font-size: $font-size-sm;
+			font-family: 'Open Sans Bold';
+			color: $testimonial-gray;
+			box-shadow: 0 0 0 rgba(255,255,255,0);
+			transition: background .25s, border .25s, box-shadow .5s;
+
+			@include mq($max,$tablet) {
+				width: 72.5%;
+			}
+
+			@include mq($max,$palm) {
+				margin: 0 0 10px;
+				width: 100%;
+			}
+			
+			&[type="checkbox"] {
+				width: auto;
+				display: inline;
+				float: none;
+				margin: 0 5px;
+				position: relative;
+				bottom: 1px;
+			}
+		}
+
+	}
+
+	.form-item {
+		margin-bottom: 20px;
+		@include clearfix;
+	}
+
+	.form-desc {
+		font-size: $font-size-sm;
+
+	}
+
+	.form-meta {
+		font-size: $font-size-xsm;
+	}
+
+	.field-align {
+		width: 82%;
+		margin-left: 18%;
+		@include mq($max,$desktop) {
+			width: 83%;
+			margin-left: 17%;
+		}
+
+		@include mq($max,$tablet) {
+			width: 72.5%;
+			margin-left: 27.5%;
+		}
+
+		@include mq($max,$palm) {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.split-left {
+		text-align: left;
+		width: 49%;
+		@include mq($max,$desktop) {			
+			width: 48.5%;
+		}
+	}
+
+	.split-right {
+		text-align: right;
+		width: 49%;
+
+		@include mq($max,$desktop) {			
+			width: 48.5%;
+		}
+
+		a {
+			color: $cgla-blue;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.form-buttons {
+		text-align: left;
+		@include clearfix;
+
+		@include mq($max,$palm) {			
+			text-align: center!important;
+		}
+	}
+
+	.confirm-info {
+		padding: 30px 20px;
+		margin: 10px auto 20px;
+		@include clearfix;
+
+		.cropped-photo {
+			text-align: right;
+			padding: 3px 0;
+			@include span(4);
+
+			@include mq($max,$palm) {
+				@include span(12);
+				text-align: center;
+			}
+
+			img {
+				border-radius: 6px;
+			}
+		}
+
+		.review {
+			@include span(8 no-gutters);
+			margin: 0px auto;
+			border-radius: 6px;
+			//background: #FFF;
+			
+			@include mq($max,$palm) {
+				@include span(12);
+			}
+
+			table {
+				width: 100%;
+				font-size: $font-size-sm;
+			}
+
+			tr {
+			}
+
+			td {
+				@include span(7 no-gutters);
+				text-align: left;
+				font-weight: 700;
+				padding: 10px 10px 10px 0px;
+				vertical-align: middle;
+				font-family: 'Open Sans Bold', sans-serif;
+				@include mq($max,$desktop) {
+					@include span(6 no-gutters);
+				}
+
+				@include mq($max,$palm) {
+					text-align: center;
+					@include span(12);
+					padding: 0px 0px 12px 0px;
+				}
+			}
+
+			th {
+				@include span(4 no-gutters);
+				font-family: 'Open Sans', sans-serif;
+				font-weight: 400;
+				text-align: left;
+				padding: 10px 0px 10px 10px;			
+				vertical-align: middle;
+				word-break: break-word;
+				@include mq($max,$desktop) {
+					@include span(5 no-gutters);
+				}
+
+				@include mq($max,$palm) {
+					text-align: center;
+					@include span(12);
+					padding: 10px 0px 4px 0px;
+				}
+			}
+		}
+	}
+
+	/* Error Messages */
+	.error-head {
+		display: block;
+		color: #f30;
+		clear: both;	
+		font-weight: 700;
+		font-size: $font-size-lg;
+		font-family: 'Open Sans', sans-serif;
+		padding-left: 0;
+		text-align: center;
+		margin: 0px 0 10px;
+
+		p {
+			color: #f30;
+		}
+	}
+
+	.errormsg {
+		display: block;
+		clear: both;
+		color: #f30;
+		margin: 0px;
+		padding-top: 3px;
+		padding-left: 18%;
+		text-align: left;
+
+		&.country {
+			padding-top: 20px;
+		}
+
+		@include mq($max,$tablet) {
+			padding-left: 27.5%;
+		}
+
+		@include mq($max,$palm) {
+			padding-left: 0;
+		}
+
+		label {
+			width: 100%;
+			text-align: left;
+			margin: 0;
+			float: none;
+
+			@include mq($max,$palm) {
+				margin: 0 0 20px;
+				width: 100%!important;
+			}
+		}
+	}
+}
+
+.m-align-center {
+	text-align: center!important;
+}
+
+.m-align-right {
+	text-align: right!important;
+}
+
+
+.m-cta-box{
+	background:#999;
+}
+.cta-box{
+	
+	&:last-child{margin-right:0;}
+}
+
+.cta-title{
+	font-family: 'Open Sans Bold', sans-serif;
+	font-size: 1.75em;
+	line-height: 1.25em;
+	margin-bottom: 15px;
+}
+
+.holo-menuwrap {
+	width: 100%;
+	overflow: hidden;
+	height: 300px;
+}
+
+.holo-cards-display {
+	margin:0 -20px;
+}

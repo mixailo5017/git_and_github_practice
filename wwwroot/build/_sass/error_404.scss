@@ -1,0 +1,104 @@
+/*---------------------
+	404 Error
+----------------------*/
+@import "_vars.scss";
+@import "_mq.scss";
+@import "_typography.scss";
+
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: $personalize-bg;
+}
+
+.main-header {
+	position: relative;
+	z-index: 2;
+}
+
+.not-found
+{
+	width: 100%;
+	min-height: 100%;
+	margin: -50px 0 -130px;
+	padding-top: 50px;
+	background:url(#{$new-images}/404_bg.jpg) no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+
+	@include mq($max,$palm) {
+		background-size: contain;
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+}
+
+.nf-head {
+	border-radius: 250px;
+	border: dashed 3px #6ABA52;
+	color: #FFF;
+	font-family: 'Open Sans Bold', sans-serif;
+	font-size: 7.5em;
+	line-height: 2.5em;
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin: 50px auto 20px;
+
+	@include mq($max,$palm) {
+		width: 200px;
+		height: 200px;
+		font-size: 5.125em;
+		line-height: 2.3em;
+	}
+}
+
+.nf-message {
+	width: 550px;
+	padding: 40px 30px;
+	margin: 0 auto 20px;
+	background:url(#{$new-images}/404_text_bg.png) no-repeat;
+	background-position: center;
+	font-family: 'Open Sans', sans-serif;
+
+	@include mq($max,$palm) {
+		max-width: 550px;
+		width: 90%;
+		padding: 10px;
+	}
+
+	h1 {
+		font-size: 3.75em;
+		margin: 0;
+		color: #FFF;
+
+		@include mq($max,$palm) {
+			font-size: 2em;
+		}
+	}
+
+	p {
+		margin-top: 20px;
+		color: #ACB2BE;
+		font-size: 1em;
+
+		@include mq($max,$palm) {
+			margin-top: 10px;
+		}
+	}
+}
+
+.nf-push {
+	height: 160px;
+}
+
+footer {
+	@include mq($max,$palm) {
+		display: none;
+	}
+}

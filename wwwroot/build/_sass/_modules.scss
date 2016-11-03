@@ -1,0 +1,561 @@
+
+
+/*--
+	Front Page Testimonials
+	--*/
+
+.m-testimonial{width:50%;
+	margin-bottom: 15px; float:left;
+	@extend .clearfix;
+	.photo{
+		width:20%;
+		float:left;
+		img{
+			border-radius:50px;
+			overflow:hidden;
+			display:block;
+		}
+	}
+
+	.quote{
+		margin-left:5%;
+		width:75%;
+		float:left;
+	}
+
+	p{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 1.125em;
+		line-height: 1.25em;
+		color: #000;
+		margin-bottom: 15px;
+	}
+
+	footer{
+		p{
+			color: #373b43;
+			font-family: 'Arial', 'Helvetica', sans-serif;
+			font-size: 0.875em;
+		}
+
+		span{
+			color: #5dc1f5;
+			display: block;
+			font-family: 'Open Sans Bold', sans-serif;
+			margin-bottom: 5px;
+		}
+	}
+}
+
+
+/*--
+	Hologram
+	--*/
+
+/*doc
+---
+title: Navigation Bar
+name: navber
+category: Navigation
+---
+
+The Navigation Bar was designed to allow the modular addition of navigation assets aligned to both sides of a fluid-width layout. 
+Navigation options include dropdown menus and forms.  
+
+<h2>Standard Navbar</h2>
+<small>*note: This display model of the main page navbar was due to the fact that the navbar itself while being fluid can 
+not accomodate an indefinite amount of content. Because this model is contained within a fixed width example element, the 
+number of menu items displayed had to be condensed.</small>
+
+
+
+
+```html_example
+<div class="holo-menuwrap">
+<header class="m-navbar">
+    <div class="container">
+        <nav class="m-nav logo">
+            <ul>
+                <li>
+                    <span class="iicon-menu m-menu-btn"></span>
+                </li>
+                <li>
+                    <a href="/"><span><img src="/images/new/logo.png"></span></a>
+                </li>
+            </ul>       
+        </nav>
+        <nav class="m-nav nav-main">
+            <ul>
+                <li><a href="#" class=""><span>Link</span></a></li>
+                <li><a href="#" class=""><span>Link</span></a></li>
+                <li class="m-dropdown"><a href="/projects" class=""><span>Dropdown Link</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class=""><span>Link</span></a></li>
+            </ul>
+        </nav>
+        
+        <nav class="m-nav m-right">
+            <ul>
+                <li class="user-profile">
+                    <a href="#">
+                        <img class="user-thumb" src="/cache/made/images/site/profile_image_placeholder_55_55_ffffff_all_3_s_c1.png" alt="User's photo">
+                        <div class="user-arrow">
+                            <span class="iicon-circular-arrow"></span>
+                        </div>
+                    </a>
+                    <ul class="user-menu">
+                        <li><a href="#"><span>User Link</span></a></li>
+                        <li><a href="#"><span>User Link</span></a></li>
+                        <li><a href="#"><span>User Link</span></a></li>
+                        <li><a href="#"><span>User Link</span></a></li>
+                        <li class="separator"></li>
+                        <li><a href="/profile/logout"><span>Bottom Link</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <nav class="m-nav m-right">
+            <ul>
+                <li class="m-dropdown m-language">
+                    <span><img src="" class="active-language"></span>
+                    <ul class="dropdown-menu">
+                        <li class="active">
+                            <a title="English" href="javascript:void(0);" onClick="changeLanguage('english');">
+                                <span><img alt="english lang flag" src="/images/site/us.png">
+                                English</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="Spanish" href="javascript:void(0);" onClick="changeLanguage('spanish');">
+                                <span><img alt="spanish lang flag" src="/images/site/es.png">
+                                Spanish</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="French" href="javascript:void(0);" onClick="changeLanguage('french');">
+                                <span><img alt="french lang flag" src="/images/site/fr.png">
+                                French</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="Portuguese" href="javascript:void(0);" onClick="changeLanguage('portuguese');">
+                                <span><img alt="portuguese lang flag" src="/images/site/br.png">
+                                Portuguese</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>       
+        </nav>
+    </div>
+</header>
+</div>
+```
+
+
+
+
+<h2>Navigation Bar Components</h2>
+
+<h3>Alignment:</h3>
+
+The navigation bar can display content aligned either to the right or left hand side. By default, everything is left hand 
+aligned. To align content to the right, add the 'm-right' class to the navigation tag.
+
+In the event that you require multiple separate right-hand aligned menus, bear in mind that they align right to left in
+decending order in the layout. It's counter-intuitive, but keep in mind that the first m-right asset will be the one 
+furthest to the right.
+
+
+```html_example
+<section class="m-navbar">
+    <div class="container">
+        <nav class="m-nav">
+            <ul>
+                <li><a href="#" class=""><span>Left Link</span></a></li>
+                <li><a href="#" class=""><span>Left Link</span></a></li>
+            </ul>
+        </nav>
+        
+ 		<nav class="m-nav m-right">
+            <ul>
+                <li><a href="#" class=""><span>Right Link</span></a></li>
+                <li><a href="#" class=""><span>Right Link</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+```
+
+<h3>Dropdowns:</h3>
+
+A standard dropdown menu can be added to any menu item on either side by adding a 'm-dropdown' class to the li containing the
+link that you would like to make into a dropdown menu. Syntax for the dropdown menu itself is contained in the example below:
+
+```html_example
+<div class="holo-menuwrap">
+<section class="m-navbar">
+    <div class="container">
+        <nav class="m-nav">
+            <ul>
+                <li class="m-dropdown"><a href="#" class=""><span>Left Dropdown 1</span></a>
+					<ul class="dropdown-menu">
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                    </ul>
+                </li>
+                <li class="m-dropdown"><a href="#" class=""><span>Left Dropdown 2</span></a>
+					<ul class="dropdown-menu">
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+ 		<nav class="m-nav m-right">
+            <ul>
+                <li class="m-dropdown"><a href="#" class=""><span>Right Dropdown 1</span></a>
+					<ul class="dropdown-menu">
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                    </ul>
+                </li>
+                <li class="m-dropdown"><a href="#" class=""><span>Right Dropdown 2</span></a>
+					<ul class="dropdown-menu">
+                        <li><a href="#"><span>Dropdown</span></a></li>
+                        <li><a href="#"><span>Dropdown</span></a></li>                       
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+</div>
+```
+
+
+<h3>Forms</h3>
+
+Form Elements can be dropped into the header as well.
+
+```html_example
+<section class="m-navbar">
+    <div class="container">
+        <nav class="m-nav">
+            <ul>
+                <li><a href="#" class=""><span>Link</span></a></li>
+                <li><a href="#" class=""><span>Link</span></a></li>
+            </ul>
+        </nav>
+        
+ 		<nav class="m-nav m-right">
+            <ul>
+            	<li>
+					<span>
+						<input type="radio" name="radio" value="radio-1" checked />
+						<input type="radio" name="radio" value="radio-2" />
+						<input type="radio" name="radio" value="radio-3" />
+					</span>
+            	</li>
+            	<li>
+					<span><input type="checkbox" value="checked" /><label>Checkbox</label></span>
+            	</li>
+                <li>
+                	<span><form><input type="text" placeholder="Text Field" /><input type="submit" value="action" /></form></span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+```
+
+<h2>Specialty Components</h2>
+
+<h3>Responsive Menus</h3>
+
+Two menus have a dedicated purpose as the responsive menus in the main header. These styles should not be repeated outside
+of the main header.
+
+<strong>Main Menu</strong>
+
+*note: In order to get the desired layout on the site, the menu position had to be set to 'fixed', and is in not visible in 
+this example. I apologize for the inconvenience.
+
+The main menu is toggled by a button that only appears in mobile viewports. The button currently appears to the left of the 
+logo. Scale the browser down to see an example of the button.
+
+```html_example
+<header class="m-navbar">
+    <div class="container">
+        <nav class="m-nav logo">
+            <ul>
+                <li>
+                    <span class="iicon-menu m-menu-btn"></span>
+                </li>
+                <li>
+                    <a href="/"><span><img src="/images/new/logo.png"></span></a>
+                </li>
+            </ul>       
+        </nav>
+    </div>
+</header>
+```
+
+The main menu itself is set by assigning the class of 'nav-main' to a 'm-nav' element. Whatever is in that navigation menu
+will appear on the mobile menu.
+
+```html_example
+<div class="m-wrap">
+	<div class="wrapper">
+		<header class="m-navbar">
+		    <div class="container">
+		        <nav class="m-nav logo">
+		            <ul>
+		                <li>
+		                    <span class="iicon-menu m-menu-btn"></span>
+		                </li>
+		                <li>
+		                    <a href="/"><span><img src="/images/new/logo.png"></span></a>
+		                </li>
+		            </ul>       
+		        </nav>
+		        <nav class="m-nav nav-main">
+		            <ul>
+		                <li><a href="#" class=""><span>Link</span></a></li>
+		                <li><a href="#" class=""><span>Link</span></a></li>
+		                <li><a href="#" class=""><span>Link</span></a></li>
+		            </ul>
+		        </nav>
+		    </div>
+		</header>
+	</div>
+</div>
+```
+
+<strong>User Menu</strong>
+
+The user menu is a right-hand aligned menu that functions as a dropdown at desktop/tablet size and becomes a slide-out at
+mobile size. The user menu icon should always be positioned at the far right size of the navbar.
+
+```html_example
+<section class="m-navbar">
+    <div class="container">
+        <nav class="m-nav m-right">
+            <ul>
+                <li class="user-profile">
+                    <a href="#">
+                        <img class="user-thumb" src="/cache/made/images/site/profile_image_placeholder_55_55_ffffff_all_3_s_c1.png" alt="User's photo">
+                        <div class="user-arrow">
+                            <span class="iicon-circular-arrow"></span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+```
+
+The dropdown menu is implemented in a manner similar to the standard dropdowns, except:
+<ul>
+	<li>The class 'user-profile' is added to the List Item containing the dropdown link</li>
+	<li>The dropdown menu is given the class 'user-menu' instead.</li>
+</ul>
+
+```html_example
+<div class="holo-menuwrap">
+	<section class="m-navbar">
+	    <div class="container">
+	        <nav class="m-nav m-right">
+	            <ul>
+	                <li class="user-profile">
+	                    <a href="#">
+	                        <img class="user-thumb" src="/cache/made/images/site/profile_image_placeholder_55_55_ffffff_all_3_s_c1.png" alt="User's photo">
+	                        <div class="user-arrow">
+	                            <span class="iicon-circular-arrow"></span>
+	                        </div>
+	                    </a>
+                        <ul class="user-menu">
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                    </ul>	                    
+	                </li>
+	            </ul>
+	        </nav>
+	    </div>
+	</section>
+</div>
+```
+
+<strong>Language Menu</strong>
+
+The language menu is implemented in a manner similar to the user menu. Note that the 'active-language' image has a blank 
+'src' attribute. The image on the site are set according to the 'active' class in the dropdown menu. 
+The dropdown item itself is hidden from view
+
+```html_example
+<div class="holo-menuwrap">
+<header class="m-navbar">
+    <div class="container">
+        <nav class="m-nav m-right">
+            <ul>
+                <li class="m-dropdown m-language">
+                    <span><img src="" class="active-language"></span>
+                    <ul class="dropdown-menu">
+                        <li class="active">
+                            <a title="English" href="javascript:void(0);" onClick="changeLanguage('english');">
+                                <span><img alt="english lang flag" src="/images/site/us.png">
+                                English</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="Spanish" href="javascript:void(0);" onClick="changeLanguage('spanish');">
+                                <span><img alt="spanish lang flag" src="/images/site/es.png">
+                                Spanish</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="French" href="javascript:void(0);" onClick="changeLanguage('french');">
+                                <span><img alt="french lang flag" src="/images/site/fr.png">
+                                French</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a title="Portuguese" href="javascript:void(0);" onClick="changeLanguage('portuguese');">
+                                <span><img alt="portuguese lang flag" src="/images/site/br.png">
+                                Portuguese</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>       
+        </nav>
+    </div>
+</header>
+</div>
+```
+
+<h2>Separators</h2>
+
+Line spacing is accomplished by applying the 'separator' class to a list item. This will appear as a vertical line on the
+standard menus and a horizontal line on dropdowns and mobile menus.
+
+On the Main Menu, line breaks are automatically appended below menu items, and separators are hidden from view.
+
+```html_example
+<div class="holo-menuwrap">
+	<header class="m-navbar">
+	    <div class="container">
+	        <nav class="m-nav logo">
+	            <ul>
+	                <li>
+	                    <span class="iicon-menu m-menu-btn"></span>
+	                </li>
+	                <li>
+	                    <a href="/"><span><img src="/images/new/logo.png"></span></a>
+	                </li>
+
+	            </ul>       
+	        </nav>
+	        <nav class="m-nav nav-main">
+	            <ul>
+	            	<li class="separator"></li>
+	                <li><a href="#" class=""><span>Link</span></a></li>
+	                <li class="separator"></li>
+	                <li><a href="#" class=""><span>Link</span></a></li>
+	                <li class="separator"></li>
+	                <li class="m-dropdown"><a href="/projects" class=""><span>Dropdown Link</span></a>
+	                    <ul class="dropdown-menu">
+	                        <li><a href="#"><span>Dropdown</span></a></li>
+	                        <li class="separator"></li>
+	                        <li><a href="#"><span>Dropdown</span></a></li>
+							<li class="separator"></li>
+	                        <li><a href="#"><span>Dropdown</span></a></li>
+	                    </ul>
+	                </li>
+	                <li class="separator"></li>
+	                <li><a href="#" class=""><span>Link</span></a></li>
+	            </ul>
+	        </nav>
+
+	        <nav class="m-nav m-right">
+	            <ul>
+	            	<li class="separator"></li>
+	                <li class="user-profile">
+	                    <a href="#">
+	                        <img class="user-thumb" src="/cache/made/images/site/profile_image_placeholder_55_55_ffffff_all_3_s_c1.png" alt="User's photo">
+	                        <div class="user-arrow">
+	                            <span class="iicon-circular-arrow"></span>
+	                        </div>
+	                    </a>
+	                    <ul class="user-menu">
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li class="separator"></li>
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li class="separator"></li>
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li class="separator"></li>
+	                        <li><a href="#"><span>User Link</span></a></li>
+	                        <li class="separator"></li>
+	                        <li><a href="/profile/logout"><span>Bottom Link</span></a></li>
+	                    </ul>
+	                </li>
+	                
+	            </ul>
+	        </nav>
+	        <nav class="m-nav m-right">
+	            <ul>
+
+	                <li class="m-dropdown m-language">
+	                    <span><img src="" class="active-language"></span>
+	                    <ul class="dropdown-menu">
+	                        <li class="active">
+	                            <a title="English" href="javascript:void(0);" onClick="changeLanguage('english');">
+	                                <span><img alt="english lang flag" src="/images/site/us.png">
+	                                English</span>
+	                            </a>
+	                        </li>
+	                        <li class="separator"></li>
+	                        <li class="">
+	                            <a title="Spanish" href="javascript:void(0);" onClick="changeLanguage('spanish');">
+	                                <span><img alt="spanish lang flag" src="/images/site/es.png">
+	                                Spanish</span>
+	                            </a>
+	                        </li>
+	                        <li class="separator"></li>
+	                        <li class="">
+	                            <a title="French" href="javascript:void(0);" onClick="changeLanguage('french');">
+	                                <span><img alt="french lang flag" src="/images/site/fr.png">
+	                                French</span>
+	                            </a>
+	                        </li>
+	                        <li class="separator"></li>
+	                        <li class="">
+	                            <a title="Portuguese" href="javascript:void(0);" onClick="changeLanguage('portuguese');">
+	                                <span><img alt="portuguese lang flag" src="/images/site/br.png">
+	                                Portuguese</span>
+	                            </a>
+	                        </li>
+	                    </ul>
+	                </li>
+	            </ul>       
+	        </nav>
+	    </div>
+	</header>
+</div>
+```
+
+*/
+

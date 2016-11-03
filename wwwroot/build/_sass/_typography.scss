@@ -1,0 +1,134 @@
+@import "_typography2.scss";
+
+
+body {
+	font-size:1em;
+	font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* ---------------------
+Header Styles
+--------------------- */
+
+h1, h2, h3 {
+	font-family: 'Open Sans Bold', sans-serif;
+}
+
+.h1-lg {
+	font-size: $h1-large;
+}
+
+.h1-xl
+{
+	font-size: $h1-xl;
+	text-align: center;
+
+	@include mq($max, $palm) {
+		font-size: $h1-xl / 2;
+	}
+}
+
+.h1-std
+{
+	font-size: $h1-standard;
+}
+
+.h2-std
+{
+	font-size: $h2-standard;
+}
+
+.h3-std
+{
+	font-size: $h3-standard;
+}
+
+/*--
+	Hologram
+	--*/
+
+/*doc
+---
+title: Headers
+name: headers
+category: Typography
+---
+
+All Headers use 'Open Sans Bold'
+<div class="holo-headers">
+
+```html_example
+<h1 class="h1-lg">I used to be an adventurer like you, until I took an arrow to the knee</h1>
+<h1 class="h1-std">I used to be an adventurer like you, until I took an arrow to the knee</h1>
+<h2 class="h2-std">I used to be an adventurer like you, until I took an arrow to the knee</h2>
+<h3 class="h3-std">I used to be an adventurer like you, until I took an arrow to the knee</h3>
+```
+
+</div>
+Extra Large Specialty Header:
+<div class="holo-headers">
+
+```html_example
+<h1 class="h1-xl">I used to be an adventurer like you, until I took an arrow to the knee</h1>
+```
+
+</div>
+*/
+
+/*doc
+---
+title: Fonts
+name: fonts
+category: Typography
+---
+
+This site uses 4 variations of 'Open Sans', Regular, Italic, SemiBold and Bold
+
+
+
+<div class="holo-regular">
+	<p>Regular:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+<div class="holo-italic">
+	<p>Italic:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+<div class="holo-semibold">
+	<p>SemiBold:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+
+<div class="holo-bold">
+	<p>Bold:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+*/
+
+/*doc
+---
+title: Icons
+name: icons
+category: Typography
+---
+
+All icons courtesy of <a href="http://icomoon.io" target="_blank">http://icomoon.io</a> Additional icons can be added
+as necessary.
+
+<div class="holo-icons">
+<p class="icon-circular-diamond">Circular Diamond: used to track registration progress</p>
+<p class="icon-circular-arrow">Circular Arrow: used in the header for the User Menu</p>
+<p class="icon-expand-more">Expand More: Used to mark dropdowns</p>
+<p class="icon-expand-less">Expand Less: Optional marker for open dropdowns</p>
+<p class="icon-power">Power Icon: Used as a front page card icon</p>
+<p class="icon-play">Play Button: Used on front page to decorate a link</p>
+<p class="icon-linkedin">LinkedIn Icon: Unusable on input fields(See below)</p>
+<input type="submit" class="icon-linkedin" value="Icon does not work" /><br/>
+<button class="icon-linkedin">This does work</button>
+<p class="icon-menu">Mobile Hamburger Menu</p>
+</div>
+*/

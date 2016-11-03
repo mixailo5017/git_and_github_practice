@@ -1,0 +1,101 @@
+/* ---------------------
+Color
+--------------------- */
+
+
+
+// Style Guide Colors
+$cgla-lt-green:				#ffd956;
+$cgla-dk-green:				#90be89;
+$cgla-blue:					#5dc1f5;
+$cgla-orange:				#F47D20;
+
+// Front Page CTA Boxes (Depreciated?)
+$green-cta-box:				rgba(95, 156, 77, 0.8); // Green with Alpha
+$alt-green-cta-box:			rgba(213, 176, 46, 0.8); // Alternate Green -w- Alpha. More Saturation
+$blue-cta-box:				rgba(47, 181, 185, 0.8); // Blue with Alpha
+
+// Registration Interface Colors
+$reg-bg:					#F2F2F2; // Light Gray
+$reg-active:				#2FACFF; // Blue (Used for Links)
+$reg-form-bg:				#F8F8FA; // Light-ish Gray
+$reg-form-border:			#B3B8C1; // Dark Gray
+$reg-form-active-border:	#72B3E4; // Blue-Aqua
+$reg-button-bg:				#93DB6E; // Green
+
+// Menu Colors
+$menu-active:				#009DD9; // Blue		
+$menu-rollover:				#515151; // Mid-Gray
+$menu-border:				#72788A; // Mid Gray Alt
+$menu-spacer:				#24262c;
+
+// Interior Menu
+$int-menu-bg:				#3b84b9;
+$int-menu-outline:			#45a7e4;
+$int-menu-roll:				#255273;
+
+// Mobile
+$int-mobi-bg:				#26292e;
+$int-mobi-outline:			#3c3f46;
+
+
+$header-bg:					#515765; // Dark Blue-Gray
+$dropdown-bg:				#82a47f; // Medium Green
+
+$off-white:					#f1f1f3; // Off-White
+$bluish-off-white:			#f8f8fa; // Off-White (Blue Tint)
+$silver-gray:				#b4b8c0; // Silver-ish Gray
+$med-aqua:					#8e95aa; // Medium Aqua
+$lt-blue-btn:				#2eb4b8; // Light Blue
+$blue-border:				#258184; // Dark Blue. Something similar probably exists.
+$lt-green-btn:				#d4e4a7; // Very light Green
+$green-border:				#9EAE73; // Dark Green. Something Similar probably exists.
+$dk-green-txt:				#63772c; // Dark Green
+$testimonial-blue:			#3abdc1; // Testimonial Blue Color
+$testimonial-gray:			#373b43; // Gray Testimonial Text Color - Used as standard off-black color. Headers, Sub-Headers, Form Labels, ect..
+
+$spotlights-bg:				#464b57; // Dark Aqua
+$personalize-bg:			#2D2E32; // Very Dark Aqua
+$lt-aqua:					#9EA0A5; // Light Aqua Gray
+$front-cta-bg:				#90BE89; // Light Muted Green
+$dk-aqua-border:			#A9ACB2; // Dark Aqua
+$lt-aqua-border:			rgba(92, 99, 112, 0.17); // Light Translucent Aqua
+
+$reg-inactive:				#ADB1C3; // Registration Gray
+
+$footer-bg:					#E9E9ED; // Off White v2 (Footer Asset)
+$footer-border:				#E0E0E0; // Off White v3 (Footer Asset)
+$footer-text:				#646871; // Medium Gray
+
+$form-placeholder:			#999999; // Middle-Gray
+$form-entry:				#666666; // Dark-Gray
+$darker-gray:				#333333; // Darker-Gray
+
+// Badges 
+$power-badge:				#ffc600; // Bright Orange
+$standard-badge:			#7292ba;
+
+
+
+/* ---------------------
+Type
+--------------------- */
+
+$font-size-base:			1.0em !default;
+$font-size-lg:				1.250em; // 20px	
+$font-size-sm:				0.875em; // 14px
+$font-size-xsm:				0.750em; // 12px
+
+$h1-standard:				2.25em; // 36px
+$h2-standard:				1.75em; // 28px
+$h3-standard:				1.5em;	// 24px
+
+$h1-large:					3em; // 48px;
+$h1-xl: 					3.750em; // 60px
+
+$heading-text:				1.313em; // Header Paragraph
+$content-blurb:				1.125em; // 18px
+
+$images:                    "../images";
+$new-images:                "#{$images}/new";
+

@@ -1,0 +1,99 @@
+// ==================================================
+// $Variables
+// ==================================================
+// Supports
+// @media min-width
+// @media max-width
+// @media min-width and max-width
+
+$viewport-increment: 0.1px; // customize to suite
+
+// Huge Desktop
+$extra_large_desktop: 1680px; // customize to suite
+$pre-extra_large_desktop: $extra_large_desktop - $viewport-increment;
+
+// Huge Desktop
+$huge_desktop: 1440px; // customize to suite
+$pre-huge_desktop: $huge_desktop - $viewport-increment;
+
+// Big Desktop
+$big_desktop: 1200px; // customize to suite
+$pre-bigdesktop: $big_desktop - $viewport-increment;
+
+// Desktop
+$desktop: 1024px; // customize to suite
+$pre-desktop: $desktop - $viewport-increment;
+
+//Up to Tablet
+$tablet_plus: 992px;
+$pre-tabletplus: $tablet_plus - $viewport-increment;
+// Tablet
+$tablet: 768px; // customize to suite
+$pre-tablet: $tablet - $viewport-increment;
+
+// Palm
+$palm: 640px; // customize to suite
+$post-palm: $palm + $viewport-increment;
+
+// Palm_sm
+$palm_sm: 480px; // customize to suite
+$post-palm_sm: $palm_sm + $viewport-increment;
+
+// Palm_xsm (Old iPhone)
+$palm_xsm: 360px;
+$post-palm_xsm: $palm_xsm + $viewport-increment;
+
+
+// Constraints
+$min: min-width;
+$max: max-width;
+
+$minH: min-height;
+$maxH: max-height;
+
+
+// ==================================================
+// $Media Query @Mixin
+// ==================================================
+
+@mixin mq($constraint, $viewport1, $viewport2: null, $constraint2: null) {
+
+  @if $constraint2 != null {
+
+    @media screen and ($constraint: $viewport1) and ($constraint2: $viewport2) {
+      @content;
+    }
+
+  } @else if $constraint == $min {
+
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+
+  } @else if $constraint == $max {
+
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+
+  }  @else if $constraint == $minH {
+
+    @media screen and ($minH: $viewport1) {
+      @content;
+    }
+
+  } @else if $constraint == $maxH {
+
+    @media screen and ($maxH: $viewport1) {
+      @content;
+    }
+
+  } @else {
+
+    @media screen and ($min: $viewport1) and ($max: $viewport2) { 
+      @content;
+    }
+
+  }
+
+}
