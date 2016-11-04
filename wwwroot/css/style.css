@@ -1060,7 +1060,8 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   margin-bottom: 38px;
 }
 #col5 textarea[name='project_overview'] {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  height: 13em;
 }
 #col5 .project {
   border: 1px solid #b3b8c1;

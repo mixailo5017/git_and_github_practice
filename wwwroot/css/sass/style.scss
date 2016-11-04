@@ -342,7 +342,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 	textarea,  input[type="text"], input[type="file"],  .matrix_dropdown select { padding: 8px;  border-radius: 3px; width: 345px; margin-bottom: 10px; border:1px solid #B3B8C1; }
 	input.light_green, input.light_red, input.light_gray, button.light_green, button.light_red, button.light_gray { width: inherit; padding: 7px 24px; margin: 10px 0 0 250px; min-width:90px; }
 	textarea { height: 100px; width: 510px; margin-bottom: 38px; 
-		&[name='project_overview'] { margin-bottom: 50px;}
+		&[name='project_overview'] { margin-bottom: 10px; height: 13em;}
 	}
 	.project { border: 1px solid #b3b8c1;border-radius: 3px;  margin-bottom: 12px;
 		&:hover { background: #f1f1f3; }
