@@ -32,9 +32,9 @@
                         </tr>
                         <tr>
                             <th><?php echo lang('EstStart');?>:</th>
-                            <td><?php if ($project['projectdata']['eststart']!= '' && $project['projectdata']['eststart']!= '1111-11-11'){ $startdt = new DateTime($project['projectdata']['eststart']); echo $startdt->format(DATEFORMATVIEW);} else { echo "N/A";} ?></td>
+                            <td><?php if ($project['projectdata']['eststart']!= '' && $project['projectdata']['eststart']!= '1111-11-11'){ $startdt = new DateTime($project['projectdata']['eststart']); echo $startdt->format(DATEFORMATVIEW_MONTHONLY);} else { echo "N/A";} ?></td>
                             <th><?php echo lang('EstCompletion');?>:</th>
-                            <td><?php if ($project['projectdata']['estcompletion']!= '' && $project['projectdata']['estcompletion'] != '1111-11-11'){$compdt = new DateTime($project['projectdata']['estcompletion']); echo $compdt->format(DATEFORMATVIEW);} else { echo "N/A";} ?></td>
+                            <td><?php if ($project['projectdata']['estcompletion']!= '' && $project['projectdata']['estcompletion'] != '1111-11-11'){$compdt = new DateTime($project['projectdata']['estcompletion']); echo $compdt->format(DATEFORMATVIEW_MONTHONLY);} else { echo "N/A";} ?></td>
                         </tr>
                         <tr>
                             <th><?php echo lang('Developer');?>:</th>
