@@ -658,7 +658,7 @@ $(function() {
     $('#header_bread_crumb li a:last').css('background', 'none');
 
     //activate tabs
-    $('#profile_tabs, #project_tabs').tabs({
+    $('#profile_tabs').tabs({
         fx: {
             opacity: 'toggle',
             duration: 100
