@@ -46,21 +46,7 @@ $(function () {
             modal: true,
             aspectRatio: 1 / 1,
             //done: function (data) {}
-
-            minCropBoxWidth:50,
-            minCropBoxHeight:50,
-            
-            built: function () {
-              $imgCrop.attr('src', imageUrl).cropper("setCropBoxData", {
-                left: 50,
-                top: 50,
-                width: 120,
-                height: 120
-              });
-            
-            } 
         });
-        console.log(imageUrl);
         setTimeout(function () {
             var aniHeight = $('.cropper-container').height();
             $('.crop-wrap').css({ 'height': aniHeight});
