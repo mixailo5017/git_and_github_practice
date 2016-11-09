@@ -1,0 +1,460 @@
+
+<!DOCTYPE html>
+<html ng-app="cortana">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Forward</title>
+
+    <!-- Styleguide CSS -->
+    <link rel="stylesheet" href="./theme-build/css/vendors.css">
+    <link rel="stylesheet" href="./theme-build/css/cortana.css">
+
+    <!-- Source CSS -->
+    
+      
+        <link rel="stylesheet" href="../../css/style-guide.css">
+      
+    
+
+    <!--[if lt IE 9]>
+      <script src="theme-build/polyfill/html5shiv.js"></script>
+      <script src="theme-build/polyfill/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+    <div class="sb-slidebar sb-left cortana-sidenav sb-style-push">
+
+      
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+        
+        
+          
+        
+      
+
+      <nav class="cortana-nav">
+        <ul>
+          
+            <li><a href="index.html">Home</a></li>
+          
+        </ul>
+        
+          <h3>Buttons</h3>
+          <ul>
+          
+            
+              
+              
+                <li><a href="buttons.html">Buttons</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Front Page Components</h3>
+          <ul>
+          
+            
+          
+            
+              
+              
+                <li><a href="front_page_components.html">Front Page Components</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Colors</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="colors.html">Colors</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Typography</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="typography.html">Typography</a></li>
+              
+            
+          
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Form Components</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="form_components.html">Form Components</a></li>
+              
+            
+          
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Navigation</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a href="navigation.html">Navigation</a></li>
+              
+            
+          
+            
+          
+          </ul>
+        
+          <h3>Forward</h3>
+          <ul>
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+              
+                <li><a class="active" href="forward.html">Forward</a></li>
+              
+            
+          
+          </ul>
+        
+      </nav>
+    </div>
+
+    <header class="cortana-header sb-slide">
+      
+        <h1>Forward</h1>
+      
+      <div id="open-left" class="cortana-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="cortana-search-wrapper" ng-controller="TypeaheadCtrl">
+        <input id="cortana-search" type="text" class="form-control cortana-search" ng-model="customSelected" placeholder="Search" typeahead="data as data.title for data in searchData | filter:{title:$viewValue}" typeahead-template-url="customTemplate.html" class="form-control" typeahead-on-select="onSelect($item, $model, $label)">
+      </div>
+    </header>
+
+    <div id="sb-site">
+
+      <div class="cortana-container">
+
+        <nav id="cortana-inside-nav" class="cortana-inside-nav" bs-affix>
+          <ul bs-scrollspy-list data-offset="-30">
+            
+              
+                <li><a href="#welcome">Welcome</a></li>
+              
+            
+          </ul>
+        </nav>
+
+        <div class="cortana-content-wrapper clearfix">
+          <div class="cortana-content">
+
+
+
+<h1 id="welcome" class="styleguide">Welcome</h1>
+
+<p>Welcome to the <strong>CGLA</strong> Hologram Style Guide. This guide was assembled in Gulp Hologram to provide an all-purpose 
+markup documentation and testing environment. All styles and values are usable on the site itself complete with layout examples.
+Some styles may be listed as &#39;Under Construction&#39; or &#39;In Development&#39;, and should not be used on the live site as-is. </p>
+
+<p>Please disregard any style with a class prefix of <strong><em>holo</em></strong>. These styles are used specifically in the guide 
+and will have no bearing on elements on the live site.</p>
+
+        </div>
+      </div>
+    </div>
+
+    <footer class="cortana-footer">
+      Code samples created by <a href="http://www.lmo.com">LMO</a>
+    </footer>  
+  </div>
+
+  <script src="theme-build/js/vendors.min.js"></script>
+  <script type="text/javascript">
+    var jQuery_no_conflict = $.noConflict(true);
+  </script>
+  <script src="theme-build/js/main.js"></script>
+  <script type="text/javascript">
+    function TypeaheadCtrl($scope) {
+      $scope.selected = undefined;
+      $scope.searchData = 
+      [
+        
+          
+            
+              
+              
+              {
+              "title": "Buttons",
+              "breadcrumb": "Buttons > Buttons",
+              "path": "buttons.html#Button"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Project Cards",
+              "breadcrumb": "Front Page Components > Project Cards",
+              "path": "front_page_components.html#cards"
+              },
+            
+              
+              
+              {
+              "title": "Call to Action",
+              "breadcrumb": "Front Page Components > Call to Action",
+              "path": "front_page_components.html#cta"
+              },
+            
+              
+              
+              {
+              "title": "Testimonials",
+              "breadcrumb": "Front Page Components > Testimonials",
+              "path": "front_page_components.html#testimonials"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Colors",
+              "breadcrumb": "Colors > Colors",
+              "path": "colors.html#colors"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Fonts",
+              "breadcrumb": "Typography > Fonts",
+              "path": "typography.html#fonts"
+              },
+            
+              
+              
+              {
+              "title": "Headers",
+              "breadcrumb": "Typography > Headers",
+              "path": "typography.html#headers"
+              },
+            
+              
+              
+              {
+              "title": "Icons",
+              "breadcrumb": "Typography > Icons",
+              "path": "typography.html#icons"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Form Wrapper",
+              "breadcrumb": "Form Components > Form Wrapper",
+              "path": "form_components.html#form"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Navigation Bar",
+              "breadcrumb": "Navigation > Navigation Bar",
+              "path": "navigation.html#navber"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Welcome",
+              "breadcrumb": "Forward > Welcome",
+              "path": "forward.html#welcome"
+              },
+            
+          
+        
+          
+            
+              
+              
+              {
+              "title": "Welcome",
+              "breadcrumb": "Forward > Welcome",
+              "path": "forward.html#welcome"
+              },
+            
+          
+        
+      {}];
+      $scope.onSelect = function ($item, $model, $label) {
+        window.location.replace($item.path);
+      };
+    }
+  </script>
+  <script type="text/ng-template" id="customTemplate.html">
+    <a href="{{match.model.path}}">
+      <p class="cortana-search-title">{{match.model.title}}</p>
+      <p class="cortana-search-path">{{match.model.breadcrumb}}</p>
+    </a>
+  </script>
+  
+    
+      <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    
+      <script type="text/javascript" src="../js/_bower.js"></script>
+    
+      <script type="text/javascript" src="../../js/main.js"></script>
+    
+  
+  <!-- Source Components -->
+  
+</body>
+</html>

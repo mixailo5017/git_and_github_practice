@@ -611,6 +611,23 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   display: inline-block;
 }
 
+#profile_tabs label {
+  position: relative;
+}
+#profile_tabs .tooltip {
+  background: url(/images/site/icon_question_mark.png) center no-repeat;
+  padding: 0px;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 540px;
+  top: 4px;
+  display: inline-block;
+}
+#profile_tabs #project_form_upload .tooltip {
+  top: 25px;
+}
+
 .tip-yellowsimple {
   z-index: 1000;
   text-align: left;
@@ -1034,7 +1051,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 #col5 input.light_green, #col5 input.light_red, #col5 input.light_gray, #col5 button.light_green, #col5 button.light_red, #col5 button.light_gray {
   width: inherit;
   padding: 7px 24px;
-  margin: 10px 0 0 120px;
+  margin: 10px 0 0 250px;
   min-width: 90px;
 }
 #col5 textarea {
@@ -1042,11 +1059,10 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   width: 510px;
   margin-bottom: 38px;
 }
-
 #col5 textarea[name='project_overview'] {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+  height: 13em;
 }
-
 #col5 .project {
   border: 1px solid #b3b8c1;
   border-radius: 3px;
@@ -2311,12 +2327,16 @@ div.olControlZoom a:hover {
 }
 
 #projects span.note {
+  margin-top: -5px;
   display: block;
   font-size: 11px;
   font-size: 1.1rem;
   color: #535760;
 }
 #projects span.example {
+  margin-bottom: 30px;
+  width: 360px;
+  word-wrap: break-word;
   display: block;
   font-size: 11px;
   font-size: 1.1rem;
@@ -2327,9 +2347,10 @@ div.olControlZoom a:hover {
   width: 150px;
   height: 150px;
   float: left;
+  clear: both;
   background: #ccc;
   border-radius: 3px;
-  margin-right: 20px;
+  margin: 10px 20px 10px 170px;
 }
 
 .left_label {
@@ -4601,6 +4622,10 @@ a.external {
   margin: 6px 0;
 }
 
+#btn_upload_project_image {
+  margin: 60px 0 60px 30px !important;
+}
+
 #forgot_password input {
   width: 524px;
 }
@@ -6490,11 +6515,6 @@ h1.new_map .alt {
   padding-top: 16px;
   padding-left: 8px;
   margin: 0;
-}
-
-#col2 .map_filter .form_control .select_list .select_control p {
-  padding-top: 0;
-
 }
 .map_filter .form_control .select_list .select_control p .map-transport-circle,
 .map_filter .form_control .select_list .select_control p .map-energy-circle,
@@ -10470,6 +10490,10 @@ a.button.project:before {
   box-shadow: inset 0px 1px 0px 0px #999;
 }
 
+#col2 .map_filter .form_control .select_list .select_control p {
+  padding-top: 0;
+}
+
 #registration {
   margin: 10px 0;
 }
@@ -11888,6 +11912,12 @@ body.no_breadcrumbs header {
   margin: 0;
   background: #24262c;
 }
+.m-nav li.active span {
+  color: #5dc1f5;
+}
+.m-nav li.active:hover {
+  cursor: default;
+}
 .m-nav li span {
   width: 100%;
   height: 60px;
@@ -11899,18 +11929,6 @@ body.no_breadcrumbs header {
   cursor: pointer;
   padding: 0 15px;
   text-decoration: none;
-  			/*
-  			&.active {
-  				background: $int-menu-bg;
-  				border-left: solid 1px $int-menu-outline;
-  				border-right: solid 1px $int-menu-outline;
-  
-  				&:hover {
-  					color: #FFF;
-  					cursor: default;
-  				}
-  			}
-  			*/
 }
 .m-nav li span:hover {
   color: #5dc1f5;
@@ -12029,7 +12047,7 @@ body.no_breadcrumbs header {
 .m-dropdown .dropdown-menu li {
   display: block;
   padding: 0;
-  width: 99%;
+  width: 100%;
   border-left: solid 1px #45a7e4;
   border-right: solid 1px #45a7e4;
   transition: border-color .25s;
@@ -12122,6 +12140,10 @@ body.no_breadcrumbs header {
   height: 1px;
   background: #45a7e4;
 }
+.user-menu li.active a span {
+  background-color: #255273;
+  color: #FFF !important;
+}
 .user-menu li a {
   display: inline;
   padding: 0;
@@ -12131,17 +12153,12 @@ body.no_breadcrumbs header {
 .user-menu li a span {
   padding: 15px 20px;
   white-space: nowrap;
+  color: #FFF !important;
 }
 .user-menu li a:hover span {
   background-color: #255273;
   color: #FFF;
 }
-
-.user-menu li.active a span {
-  color: #fff !important;
-  background-color: #255273;
-}
-
 .user-menu li span {
   padding: 15px 20px;
   transition: background-color .25s, border-color .25s;
@@ -12174,14 +12191,6 @@ body.no_breadcrumbs header {
 /* nav overrides */
 .m-nav li span {
   font-size: 14px;
-}
-
-.m-nav li.active {
-  cursor: default;
-}
-
-.m-nav li.active span {
-  color: #5dc1f5;
 }
 
 .m-navbar {

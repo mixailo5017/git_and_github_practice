@@ -434,15 +434,21 @@ $lang['SelectASub-Sector'] = '- Seleccione un Sub-sector -';
 $lang['selectCaseStudies'] = 'Seleccione un caso de estudio para editar su contenido';
 $lang['SelectCountry'] = '- Seleccione un País -';
 
-
+$lang['ProjectPhoto'] = 'Foto del proyecto';
+$lang['SeparateMessage'] = "Para ayudarnos a conectarlo con expertos o inversionistas, ingrese de 5 a 10 palabras claves que capturen su proyecto de forma exclusiva (por ejemplo, puente, peaje, construcción, suspensión, PPP).";
+$lang['CountryExplanation'] = 'El país en el que se encuentra el proyecto. Para los proyectos transfronterizos, seleccione el país en el que se encuentra la mayor parte del proyecto.';
+$lang['LocationExplanation'] = 'Si introduce la ubicación aquí, haga clic en Actualizar Proyecto y, a continuación, vaya a la ficha Mapa para ajustar. De forma alternativa, puede utilizar el mapa directamente para localizar la ubicación.<br/><br/>Escriba la ubicación del proyecto utilizando la ciudad, estado o provincia y la información del país, según corresponda. Para proyectos que enlazan dos o más ubicaciones (o abarcan una área grande), ingrese una ubicación de punto representativa en este campo y utilice la herramienta de mapa para ilustrar la huella geográfica del proyecto.';
+$lang['DeveloperExplanation'] = "El desarrollador del proyecto es la organización más directamente responsable de administrar la progresión del proyecto a lo largo de su ciclo de vida. El desarrollador del proyecto puede ser una entidad del sector público o privado (y en algunos casos puede ser igual que el patrocinador del proyecto). ";
+$lang['SponsorExplanation'] = 'El patrocinador del proyecto es la organización bajo cuya autoridad se está desarrollando el proyecto. A menudo, ésta será una agencia pública o cuasi pública, como un Departamento de Transporte.';
+$lang['DetailExplanation'] = 'Proporcione un breve resumen (2-5 párrafos) de su proyecto, incluyendo una descripción de sus objetivos, acciones importantes planeadas e información importante contextual.';
+$lang['PhotoExplanation'] = 'Sube una foto o un gráfico para representar su proyecto. Esta imagen aparecerá en la parte superior de la página de perfil del proyecto y junto al nombre del proyecto en los resultados de búsqueda, vistas de mapa y referencias similares al proyecto en la plataforma GViP. ';
 
 $lang['SelectImage'] = 'Seleccione una imagen desde su computador';
 $lang['SelectOne'] = '- Seleccione una -';
-$lang['SelectStage'] = '- Selecciones Etapa -';
+$lang['SelectStage'] = '- Seleccione una Etapa -';
 $lang['SendInvite'] = 'Enviar invitación';
 $lang['SendMessage'] = 'Enviar mensaje';
 $lang['SendMessageto'] = 'Enviar mensaje a';
-$lang['SeparateMessage'] = 'Separe cada palabra con una coma (por ejemplo: puentes, peajes, construcción)';
 $lang['Showing'] = 'Mostrando';
 $lang['ShowMore'] = 'Mostrar más';
 $lang['ShowLess'] = 'Mostrar menos';
@@ -655,7 +661,7 @@ $lang['MyProjectsIOwn'] = 'Proyectos que poseo';
 $lang['MyProjectsIFollow'] = 'Proyectos que sigo';
 
 /* Project Profile Edit page*/
-$lang['ProjectEditBudgetHelpMessage'] = 'Vacío o 0 (cero) significa que el presupuesto se va a determinar (TBD)';
+$lang['ProjectEditBudgetHelpMessage'] = 'Si el presupuesto del proyecto aún no se ha determinado, ingrese &quot;0&quot; en este campo. El perfil de proyecto mostrará entonces &quot;TBD&quot; en el campo del presupuesto.';
 
 /* Pagination */
 $lang['First'] = 'Primer';
@@ -717,13 +723,14 @@ $lang['Help'] = 'Ayuda';
 
 $lang['EmailNotUnique'] = 'Ya existe una cuenta con este email.';
 $lang['RegistrationEmailNotUnique'] = 'Ya existe una cuenta con este correo. Inicie su sesión en cima o clique en Olvidó su Contraseña.';
-$lang['Website'] = 'Sitio';
+$lang['Website'] = 'Sitio web';
 
 $lang['WEBScore'] = 'Puntuación Beneficios Económicos Más Amplios';
 
 $lang['ProjectTextSearchTip'] = 'Utilice comillas (&quot;Bhopal Metro&quot;) para concretar su búsqueda';
 $lang['ExpertTextSearchTip'] = 'Utilice comillas (&quot;Jason Jones&quot;) para concretar su búsqueda';
 
+$lang['mY'] = 'MM/AAAA';
 $lang['mdY'] = 'MM/DD/AAAA';
 $lang['LoginFailed'] = 'Incorrect email and/or password.';
 

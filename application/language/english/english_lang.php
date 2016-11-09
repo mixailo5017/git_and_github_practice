@@ -573,7 +573,13 @@ $lang['memberphoto'] = 'member photo';
 
 //project_edit.php
 $lang['ProjectPhoto'] = 'Project Photo';
-$lang['SeparateMessage'] = 'Separate each keyword with commas (ex: bridge, toll, construction)';
+$lang['SeparateMessage'] = "To help us connect you with experts or investors, enter 5 to 10 keywords (or phrases) that uniquely capture your project. For example: bridge, toll, construction, suspension, PPP.";
+$lang['CountryExplanation'] = 'The country in which the project is located. For trans-border projects, select the country in which the greater (or greatest) share of the project is located.';
+$lang['LocationExplanation'] = "If you enter the location here, click Update Project and then go to the Map tab to fine-tune. Alternatively, you can use the map directly to pinpoint the location.<br/><br/>Enter the location of the project using city, state or province, and country information as appropriate. For projects that link two or more locations (or encompass a large area), enter a representative point location in this field and use the mapping tool to illustrate the geographic footprint of the project.";
+$lang['DeveloperExplanation'] = "The project developer is the organization most directly responsible for managing the project's progression through its life-cycle. The project developer may be a public or private sector entity (and in some cases may be the same as the project sponsor).";
+$lang['SponsorExplanation'] = 'The project sponsor is the organization under whose authority the project is being developed. Often, this will be a public or quasi-public agency, like a Department of Transportation.';
+$lang['DetailExplanation'] = 'Provide a brief summary (2–5 paragraphs) of your project, including a description of its objectives, major actions planned, and important background/contextual information.';
+$lang['PhotoExplanation'] = 'Upload a photo or graphic to represent your project.  This image will appear at the top of the project profile page and adjacent to the project name in search results, map views, and similar references to the project in the GViP platform.';
 
 //projects_files.php
 $lang['File'] = 'File';
@@ -584,7 +590,7 @@ $lang['Private'] = 'Private';
 $lang['Specific'] = 'Specific';
 $lang['SimilarProjectOwners'] = 'Similar Project Owners';
 $lang['Others'] = 'Other...';
-$lang['Designb'] = 'Design, Build';
+$lang['Designb'] = 'Design–Build';
 $lang['SelectOne'] = '- Select One -';
 $lang['Public'] = 'Public';
 $lang['Private'] = 'Private';
@@ -947,7 +953,7 @@ $lang['MyProjectsIOwn'] = 'Projects I own';
 $lang['MyProjectsIFollow'] = 'Projects I follow';
 
 /* Project Profile Edit page*/
-$lang['ProjectEditBudgetHelpMessage'] = 'Empty or 0 (zero) value means the budget is to be determined (TBD)';
+$lang['ProjectEditBudgetHelpMessage'] = "If the project budget is yet to be determined, enter &quot;0&quot; in this field. The project profile will then display &quot;TBD&quot; in the budget field.";
 
 /* Pagination */
 $lang['First'] = 'First';
@@ -1014,6 +1020,7 @@ $lang['Website'] = 'Website';
 $lang['ProjectTextSearchTip'] = 'Tip: Use quotes (&quot;Bhopal Metro&quot;) to narrow your search';
 $lang['ExpertTextSearchTip'] = 'Tip: Use quotes (&quot;Jason Jones&quot;) to narrow your search';
 
+$lang['mY'] = 'MM/YYYY';
 $lang['mdY'] = 'MM/DD/YYYY';
 $lang['LoginFailed'] = 'Incorrect email and/or password.';
 

@@ -1,0 +1,51 @@
+@@include('../partials/header-top.html')
+<body class="onboarding confirm-info">
+@@include('../partials/header.html')
+<section class="main-content container">
+	<h1 class="h1-xl">Create Account</h1>
+	<p>This is your final step. Please confirm your profile information so we can save it to your GViP profile and get you started.</p>
+
+@@include('../partials/reg-progress.html')
+
+	<div class="form-cta">
+		<div class="interior">
+			<h2 class="h3-std">Confirm Info</h2>
+			<div class="down-arrow"></div>
+			<p>You can update your profile information at any time from your Account Settings.</p>
+			<form action="#" method="post" accept-charset="utf-8" id="member_form" name="join_network" class="form">
+	        	<div class="anchor">
+	        		<label for="f1" class="left_label">First Name:</label>
+	                <input type="text" name="member_first_name" id="f1" value="Ian Paul"><div class="errormsg"></div>
+	            </div>
+	            <div class="anchor">
+	            	<label for="f2" class="left_label">Last Name:</label>
+	                <input type="text" name="member_last_name" id="f2" value="Freeley"><div class="errormsg"></div>
+	            </div>
+	        	<div class="anchor">
+	        		<label for="f3" class="left_label">Title:</label>
+	            	<input type="text" name="title" id="f3" value="Sanitation Engineer"><div class="errormsg"></div>
+	        	</div>
+	            <div class="anchor">
+	                <label for="f4" class="left_label">Organization:</label>
+	                <input type="text" name="member_organization" id="f4" value="CG/LA Infrastructure"><div class="errormsg"></div>
+	            </div>
+	            <div class="anchor">
+	            	<label for="f5" class="left_label">Country:</label>
+	                <input type="text" name="member_country" id="f5" value="USA"><div class="errormsg"></div>
+	            </div>
+	            <div class="form-buttons">
+					<input type="reset" class="btn std clear" value="Back" />
+					<input type="submit" class="btn std lt-green" value="Create Account" />
+					<div class="terms">By Clicking <strong>Create Account</strong> I agree to the <a href="#Terms">Terms of Service</a> and <a href="#Privacy">Privacy Policy</a></div>
+				</div>
+			</form>
+		</div>
+	</div>
+	
+	
+
+	
+	
+</section>
+
+@@include('../partials/footer.html')

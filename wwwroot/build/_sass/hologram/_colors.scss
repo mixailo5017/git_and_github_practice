@@ -1,0 +1,134 @@
+ .holo-color{
+	width:25%;
+	float:left;
+	height:150px;
+	margin-bottom:20px;
+	position: relative;
+	.text{
+		display:block;
+		background: #FFF;
+		font-size:14px;
+		color:#000;
+		text-align:center;
+		position: absolute;
+		bottom:0;
+		height:50px;
+		width:100%;
+		padding-top:25px;
+	}
+ }
+
+ .holo-colorwrap {
+ 	li {
+ 		margin: 1em 0!important;
+ 	}
+ }
+ 
+ $colors:(
+	cgla-lt-green:    			#ffd956,
+	cgla-dk-green:				#90be89,
+	cgla-blue:					#5dc1f5,
+	cgla-orange:				#F47D20,
+	green-cta-box:				rgba(95, 156, 77, 0.8),
+	alt-green-cta-box:			rgba(213, 176, 46, 0.8), 
+	blue-cta-box:				rgba(47, 181, 185, 0.8), 
+	reg-bg:						#F2F2F2,
+	reg-active:					#2FACFF, 
+	reg-form-bg:				#F8F8FA,
+	reg-form-border:			#B3B8C1,
+	reg-form-active-border:		#72B3E4,
+	reg-button-bg:				#93DB6E,
+	menu-active:				#009DD9,
+	menu-rollover:				#515151,
+	menu-border:				#72788A,
+	header-bg:					#515765,
+	off-white:					#f1f1f3,
+	bluish-off-white:			#f8f8fa,
+	silver-gray:				#b4b8c0,
+	med-aqua:					#8e95aa,
+	lt-blue-btn:				#2eb4b8,
+	blue-border:				#258184,
+	lt-green-btn:				#d4e4a7,
+	green-border:				#9EAE73,
+	dk-green-txt:				#63772c,
+	testimonial-blue:			#3abdc1,
+	testimonial-gray:			#373b43,
+	spotlights-bg:				#464b57,
+	personalize-bg:				#2D2E32, 
+	lt-aqua:					#9EA0A5, 
+	front-cta-bg:				#90BE89, 
+	dk-aqua-border:				#A9ACB2, 
+	lt-aqua-border:				rgba(92, 99, 112, 0.17),
+	reg-inactive:				#ADB1C3,
+	footer-bg:					#E9E9ED,
+	footer-border:				#E0E0E0,
+	footer-text:				#646871,
+	form-placeholder:			#999999,
+	form-entry:					#666666,
+	darker-gray:				#333333,
+	power-badge:				#ffc600, 
+	standard-badge:				#7292ba  
+ );
+
+ @each $color, $holoColor in $colors{
+ 	.#{$color}{
+ 		background-color:$holoColor;
+ 	} 
+ }
+ /*doc
+ 
+---
+title: Colors
+name: colors
+category: Colors
+---
+
+Some of the colors listed here are leftover from previous 'pre development' builds of the site and are subject
+to removal. Any color currently listed here is fair game to use.
+
+<div class="holo-colorwrap">
+<ul>
+<li class="holo-color cgla-lt-green"><div class="text">$cgla-lt-green<br/>#ffd956;</div></li>
+<li class="holo-color green-cta-box"><div class="text"> $green-cta-box<br/>rgba(95, 156, 77, 0.8);</div></li>
+<li class="holo-color alt-green-cta-box"><div class="text"> $alt-green-cta-box<br/>rgba(213, 176, 46, 0.8);</div></li>
+<li class="holo-color blue-cta-box"><div class="text"> $blue-cta-box<br/>rgba(47, 181, 185, 0.8);</div></li>
+<li class="holo-color reg-bg"><div class="text"> $reg-bg<br/>#F2F2F2; </div></li>
+<li class="holo-color reg-active"><div class="text"> $reg-active<br/>#2FACFF;</div></li>
+<li class="holo-color reg-form-bg"><div class="text"> $reg-form-bg<br/>#F8F8FA;</div></li>
+<li class="holo-color reg-form-border"><div class="text"> $reg-form-border<br/>#B3B8C1;</div></li>
+<li class="holo-color reg-form-active-border"><div class="text"> $reg-form-active-border<br/>#72B3E4;</div></li>
+<li class="holo-color reg-button-bg"><div class="text"> $reg-button-bg<br/>#93DB6E;</div></li>
+<li class="holo-color menu-active"><div class="text"> $menu-active<br/>#009DD9;</div></li>
+<li class="holo-color menu-rollover"><div class="text"> $menu-rollover<br/>#515151;</div></li>
+<li class="holo-color menu-border"><div class="text"> $menu-border<br/>#72788A;</div></li>
+<li class="holo-color header-bg"><div class="text"> $header-bg<br/>#515765;</div></li>
+<li class="holo-color off-white"><div class="text"> $off-white<br/>#f1f1f3;</div></li>
+<li class="holo-color bluish-off-white"><div class="text"> $bluish-off-white<br/>#f8f8fa;</div></li>
+<li class="holo-color silver-gray"><div class="text"> $silver-gray<br/>#b4b8c0;</div></li>
+<li class="holo-color med-aqua"><div class="text"> $med-aqua<br/>#8e95aa;</div></li>
+<li class="holo-color lt-blue-btn"><div class="text"> $lt-blue-btn<br/>#2eb4b8;</div></li>
+<li class="holo-color blue-border"><div class="text"> $blue-border<br/>#258184;</div></li>
+<li class="holo-color lt-green-btn"> <div class="text">$lt-green-btn<br/>#d4e4a7;</div></li>
+<li class="holo-color green-border"><div class="text"> $green-border<br/>#9EAE73;</div></li>
+<li class="holo-color dk-green-txt"><div class="text"> $dk-green-txt<br/>#63772c;</div></li>
+<li class="holo-color testimonial-blue"><div class="text"> $testimonial-blue<br/>#3abdc1;</div></li>
+<li class="holo-color testimonial-gray"><div class="text"> $testimonial-gray<br/>#373b43;</div></li>
+<li class="holo-color spotlights-bg"><div class="text"> $spotlights-bg<br/>#464b57;</div></li>
+<li class="holo-color personalize-bg"><div class="text"> $personalize-bg<br/>#2D2E32;</div></li>
+<li class="holo-color lt-aqua"><div class="text"> $lt-aqua<br/>#9EA0A5;</div></li>
+<li class="holo-color front-cta-bg"><div class="text"> $front-cta-bg<br/>#90BE89;</div></li>
+<li class="holo-color dk-aqua-border"><div class="text"> $dk-aqua-border<br/>#A9ACB2;</div></li>
+<li class="holo-color lt-aqua-border"><div class="text"> $lt-aqua-border<br/>rgba(92, 99, 112, 0.17);</div></li>
+<li class="holo-color reg-inactive"><div class="text"> $reg-inactive<br/>#ADB1C3;</div></li>
+<li class="holo-color footer-bg"><div class="text"> $footer-bg<br/>#E9E9ED;</div></li>
+<li class="holo-color footer-border"><div class="text"> $footer-border<br/>#E0E0E0; </div></li>
+<li class="holo-color footer-text"><div class="text"> $footer-text<br/>#646871;</div></li>
+<li class="holo-color form-placeholder"><div class="text"> $form-placeholder<br/>#999999;</div></li>
+<li class="holo-color form-entry"><div class="text"> $form-entry<br/>#666666;</div></li>
+<li class="holo-color darker-gray"><div class="text"> $darker-gray<br/>	#333333;</div></li>
+<li class="holo-color power-badge"><div class="text"> $power-badge<br/>#ffc600;</div></li>
+<li class="holo-color standard-badge"><div class="text"> $standard-badge<br/>#7292ba;</div></li>
+</ul>
+</div>
+*/
+  

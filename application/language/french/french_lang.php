@@ -71,8 +71,8 @@ $lang['FinancialStructure'] = 'Structure financi&egrave;re';
 $lang['Budget'] = 'budget';
 $lang['EstStart'] = 'Est. D&eacute;marrer';
 $lang['EstCompletion'] = 'Est. ach&egrave;vement';
-$lang['Developer'] = 'Promoteur';
-$lang['Sponsor'] = 'Sponsor';
+$lang['Developer'] = 'Développeur';
+$lang['Sponsor'] = 'Promoteur';
 $lang['Comments'] = 'Commentaires';
 $lang['Delete'] = 'effacer';
 $lang['LeaveaCommentUpdate'] = 'Laisser un commentaire / Mise &agrave; jour';
@@ -264,7 +264,6 @@ $lang['AddthisProject'] = 'Ajouter ce projet';
 $lang['AddOutsideProject'] = 'Ajouter un projet ext&eacute;rieur';
 $lang['SelectAnOrganization'] = '- Choisir une organisation -';
 $lang['Limit200'] = 'Limiter &agrave; 200 mots';
-$lang['Sponsor'] = 'Sponsor';
 $lang['Overseer'] = 'surveillant';
 $lang['UpdateOrganizationOwner'] = 'Mise à jour Organisation Propriétaire';
 
@@ -413,8 +412,6 @@ $lang['Country'] = 'Pays';
 $lang['Location'] = 'emplacement';
 $lang['Est.Start'] = 'Est.Start';
 $lang['Est.Completion'] = 'Est. ach&egrave;vement';
-$lang['Developer'] = 'promoteur';
-$lang['Sponsor'] = 'Sponsor';
 $lang['TotalBudget'] = 'Budget total';
 $lang['FinancialStructure'] = 'Structure financi&egrave;re';
 $lang['Stage'] = '&Eacute;tape';
@@ -553,8 +550,14 @@ $lang['emptyseat'] = 'Si&egrave;ge vide';
 $lang['memberphoto'] = 'Membre photo';
 
 /* project_edit.php */
-$lang['ProjectPhoto'] = 'Projet photo';
-$lang['SeparateMessage'] = 'S&eacute;parez chaque mot-cl&eacute; par des virgules (ex : pont , p&eacute;age, construction)';
+$lang['ProjectPhoto'] = 'Photo du projet';
+$lang['SeparateMessage'] = "Pour nous aider à vous connecter avec des experts ou des investisseurs, entrez 5 à 10 mots-clés (ou expressions) qui captent uniquement votre projet. Par exemple: pont, péage, construction, suspension, PPP.";
+$lang['CountryExplanation'] = 'Le pays dans lequel le projet est situé. Pour les projets transfrontaliers, sélectionnez le pays dans lequel la plus grande partie du projet est située.';
+$lang['LocationExplanation'] = "Si vous entrez l'emplacement ici, cliquez sur Mise à jour du projet, puis cliquez sur l'onglet Carte pour affiner. Alternativement, vous pouvez utiliser la carte directement pour localiser l'emplacement. <br/><br/>Entrez l'emplacement du projet en utilisant la ville, état ou province, et de l'information du pays, selon le cas. Pour les projets qui relient deux ou plusieurs endroits (ou englobent une grande surface), entrez un emplacement de point représentatif dans ce champs et utilisez l'outil de cartographie pour illustrer l'empreinte géographique du projet.";
+$lang['DeveloperExplanation'] = "Le développeur du projet est l'organisation la plus directement responsable de la gestion de la progression du projet à travers son cycle de vie. Le développeur du projet peut être une entité du secteur public ou privé (et dans certains cas, peut être le même que le promoteur du projet).";
+$lang['SponsorExplanation'] = "Le promoteur du projet est l'organisation sous l'autorité de laquelle le projet est en cours d'élaboration. Souvent, ce sera un organisme public ou quasi-public, comme un Ministère des Transports.";
+$lang['DetailExplanation'] = 'Fournissez un bref résumé (2-5 paragraphes) de votre projet, y compris une description de ses objectifs, les principales actions prévues, et les antécédents importants / informations contextuelles.';
+$lang['PhotoExplanation'] = 'Ajoutez une photo ou un graphique pour représenter votre projet. Cette image apparaîtra en haut de la page de profil du projet et à côté du nom du projet dans les résultats de recherche, la carte et d\'autres références similaires au projet dans la plate-forme GViP.';
 
 /* projects_files.php */
 $lang['File'] = 'Dossier';
@@ -565,7 +568,7 @@ $lang['Private'] = 'Priv&eacute;';
 $lang['Specific'] = 'Sp&eacute;cifique';
 $lang['SimilarProjectOwners'] = 'Similaires Propri&eacute;taires de projet';
 $lang['Others'] = 'Autres ...';
-$lang['Designb'] = 'Conception, construction';
+$lang['Designb'] = 'Conception, Construction';
 $lang['SelectOne'] = '- S&eacute;lectionnez -';
 $lang['Public'] = 'Public';
 $lang['Private'] = 'Priv&eacute;';
@@ -914,7 +917,7 @@ $lang['MyProjectsIOwn'] = 'Projets que je possède';
 $lang['MyProjectsIFollow'] = 'Projets que j\'ai suivi';
 
 /* Project Profile Edit page*/
-$lang['ProjectEditBudgetHelpMessage'] = 'Vide ou 0 (zéro) signifie que le budget doit être déterminé (TBD)';
+$lang['ProjectEditBudgetHelpMessage'] = 'Si le budget du projet est encore à déterminer, entrez &quot;0&quot; dans ce champ. Le profil du projet va alors afficher &quot;TBD&quot; dans le champ de budget.';
 
 /* Pagination */
 $lang['First'] = 'Première';
@@ -983,6 +986,7 @@ $lang['WEBScore'] = 'Score Bénéfices Économiques Élargis';
 $lang['ProjectTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Bhopal Metro&quot;) pour affiner votre recherche';
 $lang['ExpertTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Jason Jones&quot;) pour affiner votre recherche';
 
+$lang['mY'] = 'MM/AAAA';
 $lang['mdY'] = 'MM/JJ/AAAA';
 $lang['LoginFailed'] = 'Incorrect email and/or password.';
 

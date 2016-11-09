@@ -24,7 +24,9 @@ $lang['decimal']			= "The %s field must contain a decimal number.";
 $lang['less_than']			= "The %s field must contain a number less than %s.";
 $lang['greater_than']		= "The %s field must contain a number greater than %s.";
 
-$lang['valid_period']		= "The %s field must be in a proper format and the start date should be less or equal to the end date.";
+$lang['valid_period']		= "You entered a completion date that's before the start date. Something's fishy!";
+$lang['valid_monthyear_format'] = "Please enter a date in the format MM/YYYY.";
+$lang['isCompleted_developer_sponsor'] = "Please specify either the developer, the sponsor, or both.";
 
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/english/form_validation_lang.php */

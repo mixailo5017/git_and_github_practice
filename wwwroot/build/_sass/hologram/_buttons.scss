@@ -1,0 +1,38 @@
+ /*doc
+---
+title: Buttons
+name: Button
+category: Buttons
+---
+
+Buttons come in three types, off-white/gray, blue/white, and clear/white with the option to include an icon. Icons do not work 
+on input buttons. The linkedin icon on the signup form is a sprite.
+
+The class of 'std' was used to match the width of a general button in the comp by assigning a fixed with of 165 pixels. Use 
+this if you have a button with short text and want to maintain uniform spacing.
+
+
+
+```html_example 
+<a class="btn" href="/signup">Join for Free</a>
+<a class="btn std " href="/signup">Join for Free</a>
+<a class="btn std lt-blue" href="/signup">Join for Free</a>
+
+<input type="submit" class="btn std lt-blue" value="Input Button">
+<button class="btn std lt-blue">Button Button</button>
+<button class="btn clear">Clear Button</button>
+<a class="btn clear icon-power" href="#">Clear Button with Icon</a>
+
+<div class="holo-black">	
+	<button class="btn clear light icon-play">Clear Button with White Text and Icon</button>
+</div>
+
+```  
+*/
+ 
+.btn{margin-bottom: 5px; display:inline-block;}
+
+.holo-black {
+	background: #000;
+	padding: 30px;
+}

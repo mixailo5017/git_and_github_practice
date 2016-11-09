@@ -24,6 +24,8 @@ $lang['less_than'] = 'El campo %s debe contener un número inferior a %s.';
 $lang['greater_than'] = 'El campo %s debe contener un número mayor que %s.';
 
 $lang['valid_period'] = "El campo %s debe estar en un formato adecuado y la fecha de inicio debe ser menor o igual a la fecha de finalización.";
+$lang['valid_monthyear_format'] = "Por favor ingrese una fecha en el formato MM/AAAA.";
+$lang['isCompleted_developer_sponsor'] = 'Por favor especificar el desarrollador, el patrocinador, o ambos.';
 
 /* End of file form_validation_lang.php */
 /* Location: ./system/language/english/form_validation_lang.php */

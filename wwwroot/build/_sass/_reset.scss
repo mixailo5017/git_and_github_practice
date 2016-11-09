@@ -1,0 +1,46 @@
+/*Start Reset*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,abbr, address, cite, code,del, dfn, em, img, ins, kbd, q, samp,small, strong, sub, sup, var,b, i,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,time, mark, audio, video {margin:0;padding:0; border:0; outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+
+html{line-height:1; font-size: 100%;}
+body{-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {  display:block; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+div, span, ul, li, fieldset, input, textarea, blockquote{ -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+ul {list-style: none;}
+td, th{vertical-align:top;}
+a{text-decoration:none;}
+table {border-collapse: separate;border-spacing: 0;}
+caption, th, td {text-align: left;font-weight: normal;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+strong,b{font-weight:bold;}
+em, i{font-style:italic}
+ins { background-color:#ff9;color:#000;text-decoration:none;}
+
+/* change colours to suit your needs */
+mark {background-color:#ff9;color:#000; font-style:italic;font-weight:bold;}
+del { text-decoration: line-through;}
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help;}
+table { border-collapse:collapse; border-spacing:0;}
+
+/* change border colour to suit your needs */
+hr { display:block; height:1px; border:0; border-top:1px solid #cccccc; margin:1em 0; padding:0;}
+input, select {vertical-align:middle; outline: none;}
+textarea{outline:none;}
+/*End Reset*/
+.clearfix:after, .clearfix:before{ content: ""; display: table;}
+.clearfix:after {clear:both;}
+
+.skip{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; width:600px; color:#FFF;
+	&:focus, &:active{position:static; width:auto; height:auto; left:0px ; margin-right:10px;}
+}
+.noreveal{
+	&:focus, &:active{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; width:600px; color:#FFF;}
+}
+.access{position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;}
+.forPrint{display: none;}
+button, input[type="submit"]{cursor:pointer;}
+img {
+	max-width: 100%; height: auto;
+}

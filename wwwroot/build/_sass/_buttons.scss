@@ -1,0 +1,219 @@
+/* ---------------------
+Button Styles
+--------------------- */
+
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 3px;
+	font-family: 'Open Sans Bold', sans-serif;
+	font-size: $font-size-base;
+	background: $off-white;
+	border: solid 1px $silver-gray;
+	text-align: center;
+	text-shadow: 1px 1px 1px #FFF, -1px -1px 1px #CCC;
+	line-height: normal;
+	color: $med-aqua;
+	padding: 14px 10px;
+	-webkit-appearance: none;
+
+	&.inactive {
+		opacity: .5;
+		cursor: default;
+	}
+
+	&:hover {
+		cursor: pointer;
+		color: $silver-gray;
+		background: $bluish-off-white;
+
+		&:before, &:after {
+			text-decoration: none;
+		}
+	}
+
+	&.ico {
+		padding: 8px 10px;
+	}
+
+	&:before, &:after {
+		font-family: 'icomoon';
+	}
+}
+
+.small {
+	padding: 9px 10px;
+}
+
+.std {
+	width: 165px;
+}
+
+.ctr {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+}
+
+.lt-green {
+	color: $dk-green-txt;
+	background: $cgla-lt-green;
+	border: outset 1px $green-border;
+	box-shadow: inset 0.5px 0.9px 0 rgba(255, 255, 255, 0.46);
+	text-shadow: 0.5px 0.9px 1px #FFF;
+}
+
+.dk-green {
+	color: $bluish-off-white;
+	background: $cgla-dk-green;
+	border: outset 1px $green-border;
+	box-shadow: inset 0.5px 0.9px 0 rgba(255, 255, 255, 0.46);
+	text-shadow: 0.5px 0.9px 1px rgba(0, 0, 0, 0.35);
+
+	&:hover {
+		background: #789d73;
+		color: $bluish-off-white;
+	}
+}
+
+
+
+.lt-blue {
+	color: $bluish-off-white;
+	background: $cgla-blue;
+	background-image: linear-gradient(to top, rgba(46, 180, 184, 0.23) 0%, rgba(79, 204, 208, 0.23) 100%);	
+	border: solid 1px $blue-border;
+	box-shadow: 0.5px 0.9px 0 rgba(0, 0, 0, 0.16), inset 0.5px 0.9px 0 rgba(255, 255, 255, 0.3);
+	text-shadow: 0.5px 0.9px 1px rgba(0, 0, 0, 0.35);
+
+	&:hover {
+		background: #4793bb;
+		color: $bluish-off-white;
+	}
+
+	&.icon-linkedin {
+		background: url(#{$new-images}/linkedin-btn.png) no-repeat;
+		background-color: $cgla-blue;
+		background-position: 10px center;
+		background-size: 20px;
+		padding-left: 45px;
+
+		&:before {
+			font-family: 'icomoon';
+			padding-right: 15px;
+			font-size: $h3-standard;
+			line-height: 15px;
+		}
+	}
+}
+
+.clear {
+	color: #676E7D;
+	border: none;
+	background: none;
+	text-shadow: none;
+
+	&:hover {
+		background: none;
+
+		span {
+			text-decoration: underline;
+		}
+		
+
+		&:before, &:after {
+			color: $cgla-blue;
+			text-decoration: none;
+		}
+	}
+
+	&:before, &:after {
+		font-size: 1.625em;
+		vertical-align: middle;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&:before {
+		padding-right: 10px;
+	}
+
+	&:after {
+		padding-left: 10px;
+	}
+}
+
+.light {
+	color: #FFF;
+
+	&:hover {
+		color: #FFF;
+	}
+}
+
+/* Reconfigured */
+.play {
+	@include icon-play;
+	color: #FFF;
+	font-size: $font-size-sm;
+	font-family: 'Open Sans Semibold', sans-serif;
+	&:before {
+		vertical-align: middle;
+	}
+
+	&:hover {
+		
+		span {
+			color: #FFF;
+			text-decoration: underline;
+		}
+
+		&:before {
+			color: $cgla-blue;
+			text-decoration: none;
+		}
+	}
+}
+/* /Reconfigured */
+
+/* IE9 File Upload Buttons */
+#basicUpload {
+	.file-upload {
+		position: relative;
+		overflow: hidden;
+		padding: 10px;
+	}
+
+	input[type="file"] {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		font-size: 20px;
+		cursor: pointer;
+		opacity: 0;
+		height: 45px;
+	}
+
+	#upload_photo {
+		display: none;
+	}
+}
+
+/* disabled cropper buttons */
+.disabled .btn {
+	opacity: .5;
+	cursor: default;
+	&:hover {
+		color: #8e95aa;
+		background: #f1f1f3;
+	}
+	&.lt-blue:hover {
+		color: #f8f8fa;
+		background: #5dc1f5;
+	}
+}

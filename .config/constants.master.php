@@ -82,8 +82,8 @@ define('SIGNUP_IMAGE_PATH', IMAGE_PATH.'/signup/');
 */
 
 define("CURRENCY","$");
-define("DATEFORMAT","%m/%d/%y");
-define("DATEFORMATDB","%y-%m-%d");
+define("DATEFORMAT","%m/%d/%y"); // Display (on edit screen) and transmission format for dates with day-level accuracy
+define("DATEFORMATDB","%y-%m-%d"); // Format used to store dates in DB
 
 /*
 |------------------------------------------------------------------------
@@ -91,7 +91,9 @@ define("DATEFORMATDB","%y-%m-%d");
 |------------------------------------------------------------------------
 */
 define('SITE_NAME', 'GViP');
-define('DATEFORMATVIEW', 'M d, Y');
+define('DATEFORMAT_MONTHONLY', '%m/%y'); // Display (on edit screen) and transmission format for dates with month-level accuracy
+define('DATEFORMATVIEW', 'M j, Y'); // Display format for dates with day-level accuracy. E.g., used for project profile view Files section
+define('DATEFORMATVIEW_MONTHONLY', 'F Y'); // Display format for dates with month-level accuracy. E.g., used for project profile view
 define('ADMIN_EMAIL', 'no-reply@gvip.io');
 define('ADMIN_EMAIL_NAME', SITE_NAME);
 define('CGLA_NAME', 'CG/LA Infrastructure');

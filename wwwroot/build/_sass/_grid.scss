@@ -1,0 +1,361 @@
+$susy: (columns: 12, global-box-sizing: border-box);
+//, debug: (image:show)
+
+.container-fluid {
+	@include container(auto);
+}
+
+.container { 
+	@include container(1187px);
+
+	@include mq($max,$big_desktop,$desktop,$min) {
+		@include container(987px);
+	}
+
+	@include mq($max,$desktop,$tablet,$min) {
+		@include container(747px);
+	}
+
+	@include mq($max,$tablet,$palm,$min) {
+		@include container(640px);
+	}
+}
+
+header {
+	.logo {
+
+		@include mq($max,$tablet) {
+		//	@include span(5 no-gutters);
+		}
+	}
+
+	.user {
+
+		@include mq($max,$tablet) {
+		//	@include span(5 last);
+		}
+	}
+}
+
+.hero-image {
+	.headline {
+		@include span(8.5 no-gutters);
+
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+
+	.head-cta {
+		@include span(3.5 no-gutters);
+
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+}
+
+.testimonials {
+	ul {
+		@include span(50% no-gutters);
+		
+		@include mq($max,$palm) {
+			@include span(100% no-gutters);
+		}
+
+		.photo {
+			@include span(20% no-gutters);
+			@include mq($max,$palm) {
+				@include span(3 no-gutters);
+			}
+		}
+
+		.quote {
+			@include span(80% no-gutters);
+			@include mq($max,$palm) {
+				@include span(9 no-gutters);
+			}
+		}
+	}
+}
+
+.cta-box {
+	@include span(4);
+
+	@include mq($max,$palm) {
+		@include span(12);
+	}
+
+	@include mq($max,$desktop,$palm,$min) {
+		@include span(6);
+	}
+}
+
+.m-tutorial {
+	@include clearfix;
+	.image {
+		@include span(2 no-gutters);
+
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+
+	.content {
+		@include span(10 no-gutters);
+		@include mq($max,$desktop) {
+			@include span(9.5 no-gutters);
+		}
+
+		@include mq($max,$tablet) {
+			@include span(9 no-gutters);
+		}
+
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+}
+
+/* Everything below this line is stock and subject to change */
+
+.m-related-item {
+	@include span(33.333333% no-gutters);
+}
+
+.m-direction-nav .m-related-item {
+	@include span(50% no-gutters);
+}
+
+.interior .sidebar {
+	@include span(3 no-gutters);
+}
+
+.interior main {
+	@include span(last 9.2);
+}
+
+.site-info{
+	@include span(5);
+}
+
+.hero .overlay, .flex-control-nav {
+	@include span(last 4.5);
+}
+
+
+.main-footer {
+	.logo-cgla {
+		@include span(1.5);
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+
+	address {
+		@include span(9);
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+	.logo-gvip {
+		@include span(last 1.5);
+		@include mq($max,$palm) {
+			@include span(12 no-gutters);
+		}
+	}
+
+}
+
+.role-nav {
+	@include span(4.9);
+	margin-right: 0 !important;
+}
+
+.utility-nav {
+	@include span(last 7.3);
+}
+
+.form-group.cols {
+	@include span(5);
+}
+
+.form-group.thirds {
+	@include span(4);
+}
+
+.form-group.cols:nth-child(2n){
+	@include span(last 5);
+}
+
+.form-group.thirds:nth-child(3n){
+	@include span(last 4);
+}
+
+.form-group.full-width {
+	@include span(12 no-gutters);
+}
+
+.grid {
+	.form-group.blog-search {
+		@include span(6 no-gutters);
+	}
+
+	.form-group.blog-filter {
+		@include span(last 6 no-gutters);
+	}
+	.form-group.publication-filter {
+		@include span(last 9 no-gutters);
+	}
+}
+
+.dropdown-menu {
+	.m-related-item {
+		@include span(12);
+	}
+}
+
+.main-nav {
+	.navbar-header, .sub-nav {
+		@include span(2.166 of 12 no-gutters);
+	}
+}
+
+.content-cta {
+	@include span(10.5);
+}
+
+.detail-page .content-cta {
+	@include span(11.6 no-gutters);
+}
+
+
+.content-cta.cta-half-col {
+	@include span(3.5 of 9);
+	@include pre(.5 of 9);
+	@include post(.5 of 9);
+	
+	&:nth-child(even){
+		margin-right:0;
+	}
+}
+
+.m-related-links {
+	span {
+		@include span(3 no-gutters);
+	}
+	.links {
+		@include span(9 no-gutters);
+	}
+}
+
+.m-paging {
+	> * {
+		@include span(33.333333% no-gutters);
+	}
+}
+
+.membership-levels > div {
+	@include span (last 33.333333% no-gutters);
+}
+
+@include mq($max,$big_desktop) {
+	.role-nav {
+		@include span(5.7);
+	}
+	.utility-nav {
+		@include span(last 6.4);
+	}
+	.m-paging {
+		.blog-number, .pager {
+			@include span(50% no-gutters);
+		}
+		.pagination {
+			@include span(100% no-gutters);
+		}
+	}
+}
+
+@include mq($max,$desktop) {
+	.main-nav .sub-nav {
+		@include span(12);
+	}
+	.interior main, .interior .sidebar-content, .join-moaa .main-content section {
+		
+		@include span(11.25);
+		margin-left: auto !important; margin-right: auto !important;
+		float: none;
+	}
+	.interior .sidebar {
+		@include span(12);
+		float: none;
+	}
+}
+
+@include mq($max,$tablet_plus) {
+	.site-info, .footer-links {
+		@include span(12);
+	}
+	.m-related-item {
+		@include span(12);
+		margin: 0 !important;
+	}
+
+	.membership-levels > div {
+		float: none; width: 100%;
+	}
+
+	.grid {
+		.m-related-item {
+			@include span(50% no-gutters);
+		}
+		
+		.form-group.blog-filter{
+			@include span(10 no-gutters);
+			@include pre(2);
+		}
+
+		.form-group.blog-search {
+			@include span(2 no-gutters);
+		}
+	}
+
+	.utility-nav {
+		@include span(last 8);
+	}
+
+	.m-related-links {
+		span, .links {
+			@include span(12 no-gutters);
+		}
+	}
+}
+
+@include mq($max,$palm) {
+	.utility-nav, .join-moaa .main-content .membership-levels {
+		@include span(12);
+		float: none;
+	}
+	.content-cta.cta-half-col {
+		@include span(11);
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
+
+	.form-group.cols, .form-group.cols:nth-child(2n), .form-group.thirds, .form-group.thirds:nth-child(3n){
+		@include span(12);
+	}
+
+	.detail-page .content-cta {
+		@include span(11.3 no-gutters);
+	}
+	.grid {
+		.m-related-item {
+			@include span(100% no-gutters);
+		}
+		.form-group.blog-filter, .form-group.blog-search{
+			@include span(12 no-gutters);
+		}
+	}
+}
+

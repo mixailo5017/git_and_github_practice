@@ -1,0 +1,62 @@
+/* ---------------------
+Footer Styles
+--------------------- */
+
+.main-footer {
+	background: $footer-bg;
+	border-top: solid 1px $footer-border;
+	border-bottom: solid 1px $footer-border;
+	font-family: 'Open Sans Semibold', sans-serif;
+	text-align: center;
+	height: 130px;
+	padding: 40px 0;
+
+	@include mq($max,$palm) {
+		padding: 40px 30px;
+		height: auto;
+	}
+
+	.logo-cgla, .logo-gvip {
+
+		@include mq($max,$palm) {
+			text-align: center;
+		}
+	}
+	.logo-cgla
+	{
+		padding-top: 2px;
+		@include mq($max,$palm) {
+			padding-top: 0;
+			margin: 0px auto 20px;
+		}
+
+	}
+
+	.logo-gvip {
+		padding-top: 9px;
+		@include mq($max,$palm) {
+			padding-top: 0;
+			margin: 20px auto 0;
+		}
+	}
+
+	address {
+		font-size: $font-size-xsm;
+		font-style: normal;
+		font-family: 'Open Sans', serif;
+		line-height: 1.5em;
+		text-align: left;
+		color: $footer-text;
+		a {
+			color: $cgla-blue;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		@include mq($max,$palm) {
+			text-align: center;
+		}
+	}
+}
