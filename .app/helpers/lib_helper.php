@@ -1610,6 +1610,25 @@ if (! function_exists('format_budget')) {
     }
 }
 
+if (! function_exists('format_budget_for_edit')) {
+    /**
+     * Formats the budget value
+     * If value is null, empty or equals to 0 then returns TBD
+     * @param mixed $value
+     * @param bool $brandNewProject If the project profile is brand new, leave budget blank (don't display a zero)
+     * @return string
+     */
+    function format_budget_for_edit($value, $brandNewProject)
+    {
+        if ($value == '' && (! $brandNewProject)) {
+            return '0';
+        }
+
+        return $value;
+    }
+}
+
+
 if (! function_exists('asset_version')) {
     /**
      * Return the query string for the asset or an empty string

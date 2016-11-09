@@ -82,7 +82,10 @@
                         'id'    => 'project_budget_max',
                         'name'  => 'project_budget_max',
 //                      'value' => CURRENCY.$project["totalbudget"]
-                        'value' => set_value('project_budget_max', $project["totalbudget"])
+                        'value' => set_value(
+                            'project_budget_max', 
+                            format_budget_for_edit($project["totalbudget"], empty($project['description']))
+                            )
                     ),
                     'lbl_project_financial' => array(
                         'class' => 'left_label'
