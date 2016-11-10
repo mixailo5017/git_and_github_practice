@@ -692,7 +692,7 @@ $(function() {
     }
 
     // submit for on update profile button click
-    $('.update_project').click(function(e) {
+    $('.update_project, #update_project').click(function(e) {
         formsubmit = $("#project_name_form").submit();
 
         e.preventDefault();
