@@ -623,7 +623,7 @@ class Projects extends CI_Controller
         // Render the page
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('projects/projects_edit', $editdata);
-		$this->load->view('templates/footer', $this->dataLang);
+		$this->load->view('templates/footer', $this->footer_data);
 	}
 	
     /**
