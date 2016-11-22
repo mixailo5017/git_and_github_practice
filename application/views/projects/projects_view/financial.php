@@ -22,7 +22,7 @@
                                 <tr>
                                     <td><?php if ($fund_sources['name']!= '') { echo $fund_sources['name'];} else { echo "N/A";} ?></td>
                                     <td><?php if ($fund_sources['role']!= '') { echo $fund_sources['role'];} else { echo "N/A";} ?></td>
-                                    <td><?php if ($fund_sources['amount']!= '') { echo CURRENCY.$fund_sources['amount'];} else { echo "N/A";} ?></td>
+                                    <td><?php if ($fund_sources['amount']!= '') { echo $fund_sources['amount'];} else { echo "N/A";} ?></td>
                                     <td><?php if ($fund_sources['description']!= '') { echo $fund_sources['description'];} else { echo "N/A";} ?></td>
                                 </tr>
                             <?php } ?>
