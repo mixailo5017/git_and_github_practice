@@ -407,7 +407,7 @@
                             </div>
                             <br>
 
-                            <?php echo form_label(lang("TotalBudget") . ' ($MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
+                            <?php echo form_label(lang("TotalBudget") . ' (US$ MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
                             <div class="fld">
                                 <?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
                                 <div class="errormsg" id="err_project_budget_max"><?php echo form_error("project_budget_max"); ?></div>
