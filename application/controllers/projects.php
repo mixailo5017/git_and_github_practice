@@ -428,14 +428,14 @@ class Projects extends CI_Controller
         if (! ($viewdata['project']['procurement']['totalprocurement'] == 0)) {
             $viewdata['project_sections']['procurement'] = true;   
         }
-        if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
-            $viewdata['project_sections']['fundamentals'] = true;
-        }
         if (! ($viewdata['project']['financial']['totalfinancial'] == 0)) {
             $viewdata['project_sections']['financial'] = true;
         }
         if (! ($viewdata['project']['regulatory']['totalregulatory'] == 0)) {
             $viewdata['project_sections']['regulatory'] = true;
+        }
+        if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
+            $viewdata['project_sections']['fundamentals'] = true;
         }
         if (! ($viewdata['project']['participants']['totalparticipants'] == 0)) {
             $viewdata['project_sections']['participants'] = true;   
