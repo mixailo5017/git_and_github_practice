@@ -2,8 +2,16 @@
                 <div id="tabs-5" class="col2_tab">
                     <?php if (($project['procurement']['procurement_date'] != '') || ($project['procurement']['procurement_criteria'] != '')) { ?>
                         <h3><?php echo lang('Process');?></h3>
-                        <?php if ($project['procurement']['procurement_criteria'] != '') { ?><p><strong><?php echo lang('AuctionCriteria') . ': '; ?></strong><?php echo $project['procurement']['procurement_criteria']; ?></p><?php } ?>
-                        <?php if ($project['procurement']['procurement_date'] != '') { ?><p><strong><?php echo lang('AuctionDate') . ': '; ?></strong><?php echo $project['procurement']['procurement_date']; ?></p><?php } ?>
+                        <table width="100%">
+                            <tr>
+                                <th><?php echo lang('AuctionDate');?>:</th>
+                                <th><?php echo lang('AuctionCriteria'); ?>:</th>
+                            </tr>
+                            <tr>
+                                <td><?php if ($project['procurement']['procurement_date'] != '') { echo $project['procurement']['procurement_date']; } else { echo "N/A"; } ?></td>
+                                <td><?php if ($project['procurement']['procurement_criteria'] != '') { echo $project['procurement']['procurement_criteria']; } else { echo "N/A"; } ?></td>
+                            </tr>
+                        </table>
                     <?php } ?>
 
                     <?php if (count($project['procurement']['machinery']) >0) { ?>
