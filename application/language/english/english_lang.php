@@ -583,7 +583,7 @@ $lang['PhotoExplanation'] = 'Upload a photo or graphic to represent your project
 
 //projects_files.php
 $lang['File'] = 'File';
-$lang['Type'] = 'Type';
+$lang['Description'] = 'Description';
 
 //projects_financial.php
 $lang['Private'] = 'Private';
