@@ -561,6 +561,7 @@ $lang['PhotoExplanation'] = 'Ajoutez une photo ou un graphique pour représenter
 
 /* projects_files.php */
 $lang['File'] = 'Dossier';
+$lang['Type'] = 'Type';
 $lang['Description'] = 'Description';
 
 /* projects_financial.php */
