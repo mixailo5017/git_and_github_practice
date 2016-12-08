@@ -1,7 +1,6 @@
 <div id="content" class="clearfix">
         <?php
-            if($project["eststart"] != "1111-11-11" && $project["eststart"] != "" ) { $eststart = DateFormat($project["eststart"],DATEFORMAT_MONTHONLY,FALSE); } else { $eststart = ""; } 
-            if($project["estcompletion"] != "1111-11-11" && $project["estcompletion"] != "") { $estcompletion = DateFormat($project["estcompletion"],DATEFORMAT_MONTHONLY,FALSE); } else { $estcompletion = ""; } 
+            
             $opt["project_form"] = array(
                     'title' => array(
                         'id'    => 'title_input',
@@ -114,7 +113,7 @@
                     'project_eststart' => array(
                         'id'          => 'project_eststart_picker',
                         'name'        => 'project_eststart',
-                        'value'       => set_value('project_eststart', $eststart),
+                        'value'       => set_value('project_eststart', $project["eststart"]),
                         'class'       => 'sm_left',
                         'style'       => 'width:120px',
                         'placeholder' => lang('mY'),
@@ -127,7 +126,7 @@
                     'project_estcompletion' => array(
                         'id'          => 'project_estcompletion_picker',
                         'name'        => 'project_estcompletion',
-                        'value'       => set_value('project_estcompletion', $estcompletion),
+                        'value'       => set_value('project_estcompletion', $project["estcompletion"]),
                         'class'       => 'sm_left',
                         'style'       => 'width:120px',
                         'placeholder' => lang('mY'),
@@ -248,6 +247,7 @@
                                     </div>
                             </div>
                             <?php echo form_close();?>
+
                         </div>
                         <br>
 
@@ -407,6 +407,16 @@
                             </div>
                             <br>
 
+                            <?php echo form_label(lang("StageElaboration").":","project_stage_elaboration",array("class"=>"left_label")); ?>
+                            <div class="fld">
+                                <?php 
+                                    $project_stage_elaboration_attr = 'id="project_stage_elaboration"';
+                                    echo form_input('project_stage_elaboration', set_value('project_stage_elaboration', $project["stage_elaboration"]), $project_stage_elaboration_attr);
+                                ?>
+                                <div class="errormsg" id="err_project_stage_elaboration"></div>
+                            </div>
+                            <br>
+
                             <?php echo form_label(lang("TotalBudget") . ' (US$ MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
                             <div class="fld">
                                 <?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
@@ -438,7 +448,6 @@
                                 <?php echo form_input($opt["project_form"]["project_fs_other"]); ?>
                                 <div class="errormsg" id="err_project_fs_other"></div>
                             </div>
-
 
                             <div id="stage_accordion" class="accordion" style="display:none">
                                 

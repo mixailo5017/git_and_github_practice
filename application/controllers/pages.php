@@ -119,6 +119,20 @@ class Pages extends CI_Controller {
         $this->load->view('layouts/default', $page);
     }
 
+    private function brazilfaq()
+    {
+        $page = array(
+            'view' => 'pages/brazilfaq',
+            'title' => build_title(lang('BrazilFAQ')),
+            'bodyclass' => '',
+            'header' => array(),
+            'content' => array(),
+            'footer' => array()
+        );
+
+        $this->load->view('layouts/default', $page);
+    }
+
     public function error_404()
     {
         show_404();

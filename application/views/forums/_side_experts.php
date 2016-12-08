@@ -1,5 +1,5 @@
 <section class="portlet">
-    <?php echo heading(lang("ExpertsAttending") . " ($total_rows)", 4); ?>
+    <?php if ($total_rows > 0) echo heading(lang("ExpertsAttending") . " ($total_rows)", 4); ?>
 
     <ul class="expert_list">
     <?php
@@ -32,13 +32,7 @@
             </li>
         <?php
             }
-        } else {
-        ?>
-            <li class="clearfix" style="list-style-type:none;">
-                <?php echo lang('Noexpertisefound');?>
-            </li>
-        <?php
-        }
+        } 
         ?>
     </ul>
 </section><!-- end .portlet -->

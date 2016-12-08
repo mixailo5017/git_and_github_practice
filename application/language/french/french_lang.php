@@ -7,14 +7,15 @@ $lang['Portuguese'] = 'Portugais';
 
 $lang['Go'] = 'Allez';
 $lang['Stage'] = '&eacute;tape';
+$lang['StageElaboration'] = 'Détails supplémentaires';
 $lang['siteTitle'] = 'VIP Mon Espace VIP';
 $lang['forgotPassword'] = 'Mot de passe oubli&eacute;?';
 $lang['myVip'] = 'Mon GViP';
 $lang['map']	= "Carte";
 $lang['projects'] = 'Projets';
-$lang['forums'] = 'Forums';
+$lang['forums'] = 'Communaut&eacute;s';
 $lang['leadershipForum'] = 'Forum sur les dirigeants';
-$lang['expertise'] = 'Comp&eacute;tence';
+$lang['expertise'] = 'Experts';
 $lang['jobs'] = 'Emplois';
 $lang['store'] = 'Magasin';
 $lang['Messages'] = 'Messages';
@@ -106,6 +107,9 @@ $lang['Political'] = 'politique';
 $lang['Companies'] = 'entreprises';
 $lang['Owners'] = 'propri&eacute;taires';
 $lang['Machinery'] = 'machinerie';
+$lang['Process'] = 'Processus';
+$lang['AuctionDate'] = 'Date d\'auction';
+$lang['AuctionCriteria'] = 'Critère d\'auction';
 $lang['ProcurementProcess'] = 'Processus d\'approvisionnement';
 $lang['FinancialInformation'] = 'information financi&egrave;re';
 $lang['KeyTechnology'] = 'Key Technology';
@@ -846,7 +850,7 @@ $lang['NoForumsFound'] = 'Aucun forum trouvé à afficher.';
 $lang['ForumDate'] = 'Dates';
 $lang['ForumVenue'] = 'Lieu';
 $lang['ForumRegion'] = 'Région';
-$lang['B_FORUMS'] = 'FORUMS';
+$lang['B_FORUMS'] = 'COMMUNAUT&Eacute;S';
 $lang['ShowAll'] = 'Afficher Tout';
 $lang['ForumRegister'] = 'Enregistrer à assister à';
 $lang['ForumBookMeeting'] = 'Réservez une réunion privée';
@@ -932,6 +936,7 @@ $lang['SortMostRelevant'] = 'Les plus vus';
 $lang['SortAlphabetically'] = 'Alphabétiquement';
 $lang['SortRecentlyJoinedFirst'] = 'Récemment rejoint la première';
 $lang['HighestRatedFirst'] = "Ordonner par l'évaluation";
+$lang['SortRecentlyUpdatedFirst'] = 'Récemment actualisés';
 
 /* Map content type dropdown */
 $lang['MapContentMyProjects'] = 'Mes Projets';
@@ -1003,3 +1008,6 @@ $lang['HowKnowledgeable'] = 'Cette personne est-elle <strong>bien informée</str
 $lang['AddRating'] = 'Ajoutez évaluation';
 $lang['ThankYouHeader'] = 'Merci!';
 $lang['ThankYouBody'] = 'Vos évaluations sont primordiales pour augmenter la confiance dans le marché.';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';

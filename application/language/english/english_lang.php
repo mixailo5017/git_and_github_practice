@@ -7,12 +7,13 @@ $lang['Portuguese'] = 'Portuguese';
 
 $lang['Go'] = 'GO';
 $lang['Stage'] = 'Stage';
+$lang['StageElaboration'] = 'Additional Details';
 $lang['siteTitle'] = "ViP My VIP Workspace"; 
 $lang['forgotPassword'] = "Forgot your password?"; 
 $lang['myVip']	= "My GViP";
 $lang['map']	= "Map";
 $lang['projects']	= "Projects";
-$lang['forums']	= "Forums";
+$lang['forums']	= "Communities";
 $lang['leadershipForum']	= "Leadership Forum";
 $lang['expertise']	= "Expertise";
 $lang['jobs'] = 'Jobs';
@@ -115,6 +116,9 @@ $lang['Political'] = 'Political';
 $lang['Companies'] = 'Companies';
 $lang['Owners'] = 'Owners';
 $lang['Machinery'] = 'Machinery';
+$lang['Process'] = 'Process';
+$lang['AuctionDate'] = 'Auction/RFP Date';
+$lang['AuctionCriteria'] = 'Auction/RFP Criteria';
 $lang['ProcurementProcess'] = 'Procurement Process';
 $lang['FinancialInformation'] = 'Financial Information';
 $lang['KeyTechnology'] = 'Key Technology';
@@ -687,7 +691,7 @@ $lang['VideoUrlupdatedsuccessfully'] = 'Video Url updated successfully';
 $lang['ErrorwhileupdatingVideoUrl'] = 'Error while updating Video Url';
 $lang['ExpertiseUpdatedsuccessfully'] = 'Expertise Updated successfully';
 $lang['ErrorwhileupdatingExpertise'] = 'Error while updating Expertise';
-$lang['ExpertisesectorAddedsuccessfully'] = 'Expert is esector Added successfully';
+$lang['ExpertisesectorAddedsuccessfully'] = 'Expertise sector added successfully';
 $lang['ErrorwhileaddingSectordetails'] = 'Error while adding Sector details';
 $lang['ExpertisesectorUpdtedsuccessfully'] = 'Expertise sector Updted successfully';
 $lang['ErrorwhileupdatingSectordetails'] = 'Error while updating Sector details';
@@ -874,7 +878,7 @@ $lang['NoForumsFound'] = 'No forums found to display.';
 $lang['ForumDate'] = 'Dates';
 $lang['ForumVenue'] = 'Venue';
 $lang['ForumRegion'] = 'Region';
-$lang['B_FORUMS'] = 'FORUMS';
+$lang['B_FORUMS'] = 'COMMUNITIES';
 $lang['ShowAll'] = 'Show All';
 $lang['ForumRegister'] = 'Register to Attend';
 $lang['ForumBookMeeting'] = 'Book a Private Meeting';
@@ -968,6 +972,7 @@ $lang['SortMostRelevant'] = 'Most relevant';
 $lang['SortAlphabetically'] = 'Alphabetically';
 $lang['SortRecentlyJoinedFirst'] = 'Recently joined first';
 $lang['HighestRatedFirst'] = 'Highest rated first';
+$lang['SortRecentlyUpdatedFirst'] = 'Recently updated first';
 
 /* Map content type dropdown */
 $lang['MapContentMyProjects'] = 'My Projects';
@@ -1037,3 +1042,6 @@ $lang['HowKnowledgeable'] = 'How <strong>knowledgeable</strong> is this person?'
 $lang['AddRating'] = 'Add Rating';
 $lang['ThankYouHeader'] = 'Thank you!';
 $lang['ThankYouBody'] = 'Your expert ratings are critical for building trust in the marketplace!';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';

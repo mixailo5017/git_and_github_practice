@@ -790,7 +790,7 @@ class Projects_model extends CI_Model {
     public function all($limit, $offset = 0, $filter = array(), $sort = null)
     {
         $this->db
-            ->select('pid, p.uid, projectname, slug, projectphoto, p.country, p.sector, p.subsector, stage, totalbudget')
+            ->select('p.pid, p.uid, projectname, slug, projectphoto, p.country, p.sector, p.subsector, stage, totalbudget')
             ->select('COUNT(*) OVER () row_count', FALSE)
             ->from('exp_projects p')
             ->join('exp_members o', 'p.uid = o.uid')
@@ -826,21 +826,36 @@ class Projects_model extends CI_Model {
             $this->db->where($where, null, FALSE);
         }
 
-//        switch ($sort) {
-//            case 3: // Most recent first
-//                $this->db
-//                    ->order_by('entry_date DESC'); // TODO take care of NULLs
-//                break;
-//        }
-        // Default and lowes level of ordering is always alphabetical by projectname
-        $this->db->order_by('projectname');
-
+       switch ($sort) {
+           case 1: // alphabetical by projectname
+               $this->db->order_by('projectname');
+               break;
+           default: // Most recently updated first (option 2, default)
+               $this->db
+                    ->join("(SELECT t1.pid, t1.last_date
+                            FROM log_projects AS t1
+                            LEFT OUTER JOIN log_projects AS t2
+                              ON t1.pid = t2.pid 
+                                AND (t1.last_date < t2.last_date 
+                                 OR (t1.last_date = t2.last_date AND t1.log_id < t2.log_id))
+                            JOIN exp_projects proj 
+                              ON (proj.pid = t1.pid) 
+                            WHERE t2.pid IS NULL
+                              AND proj.isdeleted = '0'
+                            ORDER BY t1.last_date DESC) AS update_dates", 'p.pid = update_dates.pid', 'left outer')
+                   ->order_by('(CASE WHEN last_date IS NULL THEN 1 ELSE 0 END)')
+                   ->order_by('last_date DESC');
+               break;
+           
+       }
+        
         $rows = $this->db
             ->limit($limit, $offset)
             ->get()
             ->result_array();
 
         return $rows;
+
     }
 
     /**
@@ -1179,6 +1194,7 @@ class Projects_model extends CI_Model {
 			'stage'					=> $this->input->post('project_stage', TRUE),
 			'eststart'				=> DateFormat($eststart, DATEFORMATDB, FALSE),
 			'estcompletion'			=> DateFormat($estcompletion, DATEFORMATDB, FALSE),
+            'stage_elaboration'     => $this->input->post('project_stage_elaboration', TRUE),
 			'developer'		        => $this->input->post('project_developer', TRUE),
 			'sponsor'		        => $this->input->post('project_sponsor', TRUE),
             'website'		        => $this->input->post('website', TRUE),
@@ -1368,13 +1384,50 @@ class Projects_model extends CI_Model {
 		else
 		{
 			$response["status"] 	= "error";
-			$response["message"] 	= $this->dataLang['lang']['ErrorwhileupdatingLegalInfo'];
+			$response["message"] 	= $this->dataLang['lang']['ErrorwhileupdatingProfile'];
 			$response["remove"] 	= true;
 
 		}
 		//header('Content-type: application/json');
 		echo json_encode($response);
 	}
+
+    /**
+     * Add Procurement Process
+     *
+     * @access  public
+     * @param   int
+     * @return  array
+     */
+    public function add_procurement_process($slug,$uid)
+    {
+        $response = array();
+        $update_data = array(
+            'procurement_criteria' => $this->input->post("project_auction_criteria"),
+            'procurement_date' => DateFormat($this->input->post('project_auction_date', TRUE), DATEFORMATDB, FALSE)
+        );
+        $this->db->where(array('uid'=> $uid,'slug'=>$slug));
+
+        if($this->db->update('exp_projects', $update_data))
+        {
+            $response["issubmit"] = FALSE;
+            $response["status"]     = "success";
+            $response["message"]    = $this->dataLang['lang']['Projectinfoupdatesuccessful'];
+            $response["remove"]     = true;
+            $response["isload"]     = "no";
+            //$response["isreset"]  = "yes";
+            //$response["loaddata"]     = $this->load->view("loader",array("val"=>$executivedata,"formname"=>"project_executives","slug"=>$slug));
+        }
+        else
+        {
+            $response["status"]     = "error";
+            $response["message"]    = $this->dataLang['lang']['ErrorwhileupdatingProfile'];
+            $response["remove"]     = true;
+
+        }
+        //header('Content-type: application/json');
+        echo json_encode($response);
+    }
 
 	/**
 	 * Get executive
@@ -4306,14 +4359,16 @@ class Projects_model extends CI_Model {
 
 		return $participants_data;
 	}
-	public function get_procurement_data($slug,$uid)
+	
+    public function get_procurement_data($slug,$uid)
 	{
 		$procurement_data = array();
 
-		$this->db->select(array('pid','stage','uid','projectname','slug'));
-		$qryproj = $this->db->get_where("exp_projects",array("slug"=>$slug,"uid"=>$uid));
+		$this->db->select(array('pid','stage','uid','projectname','slug', 'procurement_criteria', 'procurement_date'));
+		$qryproj = $this->db->get_where("exp_projects", array("slug"=>$slug,"uid"=>$uid));
 		$procurement_data = $qryproj->row_array();
 		$qryproj->free_result();
+
 		$procurement_data['machinery'] = $this->get_machinery($slug,$uid);
 		$procurement_data['procurement_technology'] = $this->get_procurement_technology($slug,$uid);
 		$procurement_data['procurement_services'] = $this->get_procurement_services($slug,$uid);
@@ -4322,6 +4377,7 @@ class Projects_model extends CI_Model {
 		return $procurement_data;
 
 	}
+
 	public function get_files_data($slug,$uid)
 	{
 		$files_data = array();
