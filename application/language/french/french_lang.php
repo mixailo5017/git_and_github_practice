@@ -86,7 +86,11 @@ $lang['Schedule'] = 'calendrier';
 $lang['NoSchedule'] = 'Pas de planification';
 $lang['DesignIssues'] = 'Probl&egrave;mes de conception';
 $lang['Name'] = 'nom';
-$lang['Description'] = 'description';
+
+
+
+
+
 $lang['Attachments'] = 'Attachments';
 $lang['NoAttachments'] = 'Pas de pi&egrave;ces jointes';
 $lang['Environment'] = 'environnement';
@@ -345,7 +349,11 @@ $lang['Yes'] = 'Oui';
 $lang['NO'] = 'NO';
 $lang['Close'] = 'Proche';
 $lang['File'] = 'Dossier';
-$lang['Description'] = 'Description';
+
+
+
+
+
 $lang['Permission'] = 'Autorisation';
 $lang['Update'] = 'Mettre à jour';
 $lang['Name'] = 'Nom';
