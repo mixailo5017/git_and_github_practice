@@ -154,7 +154,7 @@ define('BRAZIL_USER_ID', 2812);
 define('BRAZIL_FORUM_ID', 20);
 
 // Emergency Projects screen for Dan Slate (Trump administration)
-define('EMERGENCY_PROJECTS_FORUM_ID', 19)
+define('EMERGENCY_PROJECTS_FORUM_ID', 19);
 
 // The number of seconds a reminder lasts
 define('REMINDER_EXPIRES', 60*60*2);
