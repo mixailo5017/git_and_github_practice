@@ -163,7 +163,7 @@
 						</div>
 						<?php echo br(); ?>
 
-						<?php echo form_label(lang('Type').':', '', $opt['files_form']['lbl_desc']);?>
+						<?php echo form_label(lang('Description').':', '', $opt['files_form']['lbl_desc']);?>
 						<div class="fld">
 							<?php echo form_input($opt['files_form']['project_files_desc']);?>
 							<div id="err_project_files_desc" class="errormsg"></div>

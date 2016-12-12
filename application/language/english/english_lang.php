@@ -96,7 +96,9 @@ $lang['Schedule'] = 'Schedule';
 $lang['NoSchedule'] = 'No Schedule';
 $lang['DesignIssues'] = 'Design Issues';
 $lang['Name'] = 'Name';
-$lang['Description'] = 'Description';
+
+
+
 $lang['Attachments'] = 'Attachments';
 $lang['NoAttachments'] = 'No Attachments';
 $lang['Environment'] = 'Environment';
@@ -368,7 +370,10 @@ $lang['Yes'] = 'Yes';
 $lang['NO'] = 'NO';
 $lang['Close'] = 'Close';
 $lang['File'] = 'File';
-$lang['Description'] = 'Description';
+
+
+
+
 $lang['Permission'] = 'Permission';
 $lang['Update'] = 'Update';
 $lang['Name'] = 'Name';
@@ -588,6 +593,7 @@ $lang['PhotoExplanation'] = 'Upload a photo or graphic to represent your project
 //projects_files.php
 $lang['File'] = 'File';
 $lang['Type'] = 'Type';
+$lang['Description'] = 'Description';
 
 //projects_financial.php
 $lang['Private'] = 'Private';
