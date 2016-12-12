@@ -151,7 +151,10 @@ const INTERNAL_USERS = [24, 28, 37, 222, 492, 298, 426, 583, 586, 684, 741, 813,
 define('BRAZIL_USER_ID', 2812);
 // The forum ID of the official Brazilian government 
 // community page. Used for the /brazil route
-define('BRAZIL_FORUM_ID', 19);
+define('BRAZIL_FORUM_ID', 20);
+
+// Emergency Projects screen for Dan Slate (Trump administration)
+define('EMERGENCY_PROJECTS_FORUM_ID', 19);
 
 // The number of seconds a reminder lasts
 define('REMINDER_EXPIRES', 60*60*2);

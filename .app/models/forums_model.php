@@ -645,4 +645,13 @@ class Forums_model extends CI_Model {
             }
         }
     }
+
+    public function has_access_to($uid, $forum_id) {
+        // Only CG/LA employees have access to the Emergency Projects list for Trump
+        if ($forum_id === EMERGENCY_PROJECTS_FORUM_ID && !in_array($uid, INTERNAL_USERS)) {
+            return false;
+        }
+
+        return true;
+    }
 }
