@@ -54,6 +54,12 @@ class Forums extends CI_Controller {
             redirect('forums', 'refresh');
             exit;
         }
+
+        // If the current user doesn't have access to the forum show 404
+        if (! $this->forums_model->has_access_to(Auth::id(), $id)) {
+            show_404();
+        }
+
         // Fetch projects and members (experts) accociated with the forum
         $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country', array('p.id' => 'random'), FORUM_PROJECT_LIMIT, 0, true);
         $members = $model->members($id, 'm.uid, firstname, lastname, userphoto, m.title, organization', array('m.id' => 'random'), FORUM_EXPERT_LIMIT, 0, true);
@@ -155,7 +161,7 @@ class Forums extends CI_Controller {
         }
 
         // Hide the emergency US projects forum page (for Donald Trump), unless user is a CG/LA employee
-        if (!in_array(Auth::id(), INTERNAL_USERS)) {
+        if (! $this->forums_model->has_access_to(Auth::id(), EMERGENCY_PROJECTS_FORUM_ID)) {
             $where['f.id !='] = EMERGENCY_PROJECTS_FORUM_ID;
         }
 
