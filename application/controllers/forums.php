@@ -154,6 +154,11 @@ class Forums extends CI_Controller {
             $where[] = where_like($columns, $terms);
         }
 
+        // Hide the emergency US projects forum page (for Donald Trump), unless user is a CG/LA employee
+        if (!in_array(Auth::id(), INTERNAL_USERS)) {
+            $where['f.id !='] = EMERGENCY_PROJECTS_FORUM_ID;
+        }
+
         $order_by = array(
             'start_date' => 'desc',
             'end_date' => 'desc'
