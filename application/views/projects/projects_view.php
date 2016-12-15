@@ -9,6 +9,7 @@
 
                 <h1><?php echo $project['projectdata']['projectname'] ?></h1>
 
+                <p><em>Last updated: <?php echo $project['projectdata']['last_updated']->diffForHumans() ?></em></p>
                 <p class="project-description">
                     <?php
 					$this->load->helper('text');
