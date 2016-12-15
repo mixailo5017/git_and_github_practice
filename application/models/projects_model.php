@@ -1725,6 +1725,7 @@ class Projects_model extends CI_Model {
                         ->row()
                         ->last_updated;
 
+        Carbon::setLocale(App::$languageToLocaleLookup[$this->session->userdata('lang')]);
         return new Carbon($last_updated);
     }
 
