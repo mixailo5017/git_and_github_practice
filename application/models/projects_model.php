@@ -1,4 +1,6 @@
 <?php
+use Carbon\Carbon;
+
 class Projects_model extends CI_Model {
 
 	public $search_project_query;
@@ -1265,6 +1267,7 @@ class Projects_model extends CI_Model {
 
 		$projectarr["executive"] = $this->get_executives($slug,$uid);
 		$projectarr["organization"] = $this->get_organizations($slug,$uid);
+        $projectarr["last_updated"] = $this->get_last_updated($slug, $uid);
 
 		return $projectarr;
 	}
@@ -1685,7 +1688,46 @@ class Projects_model extends CI_Model {
 
 	}
 
+    /**
+     * Get date on which project profile was last updated
+     * @param  string $slug Project slug
+     * @return Carbon\Carbon       Date of last update
+     */
+    public function get_last_updated($slug)
+    {
+        $sql = "SELECT COALESCE(update_date.last_date, to_timestamp(created.created,'MM/DD/YYYY')) AS last_updated 
+                FROM
+                    (SELECT COALESCE(NULLIF(to_char(to_timestamp(proj.entry_date),'MM/DD/YYYY'),'01/01/1970'),'04/29/2013') AS created
+                    FROM exp_projects proj
+                      JOIN exp_members m
+                        ON (proj.uid = m.uid)
+                    WHERE slug = ?
+                     ) created
+                 FULL OUTER JOIN 
+                    (SELECT t1.last_date
+                    FROM log_projects AS t1
+                    LEFT OUTER JOIN log_projects AS t2
+                      ON t1.pid = t2.pid 
+                        AND (t1.last_date < t2.last_date 
+                         OR (t1.last_date = t2.last_date AND t1.log_id < t2.log_id))
+                    JOIN exp_projects proj 
+                      ON (proj.pid = t1.pid) 
+                    WHERE t2.pid IS NULL
+                      AND proj.slug = ?
+                    ) update_date
+                ON TRUE";
 
+        $bindings = [$slug, $slug];
+
+        $last_updated = $this
+                        ->db
+                        ->query($sql, $bindings)
+                        ->row()
+                        ->last_updated;
+
+        Carbon::setLocale(App::$languageToLocaleLookup[$this->session->userdata('lang')]);
+        return new Carbon($last_updated);
+    }
 
 	/**
 	 * Get engineering

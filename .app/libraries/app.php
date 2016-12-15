@@ -9,6 +9,13 @@ class App {
         'portuguese'
     );
 
+    public static $languageToLocaleLookup = [
+        'english'    => 'en',
+        'french'     => 'fr',
+        'spanish'    => 'es',
+        'portuguese' => 'pt'
+    ];
+
     protected static $default_language = 'english';
 
     public static function language($language = null)

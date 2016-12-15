@@ -1051,3 +1051,6 @@ $lang['ThankYouBody'] = 'Your expert ratings are critical for building trust in 
 
 /* GViP Brazil */
 $lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';
+
+/* Project profile view */
+$lang['LastUpdated'] = 'Last updated';

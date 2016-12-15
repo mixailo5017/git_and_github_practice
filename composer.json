@@ -1,6 +1,7 @@
 {
     "require": {
-        "vlucas/phpdotenv": "~1.1"
+        "vlucas/phpdotenv": "~1.1",
+        "nesbot/carbon": "^1.21"
     },
     "require-dev": {
         "codeception/codeception": "*",
