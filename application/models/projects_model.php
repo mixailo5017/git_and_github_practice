@@ -1695,9 +1695,9 @@ class Projects_model extends CI_Model {
      */
     public function get_last_updated($slug)
     {
-        $sql = "SELECT COALESCE(update_date.last_date, to_timestamp(created.created,'MM/DD/YYYY')) AS last_updated 
+        $sql = "SELECT COALESCE(update_date.last_date, created.created) AS last_updated 
                 FROM
-                    (SELECT COALESCE(NULLIF(to_char(to_timestamp(proj.entry_date),'MM/DD/YYYY'),'01/01/1970'),'04/29/2013') AS created
+                    (SELECT to_timestamp(COALESCE(NULLIF(proj.entry_date,0),1367193600)) AS created
                     FROM exp_projects proj
                       JOIN exp_members m
                         ON (proj.uid = m.uid)
