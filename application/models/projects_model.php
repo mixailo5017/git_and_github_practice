@@ -1,4 +1,6 @@
 <?php
+use Carbon\Carbon;
+
 class Projects_model extends CI_Model {
 
 	public $search_project_query;
@@ -1265,6 +1267,7 @@ class Projects_model extends CI_Model {
 
 		$projectarr["executive"] = $this->get_executives($slug,$uid);
 		$projectarr["organization"] = $this->get_organizations($slug,$uid);
+        $projectarr["last_updated"] = $this->get_last_updated($slug, $uid);
 
 		return $projectarr;
 	}
@@ -1685,7 +1688,15 @@ class Projects_model extends CI_Model {
 
 	}
 
-
+    /**
+     * Get date on which project profile was last updated
+     * @param  string $slug Project slug
+     * @return Carbon\Carbon       Date of last update
+     */
+    public function get_last_updated($slug)
+    {
+        return new Carbon;
+    }
 
 	/**
 	 * Get engineering
