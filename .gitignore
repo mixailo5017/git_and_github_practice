@@ -25,3 +25,6 @@ wwwroot/images/store/**
 
 # Build artefacts
 wwwroot/.sass-cache/**
+
+# Composer-installed dependencies
+vendor/
