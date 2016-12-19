@@ -782,7 +782,7 @@ if (! function_exists('is_post_msize_exceeded')) {
     function upload_file($path, $filename, $allowedtypes = '', $required = true)
     {
         if ($allowedtypes == '') {
-            $allowed = 'pdf|doc|ppt|xls|jpg|png|jpeg|gif|zip|mp3|docx|txt|rar';
+            $allowed = 'pdf|doc|ppt|xls|jpg|png|jpeg|gif|zip|mp3|docx|txt|rar|pptx';
         } else {
             $allowed = implode('|', allowedtypes);
         }
