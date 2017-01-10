@@ -28,8 +28,8 @@ class Home_model extends CI_Model {
             SELECT pid, p.country, totalbudget, p.uid, p.sector, p.subsector
               FROM exp_projects p JOIN exp_members m
                 ON p.uid = m.uid
-             WHERE p.isdeleted = '0'
-             AND   m.status = '1'
+             WHERE p.isdeleted = ?
+             AND   m.status = ?
              AND ((totalbudget <= 50E3) OR (p.uid = 492))
         ), EMcountries AS (
         	VALUES ('United Arab Emirates'), ('Afghanistan'), ('Antigua and Barbuda'), ('Anguilla'), ('Armenia'), ('Netherlands Antilles'), ('Angola'), ('Antarctica'), ('Argentina'), ('American Samoa'), ('Aruba'), ('Azerbaijan'), ('Barbados'), ('Bangladesh'), ('Burkina'), ('Bahrain'), ('Burundi'), ('Benin'), ('Brunei'), ('Bolivia'), ('Brazil'), ('Bahamas'), ('Bhutan'), ('Bouvet Island'), ('Botswana'), ('Belarus'), ('Belize'), ('Cocos (Keeling) Islands'), ('Congo {Democratic Rep}'), ('Central African Republic'), ('Congo'), ('Ivory Coast'), ('Cook Islands'), ('Chile'), ('Cameroon'), ('China'), ('Colombia'), ('Costa Rica'), ('Cuba'), ('Cape Verde'), ('Christmas Island'), ('Djibouti'), ('Dominica'), ('Dominican Republic'), ('Algeria'), ('Ecuador'), ('Egypt'), ('Western Sahara'), ('Eritrea'), ('Ethiopia'), ('Fiji'), ('Falkland Islands (Malvinas)'), ('Micronesia), (Federated States of'), ('Gabon'), ('Grenada'), ('Georgia'), ('French Guiana'), ('Ghana'), ('Gambia'), ('Guinea'), ('Guadeloupe'), ('Equatorial Guinea'), ('South Georgia and the South Sandwich Islands'), ('Guatemala'), ('Guam'), ('Guinea-Bissau'), ('Guyana'), ('Heard Island and McDonald Islands'), ('Honduras'), ('Haiti'), ('Indonesia'), ('India'), ('British Indian Ocean Territory'), ('Iraq'), ('Iran'), ('Jamaica'), ('Jordan'), ('Kenya'), ('Kyrgyzstan'), ('Cambodia'), ('Kiribati'), ('Comoros'), ('Saint Kitts and Nevis'), ('Korea), (Democratic People''s Republic of'), ('Kuwait'), ('Cayman Islands'), ('Kazakhstan'), ('Lao People''s Democratic Republic'), ('Lebanon'), ('St Lucia'), ('Sri Lanka'), ('Liberia'), ('Lesotho'), ('Libya'), ('Morocco'), ('Madagascar'), ('Marshall Islands'), ('Mali'), ('Myanmar), ({Burma}'), ('Mongolia'), ('Northern Mariana Islands'), ('Martinique'), ('Mauritania'), ('Montserrat'), ('Mauritius'), ('Maldives'), ('Malawi'), ('Mexico'), ('Malaysia'), ('Mozambique'), ('Namibia'), ('New Caledonia'), ('Niger'), ('Norfolk Island'), ('Nigeria'), ('Nicaragua'), ('Nepal'), ('Nauru'), ('Niue'), ('Oman'), ('Panama'), ('Peru'), ('French Polynesia'), ('Papua New Guinea'), ('Philippines'), ('Pakistan'), ('Pitcairn Islands'), ('Puerto Rico'), ('Palestinian Territory'), ('Palau'), ('Paraguay'), ('Qatar'), ('Reunion'), ('Rwanda'), ('Saudi Arabia'), ('Solomon Islands'), ('Seychelles'), ('South Sudan'), ('Sudan'), ('Saint Helena'), ('Sierra Leone'), ('Senegal'), ('Somalia'), ('Suriname'), ('Sao Tome & Principe'), ('El Salvador'), ('Syria'), ('Swaziland'), ('Turks and Caicos Islands'), ('Chad'), ('French Southern Territories'), ('Togo'), ('Thailand'), ('Tajikistan'), ('Tokelau'), ('Turkmenistan'), ('Tunisia'), ('Tonga'), ('Timor-Leste'), ('Trinidad & Tobago'), ('Tuvalu'), ('Tanzania'), ('Ukraine'), ('Uganda'), ('United States Minor Outlying Islands'), ('Uruguay'), ('Uzbekistan'), ('Saint Vincent and the Grenadines'), ('Venezuela'), ('Virgin Islands), (British'), ('Virgin Islands), (U.S.'), ('Vietnam'), ('Vanuatu'), ('Wallis and Futuna'), ('Samoa'), ('Yemen'), ('Mayotte'), ('South Africa'), ('Zambia'), ('Zimbabwe'), ('Saint Barthelemy'), ('Saint Martin')
@@ -71,10 +71,10 @@ class Home_model extends CI_Model {
 			MEMBER_TYPE_MEMBER,
             MEMBER_TYPE_EXPERT_ADVERT,
 			STATUS_ACTIVE,
-			'0',
-			'0',
-			STATUS_ACTIVE,
-			MEMBER_TYPE_MEMBER, // Exclude Lightning companies
+			'0',                // p.isdeleted
+			'0',                // p.isdeleted
+			STATUS_ACTIVE,      // m.status
+			MEMBER_TYPE_MEMBER, // Exclude Lightning companies from member count
 		);
 
 		$row = $this->db
