@@ -24,19 +24,42 @@ class Home_model extends CI_Model {
 			  FROM exp_projects p JOIN members m
 				ON p.uid = m.uid
 			 WHERE p.isdeleted = ?
-		), totalvalue AS (
-			SELECT (SUM(totalbudget)) AS totalbudget
-			  FROM exp_projects p
-			  JOIN exp_members m ON (m.uid = p.uid)
-			 WHERE p.isdeleted = ?
-			   AND m.status = ?
-			   AND ((totalbudget <= 50E3) OR (p.uid = 492))
-		)
+		), WEBprojects AS (
+            SELECT pid, p.country, totalbudget, p.uid, p.sector, p.subsector
+              FROM exp_projects p JOIN exp_members m
+                ON p.uid = m.uid
+             WHERE p.isdeleted = '0'
+             AND   m.status = '1'
+             AND ((totalbudget <= 50E3) OR (p.uid = 492))
+        ), EMcountries AS (
+        	VALUES ('United Arab Emirates'), ('Afghanistan'), ('Antigua and Barbuda'), ('Anguilla'), ('Armenia'), ('Netherlands Antilles'), ('Angola'), ('Antarctica'), ('Argentina'), ('American Samoa'), ('Aruba'), ('Azerbaijan'), ('Barbados'), ('Bangladesh'), ('Burkina'), ('Bahrain'), ('Burundi'), ('Benin'), ('Brunei'), ('Bolivia'), ('Brazil'), ('Bahamas'), ('Bhutan'), ('Bouvet Island'), ('Botswana'), ('Belarus'), ('Belize'), ('Cocos (Keeling) Islands'), ('Congo {Democratic Rep}'), ('Central African Republic'), ('Congo'), ('Ivory Coast'), ('Cook Islands'), ('Chile'), ('Cameroon'), ('China'), ('Colombia'), ('Costa Rica'), ('Cuba'), ('Cape Verde'), ('Christmas Island'), ('Djibouti'), ('Dominica'), ('Dominican Republic'), ('Algeria'), ('Ecuador'), ('Egypt'), ('Western Sahara'), ('Eritrea'), ('Ethiopia'), ('Fiji'), ('Falkland Islands (Malvinas)'), ('Micronesia), (Federated States of'), ('Gabon'), ('Grenada'), ('Georgia'), ('French Guiana'), ('Ghana'), ('Gambia'), ('Guinea'), ('Guadeloupe'), ('Equatorial Guinea'), ('South Georgia and the South Sandwich Islands'), ('Guatemala'), ('Guam'), ('Guinea-Bissau'), ('Guyana'), ('Heard Island and McDonald Islands'), ('Honduras'), ('Haiti'), ('Indonesia'), ('India'), ('British Indian Ocean Territory'), ('Iraq'), ('Iran'), ('Jamaica'), ('Jordan'), ('Kenya'), ('Kyrgyzstan'), ('Cambodia'), ('Kiribati'), ('Comoros'), ('Saint Kitts and Nevis'), ('Korea), (Democratic People''s Republic of'), ('Kuwait'), ('Cayman Islands'), ('Kazakhstan'), ('Lao People''s Democratic Republic'), ('Lebanon'), ('St Lucia'), ('Sri Lanka'), ('Liberia'), ('Lesotho'), ('Libya'), ('Morocco'), ('Madagascar'), ('Marshall Islands'), ('Mali'), ('Myanmar), ({Burma}'), ('Mongolia'), ('Northern Mariana Islands'), ('Martinique'), ('Mauritania'), ('Montserrat'), ('Mauritius'), ('Maldives'), ('Malawi'), ('Mexico'), ('Malaysia'), ('Mozambique'), ('Namibia'), ('New Caledonia'), ('Niger'), ('Norfolk Island'), ('Nigeria'), ('Nicaragua'), ('Nepal'), ('Nauru'), ('Niue'), ('Oman'), ('Panama'), ('Peru'), ('French Polynesia'), ('Papua New Guinea'), ('Philippines'), ('Pakistan'), ('Pitcairn Islands'), ('Puerto Rico'), ('Palestinian Territory'), ('Palau'), ('Paraguay'), ('Qatar'), ('Reunion'), ('Rwanda'), ('Saudi Arabia'), ('Solomon Islands'), ('Seychelles'), ('South Sudan'), ('Sudan'), ('Saint Helena'), ('Sierra Leone'), ('Senegal'), ('Somalia'), ('Suriname'), ('Sao Tome & Principe'), ('El Salvador'), ('Syria'), ('Swaziland'), ('Turks and Caicos Islands'), ('Chad'), ('French Southern Territories'), ('Togo'), ('Thailand'), ('Tajikistan'), ('Tokelau'), ('Turkmenistan'), ('Tunisia'), ('Tonga'), ('Timor-Leste'), ('Trinidad & Tobago'), ('Tuvalu'), ('Tanzania'), ('Ukraine'), ('Uganda'), ('United States Minor Outlying Islands'), ('Uruguay'), ('Uzbekistan'), ('Saint Vincent and the Grenadines'), ('Venezuela'), ('Virgin Islands), (British'), ('Virgin Islands), (U.S.'), ('Vietnam'), ('Vanuatu'), ('Wallis and Futuna'), ('Samoa'), ('Yemen'), ('Mayotte'), ('South Africa'), ('Zambia'), ('Zimbabwe'), ('Saint Barthelemy'), ('Saint Martin')
+    	)
 		SELECT
 		( SELECT COUNT(*) FROM members WHERE membertype = ?) experts,
 		( SELECT COUNT(*) FROM projects ) projects,
-		( SELECT (round(SUM(totalbudget) / 1E6, 1)) FROM totalvalue ) totalvalue," . // Convert total dollars from millions to trillions, one decimal point
-		"( SELECT (floor(totalbudget / 1E3 * 8000 / 1E6)) FROM totalvalue ) jobs," . // 8,000 jobs created per $1bn invested
+		( SELECT (round(SUM(totalbudget) / 1E6, 1)) FROM WEBprojects ) totalvalue," . // Convert total dollars from millions to trillions, one decimal point
+		"( SELECT floor((EM_PrimeSectors + RestOfWorld_PrimeSectors + EM_EnergyNonHydro + RestOfWorld_EnergyNonHydro + Global_Other) / 1E6) jobs FROM 
+		    (SELECT
+		        ( SELECT (SUM(totalbudget) / 1E3 * 16000) FROM WEBprojects WHERE 
+		            country IN (SELECT * FROM EMcountries)
+		            AND (sector = 'Transport' OR sector = 'Water' OR (sector = 'Energy' AND subsector = 'Generation — Hydro'))
+		        ) EM_PrimeSectors,
+		        ( SELECT (SUM(totalbudget) / 1E3 * 9600) FROM WEBprojects WHERE 
+		            country NOT IN (SELECT * FROM EMcountries)
+		            AND (sector = 'Transport' OR sector = 'Water' OR (sector = 'Energy' AND subsector = 'Generation — Hydro'))
+		        ) RestOfWorld_PrimeSectors,
+		        ( SELECT (SUM(totalbudget) / 1E3 * 11200) FROM WEBprojects WHERE 
+		            country IN (SELECT * FROM EMcountries)
+		            AND (sector = 'Energy' AND subsector != 'Generation — Hydro')
+		        ) EM_EnergyNonHydro,
+		        ( SELECT (SUM(totalbudget) / 1E3 * 6720) FROM WEBprojects WHERE 
+		            country NOT IN (SELECT * FROM EMcountries)
+		            AND (sector = 'Energy' AND subsector != 'Generation — Hydro')
+		        ) RestOfWorld_EnergyNonHydro,
+		        ( SELECT (SUM(totalbudget) / 1E3 * 8000) FROM WEBprojects WHERE 
+		            sector NOT IN ('Transport', 'Energy', 'Water')
+		        ) Global_Other
+		    ) AS jobs_table ) jobs," . // Between 6,720 and 16,000 jobs created per $1bn invested. For spec see https://docs.google.com/spreadsheets/d/1paQhZEpi4fc5-n4j04haz2Yu2s9E7HiTh7r9zoGnMgc/edit#gid=0
 		"( SELECT COUNT(*) FROM (
 			SELECT country FROM members WHERE country IS NOT NULL AND country <> ''
 			 UNION
@@ -51,7 +74,7 @@ class Home_model extends CI_Model {
 			'0',
 			'0',
 			STATUS_ACTIVE,
-			MEMBER_TYPE_MEMBER, // Exclude ligtning companies
+			MEMBER_TYPE_MEMBER, // Exclude Lightning companies
 		);
 
 		$row = $this->db
