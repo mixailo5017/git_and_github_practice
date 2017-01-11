@@ -1850,15 +1850,13 @@ div.olControlZoom a:hover {
   display: block;
   border-width: 0;
   padding: 1em 1.4em;
-  /*background: none;*/
+  /* background: none; */
 }
-
 #project_tabs h2 {
   border-bottom: 1px solid black;
   padding-bottom: 5px;
   font-weight: bold;
 }
-
 #project_tabs.ui-tabs .ui-tabs-hide {
   display: none !important;
 }
@@ -2509,6 +2507,17 @@ a.external {
 
 #update_project {
   padding: 7px, 15px !important;
+}
+
+.create_project {
+  position: absolute;
+  left: 22px;
+  top: 56px;
+  z-index: 100;
+}
+.create_project.light_green:active {
+  position: absolute;
+  top: 57px;
 }
 
 #title_input {

@@ -1,6 +1,6 @@
 <div id="content" class="clearfix">
 	<div id="col5" class="center_col">
-        <h1 class="col_top gradient"><?php echo lang('AddNewProject') ?></h1>
+        <h1 class="col_top gradient"><?php echo lang('CreateProject') ?></h1>
 		<?php echo form_open('projects/create', array('id' => 'new_project')) ?>
 			<div>
 				<?php echo form_label(lang('NameofProject') . ':', 'project_name', array('class' => 'left_label')) ?>

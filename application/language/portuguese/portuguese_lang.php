@@ -36,7 +36,6 @@ $lang['Organization'] = 'Organização';
 $lang['Password'] = 'Senha';
 $lang['Confirm'] = 'Confirme';
 $lang['CreateAccount'] = 'Criar Conta';
-$lang['AddNewProject'] = 'Adicionar Novo Projeto';
 $lang['UpdateMyProjects'] = 'Atualize Meus Projetos';
 $lang['copyright'] = 'é uma marca registrada da';
 $lang['ProjectInformation'] = 'Informações sobre o Projeto';
