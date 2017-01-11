@@ -33,7 +33,6 @@ $lang['Confirm'] = 'Confirmer';
 $lang['CreateAccount'] = 'Créer un compte';
 
 $lang['EditProfile'] = 'Modifier le profil';
-$lang['AddNewProject'] = 'Créer un projet';
 $lang['AccountSettings'] = 'Paramètres';
 $lang['UpdateMyProjects'] = 'Mes projets';
 $lang['ViewCurrentProjects'] = 'Voir Projets';

@@ -540,10 +540,10 @@ class Projects extends CI_Controller
         }
 
         $this->breadcrumb->append_crumb(lang('B_PROJECTS'), '/projects');
-        $this->breadcrumb->append_crumb(lang('AddNewProject'), 'create');
+        $this->breadcrumb->append_crumb(lang('CreateProject'), 'create');
         $this->headerdata['breadcrumb'] = $this->breadcrumb->output();
 
-        $this->headerdata['title'] = build_title(lang('AddNewProject'));
+        $this->headerdata['title'] = build_title(lang('CreateProject'));
 
         $this->load->view('templates/header', $this->headerdata);
         $this->load->view('projects/projects_create');

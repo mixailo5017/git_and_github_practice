@@ -20,7 +20,6 @@ $lang['AddMachinery'] = 'Agregar Maquinaria';
 $lang['AddMoreEducation'] = 'Agregar Educación';
 $lang['AddNew'] = 'Agregar Nuevo';
 $lang['AddNewFile'] = 'Agregar Archivo';
-$lang['AddNewProject'] = 'Agregar Nuevo Proyecto';
 $lang['AddOrganizations'] = 'Agregar Organizaciones';
 $lang['AddOutsideProject'] = 'Agregar Proyectos Externos';
 $lang['AddOwner'] = 'Agregar Propietario';
