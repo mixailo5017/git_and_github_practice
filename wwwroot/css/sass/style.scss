@@ -972,6 +972,17 @@ a.external{display: block; color: #526DA3; font-size: 11px; background: url(#{$i
 #profile_tabs.ui-widget-content {border: none !important;}
 #update_project{padding: 7px, 15px !important;}
 
+.create_project {
+	position: absolute;
+	left: 22px;
+	top: 56px;
+	z-index: 100;
+	&.light_green:active {
+		position: absolute;
+		top: 57px;
+	}
+}
+
 #title_input {background: none;border:none;font-weight: bold;width: 470px !important;
 	&:focus{border:1px solid black;}
 }
