@@ -228,7 +228,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 			margin: 0;
 		}
 	}
-	.col2_tab { width: 568px; }
+	.col2_tab { width: 100%; }
 	.map_filter { height: 27px; box-shadow: none; border-radius: 3px 3px 0 0; padding-top: 8px;}
 	.map_box { background: #f6f6f8; color: #373b43; margin: 0 0 25px 0; @include box-shadow(0 1px 2px 0 #a7a7a9); border-radius: 2px;
 		p { margin: 10px 16px 8px 16px; padding: 0; }

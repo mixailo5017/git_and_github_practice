@@ -784,7 +784,7 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   margin: 0;
 }
 #col2 .col2_tab {
-  width: 568px;
+  width: 100%;
 }
 #col2 .map_filter {
   height: 27px;
