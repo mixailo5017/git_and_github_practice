@@ -1,6 +1,7 @@
 <div id="content" class="clearfix">
 	<div id="col5" class="center_col white_box" style="width:965px;">
 		<h1 class="col_top gradient" style="height:100px;"><?php echo lang('Projects');?></h1>
+		<a href="/projects/create" class="light_green create_project">Create Project</a>
 		
 		<div class="project_filter clearfix">
 			<?php echo form_open('/projects', array(
