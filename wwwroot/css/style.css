@@ -1846,11 +1846,16 @@ div.olControlZoom a:hover {
 }
 
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-#project_tabs.ui-tabs .ui-tabs-panel {
+#project_tabs {
   display: block;
   border-width: 0;
   padding: 1em 1.4em;
-  background: none;
+  /* background: none; */
+}
+#project_tabs h2 {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+  font-weight: bold;
 }
 #project_tabs.ui-tabs .ui-tabs-hide {
   display: none !important;
@@ -2289,7 +2294,7 @@ div.olControlZoom a:hover {
   margin: 0;
 }
 
-#profile_tabs, #project_tabs {
+#profile_tabs {
   display: none;
 }
 

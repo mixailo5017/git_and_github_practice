@@ -613,11 +613,18 @@ div.olControlZoom a {background:#666c77 !important;
 	.ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer;  outline:none;}
 }
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-#project_tabs.ui-tabs {
-	.ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
-	.ui-tabs-hide { display: none !important; }
-	.ui-state-active { background: #fff;  border-top-left-radius: 3px; border-top-right-radius: 3px;
-		a { color: #3f4552 !important; text-shadow: none !important; }
+#project_tabs {
+	display: block; border-width: 0; padding: 1em 1.4em; /* background: none; */
+	h2 {
+		border-bottom: 1px solid black;
+		padding-bottom: 5px;
+		font-weight: bold;
+	}
+	&.ui-tabs {
+		.ui-tabs-hide { display: none !important; }
+		.ui-state-active { background: #fff;  border-top-left-radius: 3px; border-top-right-radius: 3px;
+			a { color: #3f4552 !important; text-shadow: none !important; }
+		}
 	}
 }
 /* profile tabs */
@@ -896,7 +903,7 @@ $bllw: $llwide+20;
 #col2 .map_box p.left {clear:both;}
 .project_form .chzn-choices {border-radius: 3px;}
 .project_form .chzn-choices li input {margin: 0;}
-#profile_tabs, #project_tabs {display: none;}
+#profile_tabs {display: none;}
 
 #col5 input[type="button"].light_gray,
 #col5 input[type="button"].light_green,
