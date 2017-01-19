@@ -70,6 +70,19 @@
                                         <div class="comment">Compatible file types: JPEG, GIF, PNG</div>
                                         <?php echo form_submit('submit', 'Upload Profile Image','class = "light_green no_margin_left"');?>
                                     <?php echo form_close();?>
+
+                                    <hr style="height:0pt; visibility:hidden;" />
+
+                                    <?php echo form_open_multipart('myaccount/delete_userphoto/'.$users['uid'],array('id'=>'general_photo_form','name'=>'general_photo_form','method'=>'post','class'=>'ajax_form'));?>
+
+                                     <div class='hiddenFields'>
+                                        <?php echo form_hidden("RET",current_url()); ?>
+                                     </div>
+
+                                        <?php echo form_submit('submit', 'Delete Profile Image','class = "light_green no_margin_left"');?>
+
+                                    <?php echo form_close();?>
+
                                 </div>
 
                             </div>
