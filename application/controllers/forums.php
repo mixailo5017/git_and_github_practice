@@ -113,6 +113,15 @@ class Forums extends CI_Controller {
     }
 
     /**
+     * Add authenticated user to list of users registered for forum
+     * @param  int $id id of forum to register for
+     * @return [type]     [description]
+     */
+    public function register($id) {
+        echo "You have (not) registered!"; die;
+    }
+
+    /**
      * Display a paginated list of forums
      *
      */
