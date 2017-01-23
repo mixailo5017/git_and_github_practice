@@ -44,6 +44,13 @@
            data-id="<?php echo $details['id'] ?>"
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
     <?php } ?>
+    <?php if ($details['registration_type'] === FORUM_REGISTER_ON_GVIP) { ?>
+        <a href="/forums/register"
+           target="_blank"
+           class="button light_gray attend"
+           data-id="<?php echo $details['id'] ?>"
+           data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
+    <?php } ?>
     <?php if ($details['meeting_url']) { ?>
         <a href="<?php echo $details['meeting_url'] ?>"
            target="_blank"

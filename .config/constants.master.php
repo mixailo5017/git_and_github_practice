@@ -64,6 +64,9 @@ define('FORUM_IMAGE_PATH', IMAGE_PATH.'/forum/');
 define('FORUM_NO_IMAGE_PATH', IMAGE_PATH.'/site/');
 define('FORUM_IMAGE_PLACEHOLDER', 'placeholder_forum.png');
 
+define('FORUM_REGISTER_OFFSITE', 0);
+define('FORUM_REGISTER_ON_GVIP', 1);
+
 define('STORE_IMAGE_PATH', IMAGE_PATH.'/store/');
 define('STORE_NO_IMAGE_PATH', IMAGE_PATH.'/site/');
 define('STORE_ITEM_IMAGE_PLACEHOLDER', 'placeholder_store_item.png');
