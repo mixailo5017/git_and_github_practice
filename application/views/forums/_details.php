@@ -45,7 +45,7 @@
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
     <?php } ?>
     <?php if ($details['registration_type'] == FORUM_REGISTER_ON_GVIP) { ?>
-        <a href="/forums/register"
+        <a href="/forums/register/<?php echo $details['id'] ?>"
            target="_blank"
            class="button light_gray attend"
            data-id="<?php echo $details['id'] ?>"
