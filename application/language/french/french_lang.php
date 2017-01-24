@@ -7,7 +7,7 @@ $lang['Portuguese'] = 'Portugais';
 
 $lang['Go'] = 'Allez';
 $lang['Stage'] = '&eacute;tape';
-$lang['StageElaboration'] = 'Détails supplémentaires';
+$lang['StageElaboration'] = 'Étape — Détails suppl.';
 $lang['siteTitle'] = 'VIP Mon Espace VIP';
 $lang['forgotPassword'] = 'Mot de passe oubli&eacute;?';
 $lang['myVip'] = 'Mon GViP';
