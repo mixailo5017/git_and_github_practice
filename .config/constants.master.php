@@ -110,7 +110,7 @@ define("FORUM_EXPERT_LIMIT",  15);
 define("FORUM_PROJECT_LIMIT", 8);
 
 define('MAX_SUB_SECTOR', 6);  // Maximum number of subsectors of an expert
-define('MAX_CASE_STUDIES', 7); // Maximum number of case studies per user (expert advert)
+define('MAX_CASE_STUDIES', 15); // Maximum number of case studies per user (expert advert)
 define('MAX_IMAGE_DIMENSIONS', 10915904); // Max width * hight before using fallback (placeholder) image
 
 define('STATUS_INACTIVE', '0');
