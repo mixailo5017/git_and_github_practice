@@ -752,7 +752,7 @@ L.Util.VIPUtils = L.Util.extend({
     reverseGeocode: function(lat, lng, callback) {
         $.ajax({
             type: 'GET',
-            url: '/api/reverse_geocode',
+            url: '/api/search/reverse_geocode',
             context: this,
             data: {
                 'lat': lat,
