@@ -2235,7 +2235,7 @@ var $concierge = $('#concierge'),
     $c_confirmation = $('#c_confirmation'),
     $close_btn = $('.close, .close_btn', $concierge),
     $textbox = $('textarea', $c_form),
-    post_link = '/api/concierge_question';
+    post_link = '/api/search/concierge_question';
 
 $close_btn.click(function() {
     $(this).closest('.view').fadeOut();
