@@ -431,7 +431,7 @@ var mapBoxMap = function() {
 
         $.ajax({
             type: "POST",
-            url: '/api/map_search/' + search_type,
+            url: '/api/search/map_search/' + search_type,
             data: post_data,
             dataType: 'json',
             success: function(return_data) {

@@ -401,7 +401,7 @@ class Forums extends CI_Controller {
 //                'filters'	=> isset($m['filters']) ? $m['filters'] : false,
 //                // Pass in flag telling that we are using map search for projects and experts asocciated with the forum
 //                'forum'		=> true,
-//                // Pass in forum id to be used to filter search results for projects and experts through /api/map_search
+//                // Pass in forum id to be used to filter search results for projects and experts through /api/search/map_search
 //                'forum_id'  => $id
 //            );
 //            foreach ($session_map as $key => $value) {
@@ -413,7 +413,7 @@ class Forums extends CI_Controller {
         $forum_map = array(
             // Pass in flag telling that we are using map search for projects and experts asocciated with the forum
             'forum'	=> true,
-            // Pass in forum id to be used to filter search results for projects and experts through /api/map_search
+            // Pass in forum id to be used to filter search results for projects and experts through /api/search/map_search
             'forum_id' => $id
         );
 
