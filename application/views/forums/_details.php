@@ -45,10 +45,10 @@
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
     <?php } ?>
     <?php if ($details['registration_type'] == FORUM_REGISTER_ON_GVIP) { ?>
-        <a href="/api/experts/<?php echo sess_var('uid') ?>/forums/<?php echo $details['id'] ?>"
-           target="_blank"
+        <a href="#"
            class="button light_gray attend"
            data-id="<?php echo $details['id'] ?>"
+           data-uid="<?php echo sess_var('uid') ?>"
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
     <?php } ?>
     <?php if ($details['meeting_url']) { ?>
