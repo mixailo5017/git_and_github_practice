@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Api extends CI_Controller {
+class Search extends CI_Controller {
 
 	//public class variables
 	public $headerdata 	= array();
