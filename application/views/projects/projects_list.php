@@ -83,7 +83,7 @@
 					<div style="padding: 8px 12px;">
 						<strong><?php echo lang('Country') ?>:</strong>&nbsp; <?php echo $project['country'] != '' ? $project['country'] : "&mdash;"; ?><br>
 						<strong><?php echo lang('Sector') ?>:</strong>&nbsp;&nbsp;&nbsp; <?php echo $project['sector'] != '' ? $project['sector'] : "&mdash;"; ?><br>
-						<strong><?php echo lang('Stage') ?>:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $project['stage'] != '' ? ucfirst($project['stage']) : "&mdash;"; ?><br>
+						<strong><?php echo lang('Stage') ?>:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $project['stage'] != '' ? ucfirst(lang($project['stage'])) : "&mdash;"; ?><br>
 						<strong><?php echo lang('Value') ?>:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo format_budget($project['totalbudget']) ?>
 					</div>
 				</div><!-- end .project_listing -->
