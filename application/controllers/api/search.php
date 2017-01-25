@@ -546,12 +546,6 @@ class Search extends CI_Controller {
         sendResponse($response);
     }
 
-	public function remove_map_session()
-	{
-		unset($this->session->userdata['map']);
-		die('done');
-	}
-
     public function geocode()
     {
         $address = $this->input->get_post('address', false);
