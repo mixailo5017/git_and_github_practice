@@ -191,3 +191,6 @@ $route['p/(:any)'] = "publicprofiles/projects/$1";
 // GViP Brazil
 $route['brazil'] = "forums/show/" . BRAZIL_FORUM_ID;
 $route['brazil/faq'] = "pages/index/brazilfaq";
+
+// API
+$route['api/experts/(:num)/forums/(:num)'] = "api/experts/forums/$1/$2";
