@@ -37,12 +37,24 @@
 
 <div class="forum-actions" style="text-align: center;">
     <?php // TODO: Revisit ans escape data-name content ?>
-    <?php if ($details['register_url']) { ?>
+    <?php if ($details['register_url'] && $details['registration_type'] == FORUM_REGISTER_OFFSITE) { ?>
         <a href="<?php echo $details['register_url'] ?>"
            target="_blank"
            class="button light_gray attend"
            data-id="<?php echo $details['id'] ?>"
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
+    <?php } ?>
+    <?php if ($details['registration_type'] == FORUM_REGISTER_ON_GVIP) { ?>
+        <?php echo form_open(
+          'api/experts/' . sess_var('uid') . '/forums/' . $details['id'],
+          [
+            'id'=>'attend_forum_form',
+            'name'=>'attend_forum_form',
+            'class'=>'ajax_form'
+          ]
+          ) ?>
+          <?php echo form_submit('submit_attend_forum', lang('ForumRegister'), 'class="light_green attend"');?>
+        </form>
     <?php } ?>
     <?php if ($details['meeting_url']) { ?>
         <a href="<?php echo $details['meeting_url'] ?>"
