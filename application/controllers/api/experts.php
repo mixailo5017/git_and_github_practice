@@ -26,6 +26,8 @@ class Experts extends CI_Controller
      */
     public function forums($expert_id, $forum_id = null) {
     	
+    	$this->load->model('forums_model');
+
     	if (! $this->checkExpertIdIsAuthenticatedUser((int) $expert_id) ) {
     		$response = resp('error', 'You are not allowed to alter other users.');
     		return sendResponse($response);
@@ -41,9 +43,15 @@ class Experts extends CI_Controller
     		return sendResponse($response);
     	}
 
-    	$response = resp('success', 'Thank you for registering. You will receive a confirmation email shortly.', 'yes');
-		return sendResponse($response);
+    	// Now try adding the member to the forum
+    	if ($this->registerMemberForForum($expert_id, $forum_id)) {
+	    	$response = resp('success', 'Thank you for registering. You will receive a confirmation email shortly.', 'yes');
+			return sendResponse($response);
+		}
 
+		// Failed to do anything
+		$response = resp('error', 'Sorry, but we weren\'t able to register you. Please contact support and we\'ll get it sorted right away.');
+		return sendResponse($response);
 
 
     }
@@ -59,6 +67,12 @@ class Experts extends CI_Controller
     	}
 
     	return true;
+    }
+
+    private function registerMemberForForum($expert_id, $forum_id) {
+    	$result = $this->forums_model->delete_members($forum_id, $expert_id) &&
+		    	  $this->forums_model->add_members($forum_id, $expert_id);
+		return $result;
     }
 
 }
