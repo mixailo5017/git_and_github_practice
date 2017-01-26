@@ -45,11 +45,16 @@
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
     <?php } ?>
     <?php if ($details['registration_type'] == FORUM_REGISTER_ON_GVIP) { ?>
-        <a href="#"
-           class="button light_gray attend"
-           data-id="<?php echo $details['id'] ?>"
-           data-uid="<?php echo sess_var('uid') ?>"
-           data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
+        <?php echo form_open(
+          'api/experts/' . sess_var('uid') . '/forums/' . $details['id'],
+          [
+            'id'=>'attend_forum_form',
+            'name'=>'attend_forum_form',
+            'class'=>'ajax_form'
+          ]
+          ) ?>
+          <?php echo form_submit('submit_attend_forum', lang('ForumRegister'), 'class="light_green button light_gray attend"');?>
+        </form>
     <?php } ?>
     <?php if ($details['meeting_url']) { ?>
         <a href="<?php echo $details['meeting_url'] ?>"
