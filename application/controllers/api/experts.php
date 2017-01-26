@@ -51,7 +51,7 @@ class Experts extends CI_Controller
                     "name" => "Register to Attend Clicked",
                     "properties" => [
                         "Forum Id" => $forum_id,
-                        "Forum Name" => $this->forums_model->find($forum_id, 'title')
+                        "Forum Name" => $this->forums_model->find($forum_id, 'title')["title"]
                     ]
                 ]
             ];
