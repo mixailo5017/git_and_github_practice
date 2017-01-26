@@ -37,7 +37,7 @@
 
 <div class="forum-actions" style="text-align: center;">
     <?php // TODO: Revisit ans escape data-name content ?>
-    <?php if ($details['register_url']) { ?>
+    <?php if ($details['register_url'] && $details['registration_type'] == FORUM_REGISTER_OFFSITE) { ?>
         <a href="<?php echo $details['register_url'] ?>"
            target="_blank"
            class="button light_gray attend"
