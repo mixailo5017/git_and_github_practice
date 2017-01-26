@@ -31,15 +31,19 @@ class Experts extends CI_Controller
     		return sendResponse($response);
     	}
 
+    	if ($forum_id === null) {
+	    	$response = resp('error', 'If you want to associate an expert with a forum, you need to provide a forum ID.');
+    		return sendResponse($response);	
+    	}
+
     	if ($this->input->server('REQUEST_METHOD') == 'GET') {
     		$response = resp('error', 'Method to retrieve forums not yet implemented.');
     		return sendResponse($response);
     	}
 
-    	if ($forum_id === null) {
-	    	$response = resp('error', 'If you want to associate an expert with a forum, you need to provide a forum ID.');
-    		return sendResponse($response);	
-    	}
+    	$response = resp('success', 'Thank you for registering. You will receive a confirmation email shortly.', 'yes');
+		return sendResponse($response);
+
 
 
     }
