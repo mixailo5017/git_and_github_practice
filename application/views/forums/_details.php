@@ -53,7 +53,7 @@
             'class'=>'ajax_form'
           ]
           ) ?>
-          <?php echo form_submit('submit_attend_forum', lang('ForumRegister'), 'class="light_green button light_gray attend"');?>
+          <?php echo form_submit('submit_attend_forum', lang('ForumRegister'), 'class="light_green attend"');?>
         </form>
     <?php } ?>
     <?php if ($details['meeting_url']) { ?>
