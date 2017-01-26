@@ -46,6 +46,15 @@ class Experts extends CI_Controller
     	// Now try adding the member to the forum
     	if ($this->registerMemberForForum($expert_id, $forum_id)) {
 	    	$response = resp('success', 'Thank you for registering. You will receive a confirmation email shortly.');
+	    	$response["analytics"] = [
+                "event" => [
+                    "name" => "Register to Attend Clicked",
+                    "properties" => [
+                        "Forum Id" => $forum_id,
+                        "Forum Name" => $this->forums_model->find($forum_id, 'title')
+                    ]
+                ]
+            ];
 			return sendResponse($response);
 		}
 
