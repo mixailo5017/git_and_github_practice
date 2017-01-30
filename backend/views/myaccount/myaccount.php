@@ -71,17 +71,11 @@
                                         <?php echo form_submit('submit', 'Upload Profile Image','class = "light_green no_margin_left"');?>
                                     <?php echo form_close();?>
 
-                                    <hr style="height:0pt; visibility:hidden;" />
-
-                                    <?php echo form_open_multipart('myaccount/delete_userphoto/'.$users['uid'],array('id'=>'general_photo_form','name'=>'general_photo_form','method'=>'post','class'=>'ajax_form'));?>
-
-                                     <div class='hiddenFields'>
-                                        <?php echo form_hidden("RET",current_url()); ?>
-                                     </div>
-
+                                   <div class="floatleft" style="padding-top:10px;">
+                                    <?php echo form_open('myaccount/delete_userphoto/'.$users['uid'],array('id'=>'delete_photo_form','name'=>'delete_photo_form','method'=>'post','class'=>'ajax_form'));?>
                                         <?php echo form_submit('submit', 'Delete Profile Image','class = "light_green no_margin_left"');?>
-
                                     <?php echo form_close();?>
+                                    </div>
 
                                 </div>
 

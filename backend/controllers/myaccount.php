@@ -221,26 +221,20 @@ class Myaccount extends CI_Controller {
     *
     * @access public
     */
-
     public function delete_userphoto()
     {
-            $userid         = $this->uri->segment(3, 0);
+        $userid         = $this->uri->segment(3, 0);
 
-            $update_data = array(
-                'userphoto'                 => ''
-    );
+	    $update_data = array('userphoto' => '');
 
-            $this->db->where('uid', $userid);
+        $this->db->where('uid', $userid);
 
-            if($str = $this->db->update('exp_members', $update_data))
-    {
-        $ret_data['message']        =       'User Detail Updated Successfully';
-        return redirect('/myaccount/'.$userid,'refresh');
-
+        if($str = $this->db->update('exp_members', $update_data))
+	    {
+	        return redirect('/myaccount/'.$userid,'refresh');
+	    }
     }
-    }
-
-	
+    
 	/**
 	* update expertise
 	* update expertise and upldate his/her account detail
