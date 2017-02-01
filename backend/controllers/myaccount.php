@@ -217,7 +217,6 @@ class Myaccount extends CI_Controller {
 
 	/**
     * Delete User Photo method
-    * Delete profile picture and upldate his/her account detail
     *
     * @access public
     */
@@ -229,8 +228,8 @@ class Myaccount extends CI_Controller {
 
         $this->db->where('uid', $userid);
 
-        if($str = $this->db->update('exp_members', $update_data))
-	    {
+        if($str = $this->db->update('exp_members', $update_data)) {
+        	
 	        return redirect('/myaccount/'.$userid,'refresh');
 	    }
     }
