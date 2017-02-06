@@ -58,21 +58,24 @@
 
                                 <div class="floatleft" style="padding-left:10px;">
                                     <div class="comment no_margin_top">Select an image from your computer (5MB max):</div>
-                                    <?php echo form_open_multipart('myaccount/upload_userphoto/'.$users['uid'],array('id'=>'general_photo_form','name'=>'general_photo_form','method'=>'post','class'=>'ajax_form'));?>
-                                    <?php $opt['general_photo_form'] = array('photo_filename' => array('name' => 'photo_filename','id' => 'photo_filename'));?>
+                                        <?php echo form_open_multipart('myaccount/upload_userphoto/'.$users['uid'],array('id'=>'general_photo_form','name'=>'general_photo_form','method'=>'post','class'=>'ajax_form'));?>
+                                        <?php $opt['general_photo_form'] = array('photo_filename' => array('name' => 'photo_filename','id' => 'photo_filename'));?>
 
-                                    <div class='hiddenFields'>
-                                        <?php echo form_hidden("RET",current_url()); ?>
+                                        <div class='hiddenFields'>
+                                            <?php echo form_hidden("RET",current_url()); ?>
+                                        </div>
+
+                                        <?php echo form_upload($opt['general_photo_form']['photo_filename']);?>
+                                            <div id="err_photo_filename" class="errormsg"></div>
+                                            <div class="comment">Compatible file types: JPEG, GIF, PNG</div>
+                                                <?php echo form_submit('submit', 'Upload Profile Image', 'class = "light_green no_margin_left"');?>
+                                        <?php echo form_close();?>
+                                              
+                                        <?php echo form_open('myaccount/delete_userphoto/'.$users['uid'], array('id' => 'delete_photo_form', 'name' => 'delete_photo_form', 'method' => 'post', 'class' => 'ajax_form', 'style' => 'padding-top:10px'));?>
+                                            <?php echo form_submit('submit', 'Delete Profile Image', 'class = "light_green no_margin_left"');?>
+                                        <?php echo form_close();?>
                                     </div>
-
-                                    <?php echo form_upload($opt['general_photo_form']['photo_filename']);?>
-                                        <div id="err_photo_filename" class="errormsg"></div>
-                                        <div class="comment">Compatible file types: JPEG, GIF, PNG</div>
-                                        <?php echo form_submit('submit', 'Upload Profile Image','class = "light_green no_margin_left"');?>
-                                    <?php echo form_close();?>
                                 </div>
-
-                            </div>
 
                         <?php if(isset($usertype) && $usertype == '8' && '1'=='1'){
 
