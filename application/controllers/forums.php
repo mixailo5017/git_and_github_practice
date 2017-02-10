@@ -120,7 +120,7 @@ class Forums extends CI_Controller {
 
 
         $limit = view_check_limit($this->input->get_post('limit', TRUE));
-        $per_page = $this->input->get_post('per_page', TRUE);
+        $offset = $this->input->get_post('per_page', TRUE);
         if (empty($offset)) {
             $offset = 0;
         }
@@ -177,14 +177,14 @@ class Forums extends CI_Controller {
             'end_date' => 'desc'
         );
 
-        $rows = $this->forums_model->all($where, $select, $order_by, $limit, $per_page, true);
+        $rows = $this->forums_model->all($where, $select, $order_by, $limit, $offset, true);
         $total = (count($rows) > 0) ? $rows[0]['row_count'] : 0;
         $categories = $this->forums_model->categories();
         $config = array(
             'base_url' 	 => '/forums?scope=' . urlencode($scope) .
                             '&category=' . urlencode($category) .
                             '&search_text' . urlencode($searchtext) .
-                            '&offset=' . urlencode($per_page),
+                            '&limit=' . urlencode($limit),
             'total_rows' => $total,
             'per_page' 	 => $limit,
             'next_link'	 => lang('Next') . '  ' . '&gt;',
@@ -196,7 +196,7 @@ class Forums extends CI_Controller {
         $this->load->library('pagination');
         $this->pagination->initialize($config);
 
-        $pages = $per_page != '' ? $per_page : 0;
+        $pages = $offset != '' ? $offset : 0;
         $page_from = ($total < 1) ? 0 : ($pages + 1);
         $page_to = (($pages + $limit) <= $total) ? ($pages + $limit) : $total;
 
