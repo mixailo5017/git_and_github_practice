@@ -12,6 +12,12 @@ $(window).load(function() {
 
 $(function() {
 
+    // Instantiate the accordion on My GViP
+    $('#myvip .column_1').accordion({
+        header: "h2",
+        heightStyle: "content"
+    });
+
     //project description toggle
     $('.project-description').on('click', '.show', function() {
         $(this).siblings('.text-cut').hide();
