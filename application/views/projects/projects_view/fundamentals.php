@@ -53,6 +53,7 @@
                                     <td class="text_center"><?php if ($design_issue['attachment']!= '') { ?>
                                         <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$design_issue['attachment'];?>">
                                             <img src="/images/icons/<?php echo filetypeIcon($design_issue['attachment']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
+                                            <base target="_blank">
                                         </a>
                                     <?php
                                         } else { echo lang('NoAttachments'); } ?>
