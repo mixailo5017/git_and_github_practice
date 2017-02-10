@@ -118,6 +118,13 @@ class Forums extends CI_Controller {
      */
     public function index() {
 
+
+        $limit = view_check_limit($this->input->get_post('limit', TRUE));
+        $offset = $this->input->get_post('per_page', TRUE);
+        if (empty($offset)) {
+            $offset = 0;
+        }
+
         $select = 'f.id, title, start_date, end_date, category_id, fc.name AS category, venue, venue_url, register_url, meeting_url, photo, is_featured';
 
         // Fetch a featured forum if any
@@ -130,15 +137,15 @@ class Forums extends CI_Controller {
             'start_date' => 'asc',
             'end_date' => 'asc'
         );
+
         $featured = $this->forums_model->all($where, $select, $order_by, 1, null, false);
         $featured = (is_array($featured) && count($featured) == 1) ? $featured[0] : null;
 
-        $perpage = 12;
 
         $category   = $this->input->get_post('category', TRUE);
         $scope      = $this->input->get_post('scope', TRUE);
-        $page       = $this->input->get_post('page', TRUE);
         $searchtext = $this->input->get_post('search_text', TRUE);
+
 
         $filterby = array_filter(compact('scope', 'category', 'searchtext'));
 
@@ -170,27 +177,28 @@ class Forums extends CI_Controller {
             'end_date' => 'desc'
         );
 
-        $rows = $this->forums_model->all($where, $select, $order_by, $perpage, $page, true);
+        $rows = $this->forums_model->all($where, $select, $order_by, $limit, $offset, true);
         $total = (count($rows) > 0) ? $rows[0]['row_count'] : 0;
         $categories = $this->forums_model->categories();
         $config = array(
             'base_url' 	 => '/forums?scope=' . urlencode($scope) .
                             '&category=' . urlencode($category) .
-                            '&search_text' . urlencode($searchtext),
+                            '&search_text' . urlencode($searchtext) .
+                            '&limit=' . urlencode($limit),
             'total_rows' => $total,
-            'per_page' 	 => $perpage,
+            'per_page' 	 => $limit,
             'next_link'	 => lang('Next') . '  ' . '&gt;',
             'prev_link'  => '&lt;' . '  ' . lang('Prev'),
-            'first_link' => FALSE,
-            'last_link'  => FALSE,
-            'page_query_string' => FALSE // What is it? pvm
+            'first_link' => lang('First'),
+            'last_link' =>  lang('Last'),
+            'page_query_string' => TRUE
         );
         $this->load->library('pagination');
         $this->pagination->initialize($config);
 
-        $pages = $page != '' ? $page : 0;
+        $pages = $offset != '' ? $offset : 0;
         $page_from = ($total < 1) ? 0 : ($pages + 1);
-        $page_to = (($pages + $perpage) <= $total) ? ($pages + $perpage) : $total;
+        $page_to = (($pages + $limit) <= $total) ? ($pages + $limit) : $total;
 
         $data = array(
             'rows' => $rows,
@@ -200,6 +208,7 @@ class Forums extends CI_Controller {
             'paging'   => $this->pagination->create_links(),
             'page_from' => $page_from,
             'page_to'   => $page_to
+            
         );
         if (! is_null($featured)) {
             $data['featured'] = $featured;
