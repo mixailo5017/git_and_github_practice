@@ -1542,6 +1542,12 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 // 	float:right!important;
 // }
 
+/* My GViP Accordion Styling */
+#myvip div.ui-accordion-content {
+	padding: 0;
+}
+
+
 
 
 @import "maps.scss";
