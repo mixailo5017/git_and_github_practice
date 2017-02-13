@@ -15,7 +15,11 @@ $(function() {
     // Instantiate the accordion on My GViP
     $('#myvip .column_1').accordion({
         header: "h2",
-        heightStyle: "content"
+        autoHeight: false,
+        icons: {
+            "header": "accordion-icon-closed", 
+            "headerSelected": "accordion-icon-open" 
+        }
     });
 
     //project description toggle
