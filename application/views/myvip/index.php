@@ -31,32 +31,32 @@
         <!-- My Experts -->
         <section class="similar-experts group">
             <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipMyExperts') ?></h2>
-
-            <ul class="reset">
-                <?php foreach($my_experts as $expert) { ?>
-                    <li class="m_person">
-                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="My Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $expert['fullname'] ?>">
-                            <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $expert['fullname'] ?>'s photo">
-                        </a>
-                        <p class="content">
-                            <a href="/expertise/<?php echo $expert['uid'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="My Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $expert['fullname'] ?>"><?php echo $expert['fullname'] ?></a>
-                            <span class="title"><?php echo $expert['title'] ?></span>
-                            <span class="title"><?php echo $expert['organization'] ?></span>
-                        </p>
-                    </li>
+            <div>
+                <ul class="reset">
+                    <?php foreach($my_experts as $expert) { ?>
+                        <li class="m_person">
+                            <a href="/expertise/<?php echo $expert['uid'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="My Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $expert['fullname'] ?>">
+                                <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $expert['fullname'] ?>'s photo">
+                            </a>
+                            <p class="content">
+                                <a href="/expertise/<?php echo $expert['uid'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="My Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $expert['fullname'] ?>"><?php echo $expert['fullname'] ?></a>
+                                <span class="title"><?php echo $expert['title'] ?></span>
+                                <span class="title"><?php echo $expert['organization'] ?></span>
+                            </p>
+                        </li>
+                    <?php } ?>
+                    <?php if (empty($my_experts)) { ?>
+                        <li class="not_found m_person"><?php echo lang('MyVipMyExpertsNotFound') ?></li>
+                    <?php } ?>
+                </ul>
+                <?php if (! empty($my_experts)) { ?>
+                <div class="more_link">
+                    <a href="/mygvip/myexperts"><?php echo lang('ViewMore') ?></a>
+                </div>
                 <?php } ?>
-
-                <?php if (empty($my_experts)) { ?>
-                    <li class="not_found m_person"><?php echo lang('MyVipMyExpertsNotFound') ?></li>
-                <?php } ?>
-            </ul>
-            <?php if (! empty($my_experts)) { ?>
-            <div class="more_link">
-                <a href="/mygvip/myexperts"><?php echo lang('ViewMore') ?></a>
-            </div>
-            <?php } ?>
-            <div class="more_link">
-                <a href="/mygvip/myfollowers"><?php echo lang('ViewMyFollowers') ?></a>
+                <div class="more_link">
+                    <a href="/mygvip/myfollowers"><?php echo lang('ViewMyFollowers') ?></a>
+                </div>
             </div>
         </section>
 
@@ -64,21 +64,22 @@
         <?php if (! empty($my_discussions)) { ?>
         <section class="similar-experts group">
             <h2 class="shadow my_vip_header h2"><?php echo mb_convert_case(lang('MyVipMyDiscussions'), MB_CASE_UPPER) ?></h2>
-
-            <ul class="reset">
-                <?php foreach($my_discussions as $discussion) { ?>
-                    <li class="m_person">
-                        <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Discussion" data-recommendation-section="My Discussions" data-recommendation-target-id="<?php echo $discussion['id'] ?>" data-recommendation-target-name="<?php echo $discussion['title'] ?>">
-                            <img src="<?php echo safe_image(USER_NO_IMAGE_PATH, DISCUSSION_IMAGE_PLACEHOLDER, null, array('max' => 50)) ?>" alt="Discussion's photo">
-                        </a>
-                        <p class="content">
-                            <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Discussion" data-recommendation-section="My Discussions" data-recommendation-target-id="<?php echo $discussion['id'] ?>" data-recommendation-target-name="<?php echo $discussion['title'] ?>"><?php echo $discussion['title'] ?></a>
-                        </p>
-                    </li>
-                <?php } ?>
-            </ul>
-            <div class="more_link">
-                <a href="/mygvip/mydiscussions"><?php echo lang('ViewMore') ?></a>
+            <div>
+                <ul class="reset">
+                    <?php foreach($my_discussions as $discussion) { ?>
+                        <li class="m_person">
+                            <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Discussion" data-recommendation-section="My Discussions" data-recommendation-target-id="<?php echo $discussion['id'] ?>" data-recommendation-target-name="<?php echo $discussion['title'] ?>">
+                                <img src="<?php echo safe_image(USER_NO_IMAGE_PATH, DISCUSSION_IMAGE_PLACEHOLDER, null, array('max' => 50)) ?>" alt="Discussion's photo">
+                            </a>
+                            <p class="content">
+                                <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Discussion" data-recommendation-section="My Discussions" data-recommendation-target-id="<?php echo $discussion['id'] ?>" data-recommendation-target-name="<?php echo $discussion['title'] ?>"><?php echo $discussion['title'] ?></a>
+                            </p>
+                        </li>
+                    <?php } ?>
+                </ul>
+                <div class="more_link">
+                    <a href="/mygvip/mydiscussions"><?php echo lang('ViewMore') ?></a>
+                </div>
             </div>
         </section>
         <?php } ?>
