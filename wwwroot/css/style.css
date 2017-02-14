@@ -2683,30 +2683,6 @@ a.external {
   margin: 8px 0 0 8px;
 }
 
-#stage_accordion .stage_status {
-  position: absolute;
-  top: -30px;
-  right: 20px;
-}
-#stage_accordion .sm_left {
-  width: 120px;
-}
-#stage_accordion textarea {
-  width: 320px;
-}
-#stage_accordion .ui-accordion-content span {
-  padding: 0 25px;
-}
-#stage_accordion .ui-accordion-header {
-  background: #f6f6f6;
-  margin-bottom: 0;
-}
-#stage_accordion h3.ui-accordion-header a span {
-  font-weight: normal;
-  padding-left: 30px;
-  font-size: 14px;
-}
-
 #col2 .forum_attendance {
   padding: 0 20px 20px;
   width: 560px;
