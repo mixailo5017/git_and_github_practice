@@ -16,6 +16,7 @@ $(function() {
     $('#myvip .column_1').accordion({
         header: "h2",
         autoHeight: false,
+        collapsible: true,
         icons: {
             "header": "accordion-icon-closed", 
             "headerSelected": "accordion-icon-open" 
