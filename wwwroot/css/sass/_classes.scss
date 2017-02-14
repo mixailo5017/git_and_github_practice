@@ -56,7 +56,7 @@ $main_col:603;
 .column_1,.column_3{width:pw($side_cols,$col_contain); float:left;}
 .column_2{width:pw($main_col, $col_contain); margin:auto pw($gutters, $col_contain);float:left;}
 
-.group{margin-bottom:50px;}
+.group{margin-bottom:25px;} // My GViP sections
 
 /* general */
 ol, ul{
