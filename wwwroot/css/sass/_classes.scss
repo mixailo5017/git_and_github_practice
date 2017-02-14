@@ -49,12 +49,12 @@
 
 /* Columns and Sections */
 $col_contain:965;
-$side_cols:161;
-$gutters:20;
-$main_col:603;
+$side_col:230;
+$gutter:20;
+$main_col:715;
 
-.column_1,.column_3{width:pw($side_cols,$col_contain); float:left;}
-.column_2{width:pw($main_col, $col_contain); margin:auto pw($gutters, $col_contain);float:left;}
+.column_1,.column_3{width:pw($side_col,$col_contain); float:left;}
+.column_2{width:pw($main_col, $col_contain); margin:auto 0 auto pw($gutter, $col_contain);float:left;}
 
 .group{margin-bottom:25px;} // My GViP sections
 

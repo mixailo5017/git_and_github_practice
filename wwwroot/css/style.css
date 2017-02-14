@@ -10659,13 +10659,13 @@ a.button.project:before {
 
 /* Columns and Sections */
 .column_1, .column_3 {
-  width: 16.68394%;
+  width: 23.8342%;
   float: left;
 }
 
 .column_2 {
-  width: 62.48705%;
-  margin: auto 2.07254%;
+  width: 74.09326%;
+  margin: auto 0 auto 2.07254%;
   float: left;
 }
 

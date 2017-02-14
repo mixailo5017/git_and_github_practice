@@ -272,8 +272,4 @@
             </div>
 		</section>
 	</div>
-
-	<div class="column_3">
-
-	</div>
 </div>
