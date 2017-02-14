@@ -5949,8 +5949,32 @@ html .edit_case_study_form .errormsg label {
 }
 
 /* My GViP Accordion Styling */
+#myvip .ui-accordion-header:focus {
+  outline: none;
+}
+
 #myvip div.ui-accordion-content {
   padding: 0;
+}
+
+.accordion-icon-closed, .accordion-icon-open {
+  width: 16px;
+  height: 16px;
+  position: relative !important;
+  left: 0 !important;
+  margin-top: 0 !important;
+  margin-right: 3px;
+}
+.accordion-icon-closed:before, .accordion-icon-open:before {
+  font-family: 'icomoon';
+  content: "\e603";
+}
+
+.accordion-icon-closed {
+  transform: rotate(-90deg);
+  float: left;
+  margin-right: 0px;
+  padding-bottom: 7px;
 }
 
 .map-sprite, .map-comm_large, .map-dropdown, .map-empty_pin_hover, .map-energy-circle, .map-energy-icon-small, .map-energy-marker, .map-energy_large, .map-hover-marker, .map-industrial-circle, .map-industrial_large, .map-industrial_largepng, .map-information-communication-technologies-circle, .map-information-communication-technologies-icons-small, .map-information_communication_technologies_large, .map-it-circle, .map-it-icon-small, .map-it-marker, .map-lightning_large, .map-logistics-circle, .map-logistics_big, .map-logistics_large, .map-map-tooltip, .map-map_cal_1, .map-map_cal_2, .map-map_money, .map-map_person, .map-map_pin, .map-map_pin_empty, .map-marker-gray, .map-mining-circle, .map-mining-icon-small, .map-mining-marker, .map-mining-related-circle, .map-mining-related-icon-small, .map-mining_large, .map-oil-circle, .map-oil-gas-circle, .map-oil-gas-icon-small, .map-oil-gas-marke, .map-oil-icon-small, .map-oil-marker, .map-oil_gas_large, .map-oil_large, .map-open_project_bg, .map-other_big, .map-pin_comm, .map-pin_lightning, .map-pin_mining, .map-pin_oil, .map-pin_social, .map-pin_transport, .map-pin_urban_design_planning, .map-pin_water, .map-pin_word_bubble, .map-project_icon_comm, .map-project_icon_energy, .map-project_icon_industrial, .map-project_icon_logistics, .map-project_icon_mining, .map-project_icon_oil_gas, .map-project_icon_other, .map-project_icon_real_estate, .map-project_icon_social, .map-project_icon_tourism_related, .map-project_icon_transportation, .map-project_icon_urban_design_planning, .map-project_icon_urban_planning_design, .map-project_icon_water, .map-project_stage_1, .map-project_stage_1_old, .map-project_stage_2, .map-project_stage_2_old, .map-project_stage_3, .map-project_stage_3_old, .map-project_stage_4, .map-project_stage_4_old, .map-project_stage_5, .map-project_stage_5_old, .map-project_stage_6, .map-project_stage_6_old, .map-real-estate-circle, .map-real_estate_large, .map-social-circle, .map-social-icon-small, .map-social-marker, .map-social_large, .map-tourism-related-circle, .map-tourism_related_large, .map-transport-circle, .map-transport-icon-small, .map-transport-marker, .map-transport_large, .map-urban-design-planning-circle, .map-urban-planning-design-circle, .map-urban_design_planning_large, .map-urban_planning_design_large, .map-view_project_arrow, .map-water-circle, .map-water-icon-small, .map-water-marker, .map-water_large, .map-word_bubble_large {

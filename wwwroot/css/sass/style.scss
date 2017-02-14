@@ -1534,8 +1534,30 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 // }
 
 /* My GViP Accordion Styling */
+#myvip .ui-accordion-header:focus {
+	outline: none;
+}
 #myvip div.ui-accordion-content {
 	padding: 0;
+}
+.accordion-icon-closed, .accordion-icon-open {
+	width: 16px;
+	height: 16px;
+	position: relative !important;
+	left: 0 !important;
+	margin-top: 0 !important;
+	margin-right: 3px;
+	&:before {
+		font-family: 'icomoon';
+		content: "\e603";
+	}
+}
+
+.accordion-icon-closed {
+	transform: rotate(-90deg);
+	float: left;
+	margin-right: 0px;
+	padding-bottom: 7px;
 }
 
 
