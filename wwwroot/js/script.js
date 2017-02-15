@@ -1292,6 +1292,32 @@ $(function() {
         });
     }
 
+    // When a recommendation link is clicked on My GViP,
+    // track this event with Segment Analytics
+    var $recommendation = $("a.recommendation");
+    if ($recommendation.length) {
+        $recommendation.click(function(e) {
+            var $this = $(this),
+                recommendationCategory = $this.data("recommendationCategory"),
+                recommendationLocation = $this.data("recommendationLocation"),
+                recommendationSection = $this.data("recommendationSection"),
+                recommendationTargetId = $this.data("recommendationTargetId"),
+                recommendationTargetName = $this.data("recommendationTargetName");
+            segmentAnalytics({
+                "event": {
+                    "name": "Recommendation Clicked",
+                    "properties": {
+                        "Category"    : recommendationCategory,
+                        "Location"    : recommendationLocation,
+                        "Section"     : recommendationSection,
+                        "Target Id"   : recommendationTargetId,
+                        "Target Name" : recommendationTargetName
+                    }
+                }
+            });
+        });
+    }
+
     var $ratings = $(".rating-block"),
         ratingScores = [],
         $resVote = $(".voting #responsive-vote"),
