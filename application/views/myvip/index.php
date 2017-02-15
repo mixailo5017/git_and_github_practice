@@ -9,7 +9,7 @@
             <article class="m_project">
                 <div class="image">
                     <div class="image_wrap">
-                        <a href="<?php echo '/projects/' . $project['id'] ?>">
+                        <a href="<?php echo '/projects/' . $project['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Project" data-recommendation-section="My Projects" data-recommendation-target-id="<?php echo $project['id'] ?>" data-recommendation-target-name="<?php echo $project['projectname'] ?>">
                             <img src="<?php echo project_image($project['projectphoto']) ?>" alt="<?php echo $project['projectname'] . "'s photo" ?>">
                         </a>
                     </div>
@@ -17,7 +17,7 @@
                     <span class="price"><?php echo format_budget($project['totalbudget']) ?></span>
                 </div>
                 <div class="content">
-                    <h3 class="the_title"><a href="<?php echo '/projects/' . $project['id'] ?>"><?php echo $project['projectname'] ?></a></h3>
+                    <h3 class="the_title"><a href="<?php echo '/projects/' . $project['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Project" data-recommendation-section="My Projects" data-recommendation-target-id="<?php echo $project['id'] ?>" data-recommendation-target-name="<?php echo $project['projectname'] ?>"><?php echo $project['projectname'] ?></a></h3>
                     <span class="type <?php echo project_sector_class($project['sector']) ?>"><?php echo ucfirst($project['sector']) ?></span>
                 </div>
             </article>
@@ -39,11 +39,11 @@
             <ul class="reset">
                 <?php foreach($my_experts as $expert) { ?>
                     <li class="m_person">
-                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="image">
+                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="My Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $expert['fullname'] ?>">
                             <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $expert['fullname'] ?>'s photo">
                         </a>
                         <p class="content">
-                            <a href="/expertise/<?php echo $expert['uid'] ?>"><?php echo $expert['fullname'] ?></a>
+                            <a href="/expertise/<?php echo $expert['uid'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="My Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $expert['fullname'] ?>"><?php echo $expert['fullname'] ?></a>
                             <span class="title"><?php echo $expert['title'] ?></span>
                             <span class="title"><?php echo $expert['organization'] ?></span>
                         </p>
@@ -72,11 +72,11 @@
             <ul class="reset">
                 <?php foreach($my_discussions as $discussion) { ?>
                     <li class="m_person">
-                        <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="image">
+                        <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Discussion" data-recommendation-section="My Discussions" data-recommendation-target-id="<?php echo $discussion['id'] ?>" data-recommendation-target-name="<?php echo $discussion['title'] ?>">
                             <img src="<?php echo safe_image(USER_NO_IMAGE_PATH, DISCUSSION_IMAGE_PLACEHOLDER, null, array('max' => 50)) ?>" alt="Discussion's photo">
                         </a>
                         <p class="content">
-                            <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>"><?php echo $discussion['title'] ?></a>
+                            <a href="/projects/discussions/<?php echo $discussion['project_id'] ?>/<?php echo $discussion['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Discussion" data-recommendation-section="My Discussions" data-recommendation-target-id="<?php echo $discussion['id'] ?>" data-recommendation-target-name="<?php echo $discussion['title'] ?>"><?php echo $discussion['title'] ?></a>
                         </p>
                     </li>
                 <?php } ?>
@@ -95,7 +95,7 @@
             <ul class="m_store reset">
                 <?php foreach($store_items as $item) { ?>
                 <li class="item">
-                    <a href="<?php echo $item['url'] ?>">
+                    <a href="<?php echo $item['url'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Product" data-recommendation-section="GViP Store" data-recommendation-target-id="<?php echo $item['url'] ?>" data-recommendation-target-name="<?php echo $item['title'] ?>">
                         <img src="<?php echo store_item_image($item['photo'], 50) ?>" alt="Store item's photo">
                         <span><?php echo $item['title'] ?></span>
                     </a>
@@ -208,7 +208,7 @@
                 <article class="m_project">
                     <div class="image">
                         <div class="image_wrap">
-                            <a href="<?php echo '/projects/' . $project['id'] ?>">
+                            <a href="<?php echo '/projects/' . $project['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Project" data-recommendation-section="Similar Projects" data-recommendation-target-id="<?php echo $project['id'] ?>" data-recommendation-target-name="<?php echo $project['projectname'] ?>">
                                 <img src="<?php echo project_image($project['projectphoto']) ?>" alt="<?php echo $project['projectname'] . "'s photo" ?>">
                             </a>
                         </div>
@@ -216,7 +216,7 @@
                         <span class="price"><?php echo format_budget($project['totalbudget']) ?></span>
                     </div>
                     <div class="content">
-                        <h3 class="the_title"><a href="<?php echo '/projects/' . $project['id'] ?>"><?php echo $project['projectname'] ?></a></h3>
+                        <h3 class="the_title"><a href="<?php echo '/projects/' . $project['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Project" data-recommendation-section="Similar Projects" data-recommendation-target-id="<?php echo $project['id'] ?>" data-recommendation-target-name="<?php echo $project['projectname'] ?>"><?php echo $project['projectname'] ?></a></h3>
                         <span class="type <?php echo project_sector_class($project['sector']) ?>"><?php echo ucfirst($project['sector']) ?></span>
                     </div>
                 </article>
@@ -237,11 +237,11 @@
                 <?php foreach($key_executives as $expert) { ?>
                 <?php $fullname = $expert['firstname'] . ' ' . $expert['lastname'] ?>
                 <li class="m_person">
-                    <a href="/expertise/<?php echo $expert['uid'] ?>" class="image">
+                    <a href="/expertise/<?php echo $expert['uid'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="Key Executives" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $fullname ?>">
                         <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $fullname ?>'s photo">
                     </a>
                     <p class="content">
-                        <a href="/expertise/<?php echo $expert['uid'] ?>"><?php echo $fullname ?></a>
+                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="Key Executives" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $fullname ?>"><?php echo $fullname ?></a>
                         <span class="title"><?php echo $expert['title'] ?></span>
                         <span class="title"><?php echo $expert['organization'] ?></span>
                     </p>
@@ -258,11 +258,11 @@
                 <?php foreach($new_experts as $expert) { ?>
                     <?php $fullname = $expert['firstname'] . ' ' . $expert['lastname'] ?>
                     <li class="m_person">
-                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="image">
+                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="New Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $fullname ?>">
                             <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $fullname ?>'s photo">
                         </a>
                         <p class="content">
-                            <a href="/expertise/<?php echo $expert['uid'] ?>"><?php echo $fullname ?></a>
+                            <a href="/expertise/<?php echo $expert['uid'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="New Experts" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $fullname ?>"><?php echo $fullname ?></a>
                             <span class="title"><?php echo $expert['title'] ?></span>
                             <span class="title"><?php echo $expert['organization'] ?></span>
                         </p>
