@@ -188,7 +188,7 @@
                 <!--[if IE 8]><span class="ie-8-unfollow">Unfollow</span><![endif]-->
             </a>
             <?php echo form_close(); ?>
-            <a href="#" id="member_send_message" class="button mail light_gray"><?php echo lang('Message') ?></a>
+            <a href="#" id="member_send_message" class="button mail light_gray<?php if($users['email_bouncing'] === '1') { ?> tooltip" title="<?php echo lang('EmailBounces'); } ?>"><?php echo lang('Message'); if($users['email_bouncing'] === '1') echo ' &#x26A0;'; ?></a>
         <?php } ?>
 
 
