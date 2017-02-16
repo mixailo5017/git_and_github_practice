@@ -131,6 +131,7 @@ $lang['ShowMore'] = 'Mostrar mais';
 $lang['ShowLess'] = 'Mostrar menos';
 $lang['SendMessage'] = 'Enviar mensagem';
 $lang['Message'] = 'Mensagem';
+$lang['EmailBounces'] = 'Infelizmente, as mensagens para este usuário já foram sinalizadas como saltando. Você ainda pode tentar enviar mensagens para o usuário, mas é improvável que receba uma resposta.';
 $lang['close'] = 'fechar';
 $lang['successupdated'] = 'Seu perfil foi atualizado com sucesso';
 $lang['Ok'] = 'Ok';

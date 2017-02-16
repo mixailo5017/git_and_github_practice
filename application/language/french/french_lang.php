@@ -149,6 +149,7 @@ $lang['ShowMore'] = 'Voir plus';
 $lang['ShowLess'] = 'Voir moins';
 $lang['SendMessage'] = 'Envoyer un message';
 $lang['Message'] = 'Message';
+$lang['EmailBounces'] = 'Malheureusement, les messages à cet utilisateur ont déjà été signalés comme rebondissant. Vous pouvez toujours essayer de messager l\'utilisateur, mais il est peu probable que vous recevrez une réponse.';
 $lang['close'] = 'Proche';
 $lang['successupdated'] = 'Votre profil a &eacute;t&eacute; mis &agrave; jour';
 $lang['Ok'] = 'Bien';

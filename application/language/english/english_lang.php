@@ -166,6 +166,7 @@ $lang['ShowMore'] = 'Show More';
 $lang['ShowLess'] = 'Show Less';
 $lang['SendMessage'] = 'Send Message';
 $lang['Message'] = 'Message';
+$lang['EmailBounces'] = 'Unfortunately, messages to this user have previously been flagged as bouncing. You may still try messaging the user, but it is unlikely you will receive a response.';
 $lang['close'] = 'close';
 $lang['successupdated'] = 'Your profile has been successfully updated';
 $lang['Ok'] = 'Ok';
