@@ -1518,7 +1518,7 @@ a.bolt{background: url(#{$icons}bolt.png) no-repeat 0 0; padding-left:13px;color
 }
 
 /* tooltip styling */
-.tooltip {display:none;background:url(#{$site}black_arrow_big.png);height:360px;padding:40px 30px 10px 30px;width:400px;font-size:11px;color:#fff;
+.tooltip {
 	.label {color:yellow;width:35px;}
 	a {color:#ad4;font-size:11px;font-weight:bold;}
 }

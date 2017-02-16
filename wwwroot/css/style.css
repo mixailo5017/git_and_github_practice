@@ -5922,15 +5922,6 @@ a.bolt:hover {
 }
 
 /* tooltip styling */
-.tooltip {
-  display: none;
-  background: url(/images/site/black_arrow_big.png);
-  height: 360px;
-  padding: 40px 30px 10px 30px;
-  width: 400px;
-  font-size: 11px;
-  color: #fff;
-}
 .tooltip .label {
   color: yellow;
   width: 35px;
