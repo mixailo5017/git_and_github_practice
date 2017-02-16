@@ -286,6 +286,7 @@ $lang['MapPointupdatesuccessfully'] = 'Punto en el Mapa Actualizado Exitosamente
 $lang['Maps'] = 'Mapas';
 $lang['memberphoto'] = 'Foto';
 $lang['Message'] = 'Mensaje';
+$lang['EmailBounces'] = 'Desafortunadamente, los mensajes a este usuario han sido previamente marcados como rebote. Todavía puede intentar enviar mensajes al usuario, pero es poco probable que reciba una respuesta.';
 $lang['Messages'] = 'Mensajes';
 $lang['MESSAGESENDFROM'] = '**Este mensaje fue enviado a través de GlobalViP**';
 $lang['MessageSendsuccessfully'] = 'Mensaje enviado con exitosamente';
