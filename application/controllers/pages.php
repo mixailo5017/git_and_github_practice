@@ -135,12 +135,14 @@ class Pages extends CI_Controller {
 
     private function privatemeetings()
     {
+        $forumID = $this->uri->segment(2);
+
         $page = array(
             'view' => 'pages/privatemeetings',
             'title' => build_title(lang('ForumBookMeeting')),
             'bodyclass' => '',
             'header' => array(),
-            'content' => array(),
+            'content' => compact('forumID'),
             'footer' => array()
         );
 
