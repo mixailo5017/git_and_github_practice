@@ -60,6 +60,16 @@ class Forums extends CI_Controller {
             show_404();
         }
 
+        // If there is a meeting URL (for private meetings bookings), append user's details to the meeting URL query string
+        if ($forum['meeting_url']) {
+            $authenticatedUserID = Auth::id();
+            $this->load->model('expertise_model');
+            $authenticatedUser = $this->expertise_model->get_user($authenticatedUserID);
+            $forum['meeting_url'] .= '?name=' . urlencode($authenticatedUser['firstname'] . ' ' . $authenticatedUser['lastname'])
+                . '&email=' . urlencode($authenticatedUser['email'])
+                . '&company=' . urlencode($authenticatedUser['organization']);
+        }
+
         // Fetch projects and members (experts) accociated with the forum
         $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country', array('p.id' => 'random'), FORUM_PROJECT_LIMIT, 0, true);
         $members = $model->members($id, 'm.uid, firstname, lastname, userphoto, m.title, organization', array('m.id' => 'random'), FORUM_EXPERT_LIMIT, 0, true);
