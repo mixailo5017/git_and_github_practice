@@ -168,13 +168,14 @@ $route['jobs'] = "jobs/index";
 $route['forum']                  = "forums/index";
 $route['forum/(:any)']           = "forums/index";
 
-$route['forums/(:num)']          = "forums/show/$1";
-$route['forums/list']            = "forums/index";
-$route['forums']                 = "forums/index";
-$route['forums/projects/(:num)'] = "forums/projects/$1";
-$route['forums/experts/(:num)']  = "forums/experts/$1";
-$route['forums/projects']        = "forums/index";
-$route['forums/experts']         = "forums/index";
+$route['forums/(:num)']                 = "forums/show/$1";
+$route['forums/list']                   = "forums/index";
+$route['forums']                        = "forums/index";
+$route['forums/projects/(:num)']        = "forums/projects/$1";
+$route['forums/experts/(:num)']         = "forums/experts/$1";
+$route['forums/projects']               = "forums/index";
+$route['forums/experts']                = "forums/index";
+$route['forums/(:num)/privatemeetings'] = "pages/index/privatemeetings";
 
 // Permalinks
 $route['plink/(:num)/(:any)'] = "plink/index/$1/$2";
