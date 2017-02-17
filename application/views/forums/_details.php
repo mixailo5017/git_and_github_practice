@@ -58,7 +58,6 @@
     <?php } ?>
     <?php if ($details['meeting_url']) { ?>
         <a href="<?php echo $details['meeting_url'] ?>"
-           target="_blank"
            class="button light_gray book"
            style="margin-left:10px;" ><?php echo lang('ForumBookMeeting') ?></a>
     <?php } ?>
