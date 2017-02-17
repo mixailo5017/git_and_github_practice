@@ -133,6 +133,20 @@ class Pages extends CI_Controller {
         $this->load->view('layouts/default', $page);
     }
 
+    private function privatemeetings()
+    {
+        $page = array(
+            'view' => 'pages/privatemeetings',
+            'title' => build_title(lang('ForumBookMeeting')),
+            'bodyclass' => '',
+            'header' => array(),
+            'content' => array(),
+            'footer' => array()
+        );
+
+        $this->load->view('layouts/default', $page);
+    }
+
     public function error_404()
     {
         show_404();
