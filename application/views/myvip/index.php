@@ -76,6 +76,11 @@
                     <div class="content">
                         <h3 class="the_title"><a href="<?php echo '/projects/' . $project['id'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Project" data-recommendation-section="My Projects" data-recommendation-target-id="<?php echo $project['id'] ?>" data-recommendation-target-name="<?php echo $project['projectname'] ?>"><?php echo $project['projectname'] ?></a></h3>
                         <span class="type <?php echo project_sector_class($project['sector']) ?>"><?php echo ucfirst($project['sector']) ?></span>
+                    </div>
+                </article>
+                <?php } ?>
+                <div class="more_link">
+                    <a href="/mygvip/myprojects"><?php echo lang('ViewMore') ?></a>
                 </div>
                 <?php } else { ?>
                     <p class="not_found">
