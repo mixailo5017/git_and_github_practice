@@ -14,3 +14,14 @@ gulp.task('compass', function() {
     }))
     .pipe(gulp.dest('css'));
 });
+
+gulp.task('compass-dev', function() {
+  gulp.src('./css/sass/*.scss')
+    .pipe(compass({
+      config_file: './config.rb',
+      css: 'css',
+      sass: 'css/sass',
+      comments: true
+    }))
+    .pipe(gulp.dest('css'));
+});

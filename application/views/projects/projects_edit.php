@@ -448,60 +448,6 @@
                                 <?php echo form_input($opt["project_form"]["project_fs_other"]); ?>
                                 <div class="errormsg" id="err_project_fs_other"></div>
                             </div>
-
-                            <div id="stage_accordion" class="accordion" style="display:none">
-                                
-                                <?php
-                                    /*$stagearr = array(
-                                        array('name' => 'Conceptual','id' => 'conceptual'),
-                                        array('name' => 'Feasibility','id' => 'feasibility'),
-                                        array('name' => 'Planning','id' => 'planning'),
-                                        array('name' => 'Construction','id' => 'construction'), 
-                                        array('name' => 'Operation & Maintenance','id' => 'om') 
-                                    );
-                                    foreach($stagearr as $key=>$value)
-                                    {
-                                ?>
-                                <?php echo heading('<a href="#">'.$value["name"].'</a>',3); ?>
-                                <div>
-                                    
-                                    <div class="stage_status">
-                                        <?php echo form_label("Status"); ?> 
-                                        <?php
-                                            $stage_status_attr = 'class="stage_status_select" onchange="changestage(this)"';
-                                            $stage_status_options = array(
-                                                'Closed'    => 'Closed',
-                                                'Open'      => 'Open',
-                                                'Complete'  => 'Complete'
-                                            );
-                                            echo form_dropdown('ps_'.$value["id"].'_status', $stage_status_options,$project["".$value["id"]."_status"],$stage_status_attr);
-                                            
-                                        ?>
-                                    </div>
-
-                                    <?php echo form_label("Date","",$opt["project_form"]["lbl_stage_date"]); ?> 
-                                        
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_date_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_from"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT):"")); ?>  
-                                        <?php echo form_hidden_custom("ps_".$value["id"]."_date",DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date'"); ?>   
-                                    <span>to</span>
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_date2_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_to"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT):"")); ?> 
-                                        <?php echo form_hidden_custom("ps_".$value["id"]."_date2",DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date2'"); ?>   
-                                    <br>    
-
-                                    <?php echo form_label("Budget","",$opt["project_form"]["lbl_stage_budget"]); ?>
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_budget","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_from"]!="0"?$project["".$value["id"]."_budget_from"]:"","name"=>"ps_".$value["id"]."_budget")); ?><span>to</span>
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_budget2","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_to"]!=""?$project["".$value["id"]."_budget_to"]:"","name"=>"ps_".$value["id"]."_budget2")); ?>
-                                    <br>
-
-                                    <?php echo form_label("Comments","",$opt["project_form"]["lbl_stage_comments"]); ?> 
-                                    <?php echo form_textarea(array("name"=>"ps_".$value["id"]."_comments","id"=>"ps_".$value["id"]."_comments","cols"=>"30","rows"=>"10","value"=>$project["".$value["id"]."_comments"]));?>
-
-                                </div>
-                                <?php
-                                    }*/
-                                ?>      
-                            </div>
-                        
                         </div>
                         <br>
 

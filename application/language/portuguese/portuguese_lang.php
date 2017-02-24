@@ -670,6 +670,7 @@ $lang['MyVipMyExperts'] = 'MEUS ESPECIALISTAS';
 $lang['MyVipMyExpertsNotFound'] = 'Seguir um especialista';
 $lang['MyVipMyFollowers'] = 'Meus fãs';
 $lang['ViewMyFollowers'] = 'Ver meus fãs';
+$lang['MyVipMyDiscussions'] = 'Minhas Discussões';
 
 /* MyVip My Projects */
 $lang['MyProjectsAll'] = 'Todos';
