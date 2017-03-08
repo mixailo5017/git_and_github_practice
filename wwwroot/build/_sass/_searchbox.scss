@@ -1,11 +1,15 @@
 .aa-input-container {
   display: inline-block;
-  position: relative; }
+  position: relative;
+  }
 .aa-input-search {
   width: 300px;
   border: 1px solid rgba(228, 228, 228, 0.6);
+  border-radius: 3px;
   padding: 12px 28px 12px 12px;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-size: $font-size-sm;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; }
