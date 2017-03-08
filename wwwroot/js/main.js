@@ -125,6 +125,30 @@ $(function() {
 			}
 		});
 
+		var client = algoliasearch("<?php echo env('ALGOLIA_APPLICATION_ID') ?>", "<?php echo env('ALGOLIA_API_KEY') ?>");
+		var index = client.initIndex('dev_members');
+		//initialize autocomplete on search input (ID selector must match)
+		$('#aa-search-input').autocomplete(
+		{hint: false,
+			debug: true}, [
+		{
+		  source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
+		  //value to be displayed in input control after user's suggestion selection
+		  displayKey: 'name',
+		  //hash of templates used when rendering dataset
+		  templates: {
+		    //'suggestion' templating function used to render a single suggestion
+		    suggestion: function(suggestion) {
+		      return '<a href="/expertise/' +
+		      	suggestion.uid + '"><span>' +
+		        suggestion._highlightResult.firstname.value + ' ' +
+		        suggestion._highlightResult.lastname.value + '</span> <span>' +
+		        suggestion._highlightResult.organization.value + '</span></a>';
+		    }
+		  }
+		}
+		]);
+
 	}
 });
 
