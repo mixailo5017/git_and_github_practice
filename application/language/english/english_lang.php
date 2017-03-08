@@ -15,9 +15,9 @@ $lang['map']	= "Map";
 $lang['projects']	= "Projects";
 $lang['forums']	= "Communities";
 $lang['leadershipForum']	= "Leadership Forum";
-$lang['expertise']	= "Expertise";
+$lang['expertise']	= "Experts";
 $lang['jobs'] = 'Jobs';
-$lang['store']  = "Store";
+$lang['store']  = "Reports";
 $lang['Messages']	= "Messages";
 $lang['Flags']	= "Flags";
 $lang['Connectiong']	= "Connecting infrastructure projects with expertise...";
@@ -989,7 +989,7 @@ $lang['MapContentLightning'] = 'Lightning';
 
 $lang['InfrastructureProfessionalsNetwork'] = 'Connecting infrastructure project developers with experts';
 
-$lang['Lightning'] = 'Lightning';
+$lang['Lightning'] = 'Companies';
 $lang['B_LIGHTNING'] = 'Lightning';
 
 $lang['Tour'] = 'Tour';

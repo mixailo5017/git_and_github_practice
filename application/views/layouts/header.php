@@ -17,23 +17,20 @@
         <?php if (Auth::check() && (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
         <nav class="m-nav nav-main">
             <ul>
-                <li class="<?php echo $segment == 'mygvip' ? 'active' : '' ?>">
-                    <a href="/mygvip"><span><?php echo lang('myVip') ?></span></a>
-                </li>
-                <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
-                    <a href="/map"><span><?php echo lang('Map') ?></span></a>
-                </li>
                 <li class="<?php echo $segment == 'projects' ? 'active' : '' ?>">
                     <a href="/projects"><span><?php echo lang('projects') ?></span></a>
-                </li>
-                <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
-                    <a href="/forums"><span><?php echo lang('forums') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'expertise' ? 'active' : '' ?>">
                     <a href="/expertise"><span><?php echo lang('expertise') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'companies' ? 'active' : '' ?>">
                     <a href="/companies"><span><?php echo lang('Lightning') ?></span></a>
+                </li>
+                <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
+                    <a href="/map"><span><?php echo lang('Map') ?></span></a>
+                </li>
+                <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
+                    <a href="/forums"><span><?php echo lang('forums') ?></span></a>
                 </li>
                 <li>
                     <a href="https://store.gvip.io" target="_blank"><span><?php echo lang('store') ?></span></a>
