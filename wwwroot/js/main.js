@@ -125,7 +125,7 @@ $(function() {
 			}
 		});
 
-		var client = algoliasearch("<?php echo env('ALGOLIA_APPLICATION_ID') ?>", "<?php echo env('ALGOLIA_API_KEY') ?>");
+		var client = algoliasearch("61EU8IS2O1", "46af09a86d8f746efd6be3bc916c9917");
 		var index = client.initIndex('dev_members');
 		//initialize autocomplete on search input (ID selector must match)
 		$('#aa-search-input').autocomplete(
