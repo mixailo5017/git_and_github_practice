@@ -1,7 +1,8 @@
 {
     "require": {
         "vlucas/phpdotenv": "~1.1",
-        "nesbot/carbon": "^1.21"
+        "nesbot/carbon": "^1.21",
+        "algolia/algoliasearch-client-php": "^1.16"
     },
     "require-dev": {
         "codeception/codeception": "*",
