@@ -69,5 +69,12 @@ class Algolia extends CI_Controller {
 		var_dump($this->algolia_model->get_all_experts());
 	}
 
+	/**
+	 * @return array All project data formatted for export to Algolia
+	 */
+	public function projects()
+	{
+		var_dump($this->algolia_model->get_all_projects());
+	}
 	
 }
