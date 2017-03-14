@@ -66,6 +66,8 @@ class Algolia_model extends CI_Model {
 
         	$row['has_photo'] = (int) $row['has_photo'];
         	$row['lastlogin'] = (int) $row['lastlogin'];
+
+        	$row['sectors'] = json_decode($row['sectors'], true);
         }
 
 		return $rows;
