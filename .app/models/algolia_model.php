@@ -15,8 +15,6 @@ class Algolia_model extends CI_Model {
 
 
 	/**
-	* get_new_projects
-	* 	returns collection of newly created projects
 	*
 	* @access public
 	*/
