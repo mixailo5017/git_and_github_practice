@@ -132,6 +132,8 @@ class Algolia_model extends CI_Model {
 
         	$row['pid'] = (int) $row['pid'];
         	$row['objectID'] = $row['pid'];
+
+        	$row['totalbudget'] = (int) $row['totalbudget'];
         }
 
 		return $rows;
