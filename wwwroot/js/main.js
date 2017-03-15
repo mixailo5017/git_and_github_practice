@@ -145,8 +145,8 @@ $(function() {
 				  templates: {
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
-				      return '<a href="/expertise/' +
-				      	suggestion.uid + '"><span>' +
+				      return '<a href="' +
+				      	suggestion.uri + '"><span>' +
 				        suggestion._highlightResult.firstname.value + ' ' +
 				        suggestion._highlightResult.lastname.value + '</span> <span>' +
 				        suggestion._highlightResult.organization.value + '</span></a>';
@@ -161,17 +161,15 @@ $(function() {
 				  templates: {
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
-				      return '<a href="/expertise/' +
-				      	suggestion.uid + '"><span>' +
-				        suggestion._highlightResult.firstname.value + ' ' +
-				        suggestion._highlightResult.lastname.value + '</span> <span>' +
-				        suggestion._highlightResult.organization.value + '</span></a>';
+				      return '<a href="' +
+				      	suggestion.uri + '"><span>' +
+				        suggestion._highlightResult.projectname.value + '</span></a>';
 				    }
 				  }
 				}
 			])
 			.on('autocomplete:selected', function(event, suggestion, dataset) {
-				window.location.href = '/expertise/' + suggestion.uid;
+				window.location.href = suggestion.uri;
 			});
 
 	}
