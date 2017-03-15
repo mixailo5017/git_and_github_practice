@@ -39,7 +39,12 @@ class Algolia extends CI_Controller {
 		$this->headerdata["title"] = "Algolia | GViP Admin";
 	}
 
-
+	/**
+	 * Shows index page allowing user to run export functions
+	 * If POST contains a value for 'update', perform export function
+	 * 
+	 * @return HTML
+	 */
 	public function index()
 	{
 		$data['experts'] = $this->algolia_model->get_all_experts();
@@ -56,10 +61,20 @@ class Algolia extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	/**
+	 * @return array All expert data formatted for export to Algolia
+	 */
 	public function experts()
 	{
 		var_dump($this->algolia_model->get_all_experts());
 	}
 
+	/**
+	 * @return array All project data formatted for export to Algolia
+	 */
+	public function projects()
+	{
+		var_dump($this->algolia_model->get_all_projects());
+	}
 	
 }

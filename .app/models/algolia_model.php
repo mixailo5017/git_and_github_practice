@@ -15,8 +15,8 @@ class Algolia_model extends CI_Model {
 
 
 	/**
-	* get_new_projects
-	* 	returns collection of newly created projects
+	* get_all_experts
+	* 	returns all experts, formatted for Algolia
 	*
 	* @access public
 	*/
@@ -66,6 +66,8 @@ class Algolia_model extends CI_Model {
 
         	$row['has_photo'] = (int) $row['has_photo'];
         	$row['lastlogin'] = (int) $row['lastlogin'];
+
+        	$row['sectors'] = json_decode($row['sectors'], true);
         }
 
 		return $rows;
@@ -81,6 +83,61 @@ class Algolia_model extends CI_Model {
 		$members = $this->get_all_experts();
 		$index->saveObjects($members);
 		return true;
+	}
+
+	/**
+	* get_all_projects
+	* 	returns all experts, formatted for Algolia
+	*
+	* @access public
+	*/
+	public function get_all_projects()
+	{
+
+		$sql = "
+	        SELECT p.pid,
+				p.stage,
+				p.projectname,
+				('/projects/' || p.slug) AS uri,
+				p.projectphoto,
+				p.description,
+				p.keywords,
+				p.country,
+				p.location,
+				p.sector,
+				CASE WHEN p.subsector = 'Other' THEN (
+					CASE WHEN COALESCE(p.subsector_other, '') NOT IN ('0', '1', '') THEN p.subsector_other ELSE NULL END
+				) ELSE p.subsector END AS subsector,
+				p.totalbudget,
+				CASE WHEN p.financialstructure = 'Other' THEN (
+					CASE WHEN COALESCE(p.financialstructure_other, '') NOT IN ('0', '1', '.', '') THEN p.financialstructure_other ELSE NULL END
+				) ELSE p.financialstructure END AS financialstructure,
+				p.entry_date,
+				p.eststart,
+				p.estcompletion,
+				p.developer,
+				p.sponsor
+			FROM exp_projects p
+			JOIN exp_members m ON (p.uid = m.uid)
+			WHERE p.isdeleted = '0'
+			AND m.status = '1'
+        ";
+
+        $rows = $this->db->query($sql)->result_array();
+        
+        foreach ($rows as &$row) {
+        	// Provide URL to the mini project photo (for display in dropdown search results)
+        	$row['image'] = project_image($row['projectphoto'], 27, array('rounded_corners' => array('all', '2')));
+        	unset($row['projectphoto']);
+
+        	$row['pid'] = (int) $row['pid'];
+        	$row['objectID'] = $row['pid'];
+
+        	$row['totalbudget'] = (int) $row['totalbudget'];
+        }
+
+		return $rows;
+
 	}
 
 }

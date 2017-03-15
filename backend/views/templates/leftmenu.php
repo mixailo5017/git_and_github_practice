@@ -70,6 +70,14 @@
                 <li <?php if ($snd_segment == "setting") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/setting">GA Account Setting</a></li>
             </ul>
         </li>
+        <li <?php if ($fst_segment == "algolia" ) { echo "class='current'"; } ?>><a href="#algoliasub" class="typo">Algolia</a>
+            <span class="arrow"></span>
+            <ul id="algoliasub">
+                <li <?php if ($snd_segment == "index") { echo "class='current'"; } ?>><a href="/admin.php/algolia/index">Sync Data</a></li>
+                <li <?php if ($snd_segment == "experts") { echo "class='current'"; } ?>><a href="/admin.php/algolia/experts">View Experts Data</a></li>
+                <li <?php if ($snd_segment == "projects") { echo "class='current'"; } ?>><a href="/admin.php/algolia/projects">View Projects Data</a></li>
+            </ul>
+        </li>
 	</ul>
 	<a class="togglemenu"></a>
 	<br><br>
