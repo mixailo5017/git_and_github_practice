@@ -15,7 +15,8 @@ $config['linkedin'] = array(
 $config['algolia'] = [
 	'application_id' => env('ALGOLIA_APPLICATION_ID'),
 	'admin_api_key'  => env('ALGOLIA_ADMIN_API_KEY'),
-	'index_members'  => env('ALGOLIA_INDEX_MEMBERS')
+	'index_members'  => env('ALGOLIA_INDEX_MEMBERS'),
+	'index_projects' => env('ALGOLIA_INDEX_PROJECTS')
 ];
 
 //$config['queue_host'] = env('QUEUE_HOST');
