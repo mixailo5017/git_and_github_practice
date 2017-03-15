@@ -126,8 +126,8 @@ $(function() {
 		});
 
 		var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
-		var members = client.initIndex(document.algoliaIndexMembers);
-		var projects = client.initIndex(document.algoliaIndexProjects);
+		var members = client.initIndex(algoliaIndexMembers);
+		var projects = client.initIndex(algoliaIndexProjects);
 		//initialize autocomplete on search input (ID selector must match)
 		$('#aa-search-input').autocomplete(
 			{
