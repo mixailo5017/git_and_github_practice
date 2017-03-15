@@ -51,8 +51,8 @@
 
 <?php // Data to provide to JavaScript ?>
 <script type="text/javascript">
-    var algoliaIndexMembers = <?php echo $this->config->item('algolia')['index_members'] ?>;
-    var algoliaIndexProjects = <?php echo $config['algolia']['index_projects'] ?>;
+    var algoliaIndexMembers = <?php echo "'".$this->config->item('algolia')['index_members']."'" ?>;
+    var algoliaIndexProjects = <?php echo "'".$this->config->item('algolia')['index_projects']."'" ?>;
 </script>
 
 <?php // Extra (per page) scripts ?>
