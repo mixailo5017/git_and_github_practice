@@ -49,6 +49,11 @@
 <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
 
+<?php // Data to provide to JavaScript ?>
+<script type="text/javascript">
+    var algoliaIndexMembers = <?php echo $this->config->item('algolia')['index_members'] ?>;
+    var algoliaIndexProjects = <?php echo $config['algolia']['index_projects'] ?>;
+</script>
 
 <?php // Extra (per page) scripts ?>
 <?php if (! empty($scripts)) {
