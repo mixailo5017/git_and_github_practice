@@ -74,6 +74,10 @@ class Algolia_model extends CI_Model {
 
 	}
 
+	/**
+	 * retrieves all experts from DB and saves them to Algolia
+	 * @return [string] returns 'experts' if successful
+	 */
 	public function save_all_experts()
 	{
 		$config = $this->config->item('algolia');
@@ -82,7 +86,7 @@ class Algolia_model extends CI_Model {
 
 		$members = $this->get_all_experts();
 		$index->saveObjects($members);
-		return true;
+		return 'experts';
 	}
 
 	/**
@@ -138,6 +142,21 @@ class Algolia_model extends CI_Model {
 
 		return $rows;
 
+	}
+
+	/**
+	 * retrieves all projects from DB and saves them to Algolia
+	 * @return [string] returns 'projects' if successful
+	 */
+	public function save_all_projects()
+	{
+		$config = $this->config->item('algolia');
+		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
+		$index = $client->initIndex($config['index_projects']);
+
+		$projects = $this->get_all_projects();
+		$index->saveObjects($projects);
+		return 'projects';
 	}
 
 }

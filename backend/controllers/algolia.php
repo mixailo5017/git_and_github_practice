@@ -51,8 +51,9 @@ class Algolia extends CI_Controller {
 		$data['headertitle'] = $this->headerdata['title'];
 
 		$data["status"] = false;
-		if($this->input->post("update") != ""){
-			$data["status"] = $this->algolia_model->save_all_experts(); // Call model update method here, once implemented
+		$indexToUpdate = $this->input->post("update");
+		if($indexToUpdate){
+			$data["status"] = $this->updateAlgolia($indexToUpdate);
 		}
 
 		$this->load->view('templates/header',$this->headerdata);
@@ -75,6 +76,23 @@ class Algolia extends CI_Controller {
 	public function projects()
 	{
 		var_dump($this->algolia_model->get_all_projects());
+	}
+
+	/**
+	 * Updates either the experts or the projects index in Algolia
+	 * @param  [string] $indexToUpdate either 'projects' or 'experts'
+	 * @return [mixed]                returns 'projects' or 'experts' if update is successful, otherwise false
+	 */
+	private function updateAlgolia($indexToUpdate)
+	{
+		switch ($indexToUpdate) {
+			case 'experts':
+				return $this->algolia_model->save_all_experts();
+			case 'projects':
+				return $this->algolia_model->save_all_projects();
+		}
+
+		return false;
 	}
 	
 }
