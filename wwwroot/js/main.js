@@ -126,30 +126,55 @@ $(function() {
 		});
 
 		var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
-		var index = client.initIndex('dev_members');
+		var members = client.initIndex(document.algoliaIndexMembers);
+		var projects = client.initIndex(document.algoliaIndexProjects);
 		//initialize autocomplete on search input (ID selector must match)
 		$('#aa-search-input').autocomplete(
-		{hint: false,
-			debug: true}, [
-		{
-		  source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-		  //value to be displayed in input control after user's suggestion selection
-		  displayKey: 'name',
-		  //hash of templates used when rendering dataset
-		  templates: {
-		    //'suggestion' templating function used to render a single suggestion
-		    suggestion: function(suggestion) {
-		      return '<a href="/expertise/' +
-		      	suggestion.uid + '"><span>' +
-		        suggestion._highlightResult.firstname.value + ' ' +
-		        suggestion._highlightResult.lastname.value + '</span> <span>' +
-		        suggestion._highlightResult.organization.value + '</span></a>';
-		    }
-		  }
-		}
-		]).on('autocomplete:selected', function(event, suggestion, dataset) {
-			window.location.href = '/expertise/' + suggestion.uid;
-		});
+			{
+				hint: false,
+				debug: true
+			}, 
+			[
+				{
+				  source: $.fn.autocomplete.sources.hits(members, { hitsPerPage: 5 }),
+				  //value to be displayed in input control after user's suggestion selection
+				  displayKey: function(suggestion) {
+				  	return suggestion.firstname + ' ' + suggestion.lastname;
+				  },
+				  //hash of templates used when rendering dataset
+				  templates: {
+				    //'suggestion' templating function used to render a single suggestion
+				    suggestion: function(suggestion) {
+				      return '<a href="/expertise/' +
+				      	suggestion.uid + '"><span>' +
+				        suggestion._highlightResult.firstname.value + ' ' +
+				        suggestion._highlightResult.lastname.value + '</span> <span>' +
+				        suggestion._highlightResult.organization.value + '</span></a>';
+				    }
+				  }
+				},
+				{
+				  source: $.fn.autocomplete.sources.hits(projects, { hitsPerPage: 5 }),
+				  //value to be displayed in input control after user's suggestion selection
+				  displayKey: function(suggestion) {
+				  	return suggestion.firstname + ' ' + suggestion.lastname;
+				  },
+				  //hash of templates used when rendering dataset
+				  templates: {
+				    //'suggestion' templating function used to render a single suggestion
+				    suggestion: function(suggestion) {
+				      return '<a href="/expertise/' +
+				      	suggestion.uid + '"><span>' +
+				        suggestion._highlightResult.firstname.value + ' ' +
+				        suggestion._highlightResult.lastname.value + '</span> <span>' +
+				        suggestion._highlightResult.organization.value + '</span></a>';
+				    }
+				  }
+				}
+			])
+			.on('autocomplete:selected', function(event, suggestion, dataset) {
+				window.location.href = '/expertise/' + suggestion.uid;
+			});
 
 	}
 });
