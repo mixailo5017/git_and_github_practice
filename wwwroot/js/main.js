@@ -136,7 +136,7 @@ $(function() {
 			}, 
 			[
 				{
-				  source: $.fn.autocomplete.sources.hits(members, { hitsPerPage: 5 }),
+				  source: $.fn.autocomplete.sources.hits(members, { hitsPerPage: 3 }),
 				  //value to be displayed in input control after user's suggestion selection
 				  displayKey: function(suggestion) {
 				  	return suggestion.firstname + ' ' + suggestion.lastname;
@@ -154,11 +154,9 @@ $(function() {
 				  }
 				},
 				{
-				  source: $.fn.autocomplete.sources.hits(projects, { hitsPerPage: 5 }),
+				  source: $.fn.autocomplete.sources.hits(projects, { hitsPerPage: 3 }),
 				  //value to be displayed in input control after user's suggestion selection
-				  displayKey: function(suggestion) {
-				  	return suggestion.firstname + ' ' + suggestion.lastname;
-				  },
+				  displayKey: 'projectname',
 				  //hash of templates used when rendering dataset
 				  templates: {
 				    //'suggestion' templating function used to render a single suggestion
