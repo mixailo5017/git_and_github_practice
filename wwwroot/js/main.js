@@ -125,7 +125,7 @@ $(function() {
 			}
 		});
 
-		var client = algoliasearch("61EU8IS2O1", "46af09a86d8f746efd6be3bc916c9917");
+		var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
 		var index = client.initIndex('dev_members');
 		//initialize autocomplete on search input (ID selector must match)
 		$('#aa-search-input').autocomplete(
