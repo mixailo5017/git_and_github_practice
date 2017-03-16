@@ -1024,3 +1024,6 @@ $lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';
 
 /* Project profile view */
 $lang['LastUpdated'] = 'Dernière mise à jour';
+
+/* Search autcomplete in header */
+$lang['SearchAutocompletePlaceholder'] = "Cherchez un projet ou un expert";
