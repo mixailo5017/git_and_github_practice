@@ -146,11 +146,10 @@ $(function() {
 				    header: '<div class="aa-suggestions-category">' + lang['Experts'] + '</div>',
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
-				      return '<a href="' +
-				      	suggestion.uri + '"><span>' +
+				      return '<img src="' + suggestion.image + '"><span>' +
 				        suggestion._highlightResult.firstname.value + ' ' +
 				        suggestion._highlightResult.lastname.value + '</span> <span>' +
-				        suggestion._highlightResult.organization.value + '</span></a>';
+				        suggestion._highlightResult.organization.value + '</span>';
 				    }
 				  }
 				},
@@ -163,8 +162,7 @@ $(function() {
 				    header: '<div class="aa-suggestions-category">' + lang['Projects'] + '</div>',
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
-				      return '<a href="' +
-				      	suggestion.uri + '"><span>' +
+				      return '<img src="' + suggestion.image + '"><span>' +
 				        suggestion._highlightResult.projectname.value + '</span></a>';
 				    }
 				  }
