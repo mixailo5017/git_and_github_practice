@@ -61,14 +61,23 @@
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center; 
+  &.aa-suggestion-empty {
+    justify-content: initial;
+    a {
+      color: $cgla-blue;
+    }
+  }
+}
   .aa-suggestion:hover, .aa-suggestion.aa-cursor {
     background-color: rgba(241, 241, 241, 0.35); }
   .aa-suggestion > span:first-child {
     color: #333; }
   .aa-suggestion > span:last-child {
     text-transform: uppercase;
-    color: #a9a9a9; }
+    color: #a9a9a9;
+    text-align: right;
+    margin-left: auto; }
 .aa-suggestions-category {
   text-transform: uppercase;
   border-bottom: 2px solid rgba(228, 228, 228, 0.6);

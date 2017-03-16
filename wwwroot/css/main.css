@@ -4496,6 +4496,19 @@ body
             align-items: center;
 }
 
+.aa-suggestion.aa-suggestion-empty
+{
+    -webkit-box-pack: initial;
+    -webkit-justify-content: initial;
+    -ms-flex-pack: initial;
+            justify-content: initial;
+}
+
+.aa-suggestion.aa-suggestion-empty a
+{
+    color: #5dc1f5;
+}
+
 .aa-suggestion:hover,
 .aa-suggestion.aa-cursor
 {
@@ -4509,6 +4522,9 @@ body
 
 .aa-suggestion > span:last-child
 {
+    margin-left: auto;
+
+    text-align: right;
     text-transform: uppercase;
 
     color: #a9a9a9;
