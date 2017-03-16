@@ -151,7 +151,8 @@ $(function() {
 				        suggestion._highlightResult.firstname.value + ' ' +
 				        suggestion._highlightResult.lastname.value + '</span> <span>' +
 				        suggestion._highlightResult.organization.value + '</span>';
-				    }
+				    },
+				    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/expertise/">Advanced Search</a></div>'
 				  }
 				},
 				{
@@ -171,7 +172,8 @@ $(function() {
 				      return '<img src="' + suggestion.image + '"><span>' +
 				        suggestion._highlightResult.projectname.value + '</span><span>' +
 				        country + '</span>';
-				    }
+				    },
+				    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/projects/">Advanced Search</a></div>'
 				  }
 				}
 			])
