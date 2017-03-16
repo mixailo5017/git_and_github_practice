@@ -98,7 +98,8 @@ gulp.task('sass', function () {
     minifier:true
   }))
   .pipe(gulp.dest(css_output))
-  .pipe(livereload({ auto: true }));
+  .pipe(livereload({ auto: true }))
+  .pipe(notify('Sass recompiled!'));
   });
 
 
