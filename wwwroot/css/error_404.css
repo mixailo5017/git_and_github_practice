@@ -1,267 +1,333 @@
 /*---------------------
 	404 Error
 ----------------------*/
+
 /* ---------------------
 Color
 --------------------- */
+
 /* ---------------------
 Type
 --------------------- */
+
 /* ---------------------
 External assets/Fonts
 --------------------- */
+
 /* Open Sans */
-@font-face
-{
-    font-family: 'Open Sans';
 
-    src: url('../fonts/Open_Sans/opensans-regular-webfont.eot?#iefix');
-    src: url('../fonts/Open_Sans/opensans-regular-webfont.eot?#iefix') format('eot'), url('../fonts/Open_Sans/opensans-regular-webfont.woff') format('woff'), url('../fonts/Open_Sans/opensans-regular-webfont.ttf') format('truetype'), url('../fonts/Open_Sans/opensans-regular-webfont.svg') format('svg');
+@font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/Open_Sans/opensans-regular-webfont.eot?#iefix");
+  src: url("../fonts/Open_Sans/opensans-regular-webfont.eot?#iefix") format("eot"), url("../fonts/Open_Sans/opensans-regular-webfont.woff") format("woff"), url("../fonts/Open_Sans/opensans-regular-webfont.ttf") format("truetype"), url("../fonts/Open_Sans/opensans-regular-webfont.svg") format("svg");
 }
 
-@font-face
-{
-    font-family: 'Open Sans Italic';
-
-    src: url('../fonts/Open_Sans/opensans-italic-webfont.eot?#iefix');
-    src: url('../fonts/Open_Sans/opensans-italic-webfont.eot?#iefix') format('eot'), url('../fonts/Open_Sans/opensans-italic-webfont.woff') format('woff'), url('../fonts/Open_Sans/opensans-italic-webfont.ttf') format('truetype'), url('../fonts/Open_Sans/opensans-italic-webfont.svg') format('svg');
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("../fonts/Open_Sans/opensans-italic-webfont.eot?#iefix");
+  src: url("../fonts/Open_Sans/opensans-italic-webfont.eot?#iefix") format("eot"), url("../fonts/Open_Sans/opensans-italic-webfont.woff") format("woff"), url("../fonts/Open_Sans/opensans-italic-webfont.ttf") format("truetype"), url("../fonts/Open_Sans/opensans-italic-webfont.svg") format("svg");
 }
 
-@font-face
-{
-    font-family: 'Open Sans Semibold';
-
-    src: url('../fonts/Open_Sans/opensans-semibold-webfont.eot?#iefix');
-    src: url('../fonts/Open_Sans/opensans-semibold-webfont.eot?#iefix') format('eot'), url('../fonts/Open_Sans/opensans-semibold-webfont.woff') format('woff'), url('../fonts/Open_Sans/opensans-semibold-webfont.ttf') format('truetype'), url('../fonts/Open_Sans/opensans-semibold-webfont.svg') format('svg');
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url("../fonts/Open_Sans/opensans-semibold-webfont.eot?#iefix");
+  src: url("../fonts/Open_Sans/opensans-semibold-webfont.eot?#iefix") format("eot"), url("../fonts/Open_Sans/opensans-semibold-webfont.woff") format("woff"), url("../fonts/Open_Sans/opensans-semibold-webfont.ttf") format("truetype"), url("../fonts/Open_Sans/opensans-semibold-webfont.svg") format("svg");
 }
 
-@font-face
-{
-    font-family: 'Open Sans Bold';
-
-    src: url('../fonts/Open_Sans/opensans-bold-webfont.eot?#iefix');
-    src: url('../fonts/Open_Sans/opensans-bold-webfont.eot?#iefix') format('eot'), url('../fonts/Open_Sans/opensans-bold-webfont.woff') format('woff'), url('../fonts/Open_Sans/opensans-bold-webfont.ttf') format('truetype'), url('../fonts/Open_Sans/opensans-bold-webfont.svg') format('svg');
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("../fonts/Open_Sans/opensans-bold-webfont.eot?#iefix");
+  src: url("../fonts/Open_Sans/opensans-bold-webfont.eot?#iefix") format("eot"), url("../fonts/Open_Sans/opensans-bold-webfont.woff") format("woff"), url("../fonts/Open_Sans/opensans-bold-webfont.ttf") format("truetype"), url("../fonts/Open_Sans/opensans-bold-webfont.svg") format("svg");
 }
 
-@font-face
-{
-    font-family: 'icomoon';
-    font-weight: normal;
-    font-style: normal; 
-
-    src: url('../fonts/icomoon/icomoon.eot?-hnhlwa');
-    src: url('../fonts/icomoon/icomoon.eot?#iefix-hnhlwa') format('embedded-opentype'), url('../fonts/icomoon/icomoon.woff?-hnhlwa') format('woff'), url('../fonts/icomoon/icomoon.ttf?-hnhlwa') format('truetype'), url('../fonts/icomoon/icomoon.svg?-hnhlwa#icomoon') format('svg');
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot?-hnhlwa");
+  src: url("../fonts/icomoon/icomoon.eot?#iefix-hnhlwa") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff?-hnhlwa") format("woff"), url("../fonts/icomoon/icomoon.ttf?-hnhlwa") format("truetype"), url("../fonts/icomoon/icomoon.svg?-hnhlwa#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
-[class^='icon-'],
-[class*=' icon-']
-{
-    font-family: 'icomoon';
-    font-weight: normal;
-    font-style: normal;
-    font-variant: normal;
-    line-height: 1;
-
-    text-transform: none;
-
-    speak: none;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+[class^="icon-"],
+[class*=" icon-"],
+[class^="iicon-"],
+[class*=" iicon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-circular-diamond:before
-{
-    content: '\e600';
+.icon-expand-more:before,
+.icon-expand-less:before {
+  content: '';
 }
 
-.icon-power:before
-{
-    content: '\e9b5';
+.icon-circular-diamond:before {
+  content: "\e600";
 }
 
-.icon-play:before
-{
-    content: '\ea15';
+.icon-expand-more:after,
+.iicon-expand-more:after {
+  content: "\e601";
 }
 
-.icon-linkedin:before
-{
-    content: '\eac9';
+.icon-expand-less:after,
+.iicon-expand-less:after {
+  content: "\e602";
 }
 
-.icon-menu:before
-{
-    content: '\e604';
+.icon-power:before {
+  content: "\e9b5";
 }
 
-.icon-circular-arrow:before
-{
-    content: '\e603';
+.icon-play:before {
+  content: "\ea15";
 }
 
-body
-{
-    font-family: 'Helvetica', 'Arial', sans-serif; 
-    font-size: 1em;
+.icon-linkedin:before {
+  content: "\eac9";
+}
+
+.icon-menu:before,
+.iicon-menu:before {
+  content: "\e604";
+}
+
+.icon-circular-arrow:before,
+.iicon-circular-arrow:before {
+  content: "\e603";
+}
+
+body {
+  font-size: 1em;
+  font-family: 'Helvetica', 'Arial', sans-serif;
 }
 
 /* ---------------------
 Header Styles
 --------------------- */
+
 h1,
 h2,
-h3
-{
-    font-family: 'Open Sans Bold', sans-serif;
+h3 {
+  font-family: 'Open Sans Bold', sans-serif;
 }
 
-.h1-std
-{
-    font-size: 2.25em;
+.h1-lg {
+  font-size: 3em;
 }
 
-.h1-lg
-{
-    font-size: 3em;
+.h1-xl {
+  font-size: 3.75em;
+  text-align: center;
 }
 
-.h1-xl
-{
-    font-size: 3.75em;
-
-    text-align: center;
+.h1-std {
+  font-size: 2.25em;
 }
 
-.h2-std
-{
-    font-size: 1.75em;
+.h2-std {
+  font-size: 1.75em;
 }
 
-.h3-std
-{
-    font-size: 1.5em;
+.h3-std {
+  font-size: 1.5em;
 }
+
+/*--
+	Hologram
+	--*/
+
+/*doc
+---
+title: Headers
+name: headers
+category: Typography
+---
+
+All Headers use 'Open Sans Bold'
+<div class="holo-headers">
+
+```html_example
+<h1 class="h1-lg">I used to be an adventurer like you, until I took an arrow to the knee</h1>
+<h1 class="h1-std">I used to be an adventurer like you, until I took an arrow to the knee</h1>
+<h2 class="h2-std">I used to be an adventurer like you, until I took an arrow to the knee</h2>
+<h3 class="h3-std">I used to be an adventurer like you, until I took an arrow to the knee</h3>
+```
+
+</div>
+Extra Large Specialty Header:
+<div class="holo-headers">
+
+```html_example
+<h1 class="h1-xl">I used to be an adventurer like you, until I took an arrow to the knee</h1>
+```
+
+</div>
+*/
+
+/*doc
+---
+title: Fonts
+name: fonts
+category: Typography
+---
+
+This site uses 4 variations of 'Open Sans', Regular, Italic, SemiBold and Bold
+
+
+
+<div class="holo-regular">
+	<p>Regular:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+<div class="holo-italic">
+	<p>Italic:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+<div class="holo-semibold">
+	<p>SemiBold:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+
+<div class="holo-bold">
+	<p>Bold:</p>
+	<p>Sirloin pork chop picanha chicken jerky landjaeger tri-tip cow kielbasa shank t-bone turducken chuck. Turkey picanha andouille, sirloin shankle alcatra t-bone beef ribs ground round frankfurter short ribs drumstick biltong rump kielbasa. Doner t-bone tail, jowl strip steak landjaeger jerky. Ham swine meatball, capicola t-bone flank jowl corned beef picanha salami short loin drumstick jerky. Chicken ground round strip steak pork belly turducken.</p>
+</div>
+
+*/
+
+/*doc
+---
+title: Icons
+name: icons
+category: Typography
+---
+
+All icons courtesy of <a href="http://icomoon.io" target="_blank">http://icomoon.io</a> Additional icons can be added
+as necessary.
+
+<div class="holo-icons">
+<p class="icon-circular-diamond">Circular Diamond: used to track registration progress</p>
+<p class="icon-circular-arrow">Circular Arrow: used in the header for the User Menu</p>
+<p class="icon-expand-more">Expand More: Used to mark dropdowns</p>
+<p class="icon-expand-less">Expand Less: Optional marker for open dropdowns</p>
+<p class="icon-power">Power Icon: Used as a front page card icon</p>
+<p class="icon-play">Play Button: Used on front page to decorate a link</p>
+<p class="icon-linkedin">LinkedIn Icon: Unusable on input fields(See below)</p>
+<input type="submit" class="icon-linkedin" value="Icon does not work" /><br/>
+<button class="icon-linkedin">This does work</button>
+<p class="icon-menu">Mobile Hamburger Menu</p>
+</div>
+*/
 
 html,
-body
-{
-    height: 100%;
+body {
+  height: 100%;
 }
 
-body
-{
-    background: #2d2e32;
+body {
+  background: #2D2E32;
 }
 
-.main-header
-{
-    position: relative;
-    z-index: 2;
+.main-header {
+  position: relative;
+  z-index: 2;
 }
 
-.not-found
-{
-    width: 100%;
-    min-height: 100%;
-    margin: -50px 0 -130px;
-    padding-top: 50px;
-
-    text-align: center; 
-
-    background: url(../images/new/404_bg.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
+.not-found {
+  width: 100%;
+  min-height: 100%;
+  margin: -50px 0 -130px;
+  padding-top: 50px;
+  background: url(../images/new/404_bg.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
 }
 
-.nf-head
-{
-    font-family: 'Open Sans Bold', sans-serif;
-    font-size: 7.5em;
-    line-height: 2.5em;
-
-    display: inline-block;
-
-    width: 300px;
-    height: 300px;
-    margin: 50px auto 20px; 
-
-    color: #fff;
-    border: dashed 3px #6aba52;
-    border-radius: 250px;
+.nf-head {
+  border-radius: 250px;
+  border: dashed 3px #6ABA52;
+  color: #FFF;
+  font-family: 'Open Sans Bold', sans-serif;
+  font-size: 7.5em;
+  line-height: 2.5em;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: 50px auto 20px;
 }
 
-.nf-message
-{
-    font-family: 'Open Sans', sans-serif; 
-
-    width: 550px;
-    margin: 0 auto 20px;
-    padding: 40px 30px;
-
-    background: url(../images/new/404_text_bg.png) no-repeat;
-    background-position: center;
+.nf-message {
+  width: 550px;
+  padding: 40px 30px;
+  margin: 0 auto 20px;
+  background: url(../images/new/404_text_bg.png) no-repeat;
+  background-position: center;
+  font-family: 'Open Sans', sans-serif;
 }
-.nf-message h1
-{
-    font-size: 3.75em;
 
+.nf-message h1 {
+  font-size: 3.75em;
+  margin: 0;
+  color: #FFF;
+}
+
+.nf-message p {
+  margin-top: 20px;
+  color: #ACB2BE;
+  font-size: 1em;
+}
+
+.nf-push {
+  height: 160px;
+}
+
+@media screen and (max-width: 640px) {
+  .h1-xl {
+    font-size: 1.875em;
+  }
+
+  .not-found {
+    background-size: contain;
     margin: 0;
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
 
-    color: #fff;
-}
-.nf-message p
-{
-    font-size: 1em; 
+  .nf-head {
+    width: 200px;
+    height: 200px;
+    font-size: 5.125em;
+    line-height: 2.3em;
+  }
 
-    margin-top: 20px;
+  .nf-message {
+    max-width: 550px;
+    width: 90%;
+    padding: 10px;
+  }
 
-    color: #acb2be;
-}
+  .nf-message h1 {
+    font-size: 2em;
+  }
 
-.nf-push
-{
-    height: 160px;
-}
+  .nf-message p {
+    margin-top: 10px;
+  }
 
-@media screen and (max-width: 640px)
-{
-    .h1-xl
-    {
-        font-size: 1.875em;
-    }
-    .not-found
-    {
-        margin: 0;
-        padding-top: 0;
-        padding-bottom: 20px; 
-
-        background-size: contain;
-    }
-    .nf-head
-    {
-        font-size: 5.125em;
-        line-height: 2.3em; 
-
-        width: 200px;
-        height: 200px;
-    }
-    .nf-message
-    {
-        width: 90%;
-        max-width: 550px;
-        padding: 10px;
-    }
-    .nf-message h1
-    {
-        font-size: 2em;
-    }
-    .nf-message p
-    {
-        margin-top: 10px;
-    }
-    footer
-    {
-        display: none;
-    }
+  footer {
+    display: none;
+  }
 }

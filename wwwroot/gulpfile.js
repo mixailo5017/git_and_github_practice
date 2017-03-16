@@ -14,7 +14,7 @@ var gulp = require('gulp'),
     hologram = require('gulp-hologram'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
-    cmq = require('gulp-combine-media-queries'); // Combine CSS Media Queries at end of sheet in correct order.
+    gcmq = require('gulp-group-css-media-queries'); // Combine CSS Media Queries at end of sheet in correct order.
 
 gulp.task('compass', function() {
   gulp.src('./css/sass/*.scss')
@@ -88,7 +88,7 @@ gulp.task('sass', function () {
     mqpacker:true
   }))
   // Groups media queries together in the correct order
-  .pipe(cmq())
+  .pipe(gcmq())
   .pipe(csscomb())
   .pipe(gulp.dest(css_output))
   .pipe(rename({
