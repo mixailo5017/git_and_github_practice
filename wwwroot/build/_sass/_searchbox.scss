@@ -40,3 +40,11 @@
 }
   .aa-suggestion:hover, .aa-suggestion.aa-cursor {
     background-color: rgba(241, 241, 241, 0.35); }
+
+  .aa-suggestions-category {
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(228, 228, 228, 0.6);
+    border-top: 2px solid rgba(228, 228, 228, 0.6);
+    padding: 6px 12px;
+    color: #a9a9a9; 
+  }
