@@ -132,7 +132,8 @@ $(function() {
 		$('#aa-search-input').autocomplete(
 			{
 				hint: false,
-				debug: true
+				debug: true,
+				keyboardShortcuts: ['/']
 			}, 
 			[
 				{
@@ -162,8 +163,14 @@ $(function() {
 				    header: '<div class="aa-suggestions-category">' + lang['Projects'] + '</div>',
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
+				      if (typeof suggestion._highlightResult.country != 'undefined') {
+				      	var country = suggestion._highlightResult.country.value;
+				      } else {
+				      	var country = '–';
+				      }
 				      return '<img src="' + suggestion.image + '"><span>' +
-				        suggestion._highlightResult.projectname.value + '</span></a>';
+				        suggestion._highlightResult.projectname.value + '</span><span>' +
+				        country + '</span>';
 				    }
 				  }
 				}
