@@ -143,6 +143,7 @@ $(function() {
 				  },
 				  //hash of templates used when rendering dataset
 				  templates: {
+				    header: '<div class="aa-suggestions-category">' + lang['Experts'] + '</div>',
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
 				      return '<a href="' +
@@ -159,6 +160,7 @@ $(function() {
 				  displayKey: 'projectname',
 				  //hash of templates used when rendering dataset
 				  templates: {
+				    header: '<div class="aa-suggestions-category">' + lang['Projects'] + '</div>',
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
 				      return '<a href="' +
