@@ -51,9 +51,8 @@
                                     <td><?php if ($design_issue['description']!= '') { echo $design_issue['description'];} else { echo "N/A";} ?></td>
 
                                     <td class="text_center"><?php if ($design_issue['attachment']!= '') { ?>
-                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$design_issue['attachment'];?>">
+                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$design_issue['attachment'];?>" target="_blank">
                                             <img src="/images/icons/<?php echo filetypeIcon($design_issue['attachment']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
-                                            <base target="_blank">
                                         </a>
                                     <?php
                                         } else { echo lang('NoAttachments'); } ?>
@@ -78,7 +77,7 @@
 										<td><?php if ($environment['description']!= '') { echo $environment['description'];} else { echo "N/A";} ?></td>
 										<td class="text_center">
 										<?php if ($environment['attachment']!= '') { ?>
-											<a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$environment['attachment'];?>">
+											<a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$environment['attachment'];?>" target="_blank">
 												<img src="/images/icons/<?php echo filetypeIcon($environment['attachment']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
 											</a>
 										<?php } else { echo lang("NoAttachments"); } ?></td>
@@ -102,7 +101,7 @@
 										<td><?php if ($studies['description']!= '') { echo $studies['description']; } else { echo "N/A";} ?></td>
 										<td  class="text_center">
 											<?php if ($studies['attachment']!= '') { ?>
-												<a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$studies['attachment'];?>" >
+												<a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$studies['attachment'];?>" target="_blank">
 													<img src="/images/icons/<?php echo filetypeIcon($studies['attachment']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
 												</a>
 											<?php } else { echo lang("NoAttachments"); } ?>

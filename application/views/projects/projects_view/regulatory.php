@@ -12,7 +12,7 @@
                                 <tr class="frontfiles_tr">
                                     <td>
                                         <?php if ($regulatory['file'] != '' && $regulatory['file'] != '0'){ ?>
-                                            <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH . $regulatory['file'];?>">
+                                            <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH . $regulatory['file'];?>" target="_blank">
                                                 <img src="/images/icons/<?php echo filetypeIcon($regulatory['file']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
                                             </a>
                                         <?php } else { echo "No File"; } ?> </td>
