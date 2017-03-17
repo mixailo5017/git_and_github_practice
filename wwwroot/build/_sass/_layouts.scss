@@ -1315,3 +1315,9 @@ body {
 		display: none!important;
 	}
 }
+
+.v-big-desktop {
+	@include mq($max,$big_desktop) {
+		display: none!important;
+	}
+}

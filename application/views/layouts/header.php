@@ -120,7 +120,7 @@
                 </li>
             </ul>
         </nav>
-        <nav class="m-nav m-right">
+        <nav class="m-nav m-right v-big-desktop">
             <div class="aa-input-container" id="aa-input-container">
                 <input type="search" id="aa-search-input" class="aa-input-search" placeholder="<?php echo lang('SearchAutocompletePlaceholder') ?>" name="search" autocomplete="off" />
                 <svg class="aa-input-icon" viewBox="654 -372 1664 1664">

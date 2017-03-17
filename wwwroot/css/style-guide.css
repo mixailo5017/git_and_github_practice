@@ -5089,6 +5089,11 @@ the proper layout. Additional form styles are contained within the form itself, 
         top: 46%;
         left: 76%;
     }
+
+    .v-big-desktop
+    {
+        display: none !important;
+    }
 }
 
 @media screen and (max-width: 1024px)
