@@ -14,7 +14,7 @@
                                 <tr class="frontfiles_tr">
                                     <td>
                                     <?php if ($files['file']!= '' && $files['file'] != '0'){ ?>
-                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$files['file'];?>">
+                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$files['file'];?>" target="_blank">
                                             <img src="/images/icons/<?php echo filetypeIcon($files['file']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
                                         </a>
                                     <?php } else { echo "No File";} ?> </td>
