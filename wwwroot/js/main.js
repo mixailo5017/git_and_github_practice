@@ -125,6 +125,42 @@ $(function() {
 			}
 		});
 
+		
+		function trimHTML(inputHTML, maxChars) {
+			var regex = /<\/?em>/;
+			var splitCompany = inputHTML.split(regex);
+			var characterCount = 0;
+			var insideEm = false;
+			var trimmedHTML = '';
+
+			if (splitCompany[0] === '') {
+			    insideEm = true;
+			}
+
+			splitCompany.forEach(function(element, index, array) {
+			  if (element.length === 0) {
+			  	return;
+			  }
+			  if (characterCount < maxChars) {
+			  	if (insideEm) {
+			    	trimmedHTML += '<em>';
+			    }
+			    trimmedHTML += element.substring(0, (maxChars - characterCount));
+			    if (insideEm) {
+			    	trimmedHTML += '</em>';
+			    }
+			    insideEm = !insideEm;
+			    characterCount += element.length;
+			    if (characterCount > maxChars) {
+			    	trimmedHTML += '…';
+			    }
+			  }
+			});
+
+			return trimmedHTML;
+
+		}
+
 		var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
 		var members = client.initIndex(algoliaIndexMembers);
 		var projects = client.initIndex(algoliaIndexProjects);
@@ -147,10 +183,15 @@ $(function() {
 				    header: '<div class="aa-suggestions-category">' + lang['Experts'] + '</div>',
 				    //'suggestion' templating function used to render a single suggestion
 				    suggestion: function(suggestion) {
+				      var maxChars = 35;
+				      var organizationDisplayHTML = suggestion._highlightResult.organization.value;
+				      if (suggestion.organization.length > maxChars) {
+				      	organizationDisplayHTML = trimHTML(organizationDisplayHTML, maxChars);
+				      }
 				      return '<img src="' + suggestion.image + '"><span>' +
 				        suggestion._highlightResult.firstname.value + ' ' +
 				        suggestion._highlightResult.lastname.value + '</span> <span>' +
-				        suggestion._highlightResult.organization.value + '</span>';
+				        organizationDisplayHTML + '</span>';
 				    },
 				    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/expertise/">Advanced Search</a></div>'
 				  }
