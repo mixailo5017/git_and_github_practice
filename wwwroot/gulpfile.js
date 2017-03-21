@@ -23,7 +23,8 @@ gulp.task('compass', function() {
       css: 'css',
       sass: 'css/sass'
     }))
-    .pipe(gulp.dest('css'));
+    .pipe(gulp.dest('css'))
+    .pipe(notify('Compass recompiled!'));;
 });
 
 gulp.task('compass-dev', function() {
