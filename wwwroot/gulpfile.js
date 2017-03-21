@@ -39,6 +39,7 @@ gulp.task('compass-dev', function() {
 
 //paths
 var sass_build = 'build/_sass',
+    sass_build_v1 = 'css/sass',
     html_build = 'build/_html/templates/*.html',
     html_build_watch = 'build/_html/**/*.html',
     html_output = 'html/',
@@ -148,6 +149,7 @@ gulp.task('watch', function(){
   gulp.watch(html_build_watch, ['fileinclude']);
   gulp.watch(js_build+'_lib/*.js', ['scripts']);
   gulp.watch(js_build+'_custom/*.js', ['compress']);
+  gulp.watch(sass_build_v1+'/**/*.scss', ['compass']);
 });
 
 gulp.task('default',['watch']);
