@@ -37,28 +37,6 @@ gulp.task('compass-dev', function() {
     .pipe(gulp.dest('css'));
 });
 
-// The next two tasks use compass to compile the v1.5 Sass — not a great idea!
-// gulp.task('main', function() {
-//   gulp.src('./build/_sass/*.scss')
-//     .pipe(compass({
-//       config_file: './config-main.rb',
-//       css: 'css',
-//       sass: 'build/_sass'
-//     }))
-//     .pipe(gulp.dest('css'));
-// });
-
-// gulp.task('main-dev', function() {
-//   gulp.src('./build/_sass/*.scss')
-//     .pipe(compass({
-//       config_file: './config-main.rb',
-//       css: 'css',
-//       sass: 'build/_sass',
-//       comments: true
-//     }))
-//     .pipe(gulp.dest('css'));
-// });
-
 //paths
 var sass_build = 'build/_sass',
     html_build = 'build/_html/templates/*.html',
