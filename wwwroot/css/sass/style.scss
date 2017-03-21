@@ -1576,17 +1576,11 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 
 @import "print.scss";
 @import "../../build/_sass/_nav.scss";
+@import "../../build/_sass/_searchbox.scss";
 
-/* nav overrides */
-.m-nav li span {
+/* nav override */
+.m-nav li span, #aa-search-input {
   font-size: 14px;
 }
 
-.m-navbar {
-  position: relative;
-
-  .container {
-	margin: 0 auto;
-  }
-}
 @include clearfix;
