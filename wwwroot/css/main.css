@@ -2350,7 +2350,6 @@ body.no_breadcrumbs header
     position: relative;
 
     max-width: 100%;
-    max-width: 965px;
     height: 100%;
     padding: 0 20px;
 
@@ -4396,7 +4395,8 @@ body
     vertical-align: top;
 }
 
-.aa-input-search
+.aa-input-search,
+#aa-search-input
 {
     font-family: 'Open Sans', sans-serif;
     font-size: .875em;
