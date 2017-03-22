@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp'),
     compass = require('gulp-compass'),
     sass = require('gulp-ruby-sass'),
@@ -14,7 +16,12 @@ var gulp = require('gulp'),
     hologram = require('gulp-hologram'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
-    gcmq = require('gulp-group-css-media-queries'); // Combine CSS Media Queries at end of sheet in correct order.
+    gcmq = require('gulp-group-css-media-queries'), // Combine CSS Media Queries at end of sheet in correct order.
+    browserify = require('browserify'), // The following four dependencies (source, buffer, sourcemaps, gutil) all support Browserify
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
+    sourcemaps = require('gulp-sourcemaps'),
+    gutil = require('gulp-util');
 
 gulp.task('compass', function() {
   gulp.src('./css/sass/*.scss')
