@@ -125,7 +125,6 @@ $(function() {
 			}
 		});
 
-		
 		function trimHTML(inputHTML, maxChars) {
 			var regex = /<\/?em>/;
 			var splitCompany = inputHTML.split(regex);
@@ -221,7 +220,6 @@ $(function() {
 			.on('autocomplete:selected', function(event, suggestion, dataset) {
 				window.location.href = suggestion.uri;
 			});
-
 	}
 });
 
