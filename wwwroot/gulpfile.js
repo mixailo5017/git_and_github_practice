@@ -102,19 +102,11 @@ gulp.task('fileinclude', function() {
 
 gulp.task('compress', function() {
   gulp.src(js_build+'_custom/*.js')
-    // .pipe(uglify({
-    //   compress:js_compress
-    // }))
-    .on("error", notify.onError(function (error) {
-        return  error.message;
-
-    }))
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
     .pipe(jshint.reporter('fail'))
     .on("error", notify.onError(function (error) {
         return  error.message;
-
     }))
     .pipe(gulp.dest(js_output))
     .pipe(rename({
