@@ -100,7 +100,7 @@ gulp.task('fileinclude', function() {
     .pipe(livereload({ auto: true }));
 });
 
-gulp.task('compress', function() {
+gulp.task('js-compress', function() {
   gulp.src(js_build+'_custom/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter('jshint-stylish'))
@@ -114,6 +114,24 @@ gulp.task('compress', function() {
     }))
     .pipe(uglify())
     .pipe(gulp.dest(js_output))
+});
+
+gulp.task('js-browserify-v1', function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: js_build + '_custom/script.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('script.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        // .pipe(uglify())
+        // .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(js_output));
 });
 
 gulp.task('scripts', function() {
@@ -148,7 +166,7 @@ gulp.task('watch', function(){
   gulp.watch(sass_build+'/**/*.scss', ['sass','hologram']);
   gulp.watch(html_build_watch, ['fileinclude']);
   gulp.watch(js_build+'_lib/*.js', ['scripts']);
-  gulp.watch(js_build+'_custom/*.js', ['compress']);
+  gulp.watch(js_build+'_custom/*.js', ['js-compress']);
   gulp.watch(sass_build_v1+'/**/*.scss', ['compass']);
 });
 
