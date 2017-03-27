@@ -4541,6 +4541,16 @@ body
     border-bottom: 2px solid rgba(228, 228, 228, .6);
 }
 
+.aa-suggestions-footer
+{
+    padding: 6px 12px;
+
+    text-align: right;
+
+    color: #a9a9a9;
+    border-top: 2px solid rgba(228, 228, 228, .6);
+}
+
 .aa-suggestion > span em
 {
     font-weight: 700;
