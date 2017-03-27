@@ -224,7 +224,7 @@ $(function() {
 	}
 });
 
-function changeLanguage(language, callback) {
+global.changeLanguage = function(language, callback) {
 
     var posting = $.post('/language', { language: language }, "json");
 
