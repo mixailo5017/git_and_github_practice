@@ -100,22 +100,6 @@ gulp.task('fileinclude', function() {
     .pipe(livereload({ auto: true }));
 });
 
-gulp.task('js-compress', function() {
-  gulp.src(js_build+'_custom/*.js')
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'))
-    .on("error", notify.onError(function (error) {
-        return  error.message;
-    }))
-    .pipe(gulp.dest(js_output))
-    .pipe(rename({
-      suffix:'.min'
-    }))
-    .pipe(uglify())
-    .pipe(gulp.dest(js_output))
-});
-
 gulp.task('js-browserify-v1', function () {
   // set up the browserify instance on a task basis
   var b = browserify({
@@ -134,7 +118,31 @@ gulp.task('js-browserify-v1', function () {
     .pipe(gulp.dest(js_output));
 });
 
-gulp.task('scripts', function() {
+gulp.task('js-browserify', function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: js_build + '_custom/main.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('main.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+        // Add transformation tasks to the pipeline here.
+        .pipe(jshint())
+        .pipe(jshint.reporter('jshint-stylish'))
+        .pipe(jshint.reporter('fail'))
+        .on("error", notify.onError(function (error) {
+            return  error.message;
+        }))
+        // .pipe(uglify())
+        // .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(js_output));
+});
+
+gulp.task('js-libs', function() {
   gulp.src(js_build+'_lib/*.js')
     //.pipe(concat('plugins.js'))
     .pipe(gulp.dest(js_output))
@@ -165,8 +173,8 @@ gulp.task('watch', function(){
   livereload.listen();
   gulp.watch(sass_build+'/**/*.scss', ['sass','hologram']);
   gulp.watch(html_build_watch, ['fileinclude']);
-  gulp.watch(js_build+'_lib/*.js', ['scripts']);
-  gulp.watch(js_build+'_custom/*.js', ['js-compress']);
+  gulp.watch(js_build+'_lib/*.js', ['js-libs']);
+  gulp.watch(js_build+'_custom/*.js', ['js-browserify-v1', 'js-browserify']);
   gulp.watch(sass_build_v1+'/**/*.scss', ['compass']);
 });
 
