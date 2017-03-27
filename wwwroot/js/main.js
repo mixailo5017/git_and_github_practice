@@ -223,10 +223,6 @@ $(function() {
 	}
 });
 
-function killDropDown() {
-
-}
-
 function changeLanguage(language, callback) {
 
     var posting = $.post('/language', { language: language }, "json");
