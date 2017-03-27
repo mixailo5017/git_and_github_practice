@@ -1,11 +1,13 @@
 var searchbox = function() {
 
+	var algoliasearch = require('algoliasearch');
+	var autocomplete = require('autocomplete.js');
 	var trimHTML = require('./_trimHTML.js');
 	var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
 	var members = client.initIndex(algoliaIndexMembers);
 	var projects = client.initIndex(algoliaIndexProjects);
 	//initialize autocomplete on search input (ID selector must match)
-	$('#aa-search-input').autocomplete(
+	autocomplete('#aa-search-input', 
 		{
 			hint: false,
 			debug: true,
@@ -13,7 +15,7 @@ var searchbox = function() {
 		}, 
 		[
 			{
-			  source: $.fn.autocomplete.sources.hits(members, { hitsPerPage: 3 }),
+			  source: autocomplete.sources.hits(members, { hitsPerPage: 3 }),
 			  //value to be displayed in input control after user's suggestion selection
 			  displayKey: function(suggestion) {
 			  	return suggestion.firstname + ' ' + suggestion.lastname;
@@ -37,7 +39,7 @@ var searchbox = function() {
 			  }
 			},
 			{
-			  source: $.fn.autocomplete.sources.hits(projects, { hitsPerPage: 3 }),
+			  source: autocomplete.sources.hits(projects, { hitsPerPage: 3 }),
 			  //value to be displayed in input control after user's suggestion selection
 			  displayKey: 'projectname',
 			  //hash of templates used when rendering dataset
