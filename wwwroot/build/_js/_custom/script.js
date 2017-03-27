@@ -1908,7 +1908,10 @@ global.ajax_form_init = function() {
             })
         }
     });
-}
+
+    require('./_searchbox.js')();
+};
+
 
 global.segmentAnalytics = function(data) {
     if (data.user_properties) {
