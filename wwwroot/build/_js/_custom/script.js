@@ -2245,23 +2245,7 @@ global.scrollIt = function(where) {
     );
 }
 
-global.changeLanguage = function(language, callback) {
-
-    var posting = $.post('/language', {
-        language: language
-    }, "json");
-
-    posting.done(function(data) {
-        if (typeof callback == 'function') {
-            callback();
-        }
-        location.reload();
-    }).fail(function() {
-        //
-    }).always(function(e) {
-        //
-    });
-}
+global.changeLanguage = require('./_changeLanguage.js');
 
 // --------------------------
 //		CONCIERGE FORM
