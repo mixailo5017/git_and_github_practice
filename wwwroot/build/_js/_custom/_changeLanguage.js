@@ -1,5 +1,7 @@
 'use strict';
 
+/* Depends on jQuery as $ */
+
 var changeLanguage = function(language, callback) {
 
     var posting = $.post('/language', {
