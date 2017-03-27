@@ -213,7 +213,6 @@ $(function() {
 				        suggestion._highlightResult.projectname.value + '</span><span>' +
 				        country + '</span>';
 				    },
-				    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/projects/">Advanced Search</a></div>'
 				  }
 				}
 			])
