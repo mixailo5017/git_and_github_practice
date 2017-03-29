@@ -1579,8 +1579,14 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "../../build/_sass/_searchbox.scss";
 
 /* nav override */
-.m-nav li span, #aa-search-input {
+.m-nav li span {
   font-size: 14px;
+}
+#aa-input-container {
+	font-size: 16px;
+}
+#aa-search-input {
+	margin: 0;
 }
 
 @include clearfix;

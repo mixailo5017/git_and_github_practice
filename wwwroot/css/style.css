@@ -12301,6 +12301,13 @@ body.no_breadcrumbs header {
   color: #a9a9a9;
 }
 
+.aa-suggestions-footer {
+  border-top: 2px solid rgba(228, 228, 228, 0.6);
+  padding: 6px 12px;
+  color: #a9a9a9;
+  text-align: right;
+}
+
 .aa-suggestion > span em {
   font-weight: 700;
   font-style: normal;
@@ -12313,8 +12320,16 @@ body.no_breadcrumbs header {
 }
 
 /* nav override */
-.m-nav li span, #aa-search-input {
+.m-nav li span {
   font-size: 14px;
+}
+
+#aa-input-container {
+  font-size: 16px;
+}
+
+#aa-search-input {
+  margin: 0;
 }
 
 .clear_fix:after, div.open_project .row:after, div.open_expert .row:after, #forum .featured-forum:after, .m_project:after, .m_person:after, .updates .update:after, .comments ul.updates .update:after {
