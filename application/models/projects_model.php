@@ -2011,12 +2011,6 @@ class Projects_model extends CI_Model {
 	{
 		$qryexec = $this->db->get_where("exp_proj_design_issues",array("slug"=>$slug,"uid"=>$uid));
 		$execarr = $qryexec->result_array();
-// DEBUG
-        ob_start();
-        var_dump($slug, $uid, $execarr, $this->db->last_query());
-        $dump = ob_get_clean();
-        file_put_contents('/tmp/cgla_dump2.txt', $dump);
-// DEBUG
 		$qryexec->free_result();
 
 		return $execarr;

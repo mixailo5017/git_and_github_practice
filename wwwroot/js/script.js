@@ -1356,6 +1356,7 @@ $(function() {
         var filelink = $(this).find('.frontfiles_link').attr('href');
         if (filelink) {
             window.open(filelink);
+            return false;
         }
     });
 

@@ -49,7 +49,7 @@
                                     <td  class="text_center">
                                         <?php if ($roi['keystudy']!= ''){
                                         ?>
-                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$roi['keystudy'];?>">
+                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$roi['keystudy'];?>" target="_blank">
                                             <img src="/images/icons/<?php echo filetypeIcon($roi['keystudy']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
                                         </a>
                                         <?php } else { echo lang("NoFile"); } ?>
