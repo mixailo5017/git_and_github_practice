@@ -60,7 +60,7 @@ var searchbox = function() {
 			        suggestion._highlightResult.lastname.value + '</span> <span>' +
 			        organizationDisplayHTML + '</span>';
 			    },
-			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/expertise/">Advanced Search</a></div>'
+			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/expertise/">' + lang['AdvancedSearch'] + '</a></div>'
 			  }
 			},
 			{
@@ -81,7 +81,7 @@ var searchbox = function() {
 			        suggestion._highlightResult.projectname.value + '</span><span>' +
 			        country + '</span>';
 			    },
-			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/projects/">Advanced Search</a></div>',
+			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/projects/">' + lang['AdvancedSearch'] + '</a></div>',
 			    footer: '<div class="aa-suggestions-footer">Powered by <img src="/images/Algolia_logo_bg-white.svg" width="48" height="17"></div>'
 			  }
 			}
