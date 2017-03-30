@@ -84,6 +84,8 @@ class Algolia_model extends CI_Model {
 		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
 		$index = $client->initIndex($config['index_members']);
 
+		$index->clearIndex();
+
 		$members = $this->get_all_experts();
 		$index->saveObjects($members);
 		return 'experts';
@@ -153,6 +155,8 @@ class Algolia_model extends CI_Model {
 		$config = $this->config->item('algolia');
 		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
 		$index = $client->initIndex($config['index_projects']);
+
+		$index->clearIndex();
 
 		$projects = $this->get_all_projects();
 		$index->saveObjects($projects);
