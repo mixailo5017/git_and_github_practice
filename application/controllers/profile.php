@@ -756,7 +756,8 @@ class Profile extends CI_Controller {
                 'status' => 'success',
                 'message' => lang('Emailupdatedsuccessfully'),
                 'remove' => true,
-                'isreset' => 'yes'
+                'isreset' => 'yes',
+                'isredirect' => 'yes'
             ));
             return TRUE;
         } else {
