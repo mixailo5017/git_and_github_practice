@@ -134,6 +134,7 @@ module.exports = trimHTML;
 },{}],4:[function(require,module,exports){
 (function (global){
 $(function() {
+	// prettyphoto provides photo/video overlays on How To page 
 	var $prettyPhoto = $("a[rel^='prettyPhoto']");
 	if ($prettyPhoto.length > 0) {
 		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:""});
