@@ -23,123 +23,9 @@ var changeLanguage = function(language, callback) {
 
 module.exports = changeLanguage;
 },{}],2:[function(require,module,exports){
-var searchbox = function() {
+/* Depends on jQuery as $ */
 
-	var algoliasearch = require('algoliasearch');
-	var autocomplete = require('autocomplete.js');
-	var trimHTML = require('./_trimHTML.js');
-	var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
-	var members = client.initIndex(algoliaIndexMembers);
-	var projects = client.initIndex(algoliaIndexProjects);
-	//initialize autocomplete on search input (ID selector must match)
-	autocomplete('#aa-search-input', 
-		{
-			hint: false,
-			debug: true,
-			keyboardShortcuts: ['/']
-		}, 
-		[
-			{
-			  source: autocomplete.sources.hits(members, { hitsPerPage: 3 }),
-			  //value to be displayed in input control after user's suggestion selection
-			  displayKey: function(suggestion) {
-			  	return suggestion.firstname + ' ' + suggestion.lastname;
-			  },
-			  //hash of templates used when rendering dataset
-			  templates: {
-			    header: '<div class="aa-suggestions-category">' + lang['Experts'] + '</div>',
-			    //'suggestion' templating function used to render a single suggestion
-			    suggestion: function(suggestion) {
-			      var maxChars = 35;
-			      var organizationDisplayHTML = suggestion._highlightResult.organization.value;
-			      if (suggestion.organization.length > maxChars) {
-			      	organizationDisplayHTML = trimHTML(organizationDisplayHTML, maxChars);
-			      }
-			      return '<img src="' + suggestion.image + '"><span>' +
-			        suggestion._highlightResult.firstname.value + ' ' +
-			        suggestion._highlightResult.lastname.value + '</span> <span>' +
-			        organizationDisplayHTML + '</span>';
-			    },
-			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/expertise/">' + lang['AdvancedSearch'] + '</a></div>'
-			  }
-			},
-			{
-			  source: autocomplete.sources.hits(projects, { hitsPerPage: 3 }),
-			  //value to be displayed in input control after user's suggestion selection
-			  displayKey: 'projectname',
-			  //hash of templates used when rendering dataset
-			  templates: {
-			    header: '<div class="aa-suggestions-category">' + lang['Projects'] + '</div>',
-			    //'suggestion' templating function used to render a single suggestion
-			    suggestion: function(suggestion) {
-			      if (typeof suggestion._highlightResult.country != 'undefined') {
-			      	var country = suggestion._highlightResult.country.value;
-			      } else {
-			      	var country = '–';
-			      }
-			      return '<img src="' + suggestion.image + '"><span>' +
-			        suggestion._highlightResult.projectname.value + '</span><span>' +
-			        country + '</span>';
-			    },
-			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/projects/">' + lang['AdvancedSearch'] + '</a></div>',
-			    footer: '<div class="aa-suggestions-footer">Powered by <img src="/images/Algolia_logo_bg-white.svg" width="48" height="17"></div>'
-			  }
-			}
-		])
-		.on('autocomplete:selected', function(event, suggestion, dataset) {
-			window.location.href = suggestion.uri;
-		});
-};
-
-module.exports = searchbox;
-},{"./_trimHTML.js":3,"algoliasearch":14,"autocomplete.js":31}],3:[function(require,module,exports){
-'use strict';
-
-var trimHTML = function(inputHTML, maxChars) {
-	var regex = /<\/?em>/;
-	var splitCompany = inputHTML.split(regex);
-	var characterCount = 0;
-	var insideEm = false;
-	var trimmedHTML = '';
-
-	if (splitCompany[0] === '') {
-	    insideEm = true;
-	}
-
-	splitCompany.forEach(function(element, index, array) {
-	  if (element.length === 0) {
-	  	return;
-	  }
-	  if (characterCount < maxChars) {
-	  	if (insideEm) {
-	    	trimmedHTML += '<em>';
-	    }
-	    trimmedHTML += element.substring(0, (maxChars - characterCount));
-	    if (insideEm) {
-	    	trimmedHTML += '</em>';
-	    }
-	    insideEm = !insideEm;
-	    characterCount += element.length;
-	    if (characterCount > maxChars) {
-	    	trimmedHTML += '…';
-	    }
-	  }
-	});
-
-	return trimmedHTML;
-};
-
-module.exports = trimHTML;
-
-},{}],4:[function(require,module,exports){
-(function (global){
-$(function() {
-	// prettyphoto provides photo/video overlays on How To page 
-	var $prettyPhoto = $("a[rel^='prettyPhoto']");
-	if ($prettyPhoto.length > 0) {
-		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:""});
-	}
-
+var nav_mobile = function() {
 	if($('.m-navbar .nav-main')) {
 		var docWidth = $(window).width(),
 			userTimer,
@@ -261,6 +147,128 @@ $(function() {
 			}
 		});
 	}
+};
+
+module.exports = nav_mobile;
+},{}],3:[function(require,module,exports){
+var searchbox = function() {
+
+	var algoliasearch = require('algoliasearch');
+	var autocomplete = require('autocomplete.js');
+	var trimHTML = require('./_trimHTML.js');
+	var client = algoliasearch("61EU8IS2O1", "fdcec7b6178f9a9c128ae03d9b7f5f40");
+	var members = client.initIndex(algoliaIndexMembers);
+	var projects = client.initIndex(algoliaIndexProjects);
+	//initialize autocomplete on search input (ID selector must match)
+	autocomplete('#aa-search-input', 
+		{
+			hint: false,
+			debug: true,
+			keyboardShortcuts: ['/']
+		}, 
+		[
+			{
+			  source: autocomplete.sources.hits(members, { hitsPerPage: 3 }),
+			  //value to be displayed in input control after user's suggestion selection
+			  displayKey: function(suggestion) {
+			  	return suggestion.firstname + ' ' + suggestion.lastname;
+			  },
+			  //hash of templates used when rendering dataset
+			  templates: {
+			    header: '<div class="aa-suggestions-category">' + lang['Experts'] + '</div>',
+			    //'suggestion' templating function used to render a single suggestion
+			    suggestion: function(suggestion) {
+			      var maxChars = 35;
+			      var organizationDisplayHTML = suggestion._highlightResult.organization.value;
+			      if (suggestion.organization.length > maxChars) {
+			      	organizationDisplayHTML = trimHTML(organizationDisplayHTML, maxChars);
+			      }
+			      return '<img src="' + suggestion.image + '"><span>' +
+			        suggestion._highlightResult.firstname.value + ' ' +
+			        suggestion._highlightResult.lastname.value + '</span> <span>' +
+			        organizationDisplayHTML + '</span>';
+			    },
+			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/expertise/">' + lang['AdvancedSearch'] + '</a></div>'
+			  }
+			},
+			{
+			  source: autocomplete.sources.hits(projects, { hitsPerPage: 3 }),
+			  //value to be displayed in input control after user's suggestion selection
+			  displayKey: 'projectname',
+			  //hash of templates used when rendering dataset
+			  templates: {
+			    header: '<div class="aa-suggestions-category">' + lang['Projects'] + '</div>',
+			    //'suggestion' templating function used to render a single suggestion
+			    suggestion: function(suggestion) {
+			      if (typeof suggestion._highlightResult.country != 'undefined') {
+			      	var country = suggestion._highlightResult.country.value;
+			      } else {
+			      	var country = '–';
+			      }
+			      return '<img src="' + suggestion.image + '"><span>' +
+			        suggestion._highlightResult.projectname.value + '</span><span>' +
+			        country + '</span>';
+			    },
+			    empty: '<div class="aa-suggestion aa-suggestion-empty">' + lang['NoResultsFound'] + '&nbsp;<a href="/projects/">' + lang['AdvancedSearch'] + '</a></div>',
+			    footer: '<div class="aa-suggestions-footer">Powered by <img src="/images/Algolia_logo_bg-white.svg" width="48" height="17"></div>'
+			  }
+			}
+		])
+		.on('autocomplete:selected', function(event, suggestion, dataset) {
+			window.location.href = suggestion.uri;
+		});
+};
+
+module.exports = searchbox;
+},{"./_trimHTML.js":4,"algoliasearch":15,"autocomplete.js":32}],4:[function(require,module,exports){
+'use strict';
+
+var trimHTML = function(inputHTML, maxChars) {
+	var regex = /<\/?em>/;
+	var splitCompany = inputHTML.split(regex);
+	var characterCount = 0;
+	var insideEm = false;
+	var trimmedHTML = '';
+
+	if (splitCompany[0] === '') {
+	    insideEm = true;
+	}
+
+	splitCompany.forEach(function(element, index, array) {
+	  if (element.length === 0) {
+	  	return;
+	  }
+	  if (characterCount < maxChars) {
+	  	if (insideEm) {
+	    	trimmedHTML += '<em>';
+	    }
+	    trimmedHTML += element.substring(0, (maxChars - characterCount));
+	    if (insideEm) {
+	    	trimmedHTML += '</em>';
+	    }
+	    insideEm = !insideEm;
+	    characterCount += element.length;
+	    if (characterCount > maxChars) {
+	    	trimmedHTML += '…';
+	    }
+	  }
+	});
+
+	return trimmedHTML;
+};
+
+module.exports = trimHTML;
+
+},{}],5:[function(require,module,exports){
+(function (global){
+$(function() {
+	// prettyphoto provides photo/video overlays on How To page 
+	var $prettyPhoto = $("a[rel^='prettyPhoto']");
+	if ($prettyPhoto.length > 0) {
+		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:""});
+	}
+
+	require('./_nav_mobile.js')();
 
 	require('./_searchbox.js')();
 });
@@ -268,7 +276,7 @@ $(function() {
 global.changeLanguage = require('./_changeLanguage.js');
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"./_changeLanguage.js":1,"./_searchbox.js":2}],5:[function(require,module,exports){
+},{"./_changeLanguage.js":1,"./_nav_mobile.js":2,"./_searchbox.js":3}],6:[function(require,module,exports){
 (function (process){
 
 /**
@@ -450,7 +458,7 @@ function localstorage(){
 
 }).call(this,require('_process'))
 
-},{"./debug":6,"_process":62}],6:[function(require,module,exports){
+},{"./debug":7,"_process":63}],7:[function(require,module,exports){
 
 /**
  * This is the common logic for both the Node.js and web browser
@@ -652,7 +660,7 @@ function coerce(val) {
   return val;
 }
 
-},{"ms":59}],7:[function(require,module,exports){
+},{"ms":60}],8:[function(require,module,exports){
 (function (process,global){
 /*!
  * @overview es6-promise - a tiny implementation of Promises/A+.
@@ -1815,14 +1823,14 @@ return Promise;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"_process":62}],8:[function(require,module,exports){
+},{"_process":63}],9:[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = Array.isArray || function (arr) {
   return toString.call(arr) == '[object Array]';
 };
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 module.exports = AlgoliaSearch;
 
 var Index = require('./Index.js');
@@ -2316,7 +2324,7 @@ function notImplemented() {
   throw new errors.AlgoliaSearchError(message);
 }
 
-},{"./AlgoliaSearchCore.js":10,"./Index.js":11,"./clone.js":20,"./deprecate.js":21,"./deprecatedMessage.js":22,"./errors":23,"inherits":58,"isarray":8}],10:[function(require,module,exports){
+},{"./AlgoliaSearchCore.js":11,"./Index.js":12,"./clone.js":21,"./deprecate.js":22,"./deprecatedMessage.js":23,"./errors":24,"inherits":59,"isarray":9}],11:[function(require,module,exports){
 (function (process){
 module.exports = AlgoliaSearchCore;
 
@@ -3113,7 +3121,7 @@ function removeCredentials(headers) {
 
 }).call(this,require('_process'))
 
-},{"./IndexCore.js":13,"./clone":20,"./clone.js":20,"./errors":23,"./exitPromise.js":24,"./map.js":25,"./store.js":29,"_process":62,"debug":5,"foreach":50,"isarray":8}],11:[function(require,module,exports){
+},{"./IndexCore.js":14,"./clone":21,"./clone.js":21,"./errors":24,"./exitPromise.js":25,"./map.js":26,"./store.js":30,"_process":63,"debug":6,"foreach":51,"isarray":9}],12:[function(require,module,exports){
 var inherits = require('inherits');
 var IndexCore = require('./IndexCore.js');
 var deprecate = require('./deprecate.js');
@@ -4148,7 +4156,7 @@ Index.prototype.updateApiKey = function(key, acls, params, callback) {
   });
 };
 
-},{"./IndexBrowser":12,"./IndexCore.js":13,"./clone.js":20,"./deprecate.js":21,"./deprecatedMessage.js":22,"./errors":23,"./exitPromise.js":24,"./map.js":25,"./merge.js":26,"inherits":58,"isarray":8}],12:[function(require,module,exports){
+},{"./IndexBrowser":13,"./IndexCore.js":14,"./clone.js":21,"./deprecate.js":22,"./deprecatedMessage.js":23,"./errors":24,"./exitPromise.js":25,"./map.js":26,"./merge.js":27,"inherits":59,"isarray":9}],13:[function(require,module,exports){
 'use strict';
 
 // This is the object returned by the `index.browseAll()` method
@@ -4189,7 +4197,7 @@ IndexBrowser.prototype._clean = function() {
   this.removeAllListeners('result');
 };
 
-},{"events":49,"inherits":58}],13:[function(require,module,exports){
+},{"events":50,"inherits":59}],14:[function(require,module,exports){
 var buildSearchMethod = require('./buildSearchMethod.js');
 var deprecate = require('./deprecate.js');
 var deprecatedMessage = require('./deprecatedMessage.js');
@@ -4574,7 +4582,7 @@ IndexCore.prototype.indexName = null;
 IndexCore.prototype.typeAheadArgs = null;
 IndexCore.prototype.typeAheadValueOption = null;
 
-},{"./buildSearchMethod.js":19,"./clone.js":20,"./deprecate.js":21,"./deprecatedMessage.js":22,"./map.js":25,"./merge.js":26,"./omit.js":27,"isarray":8}],14:[function(require,module,exports){
+},{"./buildSearchMethod.js":20,"./clone.js":21,"./deprecate.js":22,"./deprecatedMessage.js":23,"./map.js":26,"./merge.js":27,"./omit.js":28,"isarray":9}],15:[function(require,module,exports){
 'use strict';
 
 var AlgoliaSearch = require('../../AlgoliaSearch.js');
@@ -4582,7 +4590,7 @@ var createAlgoliasearch = require('../createAlgoliasearch.js');
 
 module.exports = createAlgoliasearch(AlgoliaSearch);
 
-},{"../../AlgoliaSearch.js":9,"../createAlgoliasearch.js":15}],15:[function(require,module,exports){
+},{"../../AlgoliaSearch.js":10,"../createAlgoliasearch.js":16}],16:[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -4806,7 +4814,7 @@ module.exports = function createAlgoliasearch(AlgoliaSearch, uaSuffix) {
 
 }).call(this,require('_process'))
 
-},{"../clone.js":20,"../errors":23,"../places.js":28,"../version.js":30,"./get-document-protocol":16,"./inline-headers":17,"./jsonp-request":18,"_process":62,"debug":5,"es6-promise":7,"global":51,"inherits":58}],16:[function(require,module,exports){
+},{"../clone.js":21,"../errors":24,"../places.js":29,"../version.js":31,"./get-document-protocol":17,"./inline-headers":18,"./jsonp-request":19,"_process":63,"debug":6,"es6-promise":8,"global":52,"inherits":59}],17:[function(require,module,exports){
 'use strict';
 
 module.exports = getDocumentProtocol;
@@ -4822,7 +4830,7 @@ function getDocumentProtocol() {
   return protocol;
 }
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 module.exports = inlineHeaders;
@@ -4839,7 +4847,7 @@ function inlineHeaders(url, headers) {
   return url + encode(headers);
 }
 
-},{"querystring-es3/encode":63}],18:[function(require,module,exports){
+},{"querystring-es3/encode":64}],19:[function(require,module,exports){
 'use strict';
 
 module.exports = jsonpRequest;
@@ -4966,7 +4974,7 @@ function jsonpRequest(url, opts, cb) {
   }
 }
 
-},{"../errors":23}],19:[function(require,module,exports){
+},{"../errors":24}],20:[function(require,module,exports){
 module.exports = buildSearchMethod;
 
 var errors = require('./errors.js');
@@ -5035,12 +5043,12 @@ function buildSearchMethod(queryParam, url) {
   };
 }
 
-},{"./errors.js":23}],20:[function(require,module,exports){
+},{"./errors.js":24}],21:[function(require,module,exports){
 module.exports = function clone(obj) {
   return JSON.parse(JSON.stringify(obj));
 };
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 module.exports = function deprecate(fn, message) {
   var warned = false;
 
@@ -5057,7 +5065,7 @@ module.exports = function deprecate(fn, message) {
   return deprecated;
 };
 
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 module.exports = function deprecatedMessage(previousUsage, newUsage) {
   var githubAnchorLink = previousUsage.toLowerCase()
     .replace('.', '')
@@ -5067,7 +5075,7 @@ module.exports = function deprecatedMessage(previousUsage, newUsage) {
     '`. Please see https://github.com/algolia/algoliasearch-client-js/wiki/Deprecated#' + githubAnchorLink;
 };
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 'use strict';
 
 // This file hosts our error definitions
@@ -5147,7 +5155,7 @@ module.exports = {
   )
 };
 
-},{"foreach":50,"inherits":58}],24:[function(require,module,exports){
+},{"foreach":51,"inherits":59}],25:[function(require,module,exports){
 // Parse cloud does not supports setTimeout
 // We do not store a setTimeout reference in the client everytime
 // We only fallback to a fake setTimeout when not available
@@ -5156,7 +5164,7 @@ module.exports = function exitPromise(fn, _setTimeout) {
   _setTimeout(fn, 0);
 };
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 var foreach = require('foreach');
 
 module.exports = function map(arr, fn) {
@@ -5167,7 +5175,7 @@ module.exports = function map(arr, fn) {
   return newArr;
 };
 
-},{"foreach":50}],26:[function(require,module,exports){
+},{"foreach":51}],27:[function(require,module,exports){
 var foreach = require('foreach');
 
 module.exports = function merge(destination/* , sources */) {
@@ -5188,7 +5196,7 @@ module.exports = function merge(destination/* , sources */) {
   return destination;
 };
 
-},{"foreach":50}],27:[function(require,module,exports){
+},{"foreach":51}],28:[function(require,module,exports){
 module.exports = function omit(obj, test) {
   var keys = require('object-keys');
   var foreach = require('foreach');
@@ -5204,7 +5212,7 @@ module.exports = function omit(obj, test) {
   return filtered;
 };
 
-},{"foreach":50,"object-keys":60}],28:[function(require,module,exports){
+},{"foreach":51,"object-keys":61}],29:[function(require,module,exports){
 module.exports = createPlacesClient;
 
 var buildSearchMethod = require('./buildSearchMethod.js');
@@ -5235,7 +5243,7 @@ function createPlacesClient(algoliasearch) {
   };
 }
 
-},{"./buildSearchMethod.js":19,"./clone.js":20}],29:[function(require,module,exports){
+},{"./buildSearchMethod.js":20,"./clone.js":21}],30:[function(require,module,exports){
 (function (global){
 var debug = require('debug')('algoliasearch:src/hostIndexState.js');
 var localStorageNamespace = 'algoliasearch-client-js';
@@ -5326,17 +5334,17 @@ function cleanup() {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{"debug":5}],30:[function(require,module,exports){
+},{"debug":6}],31:[function(require,module,exports){
 'use strict';
 
 module.exports = '3.22.1';
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 'use strict';
 
 module.exports = require('./src/standalone/');
 
-},{"./src/standalone/":46}],32:[function(require,module,exports){
+},{"./src/standalone/":47}],33:[function(require,module,exports){
 'use strict';
 
 var _ = require('../common/utils.js');
@@ -5435,7 +5443,7 @@ if (_.isMsie() && _.isMsie() <= 7) {
 
 module.exports = css;
 
-},{"../common/utils.js":42}],33:[function(require,module,exports){
+},{"../common/utils.js":43}],34:[function(require,module,exports){
 'use strict';
 
 var datasetKey = 'aaDataset';
@@ -5694,7 +5702,7 @@ function isValidName(str) {
 
 module.exports = Dataset;
 
-},{"../common/dom.js":40,"../common/utils.js":42,"./css.js":32,"./event_emitter.js":36,"./html.js":37}],34:[function(require,module,exports){
+},{"../common/dom.js":41,"../common/utils.js":43,"./css.js":33,"./event_emitter.js":37,"./html.js":38}],35:[function(require,module,exports){
 'use strict';
 
 var _ = require('../common/utils.js');
@@ -6077,7 +6085,7 @@ function initializeDataset($menu, oDataset, cssClasses) {
 
 module.exports = Dropdown;
 
-},{"../common/dom.js":40,"../common/utils.js":42,"./css.js":32,"./dataset.js":33,"./event_emitter.js":36}],35:[function(require,module,exports){
+},{"../common/dom.js":41,"../common/utils.js":43,"./css.js":33,"./dataset.js":34,"./event_emitter.js":37}],36:[function(require,module,exports){
 'use strict';
 
 var namespace = 'autocomplete:';
@@ -6114,7 +6122,7 @@ _.mixin(EventBus.prototype, {
 
 module.exports = EventBus;
 
-},{"../common/dom.js":40,"../common/utils.js":42}],36:[function(require,module,exports){
+},{"../common/dom.js":41,"../common/utils.js":43}],37:[function(require,module,exports){
 'use strict';
 
 var immediate = require('immediate');
@@ -6218,7 +6226,7 @@ function bindContext(fn, context) {
     function() { fn.apply(context, [].slice.call(arguments, 0)); };
 }
 
-},{"immediate":52}],37:[function(require,module,exports){
+},{"immediate":53}],38:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -6229,7 +6237,7 @@ module.exports = {
   suggestion: '<div class="%PREFIX%%SUGGESTION%"></div>'
 };
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 'use strict';
 
 var specialKeyCodeMap;
@@ -6572,7 +6580,7 @@ function withModifier($e) {
 
 module.exports = Input;
 
-},{"../common/dom.js":40,"../common/utils.js":42,"./event_emitter.js":36}],39:[function(require,module,exports){
+},{"../common/dom.js":41,"../common/utils.js":43,"./event_emitter.js":37}],40:[function(require,module,exports){
 'use strict';
 
 var attrsKey = 'aaAttrs';
@@ -7213,14 +7221,14 @@ Typeahead.sources = require('../sources/index.js');
 
 module.exports = Typeahead;
 
-},{"../common/dom.js":40,"../common/utils.js":42,"../sources/index.js":44,"./css.js":32,"./dropdown.js":34,"./event_bus.js":35,"./html.js":37,"./input.js":38}],40:[function(require,module,exports){
+},{"../common/dom.js":41,"../common/utils.js":43,"../sources/index.js":45,"./css.js":33,"./dropdown.js":35,"./event_bus.js":36,"./html.js":38,"./input.js":39}],41:[function(require,module,exports){
 'use strict';
 
 module.exports = {
   element: null
 };
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 'use strict';
 module.exports = function parseAlgoliaClientVersion(agent) {
   var parsed = agent.match(/Algolia for vanilla JavaScript (\d+\.)(\d+\.)(\d+)/);
@@ -7228,7 +7236,7 @@ module.exports = function parseAlgoliaClientVersion(agent) {
   return undefined;
 };
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 'use strict';
 
 var DOM = require('./dom.js');
@@ -7358,7 +7366,7 @@ module.exports = {
   }
 };
 
-},{"./dom.js":40}],43:[function(require,module,exports){
+},{"./dom.js":41}],44:[function(require,module,exports){
 'use strict';
 
 var _ = require('../common/utils.js');
@@ -7384,7 +7392,7 @@ module.exports = function search(index, params) {
   }
 };
 
-},{"../../version.js":47,"../common/parseAlgoliaClientVersion.js":41,"../common/utils.js":42}],44:[function(require,module,exports){
+},{"../../version.js":48,"../common/parseAlgoliaClientVersion.js":42,"../common/utils.js":43}],45:[function(require,module,exports){
 'use strict';
 
 module.exports = {
@@ -7392,7 +7400,7 @@ module.exports = {
   popularIn: require('./popularIn.js')
 };
 
-},{"./hits.js":43,"./popularIn.js":45}],45:[function(require,module,exports){
+},{"./hits.js":44,"./popularIn.js":46}],46:[function(require,module,exports){
 'use strict';
 
 var _ = require('../common/utils.js');
@@ -7479,7 +7487,7 @@ module.exports = function popularIn(index, params, details, options) {
   }
 };
 
-},{"../../version.js":47,"../common/parseAlgoliaClientVersion.js":41,"../common/utils.js":42}],46:[function(require,module,exports){
+},{"../../version.js":48,"../common/parseAlgoliaClientVersion.js":42,"../common/utils.js":43}],47:[function(require,module,exports){
 'use strict';
 
 // this will inject Zepto in window, unfortunately no easy commonJS zepto build
@@ -7569,10 +7577,10 @@ autocomplete.noConflict = function noConflict() {
 
 module.exports = autocomplete;
 
-},{"../../zepto.js":48,"../autocomplete/event_bus.js":35,"../autocomplete/typeahead.js":39,"../common/dom.js":40,"../common/utils.js":42}],47:[function(require,module,exports){
+},{"../../zepto.js":49,"../autocomplete/event_bus.js":36,"../autocomplete/typeahead.js":40,"../common/dom.js":41,"../common/utils.js":43}],48:[function(require,module,exports){
 module.exports = "0.28.0";
 
-},{}],48:[function(require,module,exports){
+},{}],49:[function(require,module,exports){
 /* istanbul ignore next */
 /* Zepto v1.2.0 - zepto event assets data - zeptojs.com/license */
 (function(global, factory) {
@@ -8887,7 +8895,7 @@ module.exports = "0.28.0";
   return Zepto
 }))
 
-},{}],49:[function(require,module,exports){
+},{}],50:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -9191,7 +9199,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],50:[function(require,module,exports){
+},{}],51:[function(require,module,exports){
 
 var hasOwn = Object.prototype.hasOwnProperty;
 var toString = Object.prototype.toString;
@@ -9215,7 +9223,7 @@ module.exports = function forEach (obj, fn, ctx) {
 };
 
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 (function (global){
 if (typeof window !== "undefined") {
     module.exports = window;
@@ -9229,7 +9237,7 @@ if (typeof window !== "undefined") {
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 'use strict';
 var types = [
   require('./nextTick'),
@@ -9327,7 +9335,7 @@ function immediate(task) {
   }
 }
 
-},{"./messageChannel":53,"./mutation.js":54,"./nextTick":55,"./stateChange":56,"./timeout":57}],53:[function(require,module,exports){
+},{"./messageChannel":54,"./mutation.js":55,"./nextTick":56,"./stateChange":57,"./timeout":58}],54:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -9349,7 +9357,7 @@ exports.install = function (func) {
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],54:[function(require,module,exports){
+},{}],55:[function(require,module,exports){
 (function (global){
 'use strict';
 //based off rsvp https://github.com/tildeio/rsvp.js
@@ -9375,7 +9383,7 @@ exports.install = function (handle) {
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],55:[function(require,module,exports){
+},{}],56:[function(require,module,exports){
 (function (process){
 'use strict';
 exports.test = function () {
@@ -9391,7 +9399,7 @@ exports.install = function (func) {
 
 }).call(this,require('_process'))
 
-},{"_process":62}],56:[function(require,module,exports){
+},{"_process":63}],57:[function(require,module,exports){
 (function (global){
 'use strict';
 
@@ -9419,7 +9427,7 @@ exports.install = function (handle) {
 };
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 
-},{}],57:[function(require,module,exports){
+},{}],58:[function(require,module,exports){
 'use strict';
 exports.test = function () {
   return true;
@@ -9430,7 +9438,7 @@ exports.install = function (t) {
     setTimeout(t, 0);
   };
 };
-},{}],58:[function(require,module,exports){
+},{}],59:[function(require,module,exports){
 if (typeof Object.create === 'function') {
   // implementation from standard node.js 'util' module
   module.exports = function inherits(ctor, superCtor) {
@@ -9455,7 +9463,7 @@ if (typeof Object.create === 'function') {
   }
 }
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 /**
  * Helpers.
  */
@@ -9606,7 +9614,7 @@ function plural(ms, n, name) {
   return Math.ceil(ms / n) + ' ' + name + 's'
 }
 
-},{}],60:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 'use strict';
 
 // modified from https://github.com/es-shims/es5-shim
@@ -9748,7 +9756,7 @@ keysShim.shim = function shimObjectKeys() {
 
 module.exports = keysShim;
 
-},{"./isArguments":61}],61:[function(require,module,exports){
+},{"./isArguments":62}],62:[function(require,module,exports){
 'use strict';
 
 var toStr = Object.prototype.toString;
@@ -9767,7 +9775,7 @@ module.exports = function isArguments(value) {
 	return isArgs;
 };
 
-},{}],62:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -9949,7 +9957,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -10036,6 +10044,6 @@ var objectKeys = Object.keys || function (obj) {
   return res;
 };
 
-},{}]},{},[4])
+},{}]},{},[5])
 
 //# sourceMappingURL=main.js.map
