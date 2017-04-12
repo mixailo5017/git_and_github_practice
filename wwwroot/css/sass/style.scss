@@ -1575,7 +1575,10 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "_lang/portuguese.scss";
 
 @import "print.scss";
+
+@import "../../build/_sass/_mq.scss";
 @import "../../build/_sass/_nav.scss";
+@import "../../build/_sass/_nav_mobile.scss";
 @import "../../build/_sass/_searchbox.scss";
 
 /* nav override */
