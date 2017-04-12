@@ -1910,6 +1910,7 @@ global.ajax_form_init = function() {
         }
     });
 
+    require('./_nav_mobile.js')();
     require('./_searchbox.js')();
 };
 
