@@ -1560,7 +1560,11 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 	padding-bottom: 7px;
 }
 
-
+.wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
 
 
 @import "maps.scss";
