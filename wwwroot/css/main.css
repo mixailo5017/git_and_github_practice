@@ -4596,7 +4596,7 @@ and will have no bearing on elements on the live site.
     }
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1246px)
 {
     .role-nav
     {
@@ -5780,7 +5780,7 @@ and will have no bearing on elements on the live site.
     }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 1024px)
+@media screen and (max-width: 1246px) and (min-width: 1024px)
 {
     .container
     {

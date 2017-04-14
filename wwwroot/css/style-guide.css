@@ -5051,7 +5051,7 @@ the proper layout. Additional form styles are contained within the form itself, 
     }
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1246px)
 {
     .role-nav
     {
@@ -6087,7 +6087,7 @@ the proper layout. Additional form styles are contained within the form itself, 
     }
 }
 
-@media screen and (max-width: 1200px) and (min-width: 1024px)
+@media screen and (max-width: 1246px) and (min-width: 1024px)
 {
     .container
     {
