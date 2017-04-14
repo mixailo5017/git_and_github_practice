@@ -12556,6 +12556,27 @@ body.no_breadcrumbs header {
   margin-right: 12px;
 }
 
+/*--
+	Responsive Visibility Conditions
+	--*/
+@media screen and (max-width: 1024px) {
+  .v-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .v-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1246px) {
+  .v-big-desktop {
+    display: none !important;
+  }
+}
+
 /* nav override */
 .m-nav li span {
   font-size: 14px;
