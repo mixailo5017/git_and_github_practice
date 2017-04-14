@@ -1298,26 +1298,4 @@ body {
 	}
 }
 
-
-
-/*--
-	Responsive Visibility Conditions
-	--*/
-
-.v-desktop {
-	@include mq($max,$desktop) {
-		display: none!important;
-	}
-}
-
-.v-mobile {
-	@include mq($min,$desktop + 1) {
-		display: none!important;
-	}
-}
-
-.v-big-desktop {
-	@include mq($max,$big_desktop) {
-		display: none!important;
-	}
-}
+@import "responsive_visibility.scss";
