@@ -251,7 +251,7 @@ var mapBoxMap = function() {
         // Remove attribution and the map fails
         // http://b.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png
         // http://{s}.tile.osm.org/{z}/{x}/{y}.png
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(thisMap);
 
@@ -1273,7 +1273,7 @@ $(function(window) {
 
         // add an OpenStreetMap tile layer
         // Remove attribution and the map fails
-        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(thisMap);
 
