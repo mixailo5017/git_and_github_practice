@@ -47,7 +47,6 @@ class Algolia extends CI_Controller {
 	 */
 	public function index()
 	{
-		$data['experts'] = $this->algolia_model->get_all_experts();
 		$data['headertitle'] = $this->headerdata['title'];
 
 		$data["status"] = false;
