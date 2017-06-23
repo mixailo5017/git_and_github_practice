@@ -14,7 +14,7 @@
 
             </div>
         </div>
-        <p><?php echo $project['description'] ?></p>
+        <p><?php echo nl2br($project['description']) ?></p>
     </section>
     <section class="m-project-lead bordered">
         <h2>Project Executive</h2>
