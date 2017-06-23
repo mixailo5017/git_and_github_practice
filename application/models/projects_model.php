@@ -51,13 +51,14 @@ class Projects_model extends CI_Model {
          WHERE p.slug = ?
            AND p.isdeleted = ?
            AND m.status = ?
-           AND p.uid IN (" . $in_string . ")
+           AND p.uid IN (?," . $in_string . ")
          LIMIT 1";
 
         $bindings = array(
             $slug,
             '0', // Project should be in a not deleted state
-            STATUS_ACTIVE // Project owner should be active
+            STATUS_ACTIVE, // Project owner should be active
+            BRAZIL_USER_ID // Brazil projects get public profiles too
         );
 
         $bindings = array_merge($bindings, INTERNAL_USERS); // Project should not belong to a real project developer
