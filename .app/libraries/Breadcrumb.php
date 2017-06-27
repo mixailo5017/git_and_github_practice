@@ -78,6 +78,11 @@ class Breadcrumb {
 		if ($this->breadcrumbs) {
 
 			$output = "";
+
+			// Determine final breadcrumb key for subsequent testing
+			$breadcrumbKeys = array_keys($this->breadcrumbs);
+			$finalBreadcrumbKey = end($breadcrumbKeys);
+
 			// add html to output
 			foreach ($this->breadcrumbs as $key => $crumb) {
 			
@@ -88,10 +93,10 @@ class Breadcrumb {
 				//if ($key) $output .= $this->_divider;
 
 				// if last element
-				if (end(array_keys($this->breadcrumbs)) == $key) {
+				if ($finalBreadcrumbKey == $key) {
 					$output .= '<a href="' . $crumb['href'] . '" style="background: none repeat scroll 0% 0% transparent;">' . $crumb['title'] . '</a>';
 
-					// else add link and divider
+				// else add link and divider
 				} else {
 					$output .= '<a href="' . $crumb['href'] . '">' . $crumb['title'] . '</a>';
 				}
