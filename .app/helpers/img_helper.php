@@ -1,6 +1,5 @@
 <?php  if (! defined('BASEPATH')) exit('No direct script access allowed');
 
-
 if (! function_exists('company_image'))
 {
     /**
@@ -100,36 +99,33 @@ if (! function_exists('forum_image'))
 if (! function_exists('safe_image'))
 {
     /**
-     * @param string $path
-     * @param string $image
+     * @param string $imageDirectory
+     * @param string $imageFilename
      * @param string $fallback
      * @param array $options
      * @return string
      */
-    function safe_image($path, $image = null, $fallback = null, $options = null)
+    function safe_image($imageDirectory, $imageFilename = null, $fallback = null, $CEImageOptions = null)
     {
-        $CI =& get_instance();
 
-        // Make sure that ce_image is loaded
-        if (! isset($CI->ce_image)) {
-            $CI->load->library('ce_image');
-            $CI->ce_image->set_default_settings(array(
-                'cache_dir'	 => '/cache/made/',
-                'remote_dir' => '/cache/remote/',
-            ));
-        }
+        $glideOptions = [];
 
-        $defaults = array(
-            'max' => 50,
-            'rounded_corners' => array( 'all','3' ),
-            'bg_color' => '#ffffff',
-            'crop' => TRUE,
-            'allow_scale_larger' => TRUE,
-        );
+        // Convert options in CE Image format into Glide format
+        if (! is_null($CEImageOptions) && is_array($CEImageOptions)) {
+            // Convert 'max' to 'w' and 'h'
+            if ($maxSize = $CEImageOptions['max']) {
+                $glideOptions['w'] = $maxSize;
+                $glideOptions['h'] = $maxSize;
+            }
 
-        //Merge provided and default options
-        if (! is_null($options) && is_array($options)) {
-            $options = array_merge($defaults, $options);
+            // To convert bg_color, remove the leading # and convert to upper case
+            if ($CEImageOptions['bg_color']) {
+                $glideOptions['bg'] = strtoupper(ltrim($CEImageOptions['bg_color'], '#'));
+            }
+
+            if ($CEImageOptions['width']) {
+                $glideOptions['w'] = $CEImageOptions['width'];
+            }
         }
 
         // Set default return value to an empty string
@@ -138,21 +134,21 @@ if (! function_exists('safe_image'))
         $full_path = $fallback;
 
         // If image is set check its dimensions first
-        if (! is_null($image) && $image != '') {
-            if ($CI->ce_image->open($path . $image, $options)) {
+        if (! is_null($imageFilename) && $imageFilename != '') {
+            if ($CI->ce_image->open($imageDirectory . $imageFilename, $CEImageOptions)) {
                 // get width and height of the image in pixels
                 $width  = $CI->ce_image->get_original_width();
                 $height = $CI->ce_image->get_original_height();
 
                 // If dimensions are less than max allowed then use that image
                 if ($width && $height && $width * $height < MAX_IMAGE_DIMENSIONS) {
-                    $full_path = $path . $image;
+                    $full_path = $imageDirectory . $imageFilename;
                 }
             }
         }
         // Fallback image can be null so we check again
         if (! is_null($full_path) && $full_path != '') {
-            if ($CI->ce_image->make($full_path, $options)) {
+            if ($CI->ce_image->make($full_path, $CEImageOptions)) {
                 $src = $CI->ce_image->get_relative_path();
             }
         }
