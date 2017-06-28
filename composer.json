@@ -3,8 +3,7 @@
         "vlucas/phpdotenv": "~1.1",
         "nesbot/carbon": "^1.21",
         "algolia/algoliasearch-client-php": "^1.16",
-        "intervention/image": "^2.3",
-        "intervention/imagecache": "^2.3"
+        "league/glide": "^1.2"
     },
     "require-dev": {
         "codeception/codeception": "*",
