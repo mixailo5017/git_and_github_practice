@@ -16,13 +16,20 @@ class Images extends CI_Controller
             'fit' => 'crop'
         );
 
-        // Setup Glide server
-        $server = League\Glide\ServerFactory::create([
-            'source' => 'images/' . $imageSubdirectory,
-            'cache' => 'cache/made',
-            'defaults' => $defaults
-        ]);
+        // Don't try accessing image files that don't exist        
+        if (is_file(IMAGE_PATH . '/' . $imageSubdirectory . '/' . $imageFilename)) {
 
-        $server->outputImage($imageFilename, $this->input->get() ?: []);
+            // Setup Glide server
+            $server = League\Glide\ServerFactory::create([
+                'source' => IMAGE_PATH . '/' . $imageSubdirectory . '/',
+                'cache' => 'cache/made',
+                'defaults' => $defaults
+            ]);
+
+            $server->outputImage($imageFilename, $this->input->get() ?: []);
+        }
+        else {
+            show_404();
+        }
     }
 }
