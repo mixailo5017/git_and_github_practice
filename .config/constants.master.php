@@ -46,6 +46,7 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 */
 
 define('IMAGE_PATH', '/images');
+define('IMAGE_RETRIEVAL_PATH', '/img');
 define('IMAGE_CACHE_PATH', '/cache/made/');
 
 define('PROJECT_IMAGE_PATH', IMAGE_PATH.'/content_projects/');
