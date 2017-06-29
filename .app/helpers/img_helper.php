@@ -1,5 +1,7 @@
 <?php  if (! defined('BASEPATH')) exit('No direct script access allowed');
 
+use League\Glide\Urls\UrlBuilderFactory;
+
 if (! function_exists('company_image'))
 {
     /**
@@ -113,9 +115,9 @@ if (! function_exists('safe_image'))
         // Convert options in CE Image format into Glide format
         if (! is_null($CEImageOptions) && is_array($CEImageOptions)) {
             // Convert 'max' to 'w' and 'h'
-            if ($maxSize = $CEImageOptions['max']) {
-                $glideOptions['w'] = $maxSize;
-                $glideOptions['h'] = $maxSize;
+            if (isset($CEImageOptions['max'])) {
+                $glideOptions['w'] = $CEImageOptions['max'];
+                $glideOptions['h'] = $CEImageOptions['max'];
             }
 
             // To convert bg_color, remove the leading # and convert to upper case
@@ -128,33 +130,26 @@ if (! function_exists('safe_image'))
             }
         }
 
-        // Set default return value to an empty string
-        $src = '';
-        // Let's default to a fallback image first
-        $full_path = $fallback;
-
-        // If image is set check its dimensions first
-        if (! is_null($imageFilename) && $imageFilename != '') {
-            if ($CI->ce_image->open($imageDirectory . $imageFilename, $CEImageOptions)) {
-                // get width and height of the image in pixels
-                $width  = $CI->ce_image->get_original_width();
-                $height = $CI->ce_image->get_original_height();
-
-                // If dimensions are less than max allowed then use that image
-                if ($width && $height && $width * $height < MAX_IMAGE_DIMENSIONS) {
-                    $full_path = $imageDirectory . $imageFilename;
-                }
-            }
-        }
-        // Fallback image can be null so we check again
-        if (! is_null($full_path) && $full_path != '') {
-            if ($CI->ce_image->make($full_path, $CEImageOptions)) {
-                $src = $CI->ce_image->get_relative_path();
-            }
+        // Check image is set and file exists 
+        if (! is_null($imageFilename) && $imageFilename != '' && is_file(ltrim($imageDirectory, '/') . $imageFilename)) {
+            $retrievalDirectoryPath = str_replace(IMAGE_PATH, IMAGE_RETRIEVAL_PATH, $imageDirectory);
+            $urlBuilder = UrlBuilderFactory::create($retrievalDirectoryPath, config_item('glide_image_signature'));
+            $url = $urlBuilder->getUrl($imageFilename, $glideOptions);
+            return $url;
         }
 
-        $CI->ce_image->close();
+        // Main image doesn't exist, so let's use the fallback, if provided
+        if (! is_null($fallback) && $fallback != '') {
+            $finalSlash = strrpos($fallback, '/');
+            $fallbackFilename = substr($fallback, $finalSlash + 1);
+            $fallbackDirectory = substr($fallback, 0, $finalSlash + 1);
+            $retrievalDirectoryPath = str_replace(IMAGE_PATH, IMAGE_RETRIEVAL_PATH, $fallbackDirectory);
+            $urlBuilder = UrlBuilderFactory::create($retrievalDirectoryPath, config_item('glide_image_signature'));
+            $url = $urlBuilder->getUrl($fallbackFilename, $glideOptions);
+            return $url;   
+        }
 
-        return $src;
+        // If there's no valid image provided nor a fallback, return empty string
+        return '';
     }
 }
