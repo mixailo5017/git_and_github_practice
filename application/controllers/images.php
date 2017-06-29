@@ -17,12 +17,13 @@ class Images extends CI_Controller
         );
 
         // Don't try accessing image files that don't exist        
-        if (is_file(IMAGE_PATH . '/' . $imageSubdirectory . '/' . $imageFilename)) {
-
+        $testPath = ltrim(IMAGE_PATH, '/') . '/' . $imageSubdirectory . '/' . $imageFilename;
+        
+        if (is_file($testPath)) {
             // Setup Glide server
             $server = League\Glide\ServerFactory::create([
-                'source' => IMAGE_PATH . '/' . $imageSubdirectory . '/',
-                'cache' => 'cache/made',
+                'source' => ltrim(IMAGE_PATH, '/') . '/' . $imageSubdirectory . '/',
+                'cache' => ltrim(IMAGE_CACHE_PATH, '/'),
                 'defaults' => $defaults
             ]);
 
