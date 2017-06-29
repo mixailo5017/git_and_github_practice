@@ -119,11 +119,11 @@ if (! function_exists('safe_image'))
             }
 
             // To convert bg_color, remove the leading # and convert to upper case
-            if ($CEImageOptions['bg_color']) {
+            if (isset($CEImageOptions['bg_color'])) {
                 $glideOptions['bg'] = strtoupper(ltrim($CEImageOptions['bg_color'], '#'));
             }
 
-            if ($CEImageOptions['width']) {
+            if (isset($CEImageOptions['width'])) {
                 $glideOptions['w'] = $CEImageOptions['width'];
             }
         }
