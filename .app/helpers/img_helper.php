@@ -107,27 +107,64 @@ if (! function_exists('safe_image'))
      * @param array $options
      * @return string
      */
-    function safe_image($imageDirectory, $imageFilename = null, $fallback = null, $CEImageOptions = null)
+    function safe_image($imageDirectory, $imageFilename = null, $fallback = null, $mixedFormatOptions = null)
     {
 
         $glideOptions = [];
 
-        // Convert options in CE Image format into Glide format
-        if (! is_null($CEImageOptions) && is_array($CEImageOptions)) {
+        $permissibleGlideOptions  = array_flip([
+            'or',
+            'crop',
+            'w',
+            'h',
+            'fit',
+            'dpr',
+            'bri',
+            'con',
+            'gam',
+            'sharp',
+            'blur',
+            'pixel',
+            'filt',
+            'mark',
+            'markw',
+            'markh',
+            'markx',
+            'marky',
+            'markpad',
+            'markpos',
+            'markalpha',
+            'bg',
+            'border',
+            'q',
+            'fm'
+        ]);
+
+        // Convert options in CE Image format into Glide format, 
+        // then merge in any remaining options that are in the Glide format already
+        if (! is_null($mixedFormatOptions) && is_array($mixedFormatOptions)) {
             // Convert 'max' to 'w' and 'h'
-            if (isset($CEImageOptions['max'])) {
-                $glideOptions['w'] = $CEImageOptions['max'];
-                $glideOptions['h'] = $CEImageOptions['max'];
+            if (isset($mixedFormatOptions['max'])) {
+                $glideOptions['w'] = $mixedFormatOptions['max'];
+                $glideOptions['h'] = $mixedFormatOptions['max'];
+                unset($mixedFormatOptions['max']);
             }
 
             // To convert bg_color, remove the leading # and convert to upper case
-            if (isset($CEImageOptions['bg_color'])) {
-                $glideOptions['bg'] = strtoupper(ltrim($CEImageOptions['bg_color'], '#'));
+            if (isset($mixedFormatOptions['bg_color'])) {
+                $glideOptions['bg'] = strtoupper(ltrim($mixedFormatOptions['bg_color'], '#'));
+                unset($mixedFormatOptions['bg_color']);
             }
 
-            if (isset($CEImageOptions['width'])) {
-                $glideOptions['w'] = $CEImageOptions['width'];
+            if (isset($mixedFormatOptions['width'])) {
+                $glideOptions['w'] = $mixedFormatOptions['width'];
+                unset($mixedFormatOptions['width']);
             }
+
+            // If there are other options provided, check they are a valid Glide option
+            $glideFormatOptions = array_intersect_key($mixedFormatOptions, $permissibleGlideOptions);
+            // Then merge them in
+            $glideOptions = array_merge($glideFormatOptions, $glideOptions);
         }
 
         // Check image is set and file exists 
