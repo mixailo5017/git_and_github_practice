@@ -62,22 +62,6 @@ class Algolia extends CI_Controller {
 	}
 
 	/**
-	 * @return array All expert data formatted for export to Algolia
-	 */
-	public function experts()
-	{
-		var_dump($this->algolia_model->get_all_experts());
-	}
-
-	/**
-	 * @return array All project data formatted for export to Algolia
-	 */
-	public function projects()
-	{
-		var_dump($this->algolia_model->get_all_projects());
-	}
-
-	/**
 	 * Updates either the experts or the projects index in Algolia
 	 * @param  [string] $indexToUpdate either 'projects' or 'experts'
 	 * @return [mixed]                returns 'projects' or 'experts' if update is successful, otherwise false
