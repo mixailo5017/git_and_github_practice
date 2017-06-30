@@ -25,8 +25,10 @@ class Algolia extends CI_Controller {
 	{
 		parent::__construct();
 
-		//Session check for the Login Status, if logged in redirect to Account Settings Page
-		if(!sess_var('admin_logged_in'))
+		// Session check for the Login Status, redirect to Account Settings Page
+		// unless logged in as an admin user 
+		// OR controller is being run from the command line
+		if(!sess_var('admin_logged_in') && !$this->input->is_cli_request())
 		{
 			redirect('','refresh');
 		}
@@ -66,7 +68,7 @@ class Algolia extends CI_Controller {
 	 * @param  [string] $indexToUpdate either 'projects' or 'experts'
 	 * @return [mixed]                returns 'projects' or 'experts' if update is successful, otherwise false
 	 */
-	private function updateAlgolia($indexToUpdate)
+	public function updateAlgolia($indexToUpdate)
 	{
 		switch ($indexToUpdate) {
 			case 'experts':
