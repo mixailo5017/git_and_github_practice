@@ -2,7 +2,7 @@
     <div class="view_organization">
         <div class="col1" style="text-align:center;">
             <div class="cell">
-                <?php $src = company_image($users['userphoto'], 150, array('width' => 150, 'crop' => FALSE)) ?>
+                <?php $src = company_image($users['userphoto'], 150, array('width' => 150, 'fit' => 'contain')) ?>
                 <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo" style="margin:0px">
             </div>
         </div>

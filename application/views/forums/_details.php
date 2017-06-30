@@ -3,7 +3,7 @@
         $banner = safe_image(FORUM_IMAGE_PATH, $details['banner'], FORUM_NO_IMAGE_PATH . 'placeholder_forum_banner.png', array(
             'max' => 600,
             'rounded_corners' => null,
-            'crop' => false,
+            'fit' => 'contain',
             'allow_scale_larger' => false));
 ?>
         <div class="banner_image" style="width:600px">
