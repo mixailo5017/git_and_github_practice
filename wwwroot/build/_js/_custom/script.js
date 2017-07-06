@@ -1585,6 +1585,10 @@ $(function() {
     */
 });
 
+if (typeof L !== 'undefined') {
+    require('./_map_search.js')();
+}
+
 global.checkLength = function(o, n, min, max) {
     if (o.val().length > max || o.val().length < min) {
         o.addClass("ui-state-error");
