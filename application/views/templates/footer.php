@@ -9,7 +9,7 @@
     </div> <!-- wrapper -->
 
 	<script>
-		 lang = new Array();
+		 var lang = new Array();
 		 <?php foreach ($lang['js'] as $key => $val) { ?>
 				lang['<?php echo $key ?>'] = "<?php echo addslashes($val);?>";
 		 <?php } ?>
