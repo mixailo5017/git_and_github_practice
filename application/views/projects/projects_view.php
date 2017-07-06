@@ -268,7 +268,7 @@
 							?>
 						 
 							<a href="/expertise/<?php echo $orgexp['uid'];?>">
-                                <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('crop'=>false));?>" >
+                                <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
 							</a>
 							
 					<?php }
