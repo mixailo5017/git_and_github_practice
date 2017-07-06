@@ -1526,7 +1526,7 @@ var searchbox = function() {
 	autocomplete('#aa-search-input', 
 		{
 			hint: false,
-			debug: true,
+			// debug: true,
 			keyboardShortcuts: ['/']
 		}, 
 		[
