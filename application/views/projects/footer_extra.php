@@ -1,1 +1,0 @@
-<script src="/js/map_search.js<?php echo asset_version('map_search.js') ?>"></script>
