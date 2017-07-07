@@ -279,6 +279,18 @@ var searchbox = function() {
 			}
 		])
 		.on('autocomplete:selected', function(event, suggestion, dataset) {
+			if (! suggestion.dummy) {
+				segmentAnalytics({
+	                "event": {
+	                    "name": "Dropdown Search Result Followed",
+	                    "properties": {
+	                        "Category"    : suggestion.uid ? 'Expert' : 'Project',
+	                        "Target Id"   : parseInt(suggestion.objectID),
+	                        "Target Name" : suggestion.uid ? suggestion.firstname + ' ' + suggestion.lastname : suggestion.projectname
+	                    }
+	                }
+	            });
+            }
 			window.location.href = suggestion.uri;
 		});
 };
