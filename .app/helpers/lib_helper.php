@@ -1263,6 +1263,7 @@ if (! function_exists('is_post_msize_exceeded')) {
         $CI->lang->load('upload', $language);
         $CI->lang->load('form_validation', $language);
         $CI->lang->load('js_form_validation', $language);
+        $CI->lang->load('js_searchbox', $language);
         $CI->lang->load('maps', $language);
     }
 

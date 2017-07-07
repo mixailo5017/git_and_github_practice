@@ -9,11 +9,15 @@
     </div> <!-- wrapper -->
 
 	<script>
-		 lang = new Array();
+		 var lang = new Array();
 		 <?php foreach ($lang['js'] as $key => $val) { ?>
 				lang['<?php echo $key ?>'] = "<?php echo addslashes($val);?>";
 		 <?php } ?>
 	</script>
+
+	<?php // Data to provide to JavaScript ?>
+	<?php $this->load->view('templates/_js_searchbox') ?>
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/js/jquery-1.7.1.min.js"><\/script>')</script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>

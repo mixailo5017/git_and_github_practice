@@ -1560,7 +1560,11 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 	padding-bottom: 7px;
 }
 
-
+.wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
 
 
 @import "maps.scss";
@@ -1575,18 +1579,22 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "_lang/portuguese.scss";
 
 @import "print.scss";
-@import "../../build/_sass/_nav.scss";
 
-/* nav overrides */
+@import "../../build/_sass/_mq.scss";
+@import "../../build/_sass/_nav.scss";
+@import "../../build/_sass/_nav_mobile.scss";
+@import "../../build/_sass/_searchbox.scss";
+@import "../../build/_sass/_responsive_visibility.scss";
+
+/* nav override */
 .m-nav li span {
   font-size: 14px;
 }
-
-.m-navbar {
-  position: relative;
-
-  .container {
-	margin: 0 auto;
-  }
+#aa-input-container {
+	font-size: 16px;
 }
+#aa-search-input {
+	margin: 0;
+}
+
 @include clearfix;

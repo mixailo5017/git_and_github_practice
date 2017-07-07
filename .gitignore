@@ -19,6 +19,7 @@ wwwroot/images/store/**
 
 # Development files
 *.sublime-*
+wwwroot/node_modules/**
 
 # Mac OSX system files
 .DS_Store

@@ -53,7 +53,7 @@
 				<div class="clearfix" id="div_general_photo_form">
 					<h4><?php echo lang('UserPhoto');?>:</h4>
 					<div style="width:150px;">
-						<?php $img_options = array('crop' => FALSE);
+						<?php $img_options = array('fit' => 'contain');
                         if ($users['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) {
                             $src = company_image($users['userphoto'], 150, $img_options);
                         } else {

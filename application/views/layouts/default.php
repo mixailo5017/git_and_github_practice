@@ -47,6 +47,9 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/js/lib/jquery-1.11.2.min.js"><\/script>')</script>
 
+<?php // Data to provide to JavaScript ?>
+<?php $this->load->view('templates/_js_searchbox') ?>
+
 <?php // Extra (per page) scripts ?>
 <?php if (! empty($scripts)) {
     $scripts = is_array($scripts) ? $scripts : array($scripts);

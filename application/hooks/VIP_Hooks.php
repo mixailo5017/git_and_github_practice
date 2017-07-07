@@ -13,8 +13,5 @@ class VIP_Hooks {
                 ! App::is_ip_allowed_when_down()) show_503();
         }
 
-		$CI->ce_image->set_default_settings(array(
-			'cache_dir'		=>'/cache/made/',
-			'remote_dir'	=>'/cache/remote/',));
 	}
 }

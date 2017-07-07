@@ -46,7 +46,9 @@ define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 */
 
 define('IMAGE_PATH', '/images');
-//define('IMAGE_PATH',IMAGE_PATH.'/made/images');
+define('IMAGE_RETRIEVAL_PATH', '/img');
+define('IMAGE_CACHE_PATH', '/cache/made/');
+
 define('PROJECT_IMAGE_PATH', IMAGE_PATH.'/content_projects/');
 define('PROJECT_NO_IMAGE_PATH', IMAGE_PATH.'/site/');
 define('PROJECT_IMAGE_PLACEHOLDER', 'placeholder_project.jpg');
