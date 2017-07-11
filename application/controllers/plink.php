@@ -48,11 +48,8 @@ class Plink extends CI_Controller
         } else {
             $src = company_image($member['userphoto'], 33, array('rounded_corners' => array('all', 0)));
         }
-        $ext = pathinfo($src, PATHINFO_EXTENSION);
-
-        $this->output
-            ->set_content_type($ext)
-            ->set_output(file_get_contents(rtrim(FCPATH, '/') . $src));
+        
+        redirect($src);
     }
 
     private function send_404()
