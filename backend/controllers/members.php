@@ -167,7 +167,7 @@ class Members extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] = "Profile";
 		$this->headerdata ["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "View Members | ViP Admin";
+		$this->headerdata["title"] = "View Members | GViP Admin Interface";
 		$this->headerdata["js"]		= array(
 			"/themes/js/plugins/jquery.dataTables.min.js",
 			"/themes/js/plugins/chosen.jquery.min.js",
@@ -280,7 +280,7 @@ class Members extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] = "Profile";
 		$this->headerdata ["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "View Members | ViP Admin";
+		$this->headerdata["title"] = "View Members | GViP Admin Interface";
 		$this->headerdata["js"]		= array("/themes/js/plugins/jquery.dataTables.min.js");
 		$this->headerdata["pagejs"]	= array("/themes/js/custom/tables.js");
 
@@ -293,7 +293,7 @@ class Members extends CI_Controller {
 			'member_group'	=>	$membergroupdata,
 		);
 		// Render HTML Page from view direcotry
-		$this->headerdata["title"] = "Member Groups | VIP Admin";
+		$this->headerdata["title"] = "Member Groups | GViP Admin Interface";
 		$this->load->view("templates/header",$this->headerdata);
 		$this->load->view("templates/leftmenu");
 		$this->load->view('members/manage_group',$data);
@@ -344,20 +344,20 @@ class Members extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] = "Profile";
 		$this->headerdata ["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "View Members | ViP Admin";
+		$this->headerdata["title"] = "View Members | GViP Admin Interface";
 		$this->headerdata["js"]		= array("/themes/js/plugins/jquery.dataTables.min.js");
 		$this->headerdata["pagejs"]	= array("/themes/js/custom/tables.js");
 
 		if($params != "")
 		{
-			$this->headerdata["title"] = "Edit Member Group | VIP Admin";
+			$this->headerdata["title"] = "Edit Member Group | GViP Admin Interface";
 			$gd = $this->members_model->get_member_group_detail($params);
 			$data_group['group_data'] = $gd['0'];
 			$data_group['headertitle'] = 'Edit Member Group';
 		}
 		else
 		{
-			$this->headerdata["title"] = "Add Member Group | VIP Admin";
+			$this->headerdata["title"] = "Add Member Group | GViP Admin Interface";
 			$data_group['headertitle'] = 'Add Member Group';
 		}
 
@@ -374,7 +374,7 @@ class Members extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] 		= "Profile";
 		$this->headerdata ["bodyclass"] 	= "withvernav";
-		$this->headerdata["title"] 			= "View Members | ViP Admin";
+		$this->headerdata["title"] 			= "View Members | GViP Admin Interface";
 		$this->headerdata["js"]				= array(
 												"/themes/js/plugins/jquery.validate.min.js",
 												"/themes/js/plugins/jquery.tagsinput.min.js",
@@ -393,7 +393,7 @@ class Members extends CI_Controller {
 
 		if($params != "")
 		{
-			$this->headerdata["title"] = "Edit Member Profile | VIP Admin";
+			$this->headerdata["title"] = "Edit Member Profile | GViP Admin Interface";
 			$data = array(
 				"headertitle" => "Edit Member Profile"
 			);
@@ -401,7 +401,7 @@ class Members extends CI_Controller {
 		}
 		else
 		{
-			$this->headerdata["title"] = "Register New Member| VIP Admin";
+			$this->headerdata["title"] = "Register New Member| GViP Admin Interface";
 			$data = array(
 				"headertitle" => "Register New Member"
 			);
@@ -455,7 +455,7 @@ class Members extends CI_Controller {
 	{
 		$this->headerdata["bodyid"] 		= "Profile";
 		$this->headerdata["bodyclass"] 		= "withvernav";
-		$this->headerdata["title"] 			= "View Members | ViP Admin";
+		$this->headerdata["title"] 			= "View Members | GViP Admin Interface";
 		$this->headerdata["js"]				= array(	"/themes/js/plugins/jquery.validate.min.js",
 														"/themes/js/plugins/jquery.tagsinput.min.js",
 														"/themes/js/plugins/charCount.js",
@@ -473,7 +473,7 @@ class Members extends CI_Controller {
 
 		if($params != "")
 		{
-			$this->headerdata["title"] = "Edit Member Profile | VIP Admin";
+			$this->headerdata["title"] = "Edit Member Profile | GViP Admin Interface";
 			$data = array(
 				"headertitle" => "Edit Member Profile"
 			);
@@ -481,7 +481,7 @@ class Members extends CI_Controller {
 		}
 		else
 		{
-			$this->headerdata["title"] = "Register New Organization| VIP Admin";
+			$this->headerdata["title"] = "Register New Organization| GViP Admin Interface";
 			$data = array(
 				"headertitle" => "Register New Organization"
 			);

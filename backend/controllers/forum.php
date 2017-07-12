@@ -61,7 +61,7 @@ class Forum extends CI_Controller {
 	{
 		$this->headerdata["bodyid"] 		= "Forum";
 		$this->headerdata["bodyclass"] 		= "withvernav";
-		$this->headerdata["title"] 			= "Edit Forum | ViP Admin";
+		$this->headerdata["title"] 			= "Edit Forum | GViP Admin Interface";
 		$this->headerdata["js"]				= array(
 												"/themes/js/plugins/jquery.validate.min.js",
 												"/themes/js/plugins/jquery.tagsinput.min.js",
@@ -83,7 +83,7 @@ class Forum extends CI_Controller {
 	
 		if($params != "")
 		{
-			$this->headerdata["title"] = "Edit Fourm | VIP Admin";
+			$this->headerdata["title"] = "Edit Fourm | GViP Admin Interface";
 			$data = array(
 				"headertitle" => "Edit Forum"
 			);
@@ -91,7 +91,7 @@ class Forum extends CI_Controller {
 		}
 		else
 		{
-			$this->headerdata["title"] = "Edit Forum| VIP Admin";
+			$this->headerdata["title"] = "Edit Forum| GViP Admin Interface";
 			$data = array(
 				"headertitle" => "Edit Forum"
 			);

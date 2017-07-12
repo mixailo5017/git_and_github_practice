@@ -42,7 +42,7 @@ class Forums extends CI_Controller {
         $headers = array(
             'bodyid' => 'Forums',
             'bodyclass' => 'withvernav',
-            'title' => 'View Forums | ViP Admin',
+            'title' => 'View Forums | GViP Admin Interface',
             'js' => array(
                 '/themes/js/plugins/jquery.dataTables.min.js',
                 '/themes/js/plugins/chosen.jquery.min.js',
@@ -123,7 +123,7 @@ class Forums extends CI_Controller {
         $headers = array(
             'bodyid' => 'Forums',
             'bodyclass' => 'withvernav',
-            'title' => 'Add New Forum | ViP Admin',
+            'title' => 'Add New Forum | GViP Admin Interface',
             'js' => array(
                 '/themes/js/plugins/jquery.dataTables.min.js',
                 '/themes/js/plugins/chosen.jquery.min.js',
@@ -180,7 +180,7 @@ class Forums extends CI_Controller {
             $headers = array(
 //            'bodyid' => 'Forums',
             'bodyclass' => 'withvernav',
-            'title' => 'Edit Forum | ViP Admin',
+            'title' => 'Edit Forum | GViP Admin Interface',
             'js' => array(
                 '/themes/js/plugins/jquery.validate.min.js',
                 '/themes/js/plugins/jquery.tagsinput.min.js',

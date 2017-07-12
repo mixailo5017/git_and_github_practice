@@ -239,7 +239,7 @@ class Projects extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] = "Profile";
 		$this->headerdata ["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "View Projects | ViP Admin";
+		$this->headerdata["title"] = "View Projects | GViP Admin Interface";
 		$this->headerdata["js"]		= array("/themes/js/plugins/jquery.dataTables.min.js");
 		$this->headerdata["pagejs"]	= array("/themes/js/custom/tables.js");
 

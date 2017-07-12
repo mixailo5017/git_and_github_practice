@@ -35,7 +35,7 @@ class GoogleApi extends CI_Controller {
 		$this->load->model("googleapi_model");
 		
 		$this->headerdata["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "Google Analytics | ViP Admin";
+		$this->headerdata["title"] = "Google Analytics | GViP Admin Interface";
 		//$this->headerdata["js"]		= array("/themes/js/plugins/jquery.flot.min.js","/themes/js/plugins/jquery.flot.resize.min.js","/themes/js/plugins/jquery.slimscroll.js");
 		$this->headerdata["js"]		= array("/themes/js/plugins/jquery.slimscroll.js");
 		$this->headerdata["conditionaljs"]	= array("[if lte IE 8]"=>"/themes/js/plugins/excanvas.min.js");

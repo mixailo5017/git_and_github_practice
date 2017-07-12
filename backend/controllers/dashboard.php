@@ -52,7 +52,7 @@ class Dashboard extends CI_Controller {
 
 		//Set Header Data for this page like title,bodyid etc
 		$this->headerdata["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "Dashboard | ViP Admin";
+		$this->headerdata["title"] = "Dashboard | GViP Admin Interface";
 		$this->headerdata["js"]		= array("/themes/js/plugins/jquery.flot.min.js","/themes/js/plugins/jquery.flot.resize.min.js","/themes/js/plugins/jquery.slimscroll.js");
 		$this->headerdata["pagejs"]	= array("/themes/js/custom/dashboard.js");
 		$this->headerdata["conditionaljs"]	= array("[if lte IE 8]"=>"/themes/js/plugins/excanvas.min.js");
