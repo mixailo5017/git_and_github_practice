@@ -32,8 +32,8 @@
     	<div class="loginboxinner">
         	
             <div class="logo">
-            	<h1><span>GViP</span></h1>
-                <p>GViP Admin Panel</p>
+            	<h1><span>GViP Admin Interface</span></h1>
+                <p>Sign in using your <strong>admin</strong> user account.</p>
             </div><!--logo-->
             
             <br clear="all" /><?php echo br(); ?>
