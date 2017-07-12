@@ -35,7 +35,7 @@ class Store extends CI_Controller
         $headers = array(
             'bodyid' => 'store',
             'bodyclass' => 'withvernav',
-            'title' => 'View Store Items | ViP Admin',
+            'title' => 'View Store Items | GViP Admin Interface',
             'js' => array(
                 '/themes/js/plugins/jquery.dataTables.min.js',
                 '/themes/js/plugins/chosen.jquery.min.js',
@@ -107,7 +107,7 @@ class Store extends CI_Controller
         $headers = array(
             'bodyid' => 'store',
             'bodyclass' => 'withvernav',
-            'title' => 'Add New Store Item | ViP Admin',
+            'title' => 'Add New Store Item | GViP Admin Interface',
             'js' => array(
                 '/themes/js/plugins/jquery.dataTables.min.js',
                 '/themes/js/plugins/chosen.jquery.min.js',
@@ -153,7 +153,7 @@ class Store extends CI_Controller
         $headers = array(
             'bodyid' => 'store',
             'bodyclass' => 'withvernav',
-            'title' => 'Edit Store Item | ViP Admin',
+            'title' => 'Edit Store Item | GViP Admin Interface',
             'js' => array(
                 '/themes/js/plugins/jquery.validate.min.js',
                 '/themes/js/plugins/jquery.tagsinput.min.js',

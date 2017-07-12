@@ -39,7 +39,7 @@ class Concierge extends CI_Controller {
 
 		//Set Header Data for this page like title,bodyid etc
 		$this->headerdata["bodyclass"] = "withvernav";
-		$this->headerdata["title"] = "Concierge | ViP Admin";
+		$this->headerdata["title"] = "Concierge | GViP Admin Interface";
 	}
 
 

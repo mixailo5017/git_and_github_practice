@@ -56,7 +56,7 @@ class Security extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] 		= "Profile";
 		$this->headerdata ["bodyclass"] 	= "withvernav";
-		$this->headerdata["title"] 			= "User Banning | ViP Admin";
+		$this->headerdata["title"] 			= "User Banning | GViP Admin Interface";
 		$this->headerdata["js"]				= array(
 												"/themes/js/plugins/jquery.validate.min.js",
 												"/themes/js/plugins/jquery.tagsinput.min.js",
@@ -71,7 +71,7 @@ class Security extends CI_Controller {
 												"[if IE 8]"=>"css/style.ie8.css"
 										    	);
 		$this->headerdata["conditionaljs"]	= array("[if lt IE 9]"=>"http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js");
-		$this->headerdata["title"] = "User Banning | VIP Admin";
+		$this->headerdata["title"] = "User Banning | GViP Admin Interface";
 
 		$data = array();
 		$data["headertitle"] = "User Banning";
@@ -94,7 +94,7 @@ class Security extends CI_Controller {
 	{
 		$this->headerdata ["bodyid"] 		= "Profile";
 		$this->headerdata ["bodyclass"] 	= "withvernav";
-		$this->headerdata["title"] 			= "Throttling Configuration | ViP Admin";
+		$this->headerdata["title"] 			= "Throttling Configuration | GViP Admin Interface";
 		$this->headerdata["js"]				= array(
 												"/themes/js/plugins/jquery.validate.min.js",
 												"/themes/js/plugins/jquery.tagsinput.min.js",
@@ -109,7 +109,7 @@ class Security extends CI_Controller {
 												"[if IE 8]"=>"css/style.ie8.css"
 										    	);
 		$this->headerdata["conditionaljs"]	= array("[if lt IE 9]"=>"http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js");
-		$this->headerdata["title"] = "Throttling Configuration | VIP Admin";
+		$this->headerdata["title"] = "Throttling Configuration | GViP Admin Interface";
 
 		$data = array();
 		$data["headertitle"] = "Throttling Configuration";
