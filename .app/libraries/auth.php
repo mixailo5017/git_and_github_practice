@@ -70,7 +70,7 @@ class Auth {
     {
         $user = $this->retrieve_by_credentials($credentials);
 
-        if (! $this->has_valid_credentials($user, $credentials)) return false;
+        if (! $this->has_valid_credentials($user, $credentials, [MEMBER_TYPE_MEMBER, MEMBER_TYPE_EXPERT_ADVERT])) return false;
 
         if ($login) $this->login($user, $remember);
 
@@ -153,11 +153,24 @@ class Auth {
         return $this->members->find($id, $this->user_fields);
     }
 
+   
+    /**
+     * Checks whether a user's password from the 
+     * database matches the one passed into the method
+     * @param  [type]  $user             User details previously retrieved from DB
+     * @param  [type]  $credentials      Credentials supplied by user
+     * @param  array   $validMemberTypes An array of integers representing member types. 
+     *                                   If not provided, default is to allow all types
+     * @return boolean                   
+     */
     // TODO: Redo this legacy password hashing scheme
     // Get rid of storing salt in a separate column
-    public function has_valid_credentials($user, $credentials)
+    public function has_valid_credentials($user, $credentials, array $validMemberTypes = null)
     {
         if (empty($user)) return false;
+
+        // If only certain member types are valid, make sure the user is of the right member type
+        if (! empty($validMemberTypes) && ! in_array($user['membertype'], $validMemberTypes)) return false;
 
         return $user['password'] == hash('sha512', $user['salt'] . $credentials['password']);
     }
