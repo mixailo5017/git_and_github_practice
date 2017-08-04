@@ -84,10 +84,13 @@ class Algolia_model extends CI_Model {
 		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
 		$index = $client->initIndex($config['index_members']);
 
-		$index->clearIndex();
+		$response = $index->clearIndex();
+		$this->log_response('clear the index');
 
 		$members = $this->get_all_experts();
-		$index->saveObjects($members);
+		$response = $index->saveObjects($members);
+		$this->log_response('save the member objects');
+
 		return 'experts';
 	}
 
@@ -156,11 +159,32 @@ class Algolia_model extends CI_Model {
 		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
 		$index = $client->initIndex($config['index_projects']);
 
-		$index->clearIndex();
+		$response = $index->clearIndex();
+		$this->log_response('clear the index');
 
 		$projects = $this->get_all_projects();
-		$index->saveObjects($projects);
+		$response = $index->saveObjects($projects);
+		$this->log_response('save the project objects');
+
 		return 'projects';
+	}
+
+	/**
+	 * Log the response received from the Algolia API, for debugging purposes.
+	 * Only runs if called from the command line (not the admin interface)
+	 * @param  [type] $response           Response output by Algolia API
+	 * @param  string $commandDescription Text to be included in log file describing the command that the response refers to
+	 * @return void                     
+	 */
+	private function log_response($response, $commandDescription = '[unspecified command]')
+	{
+		if (!$this->input->is_cli_request()) {
+			return;
+		}
+		
+		echo "Just issued the command to ".$commandDescription.". Got this response:\n";
+		var_dump($response);
+
 	}
 
 }
