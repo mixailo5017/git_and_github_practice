@@ -85,11 +85,11 @@ class Algolia_model extends CI_Model {
 		$index = $client->initIndex($config['index_members']);
 
 		$response = $index->clearIndex();
-		$this->log_response('clear the index');
+		$this->log_response($response, 'clear the index');
 
 		$members = $this->get_all_experts();
 		$response = $index->saveObjects($members);
-		$this->log_response('save the member objects');
+		$this->log_response($response, 'save the member objects');
 
 		return 'experts';
 	}
@@ -160,11 +160,11 @@ class Algolia_model extends CI_Model {
 		$index = $client->initIndex($config['index_projects']);
 
 		$response = $index->clearIndex();
-		$this->log_response('clear the index');
+		$this->log_response($response, 'clear the index');
 
 		$projects = $this->get_all_projects();
 		$response = $index->saveObjects($projects);
-		$this->log_response('save the project objects');
+		$this->log_response($response, 'save the project objects');
 
 		return 'projects';
 	}
