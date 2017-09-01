@@ -6,7 +6,9 @@ $(function() {
 
 	require('./_searchbox.js')();
 
-	require('magnific-popup')();
+	var magnific = require('magnific-popup');
+
+	require('./_video_lightbox.js')();
 });
 
 global.changeLanguage = require('./_changeLanguage.js');
