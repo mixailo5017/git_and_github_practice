@@ -4,6 +4,7 @@ $(function() {
 	if ($prettyPhoto.length > 0) {
 		$("a[rel^='prettyPhoto']").prettyPhoto({social_tools:""});
 	}
+global.$ = global.jQuery = require("jquery");
 
 	require('./_nav_mobile.js')();
 
