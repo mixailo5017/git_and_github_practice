@@ -135,6 +135,26 @@ class Pages extends CI_Controller {
 
     private function privatemeetings()
     {
+        // If the user is authenticated, append user's details to the meeting URL query string
+        // Of course, only do this if the info is not there already (no infinite loops please)
+        if (Auth::check() && !$this->input->get('email')) {
+            $authenticatedUserID = Auth::id();
+            $this->load->model('expertise_model');
+            $authenticatedUser = $this->expertise_model->get_user($authenticatedUserID);
+            
+            $name = trim($authenticatedUser['firstname'].' '.$authenticatedUser['lastname']);
+            $parameters = [
+                'name'    => $name,
+                'email'   => $authenticatedUser['email'],
+                'company' => $authenticatedUser['organization']
+            ];
+            if ($this->input->get()) {
+                $parameters = array_merge($this->input->get(), $parameters);
+            }
+            $queryString = http_build_query($parameters);
+            redirect(current_url().'?'.$queryString);
+        }
+
         $forumID = $this->uri->segment(2);
 
         $page = array(
