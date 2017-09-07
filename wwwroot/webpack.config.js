@@ -37,6 +37,7 @@ const config = {
   plugins: [
     new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new HtmlWebpackPlugin({
+      filename: 'bundles.html',
       template: './build/_js/includes.ejs',
       inject: false
     }),
