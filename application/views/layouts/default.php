@@ -57,7 +57,7 @@
         <script src="/js/<?php echo $script ?>"></script>
     <?php }
 } ?>
-<script src="/js/main.js<?php echo asset_version('main.js') ?>"></script>
+<?php require(FCPATH.'js/bundles.html'); ?>
 
 <?php // Optimizely ?>
 <script src="//cdn.optimizely.com/js/4480070248.js"></script>
