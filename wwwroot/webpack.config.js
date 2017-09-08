@@ -9,8 +9,8 @@ const devTool = inProduction ? 'source-map' : 'cheap-eval-source-map';
 
 // CleanWebpackPlugin: the path(s) that should be cleaned
 let pathsToClean = [
-  'js/main.*.js',
-  'js/vendor.*.js'
+  'js/main.*.js*',
+  'js/vendor.*.js*'
 ];
 
 // the clean options to use
