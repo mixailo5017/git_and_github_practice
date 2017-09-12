@@ -125,7 +125,8 @@
                 $src = expert_image($contactperson['userphoto'], 138, array(
                     'width' => 138,
                     'rounded_corners' => array( 'all','2' ),
-                    'crop' => TRUE
+                    'crop' => TRUE,
+                    'fit'  => ($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? 'contain' : null
                 ));
                 $fullname = (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname']);
                 ?>
