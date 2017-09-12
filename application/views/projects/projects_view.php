@@ -284,8 +284,8 @@
 	<div id="dialog-message"></div>
 
     <?php $this->load->view('templates/_send_email', array(
-        'to' => $userdata['uid'],
-        'to_name' => $userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT ? $userdata['organization'] : $userdata['firstname'] . ' ' . $userdata['lastname'],
+        'to' => $contactperson['uid'],
+        'to_name' => $contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname'],
         'from' => sess_var('uid')
     )) ?>
 
