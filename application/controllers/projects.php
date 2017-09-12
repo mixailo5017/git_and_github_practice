@@ -378,6 +378,15 @@ class Projects extends CI_Controller
         $viewdata['slug'] = $slug;
         $viewdata['project']['pid'] = $pid; // Needed for follow/unfollow functions
         $viewdata['userdata'] = $model->get_user_general($userid);
+        $viewdata['orgmemberid'] = is_organization_member($viewdata['userdata']['uid']);
+        // Determine who to display as the contact person for the project. 
+        // If the project owner belongs to an organization, display the organization 
+        // instead of the individual.
+        if (isset($viewdata['orgmemberid']) && $viewdata['orgmemberid']!= '') {
+            $viewdata['contactperson'] = $model->get_user_general($viewdata['orgmemberid']);
+        } else {
+            $viewdata['contactperson'] = $viewdata['userdata'];
+        }
 
         // Check if user (the project owner) has been deleted
         if (empty($viewdata['userdata']['status']) || $viewdata['userdata']['status'] != STATUS_ACTIVE) {
