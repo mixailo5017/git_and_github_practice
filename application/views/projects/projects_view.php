@@ -118,32 +118,32 @@
 
 			<?php if (!in_array($userdata['uid'], INTERNAL_USERS)) { ?>
 			<section class="executive white_box" id="project_executive">
-                <h2><?php echo (($userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : lang('ProjectExecutive')) ?></h2>
+                <h2><?php echo (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : lang('ProjectExecutive')) ?></h2>
 
 				<div class="image">
                 <?php
-                $src = expert_image($userdata['userphoto'], 138, array(
+                $src = expert_image($contactperson['userphoto'], 138, array(
                     'width' => 138,
                     'rounded_corners' => array( 'all','2' ),
                     'crop' => TRUE
                 ));
-                $fullname = (($userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $userdata['organization'] : $userdata['firstname'] . ' ' . $userdata['lastname']);
+                $fullname = (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname']);
                 ?>
-                <a href="/expertise/<?php $userdata["uid"] ?>"></a>
+                <a href="/expertise/<?php $contactperson["uid"] ?>"></a>
                     <img src="<?php echo $src ?>" alt="<?php echo $fullname ?>'s photo" style="margin:0px;">
 				</div>
 
 				<div class="executive-details">
-					<h2 class="name"><a href="/expertise/<?php echo $userdata["uid"]; ?>"><?php echo $fullname; ?></a></h2>
-					<?php $orgmemberid =  is_organization_member($userdata['uid']);
-					if ($userdata["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
-						<p><strong><?php echo $userdata['title'];?></strong></p>
-						<p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $userdata['organization'];?></a></p>
-					<?php } else if ($userdata["membertype"] != MEMBER_TYPE_EXPERT_ADVERT) {?>
-						<p><strong><?php echo $userdata['title'] ?></strong></p>
-						<p><?php echo $userdata['organization'] ?></p>
+					<h2 class="name"><a href="/expertise/<?php echo $contactperson["uid"]; ?>"><?php echo $fullname; ?></a></h2>
+					<?php 
+					if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
+						<p><strong><?php echo $contactperson['title'];?></strong></p>
+						<p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $contactperson['organization'];?></a></p>
+					<?php } else if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT) {?>
+						<p><strong><?php echo $contactperson['title'] ?></strong></p>
+						<p><?php echo $contactperson['organization'] ?></p>
 					<?php } else { ?>
-						<p><?php echo $userdata['discipline'] ?></p>
+						<p><?php echo $contactperson['discipline'] ?></p>
 					<?php } ?>
 				</div>
 			</section>
