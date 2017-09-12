@@ -129,8 +129,9 @@
                 ));
                 $fullname = (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname']);
                 ?>
-                <a href="/expertise/<?php $contactperson["uid"] ?>"></a>
+                <a href="/expertise/<?php echo $contactperson["uid"] ?>">
                     <img src="<?php echo $src ?>" alt="<?php echo $fullname ?>'s photo" style="margin:0px;">
+                </a>
 				</div>
 
 				<div class="executive-details">
