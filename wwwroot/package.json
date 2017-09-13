@@ -57,6 +57,7 @@
     "algoliasearch": "^3.22.1",
     "autocomplete.js": "^0.28.0",
     "jquery": "^3.2.1",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "select2": "^4.0.3"
   }
 }
