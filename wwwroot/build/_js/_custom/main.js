@@ -10,6 +10,7 @@ $(function() {
 
 	require('./_video_lightbox.js')();
 
+	// Specifically for the signup page
 	if ($('#signup-form')) {
 		require('./_signup_edit.js')();
 	}
