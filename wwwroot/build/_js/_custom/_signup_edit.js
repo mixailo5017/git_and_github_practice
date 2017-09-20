@@ -26,7 +26,7 @@ module.exports = function() {
           },
           empty: function (element) {
               var companyDomain = $email.val().substr($email.val().indexOf("@") + 1);
-              if (Mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || Mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
+              if (mailcheck.defaultDomains.indexOf(companyDomain) >= 0 || mailcheck.defaultSecondLevelDomains.indexOf(companyDomain.substr(companyDomain.indexOf("."))) >= 0) {
                   console.log("found a personal email address, spelled correctly");
                   $companyHint.hide().html(companyHint).fadeIn(500);
               }
