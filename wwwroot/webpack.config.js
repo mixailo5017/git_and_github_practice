@@ -62,6 +62,12 @@ const config = {
         name: 'runtime'
     }),
     new NameAllModulesPlugin(),
+    // Shim to allow use of legacy plugins (e.g., jquery.validation) requiring jQuery in global space
+    new webpack.ProvidePlugin({
+        $               : "jquery",
+        jQuery          : "jquery",
+        "window.jQuery" : "jquery"
+    })
   ],
   devtool: devTool
 };
