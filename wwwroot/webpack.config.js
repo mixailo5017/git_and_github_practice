@@ -30,7 +30,10 @@ const config = {
     vendor: [
       'jquery',
       'algoliasearch',
-      'autocomplete.js'
+      'autocomplete.js',
+      'mailcheck',
+      'magnific-popup',
+      'select2'
     ]
   },
   output: {
