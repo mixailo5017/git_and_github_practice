@@ -305,8 +305,7 @@ class Signup extends CI_Controller
             $page['styles'] = [];
             $page['scripts'] = array(
                 'lib/select2.full.min.js',
-                'lib/jquery.validation.min.js',
-                'signup_edit.js'
+                'lib/jquery.validation.min.js'
             );
         }
 
