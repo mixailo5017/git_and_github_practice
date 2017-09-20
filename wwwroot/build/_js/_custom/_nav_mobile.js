@@ -1,4 +1,4 @@
-/* Depends on jQuery as $ */
+var $ = require("jquery");
 
 var nav_mobile = function() {
 	if($('.m-navbar .nav-main')) {
