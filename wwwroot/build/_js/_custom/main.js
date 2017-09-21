@@ -10,9 +10,16 @@ $(function() {
 
 	require('./_video_lightbox.js')();
 
-	// Specifically for the signup page
-	if ($('#signup-form')) {
+	// Specifically for the signup edit page
+	var onSignupEdit = $('#signup-form').length > 0;
+	if (onSignupEdit) {
 		require('./_signup_edit.js')();
+	}
+
+	// Specifically for the signup pickphoto page
+	var onSignupPickphoto = $('#zone.signup-info').length > 0;
+	if (onSignupPickphoto) {
+		require('./_signup_pickphoto.js')();
 	}
 
 });
