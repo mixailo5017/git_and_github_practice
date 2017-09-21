@@ -1,6 +1,7 @@
 var $ = require('jquery');
 var mailcheck = require('mailcheck');
 var select2 = require('select2');
+require('../_lib/jquery.validation');
 
 module.exports = function() {
   var $email = $('#email');

@@ -69,7 +69,16 @@ const config = {
         "window.jQuery" : "jquery"
     })
   ],
-  devtool: devTool
+  devtool: devTool,
+  module: {
+    loaders: [
+      {
+        // For jquery.validation, change references to 'this' to point to 'window'
+        test: /..\/_lib\/jquery.validation.js$/,
+        loader: "imports-loader?this=>window"
+      }
+    ]
+  }
 };
 
 // Minify JS in production

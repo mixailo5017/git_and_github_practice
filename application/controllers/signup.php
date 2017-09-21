@@ -303,9 +303,7 @@ class Signup extends CI_Controller
 
         if ($step == 'edit') {
             $page['styles'] = [];
-            $page['scripts'] = array(
-                'lib/jquery.validation.min.js'
-            );
+            $page['scripts'] = [];
         }
 
         $this->load->view('layouts/default', $page);
