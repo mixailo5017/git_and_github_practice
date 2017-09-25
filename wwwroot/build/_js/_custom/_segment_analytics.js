@@ -9,4 +9,4 @@ function segmentAnalytics(data) {
     }
 }
 
-modules.export = segmentAnalytics;
+module.exports = segmentAnalytics;
