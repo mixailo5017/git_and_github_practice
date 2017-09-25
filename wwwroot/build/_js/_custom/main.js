@@ -11,7 +11,7 @@ $(function() {
 	require('./_video_lightbox.js')();
 
 	// Specifically for the signup edit page
-	var onSignupEdit = $('#signup-form').length > 0;
+	var onSignupEdit = $("form[name='signup_edit']").length > 0;
 	if (onSignupEdit) {
 		require('./_signup_edit.js')();
 	}
