@@ -120,9 +120,13 @@ module.exports = function() {
             $('#zone').show();
 
             // We can deal with iframe uploads using this URL:
-            var options = {iframe: false}; //{url: '/signup/photo/upload', callbackParam: 'fd-callback'}}
+            var options = {
+                iframe: false,
+                logging: false
+            }; //{url: '/signup/photo/upload', callbackParam: 'fd-callback'}}
+            
             // 'zone' is an ID but you can also give a DOM node:
-            zone = new FileDrop('zone', options);
+            zone = new filedrop.FileDrop('zone', options);
             zone.event('send', function (files) {
 
                 files.each(function (file) {
