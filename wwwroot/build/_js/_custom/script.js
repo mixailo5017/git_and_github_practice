@@ -1919,16 +1919,7 @@ global.ajax_form_init = function() {
 };
 
 
-global.segmentAnalytics = function(data) {
-    if (data.user_properties) {
-        //var userId = parseInt(data.id, 10); // Make sure id that came is of type int
-        window.analytics.identify(GVIP.App.Analytics.user_id, data.user_properties, GVIP.App.Analytics.context);
-    }
-
-    if (data.event) {
-        window.analytics.track(data.event.name, data.event.properties, GVIP.App.Analytics.context);
-    }
-}
+global.segmentAnalytics = require('./_segment_analytics.js');
 
 global.dismissPCI = function() {
     var url = hosturl + "/profile/dismiss_pci",
