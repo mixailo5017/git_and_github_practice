@@ -294,8 +294,7 @@ class Signup extends CI_Controller
                 'lib/tipsy.css'
             );
             $page['scripts'] = array(
-                'lib/cropper.min.js',
-                'lib/jquery.tipsy.js'
+                'lib/cropper.min.js'
             );
         }
 

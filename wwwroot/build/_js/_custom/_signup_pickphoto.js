@@ -1,5 +1,6 @@
 var $ = require('jquery');
-// require tipsy;
+var filedrop = require('../_lib/filedrop');
+var tipsy = require('../_lib/jquery.tipsy');
 
 module.exports = function() {
 
