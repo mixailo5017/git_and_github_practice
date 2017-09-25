@@ -1,11 +1,12 @@
 var $ = require('jquery');
 var filedrop = require('../_lib/filedrop');
+// Don't log FileDrop events to console
+filedrop.logging = false;
+
 var tipsy = require('../_lib/jquery.tipsy');
+var cropper = require('cropper'); // https://github.com/fengyuanchen/cropper
 
 module.exports = function() {
-
-    // Don't log FileDrop events to console
-    window.fd = {logging: false};
 
     $(function () {
         'use strict'; 
@@ -78,15 +79,14 @@ module.exports = function() {
             }
         }
 
-        function doBasicUpload() {  //alert('doBasicUpload')
+        function doBasicUpload() {  
             $('#basicUpload').show();
             triggerBasicCropper();
         }
 
         function removeImage() {
             $.post(removeUrl, {})
-                .success(function () {
-                    //console.log( resp );
+                .done(function () {
                     window.location.reload();
                 })
                 .fail(function () {
@@ -102,28 +102,26 @@ module.exports = function() {
                     'fd-file': name,
                     'raw-file': data
                 };
-                $.post(uploadUrl, postData)
-                    .success(function (resp) {
+                $.post(uploadUrl, $.param(postData, true))
+                    .done(function (resp) {
                         saveCroppedImageResponse(resp);
                         savingImage = false;
 
                     })
                     .fail(function () {
                         $cropZone.removeClass('disabled');
-                        //console.log( resp );
                         displayError('There was an error saving the image.');
                         savingImage = false;
                     });
             }
         }
 
-        function loadFileDrop() {  //alert('loadFileDrop')
+        function loadFileDrop() {  
             $('#zone').show();
 
             // We can deal with iframe uploads using this URL:
             var options = {
-                iframe: false,
-                logging: false
+                iframe: false
             }; //{url: '/signup/photo/upload', callbackParam: 'fd-callback'}}
             
             // 'zone' is an ID but you can also give a DOM node:
@@ -148,7 +146,7 @@ module.exports = function() {
                         $('.progress').fadeIn('fast');
                         file.event('progress', function (current, total) {
                             var width = current / total * 100 + '%';
-                            window.fd.byID('bar_zone').style.width = width;
+                            filedrop.byID('bar_zone').style.width = width;
                         });
                         file.event('done', function (xhr) {
                             $('.progress').fadeOut('fast', function () {
@@ -156,7 +154,6 @@ module.exports = function() {
                                 if (typeof resp.status !== 'undefined' && resp.status === 'success') {
 
                                     // trigger cropper
-                                    //console.log( resp.original );
                                     loadCropper(resp.original);
                                     return;
                                 }
@@ -194,23 +191,20 @@ module.exports = function() {
             if ($cropZone.hasClass('disabled')) {
                 return false;
             }
-            //console.log( data.method, data.option, id );
+
             if (data.method) {
                 $imgCrop.cropper(data.method, data.option);
                 if (data.method === 'rotate') {
                     fixHeight();
                 }
 
-                // if (data.method == 'setCropBoxData') {
-                //     //console.log('Uhh....');
-                // }
             }
 
             if (id === 'saveImage') {
                 var _top = $('.cropper-container').height() / 2;
                 $('.progress').fadeIn('fast').prepend('Saving image please wait.').css({'top':_top}).children().css({'width':'100%'});
                 $cropZone.addClass('disabled');
-                saveImage($imgCrop.cropper('getDataURL'), fileName);
+                saveImage($imgCrop.cropper('getCroppedCanvas').toDataURL(), fileName);
             }
 
             if (id === 'removeImage') {
