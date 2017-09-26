@@ -158,3 +158,5 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
         <a class="btn std lt-blue" href="/signup">Join for Free</a>
     </div>
 </section>
+
+<script src="https://www.youtube.com/iframe_api" async="async"></script>
