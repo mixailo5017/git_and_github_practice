@@ -33,7 +33,8 @@ const config = {
       'autocomplete.js',
       'mailcheck',
       'magnific-popup',
-      'select2'
+      'select2',
+      'cropper'
     ]
   },
   output: {
