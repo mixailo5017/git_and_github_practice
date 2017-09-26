@@ -25,3 +25,4 @@ $(function() {
 });
 
 global.changeLanguage = require('./_changeLanguage.js');
+global.segmentAnalytics = require('./_segment_analytics.js');
