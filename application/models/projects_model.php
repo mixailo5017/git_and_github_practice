@@ -793,7 +793,7 @@ class Projects_model extends CI_Model {
     public function all($limit, $offset = 0, $filter = array(), $sort = null)
     {
         $this->db
-            ->select('p.pid, p.uid, projectname, slug, projectphoto, p.country, p.sector, p.subsector, stage, totalbudget')
+            ->select('p.pid, p.uid, projectname, slug, projectphoto, p.country, p.sector, p.subsector, stage, totalbudget, o.government_level')
             ->select('COUNT(*) OVER () row_count', FALSE)
             ->from('exp_projects p')
             ->join('exp_members o', 'p.uid = o.uid')
