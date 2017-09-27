@@ -21,6 +21,10 @@ class Signup_model extends CI_Model
         'userphoto' => ''
     );
 
+    private $optional_fields = [
+        'is_developer' => '', 
+        'linkedin' => ''
+    ];
 
     /**
      * Clears signup data from session
@@ -86,7 +90,7 @@ class Signup_model extends CI_Model
      */
     public function get_required_fields()
     {
-        return array_diff_key($this->fields, array_flip(array('is_developer', 'linkedin', 'userphoto')));
+        return array_diff_key($this->fields, $this->optional_fields);
     }
 
     /**
