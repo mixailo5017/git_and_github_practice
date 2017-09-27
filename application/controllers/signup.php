@@ -293,25 +293,12 @@ class Signup extends CI_Controller
                 'lib/cropper.min.css',
                 'lib/tipsy.css'
             );
-            $page['scripts'] = array(
-                'filedrop.min.js',
-                'lib/filedrop-min.js',
-                'lib/cropper.min.js',
-                'lib/jquery.tipsy.js'
-            );
+            $page['scripts'] = [];
         }
 
         if ($step == 'edit') {
-            $page['styles'] = array(
-                'lib/select2.min.css',
-                'select2.custom.css'
-            );
-            $page['scripts'] = array(
-                'lib/select2.full.min.js',
-                'lib/mailcheck.min.js',
-                'lib/jquery.validation.min.js',
-                'signup_edit.js'
-            );
+            $page['styles'] = [];
+            $page['scripts'] = [];
         }
 
         $this->load->view('layouts/default', $page);

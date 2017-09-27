@@ -30,7 +30,11 @@ const config = {
     vendor: [
       'jquery',
       'algoliasearch',
-      'autocomplete.js'
+      'autocomplete.js',
+      'mailcheck',
+      'magnific-popup',
+      'select2',
+      'cropper'
     ]
   },
   output: {
@@ -59,8 +63,23 @@ const config = {
         name: 'runtime'
     }),
     new NameAllModulesPlugin(),
+    // Shim to allow use of legacy plugins (e.g., jquery.validation) requiring jQuery in global space
+    new webpack.ProvidePlugin({
+        $               : "jquery",
+        jQuery          : "jquery",
+        "window.jQuery" : "jquery"
+    })
   ],
-  devtool: devTool
+  devtool: devTool,
+  module: {
+    loaders: [
+      {
+        // For jquery.validation, change references to 'this' to point to 'window'
+        test: /..\/_lib\/jquery.validation.js$/,
+        loader: "imports-loader?this=>window"
+      }
+    ]
+  }
 };
 
 // Minify JS in production

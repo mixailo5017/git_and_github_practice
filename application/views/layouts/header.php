@@ -66,7 +66,7 @@
                         <li><a href="/expertise/<?php echo Auth::id() ?>"><span><?php echo lang('ViewPublicProfile') ?></span></a></li>
                         <li class="separator"></li>
                         <li class="v-mobile <?php echo $segment == 'help' ? 'active' : '' ?>">
-                            <a href="/help"><span><?php echo lang('Help') ?></span></a>
+                            <a href="https://gvip.zendesk.com/hc/en-us" target="_blank"><span><?php echo lang('Help') ?></span></a>
                         </li>
                         <li><a href="/profile/logout"><span><?php echo lang('Logout') ?></span></a></li>
                     </ul>
@@ -116,7 +116,7 @@
         <nav class="m-nav m-right v-desktop">
             <ul>
                 <li class="<?php echo $segment == 'help' ? 'active' : '' ?>">
-                    <a href="/help"><span><?php echo lang('Help') ?></span></a>
+                    <a href="https://gvip.zendesk.com/hc/en-us" target="_blank"><span><?php echo lang('Help') ?></span></a>
                 </li>
             </ul>
         </nav>

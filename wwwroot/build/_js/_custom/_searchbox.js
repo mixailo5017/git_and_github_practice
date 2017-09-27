@@ -1,3 +1,5 @@
+var $ = require('jquery');
+
 var searchbox = function() {
 
 	var algoliasearch = require('algoliasearch');
