@@ -1737,28 +1737,6 @@ Mixins
     margin-right: 1.69492%;
 }
 
-.m-tutorial:after
-{
-    display: table;
-    clear: both;
-
-    content: '';
-}
-
-.m-tutorial .image
-{
-    float: left;
-
-    width: 15.25424%;
-}
-
-.m-tutorial .content
-{
-    float: left;
-
-    width: 83.05085%;
-}
-
 /* Everything below this line is stock and subject to change */
 
 .m-related-item
@@ -5536,33 +5514,6 @@ body
     background: #7dc45e;
 }
 
-/*---------------------
-	Tutorial Content
-----------------------*/
-
-.m-tutorial
-{
-    margin-bottom: 40px;
-}
-
-.m-tutorial .image,
-.m-tutorial .content
-{
-    display: inline-block;
-
-    vertical-align: top;
-}
-
-.m-tutorial .image
-{
-    padding-top: 20px;
-}
-
-.m-tutorial .content
-{
-    padding-left: 20px;
-}
-
 /*--
 	Save Image Animation
 	--*/
@@ -6128,13 +6079,6 @@ and will have no bearing on elements on the live site.
 
 @media screen and (max-width: 1024px)
 {
-    .m-tutorial .content
-    {
-        float: left;
-
-        width: 78.81356%;
-    }
-
     .main-nav .sub-nav
     {
         float: left;
@@ -6678,13 +6622,6 @@ and will have no bearing on elements on the live site.
 
 @media screen and (max-width: 768px)
 {
-    .m-tutorial .content
-    {
-        float: left;
-
-        width: 74.57627%;
-    }
-
     .card.card-1
     {
         left: 3%;
@@ -6717,11 +6654,6 @@ and will have no bearing on elements on the live site.
     .errormsg
     {
         padding-left: 27.5%;
-    }
-
-    .m-tutorial .content .btn
-    {
-        margin-bottom: 10px;
     }
 }
 
@@ -6767,24 +6699,6 @@ and will have no bearing on elements on the live site.
     }
 
     .cta-box
-    {
-        float: left;
-
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    .m-tutorial .image
-    {
-        float: left;
-
-        width: 100%;
-        margin-right: 0;
-        margin-left: 0;
-    }
-
-    .m-tutorial .content
     {
         float: left;
 
@@ -7290,35 +7204,6 @@ and will have no bearing on elements on the live site.
     .photo-wrap
     {
         padding: 50px 20px;
-    }
-
-    .m-tutorial
-    {
-        margin-bottom: 60px;
-    }
-
-    .m-tutorial .image
-    {
-        text-align: center;
-    }
-
-    .m-tutorial .image img
-    {
-        width: 22.5%;
-        height: auto;
-    }
-
-    .m-tutorial .content
-    {
-        text-align: center;
-    }
-
-    .m-tutorial .content .btn
-    {
-        display: block;
-
-        max-width: 50%;
-        margin: 0 auto 10px;
     }
 }
 

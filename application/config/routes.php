@@ -182,8 +182,6 @@ $route['plink/(:num)/(:any)'] = "plink/index/$1/$2";
 
 $route['terms'] = "pages/index/terms";
 $route['privacy'] = "pages/index/privacy";
-$route['howto'] = "pages/index/howto";
-$route['help'] = "pages/index/howto";
 $route['sitemap.xml'] = "pages/index/sitemap";
 
 // Public project profiles

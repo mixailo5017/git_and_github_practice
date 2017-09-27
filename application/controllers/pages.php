@@ -103,22 +103,6 @@ class Pages extends CI_Controller {
         $this->load->view('layouts/default', $page);
     }
 
-    private function howto()
-    {
-        $page = array(
-            'view' => 'pages/howto',
-            'title' => build_title('Watch It in Action'),
-            'bodyclass' => '',
-            'header' => array(),
-            'content' => array(),
-            'footer' => array(),
-            'styles' => array('lib/prettyphoto.css'),
-            'scripts' => array('lib/jquery.prettyPhoto.js')
-        );
-
-        $this->load->view('layouts/default', $page);
-    }
-
     private function brazilfaq()
     {
         $page = array(

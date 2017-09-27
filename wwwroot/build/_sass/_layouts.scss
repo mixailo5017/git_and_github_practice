@@ -1212,53 +1212,6 @@ body {
 
 }
 
-/*---------------------
-	Tutorial Content
-----------------------*/
-
-.m-tutorial {
-	margin-bottom: 40px;
-	@include mq($max,$palm) {
-		margin-bottom: 60px;
-	}
-	.image, .content {
-		display: inline-block;
-   		vertical-align: top;
-	}
-
-	.image {
-	    padding-top: 20px;
-	    @include mq($max,$palm) {
-			text-align: center;
-	    }
-		@include mq($max,$palm) {
-		    img {
-		    	width: 22.5%;
-		    	height: auto;
-		    }
-		}
-
-	}
-
-	.content {
-		padding-left: 20px;
-
-		@include mq($max,$palm) {
-			text-align: center;
-	    }
-
-		.btn {
-			@include mq($max,$tablet) {
-				margin-bottom: 10px;
-			}
-			@include mq($max,$palm) {
-				display: block;
-			    margin: 0 auto 10px;
-			    max-width: 50%;
-		    }
-		}
-	}
-}
 
 /*--
 	Save Image Animation
