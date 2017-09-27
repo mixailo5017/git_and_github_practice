@@ -6,6 +6,5 @@ $config['assets'] = array(
     'style.css'            => "$assets_major_version.11.0",
     'script.js'            => "$assets_major_version.8.1",
     // Assets for redesigned pages
-    'main.css'            => "$assets_major_version.5.0",
-    'main.js'            => "$assets_major_version.3.0",
+    'main.css'            => "$assets_major_version.5.1"
 );
