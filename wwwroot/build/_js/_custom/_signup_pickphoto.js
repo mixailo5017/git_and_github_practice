@@ -155,6 +155,8 @@ module.exports = function() {
 
                                     // trigger cropper
                                     loadCropper(resp.original);
+                                    //Enable Next Button
+                                    reenableNext();
                                     return;
                                 }
                                 if (typeof resp.status !== 'undefined' && resp.status === 'error') {
@@ -213,21 +215,35 @@ module.exports = function() {
             }
         });
 
+        // Keep track of Next button state
+        var nxtBtnDisabled = false;
+        var $nxtBtn, nxtBtnOriginalState;
 
-        // function resetUpload() {
-        //     $('.crop-here').css({ 'opacity': 0 });
-        //     $('input.uploaded').off();
-        //     $('input.start-over').off();
-        //     setTimeout(function () {
-        //         $('.crop-here').css({ 'width': '0%', 'height': '0'});
-        //         $('input.input-file').val('Choose Photo');
-        //         $('input.start-over').removeClass('start-over');
-        //         $('input[name="next"]').removeClass('uploaded');
-        //         $('#zone').removeClass('inactive');
-        //     }, 500);
-        // }
+        // Disables the Next button
+        function disableNext() {
+            // Find the button, store its original state
+            $nxtBtn = $('#btnNext');
+            nxtBtnOriginalState = $nxtBtn[0].outerHTML;
 
+            // Manipulate its HTML so it is not clickable, etc.
+            $nxtBtn.css('opacity', .2);
+            $nxtBtn.css('cursor', 'default');
+            $nxtBtn.attr('title', "Please add a photo! It's the final step before confirming.");
+            $nxtBtn.removeAttr('href');
 
+            // Enable the nice tooltip
+            $nxtBtn.tipsy();
+
+            nxtBtnDisabled = true;
+        }
+
+        disableNext();
+
+        // Re-enables the Next button
+        function reenableNext() {
+            $nxtBtn[0].outerHTML = nxtBtnOriginalState;
+            nxtBtnDisabled = false;
+        }
 
         // Tooltips
         $('#rotateLeft').tipsy({gravity: 's'});

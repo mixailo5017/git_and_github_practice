@@ -94,10 +94,10 @@ class Signup extends CI_Controller
         }
 
         // Validate signup data so that if someone goes directly to
-        // /pickphoto without filling out all fields on /edit page
-        // we redirect them to /start page
-        if ($step == 'pickphoto' || $step == 'confirm') {
-            if (! $this->signup_model->validate_required()) redirect('/signup/start');
+        // /confirm without filling out all fields on /edit page or uploading a photo
+        // we redirect them to /pickphoto page
+        if ($step == 'confirm') {
+            if (! $this->signup_model->validate_required()) redirect('/signup/pickphoto');
         }
 
         $this->page($step, $signup, $data);
