@@ -55,7 +55,7 @@
                 
                 <div class="form-buttons centered">
                     <a href="/signup/edit" class="btn std clear">Back</a>
-                    <a href="/signup/confirm" class="btn std dk-green" >Next</a>
+                    <a href="/signup/confirm" class="btn std dk-green" id="btnNext">Next</a>
                 </div>
 
             <?php echo form_close() ?>
