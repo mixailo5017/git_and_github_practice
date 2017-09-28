@@ -13,9 +13,6 @@ class Forums extends CI_Controller {
         $languageSession = sess_var('lang');
         get_language_file($languageSession);
 
-        // If the user is not logged in then redirect to the login page
-        auth_check();
-
         //Load the default model for this controller
         $this->load->model('forums_model');
 
@@ -230,6 +227,9 @@ class Forums extends CI_Controller {
      */
     public function projects($id) {
 
+        // If the user is not logged in then redirect to the login page
+        auth_check();
+
         $perpage =	12;
         $page = $this->input->get_post('per_page', TRUE);
 
@@ -288,6 +288,9 @@ class Forums extends CI_Controller {
      * @param $id
      */
     public function experts($id) {
+
+        // If the user is not logged in then redirect to the login page
+        auth_check();
     
         $limit = view_check_limit($this->input->get_post('limit', TRUE));
         $offset = $this->input->get_post('per_page', TRUE);
