@@ -25,9 +25,6 @@ class Search extends CI_Controller {
 		get_language_file($languageSession);
 		$this->dataLang['lang'] = langGet();
 
-        // If the user is not logged in then redirect to the login page
-        auth_check();
-
 		//Load Profile Model for this controller
 		//$this->load->helper('img_helper'); // autoload
 		$this->load->model('projects_model');
@@ -493,6 +490,9 @@ class Search extends CI_Controller {
 
 	public function concierge_question()
 	{
+		// If the user is not logged in then redirect to the login page
+        auth_check();
+
 		$msg = $this->input->get('message', TRUE);
 
 		// if not blank
@@ -548,6 +548,9 @@ class Search extends CI_Controller {
 
     public function geocode()
     {
+        // If the user is not logged in then redirect to the login page
+        auth_check();
+
         $address = $this->input->get_post('address', false);
         if (empty($address)) {
             die_json('Address string is empty');
@@ -567,6 +570,9 @@ class Search extends CI_Controller {
 	 */
 	public function reverse_geocode() {
 
+		// If the user is not logged in then redirect to the login page
+        auth_check();
+
 		$this->load->library('mapquest');
 
 		$response = $this->mapquest->reverse_geocode($this->input->get_post('lat', false). ',' . $this->input->get_post('lng', false))->json_raw;
@@ -579,6 +585,8 @@ class Search extends CI_Controller {
 
 	public function batch_geocode()
 	{
+		// If the user is not logged in then redirect to the login page
+        auth_check();
 
 		$e = $this->geocode_experts();
 
