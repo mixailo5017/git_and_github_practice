@@ -374,7 +374,19 @@
         return $disciplines;
     }
 
-    
+    /**
+     * Fetches list of allowed government levels.
+     * @return array Each item has identical keys and values.
+     */
+    function government_level_dropdown()
+    {
+        $CI =& get_instance();
+        $CI->load->model('myaccount_model');
+        $levels = $CI->myaccount_model->lookup_government_levels();
+        $nullOption = ['' => 'Select a government level'];
+        return array_merge($nullOption, $levels);
+    }
+
     /**
     * Country Dropdown function
     * returns list of countries

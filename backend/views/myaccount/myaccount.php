@@ -400,6 +400,9 @@
                                                                                 'name' 		=> 'member_mission',
                                                                                 'value' 	=> $users["mission"],
                                                                                 'style'		=>'margin-bottom:0px;'
+                                                                        ),
+                                                                        'lbl_government_level' => array(
+                                                                                'class' => "left_label"
                                                                         )
 
                                                 );
@@ -577,6 +580,15 @@
                                                     <?php echo form_label('Postal Code:', 'member_postal_code', $opt['general_info_form']['lbl_postal_code']);?>
                                                     <div class="fld" >
                                                         <?php echo form_input($opt['general_info_form']['member_postal_code']);?>
+                                                    </div>
+                                                </div>
+
+                                                <div class="field">
+                                                    <?php echo form_label('Government Level:', 'member_postal_code', $opt['general_info_form']['lbl_government_level']);?>
+                                                    <div class="fld" >
+                                                        <?php $member_government_level_attr = 'id="member_government_level"';
+                                                            $member_government_level_options = government_level_dropdown();
+                                                            echo form_dropdown('member_government_level', $member_government_level_options, $users['government_level'], $member_government_level_attr); ?>
                                                     </div>
                                                 </div>
 
