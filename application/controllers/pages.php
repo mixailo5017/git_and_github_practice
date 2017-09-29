@@ -59,7 +59,6 @@ class Pages extends CI_Controller {
             array('loc' => base_url('/')),
             array('loc' => base_url('/login')),
             array('loc' => base_url('/signup')),
-            array('loc' => base_url('/howto')),
             array('loc' => base_url('/terms')),
             array('loc' => base_url('/privacy')),
         );
