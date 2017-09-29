@@ -63,11 +63,21 @@ class Pages extends CI_Controller {
             array('loc' => base_url('/privacy')),
         );
 
+        // Public project profiles
         if (PROJECT_PROFILES_ENABLED) {
             $this->load->model('projects_model');
             $project_urls = $this->projects_model->sitemap(base_url() . 'p/');
             $urls = array_merge($urls, $project_urls);
         }
+
+        // Forum pages (also publicly accessible)
+        $this->load->model('forums_model');
+        // Get all forums that are in published status
+        $forum_ids = $this->forums_model->all(["f.status" => '1'], 'f.id');
+        $forum_urls = array_map(function ($forum_id) {
+            return ['loc' => base_url('/forums/' . $forum_id['id'])];
+        }, $forum_ids);
+        $urls = array_merge($urls, $forum_urls);
 
         $this->output->set_content_type('application/xml');
         // Render the sitemap
