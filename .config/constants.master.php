@@ -141,7 +141,7 @@ define('MAX_UPDATES',  5);
 // How long (in minutes) to retain a public profile in cache
 define('PUBLIC_PROFILE_TTL', 120);
 // How long (in minutes) to retain sitemap in cache
-define('SITEMAP_TTL', 120);
+define('SITEMAP_TTL', 0);
 
 // Allows to enable or disable public project profiles feature
 define('PROJECT_PROFILES_ENABLED', TRUE);
