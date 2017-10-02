@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js gte-ie9" lang="en"> <!--<![endif]-->
 
 <head>
-    <meta name="description" content="GViP is a global platform connecting infrastructure project developers with experts. GViP has over 800 projects and over 1000 experts. Sign up to connect with leading experts." />
+    <meta name="description" content="GViP is a global platform connecting infrastructure project developers with experts. GViP has over 2000 projects and over 2800 experts. Sign up to connect with leading experts." />
     <meta name="viewport" content="width=device-width" />
     <meta charset="UTF-8">
 
