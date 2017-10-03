@@ -432,7 +432,8 @@ class Myaccount_model extends CI_Model {
                     'postal_code' 		=> $this->input->post('member_postal_code'),
                     'vcontact' 			=> $this->input->post('member_phone'),
                     'public_status'		=> $this->input->post('member_public'),
-                    'mission'			=> $this->input->post('member_mission')
+                    'mission'			=> $this->input->post('member_mission'),
+                    'government_level'  => $this->input->post('member_government_level') ?: NULL
         );
 
 
@@ -827,4 +828,21 @@ class Myaccount_model extends CI_Model {
 
         }
     }
+
+    /**
+     * Returns list of valid government levels from DB
+     * @return array Array of government levels (keys identical to values)
+     */
+    public function lookup_government_levels()
+    {
+        $query = $this->db
+                      ->order_by('government_level_english ASC')
+                      ->get('exp_member_government_level_lookup');
+
+        $results = $query->result_array();
+        $results = array_column($results, 'government_level_english', 'government_level_english');
+
+       return $results;
+    }
+
 }
