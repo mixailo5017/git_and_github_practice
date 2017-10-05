@@ -4,6 +4,8 @@
 
     <?php $this->load->view('signup/_progress', array('step' => 'photo')) ?>
 
+    <img id="pickphoto-imageholder">
+
     <div class="form-cta">
         <div class="interior">
             <!--            <h2 class="h3-std">Create Account</h2>-->

@@ -34,7 +34,8 @@ const config = {
       'mailcheck',
       'magnific-popup',
       'select2',
-      'cropper'
+      'cropper',
+      'tracking'
     ]
   },
   output: {

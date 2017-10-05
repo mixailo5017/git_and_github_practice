@@ -5843,6 +5843,13 @@ body
     border-radius: 2px;
 }
 
+#pickphoto-imageholder
+{
+    position: absolute;
+
+    display: none;
+}
+
 .select2-container
 {
     font-size: 14px;

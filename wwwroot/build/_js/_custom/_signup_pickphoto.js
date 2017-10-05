@@ -5,6 +5,8 @@ filedrop.logging = false;
 
 var tipsy = require('../_lib/jquery.tipsy');
 var cropper = require('cropper'); // https://github.com/fengyuanchen/cropper
+require('tracking'); // attaches to window.tracking
+require('tracking/build/data/face.js');
 
 module.exports = function() {
 
@@ -17,7 +19,25 @@ module.exports = function() {
             $imgCrop = $('.crop-wrap > img'),
             $cropZone = $('.crop-zone'),
             zone = null,
-            savingImage = false;
+            savingImage = false,
+            cropArea = {},
+            imageHolder = document.querySelector( '#pickphoto-imageholder' ),
+            imageHTMLImageElement = new Image(),
+            pixels = null;
+
+        var faceTracker = new tracking.ObjectTracker(['face']);
+        faceTracker.setStepSize(1.7);
+
+        faceTracker.on('track', function(event) {
+          if (event.data.length === 0) {
+            // No faces were detected in this image.
+            displayError("Sorry, we looked hard but we couldn't find your face in this image. Please click Remove Image to try a different image, or <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>.");
+          } else {
+            // If image includes a face, enable Next button
+            reenableNext();
+            console.log(event);
+          }
+        });
 
         function hasDraggable() {
             return 'draggable' in document.createElement('span');
@@ -137,7 +157,7 @@ module.exports = function() {
                         fileName1 = file.name,
                         fileType = fileName1.replace(/^.*\./, '').toLowerCase();
 
-                    if (fileType !== 'png' && fileType !== 'jpg' && fileType !== 'gif') {
+                    if (fileType !== 'png' && fileType !== 'jpg' && fileType !== 'gif' && fileType !== 'jpeg') {
                         displayError('Error: File must be a \'jpg\', \'png\', or \'gif\'');
                     } else if (fileSize > 5) {
                         displayError('Error: Upload file must be less than 5 MB');
@@ -148,6 +168,22 @@ module.exports = function() {
                             var width = current / total * 100 + '%';
                             filedrop.byID('bar_zone').style.width = width;
                         });
+                        // Without waiting for image to upload to server, populate a hidden <img>
+                        // using the data from the dropped image
+                        file.readDataURL(function (dataURL) {
+                          imageHolder.src = dataURL;
+                          imageHolder.addEventListener("load", function() {
+                            // Before attempting to perform facial recognition, 
+                            // scale down the image to make sure it won't take forever
+                            if (imageHolder.width > 1024) {
+                              imageHolder.width = 1024;
+                            }
+                            console.log('Dimensions of search image are now %s by %s', imageHolder.width, imageHolder.height);
+                            // Test whether image includes a face
+                            // If it does, re-enable the Next button
+                            tracking.track('#pickphoto-imageholder', faceTracker);
+                          });
+                        });
                         file.event('done', function (xhr) {
                             $('.progress').fadeOut('fast', function () {
                                 var resp = jQuery.parseJSON(xhr.responseText);
@@ -155,8 +191,7 @@ module.exports = function() {
 
                                     // trigger cropper
                                     loadCropper(resp.original);
-                                    //Enable Next Button
-                                    reenableNext();
+
                                     return;
                                 }
                                 if (typeof resp.status !== 'undefined' && resp.status === 'error') {
