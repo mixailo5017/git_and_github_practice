@@ -1,15 +1,42 @@
-var AWS = require('aws-sdk');
-var myCredentials = new AWS.CognitoIdentityCredentials({
-    IdentityPoolId: 'us-east-1:0eb3f69d-9364-488e-bd31-68553fd3277b'
-});
-AWS.config.update({
-    credentials: myCredentials,
-    region: 'us-east-1'
-});
+var CognitoIdentity = require('aws-sdk/clients/cognitoidentity');
+var Rekognition = require('aws-sdk/clients/rekognition');
 
-var rekognition = new AWS.Rekognition({
-    apiVersion: '2016-06-27'
+var rekognition;
+var region = 'us-east-1';
+
+var ciObject = new CognitoIdentity({
+    region: region
 });
+ciObject.getId({
+    IdentityPoolId: 'us-east-1:0eb3f69d-9364-488e-bd31-68553fd3277b'
+}, function(err, identityData) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else {
+        ciObject.getCredentialsForIdentity({
+            IdentityId:  identityData.IdentityId
+        }, function(err, credentialsData) {
+            if (err) console.log(err, err.stack); // an error occurred
+            else {
+                var myCredentials = credentialsData.Credentials;
+                var rekognitionParams = {
+                    apiVersion: '2016-06-27',
+                    accessKeyId: myCredentials.AccessKeyId,
+                    secretAccessKey: myCredentials.SecretKey,
+                    sessionToken: myCredentials.SessionToken,
+                    region: region
+                };
+                rekognition = new Rekognition(rekognitionParams);
+            }
+        });
+    }
+})
+
+// AWS.config.update({
+//     credentials: myCredentials,
+//     region: 'us-east-1'
+// });
+
+
 
 function detectFaceFromBlob(imageBlob) {
     var params = {
