@@ -154,7 +154,7 @@ module.exports = function() {
                         fileName1 = file.name,
                         fileType = fileName1.replace(/^.*\./, '').toLowerCase();
 
-                    if (fileType !== 'png' && fileType !== 'jpg' && fileType !== 'gif' && fileType !== 'jpeg') {
+                    if (fileType !== 'png' && fileType !== 'jpg' && fileType !== 'jpeg') {
                         displayError('Error: File must be a \'jpg\' or \'png\'');
                     } else if (fileSize > 5) {
                         displayError('Error: Upload file must be less than 5 MB');
