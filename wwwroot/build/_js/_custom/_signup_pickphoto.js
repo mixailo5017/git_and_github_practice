@@ -167,32 +167,42 @@ module.exports = function() {
                         });
                         // Without waiting for image to upload to server, populate a hidden <img>
                         // using the data from the dropped image
-                        file.read({
-                            onDone: function(data) {
-                                rekognition.detectFaceFromBlob(data).then((foundFace) => {
-                                    if (foundFace) reenableNext();
-                                }).catch((err) => {
-                                    console.log(err);
-                                    // If AWS is erroring, we should allow user to proceed,
-                                    // even at the risk of them getting away with uploading a picture without a face
-                                    reenableNext();
-                                });
-                            },
-                            func: 'bin'
-                        });
-
                         file.readDataURL(function (dataURL) {
                           imageHolder.src = dataURL;
                           imageHolder.addEventListener("load", function() {
                             // Before attempting to perform facial recognition, 
                             // scale down the image to make sure it won't take forever
-                            if (imageHolder.width > 1024) {
+                            if (imageHolder.naturalWidth > 1024) {
                               imageHolder.width = 1024;
                             }
                             console.log('Dimensions of search image are now %s by %s', imageHolder.width, imageHolder.height);
+                            
+                            // If image is too small to be processed by AWS Rekognition,
+                            // don't bother trying. Instead, ask for a bigger image
+                            if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
+                                displayError('Goodness, what a tiny image! Please upload one that is at least 80 pixels in width and height — or click the Camera button to take a picture of yourself now!');
+                                return;
+                            }
+
                             // Test whether image includes a face
                             // If it does, re-enable the Next button
-                            // tracking.track('#pickphoto-imageholder', faceTracker);
+                            file.read({
+                                onDone: function(data) {
+                                    rekognition.detectFaceFromBlob(data).then((foundFace) => {
+                                        if (foundFace) {
+                                            reenableNext()
+                                        } else {
+                                            displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
+                                        };
+                                    }).catch((err) => {
+                                        console.log(err);
+                                        // If AWS is erroring, we should allow user to proceed,
+                                        // even at the risk of them getting away with uploading a picture without a face
+                                        reenableNext();
+                                    });
+                                },
+                                func: 'bin'
+                            });
                           });
                         });
                         file.event('done', function (xhr) {
