@@ -169,7 +169,14 @@ module.exports = function() {
                         // using the data from the dropped image
                         file.read({
                             onDone: function(data) {
-                                rekognition.detectFaceFromBlob(data);
+                                rekognition.detectFaceFromBlob(data).then((foundFace) => {
+                                    if (foundFace) reenableNext();
+                                }).catch((err) => {
+                                    console.log(err);
+                                    // If AWS is erroring, we should allow user to proceed,
+                                    // even at the risk of them getting away with uploading a picture without a face
+                                    reenableNext();
+                                });
                             },
                             func: 'bin'
                         });
