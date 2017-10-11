@@ -36,7 +36,9 @@ const config = {
       'magnific-popup',
       'select2',
       'cropper',
-      'babel-polyfill'
+      'babel-polyfill',
+      'aws-sdk/clients/rekognition',
+      'aws-sdk/clients/cognitoidentity'
     ]
   },
   output: {
