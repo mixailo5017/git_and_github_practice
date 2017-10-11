@@ -20,9 +20,7 @@ module.exports = function() {
             zone = null,
             savingImage = false,
             cropArea = {},
-            imageHolder = document.querySelector( '#pickphoto-imageholder' ),
-            imageHTMLImageElement = new Image(),
-            pixels = null;
+            imageHolder = document.querySelector( '#pickphoto-imageholder' );
 
         
         // faceTracker.on('track', function(event) {
@@ -175,7 +173,6 @@ module.exports = function() {
                             if (imageHolder.naturalWidth > 1024) {
                               imageHolder.width = 1024;
                             }
-                            console.log('Dimensions of search image are now %s by %s', imageHolder.width, imageHolder.height);
                             
                             // If image is too small to be processed by AWS Rekognition,
                             // don't bother trying. Instead, ask for a bigger image
@@ -190,7 +187,7 @@ module.exports = function() {
                                 onDone: function(data) {
                                     rekognition.detectFaceFromBlob(data).then((foundFace) => {
                                         if (foundFace) {
-                                            reenableNext()
+                                            reenableNext();
                                         } else {
                                             displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
                                         };
