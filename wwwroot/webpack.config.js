@@ -1,6 +1,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const NameAllModulesPlugin = require('name-all-modules-plugin');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
@@ -69,6 +70,10 @@ const config = {
         $               : "jquery",
         jQuery          : "jquery",
         "window.jQuery" : "jquery"
+    }),
+    new WebpackBuildNotifierPlugin({
+      title: "GViP Webpack Build",
+      logo: path.resolve("./favicon-32x32.png")
     })
   ],
   devtool: devTool,
