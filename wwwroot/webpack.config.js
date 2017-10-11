@@ -76,7 +76,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(_lib|node_modules|bower_components)/,
+        include: path.resolve(__dirname, "build/_js/_custom"),
         use: {
           loader: 'babel-loader',
           options: {
