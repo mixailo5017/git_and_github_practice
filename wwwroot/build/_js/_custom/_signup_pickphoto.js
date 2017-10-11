@@ -20,7 +20,8 @@ module.exports = function() {
             zone = null,
             savingImage = false,
             cropArea = {},
-            imageHolder = document.querySelector( '#pickphoto-imageholder' );
+            imageHolder = document.querySelector( '#pickphoto-imageholder' ),
+            boundingBox = null;
 
         
         // faceTracker.on('track', function(event) {
@@ -185,9 +186,20 @@ module.exports = function() {
                             // If it does, re-enable the Next button
                             file.read({
                                 onDone: function(data) {
-                                    rekognition.detectFaceFromBlob(data).then((foundFace) => {
-                                        if (foundFace) {
+                                    rekognition.detectFaceFromBlob(data).then((faceData) => {
+                                        if (faceData.foundFace) {
                                             reenableNext();
+                                            boundingBox = faceData.boundingBox;
+                                            console.log("Bounding box saved from Amazon: ", boundingBox);
+                                            var canvasData = $imgCrop.cropper('getCanvasData');
+                                            console.log("Canvas data: ", canvasData);
+                                            $imgCrop.cropper('setCropBoxData', {
+                                                left: canvasData.width * boundingBox.Left,
+                                                top: canvasData.height * boundingBox.Top,
+                                                width: canvasData.width * boundingBox.Width,
+                                                height: canvasData.height * boundingBox.height
+                                            });
+                                            console.log($imgCrop.cropper('getCropBoxData'));
                                         } else {
                                             displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
                                         };
