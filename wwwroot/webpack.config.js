@@ -35,7 +35,7 @@ const config = {
       'magnific-popup',
       'select2',
       'cropper',
-      'tracking'
+      'babel-polyfill'
     ]
   },
   output: {
@@ -73,11 +73,16 @@ const config = {
   ],
   devtool: devTool,
   module: {
-    loaders: [
+    rules: [
       {
-        // For jquery.validation, change references to 'this' to point to 'window'
-        test: /..\/_lib\/jquery.validation.js$/,
-        loader: "imports-loader?this=>window"
+        test: /\.js$/,
+        exclude: /(_lib|node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env']
+          }
+        }
       }
     ]
   }

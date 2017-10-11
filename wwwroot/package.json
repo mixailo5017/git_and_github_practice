@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/gvipio/gvip#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
     "browserify": "^14.1.0",
     "clean-webpack-plugin": "^0.1.16",
     "gulp": "^3.9.1",
@@ -58,6 +61,7 @@
     "algoliasearch": "^3.22.1",
     "autocomplete.js": "^0.28.0",
     "aws-sdk": "^2.129.0",
+    "babel-polyfill": "^6.26.0",
     "cropper": "^3.0.0",
     "jquery": "^3.2.1",
     "magnific-popup": "^1.1.0",
