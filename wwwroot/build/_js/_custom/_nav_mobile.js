@@ -17,7 +17,7 @@ var nav_mobile = function() {
 			$langIcon = $('.active-language'),
 			$langMenu = $('.m-language'),
 			$dropDown = $('.m-dropdown'),
-			$mnav = $('.m-nav');
+			$mnav = $('.m-nav'),
 			$activeLang = $('.m-language .active img').attr('src');
 
 		$(window).on('resize', function() {
