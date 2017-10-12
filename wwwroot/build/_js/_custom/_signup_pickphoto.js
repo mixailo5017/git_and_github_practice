@@ -190,17 +190,13 @@ module.exports = function() {
                                         if (faceData.foundFace) {
                                             reenableNext();
                                             boundingBox = faceData.boundingBox;
-                                            console.log("Bounding box saved from Amazon: ", boundingBox);
                                             var canvasData = $imgCrop.cropper('getCanvasData');
-                                            console.log("Canvas data: ", canvasData);
                                             var cropBoxData = {};
                                             cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
                                             cropBoxData.top = Math.max(canvasData.height * (boundingBox.Top - (boundingBox.Height * 0.2)), 1);
                                             cropBoxData.width = Math.min(canvasData.width * (boundingBox.Width * 1.4), (canvasData.width - cropBoxData.left));
                                             cropBoxData.height = Math.min(canvasData.height * (boundingBox.Height * 1.4), (canvasData.height - cropBoxData.top));
-                                            console.log(cropBoxData);
                                             $imgCrop.cropper('setCropBoxData', cropBoxData);
-                                            console.log($imgCrop.cropper('getCropBoxData'));
                                         } else {
                                             displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
                                         };
