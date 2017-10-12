@@ -1,5 +1,7 @@
 var $ = require('jquery');
 var filedrop = require('../_lib/filedrop');
+var base64js = require('base64-js');
+
 // Don't log FileDrop events to console
 filedrop.logging = false;
 
@@ -32,20 +34,19 @@ function checkSizeThenCheckFaces() {
 
     // Before attempting to perform facial recognition, 
     // scale down the image to make sure it won't take forever
-    if (imageHolder.naturalWidth > 1024) {
-      imageHolder.width = 1024;
-    }
+    // if (imageHolder.naturalWidth > 1024) {
+    //   imageHolder.width = 1024;
+    // }
 
     // Once image has been resized, proceed with remaining logic
     checkFaces();
 }
 
 function checkFaces() {
-    console.log("checkFaces got called! Current dimensions are %s by %s pixels.", imageHolder.width, imageHolder.height);
-
     // Test whether image includes a face
     // If it does, re-enable the Next button
     var imageInBase64 = getImageInBase64(imageHolder);
+
     rekognition.detectFaceFromBlob(imageInBase64).then((faceData) => {
         if (faceData.foundFace) {
             reenableNext();
@@ -76,7 +77,9 @@ function getImageInBase64(image) {
     canvas.getContext('2d').drawImage(image, 0, 0);
 
     // Get raw image data
-    return canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, '');
+    var imageString = canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, '');
+    var imageBytes = base64js.toByteArray(imageString);
+    return imageBytes;
 }
 
 function hasDraggable() {
@@ -214,6 +217,7 @@ function loadFileDrop() {
                   imageHolder.addEventListener("load", checkSizeThenCheckFaces, {once: true});
                   imageHolder.src = dataURL;
                 });
+
                 file.event('done', function (xhr) {
                     $('.progress').fadeOut('fast', function () {
                         var resp = jQuery.parseJSON(xhr.responseText);
