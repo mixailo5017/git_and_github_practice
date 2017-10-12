@@ -7,23 +7,259 @@ var tipsy = require('../_lib/jquery.tipsy');
 var cropper = require('cropper'); // https://github.com/fengyuanchen/cropper
 var rekognition = require('./_rekognition');
 
+var uploadUrl = '/signup/photo/upload',
+    removeUrl = '/signup/photo/remove',
+    fileName = '',
+    $imgCrop = $('.crop-wrap > img'),
+    $cropZone = $('.crop-zone'),
+    zone = null,
+    savingImage = false,
+    cropArea = {},
+    imageHolder = document.querySelector( '#pickphoto-imageholder' ),
+    boundingBox = null,
+    // Keep track of Next button state
+    nxtBtnDisabled = false,
+    $nxtBtn,
+    nxtBtnOriginalState;
+
+function checkSizeThenCheckFaces() {
+    // If image is too small to be processed by AWS Rekognition,
+    // don't bother trying. Instead, ask for a bigger image
+    if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
+        displayError('Goodness, what a tiny image! Please upload one that is at least 80 pixels in width and height — or click the Camera button to take a picture of yourself now!');
+        return;
+    }
+
+    // Before attempting to perform facial recognition, 
+    // scale down the image to make sure it won't take forever
+    if (imageHolder.naturalWidth > 1024) {
+      imageHolder.width = 1024;
+    }
+
+    // Once image has been resized, proceed with remaining logic
+    checkFaces();
+}
+
+function checkFaces() {
+    console.log("checkFaces got called! Current dimensions are %s by %s pixels.", imageHolder.width, imageHolder.height);
+
+    // Test whether image includes a face
+    // If it does, re-enable the Next button
+    var imageInBase64 = getImageInBase64(imageHolder);
+    rekognition.detectFaceFromBlob(imageInBase64).then((faceData) => {
+        if (faceData.foundFace) {
+            reenableNext();
+            boundingBox = faceData.boundingBox;
+            var canvasData = $imgCrop.cropper('getCanvasData');
+            var cropBoxData = {};
+            cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
+            cropBoxData.top = Math.max(canvasData.height * (boundingBox.Top - (boundingBox.Height * 0.2)), 1);
+            cropBoxData.width = Math.min(canvasData.width * (boundingBox.Width * 1.4), (canvasData.width - cropBoxData.left));
+            cropBoxData.height = Math.min(canvasData.height * (boundingBox.Height * 1.4), (canvasData.height - cropBoxData.top));
+            $imgCrop.cropper('setCropBoxData', cropBoxData);
+        } else {
+            displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
+        };
+    }).catch((err) => {
+        console.log(err);
+        // If AWS is erroring, we should allow user to proceed,
+        // even at the risk of them getting away with uploading a picture without a face
+        reenableNext();
+    });
+}
+
+function getImageInBase64(image) {
+    var canvas = document.createElement('canvas');
+    canvas.width = image.width; // or 'width' if you want a special/scaled size
+    canvas.height = image.height; // or 'height' if you want a special/scaled size
+
+    canvas.getContext('2d').drawImage(image, 0, 0);
+
+    // Get raw image data
+    return canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, '');
+}
+
+function hasDraggable() {
+    return 'draggable' in document.createElement('span');
+}
+
+function fixHeight() {
+    setTimeout(function () {
+        var rotateHeight = $('.cropper-container').height() + 60;
+        $('.crop-here').css({ 'height': rotateHeight});
+    }, 500);
+}
+
+function displayError(msg) {
+    $('.error-head').html(msg);
+}
+
+function saveCroppedImageResponse(resp) {
+
+    if (resp.status === 'error') {
+        displayError(resp.error);
+    }
+    if (resp.status === 'success') {
+        window.location = '/signup/confirm';
+    }
+}
+
+function loadCropper(imageUrl) {
+    $('#zone').removeClass('fd-zone');
+    $('#zone').removeClass('filedrop');
+    $('.fd-file, .drop-meta').hide();
+    $('.crop-controls, .crop-confirm').show();
+    $imgCrop.attr('src', imageUrl).cropper({
+        zoomable: false,
+        modal: true,
+        aspectRatio: 1 / 1,
+        //done: function (data) {}
+    });
+    setTimeout(function () {
+        var aniHeight = $('.cropper-container').height();
+        $('.crop-wrap').css({ 'height': aniHeight});
+    }, 1000);
+}
+
+function triggerBasicCropper() {
+    var $cropper = $('#cropper_image'),
+        $crop_wrap = $('.crop-wrap');
+
+    if ($cropper.length) {
+        $crop_wrap.css({ 'opacity': 0 });
+        fileName = $('#cropper_image').attr('src').replace('/images/signup/', '');
+        $().hide();
+        $('.drop-meta').hide();
+        setTimeout(function () {
+            $('.fd-file').hide();
+            $crop_wrap.animate({ 'opacity': 1 }, 500);
+        }, 500);
+
+        loadCropper($cropper.attr('src'));
+    }
+}
+
+function doBasicUpload() {  
+    $('#basicUpload').show();
+    triggerBasicCropper();
+}
+
+function removeImage() {
+    $.post(removeUrl, {})
+        .done(function () {
+            window.location.reload();
+        })
+        .fail(function () {
+            displayError('ohh no!');
+        });
+}
+
+function saveImage(data, name) {
+
+    if (!savingImage) {
+        savingImage = true;
+        var postData = {
+            'fd-file': name,
+            'raw-file': data
+        };
+        $.post(uploadUrl, $.param(postData, true))
+            .done(function (resp) {
+                saveCroppedImageResponse(resp);
+                savingImage = false;
+
+            })
+            .fail(function () {
+                $cropZone.removeClass('disabled');
+                displayError('There was an error saving the image.');
+                savingImage = false;
+            });
+    }
+}
+
+function loadFileDrop() {  
+    $('#zone').show();
+
+    // We can deal with iframe uploads using this URL:
+    var options = {
+        iframe: false
+    }; //{url: '/signup/photo/upload', callbackParam: 'fd-callback'}}
+    
+    // 'zone' is an ID but you can also give a DOM node:
+    zone = new filedrop.FileDrop('zone', options);
+    zone.event('send', function (files) {
+
+        files.each(function (file) {
+
+            displayError('');
+
+            var fs = Number(file.size / 1024),
+                fileSize = Number(((fs / 1024) * 100) / 100),
+                fileName1 = file.name,
+                fileType = fileName1.replace(/^.*\./, '').toLowerCase();
+
+            if (fileType !== 'png' && fileType !== 'jpg' && fileType !== 'jpeg') {
+                displayError('Error: File must be a \'jpg\' or \'png\'');
+            } else if (fileSize > 5) {
+                displayError('Error: Upload file must be less than 5 MB');
+            } else {
+                $('.fd-file').hide();
+                $('.progress').fadeIn('fast');
+                file.event('progress', function (current, total) {
+                    var width = current / total * 100 + '%';
+                    filedrop.byID('bar_zone').style.width = width;
+                });
+                // Without waiting for image to upload to server, populate a hidden <img>
+                // using the data from the dropped image
+                file.readDataURL(function (dataURL) {
+                  imageHolder.addEventListener("load", checkSizeThenCheckFaces, {once: true});
+                  imageHolder.src = dataURL;
+                });
+                file.event('done', function (xhr) {
+                    $('.progress').fadeOut('fast', function () {
+                        var resp = jQuery.parseJSON(xhr.responseText);
+                        if (typeof resp.status !== 'undefined' && resp.status === 'success') {
+
+                            // trigger cropper
+                            loadCropper(resp.original);
+
+                            return;
+                        }
+                        if (typeof resp.status !== 'undefined' && resp.status === 'error') {
+                            displayError('Error: ' + resp.error);
+                             $('.fd-file').show();
+                            return;
+                        }
+
+                        // general error message
+                        displayError('Error: File could not be uploaded');
+                        $('.fd-file').show();
+                    });
+
+                });
+                file.sendTo(uploadUrl);
+            }
+            file.event('error', function () {
+                // need better error
+                //alert('Error uploading ' + this.name + ': ' + xhr.status + ', ' + xhr.statusText);
+                displayError('Error uploading ' + this.name);
+                $('.fd-file').show();
+            });
+
+        });
+    });
+}
+
+// Re-enables the Next button
+function reenableNext() {
+    $nxtBtn[0].outerHTML = nxtBtnOriginalState;
+    nxtBtnDisabled = false;
+}
+
 module.exports = function() {
 
     $(function () {
         'use strict'; 
 
-        var uploadUrl = '/signup/photo/upload',
-            removeUrl = '/signup/photo/remove',
-            fileName = '',
-            $imgCrop = $('.crop-wrap > img'),
-            $cropZone = $('.crop-zone'),
-            zone = null,
-            savingImage = false,
-            cropArea = {},
-            imageHolder = document.querySelector( '#pickphoto-imageholder' ),
-            boundingBox = null;
-
-        
         // faceTracker.on('track', function(event) {
         //   if (event.data.length === 0) {
         //     // No faces were detected in this image.
@@ -35,216 +271,7 @@ module.exports = function() {
         //   }
         // });
 
-        function hasDraggable() {
-            return 'draggable' in document.createElement('span');
-        }
-
-        function fixHeight() {
-            setTimeout(function () {
-                var rotateHeight = $('.cropper-container').height() + 60;
-                $('.crop-here').css({ 'height': rotateHeight});
-            }, 500);
-        }
-
-        function displayError(msg) {
-            $('.error-head').html(msg);
-        }
-
-        function saveCroppedImageResponse(resp) {
-
-            if (resp.status === 'error') {
-                displayError(resp.error);
-            }
-            if (resp.status === 'success') {
-                window.location = '/signup/confirm';
-            }
-        }
-
-        function loadCropper(imageUrl) {
-            $('#zone').removeClass('fd-zone');
-            $('#zone').removeClass('filedrop');
-            $('.fd-file, .drop-meta').hide();
-            $('.crop-controls, .crop-confirm').show();
-            $imgCrop.attr('src', imageUrl).cropper({
-                zoomable: false,
-                modal: true,
-                aspectRatio: 1 / 1,
-                //done: function (data) {}
-            });
-            setTimeout(function () {
-                var aniHeight = $('.cropper-container').height();
-                $('.crop-wrap').css({ 'height': aniHeight});
-            }, 1000);
-        }
-
-        function triggerBasicCropper() {
-            var $cropper = $('#cropper_image'),
-                $crop_wrap = $('.crop-wrap');
-
-            if ($cropper.length) {
-                $crop_wrap.css({ 'opacity': 0 });
-                fileName = $('#cropper_image').attr('src').replace('/images/signup/', '');
-                $().hide();
-                $('.drop-meta').hide();
-                setTimeout(function () {
-                    $('.fd-file').hide();
-                    $crop_wrap.animate({ 'opacity': 1 }, 500);
-                }, 500);
-
-                loadCropper($cropper.attr('src'));
-            }
-        }
-
-        function doBasicUpload() {  
-            $('#basicUpload').show();
-            triggerBasicCropper();
-        }
-
-        function removeImage() {
-            $.post(removeUrl, {})
-                .done(function () {
-                    window.location.reload();
-                })
-                .fail(function () {
-                    displayError('ohh no!');
-                });
-        }
-
-        function saveImage(data, name) {
-
-            if (!savingImage) {
-                savingImage = true;
-                var postData = {
-                    'fd-file': name,
-                    'raw-file': data
-                };
-                $.post(uploadUrl, $.param(postData, true))
-                    .done(function (resp) {
-                        saveCroppedImageResponse(resp);
-                        savingImage = false;
-
-                    })
-                    .fail(function () {
-                        $cropZone.removeClass('disabled');
-                        displayError('There was an error saving the image.');
-                        savingImage = false;
-                    });
-            }
-        }
-
-        function loadFileDrop() {  
-            $('#zone').show();
-
-            // We can deal with iframe uploads using this URL:
-            var options = {
-                iframe: false
-            }; //{url: '/signup/photo/upload', callbackParam: 'fd-callback'}}
-            
-            // 'zone' is an ID but you can also give a DOM node:
-            zone = new filedrop.FileDrop('zone', options);
-            zone.event('send', function (files) {
-
-                files.each(function (file) {
-
-                    displayError('');
-
-                    var fs = Number(file.size / 1024),
-                        fileSize = Number(((fs / 1024) * 100) / 100),
-                        fileName1 = file.name,
-                        fileType = fileName1.replace(/^.*\./, '').toLowerCase();
-
-                    if (fileType !== 'png' && fileType !== 'jpg' && fileType !== 'jpeg') {
-                        displayError('Error: File must be a \'jpg\' or \'png\'');
-                    } else if (fileSize > 5) {
-                        displayError('Error: Upload file must be less than 5 MB');
-                    } else {
-                        $('.fd-file').hide();
-                        $('.progress').fadeIn('fast');
-                        file.event('progress', function (current, total) {
-                            var width = current / total * 100 + '%';
-                            filedrop.byID('bar_zone').style.width = width;
-                        });
-                        // Without waiting for image to upload to server, populate a hidden <img>
-                        // using the data from the dropped image
-                        file.readDataURL(function (dataURL) {
-                          imageHolder.src = dataURL;
-                          imageHolder.addEventListener("load", function() {
-                            // Before attempting to perform facial recognition, 
-                            // scale down the image to make sure it won't take forever
-                            if (imageHolder.naturalWidth > 1024) {
-                              imageHolder.width = 1024;
-                            }
-                            
-                            // If image is too small to be processed by AWS Rekognition,
-                            // don't bother trying. Instead, ask for a bigger image
-                            if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
-                                displayError('Goodness, what a tiny image! Please upload one that is at least 80 pixels in width and height — or click the Camera button to take a picture of yourself now!');
-                                return;
-                            }
-
-                            // Test whether image includes a face
-                            // If it does, re-enable the Next button
-                            file.read({
-                                onDone: function(data) {
-                                    rekognition.detectFaceFromBlob(data).then((faceData) => {
-                                        if (faceData.foundFace) {
-                                            reenableNext();
-                                            boundingBox = faceData.boundingBox;
-                                            var canvasData = $imgCrop.cropper('getCanvasData');
-                                            var cropBoxData = {};
-                                            cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
-                                            cropBoxData.top = Math.max(canvasData.height * (boundingBox.Top - (boundingBox.Height * 0.2)), 1);
-                                            cropBoxData.width = Math.min(canvasData.width * (boundingBox.Width * 1.4), (canvasData.width - cropBoxData.left));
-                                            cropBoxData.height = Math.min(canvasData.height * (boundingBox.Height * 1.4), (canvasData.height - cropBoxData.top));
-                                            $imgCrop.cropper('setCropBoxData', cropBoxData);
-                                        } else {
-                                            displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
-                                        };
-                                    }).catch((err) => {
-                                        console.log(err);
-                                        // If AWS is erroring, we should allow user to proceed,
-                                        // even at the risk of them getting away with uploading a picture without a face
-                                        reenableNext();
-                                    });
-                                },
-                                func: 'bin'
-                            });
-                          });
-                        });
-                        file.event('done', function (xhr) {
-                            $('.progress').fadeOut('fast', function () {
-                                var resp = jQuery.parseJSON(xhr.responseText);
-                                if (typeof resp.status !== 'undefined' && resp.status === 'success') {
-
-                                    // trigger cropper
-                                    loadCropper(resp.original);
-
-                                    return;
-                                }
-                                if (typeof resp.status !== 'undefined' && resp.status === 'error') {
-                                    displayError('Error: ' + resp.error);
-                                     $('.fd-file').show();
-                                    return;
-                                }
-
-                                // general error message
-                                displayError('Error: File could not be uploaded');
-                                $('.fd-file').show();
-                            });
-
-                        });
-                        file.sendTo(uploadUrl);
-                    }
-                    file.event('error', function () {
-                        // need better error
-                        //alert('Error uploading ' + this.name + ': ' + xhr.status + ', ' + xhr.statusText);
-                        displayError('Error uploading ' + this.name);
-                        $('.fd-file').show();
-                    });
-
-                });
-            });
-        }
+        
 
         $cropZone.on('click', '[data-method]', function () {
 
@@ -277,10 +304,6 @@ module.exports = function() {
             }
         });
 
-        // Keep track of Next button state
-        var nxtBtnDisabled = false;
-        var $nxtBtn, nxtBtnOriginalState;
-
         // Disables the Next button
         function disableNext() {
             // Find the button, store its original state
@@ -300,12 +323,6 @@ module.exports = function() {
         }
 
         disableNext();
-
-        // Re-enables the Next button
-        function reenableNext() {
-            $nxtBtn[0].outerHTML = nxtBtnOriginalState;
-            nxtBtnDisabled = false;
-        }
 
         // Tooltips
         $('#rotateLeft').tipsy({gravity: 's'});
