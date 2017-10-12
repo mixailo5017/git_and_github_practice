@@ -63,7 +63,7 @@
     "autocomplete.js": "^0.28.0",
     "aws-sdk": "^2.129.0",
     "babel-polyfill": "^6.26.0",
-    "cropper": "^3.0.0",
+    "cropper": "^3.1.1",
     "jquery": "^3.2.1",
     "magnific-popup": "^1.1.0",
     "mailcheck": "^1.1.1",
