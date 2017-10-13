@@ -41,7 +41,7 @@ function getUploadImageDimensions(image) {
     return dimensions;
 }
 
-function checkSizeThenCheckFaces() {
+function checkSizeThenCheckFaces(resolveCheckFaces) {
     // If image is too small to be processed by AWS Rekognition,
     // don't bother trying. Instead, ask for a bigger image
     if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
@@ -50,10 +50,10 @@ function checkSizeThenCheckFaces() {
     }
 
     // Once image has been resized, proceed with remaining logic
-    checkFaces();
+    checkFaces(resolveCheckFaces);
 }
 
-function checkFaces() {
+function checkFaces(resolveCheckFaces) {
     var dimensions = getUploadImageDimensions(imageHolder);
 
     // Test whether image includes a face
@@ -64,10 +64,11 @@ function checkFaces() {
         if (faceData.foundFace) {
             reenableNext();
             boundingBox = faceData.boundingBox;
-            repositionCropbox();
+            console.log("Got results back from AWS!");
         } else {
-            displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
+            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
         };
+        resolveCheckFaces();
     }).catch((err) => {
         console.log(err);
         // If AWS is erroring, we should allow user to proceed,
@@ -77,6 +78,7 @@ function checkFaces() {
 }
 
 function repositionCropbox() {
+    console.log("Repositioning cropbox now");
     var canvasData = $imgCrop.cropper('getCanvasData');
     var cropBoxData = {};
     cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
@@ -124,7 +126,8 @@ function saveCroppedImageResponse(resp) {
     }
 }
 
-function loadCropper(imageUrl) {
+function loadCropper(imageUrl, loadCropperResolve) {
+    console.log("Beginning to load cropper now");
     $('#zone').removeClass('fd-zone');
     $('#zone').removeClass('filedrop');
     $('.fd-file, .drop-meta').hide();
@@ -133,7 +136,11 @@ function loadCropper(imageUrl) {
         zoomable: false,
         modal: true,
         aspectRatio: 1 / 1,
-        //done: function (data) {}
+        ready: function (data) {
+            console.log("Done loading cropper now");
+            console.log(typeof loadCropperResolve);
+            if (typeof loadCropperResolve !== 'undefined') loadCropperResolve();
+        }
     });
     setTimeout(function () {
         var aniHeight = $('.cropper-container').height();
@@ -230,9 +237,13 @@ function loadFileDrop() {
                 });
                 // Without waiting for image to upload to server, populate a hidden <img>
                 // using the data from the dropped image
-                file.readDataURL(function (dataURL) {
-                  imageHolder.addEventListener("load", checkSizeThenCheckFaces, {once: true});
-                  imageHolder.src = dataURL;
+                var checkFacesPromise = new Promise((resolveCheckFaces, rejectCheckFaces) => {
+                    file.readDataURL(function (dataURL) {
+                      imageHolder.addEventListener("load", () => {
+                        checkSizeThenCheckFaces(resolveCheckFaces);
+                      }, {once: true});
+                      imageHolder.src = dataURL;
+                    });
                 });
 
                 file.event('done', function (xhr) {
@@ -241,8 +252,12 @@ function loadFileDrop() {
                         if (typeof resp.status !== 'undefined' && resp.status === 'success') {
 
                             // trigger cropper
-                            loadCropper(resp.original);
-
+                            var loadCropperPromise = new Promise((loadCropperResolve, loadCropperReject) => {
+                                loadCropper(resp.original, loadCropperResolve);
+                            });
+                            Promise.all([checkFacesPromise, loadCropperPromise]).then(() => {
+                                if (boundingBox) repositionCropbox();
+                            });
                             return;
                         }
                         if (typeof resp.status !== 'undefined' && resp.status === 'error') {
