@@ -51,7 +51,10 @@ function detectFaceFromBlob(imageBlob) {
                 reject(err);
             } else {
                 var foundFace = data.FaceDetails.length > 0;
-                var boundingBox = data.FaceDetails[0].BoundingBox;
+                var boundingBox = null;
+                if (foundFace) {
+                    boundingBox = data.FaceDetails[0].BoundingBox;
+                }
                 resolve({foundFace, boundingBox});
             }
         });
