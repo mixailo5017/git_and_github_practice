@@ -45,7 +45,7 @@ function checkSizeThenCheckFaces(resolveCheckFaces) {
     // If image is too small to be processed by AWS Rekognition,
     // don't bother trying. Instead, ask for a bigger image
     if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
-        displayError('Goodness, what a tiny image! Please upload one that is at least 80 pixels in width and height — or click the Camera button to take a picture of yourself now!');
+        displayError('Goodness, what a tiny image! Please upload one that is at least 80 pixels in width and height.');
         return;
     }
 
@@ -64,9 +64,8 @@ function checkFaces(resolveCheckFaces) {
         if (faceData.foundFace) {
             reenableNext();
             boundingBox = faceData.boundingBox;
-            console.log("Got results back from AWS!");
         } else {
-            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
+            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>");
         };
         resolveCheckFaces();
     }).catch((err) => {
@@ -78,7 +77,6 @@ function checkFaces(resolveCheckFaces) {
 }
 
 function repositionCropbox() {
-    console.log("Repositioning cropbox now");
     var canvasData = $imgCrop.cropper('getCanvasData');
     var cropBoxData = {};
     cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
@@ -127,7 +125,6 @@ function saveCroppedImageResponse(resp) {
 }
 
 function loadCropper(imageUrl, loadCropperResolve) {
-    console.log("Beginning to load cropper now");
     $('#zone').removeClass('fd-zone');
     $('#zone').removeClass('filedrop');
     $('.fd-file, .drop-meta').hide();
@@ -137,8 +134,6 @@ function loadCropper(imageUrl, loadCropperResolve) {
         modal: true,
         aspectRatio: 1 / 1,
         ready: function (data) {
-            console.log("Done loading cropper now");
-            console.log(typeof loadCropperResolve);
             if (typeof loadCropperResolve !== 'undefined') loadCropperResolve();
         }
     });
