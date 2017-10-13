@@ -65,7 +65,7 @@ function checkFaces(resolveCheckFaces) {
             reenableNext();
             boundingBox = faceData.boundingBox;
         } else {
-            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>");
+            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? Just click Remove Image and try again. <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>Learn more</a>.");
         };
         resolveCheckFaces();
     }).catch((err) => {
