@@ -24,6 +24,23 @@ var uploadUrl = '/signup/photo/upload',
     $nxtBtn,
     nxtBtnOriginalState;
 
+function getUploadImageDimensions(image) {
+    // Before attempting to perform facial recognition, 
+    // scale down the image to make sure it won't take forever
+    
+    var dimensions = {};
+    dimensions.width = image.naturalWidth;
+    dimensions.height = image.naturalHeight;
+
+    if (image.naturalWidth > 1024) {
+      var proportions = image.naturalWidth / image.naturalHeight;
+      dimensions.width = 1024;
+      dimensions.height = 1024 / proportions;
+    }
+
+    return dimensions;
+}
+
 function checkSizeThenCheckFaces() {
     // If image is too small to be processed by AWS Rekognition,
     // don't bother trying. Instead, ask for a bigger image
@@ -32,32 +49,22 @@ function checkSizeThenCheckFaces() {
         return;
     }
 
-    // Before attempting to perform facial recognition, 
-    // scale down the image to make sure it won't take forever
-    // if (imageHolder.naturalWidth > 1024) {
-    //   imageHolder.width = 1024;
-    // }
-
     // Once image has been resized, proceed with remaining logic
     checkFaces();
 }
 
 function checkFaces() {
+    var dimensions = getUploadImageDimensions(imageHolder);
+
     // Test whether image includes a face
     // If it does, re-enable the Next button
-    var imageInBase64 = getImageInBase64(imageHolder);
+    var imageInBase64 = getImageInBase64(imageHolder, dimensions.width, dimensions.height);
 
     rekognition.detectFaceFromBlob(imageInBase64).then((faceData) => {
         if (faceData.foundFace) {
             reenableNext();
             boundingBox = faceData.boundingBox;
-            var canvasData = $imgCrop.cropper('getCanvasData');
-            var cropBoxData = {};
-            cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
-            cropBoxData.top = Math.max(canvasData.height * (boundingBox.Top - (boundingBox.Height * 0.2)), 1);
-            cropBoxData.width = Math.min(canvasData.width * (boundingBox.Width * 1.4), (canvasData.width - cropBoxData.left));
-            cropBoxData.height = Math.min(canvasData.height * (boundingBox.Height * 1.4), (canvasData.height - cropBoxData.top));
-            $imgCrop.cropper('setCropBoxData', cropBoxData);
+            repositionCropbox();
         } else {
             displayError("Oh dear! We squinted but we couldn't see your face. Please could you try another image, or use the Camera to take a picture of yourself now?");
         };
@@ -69,15 +76,25 @@ function checkFaces() {
     });
 }
 
-function getImageInBase64(image) {
-    var canvas = document.createElement('canvas');
-    canvas.width = image.width; // or 'width' if you want a special/scaled size
-    canvas.height = image.height; // or 'height' if you want a special/scaled size
+function repositionCropbox() {
+    var canvasData = $imgCrop.cropper('getCanvasData');
+    var cropBoxData = {};
+    cropBoxData.left = Math.max(canvasData.width * (boundingBox.Left - (boundingBox.Width * 0.2)), 1);
+    cropBoxData.top = Math.max(canvasData.height * (boundingBox.Top - (boundingBox.Height * 0.2)), 1);
+    cropBoxData.width = Math.min(canvasData.width * (boundingBox.Width * 1.4), (canvasData.width - cropBoxData.left));
+    cropBoxData.height = Math.min(canvasData.height * (boundingBox.Height * 1.4), (canvasData.height - cropBoxData.top));
+    $imgCrop.cropper('setCropBoxData', cropBoxData);
+}
 
-    canvas.getContext('2d').drawImage(image, 0, 0);
+function getImageInBase64(image, width, height) {
+    var canvas = document.createElement('canvas');
+    canvas.width = width;
+    canvas.height = height;
+
+    canvas.getContext('2d').drawImage(image, 0, 0, width, height);
 
     // Get raw image data
-    var imageString = canvas.toDataURL('image/png').replace(/^data:image\/(png|jpg);base64,/, '');
+    var imageString = canvas.toDataURL('image/jpeg', 0.5).replace(/^data:image\/(png|jpe?g);base64,/, '');
     var imageBytes = base64js.toByteArray(imageString);
     return imageBytes;
 }
