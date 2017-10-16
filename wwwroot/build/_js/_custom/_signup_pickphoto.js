@@ -21,8 +21,8 @@ var uploadUrl = '/signup/photo/upload',
     boundingBox = null,
     // Keep track of Next button state
     nxtBtnDisabled = false,
-    $nxtBtn,
-    nxtBtnOriginalState;
+    $nxtBtn = $('#btnNext'),
+    nxtBtnOriginalState = $nxtBtn[0].outerHTML;;
 
 function getUploadImageDimensions(image) {
     // Before attempting to perform facial recognition, 
@@ -230,16 +230,6 @@ function loadFileDrop() {
                     var width = current / total * 100 + '%';
                     filedrop.byID('bar_zone').style.width = width;
                 });
-                // Without waiting for image to upload to server, populate a hidden <img>
-                // using the data from the dropped image
-                var checkFacesPromise = new Promise((resolveCheckFaces, rejectCheckFaces) => {
-                    file.readDataURL(function (dataURL) {
-                      imageHolder.addEventListener("load", () => {
-                        checkSizeThenCheckFaces(resolveCheckFaces);
-                      }, {once: true});
-                      imageHolder.src = dataURL;
-                    });
-                });
 
                 file.event('done', function (xhr) {
                     $('.progress').fadeOut('fast', function () {
@@ -267,7 +257,19 @@ function loadFileDrop() {
                     });
 
                 });
+
                 file.sendTo(uploadUrl);
+
+                // Without waiting for image to finish uploading to server, upload a scaled-down version
+                // to AWS Rekognition and see whether it contains a face
+                var checkFacesPromise = new Promise((resolveCheckFaces, rejectCheckFaces) => {
+                    file.readDataURL(function (dataURL) {
+                      imageHolder.addEventListener("load", () => {
+                        checkSizeThenCheckFaces(resolveCheckFaces);
+                      }, {once: true});
+                      imageHolder.src = dataURL;
+                    });
+                });
             }
             file.event('error', function () {
                 // need better error
@@ -286,23 +288,34 @@ function reenableNext() {
     nxtBtnDisabled = false;
 }
 
+function showSavingImageMessageAndSaveImage() {
+    var _top = $('.cropper-container').height() / 2;
+    $('.progress').fadeIn('fast').prepend('Saving image please wait.').css({'top':_top}).children().css({'width':'100%'});
+    $cropZone.addClass('disabled');
+    saveImage($imgCrop.cropper('getCroppedCanvas').toDataURL(), fileName);
+}
+
+// Disables the Next button
+function disableNext() {
+    // Manipulate its HTML so it is not clickable, etc.
+    $nxtBtn.css('opacity', .2);
+    $nxtBtn.css('cursor', 'default');
+    $nxtBtn.attr('title', "Please add a photo! It's the final step before confirming.");
+    $nxtBtn.removeAttr('href');
+
+    // Enable the nice tooltip
+    $nxtBtn.tipsy();
+
+    nxtBtnDisabled = true;
+}
+
+
 module.exports = function() {
 
     $(function () {
         'use strict'; 
 
-        // faceTracker.on('track', function(event) {
-        //   if (event.data.length === 0) {
-        //     // No faces were detected in this image.
-        //     displayError("Sorry, we looked hard but we couldn't find your face in this image. Please click Remove Image to try a different image, or <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>.");
-        //   } else {
-        //     // If image includes a face, enable Next button
-        //     reenableNext();
-        //     console.log(event);
-        //   }
-        // });
-
-        
+        disableNext();
 
         $cropZone.on('click', '[data-method]', function () {
 
@@ -323,10 +336,7 @@ module.exports = function() {
             }
 
             if (id === 'saveImage') {
-                var _top = $('.cropper-container').height() / 2;
-                $('.progress').fadeIn('fast').prepend('Saving image please wait.').css({'top':_top}).children().css({'width':'100%'});
-                $cropZone.addClass('disabled');
-                saveImage($imgCrop.cropper('getCroppedCanvas').toDataURL(), fileName);
+                showSavingImageMessageAndSaveImage();
             }
 
             if (id === 'removeImage') {
@@ -335,25 +345,10 @@ module.exports = function() {
             }
         });
 
-        // Disables the Next button
-        function disableNext() {
-            // Find the button, store its original state
-            $nxtBtn = $('#btnNext');
-            nxtBtnOriginalState = $nxtBtn[0].outerHTML;
-
-            // Manipulate its HTML so it is not clickable, etc.
-            $nxtBtn.css('opacity', .2);
-            $nxtBtn.css('cursor', 'default');
-            $nxtBtn.attr('title', "Please add a photo! It's the final step before confirming.");
-            $nxtBtn.removeAttr('href');
-
-            // Enable the nice tooltip
-            $nxtBtn.tipsy();
-
-            nxtBtnDisabled = true;
-        }
-
-        disableNext();
+        $nxtBtn.on('click', () => {
+            if (! $nxtBtn.hasClass('disabled') ) showSavingImageMessageAndSaveImage();
+            return false;
+        })
 
         // Tooltips
         $('#rotateLeft').tipsy({gravity: 's'});
