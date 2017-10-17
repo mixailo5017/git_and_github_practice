@@ -30,6 +30,7 @@ wwwroot/.sass-cache/**
 wwwroot/js/main.*.js*
 wwwroot/js/vendor.*.js*
 wwwroot/js/runtime.*.js*
+wwwroot/js/bundles.html
 
 # Composer-installed dependencies
 vendor/
