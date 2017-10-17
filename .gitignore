@@ -27,6 +27,9 @@ wwwroot/node_modules/**
 
 # Build artefacts
 wwwroot/.sass-cache/**
+wwwroot/js/main.*.js*
+wwwroot/js/vendor.*.js*
+wwwroot/js/runtime.*.js*
 
 # Composer-installed dependencies
 vendor/
