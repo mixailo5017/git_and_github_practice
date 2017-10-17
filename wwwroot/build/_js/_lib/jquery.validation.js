@@ -1229,7 +1229,7 @@
                     error[inputName] = [error[inputName]];
                 }
 
-                input = $(node.selector).find('[name="' + inputName + '"]');
+                input = node.find('[name="' + inputName + '"]');
                 if (!input[0]) {
                     window.Debug.log({
                         'node': node,
