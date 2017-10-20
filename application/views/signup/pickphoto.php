@@ -28,7 +28,6 @@
                         </div>
                         <div class="crop-confirm" style="visibility: visible !important; display: none !important;">
                             <button class="btn std" data-method="remove" data-option="true" id="removeImage" type="button">Remove Image</button>
-                            <button class="btn std" data-method="none" id="saveImage" type="button">Save Image</button>
                         </div>
                     </div>
                     <div class="drop-meta">

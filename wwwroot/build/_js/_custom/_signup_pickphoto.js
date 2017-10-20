@@ -110,7 +110,6 @@ function fixHeight() {
 }
 
 function nextButtonClickHandler() {
-    console.log("I got clicked!!");
     if (! nxtBtnDisabled ) showSavingImageMessageAndSaveImage();
     return false;
 }
@@ -338,10 +337,6 @@ module.exports = function() {
                     fixHeight();
                 }
 
-            }
-
-            if (id === 'saveImage') {
-                showSavingImageMessageAndSaveImage();
             }
 
             if (id === 'removeImage') {
