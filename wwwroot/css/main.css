@@ -99,15 +99,13 @@ Version: 1.0
 .mfp-zoom-out-cur,
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close
 {
-    cursor: -webkit-zoom-out;
-    cursor:         zoom-out;
+    cursor: zoom-out;
 }
 
 .mfp-zoom
 {
     cursor: pointer;
-    cursor: -webkit-zoom-in;
-    cursor:         zoom-in;
+    cursor: zoom-in;
 }
 
 .mfp-auto-cursor .mfp-content
@@ -2327,6 +2325,18 @@ Button Styles
 {
     color: #f8f8fa;
     background: #789d73;
+}
+
+.dk-green--disabled
+{
+    opacity: .2;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+}
+
+.dk-green--disabled:hover
+{
+    cursor: default;
 }
 
 .lt-blue
@@ -5752,8 +5762,7 @@ body
 {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: -webkit-flex;
-    display:         flex;
+    display: flex;
 
     padding: 6px 12px;
 
@@ -5763,20 +5772,17 @@ body
 
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    -webkit-justify-content: space-between;
-            justify-content: space-between;
+    justify-content: space-between;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    -webkit-align-items: center;
-            align-items: center;
+    align-items: center;
 }
 
 .aa-suggestion.aa-suggestion-empty
 {
     -webkit-box-pack: initial;
-    -webkit-justify-content: initial;
     -ms-flex-pack: initial;
-            justify-content: initial;
+    justify-content: initial;
 }
 
 .aa-suggestion.aa-suggestion-empty a
@@ -5862,18 +5868,16 @@ body
 .select2-container .select2-selection
 {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
-    display:         flex;
+    display: flex;
 
     min-height: 41px;
 
     vertical-align: middle;
 
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     /* align vertical */
 }
 

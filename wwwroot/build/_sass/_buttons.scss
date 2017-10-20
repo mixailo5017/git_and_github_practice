@@ -77,7 +77,12 @@ Button Styles
 	}
 }
 
-
+.dk-green--disabled {
+	opacity: .2;
+	&:hover {
+		cursor: default;
+	}
+}
 
 .lt-blue {
 	color: $bluish-off-white;

@@ -21,8 +21,7 @@ var uploadUrl = '/signup/photo/upload',
     boundingBox = null,
     // Keep track of Next button state
     nxtBtnDisabled = false,
-    $nxtBtn = $('#btnNext'),
-    nxtBtnOriginalState = $nxtBtn[0].outerHTML;;
+    $nxtBtn = $('#btnNext');
 
 function getUploadImageDimensions(image) {
     // Before attempting to perform facial recognition, 
@@ -108,6 +107,12 @@ function fixHeight() {
         var rotateHeight = $('.cropper-container').height() + 60;
         $('.crop-here').css({ 'height': rotateHeight});
     }, 500);
+}
+
+function nextButtonClickHandler() {
+    console.log("I got clicked!!");
+    if (! nxtBtnDisabled ) showSavingImageMessageAndSaveImage();
+    return false;
 }
 
 function displayError(msg) {
@@ -284,7 +289,8 @@ function loadFileDrop() {
 
 // Re-enables the Next button
 function reenableNext() {
-    $nxtBtn[0].outerHTML = nxtBtnOriginalState;
+    $nxtBtn.removeClass('dk-green--disabled');
+    $nxtBtn.attr('original-title', ''); // Removes the tooltip
     nxtBtnDisabled = false;
 }
 
@@ -297,11 +303,10 @@ function showSavingImageMessageAndSaveImage() {
 
 // Disables the Next button
 function disableNext() {
+    $nxtBtn.addClass('dk-green--disabled');
+
     // Manipulate its HTML so it is not clickable, etc.
-    $nxtBtn.css('opacity', .2);
-    $nxtBtn.css('cursor', 'default');
     $nxtBtn.attr('title', "Please add a photo! It's the final step before confirming.");
-    $nxtBtn.removeAttr('href');
 
     // Enable the nice tooltip
     $nxtBtn.tipsy();
@@ -345,10 +350,7 @@ module.exports = function() {
             }
         });
 
-        $nxtBtn.on('click', () => {
-            if (! $nxtBtn.hasClass('disabled') ) showSavingImageMessageAndSaveImage();
-            return false;
-        })
+        $nxtBtn.on('click', nextButtonClickHandler);
 
         // Tooltips
         $('#rotateLeft').tipsy({gravity: 's'});
