@@ -1,6 +1,6 @@
 <section class="main-content container">
     <h1 class="h1-xl">Upload Photo</h1>
-    <p>It's time to put a face to your name.<br>Adding a photo is great way to inspire other experts and project developers to connect with you.</p>
+    <p>It's time to put a face to your name.<br>Adding a photo is great way to inspire others to connect with you. <a href="https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-" target="_blank">Learn more.</a></p>
 
     <?php $this->load->view('signup/_progress', array('step' => 'photo')) ?>
 

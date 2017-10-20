@@ -44,7 +44,7 @@ function checkSizeThenCheckFaces(resolveCheckFaces) {
     // If image is too small to be processed by AWS Rekognition,
     // don't bother trying. Instead, ask for a bigger image
     if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
-        displayError('Goodness, what a tiny image! Please upload one that is at least 80 pixels in width and height.');
+        displayError("Goodness, what a tiny image! We don't want you to look blurry — please click Remove Image and upload one that is at least 80 pixels in width and height.");
         return;
     }
 
@@ -64,7 +64,7 @@ function checkFaces(resolveCheckFaces) {
             reenableNext();
             boundingBox = faceData.boundingBox;
         } else {
-            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? Just click Remove Image and try again. <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>Learn more</a>.");
+            displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? Just click Remove Image and try again, or <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>.");
         };
         resolveCheckFaces();
     }).catch((err) => {
