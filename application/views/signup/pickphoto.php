@@ -32,11 +32,14 @@
                     </div>
                     <div class="drop-meta">
                         <p class="inst">Drop an image file here to upload<br />or</p>
-                        <?php $bntText = empty($signup['userphoto']) ? 'Select File' : 'Remove Photo'; ?>
-                        <input type="button" class="btn std input-file" data-id="userphoto" value="<?php echo $bntText ?>" />
+                        <?php 
+                            $alreadyHasPhoto = !empty($signup['userphoto']);
+                            $btnText = !$alreadyHasPhoto ? 'Select File' : 'Remove Photo';
+                        ?>
+                        <input type="button" class="btn std input-file" data-id="userphoto" value="<?php echo $btnText ?>" />
                         <div id="basicUpload" style="display: none; padding: 10px;">
                             
-                            <?php if (!empty($signup['userphoto'])): ?>
+                            <?php if ($alreadyHasPhoto): ?>
                                 <!-- <input type="submit" name="remove_photo" value="Remove Image" /> -->
                                 <img src="<?php echo SIGNUP_IMAGE_PATH . $signup['userphoto']?>" id="cropper_image" alt="user photo" style="display:none" />
                             <?php else: ?>
@@ -50,7 +53,7 @@
                             <?php endif; ?>
 
                         </div>
-                        <p class="subline">Supported file types: JPEG, GIF, PNG. Max file size is 5MB.</p>
+                        <p class="subline">Supported file types: JPEG, PNG. Max file size is 5MB.</p>
                     </div>
                 </div>
                 
