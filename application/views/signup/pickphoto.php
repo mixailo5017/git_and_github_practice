@@ -30,13 +30,18 @@
                             <button class="btn std" data-method="remove" data-option="true" id="removeImage" type="button">Remove Image</button>
                         </div>
                     </div>
+                    <?php 
+                        $alreadyHasPhoto = !empty($signup['userphoto']);
+                    ?>
                     <div class="drop-meta">
-                        <p class="inst">Drop an image file here to upload<br />or</p>
-                        <?php 
-                            $alreadyHasPhoto = !empty($signup['userphoto']);
-                            $btnText = !$alreadyHasPhoto ? 'Select File' : 'Remove Photo';
-                        ?>
-                        <input type="button" class="btn std input-file" data-id="userphoto" value="<?php echo $btnText ?>" />
+                        <?php if ($alreadyHasPhoto): ?>
+                            <button class="btn std" id="editExistingPhoto" type="button">Edit Image</button>
+                            <button class="btn std" id="removeExistingPhoto" type="button">Remove Photo</button>
+                        <?php else: ?>
+                            <p class="inst">Drop an image file here to upload<br />or</p>
+                            <input type="button" class="btn std input-file" data-id="userphoto" value="Select File" />
+                        <?php endif; ?>
+                        
                         <div id="basicUpload" style="display: none; padding: 10px;">
                             
                             <?php if ($alreadyHasPhoto): ?>

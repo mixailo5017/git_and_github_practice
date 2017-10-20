@@ -165,9 +165,8 @@ function triggerBasicCropper() {
     }
 }
 
-function doBasicUpload() {  
+function showBasicUpload() {  
     $('#basicUpload').show();
-    triggerBasicCropper();
 }
 
 function removeImage() {
@@ -319,8 +318,6 @@ module.exports = function() {
     $(function () {
         'use strict'; 
 
-        disableNext();
-
         $cropZone.on('click', '[data-method]', function () {
 
             var $this = $(this),
@@ -336,7 +333,6 @@ module.exports = function() {
                 if (data.method === 'rotate') {
                     fixHeight();
                 }
-
             }
 
             if (id === 'removeImage') {
@@ -358,13 +354,17 @@ module.exports = function() {
             });
         }
 
-        triggerBasicCropper();
-
-        if (hasDraggable()) {
-            loadFileDrop();
-        } else {
-            doBasicUpload();
+        var userAlreadyHasImage = $('#editExistingPhoto').length > 0;
+        if (userAlreadyHasImage) { // Let them edit it
+            $('#editExistingPhoto').on('click', triggerBasicCropper);
+            $('#removeExistingPhoto').on('click', removeImage);
+        } else { // Let them upload one. They cannot proceed until they do!
+            disableNext();
+            if (hasDraggable()) {
+                loadFileDrop();
+            } else {
+                showBasicUpload();
+            }
         }
-
     });
 };
