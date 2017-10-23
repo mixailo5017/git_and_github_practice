@@ -1,8 +1,10 @@
 <section class="main-content container">
     <h1 class="h1-xl">Upload Photo</h1>
-    <p>It's time to put a face to your name.<br>Adding a photo is great way to inspire other experts and project developers to connect with you.</p>
+    <p>It's time to put a face to your name.<br>Adding a photo is great way to inspire others to connect with you. <a href="https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-" target="_blank">Learn more.</a></p>
 
     <?php $this->load->view('signup/_progress', array('step' => 'photo')) ?>
+
+    <img id="pickphoto-imageholder">
 
     <div class="form-cta">
         <div class="interior">
@@ -26,16 +28,23 @@
                         </div>
                         <div class="crop-confirm" style="visibility: visible !important; display: none !important;">
                             <button class="btn std" data-method="remove" data-option="true" id="removeImage" type="button">Remove Image</button>
-                            <button class="btn std" data-method="none" id="saveImage" type="button">Save Image</button>
                         </div>
                     </div>
+                    <?php 
+                        $alreadyHasPhoto = !empty($signup['userphoto']);
+                    ?>
                     <div class="drop-meta">
-                        <p class="inst">Drop an image file here to upload<br />or</p>
-                        <?php $bntText = empty($signup['userphoto']) ? 'Select File' : 'Remove Photo'; ?>
-                        <input type="button" class="btn std input-file" data-id="userphoto" value="<?php echo $bntText ?>" />
+                        <?php if ($alreadyHasPhoto): ?>
+                            <button class="btn std" id="editExistingPhoto" type="button">Edit Image</button>
+                            <button class="btn std" id="removeExistingPhoto" type="button">Remove Photo</button>
+                        <?php else: ?>
+                            <p class="inst">Drop an image file here to upload<br />or</p>
+                            <input type="button" class="btn std input-file" data-id="userphoto" value="Select File" />
+                        <?php endif; ?>
+                        
                         <div id="basicUpload" style="display: none; padding: 10px;">
                             
-                            <?php if (!empty($signup['userphoto'])): ?>
+                            <?php if ($alreadyHasPhoto): ?>
                                 <!-- <input type="submit" name="remove_photo" value="Remove Image" /> -->
                                 <img src="<?php echo SIGNUP_IMAGE_PATH . $signup['userphoto']?>" id="cropper_image" alt="user photo" style="display:none" />
                             <?php else: ?>
@@ -49,7 +58,7 @@
                             <?php endif; ?>
 
                         </div>
-                        <p class="subline">Supported file types: JPEG, GIF, PNG. Max file size is 5MB.</p>
+                        <p class="subline">Supported file types: JPEG, PNG. Max file size is 5MB.</p>
                     </div>
                 </div>
                 

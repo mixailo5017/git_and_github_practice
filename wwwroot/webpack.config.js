@@ -1,6 +1,7 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 const NameAllModulesPlugin = require('name-all-modules-plugin');
+const WebpackBuildNotifierPlugin = require('webpack-build-notifier');
 const webpack = require('webpack'); //to access built-in plugins
 const path = require('path');
 
@@ -34,7 +35,10 @@ const config = {
       'mailcheck',
       'magnific-popup',
       'select2',
-      'cropper'
+      'cropper',
+      'babel-polyfill',
+      'aws-sdk/clients/rekognition',
+      'aws-sdk/clients/cognitoidentity'
     ]
   },
   output: {
@@ -68,15 +72,25 @@ const config = {
         $               : "jquery",
         jQuery          : "jquery",
         "window.jQuery" : "jquery"
+    }),
+    new WebpackBuildNotifierPlugin({
+      title: "GViP Webpack Build",
+      logo: path.resolve("./favicon-32x32.png")
     })
   ],
   devtool: devTool,
   module: {
-    loaders: [
+    rules: [
       {
-        // For jquery.validation, change references to 'this' to point to 'window'
-        test: /..\/_lib\/jquery.validation.js$/,
-        loader: "imports-loader?this=>window"
+        test: /\.js$/,
+        include: path.resolve(__dirname, "build/_js/_custom"),
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['env'],
+            cacheDirectory: true
+          }
+        }
       }
     ]
   }

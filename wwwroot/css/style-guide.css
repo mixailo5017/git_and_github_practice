@@ -1007,6 +1007,18 @@ Button Styles
     background: #789d73;
 }
 
+.dk-green--disabled
+{
+    opacity: .2;
+
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=20)';
+}
+
+.dk-green--disabled:hover
+{
+    cursor: default;
+}
+
 .lt-blue
 {
     color: #f8f8fa;
