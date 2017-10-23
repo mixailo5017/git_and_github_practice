@@ -40,19 +40,20 @@ function getUploadImageDimensions(image) {
     return dimensions;
 }
 
-function checkSizeThenCheckFaces(resolveCheckFaces) {
+function checkSizeThenCheckFaces(resolveCheckFaces, rejectCheckFaces) {
     // If image is too small to be processed by AWS Rekognition,
     // don't bother trying. Instead, ask for a bigger image
     if (imageHolder.naturalWidth < 80 || imageHolder.naturalHeight < 80) {
         displayError("Goodness, what a tiny image! We don't want you to look blurry — please click Remove Image and upload one that is at least 80 pixels in width and height.");
+        rejectCheckFaces("Image too small.");
         return;
     }
 
     // Once image has been resized, proceed with remaining logic
-    checkFaces(resolveCheckFaces);
+    checkFaces(resolveCheckFaces, rejectCheckFaces);
 }
 
-function checkFaces(resolveCheckFaces) {
+function checkFaces(resolveCheckFaces, rejectCheckFaces) {
     var dimensions = getUploadImageDimensions(imageHolder);
 
     // Test whether image includes a face
@@ -63,10 +64,11 @@ function checkFaces(resolveCheckFaces) {
         if (faceData.foundFace) {
             reenableNext();
             boundingBox = faceData.boundingBox;
+            resolveCheckFaces();
         } else {
             displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? Just click Remove Image and try again, or <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>.");
+            rejectCheckFaces("No face found.");
         };
-        resolveCheckFaces();
     }).catch((err) => {
         console.log(err);
         // If AWS is erroring, we should allow user to proceed,
@@ -169,10 +171,10 @@ function showBasicUpload() {
     $('#basicUpload').show();
 }
 
-function removeImage() {
+function removeImage(reload = true) {
     $.post(removeUrl, {})
         .done(function () {
-            window.location.reload();
+            if (reload) window.location.reload();
         })
         .fail(function () {
             displayError('ohh no!');
@@ -244,7 +246,16 @@ function loadFileDrop() {
                                 loadCropper(resp.original, loadCropperResolve);
                             });
                             Promise.all([checkFacesPromise, loadCropperPromise]).then(() => {
-                                if (boundingBox) repositionCropbox();
+                                if (boundingBox) {
+                                    repositionCropbox();
+                                }
+                            }).catch((error) => {
+                                console.log("One of the promises failed, with this error:", error);
+                                removeImage(false);
+                                // Don't store image on the server — as a malicious attempt to circumvent
+                                // the requirement to provide a legitimate profile picture, it doesn't deserve to be stored.
+                                // Plus, storing it means the user can hit Reload (or manually go to /signup/confirm) and then 
+                                // gain illicit, faceless access to GViP
                             });
                             return;
                         }
@@ -268,7 +279,7 @@ function loadFileDrop() {
                 var checkFacesPromise = new Promise((resolveCheckFaces, rejectCheckFaces) => {
                     file.readDataURL(function (dataURL) {
                       imageHolder.addEventListener("load", () => {
-                        checkSizeThenCheckFaces(resolveCheckFaces);
+                        checkSizeThenCheckFaces(resolveCheckFaces, rejectCheckFaces);
                       }, {once: true});
                       imageHolder.src = dataURL;
                     });
