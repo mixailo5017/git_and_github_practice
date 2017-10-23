@@ -70,10 +70,10 @@ function checkFaces(resolveCheckFaces, rejectCheckFaces) {
             rejectCheckFaces("No face found.");
         };
     }).catch((err) => {
-        console.log(err);
         // If AWS is erroring, we should allow user to proceed,
         // even at the risk of them getting away with uploading a picture without a face
         reenableNext();
+        resolveCheckFaces();
     });
 }
 
@@ -250,7 +250,6 @@ function loadFileDrop() {
                                     repositionCropbox();
                                 }
                             }).catch((error) => {
-                                console.log("One of the promises failed, with this error:", error);
                                 removeImage(false);
                                 // Don't store image on the server — as a malicious attempt to circumvent
                                 // the requirement to provide a legitimate profile picture, it doesn't deserve to be stored.
