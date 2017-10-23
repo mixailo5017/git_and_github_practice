@@ -68,6 +68,14 @@ function checkFaces(resolveCheckFaces, rejectCheckFaces) {
         } else {
             displayError("Oh dear! We looked hard but we couldn't see your face. Please could you try another image? Just click Remove Image and try again, or <a href='https://gvip.zendesk.com/hc/en-us/articles/115002480574-Why-do-I-need-to-upload-a-profile-picture-in-order-to-join-GViP-' target='_blank'>get help</a>.");
             rejectCheckFaces("No face found.");
+            segmentAnalytics({
+                "event": {
+                    "name": "Uploaded Expert Profile Picture",
+                    "properties": {
+                        "Face": false
+                    }
+                }
+            });
         };
     }).catch((err) => {
         // If AWS is erroring, we should allow user to proceed,
