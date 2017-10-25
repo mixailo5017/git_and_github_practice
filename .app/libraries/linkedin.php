@@ -11,23 +11,20 @@ class Linkedin
     private $token;
 
     private $scope = array(
-        'r_fullprofile',
         'r_emailaddress',
-        'r_contactinfo',
+        'r_basicprofile'
     );
 
     private $profile_fields = array(
         'first-name',
         'last-name',
         'email-address',
-//        'picture-url',
         'headline', //job title
         'phone-numbers',
         'main-address',
         'positions',
         'location',
-        'picture-urls::(original)',
-//        'picture-urls::(80x80)'
+        'picture-urls::(original)'
     );
 
     private $company_fields = array(
@@ -47,10 +44,12 @@ class Linkedin
         $this->CI =& get_instance();
 
         $config = $this->CI->config->item('linkedin');
+        $inDevEnvironment = ENVIRONMENT === 'dev';
 
         $this->CI->load->library('OAuth2/OAuth2');
 
-        $redirect_url = str_replace('http://', 'https://', base_url() . $this->redirect_uri);
+        $secure_base_url = str_replace('http://', 'https://', base_url());
+        $redirect_url = ($inDevEnvironment ? base_url() : $secure_base_url) . $this->redirect_uri;
         $this->linkedin = $this->CI->oauth2->provider('Linkedin', array(
             'id'            => $config['api_key'],
             'secret'        => $config['secret_key'],

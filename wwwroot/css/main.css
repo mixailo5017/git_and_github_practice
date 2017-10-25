@@ -2358,6 +2358,8 @@ Button Styles
 
 .lt-blue.icon-linkedin
 {
+    line-height: normal;
+
     padding-left: 45px;
 
     background: url(../images/new/linkedin-btn.png) no-repeat;
