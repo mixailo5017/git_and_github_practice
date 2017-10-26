@@ -44,12 +44,12 @@ class Linkedin
         $this->CI =& get_instance();
 
         $config = $this->CI->config->item('linkedin');
-        $inDevEnvironment = ENVIRONMENT === 'dev';
+        $inATestingEnvironment = in_array(ENVIRONMENT, ['dev', 'staging'], false);
 
         $this->CI->load->library('OAuth2/OAuth2');
 
         $secure_base_url = str_replace('http://', 'https://', base_url());
-        $redirect_url = ($inDevEnvironment ? base_url() : $secure_base_url) . $this->redirect_uri;
+        $redirect_url = ($inATestingEnvironment ? base_url() : $secure_base_url) . $this->redirect_uri;
         $this->linkedin = $this->CI->oauth2->provider('Linkedin', array(
             'id'            => $config['api_key'],
             'secret'        => $config['secret_key'],
