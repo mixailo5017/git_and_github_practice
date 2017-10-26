@@ -33,7 +33,7 @@ class Signup extends CI_Controller
      */
     public function linkedin_authorized()
     {
-        $error = 'Sorry. Something went wrong while trying to get your profile data from LinkedIn';
+        $error = "We're really sorry, but we weren't able to to get your information from LinkedIn. Please click Continue and enter it manually.";
 
         try {
             $profile = $this->linkedin->profile();
@@ -44,6 +44,7 @@ class Signup extends CI_Controller
                 'firstname' => isset($profile['firstName']) ? $profile['firstName'] : '',
                 'lastname' => isset($profile['lastName']) ? $profile['lastName'] : '',
                 'email' => isset($profile['emailAddress']) ? $profile['emailAddress'] : '',
+                'city' => $profile['location']['name'] ?? ''
             );
 
             if (isset($profile['location']['country']['code']))
@@ -395,7 +396,7 @@ class Signup extends CI_Controller
         try {
             $email = $data['email'];
 
-            $picture_url = (isset($profile['pictureUrls']['values'][0])) ? $profile['pictureUrls']['values'][0] : null;
+            $picture_url = $profile['pictureUrls']['values'][0] ?? null;
             $payload = json_encode($profile);
 
             $this->db
