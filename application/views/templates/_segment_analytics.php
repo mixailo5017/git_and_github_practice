@@ -3,7 +3,7 @@
   
         window.analytics.load("<?php echo sa_tracking_id() ?>");
 
-        var GVIP = GVIP || {};
+        var GVIP = window.GVIP = window.GVIP || {};
         GVIP.App = GVIP.App || {};
         GVIP.App.Analytics = GVIP.App.Analytics || {};
 
