@@ -378,8 +378,17 @@ jQuery(document).ready(function(){
 		}
 	}
 	
+	/* Remove placeholder text when user clicks inside an input box */
 	jQuery('input').focus(function() {
 		jQuery(this).removeAttr('placeholder');
+	});
+
+	jQuery('.copybutton').click(function() {
+		var copyFromID = jQuery(this).data('copyfrom');
+		var copyFromElement = jQuery('#' + copyFromID);
+		copyFromElement.select();
+		document.execCommand('copy');
+		return false;
 	});
 	
 

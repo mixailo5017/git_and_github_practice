@@ -59,5 +59,20 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	
+	public function generatehtml()
+	{
+		$data['headertitle'] = $this->headerdata['title'];
+
+		$experts = array_filter($this->input->post('experts') ?: []);
+		$projects = array_filter($this->input->post('projects') ?: []);
+		
+		if (count($experts) < 4 || count($projects) < 4) {
+			$data['error'] = "You didn't include enough experts/projects! Please go back and ensure all fields are completed.";
+		}
+
+		$this->load->view('templates/header', $this->headerdata);
+		$this->load->view('templates/leftmenu');
+		$this->load->view('marketing/generatehtml', $data);
+		$this->load->view('templates/footer');
+	}
 }
