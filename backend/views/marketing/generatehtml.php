@@ -20,7 +20,7 @@
 			<?php } ?>
 
 			<form>
-				<textarea id="htmloutput" readonly="readonly">Here is some HTML</textarea>
+				<textarea id="htmloutput" readonly="readonly" rows="25"><?php echo htmlentities($this->load->view('marketing/email_output', '', true)) ?></textarea>
 				<br>
 				<button class="copybutton" data-copyfrom="htmloutput">Copy</button>
 			</form>

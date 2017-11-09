@@ -59,16 +59,29 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	/**
+	 * Generate HTML to send out as an email, using the weekly email template
+	 * @return HTML Shows a page from which the HTML can be copied to clipboard
+	 */
 	public function generatehtml()
 	{
 		$data['headertitle'] = $this->headerdata['title'];
 
-		$experts = array_filter($this->input->post('experts') ?: []);
-		$projects = array_filter($this->input->post('projects') ?: []);
+		$expertURLs = array_filter($this->input->post('experts') ?: []);
+		$projectURLs = array_filter($this->input->post('projects') ?: []);
 		
-		if (count($experts) < 4 || count($projects) < 4) {
+		if (count($expertURLs) < 4 || count($projectURLs) < 4) {
 			$data['error'] = "You didn't include enough experts/projects! Please go back and ensure all fields are completed.";
 		}
+
+		$expertsData = [];
+		$requiredExpertFields = "uid, firstname, lastname, title, organization";
+		foreach ($expertURLs as $expertURL) {
+			if (!preg_match('/\d+$/', $expertURL, $matches)) continue;
+			$uid = (int) $matches[0];
+			$expertsData[] = $this->members_model->find($uid, $requiredExpertFields);
+		}
+		var_dump($expertsData); die;
 
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');
