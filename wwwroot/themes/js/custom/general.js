@@ -378,6 +378,9 @@ jQuery(document).ready(function(){
 		}
 	}
 	
+	jQuery('input').focus(function() {
+		jQuery(this).removeAttr('placeholder');
+	});
 	
 
 });
