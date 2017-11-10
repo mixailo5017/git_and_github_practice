@@ -25,6 +25,7 @@
 				<button class="copybutton" data-copyfrom="htmloutput">Copy</button>
 			</form>
 			
+			<iframe srcdoc="<?php echo htmlspecialchars($this->load->view('marketing/email_output', '', true)) ?>"></iframe>
 
 		</div><!--contentwrapper-->
         
