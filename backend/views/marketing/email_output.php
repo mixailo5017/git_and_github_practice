@@ -69,46 +69,18 @@
                                         <table width="100%">
                                             <tbody>
                                                 <tr>
+                                                	<?php foreach($expertsData as $expert): ?>
                                                     <td valign="top">
                                                         <div>
                                                             <img alt="" height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[0]; ?>"><img height="120" src=<?php echo '"' . $experts[0]['imageURL'] . '"'; ?> width="120" /></a></p>
+                                                            <a href="https://www.gvip.io/expertise/<?php echo $expert['uid']; ?>"><img height="120" src="<?php echo $expert['imageURL']; ?>" width="120" /></a></p>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[0]; ?>"><?php echo htmlspecialchars($experts[0]['firstname'] . ' ' . $experts[0]['lastname'], ENT_QUOTES); ?></a><br />
-                                                            <?php echo htmlspecialchars($experts[0]['title'], ENT_QUOTES); ?><br />
-                                                            <?php echo htmlspecialchars($experts[0]['organization'], ENT_QUOTES); ?></p>
+                                                            <a href="https://www.gvip.io/expertise/<?php echo $expert['uid']; ?>"><?php echo htmlspecialchars($expert['firstname'] . ' ' . $expert['lastname'], ENT_QUOTES); ?></a><br />
+                                                            <?php echo htmlspecialchars($expert['title'], ENT_QUOTES); ?><br />
+                                                            <?php echo htmlspecialchars($expert['organization'], ENT_QUOTES); ?></p>
                                                     </td>
-                                                    <td valign="top">
-                                                        <div>
-                                                            <img alt="" height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[1]; ?>"><img height="120" src=<?php echo '"' . $experts[1]['imageURL'] . '"'; ?> width="120" /></a></p>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[1]; ?>"><?php echo htmlspecialchars($experts[1]['firstname'] . ' ' . $experts[1]['lastname'], ENT_QUOTES); ?></a><br />
-                                                            <?php echo htmlspecialchars($experts[1]['title'], ENT_QUOTES); ?><br />
-                                                            <?php echo htmlspecialchars($experts[1]['organization'], ENT_QUOTES); ?></p>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <div>
-                                                            <img alt="" height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[2]; ?>"><img height="120" src=<?php echo '"' . $experts[2]['imageURL'] . '"'; ?> width="120" /></a></p>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[2]; ?>"><?php echo htmlspecialchars($experts[2]['firstname'] . ' ' . $experts[2]['lastname'], ENT_QUOTES); ?></a><br />
-                                                            <?php echo htmlspecialchars($experts[2]['title'], ENT_QUOTES); ?><br />
-                                                            <?php echo htmlspecialchars($experts[2]['organization'], ENT_QUOTES); ?></p>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <div>
-                                                            <img alt="" height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[3]; ?>"><img height="120" src=<?php echo '"' . $experts[3]['imageURL'] . '"'; ?> width="120" /></a></p>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $uid[3]; ?>"><?php echo htmlspecialchars($experts[3]['firstname'] . ' ' . $experts[3]['lastname'], ENT_QUOTES); ?></a><br />
-                                                            <?php echo htmlspecialchars($experts[3]['title'], ENT_QUOTES); ?><br />
-                                                            <?php echo htmlspecialchars($experts[3]['organization'], ENT_QUOTES); ?></p>
-                                                    </td>                                                                                   
+	                                                <?php endforeach; ?>                                                                                  
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -138,38 +110,16 @@
                                         <table width="100%">
                                             <tbody>
                                                 <tr>
+                                                    <?php foreach($projectsData as $project): ?>
                                                     <td valign="top">
                                                         <div>
                                                             <img height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[0]; ?>"><img height="120" src=<?php echo '"' . $projects[0]['imageURL'] . '"'; ?> width="120" /></a></p>
+                                                            <a href="https://www.gvip.io/projects/<?php echo $project['slug'] ?>"><img height="120" src="<?php echo $project['imageURL']; ?>" width="120" /></a></p>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[0]; ?>"><?php echo htmlspecialchars($projects[0]['projectname'], ENT_QUOTES); ?></a></p>
+                                                            <a href="https://www.gvip.io/projects/<?php echo $project['slug'] ?>"><?php echo htmlspecialchars($project['projectname'], ENT_QUOTES); ?></a></p>
                                                     </td>
-                                                    <td valign="top">
-                                                        <div>
-                                                            <img height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[1]; ?>"><img height="120" src=<?php echo '"' . $projects[1]['imageURL'] . '"'; ?> width="120" /></a></p>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[1]; ?>"><?php echo htmlspecialchars($projects[1]['projectname'], ENT_QUOTES); ?></a></p>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <div>
-                                                            <img height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[2]; ?>"><img height="120" src=<?php echo '"' . $projects[2]['imageURL'] . '"'; ?> width="120" /></a></p>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[2]; ?>"><?php echo htmlspecialchars($projects[2]['projectname'], ENT_QUOTES); ?></a></p>
-                                                    </td>
-                                                    <td valign="top">
-                                                        <div>
-                                                            <img height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[3]; ?>"><img height="120" src=<?php echo '"' . $projects[3]['imageURL'] . '"'; ?> width="120" /></a></p>
-                                                        <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/projects/<?php echo $slug[3]; ?>"><?php echo htmlspecialchars($projects[3]['projectname'], ENT_QUOTES); ?></a></p>
-                                                    </td>
+	                                                <?php endforeach; ?>
                                                 </tr>
                                             </tbody>
                                         </table>
