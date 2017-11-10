@@ -84,7 +84,7 @@ class Marketing extends CI_Controller {
 			$project['imageURL'] = project_image($project['projectphoto'], 120);
 		}
 
-		var_dump($expertsData, $projectsData); die;
+		$data = array_merge(compact('expertsData', 'projectsData'), $data);
 
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');
