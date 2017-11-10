@@ -75,8 +75,14 @@ class Marketing extends CI_Controller {
 		}
 
 		$expertsData = $this->get_experts_data_for_email($expertURLs);
-		
+		foreach ($expertsData as &$expert) {
+			$expert['imageURL'] = expert_image($expert['userphoto'], 120);
+		}
+
 		$projectsData = $this->get_projects_data_for_email($projectURLs);
+		foreach ($projectsData as &$project) {
+			$project['imageURL'] = project_image($project['projectphoto'], 120);
+		}
 
 		var_dump($expertsData, $projectsData); die;
 
