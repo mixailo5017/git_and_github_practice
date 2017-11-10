@@ -61,7 +61,7 @@ class Marketing extends CI_Controller {
 
 	/**
 	 * Generate HTML to send out as an email, using the weekly email template
-	 * @return HTML Shows a page from which the HTML can be copied to clipboard
+	 * @return void Shows a page from which the HTML can be copied to clipboard
 	 */
 	public function generatehtml()
 	{
@@ -74,18 +74,55 @@ class Marketing extends CI_Controller {
 			$data['error'] = "You didn't include enough experts/projects! Please go back and ensure all fields are completed.";
 		}
 
-		$expertsData = [];
-		$requiredExpertFields = "uid, firstname, lastname, title, organization";
-		foreach ($expertURLs as $expertURL) {
-			if (!preg_match('/\d+$/', $expertURL, $matches)) continue;
-			$uid = (int) $matches[0];
-			$expertsData[] = $this->members_model->find($uid, $requiredExpertFields);
-		}
-		var_dump($expertsData); die;
+		$expertsData = $this->get_experts_data_for_email($expertURLs);
+		
+		$projectsData = $this->get_projects_data_for_email($projectURLs);
+
+		var_dump($expertsData, $projectsData); die;
 
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');
 		$this->load->view('marketing/generatehtml', $data);
 		$this->load->view('templates/footer');
+	}
+
+	/**
+	 * Fetch from DB the experts data required for the weekly email template
+	 * @param  array $expertURLs Array of strings containing URLs for expert profile pages
+	 * @return array             Array of associative arrays each containing info on an expert
+	 */
+	private function get_experts_data_for_email($expertURLs)
+	{
+		$expertsData = [];
+		$requiredExpertFields = "uid, firstname, lastname, title, organization, userphoto";
+		
+		// TODO: Consider implementing (or finding) a new method to retrieve all rows in a single query
+		foreach ($expertURLs as $expertURL) {
+			if (!preg_match('/\d+$/', $expertURL, $matches)) continue;
+			$uid = (int) $matches[0];
+			$expertsData[] = $this->members_model->find($uid, $requiredExpertFields);
+		}
+
+		return $expertsData;
+	}
+
+	/**
+	 * Fetch from DB the projects data required for the weekly email template
+	 * @param  array $projectURLs Array of strings containing URLs for project profile pages
+	 * @return array             Array of associative arrays each containing info on a project
+	 */
+	private function get_projects_data_for_email($projectURLs)
+	{
+		$projectsData = [];
+		$requiredProjectFields = "slug, projectname, projectphoto";
+
+		// TODO: Consider implementing (or finding) a new method to retrieve all rows in a single query
+		foreach ($projectURLs as $projectURL) {
+			if (!preg_match('/[^\/]+$/', $projectURL, $matches)) continue;
+			$slug = $matches[0];
+			$projectsData[] = $this->projects_model->find_from_slug($slug, $requiredProjectFields);
+		}
+
+		return $projectsData;
 	}
 }

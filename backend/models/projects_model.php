@@ -45,6 +45,12 @@ class Projects_model extends CI_Model
         return $row;
     }
 
+    public function find_from_slug($slug, $select = null)
+    {
+        $pid = $this->get_pid_from_slug($slug);
+        return $this->find($pid, $select);
+    }
+
     /**
      * Add New Project
      *
