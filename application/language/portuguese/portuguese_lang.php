@@ -17,7 +17,7 @@ $lang['forums'] = 'Comunidades';
 $lang['leadershipForum'] = 'Fórum de Liderança';
 $lang['expertise'] = 'Especialistas';
 $lang['jobs'] = 'Empregos';
-$lang['store'] = 'Loja';
+$lang['store'] = 'Relatórios';
 $lang['Messages'] = 'Mensagens';
 $lang['Flags'] = 'Bandeiras';
 $lang['ViewCurrentProjects'] = 'Ver Projetos';
@@ -658,7 +658,7 @@ $lang['SimilarProjects'] = 'Projetos semelhantes';
 
 /* New MyVip */
 $lang['MyVipMyProjects'] = 'MEUS PROJETOS';
-$lang['MyVipGvipStore'] = 'LOJA GViP';
+$lang['MyVipGvipStore'] = 'RELATÓRIOS';
 $lang['MyVipSimilarProjects'] = 'PROJETOS SEMELHANTES';
 $lang['MyVipKeyExecutives'] = 'PRINCIPAIS EXECUTIVOS';
 $lang['MyVipUpdatesTitle'] = 'PROJETO DE ALIMENTAÇÃO';

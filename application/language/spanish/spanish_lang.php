@@ -472,7 +472,7 @@ $lang['Ratings'] = 'Valoraciones';
 $lang['Stage'] = 'Etapa';
 $lang['StageElaboration'] = 'Etapa — Más Detalles';
 $lang['State'] = 'Estado';
-$lang['store'] = 'Tienda';
+$lang['store'] = 'Informes';
 $lang['Status'] = 'Estado';
 $lang['StorePurchaseHistory'] = 'Historial de compras';
 $lang['StudyFile'] = 'Documentos de Estudios';
@@ -646,7 +646,7 @@ $lang['SimilarProjects'] = 'Proyectos similares';
 
 /* New MyVip */
 $lang['MyVipMyProjects'] = 'MIS PROYECTOS';
-$lang['MyVipGvipStore'] = 'TIENDA GViP';
+$lang['MyVipGvipStore'] = 'INFORMES';
 $lang['MyVipSimilarProjects'] = 'PROYECTOS SIMILARES';
 $lang['MyVipKeyExecutives'] = 'EJECUTIVOS PRINCIPALES';
 $lang['MyVipUpdatesTitle'] = 'PROYECTO FEED';
