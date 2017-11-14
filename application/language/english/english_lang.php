@@ -944,7 +944,7 @@ $lang['SimilarProjects'] = 'Similar Projects';
 
 /* New MyVip */
 $lang['MyVipMyProjects'] = 'MY PROJECTS';
-$lang['MyVipGvipStore'] = 'GViP STORE';
+$lang['MyVipGvipStore'] = 'REPORTS';
 $lang['MyVipSimilarProjects'] = 'SIMILAR PROJECTS';
 $lang['MyVipKeyExecutives'] = 'KEY EXECUTIVES';
 $lang['MyVipUpdatesTitle'] = 'PROJECT FEED';
