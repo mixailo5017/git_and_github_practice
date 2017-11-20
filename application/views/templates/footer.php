@@ -12,7 +12,10 @@
 		 var lang = new Array();
 		 <?php foreach ($lang['js'] as $key => $val) { ?>
 				lang['<?php echo $key ?>'] = "<?php echo addslashes($val);?>";
-		 <?php } ?>
+		 <?php }
+		 
+		 // Give JS the Mapbox access token, required on many different pages across the site ?>
+	     GVIP.mapBoxAccessToken = '<?php echo $this->config->item('mapbox')['access_token'] ?>';
 	</script>
 
 	<?php // Data to provide to JavaScript ?>

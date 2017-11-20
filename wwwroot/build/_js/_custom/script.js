@@ -1586,7 +1586,7 @@ $(function() {
 });
 
 if (typeof L !== 'undefined') {
-    require('./_map_search.js')();
+    require('./_map_search.js');
 }
 
 global.checkLength = function(o, n, min, max) {
