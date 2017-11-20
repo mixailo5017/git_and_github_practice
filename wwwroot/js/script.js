@@ -27,6 +27,7 @@ module.exports = changeLanguage;
 /* Depends on jQuery as $ */
 
 var tileLayerConfig,
+    basemaps,
     mapBoxAPIURLPattern = 'https://api.mapbox.com/styles/v1/{username}/{style_id}/tiles/{tileSize}/{z}/{x}/{y}?access_token={accessToken}';
 
 global.mapBoxMap = function() {
@@ -278,11 +279,11 @@ global.mapBoxMap = function() {
             worldCopyJump: true
         });
 
-        var tileLayerConfigForThisMap = Object.assign({maxZoom: 18}, tileLayerConfig);
-        L.tileLayer(
-            mapBoxAPIURLPattern, 
-            tileLayerConfigForThisMap)
-        .addTo(thisMap);
+        var basemapsForThisMap = Object.assign({}, basemaps);
+        // TODO: {maxZoom: 18}
+
+        L.control.layers(basemapsForThisMap).addTo(thisMap);
+        basemapsForThisMap.Default.addTo(thisMap);
 
         return thisMap;
     }
@@ -1292,10 +1293,20 @@ function onProjectProfilePage() {
 $(function(window) {
     tileLayerConfig = {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-        username: 'mapbox',
-        style_id: 'streets-v10',
         accessToken: GVIP.mapBoxAccessToken,
         tileSize: 256
+    };
+    basemaps = {
+        Default: L.tileLayer(mapBoxAPIURLPattern, Object.assign({
+                username: 'mapbox',
+                style_id: 'streets-v10',
+            }, tileLayerConfig)
+        ),
+        "Terrain": L.tileLayer(mapBoxAPIURLPattern, Object.assign({
+                username: 'mapbox',
+                style_id: 'outdoors-v9',
+            }, tileLayerConfig)
+        ),
     };
 
     if (onProjectProfilePage()) {
@@ -1314,7 +1325,8 @@ $(function(window) {
 
         // add an OpenStreetMap tile layer
         // Remove attribution and the map fails
-        L.tileLayer(mapBoxAPIURLPattern, tileLayerConfig).addTo(thisMap);
+        L.control.layers(basemaps).addTo(thisMap);
+        basemaps.Default.addTo(thisMap);
 
         // Stuff to do as soon as the DOM is ready;
         $.ajaxSetup({
