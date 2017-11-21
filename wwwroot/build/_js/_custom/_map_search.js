@@ -2,6 +2,7 @@
 
 var tileLayerConfig,
     basemaps,
+    overlayMaps,
     mapBoxAPIURLPattern = 'https://api.mapbox.com/styles/v1/{username}/{style_id}/tiles/{tileSize}/{z}/{x}/{y}?access_token={accessToken}';
 
 global.mapBoxMap = function() {
@@ -1292,6 +1293,13 @@ $(function(window) {
             }, tileLayerConfig)
         ),
     };
+
+    overlayMaps = {
+        "USGS DEM Products": L.tileLayer.wms('https://services.nationalmap.gov/arcgis/services/3DEPElevationIndex/MapServer/WMSServer?', {
+            layers      : '17,18,19,20,21,22',
+            format      : 'image/png',
+            transparent : true
+        })
     };
 
     if (onProjectProfilePage()) {
@@ -1310,7 +1318,7 @@ $(function(window) {
 
         // add an OpenStreetMap tile layer
         // Remove attribution and the map fails
-        L.control.layers(basemaps).addTo(thisMap);
+        L.control.layers(basemaps, overlayMaps).addTo(thisMap);
         basemaps.Default.addTo(thisMap);
 
         // Stuff to do as soon as the DOM is ready;
