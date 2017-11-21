@@ -1304,7 +1304,17 @@ $(function(window) {
         ),
         "Terrain": L.tileLayer(mapBoxAPIURLPattern, Object.assign({
                 username: 'mapbox',
-                style_id: 'outdoors-v9',
+                style_id: 'outdoors-v10',
+            }, tileLayerConfig)
+        ),
+        "Satellite": L.tileLayer(mapBoxAPIURLPattern, Object.assign({
+                username: 'mapbox',
+                style_id: 'satellite-v9',
+            }, tileLayerConfig)
+        ),
+        "Satellite/Streets": L.tileLayer(mapBoxAPIURLPattern, Object.assign({
+                username: 'mapbox',
+                style_id: 'satellite-streets-v10',
             }, tileLayerConfig)
         ),
     };
