@@ -1,7 +1,9 @@
                 <div id="tabs-1" class="col2_tab">
                     <?php if (($project['projectdata']['lat'] && $project['projectdata']['lng']) || $isAdminorOwner ) { ?>
                         <div class="map_box clearfix">
-                            <div id="project-map"></div>
+                            <div id="project-map">
+                                <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
+                            </div>
 
                             <div class="clearfix">
                                 <p class="left coord"><span class="geo"></span> <span class="address"><?php if ($project['projectdata']['location']!= '') { echo $project['projectdata']['location'];} else { echo "N/A";} ?></span> <?php if ($isAdminorOwner) { ?> <a class="save_location" style="display: none;">Save</a> <?php } ?></p>

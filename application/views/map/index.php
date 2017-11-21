@@ -97,7 +97,7 @@
             </div>
 
             <div id="p_e_map" class="p_e_map">
-
+                <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
             </div>
         </div>
 
