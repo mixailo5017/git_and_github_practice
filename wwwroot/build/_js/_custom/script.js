@@ -709,13 +709,6 @@ $(function() {
         e.preventDefault();
     })
 
-    // project member select
-    $(".chzn-select").chosen({
-        no_results_text: lang['Noresultsmatched']
-    });
-
-
-
 
     // disable the submit function on the create a new project button
     // this will be changed in future releases
