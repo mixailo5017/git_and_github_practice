@@ -111,9 +111,8 @@ gulp.task('js-browserify-v1', function () {
     .pipe(source('script.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-        // Add transformation tasks to the pipeline here.
-        // .pipe(uglify())
-        // .on('error', gutil.log)
+    .pipe(uglify())
+    .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(js_output));
 });
@@ -143,14 +142,26 @@ gulp.task('js-browserify', function () {
 });
 
 gulp.task('js-libs', function() {
-  gulp.src(js_build+'_lib/*.js')
-    //.pipe(concat('plugins.js'))
-    .pipe(gulp.dest(js_output))
-    .pipe(rename({
-      suffix:'.min'
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: js_build + '_custom/plugins.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('plugins.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(jshint.reporter('fail'))
+    .on("error", notify.onError(function (error) {
+        return error.message;
     }))
     .pipe(uglify())
-    .pipe(gulp.dest(js_output))
+    .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(js_output));
 });
 
 
