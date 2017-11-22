@@ -5,6 +5,8 @@ var tileLayerConfig,
     overlayMaps,
     mapBoxAPIURLPattern = 'https://api.mapbox.com/styles/v1/{username}/{style_id}/tiles/{tileSize}/{z}/{x}/{y}?access_token={accessToken}';
 
+var Cookies = require('js-cookie');
+
 global.mapBoxMap = function() {
 
     // map_init is a global variable bootstrapped straight from PHP.
@@ -54,7 +56,7 @@ global.mapBoxMap = function() {
         datatype: 'json',
         // for CodeIgniter CSRF protection...
         data: {
-            csrf_vip: $.cookie('csrf_cookie_vip')
+            csrf_vip: Cookies.get('csrf_cookie_vip')
         },
         timeout: 20000
     });
@@ -1217,7 +1219,7 @@ var FixedMarker = L.Class.extend({
             dataType: 'json',
             context: this,
             data: {
-                csrf_vip: $.cookie('csrf_cookie_vip'),
+                csrf_vip: Cookies.get('csrf_cookie_vip'),
                 'project_lat': lat,
                 'project_lng': lng,
                 'project_location': currAddress,
