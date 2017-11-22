@@ -721,7 +721,7 @@ global.mapBoxMap = function() {
 L.Util.VIPUtils = L.Util.extend({
 
     layerToJson: function(layer) {
-        return jQuery.toJSON(layer.toGeoJSON());
+        return JSON.stringify(layer.toGeoJSON());
     },
 
     parseRawReverseGeoCode: function(response) {
@@ -936,7 +936,7 @@ var AdvancedMapDraw = L.Class.extend({
             id: dataId,
             action: action,
             data: {
-                geojson: jQuery.toJSON(layer.toGeoJSON()),
+                geojson: JSON.stringify(layer.toGeoJSON()),
                 geom: this.wicketUtil.write()
             }
         };
