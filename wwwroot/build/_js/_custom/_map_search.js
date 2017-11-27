@@ -1267,6 +1267,25 @@ function onProjectProfilePage() {
     return (typeof mapCoords !== "undefined" && mapCoords instanceof Array);
 }
 
+function showGeometry(map) {
+    var wicketUtil = new Wkt.Wkt();
+    var layerGroup = L.featureGroup();
+
+    for (var i = 0; i < map_geom.length; i++) {
+        try { // Catch any malformed WKT strings
+            wicketUtil.read(JSON.stringify(map_geom[i].geom));
+
+            var obj = wicketUtil.toObject(map.defaults);
+            layerGroup.addLayer(obj);
+        } catch (e) {
+            // Don't throw an exception here as it will break out of the loop. Just suppress
+            // the problem and move along.
+            // throw new Error('Wicket could not understand the WKT string you entered.');
+        }
+    }
+    layerGroup.addTo(map);
+}
+
 $(function(window) {
     tileLayerConfig = {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -1335,23 +1354,7 @@ $(function(window) {
         // TODO Switch back to false when done
         if (isAdmin === false) {
             var marker = L.marker(mapCoords).addTo(thisMap);
-            var wicketUtil = new Wkt.Wkt();
-            var layerGroup = L.featureGroup();
-
-            for (var i = 0; i < map_geom.length; i++) {
-                try { // Catch any malformed WKT strings
-                    wicketUtil.read(JSON.stringify(map_geom[i].geom));
-
-                    var obj = wicketUtil.toObject(thisMap.defaults);
-                    layerGroup.addLayer(obj);
-                } catch (e) {
-                    // Don't throw an exception here as it will break out of the loop. Just supress
-                    // the problem and move along.
-                    // throw new Error('Wicket could not understand the WKT string you entered.');
-                }
-            }
-            layerGroup.addTo(thisMap);
-
+            showGeometry(thisMap);
         } else {
 
             if (pathname.indexOf('/edit') > 0) {
@@ -1368,23 +1371,7 @@ $(function(window) {
                     $('.city_state').html(e.cityState);
                 });
 
-                // Hackety hack, shouldn't have to do this twice but whatevs
-                var wicketUtil = new Wkt.Wkt();
-                var layerGroup = L.featureGroup();
-
-                for (var i = 0; i < map_geom.length; i++) {
-                    try { // Catch any malformed WKT strings
-                        wicketUtil.read(JSON.stringify(map_geom[i].geom));
-
-                        var obj = wicketUtil.toObject(thisMap.defaults);
-                        layerGroup.addLayer(obj);
-                    } catch (e) {
-                        // Don't throw an exception here as it will break out of the loop. Just supress
-                        // the problem and move along.
-                        // throw new Error('Wicket could not understand the WKT string you entered.');
-                    }
-                }
-                layerGroup.addTo(thisMap);
+                showGeometry(thisMap);
             }
 
         }
