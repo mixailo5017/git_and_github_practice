@@ -31,7 +31,7 @@ gulp.task('compass', function() {
       sass: 'css/sass'
     }))
     .pipe(gulp.dest('css'))
-    .pipe(notify('Compass recompiled!'));;
+    .pipe(notify('Compass recompiled!'));
 });
 
 gulp.task('compass-dev', function() {
@@ -114,7 +114,8 @@ gulp.task('js-browserify-v1', function () {
     .pipe(uglify())
     .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(js_output));
+    .pipe(gulp.dest(js_output))
+    .pipe(notify('Script.js recompiled!'));
 });
 
 gulp.task('js-browserify', function () {
