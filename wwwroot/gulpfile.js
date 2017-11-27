@@ -152,9 +152,9 @@ gulp.task('js-libs', function() {
     .pipe(source('plugins.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(jshint())
-    .pipe(jshint.reporter('jshint-stylish'))
-    .pipe(jshint.reporter('fail'))
+    // .pipe(jshint())
+    // .pipe(jshint.reporter('jshint-stylish'))
+    // .pipe(jshint.reporter('fail'))
     .on("error", notify.onError(function (error) {
         return error.message;
     }))
