@@ -1268,22 +1268,10 @@ function onProjectProfilePage() {
 }
 
 function showGeometry(map) {
-    var wicketUtil = new Wkt.Wkt();
-    var layerGroup = L.featureGroup();
 
     for (var i = 0; i < map_geom.length; i++) {
-        try { // Catch any malformed WKT strings
-            wicketUtil.read(JSON.stringify(map_geom[i].geom));
-
-            var obj = wicketUtil.toObject(map.defaults);
-            layerGroup.addLayer(obj);
-        } catch (e) {
-            // Don't throw an exception here as it will break out of the loop. Just suppress
-            // the problem and move along.
-            // throw new Error('Wicket could not understand the WKT string you entered.');
-        }
+            L.geoJson(map_geom[i].geom).addTo(map);
     }
-    layerGroup.addTo(map);
 }
 
 $(function(window) {
