@@ -857,19 +857,6 @@ var AdvancedMapDraw = L.Class.extend({
 
         this.drawnItems.addTo(this._map);
 
-        /* When I created this last check it seemed logical but now it isn't
-         * Ima leave it here in case it does come in handy.
-         *
-        // Create some polygons from database data and enable events
-        if (this.mapData instanceof Array && this.mapData.length > 0) {
-        	this.addItemsToMap(this.mapData)._eventsOn();
-        } else {
-        	// bail out
-        	this.drawControl.removeFrom(this._map);
-        	this._map.closePopup();
-        	this.$editLocation.remove();
-        }
-        */
         this.addItemsToMap(this.mapData)._eventsOn();
     },
 
