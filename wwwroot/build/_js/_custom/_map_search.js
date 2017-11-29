@@ -1020,9 +1020,7 @@ var AdvancedMapDraw = L.Class.extend({
 
 });
 
-var FixedMarker = L.Class.extend({
-
-    includes: L.Mixin.Events,
+var FixedMarker = L.Evented.extend({
 
     options: {
         enabled: true,
