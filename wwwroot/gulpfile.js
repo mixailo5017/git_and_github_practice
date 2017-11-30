@@ -21,7 +21,12 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     sourcemaps = require('gulp-sourcemaps'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    environments = require('gulp-environments');
+
+// https://www.npmjs.com/package/gulp-environments
+var development = environments.development;
+var production = environments.production;
 
 gulp.task('compass', function() {
   gulp.src('./css/sass/*.scss')
@@ -111,7 +116,7 @@ gulp.task('js-browserify-v1', function () {
     .pipe(source('script.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(uglify())
+    .pipe(production(uglify())) // Only minify for production environment
     .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(js_output))
