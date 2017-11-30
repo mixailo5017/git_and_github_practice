@@ -1,3 +1,5 @@
+var FixedMarker = require('./FixedMarker.js');
+
 var AdvancedMapDraw = L.Class.extend({
 
     includes: L.Mixin.FixedMarker,
@@ -222,12 +224,15 @@ var AdvancedMapDraw = L.Class.extend({
 
         // jQuery events
         $('.map_box').on('click', '.toggleEdit', $.proxy(this._togglProjectEdit, this));
-        $('#profile_tabs').on('tabsshow', function() {
-        	thisMap.invalidateSize();
-        	if (am.fm.enabled === false) {
-        		am.fm._disable(false);
+        $('#profile_tabs').on('tabsshow', {
+            map: this._map,
+            fm: this.fm
+        }, function(event) {
+            event.data.map.invalidateSize();
+        	if (event.data.fm.enabled === false) {
+        		event.data.fm._disable(false);
         	}
-        	am.fm.marker.getPopup().update();
+        	event.data.fm.marker.getPopup().update();
         });
     },
 
