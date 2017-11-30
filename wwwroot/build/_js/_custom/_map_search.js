@@ -785,6 +785,10 @@ function onProjectProfilePage() {
     return (typeof mapCoords !== "undefined" && mapCoords instanceof Array);
 }
 
+function onProjectProfileEditPage() {
+    return onProjectProfilePage() && pathname.indexOf('/edit') > 0;
+}
+
 function showGeometry(map) {
 
     for (var i = 0; i < map_geom.length; i++) {
@@ -863,7 +867,7 @@ $(function(window) {
             showGeometry(thisMap);
         } else {
 
-            if (pathname.indexOf('/edit') > 0) {
+            if (onProjectProfileEditPage()) {
                 am = new AdvancedMapDraw(thisMap, {
                     slug: slug,
                     mapData: map_geom
