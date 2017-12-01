@@ -106,7 +106,7 @@ var AdvancedMapDraw = L.Class.extend({
     // Loads initial dataset from map_geom
     addItemsToMap: function(data) {
         data.forEach(function(feature) {
-            var layer = L.geoJson(feature.geom);
+            var layer = L.geoJson(feature.geom).getLayers()[0];
             layer.dataId = feature.id;
             this.drawnItems.addLayer(layer);
         }, this);
