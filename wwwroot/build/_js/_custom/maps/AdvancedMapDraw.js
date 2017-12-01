@@ -68,6 +68,7 @@ var AdvancedMapDraw = L.Class.extend({
                     },
                 },
                 circle: false,
+                circlemarker: false,
                 rectangle: {
                     shapeOptions: {
                         color: '#0033ff'
@@ -78,6 +79,7 @@ var AdvancedMapDraw = L.Class.extend({
                 featureGroup: this.drawnItems
             }
         });
+
         this._map.addControl(this.drawControl);
 
         this.drawnItems.addTo(this._map);
