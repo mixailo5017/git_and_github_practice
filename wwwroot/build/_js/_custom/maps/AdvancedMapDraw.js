@@ -134,11 +134,8 @@ var AdvancedMapDraw = L.Class.extend({
             throw new Error("preparePostData cannot handle layerGroups");
         }
 
-        try {
-            this.wicketUtil.fromObject(layer);
-        } catch (e) {
-            throw new Error("Could not parse the layer data");
-        }
+        var fullGeoJSON = JSON.stringify(layer.toGeoJSON());
+        var geoJSONGeometry = JSON.stringify(layer.toGeoJSON().geometry);
 
         if (layer.hasOwnProperty('dataId') && layer.dataId !== null) {
             dataId = layer.dataId;
@@ -148,8 +145,8 @@ var AdvancedMapDraw = L.Class.extend({
             id: dataId,
             action: action,
             data: {
-                geojson: JSON.stringify(layer.toGeoJSON()),
-                geom: this.wicketUtil.write()
+                geojson: fullGeoJSON,
+                geom: geoJSONGeometry
             }
         };
 
