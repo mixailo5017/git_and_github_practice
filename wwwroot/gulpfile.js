@@ -51,16 +51,18 @@ gulp.task('compass-dev', function() {
 });
 
 //paths
-var sass_build = 'build/_sass',
-    sass_build_v1 = 'css/sass',
-    html_build = 'build/_html/templates/*.html',
-    html_build_watch = 'build/_html/**/*.html',
-    html_output = 'html/',
-    css_output = 'css/',
-    style_css_output = 'style_guide/',
-    js_build = 'build/_js/',
-    js_output = 'js/',
-    js_output_lib = 'js/lib/';
+var sass_build        = 'build/_sass',
+  sass_build_v1       = 'css/sass',
+  html_build          = 'build/_html/templates/*.html',
+  html_build_watch    = 'build/_html/**/*.html',
+  html_output         = 'html/',
+  css_output          = 'css/',
+  style_css_output    = 'style_guide/',
+  js_build            = 'build/_js/',
+  js_output           = 'js/',
+  js_output_lib       = 'js/lib/',
+  node_modules        = 'node_modules/',
+  non_bundled_modules = 'assets/';
 
 
 
@@ -148,6 +150,10 @@ gulp.task('js-browserify', function () {
 });
 
 gulp.task('js-libs', function() {
+  // First, copy across any modules that will be included directly, not bundled
+  gulp.src(node_modules + 'leaflet-draw/dist/**/*')
+    .pipe(gulp.dest(non_bundled_modules + 'leaflet-draw'));
+
   // set up the browserify instance on a task basis
   var b = browserify({
     entries: js_build + '_custom/plugins.js',
