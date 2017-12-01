@@ -105,18 +105,11 @@ var AdvancedMapDraw = L.Class.extend({
 
     // Loads initial dataset from map_geom
     addItemsToMap: function(data) {
-        for (var i = 0; i < data.length; i++) {
-            try { // Catch any malformed WKT strings
-                this.wicketUtil.read(JSON.stringify(data[i].geom));
-                var obj = this.wicketUtil.toObject(this._map.defaults);
-                obj.dataId = data[i].id;
-                this.drawnItems.addLayer(obj);
-            } catch (e) {
-                // Don't throw an exception here as it will break out of the loop. Just supress
-                // the problem and move along.
-                // throw new Error('Wicket could not understand the WKT string you entered.');
-            }
-        }
+        data.forEach(function(feature) {
+            var layer = L.geoJson(feature.geom);
+            layer.dataId = feature.id;
+            this.drawnItems.addLayer(layer);
+        }, this);
 
         return this;
     },

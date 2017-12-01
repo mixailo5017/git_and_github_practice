@@ -2,11 +2,6 @@
    require statements. For now, copy contents of previous plugins.js
    file but gradually replace code with require statements. */
 
-if (typeof L !== 'undefined') {
-	global.Wkt = require('wicket/wicket.js');
-	require('wicket/wicket-leaflet.js');
-}
-
 global._ = require('underscore');
 
 /* Legacy plugins.js code follows */
