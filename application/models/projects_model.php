@@ -526,8 +526,13 @@ class Projects_model extends CI_Model {
 			$gid = false;
 		}
 
-		$where = array('proj_id'=>$pid, 'id'=>$gid);
+		$where = [
+            'proj_id' => $pid,
+            'id'      => $gid
+        ];
+
 		$current = false;
+
 		if( $gid )
 		{
 			// check if id exists
@@ -537,17 +542,18 @@ class Projects_model extends CI_Model {
 		// encode json data
 		$data['geojson'] = json_encode($data['geojson']);
 
+        $this->db->set($data);
+        $this->db->set('geom', "ST_GeomFromGeoJSON(" . $this->db->escape($data['geom']) . ")", false);
+
 		if( $current )
 		{
-			$saved = $this->db->where($where)->update('exp_proj_map_draw',$data);
+            $this->db->where($where);
+            $saved = $this->db->update('exp_proj_map_draw');
 		}
 		else
 		{
-			$data['proj_id'] 	= $pid;
-			//$data['id'] 		= $gid;
-			//echo "<pre>"; var_dump( $data ); exit;
-
-			$saved = $this->db->insert('exp_proj_map_draw',$data);
+			$this->db->set('proj_id', $pid);
+			$saved = $this->db->insert('exp_proj_map_draw');
 			$gid = $this->db->insert_id();
 		}
 
