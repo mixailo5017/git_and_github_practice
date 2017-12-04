@@ -1,12 +1,9 @@
 'use strict';
 
+console.time("Loading plugins"); //start measuring
+
 var gulp = require('gulp'),
     compass = require('gulp-compass'),
-    sass = require('gulp-ruby-sass'),
-    sass = require('gulp-sass'),
-    csscomb = require('gulp-csscomb'),
-    please = require('gulp-pleeease'),
-    htmlv = require('gulp-html-validator'),
     watch = require('gulp-watch'),
     livereload = require('gulp-livereload'),
     fileinclude = require('gulp-file-include'),
@@ -16,13 +13,13 @@ var gulp = require('gulp'),
     hologram = require('gulp-hologram'),
     rename = require('gulp-rename'),
     jshint = require('gulp-jshint'),
-    gcmq = require('gulp-group-css-media-queries'), // Combine CSS Media Queries at end of sheet in correct order.
-    browserify = require('browserify'), // The following four dependencies (source, buffer, sourcemaps, gutil) all support Browserify
+    browserify = require('browserify'), // The following three dependencies (source, buffer, sourcemaps) all support Browserify
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     sourcemaps = require('gulp-sourcemaps'),
-    gutil = require('gulp-util'),
     environments = require('gulp-environments');
+
+console.timeEnd('Loading plugins');
 
 // https://www.npmjs.com/package/gulp-environments
 var development = environments.development;
@@ -67,15 +64,17 @@ var sass_build        = 'build/_sass',
 
 
 gulp.task('sass', function () {
+  var sass = require('gulp-sass'),
+    csscomb = require('gulp-csscomb'),
+    please = require('gulp-pleeease'),
+    gcmq = require('gulp-group-css-media-queries'); // Combine CSS Media Queries at end of sheet in correct order.
+
   return gulp.src(sass_build+'/**/*.scss')
   .pipe(sass({
       require:['susy'],
       "sourcemap=none": true
     }))
-  .on("error", notify.onError(function (error) {
-        return  error.message;
-
-  }))
+  .on("error", notify.onError("Error: <%= error.message %>"))
   .pipe(please({
     minifier:false,
     autoprefixer:{"browsers": ["last 5 versions", "ie 9", "ios 6"]},
@@ -119,7 +118,7 @@ gulp.task('js-browserify-v1', function () {
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
     .pipe(production(uglify())) // Only minify for production environment
-    .on('error', gutil.log)
+    .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(js_output))
     .pipe(notify('Script.js recompiled!'));
@@ -171,13 +170,15 @@ gulp.task('js-libs', function() {
         return error.message;
     }))
     .pipe(uglify())
-    .on('error', gutil.log)
+    .on('error', notify.onError("Error: <%= error.message %>"))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(js_output));
 });
 
 
 gulp.task('valid', function () {
+  var htmlv = require('gulp-html-validator');
+
   gulp.src(html_output+'/*.html')
     .pipe(htmlv())
     .pipe(gulp.dest('./reports'));
