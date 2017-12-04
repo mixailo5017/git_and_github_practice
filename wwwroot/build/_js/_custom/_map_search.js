@@ -826,10 +826,11 @@ $(function(window) {
     };
 
     overlayMaps = {
-        "USGS DEM Products": L.tileLayer.wms('https://services.nationalmap.gov/arcgis/services/3DEPElevationIndex/MapServer/WMSServer?', {
-            layers      : '17,18,19,20,21,22',
+        "USGS Lidar data": L.tileLayer.wms('https://services.nationalmap.gov/arcgis/services/3DEPElevationIndex/MapServer/WMSServer?', {
+            layers      : '15',
             format      : 'image/png',
-            transparent : true
+            transparent : true,
+            opacity     : 0.7
         })
     };
 
