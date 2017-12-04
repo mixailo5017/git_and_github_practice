@@ -296,5 +296,6 @@
 	var isAdmin = <?php echo $isAdminorOwner ? 'true' : 'false'; ?>;
 	var slug = '<?php echo $slug; ?>';
 	var map_geom = <?php echo json_encode($map_geom); ?>;
+    var projectCountry = '<?php echo $project['projectdata']['country'] ?>';
 </script>
 <?php } ?>

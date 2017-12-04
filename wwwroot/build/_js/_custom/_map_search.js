@@ -789,6 +789,10 @@ function onProjectProfileEditPage() {
     return onProjectProfilePage() && pathname.indexOf('/edit') > 0;
 }
 
+function projectIsInTheUnitedStates() {
+    return projectCountry === 'United States';
+}
+
 function showGeometry(map) {
 
     for (var i = 0; i < map_geom.length; i++) {
@@ -862,14 +866,14 @@ $(function(window) {
         ),
     };
 
-    overlayMaps = {
+    overlayMaps = projectIsInTheUnitedStates() ? {
         "USGS Lidar data": L.tileLayer.wms('https://services.nationalmap.gov/arcgis/services/3DEPElevationIndex/MapServer/WMSServer?', {
             layers      : '15',
             format      : 'image/png',
             transparent : true,
             opacity     : 0.7
         })
-    };
+    } : {};
 
     if (onProjectProfilePage()) {
 
@@ -892,15 +896,17 @@ $(function(window) {
         
         basemaps.Default.addTo(thisMap);
         
-        var usgsLegend = createUSGSLegendControl(thisMap);
+        if (projectIsInTheUnitedStates()) {
+            var usgsLegend = createUSGSLegendControl(thisMap);
 
-        thisMap.on('overlayadd', function (event) {
-            thisMap.addControl(usgsLegend);
-        });
+            thisMap.on('overlayadd', function (event) {
+                thisMap.addControl(usgsLegend);
+            });
 
-        thisMap.on('overlayremove', function (event) {
-            thisMap.removeControl(usgsLegend);
-        })
+            thisMap.on('overlayremove', function (event) {
+                thisMap.removeControl(usgsLegend);
+            });
+        }
 
         // Stuff to do as soon as the DOM is ready;
         $.ajaxSetup({
