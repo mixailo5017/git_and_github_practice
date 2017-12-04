@@ -809,19 +809,19 @@ function createUSGSLegendControl(map) {
             qualities = [
                 {
                     color: '#074E6A',
-                    label: '0.700001 - 50.000000'
+                    label:  'Quality Level 3' // '0.700001 - 50.000000'
                 },
                 {
                     color: '#369117',
-                    label: '0.350001 - 0.700000'
+                    label: 'Quality Level 2' // '0.350001 - 0.700000'
                 },
                 {
                     color: '#94A920',
-                    label: '0.000001 - 0.350000'
+                    label: 'Quality Level 1 (Highest)' // '0.000001 - 0.350000'
                 },
                 {
                     color: '#AC891C',
-                    label: '0.000000'
+                    label: 'Quality Level Unknown' // '0.000000'
                 }
             ];
 
