@@ -796,6 +796,43 @@ function showGeometry(map) {
     }
 }
 
+function createUSGSLegendControl(map) {
+    var legend = L.control({position: 'bottomleft'});
+
+    legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'map__legend'),
+            qualities = [
+                {
+                    color: '#074E6A',
+                    label: '0.700001 - 50.000000'
+                },
+                {
+                    color: '#369117',
+                    label: '0.350001 - 0.700000'
+                },
+                {
+                    color: '#94A920',
+                    label: '0.000001 - 0.350000'
+                },
+                {
+                    color: '#AC891C',
+                    label: '0.000000'
+                }
+            ];
+
+        // loop through our density intervals and generate a label with a colored square for each interval
+        for (var i = 0; i < qualities.length; i++) {
+            div.innerHTML += '<i style="background:' + qualities[i].color + '"></i> ' + qualities[i].label + '<br>';
+        }
+        div.innerHTML += '<a href="https://nationalmap.gov/elevation.html" target="_blank">Learn more</a>';
+
+        return div;
+    };
+
+    return legend;
+}
+
 $(function(window) {
     tileLayerConfig = {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
@@ -850,8 +887,20 @@ $(function(window) {
 
         // add an OpenStreetMap tile layer
         // Remove attribution and the map fails
-        L.control.layers(basemaps, overlayMaps).addTo(thisMap);
+        var layersControl = L.control.layers(basemaps, overlayMaps);
+        layersControl.addTo(thisMap);
+        
         basemaps.Default.addTo(thisMap);
+        
+        var usgsLegend = createUSGSLegendControl(thisMap);
+
+        thisMap.on('overlayadd', function (event) {
+            thisMap.addControl(usgsLegend);
+        });
+
+        thisMap.on('overlayremove', function (event) {
+            thisMap.removeControl(usgsLegend);
+        })
 
         // Stuff to do as soon as the DOM is ready;
         $.ajaxSetup({
