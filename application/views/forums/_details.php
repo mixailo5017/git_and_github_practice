@@ -32,7 +32,9 @@
             </div>
         </form>
     </div>
-    <div id="p_e_map" class="p_e_map" style="width: 598px; height: 450px; margin-bottom: 20px;"></div>
+    <div id="p_e_map" class="p_e_map" style="width: 598px; height: 450px; margin-bottom: 20px;">
+      <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
+    </div>
 </div>
 
 <div class="forum-actions" style="text-align: center;">

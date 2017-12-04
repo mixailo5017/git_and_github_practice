@@ -18,6 +18,9 @@ $config['algolia'] = [
 	'index_members'  => env('ALGOLIA_INDEX_MEMBERS'),
 	'index_projects' => env('ALGOLIA_INDEX_PROJECTS')
 ];
+$config['mapbox'] = [
+	'access_token' => env('MAPBOX_ACCESS_TOKEN')
+];
 $config['glide_image_signature'] = env('GLIDE_IMAGE_SIGNATURE');
 
 //$config['queue_host'] = env('QUEUE_HOST');
