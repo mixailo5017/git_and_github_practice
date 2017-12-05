@@ -793,10 +793,18 @@ function projectIsInTheUnitedStates() {
     return typeof projectCountry !== 'undefined' && projectCountry === 'United States';
 }
 
-function showGeometry(map) {
+function createFeatureGroupFromGeometry(features) {
+    var layers = new Array();
+    features.forEach(function(feature) {
+        layers.push(L.geoJson(feature.geom).getLayers()[0]);
+    });
+    return L.featureGroup(layers);
+}
 
-    for (var i = 0; i < map_geom.length; i++) {
-            L.geoJson(map_geom[i].geom).addTo(map);
+function showGeometryAndZoom(map) {
+    if (map_geom.length) { // I.e., there is one or more line/polygon to display
+        var geometryLayerGroup = createFeatureGroupFromGeometry(map_geom).addTo(map);
+        map.fitBounds(geometryLayerGroup.getBounds());
     }
 }
 
@@ -920,7 +928,7 @@ $(function(window) {
         // TODO Switch back to false when done
         if (isAdmin === false) {
             var marker = L.marker(mapCoords).addTo(thisMap);
-            showGeometry(thisMap);
+            showGeometryAndZoom(thisMap);
         } else {
 
             if (onProjectProfileEditPage()) {
@@ -937,7 +945,7 @@ $(function(window) {
                     $('.city_state').html(e.cityState);
                 });
 
-                showGeometry(thisMap);
+                showGeometryAndZoom(thisMap);
             }
 
         }
