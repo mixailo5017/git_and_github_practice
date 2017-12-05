@@ -790,7 +790,7 @@ function onProjectProfileEditPage() {
 }
 
 function projectIsInTheUnitedStates() {
-    return projectCountry === 'United States';
+    return typeof projectCountry !== 'undefined' && projectCountry === 'United States';
 }
 
 function showGeometry(map) {
