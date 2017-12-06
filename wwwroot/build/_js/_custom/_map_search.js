@@ -817,15 +817,15 @@ function createUSGSLegendControl(map) {
             qualities = [
                 {
                     color: '#074E6A',
-                    label:  'Medium Quality' // '0.700001 - 50.000000'
+                    label:  "Medium Quality (0.70–50' spacing)" // '0.700001 - 50.000000'
                 },
                 {
                     color: '#369117',
-                    label: 'High Quality' // '0.350001 - 0.700000'
+                    label: "High Quality (0.35–0.70' spacing)" // '0.350001 - 0.700000'
                 },
                 {
                     color: '#94A920',
-                    label: 'Highest Quality' // '0.000001 - 0.350000'
+                    label: "Highest Quality (<0.35' spacing)" // '0.000001 - 0.350000'
                 },
                 {
                     color: '#AC891C',
