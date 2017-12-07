@@ -817,15 +817,15 @@ function createUSGSLegendControl(map) {
             qualities = [
                 {
                     color: '#074E6A',
-                    label:  "Medium Quality (0.70–50' spacing)" // '0.700001 - 50.000000'
+                    label:  "Medium" // '0.700001 - 50.000000'
                 },
                 {
                     color: '#369117',
-                    label: "High Quality (0.35–0.70' spacing)" // '0.350001 - 0.700000'
+                    label: "High" // '0.350001 - 0.700000'
                 },
                 {
                     color: '#94A920',
-                    label: "Highest Quality (<0.35' spacing)" // '0.000001 - 0.350000'
+                    label: "Highest" // '0.000001 - 0.350000'
                 },
                 {
                     color: '#AC891C',
@@ -833,11 +833,12 @@ function createUSGSLegendControl(map) {
                 }
             ];
 
+        div.innerHTML += '<h4>Lidar Quality:</h4>';
         // loop through our density intervals and generate a label with a colored square for each interval
         for (var i = 0; i < qualities.length; i++) {
             div.innerHTML += '<i style="background:' + qualities[i].color + '"></i> ' + qualities[i].label + '<br>';
         }
-        div.innerHTML += '<a href="https://nationalmap.gov/elevation.html" target="_blank">Learn more</a>';
+        div.innerHTML += '<a href="/companies/3401" target="_blank">Learn more about 3DEP</a>';
 
         return div;
     };

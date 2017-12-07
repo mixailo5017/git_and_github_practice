@@ -742,6 +742,12 @@ div.open_expert{
     line-height: 18px;
     color: #555;
     margin-bottom: 24px !important;
+
+    h4 {
+      text-decoration: underline;
+      margin: auto;
+      font-size: inherit;
+    }
 }
 
 .map__legend i {

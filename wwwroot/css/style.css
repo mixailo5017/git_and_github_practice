@@ -7471,6 +7471,11 @@ div.open_expert div.type .sector {
   color: #555;
   margin-bottom: 24px !important;
 }
+.map__legend h4 {
+  text-decoration: underline;
+  margin: auto;
+  font-size: inherit;
+}
 
 .map__legend i {
   width: 18px;
