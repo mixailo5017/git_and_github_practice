@@ -81,13 +81,13 @@ class Marketing extends CI_Controller {
 			$data['errors'][] = "Not all the experts appear to exist in the database. Please check you copied the URLs correctly!";
 		}
 		foreach ($expertsData as &$expert) {
-			$expert['imageURL'] = expert_image($expert['userphoto'], 120);
+			$expert['imageURL'] = "https://www.gvip.io" . expert_image($expert['userphoto'], 120);
 		}
 
 		$projectsData = array_filter($this->get_projects_data_for_email($projectURLs));
 		if (count($projectsData) < 4) $data['errors'][] = "Not all the projects appear to exist in the database. Please check you copied the URLs correctly!";
 		foreach ($projectsData as &$project) {
-			$project['imageURL'] = project_image($project['projectphoto'], 120);
+			$project['imageURL'] = "https://www.gvip.io" . project_image($project['projectphoto'], 120);
 		}
 
 		$data = array_merge(compact('expertsData', 'projectsData'), $data);
