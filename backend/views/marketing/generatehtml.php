@@ -12,10 +12,14 @@
                 <h3>HTML</h3>
             </div><!--contenttitle-->
 
-			<?php if ($error) { ?>
+			<?php if (count($errors)) { ?>
 			<div class="notibar msgerror">
 			    <a class="close"></a>
-			    <p><?php echo $error; ?></p>
+			    <p>
+			    <?php foreach ($errors as $error): ?>
+				    <?php echo $error; ?><br>
+				<?php endforeach; ?>
+				</p>
 			</div>
 			<?php } ?>
 

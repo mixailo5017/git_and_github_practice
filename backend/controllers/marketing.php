@@ -66,20 +66,26 @@ class Marketing extends CI_Controller {
 	public function generatehtml()
 	{
 		$data['headertitle'] = $this->headerdata['title'];
+		$data['errors'] = [];
 
 		$expertURLs = array_filter($this->input->post('experts') ?: []);
 		$projectURLs = array_filter($this->input->post('projects') ?: []);
 		
 		if (count($expertURLs) < 4 || count($projectURLs) < 4) {
-			$data['error'] = "You didn't include enough experts/projects! Please go back and ensure all fields are completed.";
+			$data['errors'][] = "You didn't include enough experts/projects! Please go back and ensure all fields are completed.";
 		}
 
-		$expertsData = $this->get_experts_data_for_email($expertURLs);
+		$expertsData = array_filter($this->get_experts_data_for_email($expertURLs));
+		
+		if (count($expertsData) < 4) {
+			$data['errors'][] = "Not all the experts appear to exist in the database. Please check you copied the URLs correctly!";
+		}
 		foreach ($expertsData as &$expert) {
 			$expert['imageURL'] = expert_image($expert['userphoto'], 120);
 		}
 
-		$projectsData = $this->get_projects_data_for_email($projectURLs);
+		$projectsData = array_filter($this->get_projects_data_for_email($projectURLs));
+		if (count($projectsData) < 4) $data['errors'][] = "Not all the projects appear to exist in the database. Please check you copied the URLs correctly!";
 		foreach ($projectsData as &$project) {
 			$project['imageURL'] = project_image($project['projectphoto'], 120);
 		}
