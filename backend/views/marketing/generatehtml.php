@@ -29,7 +29,7 @@
 				<button class="copybutton" data-copyfrom="htmloutput">Copy</button>
 			</form>
 			
-			<iframe srcdoc="<?php echo htmlspecialchars($this->load->view('marketing/email_output', '', true)) ?>"></iframe>
+			<iframe srcdoc="<?php echo htmlspecialchars($this->load->view('marketing/email_output', '', true)) ?>" style="width: 85%; height: 500px; margin-top: 20px;"></iframe>
 
 		</div><!--contentwrapper-->
         
