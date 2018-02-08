@@ -1704,7 +1704,7 @@ if (! function_exists('auth_check')) {
 
             // Encode the indended URI + query string and redirect to the login page
             $encoded = urlencode(base64_encode($intended));
-            redirect('/login?r=' . $encoded, 'refresh');
+            redirect('/login?r=' . $encoded);
         }
 
         // Check if user has been deleted
