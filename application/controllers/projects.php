@@ -21,6 +21,8 @@ class Projects extends CI_Controller
         $languageSession = sess_var('lang');
         get_language_file($languageSession);
         $this->dataLang['lang'] = langGet();
+
+        $this->redirectUnauthenticatedUsersToPublicProfile();
         
         // If the user is not logged in then redirect to the login page
         auth_check();
@@ -3294,5 +3296,13 @@ class Projects extends CI_Controller
         );
 
         return $page_analytics;
+    }
+
+    private function redirectUnauthenticatedUsersToPublicProfile()
+    {
+        if ($this->router->method === 'view'
+           && ! $this->auth->check()) {
+            redirect('/p/' . $this->uri->segment(2));
+        }
     }
 }

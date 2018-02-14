@@ -15,6 +15,8 @@ class PublicProfiles extends CI_Controller
     {
         if (! PROJECT_PROFILES_ENABLED) show_404();
 
+        $this->redirectAuthenticatedUsersToFullProfile($slug);
+
         // Cache this page for PUBLIC_PROFILE_TTL minutes
         //$this->output->cache(PUBLIC_PROFILE_TTL);
 
@@ -36,5 +38,10 @@ class PublicProfiles extends CI_Controller
         );
 
         $this->load->view('public/layout', $page);
+    }
+
+    private function redirectAuthenticatedUsersToFullProfile($slug)
+    {
+        if ($this->auth->check()) redirect("/projects/$slug");
     }
 }
