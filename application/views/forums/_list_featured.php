@@ -55,7 +55,7 @@
             if ($details['register_url']) {
                 echo anchor("{$details['register_url']}", lang('ForumRegister'), 'class="button light_gray"');
             }
-            if ($details['meeting_url']) {
+            if ($details['meeting_url'] && Auth::check()) {
                 echo anchor("{$details['meeting_url']}", lang('ForumBookMeeting'), 'class="button light_gray" style="margin-left:10px;"');
             }
             ?>

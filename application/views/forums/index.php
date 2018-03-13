@@ -26,7 +26,7 @@
                    data-id="<?php echo $featured['id'] ?>"
                    data-name="<?php echo $featured['title'] ?>" ><?php echo lang('ForumRegister') ?></a>
             <?php } ?>
-            <?php if ($featured['meeting_url']) { ?>
+            <?php if ($featured['meeting_url'] && Auth::check()) { ?>
                 <a href="<?php echo $featured['meeting_url'] ?>"
                    target="_blank"
                    class="button light_gray book"><?php echo lang('ForumBookMeeting') ?></a>
