@@ -1618,7 +1618,7 @@ if (! function_exists('format_budget')) {
         if (empty($value) || $value == 0) {
             return 'TBD';
         } else {
-            return '$' .$value . 'MM';
+            return '$' . millions_to_billions($value);
         }
     }
 }
@@ -1641,6 +1641,22 @@ if (! function_exists('format_budget_for_edit')) {
     }
 }
 
+if (! function_exists('millions_to_billions')) {
+    /**
+     * Takes an integer number in millions and produces a string like
+     * '25M' or '3.4B'
+     * @param  int    $millions Input number
+     * @return string           
+     */
+    function millions_to_billions(int $millions): string
+    {
+        if ($millions < 1E3) return $millions . 'M';
+        if ($millions < 1E6) return number_format($millions / 1E3, 1) . 'B'; // Show one number after the decimal point
+        if ($millions < 1E9) return number_format($millions / 1E6, 1) . 'T';
+
+        return $millions . 'M'; // No need to handle numbers above $1 quadrillion
+    }
+}
 
 if (! function_exists('asset_version')) {
     /**
