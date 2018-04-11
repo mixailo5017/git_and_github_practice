@@ -225,6 +225,8 @@ class Forums_model extends CI_Model {
         return $rows;
     }
 
+
+
     /**
      * Get ALL members (experts) along with a flag whether
      * a member is being selected (is associated with) for the forum
@@ -467,7 +469,7 @@ class Forums_model extends CI_Model {
      * 
      * @return array
      */
-    public function get_filter_user_list2($id, $limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null)
+    public function get_filtered_user_list($id, $limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null)
     {
    
         $rowc = true;
