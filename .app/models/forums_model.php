@@ -235,7 +235,36 @@ class Forums_model extends CI_Model
         return $rows;
     }
 
+   /**
+     * Used for retrieving preview list of members shown on forum overview page
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @return array
+     */
+    public function get_members_for_forum_homepage($id)
+    {
+        $select = "m.uid, firstname, lastname, userphoto, m.title, organization, ". 
+                  "(CASE WHEN coalesce(userphoto, '') != '' THEN 1 ELSE 0 END) AS hasphoto, ".
+                  "(CASE WHEN m.uid IN (" . implode(',', INTERNAL_USERS) . ") THEN 1 ELSE 0 END) AS cglaemployee";
 
+        $order_by = [
+                        'cglaemployee' => 'ASC',
+                        'hasphoto' => 'DESC',
+                        'm.id' => 'random'
+                    ];
+        $row_count = true;
+        
+        $this->members_base_query($id, $select, null, $order_by, $row_count);
+        
+        $this->db->limit(FORUM_EXPERT_LIMIT, 0);
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
 
     /**
      * Get ALL members (experts) along with a flag whether
@@ -474,6 +503,8 @@ class Forums_model extends CI_Model
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
     }
+
+
     
     /**
      * Get paginated list of users attending a forum, with filters applied
@@ -579,7 +610,7 @@ class Forums_model extends CI_Model
                     ->join('exp_expertise_sector s', "m.uid = s.uid AND s.permission = 'All' AND s.status = " . $this->db->escape(STATUS_ACTIVE), 'left')
                     ->group_by(implode(',', $columns)); // And use column list for GROUP BY
             } else {
-                $this->db->select($select);
+                $this->db->select($select, false);
             }
         }
         $defaut_where = array(

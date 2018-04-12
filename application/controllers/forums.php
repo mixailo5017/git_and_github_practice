@@ -59,7 +59,7 @@ class Forums extends CI_Controller {
 
         // Fetch projects and members (experts) accociated with the forum
         $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country', array('p.id' => 'random'), FORUM_PROJECT_LIMIT, 0, true);
-        $members = $model->members($id, 'm.uid, firstname, lastname, userphoto, m.title, organization', array('m.id' => 'random'), FORUM_EXPERT_LIMIT, 0, true);
+        $members = $model->get_members_for_forum_homepage($id);
 
         // List of all other forums for navigation bar
         $forums_by_categories = $model->all_by_categories($id);
