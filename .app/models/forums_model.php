@@ -1,6 +1,7 @@
 <?php
 
-class Forums_model extends CI_Model {
+class Forums_model extends CI_Model
+{
 
     /**
      * @var string
@@ -26,7 +27,8 @@ class Forums_model extends CI_Model {
      * @param null $select
      * @return array
      */
-    public function find($id, $select = null) {
+    public function find($id, $select = null)
+    {
         $this->base_query($select, array('f.id' => (int) $id));
 
         $row = $this->db
@@ -51,7 +53,8 @@ class Forums_model extends CI_Model {
      * @param bool $row_count
      * @return array
      */
-    public function all($where = null, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false) {
+    public function all($where = null, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false)
+    {
         $this->base_query($select, $where, $order_by, $row_count);
 
         if (! is_null($limit)) {
@@ -71,7 +74,8 @@ class Forums_model extends CI_Model {
      * @param int|array $id
      * @return bool
      */
-    public function delete($id) {
+    public function delete($id)
+    {
         if (! is_array($id)) {
             $id = array($id);
         }
@@ -96,7 +100,7 @@ class Forums_model extends CI_Model {
         $this->db->trans_complete();
         $this->db->trans_off(); // TODO: Revisit this
 
-        if ($this->db->trans_status() === FALSE) {
+        if ($this->db->trans_status() === false) {
             return false;
         }
 
@@ -107,7 +111,8 @@ class Forums_model extends CI_Model {
      * @param $id
      * @param $data
      */
-    public function update($id, $data) {
+    public function update($id, $data)
+    {
         $this->db
             ->where('id', $id)
             ->set($data)
@@ -117,7 +122,8 @@ class Forums_model extends CI_Model {
     /**
      * @param $data
      */
-    public function create($data) {
+    public function create($data)
+    {
         $this->db
             ->set($data)
             ->insert('exp_forums');
@@ -131,7 +137,8 @@ class Forums_model extends CI_Model {
      * @param string| array $members
      * @return bool
      */
-    public function add_members($id, $members) {
+    public function add_members($id, $members)
+    {
         if (is_null($members)) {
             return false;
         }
@@ -160,7 +167,8 @@ class Forums_model extends CI_Model {
      * @param string|array $members
      * @return bool
      */
-    public function delete_members($id, $members) {
+    public function delete_members($id, $members)
+    {
         if (is_null($members)) {
             return false;
         }
@@ -182,7 +190,8 @@ class Forums_model extends CI_Model {
      * @param $members
      * @return bool
      */
-    public function sync_members($id, $members) {
+    public function sync_members($id, $members)
+    {
         // BEGIN TRANSACCTION
         $this->db->trans_start();
 
@@ -193,7 +202,7 @@ class Forums_model extends CI_Model {
         $this->db->trans_complete();
         $this->db->trans_off(); // TODO: Revisit this
 
-        if ($this->db->trans_status() === FALSE) {
+        if ($this->db->trans_status() === false) {
             return false;
         }
 
@@ -211,7 +220,8 @@ class Forums_model extends CI_Model {
      * @param bool $row_count
      * @return array
      */
-    public function members($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false) {
+    public function members($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false)
+    {
         $this->members_base_query($id, $select, null, $order_by, $row_count);
 
         if (! is_null($limit)) {
@@ -234,9 +244,10 @@ class Forums_model extends CI_Model {
      * @param $id
      * @return mixed
      */
-    public function all_members($id) {
+    public function all_members($id)
+    {
         return $this->db
-            ->select('uid, firstname, lastname, organization, CASE WHEN exp_forum_member.member_id IS NULL THEN 0 ELSE 1 END AS selected', FALSE)
+            ->select('uid, firstname, lastname, organization, CASE WHEN exp_forum_member.member_id IS NULL THEN 0 ELSE 1 END AS selected', false)
             ->from('exp_members')
             ->join('exp_forum_member', 'exp_forum_member.member_id = exp_members.uid AND exp_forum_member.forum_id = ' . $this->db->escape($id), 'left')
             ->where('exp_members.membertype', MEMBER_TYPE_MEMBER)
@@ -254,7 +265,8 @@ class Forums_model extends CI_Model {
      * @param string|array $projects
      * @return bool
      */
-    public function add_projects($id, $projects) {
+    public function add_projects($id, $projects)
+    {
         if (is_null($projects)) {
             return false;
         }
@@ -283,7 +295,8 @@ class Forums_model extends CI_Model {
      * @param string|array $projects
      * @return bool
      */
-    public function delete_projects($id, $projects = null) {
+    public function delete_projects($id, $projects = null)
+    {
         if (is_null($projects)) {
             return false;
         }
@@ -305,7 +318,8 @@ class Forums_model extends CI_Model {
      * @param $projects
      * @return bool
      */
-    public function sync_projects($id, $projects) {
+    public function sync_projects($id, $projects)
+    {
         // BEGIN TRANSACCTION
         $this->db->trans_start();
 
@@ -316,7 +330,7 @@ class Forums_model extends CI_Model {
         $this->db->trans_complete();
         $this->db->trans_off(); // TODO: Revisit this
 
-        if ($this->db->trans_status() === FALSE) {
+        if ($this->db->trans_status() === false) {
             return false;
         }
 
@@ -334,7 +348,8 @@ class Forums_model extends CI_Model {
      * @param bool $row_count
      * @return array
      */
-    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false) {
+    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false)
+    {
         $this->projects_base_query($id, $select, null, $order_by, $row_count);
 
         if (! is_null($limit)) {
@@ -354,9 +369,10 @@ class Forums_model extends CI_Model {
      * @param $id
      * @return mixed
      */
-    public function all_projects($id) {
+    public function all_projects($id)
+    {
         $result = $this->db
-            ->select('pid, projectname, CASE WHEN fp.project_id IS NULL THEN 0 ELSE 1 END AS selected', FALSE)
+            ->select('pid, projectname, CASE WHEN fp.project_id IS NULL THEN 0 ELSE 1 END AS selected', false)
             ->from('exp_projects p')
             ->join('exp_members m', 'p.uid = m.uid')
             ->join('exp_forum_project fp', 'fp.project_id = p.pid AND fp.forum_id = ' . $this->db->escape($id), 'left')
@@ -373,7 +389,8 @@ class Forums_model extends CI_Model {
      *
      * @return array
      */
-    public function categories() {
+    public function categories()
+    {
         $result =  $this->db
             ->select('id, name')
             ->order_by('name')
@@ -389,7 +406,8 @@ class Forums_model extends CI_Model {
      * @param int $except
      * @return array
      */
-    public function all_by_categories($except = null) {
+    public function all_by_categories($except = null)
+    {
         $join = 'fc.id = f.category_id AND f.status = ' . $this->db->escape(STATUS_ACTIVE);
         if (! is_null($except)) {
             $join .= ' AND f.id <> ' . $this->db->escape((int) $except);
@@ -397,7 +415,7 @@ class Forums_model extends CI_Model {
 
         $rows =  $this->db
             ->select('fc.id, fc.name category')
-            ->select("STRING_AGG(f.id || '|' || f.title, ',' ORDER BY start_date DESC, end_date DESC, f.title) forums", FALSE)
+            ->select("STRING_AGG(f.id || '|' || f.title, ',' ORDER BY start_date DESC, end_date DESC, f.title) forums", false)
             ->from('exp_forum_categories fc')
             ->join('exp_forums f', $join, 'left')
             ->group_by('fc.id, name')
@@ -417,7 +435,6 @@ class Forums_model extends CI_Model {
             } else {
                 $row['forums'] = array();
             }
-
         }
 
         return $rows;
@@ -432,7 +449,8 @@ class Forums_model extends CI_Model {
      * @param bool $row_count
      * @return void
      */
-    private function base_query($select = null, $where = null, $order_by = null, $row_count = false) {
+    private function base_query($select = null, $where = null, $order_by = null, $row_count = false)
+    {
         $select = (! is_null($select)) ? $select : $this->select;
         $this->db
             ->from('exp_forums f')
@@ -466,16 +484,33 @@ class Forums_model extends CI_Model {
      * @param array $filter country|discipline|sector|searchtext
      * @param int $member_type
      * @param int|null $sort Prerefined sort order (TODO implement this in the future)
-     * 
+     *
      * @return array
      */
     public function get_filtered_user_list($id, $limit, $offset = 0, $filter = array(), $member_type = MEMBER_TYPE_MEMBER, $sort = null)
     {
-   
         $rowc = true;
         $select = 'm.uid, firstname, lastname, organization, m.title, userphoto, country, sector, discipline';
         $this->members_base_query($id, $select, null, null, $rowc);
         
+        $this->add_filters($filter);
+        $this->db->group_by('m.uid');
+        
+        $rows = $this->db
+            ->limit($limit, $offset)
+            ->get()
+            ->result_array();
+            
+        $result = array(
+            'filter_total' =>count($rows) > 0 ? (int) $rows[0]['row_count'] : 0,
+            'filter' => $rows
+        );
+ 
+        return $result;
+    }
+
+    private function add_filters($filter)
+    {
         if (!empty($filter['country'])) {
             $this->db->where('m.country', $filter['country']);
         }
@@ -505,23 +540,7 @@ class Forums_model extends CI_Model {
             $where = where_like2($columns, $terms);
             $this->db->where($where);
         }
-        $this->db->group_by('m.uid');
-        
-        $rows = $this->db
-            ->limit($limit, $offset)
-            ->get()
-            ->result_array();
-            
-        $result = array(
-        	'filter_total' =>count($rows) > 0 ? (int) $rows[0]['row_count'] : 0, 
-        	'filter' => $rows  
-        );
- 
-        return $result;
-       
     }
-
-
 
     /**
      * Generates a base query for forum members (experts)
@@ -531,10 +550,11 @@ class Forums_model extends CI_Model {
      * @param null $where
      * @param null $order_by
      * @param bool $row_count
-     * 
+     *
      * @return void
      */
-    private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false) {
+    private function members_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false)
+    {
         $this->db
             ->from('exp_forum_member fm')
             ->join('exp_forums f', 'fm.forum_id = f.id')
@@ -555,7 +575,7 @@ class Forums_model extends CI_Model {
                 $columns = array_diff(array_map('trim', explode(',', $select)), array('sector'));
                 $this->db
                     ->select(implode(',', $columns)) // Let CI to escape all columns except sector
-                    ->select("STRING_AGG(DISTINCT s.sector, ',' ORDER BY s.sector) sector", FALSE) // Now we add and expression for sector
+                    ->select("STRING_AGG(DISTINCT s.sector, ',' ORDER BY s.sector) sector", false) // Now we add and expression for sector
                     ->join('exp_expertise_sector s', "m.uid = s.uid AND s.permission = 'All' AND s.status = " . $this->db->escape(STATUS_ACTIVE), 'left')
                     ->group_by(implode(',', $columns)); // And use column list for GROUP BY
             } else {
@@ -588,8 +608,8 @@ class Forums_model extends CI_Model {
      * @param bool $row_count
      * @return void
      */
-    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false) {
-
+    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false)
+    {
         $select = (! is_null($select)) ? $select : 'pid, projectname';
         $this->db
             ->from('exp_forum_project fp')
@@ -620,7 +640,8 @@ class Forums_model extends CI_Model {
      * @param array $order_by
      * @return void
      */
-    private function apply_order_by($order_by) {
+    private function apply_order_by($order_by)
+    {
         if (! is_null($order_by) && is_array($order_by)) {
             foreach ($order_by as $column => $direction) {
                 $this->db->order_by($column, $direction);
@@ -634,13 +655,14 @@ class Forums_model extends CI_Model {
      * @param array $where
      * @return void
      */
-    private function apply_where($where) {
+    private function apply_where($where)
+    {
         if (! is_null($where) && is_array($where)) {
             foreach ($where as $column => $value) {
                 // If the key is of type int that means that it is a RAW WHERE clause.
                 // Therefore we need to apply it as such
                 if (is_int($column)) {
-                    $this->db->where($value, NULL, FALSE);
+                    $this->db->where($value, null, false);
                 } else {
                     $this->db->where($column, $value);
                 }
@@ -648,7 +670,8 @@ class Forums_model extends CI_Model {
         }
     }
 
-    public function has_access_to($uid, $forum_id) {
+    public function has_access_to($uid, $forum_id)
+    {
         // Only CG/LA employees have access to the Emergency Projects list for Trump
         if ($forum_id === EMERGENCY_PROJECTS_FORUM_ID && !in_array($uid, INTERNAL_USERS)) {
             return false;
