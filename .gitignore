@@ -19,6 +19,7 @@ wwwroot/images/store/**
 
 # Development files
 *.sublime-*
+.php_cs.cache
 wwwroot/node_modules/**
 .idea/**
 

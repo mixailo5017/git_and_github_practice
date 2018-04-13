@@ -59,7 +59,7 @@ class Forums extends CI_Controller {
 
         // Fetch projects and members (experts) accociated with the forum
         $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country', array('p.id' => 'random'), FORUM_PROJECT_LIMIT, 0, true);
-        $members = $model->members($id, 'm.uid, firstname, lastname, userphoto, m.title, organization', array('m.id' => 'random'), FORUM_EXPERT_LIMIT, 0, true);
+        $members = $model->get_members_for_forum_homepage($id);
 
         // List of all other forums for navigation bar
         $forums_by_categories = $model->all_by_categories($id);
@@ -316,7 +316,7 @@ class Forums extends CI_Controller {
             $value = $value ? : '';
         });
 
-        $users = $this->forums_model->get_filter_user_list2($id, $limit, $offset, $filter, MEMBER_TYPE_MEMBER, null);
+        $users = $this->forums_model->get_filtered_user_list($id, $limit, $offset, $filter, MEMBER_TYPE_MEMBER, null);
 		$total = $users['filter_total'];
 		
 		/* This fixes the 1 - 0 error if no users are found make offset 0*/ 
