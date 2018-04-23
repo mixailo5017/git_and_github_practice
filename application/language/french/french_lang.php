@@ -996,7 +996,7 @@ $lang['EmailNotUnique'] = 'Il existe déjà un compte avec cette address email.'
 $lang['RegistrationEmailNotUnique'] = 'Il existe déjà un compte avec cette address email. Connectez-vous ci-dessus ou cliquez sur Mot de passe oublié.';
 $lang['Website'] = 'Site web';
 
-$lang['WEBScore'] = 'Score Bénéfices Économiques Élargis';
+$lang['EstJobsCreated'] = 'Est. Postes Créés';
 
 $lang['ProjectTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Bhopal Metro&quot;) pour affiner votre recherche';
 $lang['ExpertTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Jason Jones&quot;) pour affiner votre recherche';

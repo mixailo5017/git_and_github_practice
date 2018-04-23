@@ -408,9 +408,6 @@ class Projects extends CI_Controller
 		$viewdata['project']['comment'] = $model->get_project_comment($slug, $userid);
 		$viewdata['project']['assessment'] = $model->get_project_assessment($slug, $userid);
 
-        // Generate a random number to display as the WEB score
-        // $viewdata['project']['webscore'] = rand(150, 1000);
-
         // Global Experts and SME Experts are only visible to project owners
         $global_experts = array();
         $sme_experts = array();
