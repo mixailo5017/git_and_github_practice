@@ -69,8 +69,8 @@
                                     N/A
                                 <?php } ?>
                             </td>
-                            <th><?php echo lang('WEBScore') ?>:</th>
-                            <td><?php echo isset($project['webscore']) ? $project['webscore'] : 'N/A' ?></td>
+                            <th><?php echo lang('EstJobsCreated') ?>:</th>
+                            <td><?php echo ($project['projectdata']['jobs_created'] !== null) ? number_format($project['projectdata']['jobs_created']) : 'N/A' ?></td>
                         </tr>
                     </table>
                 </div>
