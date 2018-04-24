@@ -5145,5 +5145,40 @@ class Projects_model extends CI_Model {
 		return $smearr;
 	}
 
+    public function get_jobs_created($projectid)
+    {
+        $sql = "
+        SELECT 
+            ((totalbudget / 1E3) *  
+            COALESCE(
+                (CASE WHEN c.devlevel = 'EM' THEN devlookup_mostspecific.jobs_em ELSE devlookup_mostspecific.jobs_row END), 
+                (CASE WHEN c.devlevel = 'EM' THEN devlookup_midspecific.jobs_em ELSE devlookup_midspecific.jobs_row END), 
+                (CASE WHEN c.devlevel = 'EM' THEN devlookup_leastspecific.jobs_em ELSE devlookup_leastspecific.jobs_row END)
+            ))::integer AS jobs_created
+        FROM exp_projects p 
+        JOIN exp_countries c ON (p.country = c.countryname)
+        LEFT OUTER JOIN exp_sector_jobs devlookup_mostspecific
+        ON
+            p.sector = devlookup_mostspecific.sector AND
+            p.subsector = devlookup_mostspecific.subsector
+        LEFT OUTER JOIN exp_sector_jobs devlookup_midspecific
+        ON
+            p.sector = devlookup_midspecific.sector AND
+            devlookup_midspecific.subsector IS NULL
+        LEFT OUTER JOIN exp_sector_jobs devlookup_leastspecific
+        ON
+            devlookup_leastspecific.sector IS NULL AND
+            devlookup_leastspecific.subsector IS NULL
+        WHERE p.pid = ?
+        ";
+
+        $jobs_created_resultobject = $this->db->query($sql, $projectid)->row();
+        if (!isset($jobs_created_resultobject)) return null; // For instance, non-existent PID specified
+        $jobs_created = $jobs_created_resultobject->jobs_created;
+        if ($jobs_created !== null) return (int) $jobs_created; // Result from DB will be null if no totalbudget yet specified
+        return null;
+
+    }
+
 }
 ?>

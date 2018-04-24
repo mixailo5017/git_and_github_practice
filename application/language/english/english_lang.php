@@ -138,7 +138,8 @@ $lang['Organization'] = 'Organization';
 $lang['Overview'] = 'Overview';
 $lang['Map'] = 'Map';
 $lang['KeyServices']= 'Key Services';
-$lang['WEBScore'] = 'Wider Economic Benefits Score';
+$lang['EstJobsCreated'] = 'Est. Jobs Created';
+$lang['JobsCreatedExplanation'] = 'An estimate of the total jobs (direct and indirect) that will be created by this project. Click to learn more.';
 
 
 

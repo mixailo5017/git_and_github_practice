@@ -397,6 +397,7 @@ class Projects extends CI_Controller
 
         $viewdata['project']['isfollowing'] = $model->isfollowing($pid, $this->uid); // Is current user following the project
         $viewdata['project']['projectdata'] = $model->get_project_data($slug, $userid);
+        $viewdata['project']['projectdata']['jobs_created'] = $model->get_jobs_created($pid);
 		$viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
 		$viewdata['project']['financial'] = $model->get_financial_data($slug, $userid);
 		$viewdata['project']['regulatory'] = $model->get_regulatory_data($slug, $userid);
@@ -407,9 +408,6 @@ class Projects extends CI_Controller
 		$viewdata['project']['ad'] = $model->get_ad_data();
 		$viewdata['project']['comment'] = $model->get_project_comment($slug, $userid);
 		$viewdata['project']['assessment'] = $model->get_project_assessment($slug, $userid);
-
-        // Generate a random number to display as the WEB score
-        // $viewdata['project']['webscore'] = rand(150, 1000);
 
         // Global Experts and SME Experts are only visible to project owners
         $global_experts = array();

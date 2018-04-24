@@ -743,7 +743,8 @@ $lang['EmailNotUnique'] = 'Já existe uma conta con este email.';
 $lang['RegistrationEmailNotUnique'] = 'Já existe uma conta con este email. Inicie sua sessão ou clique sobre Esqueceu sua senha.';
 $lang['Website'] = 'Site';
 
-$lang['WEBScore'] = 'Pontuação Benefícios Econômicos Mais Amplos';
+$lang['EstJobsCreated'] = 'Estimados Empleos Criados';
+$lang['JobsCreatedExplanation'] = 'Uma estimativa do total de empregos (diretos e indiretos) que serão criados por este projeto. Clique para aprender mais.';
 
 $lang['ProjectTextSearchTip'] = 'Utilize aspas (&quot;Bhopal Metro&quot;) para refinar a sua pesquisa';
 $lang['ExpertTextSearchTip'] = 'Utilize aspas (&quot;Jason Jones&quot;) para refinar a sua pesquisa';
