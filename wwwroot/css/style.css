@@ -848,10 +848,13 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   width: 100%;
 }
 #col2 table.overview_table td {
-  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
 }
 #col2 table.overview_table td:nth-child(even) {
   background: #f5f5f5;
+}
+#col2 table.overview_table tr {
+  border-bottom: 1px solid #ddd;
 }
 #col2 table.overview_table tr:hover th, #col2 table.overview_table tr:hover td {
   background: #ddd;
