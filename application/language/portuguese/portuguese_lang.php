@@ -744,6 +744,7 @@ $lang['RegistrationEmailNotUnique'] = 'Já existe uma conta con este email. Inic
 $lang['Website'] = 'Site';
 
 $lang['EstJobsCreated'] = 'Estimados Empleos Criados';
+$lang['JobsCreatedExplanation'] = 'Uma estimativa do total de empregos (diretos e indiretos) que serão criados por este projeto. Clique para aprender mais.';
 
 $lang['ProjectTextSearchTip'] = 'Utilize aspas (&quot;Bhopal Metro&quot;) para refinar a sua pesquisa';
 $lang['ExpertTextSearchTip'] = 'Utilize aspas (&quot;Jason Jones&quot;) para refinar a sua pesquisa';
