@@ -170,6 +170,12 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 	#project_form_upload .tooltip {top: 25px;}
 }
 
+.tooltip-container {
+	display: flex;
+	justify-content: space-between;
+	.tooltip {background:url(#{$site}icon_question_mark.png) center no-repeat;padding: 0px;width:24px;height: 24px;display: inline-block;}
+}
+
 .tip-yellowsimple {z-index:1000;text-align:left;border:1px solid #c7bf93;border-radius:4px;padding:6px 8px;min-width:50px;max-width:300px;color:#000;background-color:#fff9c9;
 
 	 // - If you set a background-image, border/padding/background-color will be ingnored.
