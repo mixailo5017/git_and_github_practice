@@ -63,6 +63,7 @@ class Marketing extends CI_Controller {
 	public function algosemail()
 	{
 		$this->load->model('algosemail_model');
+		$this->load->model('forums_model');
 
 		$this->headerdata['title'] = $data['headertitle'] = "Algorithms Email | GViP Admin";
 
@@ -74,7 +75,13 @@ class Marketing extends CI_Controller {
 		// 	]
 		// ];
 		
-		$data['recommendations'] = $this->algosemail_model->get_recommendations(28);
+		$data['attendees'] = $this->forums_model->get_filtered_user_list(31, 100)['filter'];
+		foreach ($data['attendees'] as &$attendee) {
+			$attendee['recommendations'] = $this->algosemail_model->get_recommendations($attendee['uid']);
+		}
+
+
+		
 
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');

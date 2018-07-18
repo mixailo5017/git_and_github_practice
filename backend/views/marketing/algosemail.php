@@ -8,12 +8,28 @@
   
         
         <div id="contentwrapper" class="contentwrapper">
-			<h3>Norman Anderson</h3>
-            <?php foreach ($recommendations as $recommendation) { ?>
-                <div>
-                    <div><a target="_blank" href="https://www.gvip.io/expertise/<?php echo $recommendation['uid'] ?>"><?php echo $recommendation['firstname'].' '.$recommendation['lastname'] ?> (<?php echo $recommendation['organization'] ?>)</div>
+			
+            <?php foreach ($attendees as $attendee) { ?>
+                <div class="contenttitle2">
+                    <h3><a target="_blank" href="https://www.gvip.io/expertise/<?= $attendee['uid'] ?>"><?= $attendee['firstname'].' '.$attendee['lastname'] ?></a></h3>
                 </div>
-            <?php } ?>
+                
+                <?php
+                if (count($attendee['recommendations'])) {
+                    foreach ($attendee['recommendations'] as $recommendation) { ?>
+                        <div>
+                            <div><a target="_blank" href="https://www.gvip.io/expertise/<?php echo $recommendation['uid'] ?>"><?php echo $recommendation['firstname'].' '.$recommendation['lastname'] ?> (<?php echo $recommendation['organization'] ?>)</a></div>
+                        </div>
+                <?php 
+                    }
+                }
+                else { ?>
+                    <div>Sorry, no recommendations available.</div>
+                <?php
+                }
+                
+            } ?>
+            
 
             
             
