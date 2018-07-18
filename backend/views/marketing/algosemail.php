@@ -8,7 +8,8 @@
   
         
         <div id="contentwrapper" class="contentwrapper">
-			
+			<div>Showing everyone coming to LALF16 (forum ID 31).</div>
+            
             <?php foreach ($attendees as $attendee) { ?>
                 <div class="contenttitle2">
                     <h3><a target="_blank" href="https://www.gvip.io/expertise/<?= $attendee['uid'] ?>"><?= $attendee['firstname'].' '.$attendee['lastname'] ?></a></h3>
