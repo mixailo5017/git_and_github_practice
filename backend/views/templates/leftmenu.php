@@ -82,6 +82,7 @@
             <span class="arrow"></span>
             <ul id="marketingsub">
                 <li <?php if ($fst_segment === "marketing" && $snd_segment == "index") { echo "class='current'"; } ?>><a href="/admin.php/marketing/index">Weekly Email</a></li>
+                <li <?php if ($fst_segment === "marketing" && $snd_segment == "algosemail") { echo "class='current'"; } ?>><a href="/admin.php/marketing/algosemail">Algorithms Email</a></li>
             </ul>
         </li>
 	</ul>
