@@ -65,17 +65,20 @@ class Marketing extends CI_Controller {
 		$this->load->model('algosemail_model');
 		$this->load->model('forums_model');
 
-		$this->headerdata['title'] = $data['headertitle'] = "Algorithms Email | GViP Admin";
+		$this->load->library('pagination');
 
-		// $data['recommendations'] = [
-		// 	[
-		// 		'firstname' => 'Eric',
-		// 		'lastname' => 'Figueroa',
-		// 		'uid' => 3594
-		// 	]
-		// ];
+		$config['base_url'] = '/admin.php/marketing/algosemail';
+		$config['total_rows'] = 100;
+		$config['per_page'] = 5;
+
+		$this->pagination->initialize($config);
+
+		$data['paginationLinks'] = $this->pagination->create_links();
+
+		$this->headerdata['title'] = $data['headertitle'] = "Algorithms Email | GViP Admin";
 		
-		$data['attendees'] = $this->forums_model->get_filtered_user_list(31, 100)['filter'];
+		$offset = $this->uri->segment(3);
+		$data['attendees'] = $this->forums_model->get_filtered_user_list(31, 5, $offset)['filter'];
 		foreach ($data['attendees'] as &$attendee) {
 			$attendee['recommendations'] = $this->algosemail_model->get_recommendations($attendee['uid']);
 		}
