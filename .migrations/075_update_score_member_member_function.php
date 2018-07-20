@@ -2,7 +2,7 @@
 
 class Migration_update_score_member_member_function extends CI_Migration {
 
-    $this->results_table = 'exp_member_member_scores';
+    private $results_table = 'exp_member_member_scores';
 
     public function up()
     {
