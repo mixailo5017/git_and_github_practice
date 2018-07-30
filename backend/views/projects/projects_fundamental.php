@@ -334,21 +334,21 @@
 
 								</div><!-- /.points-map-itself -->
 							</div><!-- /.points-map -->
-							<?php echo br(); ?>
+							<br>
 							<?php echo form_label('Name:', 'project_map_points_mapname', $opt['map_points_form']['lbl_mapname']);?>
 							<div class="fld" >
 
 								<?php echo form_input($opt['map_points_form']['project_map_points_mapname']);?>
 								<div id="err_project_map_points_mapname" class="errormsg"></div>
 							</div>
-							<?php echo br(); ?>
+							<br>
 							<?php echo form_label('Latitude:', 'project_map_points_latitude', $opt['map_points_form']['lbl_latitude']);?>
 							<div class="fld" >
 
 								<?php echo form_input($opt['map_points_form']['project_map_points_latitude']);?>
 								<div id="err_project_map_points_latitude" class="errormsg"></div>
 							</div>
-							<?php echo br(); ?>
+							<br>
 
 							<?php echo form_label('Longitude:', 'project_map_points_longitude', $opt['map_points_form']['lbl_longitude']);?>
 							<div class="fld" >
@@ -357,7 +357,7 @@
 								<div id="err_project_map_points_longitude" class="errormsg"></div>
 							</div>
 
-							<?php echo br(); ?>
+							<br>
 							<?php echo form_submit('points_submit', 'Add New','class = "light_green btn_lml"');?>
 
 							<?php echo form_close();?>
@@ -490,7 +490,7 @@
 							<?php echo form_input($opt['design_issues_form']['project_design_issues_title']);?>
 							<div id="err_project_design_issues_title" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Description:', 'project_design_issues_desc', $opt['design_issues_form']['lbl_description']);?>
 						<div class="fld" >
@@ -498,7 +498,7 @@
 							<?php echo form_input($opt['design_issues_form']['project_design_issues_desc']);?>
 							<div id="err_project_design_issues_description" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Attachment:', 'project_design_issues_attachment', $opt['design_issues_form']['lbl_attachment']);?>
 						<div class="fld" >
@@ -506,7 +506,7 @@
 							<?php echo form_upload($opt['design_issues_form']['project_design_issues_attachment']);?>
 							<div id="err_project_design_issues_attachment" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Permissions:', 'project_design_issues_permissions', $opt['design_issues_form']['lbl_permissions']);?>
 						<div class="fld"><?php
@@ -653,7 +653,7 @@
 				<?php echo form_input($opt['environment_form']['project_environment_title']);?>
 				<div id="err_project_environment_title" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<?php echo form_label('Description:', 'project_environment_desc', $opt['environment_form']['lbl_env_description']);?>
 			<div class="fld" >
@@ -661,7 +661,7 @@
 				<?php echo form_input($opt['environment_form']['project_environment_desc']);?>
 				<div id="err_project_environment_description" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<?php echo form_label('Attachment:', 'project_environment_attachment', $opt['environment_form']['lbl_env_attachment']);?>
 			<div class="fld" >
@@ -669,7 +669,7 @@
 				<?php echo form_upload($opt['environment_form']['project_environment_attachment']);?>
 				<div id="err_project_environment_attachment" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<?php echo form_label('Permissions:', 'project_environment_permissions', $opt['environment_form']['lbl_env_permissions']);?>
 			<div class="fld">
@@ -819,7 +819,7 @@
 				<?php echo form_input($opt['project_studies_form']['project_studies_title']);?>
 				<div id="err_project_studies_title" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<?php echo form_label('Description:', 'project_studies_desc', $opt['project_studies_form']['lbl_std_description']);?>
 			<div class="fld" >
@@ -827,7 +827,7 @@
 				<?php echo form_input($opt['project_studies_form']['project_studies_desc']);?>
 				<div id="err_project_studies_description" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<?php echo form_label('Attachment:', 'project_studies_attachment', $opt['project_studies_form']['lbl_std_attachment']);?>
 			<div class="fld" >
@@ -835,7 +835,7 @@
 				<?php echo form_upload($opt['project_studies_form']['project_studies_attachment']);?>
 				<div id="err_project_studies_attachment" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<?php echo form_label('Permissions:', 'project_studies_permissions', $opt['project_studies_form']['lbl_std_permissions']);?>
 			<div class="fld">
@@ -883,8 +883,8 @@
 				<div class="fld">
 				<?php echo form_textarea(array('id'=>'project_legal','name'=>'project_legal','rows'=>'10','cols'=>'30','value'=>$legalinfo));?>
 				</div>
-				<?php echo br(); ?>
-				<?php echo br(); ?>
+				<br>
+				<br>
 				<?php echo form_submit('legal_submit', 'Add Legal Information','class = "light_green btn_lbl"');?>
 
 

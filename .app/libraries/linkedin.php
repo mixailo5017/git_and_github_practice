@@ -44,7 +44,7 @@ class Linkedin
         $this->CI =& get_instance();
 
         $config = $this->CI->config->item('linkedin');
-        $inATestingEnvironment = in_array(ENVIRONMENT, ['dev', 'staging'], true);
+        $inATestingEnvironment = in_array(ENVIRONMENT, ['development', 'staging'], true);
 
         $this->CI->load->library('OAuth2/OAuth2');
 

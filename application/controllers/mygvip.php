@@ -94,7 +94,7 @@ class Mygvip extends CI_Controller {
 
         // Inject map data into the footer
         $map = $this->initialize_map();
-        $this->footer_data['footer_extra'] = $this->load->view('myvip/_footer_extra', compact('map'), true);
+        $this->footer_data['footer_extra'] = $this->load->view('mygvip/_footer_extra', compact('map'), true);
 
         $this->load->view('templates/header', $this->headerdata);
 
@@ -104,7 +104,7 @@ class Mygvip extends CI_Controller {
 
         $this->load->view('templates/_map_assets', '');
         $this->load->view('templates/_map_templates', '');
-        $this->load->view('myvip/index', $data);
+        $this->load->view('mygvip/index', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
 
@@ -148,7 +148,7 @@ class Mygvip extends CI_Controller {
         $this->set_mydiscussions_breadcrumb();
 
         $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('myvip/mydiscussions', $data);
+        $this->load->view('mygvip/mydiscussions', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
 
@@ -199,7 +199,7 @@ class Mygvip extends CI_Controller {
 
         // Render the page
         $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('myvip/experts', $data);
+        $this->load->view('mygvip/experts', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
 
@@ -250,7 +250,7 @@ class Mygvip extends CI_Controller {
 
         // Render the page
         $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('myvip/experts', $data);
+        $this->load->view('mygvip/experts', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
 
@@ -305,7 +305,7 @@ class Mygvip extends CI_Controller {
 
         // Render the page
         $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('myvip/myprojects', $data);
+        $this->load->view('mygvip/myprojects', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
 

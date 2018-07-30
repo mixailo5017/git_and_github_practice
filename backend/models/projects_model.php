@@ -176,7 +176,7 @@ class Projects_model extends CI_Model
     {
         $this->db->select("pid");
         $qrycheck = $this->db->get_where("exp_projects", array("slug" => $slug, "isdeleted" => "0"));
-        if ($qrycheck->num_rows > 0) {
+        if ($qrycheck->num_rows() > 0) {
             $objproject = $qrycheck->row_array();
             $pid = $objproject["pid"];
             return $pid;
@@ -198,7 +198,7 @@ class Projects_model extends CI_Model
     {
         $this->db->select("pid");
         $qrycheck = $this->db->get_where("exp_projects", array("slug" => $slug, "isdeleted" => "0"));
-        if ($qrycheck->num_rows > 0) {
+        if ($qrycheck->num_rows() > 0) {
 
             return true;
         } else {
@@ -218,7 +218,7 @@ class Projects_model extends CI_Model
     {
         $this->db->select("uid");
         $qrycheck = $this->db->get_where("exp_projects", array("slug" => $slug, "isdeleted" => "0"));
-        if ($qrycheck->num_rows > 0) {
+        if ($qrycheck->num_rows() > 0) {
             $objproject = $qrycheck->row_array();
             $uid2 = $objproject["uid"];
             return $uid2;

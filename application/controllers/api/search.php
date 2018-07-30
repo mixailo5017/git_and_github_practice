@@ -75,11 +75,11 @@ class Search extends CI_Controller {
 		$bounds	= $this->input->post('bounds',$default);
 
 		$filters = array(
-			"lat < {$bounds['north']}"	=> null,
-			"lat > {$bounds['south']}"	=> null,
-			"lng > {$bounds['west']}"	=> null,
-			"lng < {$bounds['east']}"	=> null
-			);
+			"lat <" => $bounds['north'],
+			"lat >" => $bounds['south'],
+			"lng >" => $bounds['west'],
+			"lng <" => $bounds['east'],
+		);
 
 		$projects   = array();
 		$experts    = array();
@@ -115,7 +115,7 @@ class Search extends CI_Controller {
 
         $return_data = compact('projects', 'experts', 'companies', 'myprojects');
 
-		$this->session->sess_write();
+		//$this->session->sess_write();
 
 //		die(json_encode($return_data));
         sendResponse($return_data);

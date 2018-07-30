@@ -94,7 +94,8 @@ class VIP_Upload extends CI_Upload {
         }
 
         // Sanitize the file name for security
-        $this->file_name = $this->clean_file_name($this->file_name);
+        // change for CI3
+        $this->file_name = $this->_CI->security->sanitize_filename($this->file_name);
 
         // Truncate the file name if it's too long
         if ($this->max_filename > 0)
@@ -305,7 +306,7 @@ class VIP_Upload extends CI_Upload {
 
     private function saveRawImage($field)
     {
-        $data = str_replace('[removed]', '', $_POST['raw-file']) ;
+        $data = preg_replace('/data:image\/(.*);base64,/i', '', $_POST['raw-file']);
         $data = base64_decode($data);
 
         // Is the file type allowed to be uploaded?

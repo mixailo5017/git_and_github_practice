@@ -104,14 +104,23 @@ class Auth {
     {
         $this->members->update($this->id(), array('lastlogout' => time()));
 
+        // $session_data = array(
+        //     'logged_in' => '',
+        //     'uid' => '',
+        //     'name' => '',
+        //     'lastlogin' => '',
+        //     'usertype' => '',
+        //     'userphoto' => ''
+        // );
         $session_data = array(
-            'logged_in' => '',
-            'uid' => '',
-            'name' => '',
-            'lastlogin' => '',
-            'usertype' => '',
-            'userphoto' => ''
+            'logged_in',
+            'uid',
+            'name',
+            'lastlogin',
+            'usertype',
+            'userphoto'
         );
+
         $this->session->unset_userdata($session_data);
     }
         /**

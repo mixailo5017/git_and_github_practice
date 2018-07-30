@@ -89,6 +89,7 @@ class Signup extends CI_Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Flash error message will be overwritten here with the one that came with the POST request
             // May need to address this
+            
             $result = $this->{"post_$step"}($signup);
             if (! empty($result) && is_array($result))
                 $data = array_merge($data, $result);
@@ -111,8 +112,8 @@ class Signup extends CI_Controller
         $this->form_validation->set_rules('is_developer', 'Are you a project developer', 'required');
 
         if (! $this->form_validation->run()) return;
-
-        $linkedin = $this->input->post('linkedin', TRUE) !== false;
+        
+        $linkedin = $this->input->post('linkedin', TRUE) !== null;
         $is_developer = $this->input->post('is_developer', TRUE) == '1';
 
         $this->signup_model->update(compact('linkedin', 'is_developer'));

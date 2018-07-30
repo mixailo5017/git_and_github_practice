@@ -9,6 +9,8 @@ backend/cache/**
 # Log folders
 application/logs/**
 backend/logs/**
+storage/logs/app/**
+storage/logs/admin/**
 
 # User-uploaded content
 wwwroot/images/content_projects/**
@@ -22,6 +24,9 @@ wwwroot/images/store/**
 .php_cs.cache
 wwwroot/node_modules/**
 .idea/**
+
+# Session files
+storage/session/**
 
 # Mac OSX system files
 .DS_Store

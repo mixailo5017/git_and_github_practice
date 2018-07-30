@@ -23,9 +23,9 @@ class Profile extends CI_Controller
             $this->load->library('form_validation');
             $this->form_validation->set_error_delimiters('<label>', '</label>');
 
-            if ($this->input->post('update') !== false) {
+            if ($this->input->post('update') !== null) {
                 $update = $this->validate_update();
-            } elseif ($this->input->post('reset') !== false) {
+            } elseif ($this->input->post('reset') !== null) {
                 $update = $this->validate_reset_password();
             }
             if (! empty($update)) {

@@ -161,14 +161,14 @@
 							<?php echo form_upload($opt['files_form']['project_files_filename']);?>
 							<div id="err_project_files_filename" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Description').':', '', $opt['files_form']['lbl_desc']);?>
 						<div class="fld">
 							<?php echo form_input($opt['files_form']['project_files_desc']);?>
 							<div id="err_project_files_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Permissions').':', '', $opt['files_form']['lbl_permissions']);?>
 						<?php
@@ -180,7 +180,7 @@
 							);
 							echo form_dropdown("files_permission",$files_permission_options,'',$files_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_submit('files_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
 						

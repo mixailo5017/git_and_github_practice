@@ -294,12 +294,12 @@ class Projects extends CI_Controller
 //	}
 
     /**
-    * Handle the projects map draw functions
+    * Save updates to project geometry
     *
     * @access public
-    * @param string of the slug
+    * @param slug uniquely identifying the project to update
     */
-    public function update_map_draw($params)
+    public function update_map_draw(string $slug)
     {
 
         // grab post data
@@ -310,7 +310,6 @@ class Projects extends CI_Controller
         // echo "<pre>"; var_dump( $data ); exit;
 
         // check the project
-        $slug    = $params;
         $uid    = $this->projects_model->get_uid_from_slug($slug);
 
         if (! $project = $this->projects_model->check_project($slug, true)) {

@@ -25,7 +25,7 @@
 
 									<span class="left middle">
 										<strong><?php echo $val["contactname"]; ?></strong>
-										<?php echo br(); ?>
+										<br>
 										<?php echo $val["challenges"].", ".$val["innovations"]; ?>
 									</span>
 

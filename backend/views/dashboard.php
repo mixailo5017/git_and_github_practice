@@ -83,7 +83,7 @@
 										<img src="<?php echo $img; ?>" alt="<?php echo fullname($user); ?>" style="float:left" />
 										</div>
 											<a href="myaccount/<?php echo $user["uid"]; ?>"><?php echo fullname($user); ?></a> &nbsp;&nbsp;|&nbsp;&nbsp;
-											<?php echo $user["email"]; ?> <?php echo br(); ?> <?php echo DateDiffernece(date("Y-m-d H:i:s"),$user["registerdate"]); ?> ago
+											<?php echo $user["email"]; ?> <br> <?php echo DateDiffernece(date("Y-m-d H:i:s"),$user["registerdate"]); ?> ago
 										</div><!--info-->
 									</li>
 								<?php

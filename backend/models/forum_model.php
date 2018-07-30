@@ -123,7 +123,7 @@ public function get_projects_checkbox()
 	$this->db->order_by("projectname", "asc"); 
 	$this->db->select("pid,uid,projectname,slug,projectphoto,country,sector,stage,fundamental_legal");
 	$qryproj = $this->db->get_where("exp_projects",array("isdeleted"=>"0"));
-	$totalproj = $qryproj->num_rows;
+	$totalproj = $qryproj->num_rows();
 	//$projectdata["totalproj"] = $totalproj;
 	
 	foreach($qryproj->result_array() as $row)
@@ -138,7 +138,7 @@ public function get_projects_checkbox()
 public function get_forum_detail()
 {
 	$qryforum = $this->db->get_where("exp_forum",array("status"=>"1"));
-	$totalforum = $qryforum->num_rows;
+	$totalforum = $qryforum->num_rows();
 	$forumdata["totalforum"] = $totalforum;
 	
 	foreach($qryforum->result_array() as $row)

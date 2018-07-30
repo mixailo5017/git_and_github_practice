@@ -154,14 +154,14 @@
 									<?php echo form_input($opt['proj_link_form']['project_name']);?>
 									<div id="err_project_name" class="errormsg"></div>
 								</div>
-								<?php echo br(); ?>
+								<br>
 		
 								<?php echo form_label(lang('ProjectLink').':', '', $opt['proj_link_form']['lbl_projectlink']);?>
 								<div class="fld">
 									<?php echo form_input($opt['proj_link_form']['project_link']);?>
 									<div id="err_project_link" class="errormsg"></div>
 								</div>
-								<?php echo br(); ?>
+								<br>
 		
 								<?php echo form_submit('link_submit', lang('Update'),'class = "light_green btn_lml"');?>
 								<input type="reset" name="" value="<?php echo lang('Close');?>" class="light_red btn_sml"  />
@@ -211,14 +211,14 @@
 									<?php echo form_input($opt['uproj_link_form']['project_name']);?>
 									<div id="err_project_name" class="errormsg"></div>
 								</div>
-								<?php echo br(); ?>
+								<br>
 		
 								<?php echo form_label(lang('ProjectLink').':', '', $opt['uproj_link_form']['lbl_projectlink']);?>
 								<div class="fld">
 									<?php echo form_input($opt['uproj_link_form']['project_link']);?>
 									<div id="err_project_link" class="errormsg"></div>
 								</div>
-								<?php echo br(); ?>
+								<br>
 		
 								<?php echo form_submit('link_submit', lang('AddthisProject'),'class = "light_green"');?>
 								<input type="reset" name="" value="<?php echo lang('Close');?>" class="light_red btn_sml"  />	

@@ -24,13 +24,12 @@ class Match extends CI_Controller{
         /*
         $this->member_project_lib   = new Matches_lib(MEMBER_PROJECT_TYPE);
         $this->project_project_lib  = new Matches_lib(PROJECT_PROJECT_TYPE);
-<<<<<<< .working
-        //$this->member_member_lib    = new Matches_lib(MEMBER_MEMBER_TYPE);
-=======
-        $this->member_member_lib    = new Matches_lib(MEMBER_MEMBER_TYPE);*/
+        $this->member_member_lib    = new Matches_lib(MEMBER_MEMBER_TYPE);
+        $this->member_member_lib    = new Matches_lib(MEMBER_MEMBER_TYPE);
+        */
         $this->project_lib  = new Matches_lib(PROJECT_TYPE);
         $this->member_lib   = new Matches_lib(MEMBER_TYPE);
->>>>>>> .merge-right.r833
+
 
         $this->load->model("projects_model");
         $this->load->helper("html");
@@ -158,7 +157,7 @@ class Match extends CI_Controller{
        echo "Start initial project project calculations";
        $count = 0;
        $this->project_project_lib->cli_initial_project_project_score_calculate();
-       ($this->input->is_cli_request()) ? PHP_EOL : "";
+       (is_cli()) ? PHP_EOL : "";
        echo "End project project calculations are done";
        /* End Project project score matching //
    }*/
@@ -170,7 +169,7 @@ class Match extends CI_Controller{
         echo "Start initial member project calculations";
         $count = 0;
         $this->member_project_lib->cli_initial_member_project_score_calculate();
-        ($this->input->is_cli_request()) ? PHP_EOL : "";
+        (is_cli()) ? PHP_EOL : "";
         echo "End member project calculations are done" . PHP_EOL;
         /* End Member project score matching //
     }*/
@@ -182,7 +181,7 @@ class Match extends CI_Controller{
         echo "Start initial member project calculations";
         $count = 0;
         $this->member_member_lib->cli_initial_member_member_score_calculate();
-        ($this->input->is_cli_request()) ? PHP_EOL : "";
+        (is_cli()) ? PHP_EOL : "";
         echo "End member project calculations are done" . PHP_EOL;
         /* End member member score matching //
     }
