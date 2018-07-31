@@ -15,7 +15,7 @@ class Profile_model extends CI_Model {
 
 		$qry = $this->db->where('uid',$id)->get('exp_members',50);
 
-		if( $qry->num_rows != 1 ) return false;
+		if( $qry->num_rows() != 1 ) return false;
 
 		$this->load->library('mapquest');
 
@@ -1109,7 +1109,7 @@ class Profile_model extends CI_Model {
 		$this->db->where('uid', $userid);
 		$query_project = $this->db->get('exp_projects');
 
-		$totalproj = $query_project->num_rows;
+		$totalproj = $query_project->num_rows();
 		$projectdata["totalproj"] = $totalproj;
 		
 		foreach($query_project->result_array() as $row)
@@ -1136,7 +1136,7 @@ class Profile_model extends CI_Model {
 		$this->db->where('orgid', $userid);
 		$query_expertadvert = $this->db->get('exp_proj_expertadvert');
 
-		$totalproj = $query_expertadvert->num_rows;
+		$totalproj = $query_expertadvert->num_rows();
 		$projects = array();
 		
 		if($totalproj > 0)
@@ -1151,7 +1151,7 @@ class Profile_model extends CI_Model {
 			$this->db->where_in('pid',$projects['projid']);
 			$query_project = $this->db->get('exp_projects');
 		
-			$totalproj = $query_project->num_rows;
+			$totalproj = $query_project->num_rows();
 			$projectdata["totalproj"] = $totalproj;
 			
 			$row['exp_status'] = array();

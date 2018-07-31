@@ -1,3 +1,5 @@
+var Cookies = require('js-cookie');
+
 var FixedMarker = L.Evented.extend({
 
     options: {

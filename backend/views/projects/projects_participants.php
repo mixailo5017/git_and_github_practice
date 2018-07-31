@@ -125,7 +125,7 @@
 										<?php echo form_input($opt['participants_public_form']['project_participants_public_name']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Type:', 'participants_public_type', $opt['participants_public_form']['lbl_type']);?>
 									<div class="fld" >
@@ -133,7 +133,7 @@
 										<?php echo form_input($opt['participants_public_form']['project_participants_public_type']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Description:', 'project_participants_public_desc', $opt['participants_public_form']['lbl_description']);?>
 									<div class="fld" >
@@ -141,7 +141,7 @@
 										<?php echo form_input($opt['participants_public_form']['project_participants_public_desc']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Permissions:', 'project_participants_public_permissions', $opt['participants_public_form']['lbl_permissions']);?>
 									<div class="fld">
@@ -155,7 +155,7 @@
 										echo form_dropdown('project_participants_public_permissions', $permissions_options,'',$permissions_attr);
 									?>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_submit('submit', 'Add New','class = "light_green btn_lml"');?>
 									
@@ -284,7 +284,7 @@
 										<?php echo form_input($opt['participants_political_form']['project_participants_political_name']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Type:', 'participants_political_type', $opt['participants_political_form']['lbl_type']);?>
 									<div class="fld" >
@@ -292,7 +292,7 @@
 										<?php echo form_input($opt['participants_political_form']['project_participants_political_type']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Description:', 'project_participants_political_desc', $opt['participants_political_form']['lbl_description']);?>
 									<div class="fld" >
@@ -300,7 +300,7 @@
 										<?php echo form_input($opt['participants_political_form']['project_participants_political_desc']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Permissions:', 'project_participants_political_permissions', $opt['participants_political_form']['lbl_permissions']);?>
 									<div class="fld">
@@ -314,7 +314,7 @@
 										echo form_dropdown('project_participants_political_permissions', $permissions_options,'',$permissions_attr);
 									?>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_submit('submit', 'Add New','class = "light_green btn_lml"');?>
 									
@@ -442,7 +442,7 @@
 										<?php echo form_input($opt['participants_companies_form']['project_participants_companies_name']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Role:', 'participants_companies_role', $opt['participants_companies_form']['lbl_role']);?>
 									<div class="fld" >
@@ -450,7 +450,7 @@
 										<?php echo form_input($opt['participants_companies_form']['project_participants_companies_role']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Description:', 'project_participants_companies_desc', $opt['participants_companies_form']['lbl_description']);?>
 									<div class="fld" >
@@ -458,7 +458,7 @@
 										<?php echo form_input($opt['participants_companies_form']['project_participants_companies_desc']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Permissions:', 'project_participants_companies_permissions', $opt['participants_companies_form']['lbl_permissions']);?>
 									<div class="fld">
@@ -472,7 +472,7 @@
 										echo form_dropdown('project_participants_companies_permissions', $permissions_options,'',$permissions_attr);
 									?>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_submit('submit', 'Add New','class = "light_green btn_lml"');?>
 									
@@ -602,7 +602,7 @@
 										<?php echo form_input($opt['participants_owners_form']['project_participants_owners_name']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Type:', 'participants_owners_type', $opt['participants_owners_form']['lbl_type']);?>
 									<div class="fld" >
@@ -610,7 +610,7 @@
 										<?php echo form_input($opt['participants_owners_form']['project_participants_owners_type']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Description:', 'project_participants_owners_desc', $opt['participants_owners_form']['lbl_description']);?>
 									<div class="fld" >
@@ -618,7 +618,7 @@
 										<?php echo form_input($opt['participants_owners_form']['project_participants_owners_desc']);?>
 										<div class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label('Permissions:', 'project_participants_owners_permissions', $opt['participants_owners_form']['lbl_permissions']);?>
 									<div class="fld">
@@ -632,7 +632,7 @@
 										echo form_dropdown('project_participants_owners_permissions', $permissions_options,'',$permissions_attr);
 									?>
 									</div>
-									<?php echo br(); ?>
+									<br>
 
 									
 									<?php echo form_submit('submit', 'Add New','class = "light_green btn_lml"');?>

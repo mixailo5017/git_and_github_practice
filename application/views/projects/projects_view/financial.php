@@ -1,6 +1,6 @@
                 <h2><?php echo lang('Financial')    ?></h2>
                 <div id="tabs-3" class="col2_tab">
-                    <?php if (count($project['financial']['financial'])>0) { ?>
+                    <?php if (count_if_set($project['financial']['financial'])>0) { ?>
                         <h3><?php echo lang('FinancialStructure'); ?></h3>
                         <p><strong><?php echo lang('FinancialStructure');?> - </strong><?php if ($project['financial']['financial']['name'] != '') { echo $project['financial']['financial']['name'];} else { echo "N/A";} ?></p>
                         <?php if ($project['financial']['financial']['contactinfo'] != '') { ?>
@@ -8,7 +8,7 @@
                         <?php } ?>
                     <?php } ?>
 
-                    <?php if (count($project['financial']['fund_sources']) >0) { ?>
+                    <?php if (count_if_set($project['financial']['fund_sources']) >0) { ?>
                     <h3><?php echo lang('FundSources');?></h3>
                         <table width="100%">
                             <tr>
@@ -29,7 +29,7 @@
                         </table>
                     <?php } ?>
 
-                    <?php if (count($project['financial']['roi']) >0) { ?>
+                    <?php if (count_if_set($project['financial']['roi']) >0) { ?>
                     <h3><?php echo lang('ReturnonInvestment'); ?></h3>
                         <table width="100%">
                             <tr>
@@ -59,7 +59,7 @@
                         </table>
                     <?php } ?>
 
-                    <?php if (count($project['financial']['critical_participants']) >0) { ?>
+                    <?php if (count_if_set($project['financial']['critical_participants']) >0) { ?>
                     <h3><?php echo lang('CriticalParticipants');?></h3>
                         <table width="100%">
                             <tr>

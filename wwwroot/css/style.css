@@ -628,6 +628,18 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   top: 25px;
 }
 
+.tooltip-container {
+  display: flex;
+  justify-content: space-between;
+}
+.tooltip-container .tooltip {
+  background: url(/images/site/icon_question_mark.png) center no-repeat;
+  padding: 0px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
 .tip-yellowsimple {
   z-index: 1000;
   text-align: left;
@@ -836,10 +848,13 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
   width: 100%;
 }
 #col2 table.overview_table td {
-  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
 }
 #col2 table.overview_table td:nth-child(even) {
   background: #f5f5f5;
+}
+#col2 table.overview_table tr {
+  border-bottom: 1px solid #ddd;
 }
 #col2 table.overview_table tr:hover th, #col2 table.overview_table tr:hover td {
   background: #ddd;
@@ -7459,6 +7474,30 @@ div.open_expert div.type .sector {
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 65px 20px;
+}
+
+.map__legend {
+  padding: 6px 8px;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  line-height: 18px;
+  color: #555;
+  margin-bottom: 24px !important;
+}
+.map__legend h4 {
+  text-decoration: underline;
+  margin: auto;
+  font-size: inherit;
+}
+
+.map__legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
 }
 
 .bold {

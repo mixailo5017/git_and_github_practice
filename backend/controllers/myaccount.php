@@ -80,7 +80,7 @@ class Myaccount extends CI_Controller {
             $this->load->library('form_validation');
             $this->form_validation->set_error_delimiters('<label>', '</label>');
 
-            if ($this->input->post('reset') !== false) {
+            if ($this->input->post('reset') !== null) {
                 $update = $this->validate_reset();
             }
 

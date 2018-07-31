@@ -40,8 +40,6 @@ class Projects_model extends CI_Model {
      */
     public function find_public($slug)
     {
-        // Outputs a string of as many comma-separated question marks as there are elements in INTERNAL_USERS
-        $in_string = str_replace(' ', ',', trim(str_repeat("? ", count(INTERNAL_USERS))));
 
         $sql = "
         SELECT p.pid project_id, p.projectphoto, p.projectname, p.description,
@@ -51,17 +49,13 @@ class Projects_model extends CI_Model {
          WHERE p.slug = ?
            AND p.isdeleted = ?
            AND m.status = ?
-           AND p.uid IN (?," . $in_string . ")
          LIMIT 1";
 
         $bindings = array(
             $slug,
             '0', // Project should be in a not deleted state
-            STATUS_ACTIVE, // Project owner should be active
-            BRAZIL_USER_ID // Brazil projects get public profiles too
+            STATUS_ACTIVE // Project owner should be active
         );
-
-        $bindings = array_merge($bindings, INTERNAL_USERS); // Project should not belong to a real project developer
 
         $row = $this->db
             ->query($sql, $bindings)
@@ -541,9 +535,11 @@ class Projects_model extends CI_Model {
 
 		// encode json data
 		$data['geojson'] = json_encode($data['geojson']);
+        $geom = $data['geom'];
+        unset($data['geom']);
 
         $this->db->set($data);
-        $this->db->set('geom', "ST_GeomFromGeoJSON(" . $this->db->escape($data['geom']) . ")", false);
+        $this->db->set('geom', "ST_GeomFromGeoJSON(" . $this->db->escape($geom) . ")", false);
 
 		if( $current )
 		{
@@ -704,7 +700,7 @@ class Projects_model extends CI_Model {
 		die('update_sector_values start');
 		$qry = $this->db->get('exp_sectors');
 
-		if( $qry->num_rows === 0 ) return false;
+		if( $qry->num_rows() === 0 ) return false;
 
 
 		foreach( $qry->result() as $i => $row )
@@ -1040,7 +1036,7 @@ class Projects_model extends CI_Model {
 	{
 		$this->db->select("pid");
 		$qrycheck = $this->db->get_where("exp_projects",array("uid"=>$uid,"slug"=>$slug,"isdeleted"=>"0"));
-		if($qrycheck->num_rows > 0)
+		if($qrycheck->num_rows() > 0)
 		{
 			$objproject = $qrycheck->row_array();
 			$pid = $objproject["pid"];
@@ -1065,7 +1061,7 @@ class Projects_model extends CI_Model {
 	{
 		$this->db->select("pid,projectname");
 		$qrycheck = $this->db->get_where("exp_projects",array("slug"=>$slug,"isdeleted"=>"0"));
-		if($qrycheck->num_rows > 0)
+		if($qrycheck->num_rows() > 0)
 		{
 			if( $return_data === true )
 			{
@@ -1091,7 +1087,7 @@ class Projects_model extends CI_Model {
 	{
 		$this->db->select("uid");
 		$qrycheck = $this->db->get_where("exp_projects",array("slug"=>$slug,"isdeleted"=>"0"));
-		if($qrycheck->num_rows > 0)
+		if($qrycheck->num_rows() > 0)
 		{
 			$objproject = $qrycheck->row_array();
 			$uid2 = $objproject["uid"];
@@ -2944,7 +2940,7 @@ class Projects_model extends CI_Model {
 			'slug'	=> $slug,
 			'uid'	=> $uid,
 			'description'	=> $this->input->post("project_regulatory_desc"),
-			'permission'	=> $this->input->post("project_regulatory_permission")
+			'permission'	=> $this->input->post("project_regulatory_permissions")
 		);
 		if($upload['error']=='')
 		{
@@ -3087,7 +3083,7 @@ class Projects_model extends CI_Model {
 			'name' 			=> $this->input->post("project_participants_public_name"),
 			'type'	=> $this->input->post("project_participants_public_type"),
 			'description'	=> $this->input->post("project_participants_public_desc"),
-			'permission'	=> $this->input->post("project_participants_political_permission")
+			'permission'	=> $this->input->post("project_participants_public_permissions")
 
 		);
 		$response = array();
@@ -3216,7 +3212,7 @@ class Projects_model extends CI_Model {
 			'name' 			=> $this->input->post("project_participants_political_name"),
 			'type'	=> $this->input->post("project_participants_political_type"),
 			'description'	=> $this->input->post("project_participants_political_desc"),
-			'permission'	=> $this->input->post("project_participants_political_permission")
+			'permission'	=> $this->input->post("project_participants_political_permissions")
 
 
 		);
@@ -3349,7 +3345,7 @@ class Projects_model extends CI_Model {
 			'name' 			=> $this->input->post("project_participants_companies_name"),
 			'role'	=> $this->input->post("project_participants_companies_role"),
 			'description'	=> $this->input->post("project_participants_companies_desc"),
-			'permission'	=> $this->input->post("project_participants_companies_permission")
+			'permission'	=> $this->input->post("project_participants_companies_permissions")
 
 
 		);
@@ -3485,7 +3481,7 @@ class Projects_model extends CI_Model {
 			'name' 			=> $this->input->post("project_participants_owners_name"),
 			'type'	=> $this->input->post("project_participants_owners_type"),
 			'description'	=> $this->input->post("project_participants_owners_desc"),
-			'permission'	=> $this->input->post("project_participants_owners_permission")
+			'permission'	=> $this->input->post("project_participants_owners_permissions")
 
 
 		);
@@ -4013,7 +4009,7 @@ class Projects_model extends CI_Model {
 			'slug'	=> $slug,
 			'uid'	=> $uid,
 			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("project_files_permission"),
+			'permission'	=> $this->input->post("files_permission"),
 			'dateofuploading' => date('Y-m-d')
 		);
 		if($upload['error']=='')
@@ -4365,7 +4361,12 @@ class Projects_model extends CI_Model {
 		$financial_data['fund_sources'] = $this->get_fund_sources($slug,$uid);
 		$financial_data['roi'] = $this->get_roi($slug,$uid);
 		$financial_data['critical_participants'] = $this->get_critical_participants($slug,$uid);
-		$financial_data['totalfinancial'] = (count($financial_data['financial'])+count($financial_data['fund_sources'])+count($financial_data['roi'])+count($financial_data['critical_participants']));
+		$financial_data['totalfinancial'] = array_sum([
+            count_if_set($financial_data['financial']),
+            count_if_set($financial_data['fund_sources']),
+            count_if_set($financial_data['roi']),
+            count_if_set($financial_data['critical_participants'])
+        ]);
 
 		return $financial_data;
 
@@ -5150,6 +5151,42 @@ class Projects_model extends CI_Model {
 
 		return $smearr;
 	}
+
+    public function get_jobs_created($projectid)
+    {
+        $sql = "
+        SELECT 
+            ((totalbudget / 1E3) *  
+            COALESCE(
+                (CASE WHEN c.devlevel = 'EM' THEN devlookup_mostspecific.jobs_em ELSE devlookup_mostspecific.jobs_row END), 
+                (CASE WHEN c.devlevel = 'EM' THEN devlookup_midspecific.jobs_em ELSE devlookup_midspecific.jobs_row END), 
+                (CASE WHEN c.devlevel = 'EM' THEN devlookup_leastspecific.jobs_em ELSE devlookup_leastspecific.jobs_row END)
+            ))::integer AS jobs_created
+        FROM exp_projects p 
+        JOIN exp_countries c ON (p.country = c.countryname)
+        LEFT OUTER JOIN exp_sector_jobs devlookup_mostspecific
+        ON
+            p.sector = devlookup_mostspecific.sector AND
+            p.subsector = devlookup_mostspecific.subsector
+        LEFT OUTER JOIN exp_sector_jobs devlookup_midspecific
+        ON
+            p.sector = devlookup_midspecific.sector AND
+            devlookup_midspecific.subsector IS NULL
+        LEFT OUTER JOIN exp_sector_jobs devlookup_leastspecific
+        ON
+            devlookup_leastspecific.sector IS NULL AND
+            devlookup_leastspecific.subsector IS NULL
+        WHERE p.pid = ?
+        ";
+
+        $jobs_created_resultobject = $this->db->query($sql, $projectid)->row();
+        if (!isset($jobs_created_resultobject)) return null; // For instance, non-existent PID specified
+        $jobs_created = $jobs_created_resultobject->jobs_created;
+        if ($jobs_created !== null) return (int) $jobs_created; // Result from DB will be null if no totalbudget yet specified
+        return null;
+
+    }
+
 
 }
 ?>

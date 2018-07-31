@@ -762,7 +762,7 @@ class Expertise_model extends CI_Model {
 		$this->db->where('uid', $userid);
 		$query_project = $this->db->get('exp_projects');
 
-		$totalproj = $query_project->num_rows;
+		$totalproj = $query_project->num_rows();
 		$projectdata["totalproj"] = $totalproj;
 
 		foreach($query_project->result_array() as $row)
@@ -924,7 +924,7 @@ class Expertise_model extends CI_Model {
 		$this->db->where('exs.orgid', $userid);
 		$query_project = $this->db->get('exp_proj_expertadvert as exs');
 
-		$totalproj = $query_project->num_rows;
+		$totalproj = $query_project->num_rows();
 		$projectdata["totalproj"] = $totalproj;
 
 		foreach($query_project->result_array() as $row)

@@ -69,8 +69,11 @@
                                     N/A
                                 <?php } ?>
                             </td>
-                            <th><?php echo lang('WEBScore') ?>:</th>
-                            <td><?php echo isset($project['webscore']) ? $project['webscore'] : 'N/A' ?></td>
+                            <th><?php echo lang('EstJobsCreated') ?>:</th>
+                            <td class="tooltip-container">
+                                <div><?php echo ($project['projectdata']['jobs_created'] !== null) ? number_format($project['projectdata']['jobs_created']) : 'N/A' ?></div>
+                                <a class="tooltip" title="<?php echo lang('JobsCreatedExplanation') ?>" target="_blank" href="https://gvip.zendesk.com/hc/en-us/articles/360003440613"></a>
+                            </td>
                         </tr>
                     </table>
                 </div>

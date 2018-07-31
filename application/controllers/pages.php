@@ -144,7 +144,7 @@ class Pages extends CI_Controller {
             if ($this->input->get()) {
                 $parameters = array_merge($this->input->get(), $parameters);
             }
-            $queryString = http_build_query($parameters);
+            $queryString = http_build_query($parameters, '', ini_get('arg_separator.output'), PHP_QUERY_RFC3986);
             redirect(current_url().'?'.$queryString);
         }
 

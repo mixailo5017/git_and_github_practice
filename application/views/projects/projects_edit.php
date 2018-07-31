@@ -349,14 +349,20 @@
                                     $project_sector_sub_attr    = 'id="project_sector_sub"';
                                     $subsector_options = array();
                                     $subsector_opt = array();
-                                    foreach(subsectors() as $key=>$value)
+                                    foreach(subsectors() as $parentSectorId=>$subsectors)
                                     {
-                                        foreach($value as $key2=>$value2)
+                                        foreach($subsectors as $subsectorName)
                                         {
-                                            $subsector_options[$value2]     = $value2;
-                                            $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                                            $subsector_options[$subsectorName]     = $subsectorName;
+                                            $subsector_opt[$subsectorName][]       = "project_sector_sub_{$parentSectorId}";
                                         }
                                     }
+
+                                    $subsector_opt = array_map(function(Array $classnames) {
+                                        $classnamesList = implode(' ', $classnames);
+                                        return 'class="'.$classnamesList.'"';
+                                    }, $subsector_opt);
+
                                     $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
                                     $subsector_last             = array('class'=>'hardcode other','value'=>'Other','text'=>'Other');
                                     echo form_custom_dropdown('project_sector_sub', $subsector_options, set_value('project_sector_sub', $project["subsector"]),$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);

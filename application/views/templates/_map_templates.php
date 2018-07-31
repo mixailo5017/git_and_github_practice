@@ -55,7 +55,7 @@
                 <span class="date-range"><%= o.p_date_start %> to <%= o.p_date_end %></span>
                 <% } %>
                 <%if (o.p_date_start !== "" && o.p_date_end === "") { %>
-                <span class="date-range"><em>Starts</em> ' + o.p_date_start + '</span>
+                <span class="date-range"><em>Starts</em> <%= o.p_date_start %></span>
                 <% } %>
                 <% if (o.p_date_start === "" && o.p_date_end !== "") {%>
                 <span class="date-range"><em>Ends</em> <%= o.p_date_end %></span>

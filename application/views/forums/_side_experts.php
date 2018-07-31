@@ -17,9 +17,9 @@
                 </a>
                 <p>
                     <a href="<?php echo $url; ?>"><?php echo $fullname; ?></a>
-                    <?php echo br(); ?>
+                    <br>
                     <span class="title"><?php echo $expert['title']; ?></span>
-                    <?php echo br(); ?>
+                    <br>
                     <span class="title"><?php echo $expert['organization']; ?></span>
                 </p>
             </li>

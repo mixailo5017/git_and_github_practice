@@ -617,14 +617,14 @@ $(function() {
 
     $project_sector_sub.remove().not('.hardcode');
 
-    $('#project_sector_main').live("change", function() {
+    $('#project_sector_main').live("change", function() { // When the sector selection is updated, …
 
-        $('#project_sector_sub').removeAttr('disabled');
+        $('#project_sector_sub').removeAttr('disabled'); // …enable the subsector dropdown…
         $('#project_sector_sub').focus();
 
-        var thisClass = $(this).find('option:selected').attr('class').replace('sector_main', 'project_sector_sub');
+        var thisClass = $(this).find('option:selected').attr('class').replace('sector_main', 'project_sector_sub'); // …find the ID of the selected sector from its classname…
         $('#project_sector_sub option').not('.hardcode').remove()
-        $('#project_sector_sub option:first').after($project_sector_sub_holder.filter('.' + thisClass));
+        $('#project_sector_sub option:first').after($project_sector_sub_holder.filter('.' + thisClass)); // …and replace the options in the subsector dropdown by filtering the full subsector list using that ID.
         if ($('#selected_sub_sector').length > 0) {
             if ($('#selected_sub_sector').text() == "Other") {
                 $('#project_sector_sub').val("Other");

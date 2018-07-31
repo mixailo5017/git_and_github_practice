@@ -78,6 +78,13 @@
                 <li <?php if ($snd_segment == "projects") { echo "class='current'"; } ?>><a href="/admin.php/algolia/projects">View Projects Data</a></li>
             </ul>
         </li>
+        <li <?php if ($fst_segment == "marketing" ) { echo "class='current'"; } ?>><a href="#marketingsub" class="sent">Marketing</a>
+            <span class="arrow"></span>
+            <ul id="marketingsub">
+                <li <?php if ($fst_segment === "marketing" && $snd_segment == "index") { echo "class='current'"; } ?>><a href="/admin.php/marketing/index">Weekly Email</a></li>
+                <li <?php if ($fst_segment === "marketing" && $snd_segment == "algosemail") { echo "class='current'"; } ?>><a href="/admin.php/marketing/algosemail">Algorithms Email</a></li>
+            </ul>
+        </li>
 	</ul>
 	<a class="togglemenu"></a>
 	<br><br>

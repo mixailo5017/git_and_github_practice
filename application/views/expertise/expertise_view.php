@@ -158,7 +158,7 @@
                 </ul>
             <?php } ?>
 
-            <?php if (count($education) > 0) { ?>
+            <?php if (count_if_set($education) > 0) { ?>
                 <h3><?php echo lang('Education') ?></h3>
                 <?php foreach($education as $key => $edu) { ?>
                     <div class="education">

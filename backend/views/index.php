@@ -36,7 +36,7 @@
                 <p>Sign in using your <strong>admin</strong> user account.</p>
             </div><!--logo-->
             
-            <br clear="all" /><?php echo br(); ?>
+            <br clear="all" /><br>
             
             <div class="nousername">
 				<div class="loginmsg">The password you entered is incorrect.</div>

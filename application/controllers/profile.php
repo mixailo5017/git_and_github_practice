@@ -106,7 +106,7 @@ class Profile extends CI_Controller {
 	*/
 	public function account_settings()
 	{
-		//print_r($this->session->all_userdata());
+		//print_r($this->session->userdata());
 		// load get_user(),get_expertise() and get_education() and get_project() methods from Profile Model.
 		$result			=	$this->profile_model->get_user($this->sess_uid);
 		$expertise		=	$this->profile_model->get_expertise();
@@ -150,7 +150,7 @@ class Profile extends CI_Controller {
 	*/
 	public function my_projects()
 	{
-		//print_r($this->session->all_userdata());
+		//print_r($this->session->userdata());
 		// load get_user(),get_expertise() and get_education() and get_project() methods from Profile Model.
 		$proj_link_data = array();
 		
@@ -700,8 +700,8 @@ class Profile extends CI_Controller {
 		// load get_user() methods from Profile Model.
 		$user			=	$this->profile_model->get_user($this->sess_uid);
 		//collect data from database;
-		$user['password'] = $this->encrypt->decode($user['password']);
-
+		
+		
 		$data	=	array(
 			'main_content'	=>	'users',
 			'users'			=>	$user,
@@ -916,7 +916,7 @@ class Profile extends CI_Controller {
 		}
 
 		$data = array();
-		//print_r($this->session->all_userdata());
+		//print_r($this->session->userdata());
 		//load encript library for password encryption
 		$this->load->library('encrypt');
 		
@@ -945,7 +945,7 @@ class Profile extends CI_Controller {
 		}
 
 		$data = array();
-		//print_r($this->session->all_userdata());
+		//print_r($this->session->userdata());
 		//load encript library for password encryption
 		$this->load->library('encrypt');
 		$case_studies= array();
@@ -1016,7 +1016,7 @@ class Profile extends CI_Controller {
 		}
 
 		$data = array();
-		//print_r($this->session->all_userdata());
+		//print_r($this->session->userdata());
 		//load encript library for password encryption
 		$this->load->library('encrypt');
 		$case_studies= array();

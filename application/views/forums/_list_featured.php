@@ -47,7 +47,7 @@
 
         <div style="padding: 8px 12px;">
             <?php foreach ($properties as $property) { ?>
-                <strong><?php echo $property[0] . ':'; ?></strong><?php echo str_repeat('&nbsp;', $property[2]); echo ($property[1] != '') ? $property[1] : '&mdash;'; echo br(); ?>
+                <strong><?php echo $property[0] . ':'; ?></strong><?php echo str_repeat('&nbsp;', $property[2]); echo ($property[1] != '') ? $property[1] : '&mdash;'; ?><br>
             <?php } ?>
         </div>
         <div style="padding: 8px 12px;">
@@ -55,7 +55,7 @@
             if ($details['register_url']) {
                 echo anchor("{$details['register_url']}", lang('ForumRegister'), 'class="button light_gray"');
             }
-            if ($details['meeting_url']) {
+            if ($details['meeting_url'] && Auth::check()) {
                 echo anchor("{$details['meeting_url']}", lang('ForumBookMeeting'), 'class="button light_gray" style="margin-left:10px;"');
             }
             ?>

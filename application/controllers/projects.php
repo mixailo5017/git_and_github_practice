@@ -21,6 +21,8 @@ class Projects extends CI_Controller
         $languageSession = sess_var('lang');
         get_language_file($languageSession);
         $this->dataLang['lang'] = langGet();
+
+        $this->redirectUnauthenticatedUsersToPublicProfile();
         
         // If the user is not logged in then redirect to the login page
         auth_check();
@@ -292,12 +294,12 @@ class Projects extends CI_Controller
 //	}
 
     /**
-    * Handle the projects map draw functions
+    * Save updates to project geometry
     *
     * @access public
-    * @param string of the slug
+    * @param slug uniquely identifying the project to update
     */
-    public function update_map_draw($params)
+    public function update_map_draw(string $slug)
     {
 
         // grab post data
@@ -308,7 +310,6 @@ class Projects extends CI_Controller
         // echo "<pre>"; var_dump( $data ); exit;
 
         // check the project
-        $slug    = $params;
         $uid    = $this->projects_model->get_uid_from_slug($slug);
 
         if (! $project = $this->projects_model->check_project($slug, true)) {
@@ -395,6 +396,7 @@ class Projects extends CI_Controller
 
         $viewdata['project']['isfollowing'] = $model->isfollowing($pid, $this->uid); // Is current user following the project
         $viewdata['project']['projectdata'] = $model->get_project_data($slug, $userid);
+        $viewdata['project']['projectdata']['jobs_created'] = $model->get_jobs_created($pid);
 		$viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
 		$viewdata['project']['financial'] = $model->get_financial_data($slug, $userid);
 		$viewdata['project']['regulatory'] = $model->get_regulatory_data($slug, $userid);
@@ -405,9 +407,6 @@ class Projects extends CI_Controller
 		$viewdata['project']['ad'] = $model->get_ad_data();
 		$viewdata['project']['comment'] = $model->get_project_comment($slug, $userid);
 		$viewdata['project']['assessment'] = $model->get_project_assessment($slug, $userid);
-
-        // Generate a random number to display as the WEB score
-        // $viewdata['project']['webscore'] = rand(150, 1000);
 
         // Global Experts and SME Experts are only visible to project owners
         $global_experts = array();
@@ -3294,5 +3293,13 @@ class Projects extends CI_Controller
         );
 
         return $page_analytics;
+    }
+
+    private function redirectUnauthenticatedUsersToPublicProfile()
+    {
+        if ($this->router->method === 'view'
+           && ! $this->auth->check()) {
+            redirect('/p/' . $this->uri->segment(2));
+        }
     }
 }

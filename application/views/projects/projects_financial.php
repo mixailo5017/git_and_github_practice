@@ -15,7 +15,7 @@
 		
 		<?php echo form_open('projects/add_financial/'.$slug,array('id'=>'financial_form','name'=>'financial_form','method'=>'post','class'=>'ajax_form topupdate'));?>
 			<?php 
-				if(count($project["financial"]) <= 0) {
+				if(count_if_set($project["financial"]) <= 0) {
 					$project["financial"] = array("name"=>"","contactname"=>"","role_others"=>"","contactinfo"=>"","name_privacy"=>"","contactname_privacy"=>"","role_privacy"=>"","role"=>"","contactinfo_privacy"=>"","fs_info"=>"");
 				}
 				$opt["financial_form"] = array(
@@ -88,7 +88,7 @@
 				<?php echo form_input($opt["financial_form"]["fs_name"]); ?>
                 <div id="err_project_fs_name" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<hr>
 
@@ -106,7 +106,7 @@
 			<?php echo form_input($opt["financial_form"]["fs_contact"]); ?>
             <div id="err_project_fs_contact" class="errormsg"></div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 			
 			<hr>
 
@@ -146,7 +146,7 @@
 
 			<?php echo form_label(lang("ContactInformation").":","project_fs_info",$opt["financial_form"]["lbl_fs_info"]); ?>
 			<?php echo form_textarea($opt["financial_form"]["fs_info"]); ?>
-			<?php echo br(); ?>
+			<br>
 			
 			<?php echo form_close();?>
 
@@ -236,28 +236,28 @@
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_name']);?>
 							<div id="err_project_fund_sources_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Role').':', '', $opt['update_fund_sources_form']['lbl_role']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_role']);?>
 							<div id="err_project_fund_sources_role" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Amount').':', '', $opt['update_fund_sources_form']['lbl_amount']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_amount']);?>
 							<div id="err_project_fund_sources_amount" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Description').':', '', $opt['update_fund_sources_form']['lbl_description']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_desc']);?>
 							<div id="err_project_fund_sources_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Permissions').':', '', $opt['update_fund_sources_form']['lbl_permissions']);?>
 						<?php
@@ -269,7 +269,7 @@
 							);
 							echo form_dropdown("project_fund_sources_permission",$fund_sources_permission_options,$val["permissions"],$fund_sources_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_submit('ufund_submit', lang('Update'),'class = "light_green btn_lml"');?>
 						
@@ -339,28 +339,28 @@
 							<?php echo form_input($opt['fund_sources_form']['project_fund_sources_name']);?>
 							<div id="err_project_fund_sources_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Role').':', '', $opt['fund_sources_form']['lbl_role']);?>
 						<div class="fld">
 							<?php echo form_input($opt['fund_sources_form']['project_fund_sources_role']);?>
 							<div id="err_project_fund_sources_role" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Amount').':', '', $opt['fund_sources_form']['lbl_amount']);?>
 						<div class="fld">
 							<?php echo form_input($opt['fund_sources_form']['project_fund_sources_amount']);?>
 							<div id="err_project_fund_sources_amount" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Description').':', '', $opt['fund_sources_form']['lbl_description']);?>
 						<div class="fld">
 							<?php echo form_input($opt['fund_sources_form']['project_fund_sources_desc']);?>
 							<div id="err_project_fund_sources_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Permissions').':', '', $opt['fund_sources_form']['lbl_permissions']);?>
 						<?php
@@ -372,7 +372,7 @@
 							);
 							echo form_dropdown("project_fund_sources_permission",$fund_sources_permission_options,'',$fund_sources_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_submit('fund_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
 						
@@ -729,21 +729,21 @@
 							<?php echo form_input($opt['update_critical_participants_form']['project_critical_participants_name']);?>
 							<div id="err_project_critical_participants_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Role').':', '', $opt['update_critical_participants_form']['lbl_role']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_critical_participants_form']['project_critical_participants_role']);?>
 							<div id="err_project_critical_participants_role" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Description').':', '', $opt['update_critical_participants_form']['lbl_desc']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_critical_participants_form']['project_critical_participants_desc']);?>
 							<div id="err_project_critical_participants_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Permissions').':', '', $opt['update_critical_participants_form']['lbl_permissions']);?>
 						<?php
@@ -755,7 +755,7 @@
 							);
 							echo form_dropdown("project_critical_participants_permission",$critical_participants_permission_options,$val["permission"],$critical_participants_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_submit('ucritical_submit', lang('Update'),'class = "light_green btn_lml"');?>
 
@@ -815,21 +815,21 @@
 							<?php echo form_input($opt['critical_participants_form']['project_critical_participants_name']);?>
 							<div id="err_project_critical_participants_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label(lang('Role').':', '', $opt['critical_participants_form']['lbl_role']);?>
 						<div class="fld">
 							<?php echo form_input($opt['critical_participants_form']['project_critical_participants_role']);?>
 							<div id="err_project_critical_participants_role" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Description').':', '', $opt['critical_participants_form']['lbl_desc']);?>
 						<div class="fld">
 							<?php echo form_input($opt['critical_participants_form']['project_critical_participants_desc']);?>
 							<div id="err_project_critical_participants_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label(lang('Permissions').':', '', $opt['critical_participants_form']['lbl_permissions']);?>
 						<?php
@@ -841,7 +841,7 @@
 							);
 							echo form_dropdown("project_critical_participants_permission",$critical_participants_permission_options,'',$critical_participants_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_submit('critical_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
 						

@@ -226,7 +226,7 @@ if ( ! function_exists('form_hidden_custom'))
 
 		if ( ! is_array($value))
 		{
-			$form .= '<input type="hidden" name="'.$name.'" value="'.form_prep($value, $name).'" '.$attributes.' />'."\n";
+			$form .= '<input type="hidden" name="'.$name.'" value="'.html_escape($value, $name).'" '.$attributes.' />'."\n";
 		}
 		else
 		{
