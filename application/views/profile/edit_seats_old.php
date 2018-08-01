@@ -113,19 +113,19 @@
 							<?php echo form_input(array('type'=>'text','id'=>'first_name_'.$i,'name'=>'first_name_'.$i,'placeholder'=>'First Name')); ?>
 							<div class="errormsg" id="err_invite_firstname"><?php echo form_error("first_name_".$i); ?></div>
 						</div>
-						<?php echo br();  ?>
+						<br>
 						
 						<div class="fld">
 							<?php echo form_input(array('type'=>'text','id'=>'last_name_'.$i,'name'=>'last_name_'.$i,'placeholder'=>'Last Name')); ?>
 							<div class="errormsg" id="err_invite_lastname"><?php echo form_error("last_name_".$i); ?></div>
 						</div>
-						<?php echo br();  ?>
+						<br>
 						
 						<div class="fld">
 							<?php echo form_input(array('type'=>'text','id'=>'email_'.$i,'name'=>'email_'.$i,'placeholder'=>'Email')); ?>
 							<div class="errormsg" id="err_invite_email"><?php echo form_error("email_".$i); ?></div>
 						</div>
-						<?php echo br();  ?>
+						<br>
 							<span class="message">An email will be sent to this	expert.</span>
 						</div>
 						<?php echo form_submit(array('name'	=> 'invite_seat','value' => 'Send Invite','class' => 'button light_green','style'=>'margin:0px!important;'));  ?>

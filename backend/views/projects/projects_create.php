@@ -44,7 +44,7 @@
 				<div class="errormsg"><?php echo form_error("project_users"); ?></div>
 			</div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 
 			<div>
 				<?php echo form_label("Name of Project:","project_name",$opt["lbl_projectname"]); ?>
@@ -53,7 +53,7 @@
 					<div class="errormsg"><?php echo form_error("title"); ?></div>
 				</div>
 			</div>
-			<?php echo br(); ?>
+			<br>
 			
 				
 			<div>

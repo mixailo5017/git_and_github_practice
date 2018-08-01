@@ -43,10 +43,13 @@
 |
 | The $active_record variables lets you determine whether or not to load
 | the active record class
+
+   *** active_record renamed to query_builder in CI3
+
 */
 
 $active_group = 'default';
-$active_record = TRUE;
+$query_builder = TRUE;
 
 // DEFAULT
 $db['default']['hostname'] = env('DB_HOST');

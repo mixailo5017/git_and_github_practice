@@ -205,7 +205,8 @@ class Migration_update_score_member_member_function extends CI_Migration {
           RETURN 1;
         END;
         $$ LANGUAGE plpgsql VOLATILE";
-        $this->db->query($sql);
+        
+        $this->execute($sqls);
     }
 
     private function execute(array $sqlStatements)

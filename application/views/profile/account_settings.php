@@ -708,7 +708,7 @@
 					<div class="clearfix" id="load_expertise_education_form">
 					
 					<?php 
-					if(count($education) >0)
+					if(count_if_set($education) >0)
 					{
 						foreach($education as $key=>$edu)
 						{

@@ -47,7 +47,7 @@
 
         <div style="padding: 8px 12px;">
             <?php foreach ($properties as $property) { ?>
-                <strong><?php echo $property[0] . ':'; ?></strong><?php echo str_repeat('&nbsp;', $property[2]); echo ($property[1] != '') ? $property[1] : '&mdash;'; echo br(); ?>
+                <strong><?php echo $property[0] . ':'; ?></strong><?php echo str_repeat('&nbsp;', $property[2]); echo ($property[1] != '') ? $property[1] : '&mdash;'; ?><br>
             <?php } ?>
         </div>
         <div style="padding: 8px 12px;">

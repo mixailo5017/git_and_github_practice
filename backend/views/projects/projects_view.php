@@ -171,10 +171,10 @@
 						<?php if($project["isaddcomment"]) { echo form_open("projects/add_comment/".$slug."",array("id"=>"comment_form","class"=>"ajax_form")); ?>
 							<div class="comment">
 								<?php echo form_label("Leave a Comment/Update:","comment"); ?>
-								<?php echo br(); ?>
+								<br>
 								<?php echo form_textarea(array("class"=>"comment_box","name"=>"comment","id"=>"comment")); ?>
 								<div class="errormsg" id="err_comment"></div>
-								<?php echo br(); ?>
+								<br>
 
 								<?php echo form_submit(array("name"=>"submit","id"=>"submit","value"=>"Submit")); ?>
 							</div>

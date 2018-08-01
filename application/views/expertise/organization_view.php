@@ -80,7 +80,7 @@
     <div class="side_portlets">
 
             <?php
-                if((count($case_studies)) > 0)
+                if((count_if_set($case_studies)) > 0)
                 {
                     echo '<div class="portlet_list case_studies">';
                     echo '<div class="inner">';

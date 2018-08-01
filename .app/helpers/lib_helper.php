@@ -1814,6 +1814,19 @@ if (! function_exists('reminder_token')) {
     }
 }
 
+if (! function_exists('count_if_set')) {
+    /**
+     * Avoids PHP 7.2 errors trying to call count()
+     * on a variable that is not set
+     * @param  mixed $var Either an unset array item or an array
+     * @return int      0 when $var is unset, otherwise the count of items in input array
+     */
+    function count_if_set($var) : int
+    {
+        return isset($var) ? count($var) : 0;
+    }
+}
+
 /**
  * 503 Page Handler (503 Service Unavailable due to a temporary overloading or maintenance of the server.)
  *
