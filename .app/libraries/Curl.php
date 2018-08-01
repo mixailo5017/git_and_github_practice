@@ -1,6 +1,8 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
 
 namespace GViP;
+
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 /**
  * CodeIgniter Curl Class
