@@ -13,6 +13,7 @@
       "files": [
         ".app/helpers.php",
         ".app/libraries/Matches_lib.php"
-      ]
+      ],
+      "psr-4": { "GViP\\": ".app/libraries"}
     }
 }
