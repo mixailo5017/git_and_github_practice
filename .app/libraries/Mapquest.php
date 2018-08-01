@@ -12,7 +12,7 @@
  * @link         	http://viminteractive.com
  */
 
-require (  dirname(__FILE__) . '/curl.php');
+use GViP\Curl;
 
 class Mapquest extends Curl {
 
