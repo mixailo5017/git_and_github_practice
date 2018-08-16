@@ -97,9 +97,21 @@ class Marketing extends CI_Controller {
 
 	public function mailtest()
 	{
+		$expertsData = [
+			[
+				'firstname' => 'Michael',
+				'lastname' => 'Pavey',
+				'uid' => 824,
+				'organization' => 'CG/LA',
+				'title' => 'Managing Director',
+				'imageURL' => 'https://www.gvip.io/img/member_photos/a4eaae6a27e9de8d20bd9dc0ab1cbf64.jpg?w=150&amp;h=150'
+			]
+		];
+
 		$email = new Mail();
 		$email->addRecipients([new EmailRecipient('Michael Pavey', 'michael@cg-la.com')])
 			  ->subject('Your GViP expert recommendations')
+			  ->body($this->load->view('marketing/emails/algosemail_html', compact('expertsData'), true))
 			  ->withSubstitutionData(['name' => 'Michael'])
 			  ->send();
 	}

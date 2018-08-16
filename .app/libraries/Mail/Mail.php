@@ -10,11 +10,13 @@ use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 
 class Mail
 {
-	private $apiKey;
-	protected $emailRecipients = [];
-    protected $sparky;
-    private $subject;
-    private $substitutionData;
+	private   $apiKey,
+              $subject,
+              $substitutionData;
+	protected $emailRecipients = [],
+              $sparky,
+              $bodyHtml,
+              $bodyText;
 
     public function __construct()
     {
@@ -44,6 +46,8 @@ class Mail
     public function withSubstitutionData(array $substitutionData)
     {
         $this->substitutionData = $substitutionData;
+
+        return $this;
     }
 
     /**
@@ -71,6 +75,14 @@ class Mail
         return $this;
     }
 
+    public function body(string $html, string $text = null)
+    {
+        $this->bodyHtml = $html;
+        $this->bodyText = $text ?? \Html2Text\Html2Text::convert($html);
+
+        return $this;
+    }
+
     public function send()
     {
         $this->sparky->setOptions(['async' => false]);
@@ -82,8 +94,8 @@ class Mail
                         'email' => ADMIN_EMAIL,
                     ],
                     'subject' => $this->subject,
-                    'html' => '<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your very first mailing!</p></body></html>',
-                    'text' => 'Congratulations, {{name}}!! You just sent your very first mailing!',
+                    'html' => $this->bodyHtml,
+                    'text' => $this->bodyText,
                 ],
                 'substitution_data' => $this->substitutionData,
                 'recipients' => $this->getRecipientsForSparkpost(),
