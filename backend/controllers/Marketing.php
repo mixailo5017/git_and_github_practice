@@ -1,5 +1,8 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+use GViP\Mail\Mail,
+	GViP\Mail\EmailRecipient;
+
 class Marketing extends CI_Controller {
 
 	/**
@@ -90,6 +93,15 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/leftmenu');
 		$this->load->view('marketing/algosemail', $data);
 		$this->load->view('templates/footer');	
+	}
+
+	public function mailtest()
+	{
+		$email = new Mail();
+		$email->addRecipients([new EmailRecipient('Michael Pavey', 'michael@cg-la.com')])
+			  ->subject('Your GViP expert recommendations')
+			  ->withSubstitutionData(['name' => 'Michael'])
+			  ->send();
 	}
 
 	/**
