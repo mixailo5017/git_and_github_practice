@@ -108,11 +108,22 @@ class Marketing extends CI_Controller {
 			]
 		];
 
+		$recipients = [
+			(new EmailRecipient('Michael Pavey', 'michael@cg-la.com'))->addSubstitutionData([
+				'experts' => [
+					[
+						'name' => 'Michael Pavey',
+						'uid' => 824,
+						'organization' => 'Chuck E. Cheese Inc'
+					],
+				]
+			])
+		];
+
 		$email = new Mail();
-		$email->addRecipients([new EmailRecipient('Michael Pavey', 'michael@cg-la.com')])
+		$email->addRecipients($recipients)
 			  ->subject('Your GViP expert recommendations')
-			  ->body($this->load->view('marketing/emails/algosemail_html', compact('expertsData'), true))
-			  ->withSubstitutionData(['name' => 'Michael'])
+			  ->body($this->load->view('marketing/emails/algosemail_html', '', true))
 			  ->send();
 	}
 

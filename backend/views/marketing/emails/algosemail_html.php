@@ -69,18 +69,18 @@
                                         <table width="100%">
                                             <tbody>
                                                 <tr>
-                                                	<?php foreach($expertsData as $expert): ?>
+                                                	{{ each experts }}
                                                     <td valign="top">
                                                         <div>
                                                             <img alt="" height="1" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="126" /></div>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/<?php echo $expert['uid']; ?>"><img height="120" src="<?php echo $expert['imageURL']; ?>" width="120" /></a></p>
+                                                            <a href="https://www.gvip.io/expertise/{{ loop_var.uid }}"><img height="120" src="{{ loop_var.imageURL }}" width="120" /></a></p>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/{{ uid }}">{{ name }}</a><br />
-                                                            {{ title }}<br />
-                                                            {{ organization }}</p>
+                                                            <a href="https://www.gvip.io/expertise/{{ loop_var.uid }}">{{ loop_var.name }}</a><br />
+                                                            {{ loop_var.title }}<br />
+                                                            {{ loop_var.organization }}</p>
                                                     </td>
-	                                                <?php endforeach; ?>                                                                                  
+	                                                {{ end }}                                                                      
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -58,12 +58,18 @@ class Mail
     {
         $recipients = [];
         foreach ($this->emailRecipients as $emailRecipient) {
-            $recipients[] = [
+            $newRecipient = [
                 'address' => [
                     'name' => $emailRecipient->getName(),
                     'email' => $emailRecipient->getEmail()
                 ]
             ];
+
+            if (! empty($emailRecipient->getSubstitutionData())) {
+                $newRecipient['substitution_data'] = $emailRecipient->getSubstitutionData();
+            }
+            
+            $recipients[] = $newRecipient;
         }
 
         return $recipients;
