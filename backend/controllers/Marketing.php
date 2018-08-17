@@ -83,7 +83,7 @@ class Marketing extends CI_Controller {
 		$offset = $this->uri->segment(3);
 		$data['attendees'] = $this->forums_model->get_filtered_user_list(31, 5, $offset)['filter'];
 		foreach ($data['attendees'] as &$attendee) {
-			$attendee['recommendations'] = $this->algosemail_model->get_recommendations($attendee['uid']);
+			$attendee['recommendations'] = $this->algosemail_model->get_forum_recommendations($attendee['uid'], 31, 3);
 		}
 
 
@@ -97,26 +97,12 @@ class Marketing extends CI_Controller {
 
 	public function mailtest()
 	{
-		$expertsData = [
-			[
-				'firstname' => 'Michael',
-				'lastname' => 'Pavey',
-				'uid' => 824,
-				'organization' => 'CG/LA',
-				'title' => 'Managing Director',
-				'imageURL' => 'https://www.gvip.io/img/member_photos/a4eaae6a27e9de8d20bd9dc0ab1cbf64.jpg?w=150&amp;h=150'
-			]
-		];
+		$this->load->model('algosemail_model');
+		$recommendedExperts = $this->algosemail_model->get_recommendations(824, 3);
 
 		$recipients = [
 			(new EmailRecipient('Michael Pavey', 'michael@cg-la.com'))->addSubstitutionData([
-				'experts' => [
-					[
-						'name' => 'Michael Pavey',
-						'uid' => 824,
-						'organization' => 'Chuck E. Cheese Inc'
-					],
-				]
+				'experts' => $recommendedExperts
 			])
 		];
 
