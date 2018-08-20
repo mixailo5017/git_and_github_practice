@@ -42,7 +42,7 @@
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
                                     <td>
-                                        Dear {{name}}, here are your recommendations!
+                                        Dear {{ firstname }}, here are your recommendations!
                                     </td>
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
@@ -76,7 +76,7 @@
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
                                                             <a href="https://www.gvip.io/expertise/{{ loop_var.uid }}"><img height="120" src="{{ loop_var.imageUrl }}" width="120" /></a></p>
                                                         <p style="font-size:13px;color:#373b43;line-height:1.3;padding-bottom:27px;margin:0;word-break:break-word">
-                                                            <a href="https://www.gvip.io/expertise/{{ loop_var.uid }}">{{ loop_var.name }}</a><br />
+                                                            <a href="https://www.gvip.io/expertise/{{ loop_var.uid }}">{{ loop_var.firstname }} {{ loop_var.lastname }}</a><br />
                                                             {{ loop_var.title }}<br />
                                                             {{ loop_var.organization }}</p>
                                                     </td>
