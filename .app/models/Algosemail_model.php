@@ -75,13 +75,13 @@ class Algosemail_model extends CI_Model {
 				WHERE member_id_2 = ? 
 			), distinctcompanies AS (
 				SELECT DISTINCT ON (m.organization)
-					am.uid, distance, ('https://www.gvip.io/expertise/' || am.uid) AS url, firstname, lastname, organization, userphoto
+					am.uid, distance, ('https://www.gvip.io/expertise/' || am.uid) AS url, firstname, lastname, organization, userphoto, title
 				FROM allmatches am
 				JOIN exp_members m ON (m.uid = am.uid)
 				WHERE m.organization NOT LIKE 'CG/LA%'
 				ORDER BY m.organization, distance ASC
 			)
-			SELECT uid, distance, url, firstname, lastname, organization, userphoto
+			SELECT uid, distance, url, firstname, lastname, organization, userphoto, title
 			FROM distinctcompanies
 			ORDER BY distance ASC
 			LIMIT ?;
