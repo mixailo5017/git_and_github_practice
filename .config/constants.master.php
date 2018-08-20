@@ -151,7 +151,7 @@ define('DATEFORMATVIEW_MONTHONLY', 'F Y'); // Display format for dates with mont
 define('ADMIN_EMAIL', 'info@gvip.io');
 define('ADMIN_EMAIL_NAME', SITE_NAME);
 define('CGLA_NAME', 'CG/LA Infrastructure');
-define('CGLA_SITE', 'http://www.cg-la.com/');
+define('CGLA_SITE', 'https://www.cg-la.com/');
 
 // Concierge email
 //define("CONCIERGE_EMAIL","norman@cg-la.com,scott@cg-la.com,erik@cg-la.com,cristina@cg-la.com");
