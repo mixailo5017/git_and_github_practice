@@ -148,7 +148,7 @@ define('SITE_NAME', 'GViP');
 define('DATEFORMAT_MONTHONLY', '%m/%y'); // Display (on edit screen) and transmission format for dates with month-level accuracy
 define('DATEFORMATVIEW', 'M j, Y'); // Display format for dates with day-level accuracy. E.g., used for project profile view Files section
 define('DATEFORMATVIEW_MONTHONLY', 'F Y'); // Display format for dates with month-level accuracy. E.g., used for project profile view
-define('ADMIN_EMAIL', 'no-reply@gvip.io');
+define('ADMIN_EMAIL', 'info@gvip.io');
 define('ADMIN_EMAIL_NAME', SITE_NAME);
 define('CGLA_NAME', 'CG/LA Infrastructure');
 define('CGLA_SITE', 'http://www.cg-la.com/');
