@@ -108,13 +108,14 @@ class Marketing extends CI_Controller {
 		$recipients = [
 			(new EmailRecipient('Michael Pavey', 'michael@cg-la.com'))->addSubstitutionData([
 				'experts' => $recommendedExperts,
-				'firstname' => 'Michael'
+				'firstname' => 'Michael',
+				'month' => date('F')
 			])
 		];
 
 		$email = new Mail();
 		$email->addRecipients($recipients)
-			  ->subject('Your GViP expert recommendations')
+			  ->subject('Your GViP expert recommendations for ' . date('F'))
 			  ->body($this->load->view('marketing/emails/algosemail_html', '', true))
 			  ->send();
 	}

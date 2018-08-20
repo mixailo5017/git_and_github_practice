@@ -3,7 +3,7 @@
 <html>
     <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Your recommended experts for August</title>
+        <title>Your recommended experts for {{ month }}</title>
       <style>
         body, p, div {font-size:13px;color:#373b43;word-break:break-word;}
         body, div {margin:0}
