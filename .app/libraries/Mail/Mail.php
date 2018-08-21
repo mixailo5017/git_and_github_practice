@@ -68,7 +68,7 @@ class Mail
             if (! empty($emailRecipient->getSubstitutionData())) {
                 $newRecipient['substitution_data'] = $emailRecipient->getSubstitutionData();
             }
-            
+
             $recipients[] = $newRecipient;
         }
 
@@ -105,6 +105,9 @@ class Mail
                 ],
                 'substitution_data' => $this->substitutionData,
                 'recipients' => $this->getRecipientsForSparkpost(),
+                'options' => [
+                    'inline_css' => true
+                ],
                 // 'cc' => [
                 // ],
                 // 'bcc' => [

@@ -7,6 +7,9 @@
       <style>
         body, p, div {font-size:13px;color:#373b43;word-break:break-word;}
         body, div {margin:0}
+        .btn {-webkit-box-shadow: rgb(203, 247, 197) 0px 1px 0px 0px inset; -webkit-transition-delay: 0s; -webkit-transition-duration: 0.5s; -webkit-transition-property: all; -webkit-transition-timing-function: ease; border-bottom-color: rgb(55, 103, 40); border-bottom-left-radius: 3px; border-bottom-right-radius: 3px; border-bottom-style: solid; border-bottom-width: 1px; border-image-outset: 0px; border-image-repeat: stretch; border-image-slice: 100%; border-image-source: none; border-image-width: 1; border-left-color: rgb(55, 103, 40); border-left-style: solid; border-left-width: 1px; border-right-color: rgb(55, 103, 40); border-right-style: solid; border-right-width: 1px; border-top-color: rgb(55, 103, 40); border-top-left-radius: 3px; border-top-right-radius: 3px; border-top-style: solid; border-top-width: 1px; box-shadow: rgb(203, 247, 197) 0px 1px 0px 0px inset; color: rgb(55, 103, 40); cursor: auto; display: inline-block; font-family: 'Open Sans', sans-serif; font-size: 12px; font-weight: bold; height: 19px; line-height: 19.2000007629395px; margin-right: 10px; outline-color: rgb(55, 103, 40); outline-style: none; outline-width: 0px; padding-bottom: 7px; padding-left: 24px; padding-right: 24px; padding-top: 7px; position: relative; text-decoration: none; text-shadow: rgb(176, 238, 167) 1px 1px 1px; transition-delay: 0s; transition-duration: 0.5s; transition-property: all; transition-timing-function: ease; color: #376728 !important; }
+        .btn-primary { background-color: rgb(123, 195, 101); }
+        .btn-standard { background-color: red; }
       </style>
     </head>
     <body>
@@ -42,7 +45,11 @@
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
                                     <td>
-                                        Dear {{ firstname }}, here are your recommendations!
+                                        <p>Dear {{ firstname }},</p>
+                                        <p>Based on your GViP profile, here are three experts we think could help you achieve your goals. Click through to learn more about them, and send them a message!</p>
+                                        <p>Best,</p>
+                                        <p>Michael</p>
+                                        <p>PS Were these recommendations useful? Send us feedback by replying to me or clicking the buttons below, and help us make the recommendations even better for you! (You might also like to <a href="https://www.gvip.io/profile/account_settings">update your GViP profile</a>.)
                                     </td>
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
@@ -79,6 +86,12 @@
                                                             <a href="https://www.gvip.io/expertise/{{ loop_var.uid }}">{{ loop_var.firstname }} {{ loop_var.lastname }}</a><br />
                                                             {{ loop_var.title }}<br />
                                                             {{ loop_var.organization }}</p>
+                                                            <p><a class="btn btn-primary">View profile</a></p>
+                                                            <p>Useful?</p>
+                                                            <p>
+                                                                <a class="btn btn-standard">Yes</a>
+                                                                <a class="btn btn-standard">No</a>
+                                                            </p>
                                                     </td>
 	                                                {{ end }}                                                                      
                                                 </tr>
