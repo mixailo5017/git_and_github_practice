@@ -1297,6 +1297,27 @@ $(function() {
         });
     }
 
+    // When ad banner is clicked for a forum (e.g. on project details page)
+    // track this event with Segment Analytics
+    var $adBanner = $("a#forum-banner");
+    if ($adBanner.length) {
+        $adBanner.click(function(e) {
+            var $this = $(this),
+                forumId = $this.attr("data-id"),
+                forumName = $this.attr("data-name");
+            segmentAnalytics({
+                "event": {
+                    "name": "Ad Banner Clicked",
+                    "properties": {
+                        "Type": "Forum",
+                        "Target Id": forumId,
+                        "Target Name": forumName
+                    }
+                }
+            });
+        });
+    }
+
     // When a recommendation link is clicked on My GViP,
     // track this event with Segment Analytics
     var $recommendation = $("a.recommendation");
