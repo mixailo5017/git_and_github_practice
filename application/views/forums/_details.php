@@ -6,7 +6,7 @@
             'fit' => 'contain',
             'allow_scale_larger' => false));
 ?>
-        <div class="banner_image" style="width:600px">
+        <div class="banner_image">
             <img src="<?php echo $banner ?>" class="uploaded_img" alt="Forum's banner">
         </div>
 <?php
