@@ -40,6 +40,14 @@
 
 			</div><!-- end #tabs -->
 
+            <?php if (isset($featuredForum)): ?>
+                <div class="banner_image">
+                    <a href="/forums/<?= $featuredForum['id'] ?>">
+                        <img src="<?= forum_image($featuredForum['banner'], 600, ['fit' => 'contain']) ?>" class="uploaded_img" alt="<?= $featuredForum['title'] ?>" title="Click to learn more about this upcoming event, where you can meet project executives and infrastructure decision-makers.">
+                    </a>
+                </div>
+            <?php endif; ?>
+
 			<?php 
 			// Don't show Project Feed on official Brazilian projects
 			if ($userdata['uid'] != BRAZIL_USER_ID) {
