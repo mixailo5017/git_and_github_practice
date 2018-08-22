@@ -710,4 +710,30 @@ class Forums_model extends CI_Model
 
         return true;
     }
+
+    /**
+     * If there is at least one featured forum
+     * whose end date has not yet passed, return the soonest one
+     * Otherwise, return null
+     * 
+     * @return [type] [description]
+     */
+    public function get_featured_forum()
+    {
+        $featuredForum = $this->all($where = [
+                                        'end_date >=' => date('Y-m-d'),
+                                        'is_featured' => '1',
+                                        'status' => STATUS_ACTIVE
+                                    ],
+                                    $select = 'f.id, title, banner',
+                                    $order_by = [
+                                        'start_date' => 'asc',
+                                        'end_date' => 'asc'
+                                    ],
+                                    $limit = 1,
+                                    $offset = null,
+                                    $row_count = false);
+
+        return (is_array($featuredForum) && count($featuredForum) == 1) ? $featuredForum[0] : null;
+    }
 }
