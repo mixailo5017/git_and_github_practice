@@ -31,6 +31,13 @@
 
 		// Example content CSS (should be your site CSS)
 		content_css : "/css/style.css",
+
+		// Keep hidden textarea in sync so jQuery Ajax submission works
+        setup: function (editor) {
+            editor.on('change', function () {
+                tinymce.triggerSave();
+            });
+        },
 	});
 </script>
 
