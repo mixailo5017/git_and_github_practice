@@ -98,7 +98,7 @@ class Marketing extends CI_Controller {
 	public function mailtest()
 	{
 		$this->load->model('algosemail_model');
-		$recommendedExperts = $this->algosemail_model->get_recommendations(824, 3);
+		$recommendedExperts = $this->algosemail_model->get_recommendations(28, 3);
 
 		if (empty($recommendedExperts)) { // Don't email someone if we don't have any recommendations for them!
 			echo "No experts to recommend :(";
@@ -108,8 +108,9 @@ class Marketing extends CI_Controller {
 		$recipients = [
 			(new EmailRecipient('Michael Pavey', 'michael@cg-la.com'))->addSubstitutionData([
 				'experts' => $recommendedExperts,
-				'firstname' => 'Michael',
-				'month' => date('F')
+				'firstname' => 'Norman',
+				'month' => date('F'),
+				'uid' => 28,
 			])
 		];
 
