@@ -150,7 +150,7 @@ class Members_model extends CI_Model {
      * @internal param $int
      * @return    array
      */
-    public function get_members($membertype = null){
+    public function get_members($membertype = null, $active = null){
 
         $this->db->select(array("uid","firstname","lastname","email","registerdate","membertype","organization","typename","m.status","lat","lng","geocode"));
         $this->db->from("exp_members m");
@@ -159,6 +159,11 @@ class Members_model extends CI_Model {
         if (! is_null($membertype)) {
             $this->db->where('m.membertype', (int) $membertype);
         }
+
+        if (! is_null($active)) {
+            $this->db->where('m.status', $active ? '1' : '0');
+        }
+
         $this->db->order_by("m.firstname", "asc");
 
         $query_user = $this->db->get();
