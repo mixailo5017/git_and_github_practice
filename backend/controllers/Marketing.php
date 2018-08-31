@@ -95,6 +95,32 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/footer');	
 	}
 
+	public function fetch_recommendations()
+	{
+		$this->load->model('algosemail_model');
+		$recommendationsData = $this->algosemail_model->get_recommendations_for_all_users(3);
+		$membersWithRecommendations = array_filter($recommendationsData, function($member) {
+			return count($member['recommendations']) === 3;
+		});
+		
+		$membersForTestEmail = array_slice($membersWithRecommendations, 0, 10);
+
+		$recipients = array_map(function($member) {
+			return (new EmailRecipient($member['forMember']['firstname'] . ' ' . $member['forMember']['lastname'], $member['forMember']['email']))->addSubstitutionData([
+				'experts' => $member['recommendations'],
+				'firstname' => $member['forMember']['firstname'],
+				'month' => date('F'),
+				'uid' => $member['forMember']['uid'],
+			]);
+		}, $membersForTestEmail);
+		
+		$email = new Mail();
+		$email->addRecipients($recipients)
+			  ->subject('Your GViP expert recommendations for ' . date('F'))
+			  ->body($this->load->view('marketing/emails/algosemail_html', '', true))
+			  ->send();
+	}
+
 	public function mailtest()
 	{
 		$this->load->model('algosemail_model');

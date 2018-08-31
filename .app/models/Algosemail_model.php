@@ -98,6 +98,22 @@ class Algosemail_model extends CI_Model {
         return $rows;
 	}
 
+	public function get_recommendations_for_all_users(int $numberOfRecommendations = 3)
+	{
+		$members = $this->members_model->get_members(5, true)['data'];
+		
+		foreach ($members as $member) {
+			$member['uid'] = (int) $member['uid'];
+
+			$recommendationsData[] = [
+				'forMember' => $member,
+				'recommendations' => $this->get_recommendations($member['uid'], $numberOfRecommendations),
+			];
+		};
+
+		return $recommendationsData;
+	}
+
 }
 
 ?>
