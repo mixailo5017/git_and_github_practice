@@ -38,9 +38,9 @@ class Mail
     			continue;
     		}
     		$this->emailRecipients[] = $emailRecipient;
-
-            return $this;
     	}
+
+        return $this;
     }
 
     public function withSubstitutionData(array $substitutionData)
@@ -57,6 +57,7 @@ class Mail
     private function getRecipientsForSparkpost()
     {
         $recipients = [];
+
         foreach ($this->emailRecipients as $emailRecipient) {
             $newRecipient = [
                 'address' => [
@@ -71,7 +72,7 @@ class Mail
 
             $recipients[] = $newRecipient;
         }
-
+        
         return $recipients;
     }
 
