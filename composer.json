@@ -3,7 +3,8 @@
         "vlucas/phpdotenv": "~2.4",
         "nesbot/carbon": "^1.21",
         "algolia/algoliasearch-client-php": "^1.16",
-        "league/glide": "^1.2"
+        "league/glide": "^1.2",
+        "segmentio/analytics-php": "^1.5"
     },
     "require-dev": {
         "codeception/codeception": "*",
