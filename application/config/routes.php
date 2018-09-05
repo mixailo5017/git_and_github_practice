@@ -151,8 +151,12 @@ $route['projects/(:any)']			= "projects/view/$1";
 //
 $route['expertise/list']         = "expertise/index";
 $route['expertise/list/(:num)']  = "expertise/view/$1";
+
 $route['expertise/(:num)/rate']  = "expertise/rate/$1";
 $route['expertise/(:num)/ratings']  = "expertise/ratings/$1";
+
+$route['expertise/(:num)/recommendationfeedback/expert/(:num)/(up|down)'] = "recommendationfeedback/store/$1/expert/$2/$3";
+
 $route['expertise/(:num)']       = "expertise/view/$1";
 //$route['expertise']			        = "expertise/index";
 

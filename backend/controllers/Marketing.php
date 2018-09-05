@@ -95,18 +95,24 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/footer');	
 	}
 
-	public function fetch_recommendations()
+	public function send_recommendations()
 	{
 		$this->load->model('algosemail_model');
 		$recommendationsData = $this->algosemail_model->get_recommendations_for_all_users(3);
+		
+		// Only send the email to members for whom we have three recommendations
 		$membersWithRecommendations = array_filter($recommendationsData, function($member) {
 			return count($member['recommendations']) === 3;
 		});
 		
-		$membersForTestEmail = array_slice($membersWithRecommendations, 0, 10);
+		$membersForTestEmail = array_slice($membersWithRecommendations, 0, 10); // TODO: Remove this testing code
 
 		$recipients = array_map(function($member) {
-			return (new EmailRecipient($member['forMember']['firstname'] . ' ' . $member['forMember']['lastname'], $member['forMember']['email']))->addSubstitutionData([
+			return (new EmailRecipient(
+					$member['forMember']['firstname'] . ' ' . $member['forMember']['lastname'],
+					$member['forMember']['email']
+				)
+			)->addSubstitutionData([
 				'experts' => $member['recommendations'],
 				'firstname' => $member['forMember']['firstname'],
 				'month' => date('F'),
