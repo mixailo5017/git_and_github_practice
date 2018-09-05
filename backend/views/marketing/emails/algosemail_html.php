@@ -123,7 +123,8 @@
                                             <img alt="" height="28" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="300" /></div>
                                         <p style="font-size:11px;color:#798397;line-height:1.2;padding-bottom:27px;margin:0">
                                             GViP &reg; is a registered trademark of <a href="https://www.cg-la.com/" target="_blank">CG/LA Infrastructure</a> &copy; <?php echo date("Y"); ?><br>
-                                            {{ unsubscribe_link }}</p>
+                                            <a data-msys-unsubscribe="1" href="<?= BASE_URL ?>/confirm_unsubscribe" title="Unsubscribe from GViP emails">Unsubscribe from our emails</a>
+                                        </p>
                                     </td>
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>

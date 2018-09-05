@@ -126,6 +126,20 @@ class Pages extends CI_Controller {
         $this->load->view('layouts/default', $page);
     }
 
+    private function confirm_unsubscribe()
+    {
+        $page = array(
+            'view' => 'pages/confirm_unsubscribe',
+            'title' => build_title(lang('ConfirmUnsubscribe')),
+            'bodyclass' => '',
+            'header' => array(),
+            'content' => array(),
+            'footer' => array()
+        );
+
+        $this->load->view('layouts/default', $page);
+    }
+
     private function privatemeetings()
     {
         // If the user is authenticated, append user's details to the meeting URL query string
