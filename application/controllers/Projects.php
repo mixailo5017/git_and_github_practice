@@ -469,6 +469,12 @@ class Projects extends CI_Controller
         $this->load->model('discussions_model');
         $viewdata['project']['discussions_access'] = $this->discussions_model->has_access($this->uid, $pid);
 
+        // Forum ad
+        $this->load->model('forums_model');
+        if ($featuredForum = $this->forums_model->get_featured_forum()) {
+            $viewdata['featuredForum'] = $featuredForum;
+        }
+
         $this->breadcrumb->append_crumb(lang('B_PROJECTS'), '/projects');
         $this->breadcrumb->append_crumb($viewdata['project']['projectdata']['projectname'], "/projects/$slug");
         $this->headerdata['breadcrumb'] = $this->breadcrumb->output();

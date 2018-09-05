@@ -212,12 +212,13 @@
 												'lbl_mission' => array(
 														'class' 	=> 'left_label_p'
 														),
-												'member_mission'	=> array(
-														'name' 		=> 'member_mission',
-														'value' 	=> $users["mission"],
-                                                        'class'     => 'tinymce',
-                                                        'data-width' => '600',
-														'style'		=>'margin-bottom:0px;'
+                                                'member_mission' => array(
+                                                    'name'           => 'member_mission',
+                                                    'value'          => $users["mission"],
+                                                    'class'          => 'tinymce',
+                                                    'data-width'     => '600',
+                                                    'data-height'    => '550',
+                                                    'style'          => 'margin-bottom:0px;'
 												)
 
 

@@ -25,7 +25,7 @@
 	<script>window.jQuery || document.write('<script src="/js/jquery-1.7.1.min.js"><\/script>')</script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 	<script>window.jQuery.ui || document.write('<script src="/js/jquery-ui-1.8.18.min.js"><\/script>')</script>
-	<script type="text/javascript" src="/js/tiny_mce/jquery.tinymce.js"></script>
+	<script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=mai7xr5o658n95pijgmghfedm0228bki140we2d11pevudr5"></script> 
 	<script type="text/javascript">
 		setTimeout(function(){var a=document.createElement("script");
 		var b=document.getElementsByTagName("script")[0];

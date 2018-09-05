@@ -49,28 +49,22 @@ $(function() {
         });
     });
 
-    /*
-        if($('html').hasClass("lt-ie9") === true){
-           // Append upgrade banner to body
-        }
-    */
-    $('textarea.tinymce').tinymce({
-        // Location of TinyMCE script
-        script_url: '/js/tiny_mce/tiny_mce.js',
+    tinymce.init({
+        selector:'textarea.tinymce',
 
         // General options
-        theme: "advanced",
-        width: $('textarea.tinymce').data('width') || "900",
-        plugins: "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,advlist",
+        width : jQuery('textarea.tinymce').data('width') || "900",
+        height : jQuery('textarea.tinymce').data('height') || "300",
+        branding: false,
+        plugins: "code,autolink,lists,image,link,preview,media,paste,fullscreen",
+        toolbar: "bold,italic,underline,,bullist,numlist,outdent,indent,justifyleft,justifycenter,justifyright,|,link,unlink,anchor,image,media,|,formatselect,|,code",
+        menubar: "edit,view,insert,format",
+
         // Allow iframe tag
         extended_valid_elements: "iframe[class|src|alt|title|width|height|align|name|frameborder|allowfullscreen]",
-        // Theme options
-        theme_advanced_buttons1: "bold,italic,underline,,bullist,numlist,outdent,indent,justifyleft,justifycenter,justifyright,|,link,unlink,anchor,image,media,|,formatselect,|,code",
-        theme_advanced_toolbar_location: "top",
-        theme_advanced_toolbar_align: "left",
-        theme_advanced_statusbar_location: "bottom",
-        theme_advanced_resizing: false,
 
+        // Apply custom markup for certain formatting buttons
+        // Looks like it may just have been copy/pasted from sample code, TODO: check if this can be removed
         formats: {
             alignleft: {
                 selector: 'p,h1,h2,h3,h4,h5,h6,td,th,div,ul,ol,li,table,img',
@@ -117,16 +111,15 @@ $(function() {
         },
 
         // Example content CSS (should be your site CSS)
-        content_css: "/css/content.css",
+        content_css : "/css/style.css",
 
-        // Drop lists for link/image/media/template dialogs
-        template_external_list_url: "lists/template_list.js",
-        external_link_list_url: "lists/link_list.js",
-        external_image_list_url: "lists/image_list.js",
-        media_external_list_url: "lists/media_list.js"
-
+        // Keep hidden textarea in sync so jQuery Ajax submission works
+        setup: function (editor) {
+            editor.on('change', function () {
+                tinymce.triggerSave();
+            });
+        },
     });
-
 
     // Prevent clicking on View button when the Case Study has Draft status
     $('.edit_case_studies .edit_portlet .edit_buttons a.edit_button.last').on('click', function(e) {
@@ -1291,6 +1284,27 @@ $(function() {
                     "properties": {
                         "Forum Id": forumId,
                         "Forum Name": forumName
+                    }
+                }
+            });
+        });
+    }
+
+    // When ad banner is clicked for a forum (e.g. on project details page)
+    // track this event with Segment Analytics
+    var $adBanner = $("a#forum-banner");
+    if ($adBanner.length) {
+        $adBanner.click(function(e) {
+            var $this = $(this),
+                forumId = $this.attr("data-id"),
+                forumName = $this.attr("data-name");
+            segmentAnalytics({
+                "event": {
+                    "name": "Ad Banner Clicked",
+                    "properties": {
+                        "Type": "Forum",
+                        "Target Id": forumId,
+                        "Target Name": forumName
                     }
                 }
             });
