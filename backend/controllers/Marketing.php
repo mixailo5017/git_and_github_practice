@@ -95,7 +95,7 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/footer');	
 	}
 
-	public function send_recommendations()
+	public function send_recommendations_to_all_members()
 	{
 		$this->load->model('algosemail_model');
 		$recommendationsData = $this->algosemail_model->get_recommendations_for_all_users(3);
@@ -105,7 +105,10 @@ class Marketing extends CI_Controller {
 			return count($member['recommendations']) === 3;
 		});
 		
-		$membersForTestEmail = array_slice($membersWithRecommendations, 0, 10); // TODO: Remove this testing code
+		// $membersForTestEmail = array_slice($membersWithRecommendations, 0, 10); // TODO: Remove this testing code
+		$membersForTestEmail = array_filter($membersWithRecommendations, function($member) {
+			return $member['forMember']['uid'] === 824; // Only send to Michael while testing
+		});
 
 		$recipients = array_map(function($member) {
 			return (new EmailRecipient(

@@ -13,7 +13,7 @@ class EmailRecipient
 	public function __construct(string $name, string $emailAddress)
 	{
 		$this->name = $name;
-		$this->emailAddress = $emailAddress . ".sink.sparkpostmail.com"; // TODO: Remove this testing string
+		$this->emailAddress = $emailAddress;
 	}
 
 	public function addSubstitutionData(array $substitutionData): EmailRecipient
