@@ -4,6 +4,10 @@ GVIP.App = GVIP.App || {};
 GVIP.App.Analytics = GVIP.App.Analytics || {};
 GVIP.App.Analytics.context = GVIP.App.Analytics.context || {};
 
+require('./_nav_mobile.js')();
+require('./_searchbox.js')();
+require('./_alert.js');
+
 $(window).load(function() {
     var $meter = $('#meter'),
         percent = parseInt($meter.data('value')) / parseInt($meter.data('max')) * 100;
@@ -1920,9 +1924,6 @@ global.ajax_form_init = function() {
             })
         }
     });
-
-    require('./_nav_mobile.js')();
-    require('./_searchbox.js')();
 };
 
 
