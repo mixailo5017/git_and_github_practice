@@ -12,6 +12,11 @@ class RecommendationFeedback extends CI_Controller {
     {
         $this->load->model('recommendationfeedback_model');
         $this->recommendationfeedback_model->store($recipientUserId, $recommendationType, $targetId, $uporDown);
+        $this->session->set_flashdata('alert', [
+        	'class' => 'alert-success',
+        	'message' => 'Thanks for your feedback!'
+        ]);
+        redirect("/expertise/{$targetId}");
     }
 }
 
