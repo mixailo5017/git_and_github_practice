@@ -12,7 +12,9 @@
                 <h3>Monthly Email</h3>
             </div>
             <div>
-                <button>Send email to all members</button>
+                <form action="/admin.php/marketing/algosemail/email_all_members">
+                    <button id="email-all-members">Send email to all members</button>
+                </form>
             </div>
             <div class="contenttitle2">
                 <h3>Forum Recommendations</h3>
