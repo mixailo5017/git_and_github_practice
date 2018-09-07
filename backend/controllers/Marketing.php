@@ -62,6 +62,7 @@ class Marketing extends CI_Controller {
 	public function algosemail()
 	{
 		$this->headerdata['title'] = $data['headertitle'] = "Algorithms Email | GViP Admin";
+		$data['emailSuccess'] = $this->input->get('emailsuccess');
 
 		$this->load->view('templates/header', $this->headerdata);
 		$this->load->view('templates/leftmenu');
@@ -105,7 +106,32 @@ class Marketing extends CI_Controller {
 		$this->load->view('templates/footer');	
 	}
 
-	public function send_recommendations_to_all_members()
+	/**
+	 * Endpoint for users using the GUI to email all members
+	 */
+	public function email_all_members()
+	{
+		$success = $this->send_recommendations_to_all_members();
+		
+		if (is_cli()) {
+			echo "The email was " . ($success ? "" : "NOT ") . "sent successfully.\n";
+			return;
+		}
+
+		$menuUrl = '/marketing/algosemail';
+		if ($success) {
+			redirect($menuUrl . '?emailsuccess=true');
+		}
+		else {
+			redirect($menuUrl . '?emailsuccess=false');
+		}
+	}
+
+	/**
+	 * Send an email with three recommended experts to each GViP member
+	 * @return bool Whether the email was successfully sent
+	 */
+	private function send_recommendations_to_all_members()
 	{
 		$this->load->model('algosemail_model');
 		$recommendationsData = $this->algosemail_model->get_recommendations_for_all_users(3);
@@ -134,10 +160,10 @@ class Marketing extends CI_Controller {
 		}, $membersForTestEmail);
 		
 		$email = new Mail();
-		$email->addRecipients($recipients)
-			  ->subject('Your GViP expert recommendations for ' . date('F'))
-			  ->body($this->load->view('marketing/emails/algosemail_html', '', true))
-			  ->send();
+		return $email->addRecipients($recipients)
+					 ->subject('Your GViP expert recommendations for ' . date('F'))
+					 ->body($this->load->view('marketing/emails/algosemail_html', '', true))
+					 ->send();
 	}
 
 	public function mailtest()

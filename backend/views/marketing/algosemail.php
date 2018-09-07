@@ -11,6 +11,17 @@
             <div class="contenttitle2">
                 <h3>Monthly Email</h3>
             </div>
+            <?php if ($emailSuccess === 'true') { ?>
+                <div class="notibar msgsuccess">
+                    <a class="close"></a>
+                    <p>An email was successfully sent to all GViP members.</p>
+                </div>
+            <?php } elseif ($emailSuccess === 'false') { ?>
+                <div class="notibar msgerror">
+                    <a class="close"></a>
+                    <p>Oh no! The email didn't send properly. Check the log file for more information.</p>
+                </div>
+            <?php } ?>
             <div>
                 <form action="/admin.php/marketing/algosemail/email_all_members">
                     <button id="email-all-members">Send email to all members</button>
