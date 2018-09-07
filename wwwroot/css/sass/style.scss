@@ -228,10 +228,12 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 		text-align: center;
 		border-radius: 3px;
 		margin: 10px auto;
-		width: 560px;
+		width: 100%;
+		box-sizing: border-box;
 		border: 3px solid #D4D4D4;
 		img {
 			margin: 0;
+			width: 100%;
 		}
 	}
 	.col2_tab { width: 100%; }
@@ -1595,6 +1597,7 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "../../build/_sass/_nav_mobile.scss";
 @import "../../build/_sass/_searchbox.scss";
 @import "../../build/_sass/_responsive_visibility.scss";
+@import "../../build/_sass/_alerts.scss";
 
 /* nav override */
 .m-nav li span {

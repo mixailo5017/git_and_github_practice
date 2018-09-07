@@ -131,3 +131,9 @@
         <?php } ?>
     </div>
 </header>
+
+<?php if ($alert = $this->session->flashdata('alert')) { ?>
+    <div class="alert <?= $alert['class'] ?>" role="alert">
+        <?= $alert['message'] ?>
+    </div>
+<?php } ?>

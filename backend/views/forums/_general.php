@@ -177,7 +177,7 @@
             'class' => 'tinymce',
             'id' => 'content',
             'name' => 'content',
-            'value' => set_value('content', $details['content']),
+            'value' => set_value('content', $details['content'], false),
             'data-width' => '675',
             'data-height' => '400'
         )); ?>
