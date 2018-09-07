@@ -90,6 +90,10 @@ class Mail
         return $this;
     }
 
+    /**
+     * Sends the email (via SparkPost)
+     * @return bool Whether the email sent successfully
+     */
     public function send()
     {
         $this->sparky->setOptions(['async' => false]);
@@ -115,12 +119,14 @@ class Mail
                 // ],
             ]);
             
-            echo $response->getStatusCode()."\n";
-            print_r($response->getBody())."\n";
+            $responseBody = json_encode($response->getBody());
+            log_message('info', "Email sending via SparkPost succeeded with code {$response->getStatusCode()}. Response body: $responseBody.");
+            return true;
         }
         catch (\Exception $e) {
-            echo $e->getCode()."\n";
-            echo $e->getMessage()."\n";
+            $responseBody = json_encode($e->getBody());
+            log_message('error', "Email sending via SparkPost failed with error code {$e->getCode()}. Error message: {$e->getMessage()}. Response body: $responseBody.");
+            return false;
         }
     }
 
