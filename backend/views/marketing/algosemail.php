@@ -8,33 +8,32 @@
   
         
         <div id="contentwrapper" class="contentwrapper">
-			<div><?= $paginationLinks ?></div>
-            <div>Showing everyone coming to LALF16 (forum ID 31).</div>
-            
-            <?php foreach ($attendees as $attendee) { ?>
-                <div class="contenttitle2">
-                    <h3><a target="_blank" href="https://www.gvip.io/expertise/<?= $attendee['uid'] ?>"><?= $attendee['firstname'].' '.$attendee['lastname'] ?></a></h3>
+            <div class="contenttitle2">
+                <h3>Monthly Email</h3>
+            </div>
+            <?php if ($emailSuccess === 'true') { ?>
+                <div class="notibar msgsuccess">
+                    <a class="close"></a>
+                    <p>An email was successfully sent to all GViP members.</p>
                 </div>
-                
-                <?php
-                if (count($attendee['recommendations'])) {
-                    foreach ($attendee['recommendations'] as $recommendation) { ?>
-                        <div>
-                            <div><a target="_blank" href="https://www.gvip.io/expertise/<?php echo $recommendation['uid'] ?>"><?php echo $recommendation['firstname'].' '.$recommendation['lastname'] ?> (<?php echo $recommendation['organization'] ?>)</a></div>
-                        </div>
-                <?php 
-                    }
-                }
-                else { ?>
-                    <div>Sorry, no recommendations available.</div>
-                <?php
-                }
-                
-            } ?>
-            
+            <?php } elseif ($emailSuccess === 'false') { ?>
+                <div class="notibar msgerror">
+                    <a class="close"></a>
+                    <p>Oh no! The email didn't send properly. Check the log file for more information.</p>
+                </div>
+            <?php } ?>
+            <div>
+                <form action="/admin.php/marketing/algosemail/email_all_members">
+                    <button id="email-all-members">Send email to all members</button>
+                </form>
+            </div>
+            <div class="contenttitle2">
+                <h3>Forum Recommendations</h3>
+            </div>
+            <div>
+                <a href="/admin.php/marketing/algosemail/forums/31">View LALF16 recommendations</a>
+            </div>
 
-            
-            
         </div><!--contentwrapper-->
         
 	</div>

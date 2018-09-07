@@ -151,8 +151,12 @@ $route['projects/(:any)']			= "projects/view/$1";
 //
 $route['expertise/list']         = "expertise/index";
 $route['expertise/list/(:num)']  = "expertise/view/$1";
+
 $route['expertise/(:num)/rate']  = "expertise/rate/$1";
 $route['expertise/(:num)/ratings']  = "expertise/ratings/$1";
+
+$route['expertise/(:num)/recommendationfeedback/expert/(:num)/(up|down)'] = "recommendationfeedback/store/$1/expert/$2/$3";
+
 $route['expertise/(:num)']       = "expertise/view/$1";
 //$route['expertise']			        = "expertise/index";
 
@@ -183,6 +187,7 @@ $route['plink/(:num)/(:any)'] = "plink/index/$1/$2";
 $route['terms'] = "pages/index/terms";
 $route['privacy'] = "pages/index/privacy";
 $route['sitemap.xml'] = "pages/index/sitemap";
+$route['confirm_unsubscribe'] = "pages/index/confirm_unsubscribe";
 
 // Public project profiles
 $route['p/(:any)'] = "publicprofiles/projects/$1";
