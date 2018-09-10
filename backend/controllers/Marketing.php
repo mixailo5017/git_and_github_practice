@@ -107,10 +107,12 @@ class Marketing extends CI_Controller {
 	}
 
 	/**
-	 * Endpoint for users using the GUI to email all members
+	 * Endpoint to email all members
+	 * Works via GUI or CLI
 	 */
 	public function email_all_members()
 	{
+		ini_set('max_execution_time', 90); // TODO: Optimize so this can be run in 30s or less
 		$success = $this->send_recommendations_to_all_members();
 		
 		if (is_cli()) {
