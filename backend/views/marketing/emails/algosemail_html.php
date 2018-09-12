@@ -33,7 +33,7 @@
                                     <th style="background:#515663;border-top:1px solid #f8f8f9;border-bottom:1px solid #d9d9d9;color:#fff;font-size:16px;text-align:left;vertical-align:middle;border:none">
                                         <div>
                                             <img alt="" height="13" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="300" /></div>
-                                        This week in GViP<br />
+                                        <br />
                                         <div>
                                             <img alt="" height="13" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="300" /></div>
                                     </th>
@@ -47,10 +47,12 @@
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
                                     <td>
                                         <p>Dear {{ firstname }},</p>
-                                        <p>Based on your GViP profile, here are three experts we think could help you achieve your goals. Click through to learn more about them, and send them a message!</p>
+                                        <p>Our new personalization tool will help you expand your network and increase the relevancy of your searches and experience on GViP.</p>
+                                        <p>Based on your <a href="https://www.gvip.io/profile/account_settings">profile preferences</a> we've identified three infrastructure experts that can help you meet your objectives. Click on the profiles below to explore — then make an introduction!</p>
                                         <p>Best,</p>
-                                        <p>Michael</p>
-                                        <p>PS Were these recommendations useful? Send us feedback by replying to me or clicking the buttons below, and help us tailor the recommendations better to your needs. (You might also like to <a href="https://www.gvip.io/profile/account_settings">update your GViP profile</a>.)
+                                        <p>Michael<br>
+                                        Managing Director, GViP | <a href="mailto:michael@gvip.io">michael@gvip.io</a></p>
+                                        <p>PS Are these recommendations helpful? At GViP, we are constantly working to improve the level of customization and functionality on the platform, and your feedback is invaluable. Feel free to let us know your thoughts by replying to me directly or by clicking the thumbs up or down buttons below.</p>
                                     </td>
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
