@@ -390,6 +390,13 @@ jQuery(document).ready(function(){
 		document.execCommand('copy');
 		return false;
 	});
+
+	jQuery('#email-all-members').click(function() {
+		if (! confirm('Are you sure you want to send recommendations emails to all GViP members?')) {
+			return false;
+		}
+		jQuery(this).prop('disabled', true).addClass('stdbtn').text('Sending email…');
+	});
 	
 
 });

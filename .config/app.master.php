@@ -18,6 +18,7 @@ $config['algolia'] = [
 	'index_members'  => env('ALGOLIA_INDEX_MEMBERS'),
 	'index_projects' => env('ALGOLIA_INDEX_PROJECTS')
 ];
+$config['segment_write_key'] = env('SEGMENT_WRITE_KEY');
 $config['mapbox'] = [
 	'access_token' => env('MAPBOX_ACCESS_TOKEN')
 ];
