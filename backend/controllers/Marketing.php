@@ -142,11 +142,6 @@ class Marketing extends CI_Controller {
 		$membersWithRecommendations = array_filter($recommendationsData, function($member) {
 			return count($member['recommendations']) === 3;
 		});
-		
-		// $membersForTestEmail = array_slice($membersWithRecommendations, 0, 10); // TODO: Remove this testing code
-		$membersForTestEmail = array_filter($membersWithRecommendations, function($member) {
-			return $member['forMember']['uid'] === 824; // Only send to Michael while testing
-		});
 
 		$recipients = array_map(function($member) {
 			return (new EmailRecipient(
@@ -159,7 +154,7 @@ class Marketing extends CI_Controller {
 				'month' => date('F'),
 				'uid' => $member['forMember']['uid'],
 			]);
-		}, $membersForTestEmail);
+		}, $membersWithRecommendations);
 		
 		$email = new Mail();
 		return $email->addRecipients($recipients)
