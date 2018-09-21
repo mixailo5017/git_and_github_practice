@@ -257,14 +257,14 @@ class Marketing extends CI_Controller {
 	{
 		$projectsData = [];
 		$requiredProjectFields = "slug, projectname, projectphoto";
-
+		
 		// TODO: Consider implementing (or finding) a new method to retrieve all rows in a single query
 		foreach ($projectURLs as $projectURL) {
 			if (!preg_match('/[^\/]+$/', $projectURL, $matches)) continue;
 			$slug = $matches[0];
 			$projectsData[] = $this->projects_model->find_from_slug($slug, $requiredProjectFields);
 		}
-
+		
 		return $projectsData;
 	}
 }
