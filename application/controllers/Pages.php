@@ -142,9 +142,12 @@ class Pages extends CI_Controller {
 
     private function privatemeetings()
     {
-        // If the user is authenticated, append user's details to the meeting URL query string
+        // If the user is not logged in then redirect to the login page
+        auth_check();
+
+        // Append user's details to the meeting URL query string
         // Of course, only do this if the info is not there already (no infinite loops please)
-        if (Auth::check() && !$this->input->get('email')) {
+        if (!$this->input->get('email')) {
             $authenticatedUserID = Auth::id();
             $this->load->model('expertise_model');
             $authenticatedUser = $this->expertise_model->get_user($authenticatedUserID);
