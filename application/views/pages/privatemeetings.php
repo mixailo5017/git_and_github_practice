@@ -6,7 +6,7 @@
 
             <div align="center" style="height:100%;margin:auto;">
                 <!-- ScheduleOnce embed START -->
-                <div id="SOIDIV_NALF10-PrivateMeetings" data-so-page="NALF10-PrivateMeetings" data-height="550" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="00"></div>
+                <div id="SOIDIV_NALF10-PrivateMeetings" data-so-page="NALF10-PrivateMeetings" data-style="border: 1px solid #d8d8d8; min-width: 290px; max-width: 900px;" data-psz="11"></div>
                 <script type="text/javascript" src="https://cdn.scheduleonce.com/mergedjs/so.js"></script>
                 <!-- ScheduleOnce embed END -->
             </div>
