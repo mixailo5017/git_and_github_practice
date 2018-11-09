@@ -16,6 +16,25 @@
 		<div class="contenttitle2">
 			<h3>Segments</h3>
 		</div>
+		<table class="stdtable">
+			<thead>
+				<tr>
+					<th>Time since last update</th>
+					<th>Number of projects</th>
+					<th>Percentage</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($recencyBuckets as $recencyBucket) { ?>
+					<tr>
+						<td><?= $recencyBucket->agegrouping ?></td>
+						<td><?= $recencyBucket->count ?></td>
+						<td><?= $recencyBucket->percentage ?></td>
+					</tr>
+
+				<?php } ?>
+			</tbody>
+		</table>
 		
 		
 	</div><!--contentwrapper-->

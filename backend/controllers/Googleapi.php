@@ -75,6 +75,7 @@ class GoogleApi extends CI_Controller {
 		$data['headertitle'] = 'Project Recency';
 
 		$data['averageRecency'] = $this->googleapi_model->averageRecency();
+		$data['recencyBuckets'] = $this->googleapi_model->recencyGroupings();
 
 		$this->loadViews('reports/projects', $data);
 	}
