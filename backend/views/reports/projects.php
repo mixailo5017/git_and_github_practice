@@ -11,12 +11,12 @@
 		<div class="contenttitle2">
 			<h3>Overall</h3>
 		</div>
-		<div>Average days since projects last updated: <h2><?= $averageRecency ?></h2></div>
+		<div>Average time since projects last updated: <h4><?= $averageRecency ?></h4></div>
 		
 		<div class="contenttitle2">
 			<h3>Segments</h3>
 		</div>
-		<table class="stdtable">
+		<table class="stdtable" style="max-width: 700px;">
 			<thead>
 				<tr>
 					<th>Time since last update</th>

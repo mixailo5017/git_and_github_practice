@@ -26,7 +26,7 @@ class Googleapi_model extends CI_Model {
 	public function averageRecency()
 	{
 		$sql = "
-			SELECT date_trunc('day', avg(current_date - COALESCE(update_dates.last_date, to_timestamp(created,'MM/DD/YYYY')))) AS days_since_last_updated 
+			SELECT age(date_trunc('day', current_timestamp - avg(current_date - COALESCE(update_dates.last_date, to_timestamp(created,'MM/DD/YYYY'))))) AS days_since_last_updated 
 			FROM
 				(SELECT proj.pid, COALESCE(NULLIF(to_char(to_timestamp(proj.entry_date),'MM/DD/YYYY'),'01/01/1970'),'04/29/2013') AS created
 				FROM exp_projects proj
