@@ -1,6 +1,6 @@
                 <h2><?php echo lang('Files')        ?></h2>
                 <div id="tabs-6" class="col2_tab">
-                    <?php if (count($project['files']['files']) >0) { ?>
+                    <?php if ($project['files']['totalfiles'] > 0) { ?>
                         <table width="100%">
                             <tr>
                                 <th><?php echo lang('File');?>:</th>
