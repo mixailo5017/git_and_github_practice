@@ -349,22 +349,22 @@ class Projects extends CI_Controller
     /**
      * Load Individual Project Detail Page
      *
-     * @param $params
+     * @param $project_identifier Either a PID or a slug
      */
-    public function view($params)
+    public function view($project_identifier)
     {
         $model = $this->projects_model;
 
-        // Allow for $params to be either a slug or an id
-        if (is_numeric($params)) {
-            $slug = $model->get_slug_from_pid((int) $params);
+        // Allow for $project_identifier to be either a slug or an id
+        if (is_numeric($project_identifier)) {
+            $slug = $model->get_slug_from_pid((int) $project_identifier);
             if (! empty($slug)) {
                 redirect("projects/$slug", 'refresh');
             }
         }
 
         // TODO: Revisit this logic and eliminate unnecessary call to DB
-        $slug = $params;
+        $slug = $project_identifier;
         $userid    = $model->get_uid_from_slug($slug);
         $exist_slug = $model->check_project($slug);
         $pid = (int) $model->get_pid_from_slug($slug);
