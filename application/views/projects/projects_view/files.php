@@ -1,6 +1,11 @@
                 <h2><?php echo lang('Files')        ?></h2>
                 <div id="tabs-6" class="col2_tab">
-                    <?php if ($project['files']['totalfiles'] > 0) { ?>
+                    <?php if ($project['files']['image_files_count'] > 0) {
+                        foreach ($project['files']['files']['image_files'] as $image_file) { ?>
+                            <img src="<?php echo project_image($image_file['file'], 300) ?>">
+                        <?php }
+                     } ?>
+                    <?php if ($project['files']['other_files_count'] > 0) { ?>
                         <table width="100%">
                             <tr>
                                 <th><?php echo lang('File');?>:</th>
@@ -8,7 +13,7 @@
                                 <th><?php echo lang('Description');?>:</th>
                             </tr>
 
-                            <?php foreach ($project['files']['files'] as $key => $files) {
+                            <?php foreach ($project['files']['files']['other_files'] as $key => $files) {
                                 $filedate = new DateTime($files['dateofuploading']); ?>
                                 <tr class="frontfiles_tr">
                                     <td>
