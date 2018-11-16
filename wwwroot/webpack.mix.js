@@ -13,6 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('build/_js/_custom/script.js', 'js/')
    .sass('css/sass/style.scss', 'css/')
+   // .setResourceRoot('./')
    .options({
       processCssUrls: false,
       postCss: [
@@ -20,17 +21,17 @@ mix.js('build/_js/_custom/script.js', 'js/')
             // root: '/Users/mpavey/code/gvip/httpdocs/wwwroot/'
             // from: 'css/style.css'
           }),
-          require('postcss-sprites')({
-          	// spritePath: '../images/',
-          	filterBy: function(image) {
-    					// Only include map icons in the sprite
-              if (image.url.indexOf('map/') === -1) {
-    						return Promise.reject(new Error('Not a map icon.'));
-    					}
+        //   require('postcss-sprites')({
+        //   	spritePath: 'images/',
+        //   	filterBy: function(image) {
+    				// 	// Only include map icons in the sprite
+        //       if (image.url.indexOf('map/') === -1) {
+    				// 		return Promise.reject(new Error('Not a map icon.'));
+    				// 	}
 
-    					return Promise.resolve();
-    				}
-          })
+    				// 	return Promise.resolve();
+    				// }
+        //   })
       ]
    });
 
