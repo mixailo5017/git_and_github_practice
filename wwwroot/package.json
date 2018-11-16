@@ -59,6 +59,7 @@
     "jshint-stylish": "^2.2.1",
     "laravel-mix": "^2.1.14",
     "name-all-modules-plugin": "^1.0.1",
+    "postcss-import": "^12.0.1",
     "postcss-sprites": "^4.2.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",

@@ -14,18 +14,24 @@ let mix = require('laravel-mix');
 mix.js('build/_js/_custom/script.js', 'js/')
    .sass('css/sass/style.scss', 'css/')
    .options({
-        postCss: [
-            require('postcss-sprites')({
-            	spritePath: '../images/',
-            	groupBy: function(image) {
-					if (image.url.indexOf('map') === -1) {
-						return Promise.reject(new Error('Not a map icon.'));
-					}
+      processCssUrls: false,
+      postCss: [
+          require('postcss-import')({
+            // root: '/Users/mpavey/code/gvip/httpdocs/wwwroot/'
+            // from: 'css/style.css'
+          }),
+          require('postcss-sprites')({
+          	// spritePath: '../images/',
+          	filterBy: function(image) {
+    					// Only include map icons in the sprite
+              if (image.url.indexOf('map/') === -1) {
+    						return Promise.reject(new Error('Not a map icon.'));
+    					}
 
-					return Promise.resolve('map');
-				}
-            })
-        ]
+    					return Promise.resolve();
+    				}
+          })
+      ]
    });
 
 // Full API
