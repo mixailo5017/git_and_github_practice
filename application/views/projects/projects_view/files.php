@@ -1,9 +1,11 @@
                 <h2><?php echo lang('Files')        ?></h2>
                 <div id="tabs-6" class="col2_tab">
                     <?php if ($project['files']['image_files_count'] > 0) { ?>
-                        <div class="image-file-list">
+                        <div class="image-file-list popup-gallery">
                         <?php foreach ($project['files']['files']['image_files'] as $image_file) { ?>
-                            <img src="<?php echo project_image($image_file['file'], 300) ?>">
+                            <a href="<?= project_image($image_file['file'], 1200) ?>" title="<?= $image_file['description'] ?>">
+                                <img src="<?php echo project_image($image_file['file'], 300) ?>">
+                            </a>
                         <?php } ?>
                         </div>
                     <?php } ?>
