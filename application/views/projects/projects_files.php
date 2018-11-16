@@ -13,7 +13,7 @@
 		<ul id="load_files_form">
 				<?php
 				
-				foreach($project["files"] as $key=>$val)
+				foreach(array_merge($project["files"]["image_files"], $project["files"]["other_files"]) as $key=>$val)
 				{
 				?>
 				<li class="" id="row_id_<?php echo $val["id"]; ?>">
