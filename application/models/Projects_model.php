@@ -4056,8 +4056,7 @@ class Projects_model extends CI_Model {
 			'pid'	=> $this->check_user_project($slug,$uid),
 			'slug'	=> $slug,
 			'uid'	=> $uid,
-			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("project_files_permission")
+			'description'	=> $this->input->post("project_files_desc")
 		);
 
 		if($upload['error']=='')

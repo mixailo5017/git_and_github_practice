@@ -71,9 +71,6 @@
 										'name' 		=> 'project_files_desc',
 										'id' 		=> 'project_files_desc',
 										'value'		=> $val["description"]
-										),
-								'lbl_permission' => array(
-										'class' => 'left_label'
 										)
 								);
 	
@@ -94,21 +91,6 @@
 							<div class="fld" style="width:500px;">
 	
 								<?php echo form_input($opt['update_project_files_form']['project_files_desc']);?>
-								<div class="errormsg"></div>
-							</div>
-							
-							<?php echo form_label(lang('Permission').':', 'project_files_permission', $opt['update_project_files_form']['lbl_permission']);?>
-							<div class="fld" style="width:500px;">
-	
-								<?php
-									$permissions_attr = 'id="project_files_permission"';
-									$permissions_options = array(
-										'All'		=> 'All',
-										'Some' 		=> 'Some',
-										'Other' 	=> 'Other'
-									);
-									echo form_dropdown('project_files_permissions', $permissions_options,$val['permission'],$permissions_attr);
-								?>
 								<div class="errormsg"></div>
 							</div>
 																
@@ -148,9 +130,6 @@
 									'project_files_desc'	=> array(
 											'name' 		=> 'project_files_desc',
 											'id' 		=> 'project_files_desc'
-											),
-									'lbl_permissions' => array(
-											'class' => 'left_label'
 											)
 								);
 
@@ -168,18 +147,6 @@
 							<?php echo form_input($opt['files_form']['project_files_desc']);?>
 							<div id="err_project_files_desc" class="errormsg"></div>
 						</div>
-						<br>
-
-						<?php echo form_label(lang('Permissions').':', '', $opt['files_form']['lbl_permissions']);?>
-						<?php
-							$files_permission_attr = "id='files_permission'";
-							$files_permission_options = array(
-								"All"	=> lang("All"),
-								"Some"	=> lang("Some"),
-								"Other"	=> lang("Other")
-							);
-							echo form_dropdown("files_permission",$files_permission_options,'',$files_permission_attr);
-						?>
 						<br>
 
 						<?php echo form_submit('files_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
