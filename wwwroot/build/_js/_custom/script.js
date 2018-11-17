@@ -7,6 +7,7 @@ GVIP.App.Analytics.context = GVIP.App.Analytics.context || {};
 require('./_nav_mobile.js')();
 require('./_searchbox.js')();
 require('./_alert.js');
+require('./_popup-gallery.js');
 
 $(window).load(function() {
     var $meter = $('#meter'),

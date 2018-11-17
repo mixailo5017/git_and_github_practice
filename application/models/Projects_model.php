@@ -4009,7 +4009,6 @@ class Projects_model extends CI_Model {
 			'slug'	=> $slug,
 			'uid'	=> $uid,
 			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("files_permission"),
 			'dateofuploading' => date('Y-m-d')
 		);
 		if($upload['error']=='')
@@ -4056,8 +4055,7 @@ class Projects_model extends CI_Model {
 			'pid'	=> $this->check_user_project($slug,$uid),
 			'slug'	=> $slug,
 			'uid'	=> $uid,
-			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("project_files_permission")
+			'description'	=> $this->input->post("project_files_desc")
 		);
 
 		if($upload['error']=='')
@@ -4430,12 +4428,37 @@ class Projects_model extends CI_Model {
 		$qryproj = $this->db->get_where("exp_projects",array("slug"=>$slug,"uid"=>$uid));
 		$files_data = $qryproj->row_array();
 		$qryproj->free_result();
-		$files_data['files'] = $this->get_project_files($slug,$uid);
-		$files_data['totalfiles'] = count($files_data['files']);
-
-
+		$files_data['files'] = $this->separate_images_and_nonimages($this->get_project_files($slug,$uid));
+        
+        $files_data['image_files_count'] = count($files_data['files']['image_files']);
+		$files_data['other_files_count'] = count($files_data['files']['other_files']);
+        $files_data['totalfiles'] = $files_data['image_files_count'] + $files_data['other_files_count'];
+        
 		return $files_data;
 	}
+
+    /**
+     * Takes a list of file names (with extensions)
+     * and splits them into two arrays: image_files and other_files
+     * @param  array  $files Each item is a string representing a file name
+     * @return array        An associative array with two keys: image_files and other_files
+     */
+    private function separate_images_and_nonimages(array $files)
+    {
+        $image_files = $other_files = [];
+        foreach ($files as $file) {
+            $extension = pathinfo($file['file'], PATHINFO_EXTENSION);
+            $has_image_extension = preg_match('/(jpe?g|png|gif)/', $extension) === 1;
+
+            if ($has_image_extension) {
+                $image_files[] = $file;
+            } else {
+                $other_files[] = $file;
+            }
+        }
+
+        return compact('image_files', 'other_files');
+    }
 
 
 	/**

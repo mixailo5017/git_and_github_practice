@@ -1,8 +1,4 @@
-// Boom sprites, what NOW!@?
-// To use these just apply map-{iconname} to the element and set it's height/width
-// You can also use an @include statement. Look up the docs.
-@import "map/*.png";
-@include all-map-sprites;
+@import "map-sprites";
 
 /* New Maps */
 
