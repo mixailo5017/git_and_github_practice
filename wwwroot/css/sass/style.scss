@@ -1603,6 +1603,10 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "jquery_ui.scss";
 @import "chosen.scss";
 
+// For Magnific Popup galleries, to handle small images
+.mfp-content {
+	min-width: 300px;
+}
 
 /* nav override */
 .m-nav li span {

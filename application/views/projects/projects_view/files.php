@@ -4,8 +4,8 @@
                         <div class="image-file-list popup-gallery">
                         <?php foreach ($project['files']['files']['image_files'] as $image_file) { ?>
                             <div class="image-file-list__image">
-                                <a href="<?= project_image($image_file['file'], 1200) ?>" title="<?= $image_file['description'] ?>">
-                                    <img src="<?php echo project_image($image_file['file'], 300) ?>">
+                                <a href="<?= project_image($image_file['file'], 1200, ['fit' => 'max']) ?>" title="<?= $image_file['description'] ?>">
+                                    <img src="<?php echo project_image($image_file['file'], 300, ['fit' => 'crop']) ?>">
                                 </a>
                                 <div class="image-file-list__image-description"><?= $image_file['description'] ?></div>
                             </div>
