@@ -4009,7 +4009,6 @@ class Projects_model extends CI_Model {
 			'slug'	=> $slug,
 			'uid'	=> $uid,
 			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("files_permission"),
 			'dateofuploading' => date('Y-m-d')
 		);
 		if($upload['error']=='')
