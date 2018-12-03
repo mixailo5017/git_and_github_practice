@@ -66,7 +66,9 @@ class Profile extends CI_Controller
 
     private function validate_reset_password()
     {
-        $this->form_validation->set_rules('current_password', 'Current Password', 'required|min_length[6]|max_length[16]|valid_password');
+        $this->form_validation->set_rules('current_password', 'Current Password', 'required|valid_password',
+            ['valid_password' => 'Please ensure you enter the correct current password.']
+        );
         $this->form_validation->set_rules('password', 'New Password', 'min_length[6]|max_length[16]|matches[password_confirmation]');
         $this->form_validation->set_rules('password_confirmation', 'Verify Password', 'min_length[6]|max_length[16]|matches[password]');
         $this->form_validation->set_rules('email', 'Email', 'trim|strtolower|valid_email|is_unique[exp_members.email]');
