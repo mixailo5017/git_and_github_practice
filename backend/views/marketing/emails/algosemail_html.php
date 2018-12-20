@@ -47,12 +47,10 @@
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
                                     <td>
                                         <p>Dear {{ firstname }},</p>
-                                        <p>Our new personalization tool will help you expand your network and increase the relevancy of your searches and experience on GViP.</p>
                                         <p>Based on your <a href="https://www.gvip.io/profile/account_settings">profile preferences</a> we've identified three infrastructure experts that can help you meet your objectives. Click on the profiles below to explore — then make an introduction!</p>
                                         <p>Best,</p>
                                         <p>Michael<br>
-                                        Managing Director, GViP | <a href="mailto:michael@gvip.io">michael@gvip.io</a></p>
-                                        <p>PS Are these recommendations helpful? At GViP, we are constantly working to improve the level of customization and functionality on the platform, and your feedback is invaluable. Feel free to let us know your thoughts by replying to me directly or by clicking the thumbs up or down buttons below.</p>
+                                        Managing Director, GViP | <a href="mailto:michael@cg-la.com">michael@cg-la.com</a></p>
                                     </td>
                                     <td>
                                         <img alt="" src="https://www.gvip.io/images/email/spacer.gif" style="display:block" width="17" /></td>
