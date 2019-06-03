@@ -91,32 +91,6 @@ header {
 	}
 }
 
-.m-tutorial {
-	@include clearfix;
-	.image {
-		@include span(2 no-gutters);
-
-		@include mq($max,$palm) {
-			@include span(12 no-gutters);
-		}
-	}
-
-	.content {
-		@include span(10 no-gutters);
-		@include mq($max,$desktop) {
-			@include span(9.5 no-gutters);
-		}
-
-		@include mq($max,$tablet) {
-			@include span(9 no-gutters);
-		}
-
-		@include mq($max,$palm) {
-			@include span(12 no-gutters);
-		}
-	}
-}
-
 /* Everything below this line is stock and subject to change */
 
 .m-related-item {

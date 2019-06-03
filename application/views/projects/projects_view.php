@@ -9,6 +9,7 @@
 
                 <h1><?php echo $project['projectdata']['projectname'] ?></h1>
 
+                <p><em><?php echo lang('LastUpdated') ?>: <?php echo $project['projectdata']['last_updated']->diffForHumans() ?></em></p>
                 <p class="project-description">
                     <?php
 					$this->load->helper('text');
@@ -37,9 +38,20 @@
 					}
 				?>
 
-
 			</div><!-- end #tabs -->
 
+            <?php if (isset($featuredForum)): ?>
+                <div class="banner_image">
+                    <a id="forum-banner" href="/forums/<?= $featuredForum['id'] ?>" data-name="<?= $featuredForum['title'] ?>" data-id="<?= $featuredForum['id'] ?>">
+                        <img src="<?= forum_image($featuredForum['banner'], 600, ['fit' => 'contain']) ?>" class="uploaded_img" alt="<?= $featuredForum['title'] ?>" title="Click to learn more about this upcoming event, where you can meet project executives and infrastructure decision-makers.">
+                    </a>
+                </div>
+            <?php endif; ?>
+
+			<?php 
+			// Don't show Project Feed on official Brazilian projects
+			if ($userdata['uid'] != BRAZIL_USER_ID) {
+			?>
 			<div class="comments white_box pull_up_white">
 				<h2><?php echo lang('ProjectUpdatesTitle') ?></h2>
                 <?php
@@ -75,12 +87,13 @@
 				<ul class="feed updates">
                     <!-- Populated in JS -->
 				</ul>
-        <div class="center">
-          <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
-            <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
-            <?php echo form_close() ?>
-        </div>
+		        <div class="center">
+		          <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
+		            <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
+		            <?php echo form_close() ?>
+		        </div>
 			</div>
+			<?php } ?>
 		</div><!-- end #col2 -->
 
 		<div id="col3" class="projects">
@@ -113,32 +126,34 @@
 
 			<?php if (!in_array($userdata['uid'], INTERNAL_USERS)) { ?>
 			<section class="executive white_box" id="project_executive">
-                <h2><?php echo (($userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : lang('ProjectExecutive')) ?></h2>
+                <h2><?php echo (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : lang('ProjectExecutive')) ?></h2>
 
 				<div class="image">
                 <?php
-                $src = expert_image($userdata['userphoto'], 138, array(
+                $src = expert_image($contactperson['userphoto'], 138, array(
                     'width' => 138,
                     'rounded_corners' => array( 'all','2' ),
-                    'crop' => TRUE
+                    'crop' => TRUE,
+                    'fit'  => ($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? 'contain' : null
                 ));
-                $fullname = (($userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $userdata['organization'] : $userdata['firstname'] . ' ' . $userdata['lastname']);
+                $fullname = (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname']);
                 ?>
-                <a href="/expertise/<?php $userdata["uid"] ?>"></a>
+                <a href="/expertise/<?php echo $contactperson["uid"] ?>">
                     <img src="<?php echo $src ?>" alt="<?php echo $fullname ?>'s photo" style="margin:0px;">
+                </a>
 				</div>
 
 				<div class="executive-details">
-					<h2 class="name"><a href="/expertise/<?php echo $userdata["uid"]; ?>"><?php echo $fullname; ?></a></h2>
-					<?php $orgmemberid =  is_organization_member($userdata['uid']);
-					if ($userdata["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
-						<p><strong><?php echo $userdata['title'];?></strong></p>
-						<p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $userdata['organization'];?></a></p>
-					<?php } else if ($userdata["membertype"] != MEMBER_TYPE_EXPERT_ADVERT) {?>
-						<p><strong><?php echo $userdata['title'] ?></strong></p>
-						<p><?php echo $userdata['organization'] ?></p>
+					<h2 class="name"><a href="/expertise/<?php echo $contactperson["uid"]; ?>"><?php echo $fullname; ?></a></h2>
+					<?php 
+					if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
+						<p><strong><?php echo $contactperson['title'];?></strong></p>
+						<p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $contactperson['organization'];?></a></p>
+					<?php } else if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT) {?>
+						<p><strong><?php echo $contactperson['title'] ?></strong></p>
+						<p><?php echo $contactperson['organization'] ?></p>
 					<?php } else { ?>
-						<p><?php echo $userdata['discipline'] ?></p>
+						<p><?php echo $contactperson['discipline'] ?></p>
 					<?php } ?>
 				</div>
 			</section>
@@ -263,7 +278,7 @@
 							?>
 						 
 							<a href="/expertise/<?php echo $orgexp['uid'];?>">
-                                <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('crop'=>false));?>" >
+                                <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
 							</a>
 							
 					<?php }
@@ -278,8 +293,8 @@
 	<div id="dialog-message"></div>
 
     <?php $this->load->view('templates/_send_email', array(
-        'to' => $userdata['uid'],
-        'to_name' => $userdata['membertype'] == MEMBER_TYPE_EXPERT_ADVERT ? $userdata['organization'] : $userdata['firstname'] . ' ' . $userdata['lastname'],
+        'to' => $contactperson['uid'],
+        'to_name' => $contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname'],
         'from' => sess_var('uid')
     )) ?>
 
@@ -289,5 +304,6 @@
 	var isAdmin = <?php echo $isAdminorOwner ? 'true' : 'false'; ?>;
 	var slug = '<?php echo $slug; ?>';
 	var map_geom = <?php echo json_encode($map_geom); ?>;
+    var projectCountry = '<?php echo $project['projectdata']['country'] ?>';
 </script>
 <?php } ?>

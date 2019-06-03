@@ -6,7 +6,7 @@
         <div class="head-cta">
             <div>
                 <a class="btn std lt-blue" href="/signup">Join for Free</a>
-                <a class="btn std clear play" href="/howto"><span>Watch It in Action</span></a>
+                <a class="btn std clear play" href="https://youtube.com/watch?v=U_xIrk7P_KY"><span>Watch It in Action</span></a>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
 ?>
 <section class="testimonials">
     <div class="container">
-        <h2 class="h2-std" id="testimonials-statistics" data-socialimpact="To date, GViP has connected <?php echo $counters['experts'] ?> experts with <?php echo $counters['projects'] ?> projects across <?php echo $counters['countries'] ?> countries! That's a total project value of $<?php echo $counters['totalvalue'] ?> trillion, creating an estimated <?php echo $counters['jobs'] ?> million jobs.">To date we've connected <?php echo $counters['experts'] ?> experts with <?php echo $counters['projects'] ?> projects across <?php echo $counters['countries'] ?> countries!</h2>
+        <h2 class="h2-std" id="testimonials-statistics">To date, GViP has connected <?php echo $counters['experts'] ?> experts with <?php echo $counters['projects'] ?> projects across <?php echo $counters['countries'] ?> countries! That's a total project value of $<?php echo $counters['totalvalue'] ?> trillion, creating an estimated <?php echo $counters['jobs'] ?> million jobs.</h2>
         <ul>
             <li class="photo">
                 <img src="/images/new/testimonial3.png" width="100" height="100" />
@@ -40,7 +40,7 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
             </li>
             <li class="quote">
                 <p>&ldquo;GViP is becoming the LinkedIn of the infrastructure world.  It's a community where we all trust each other and are looking for ways to improve our projects and business relationships.  There is no other place on the web where this quality and quantity of decision makers for the major infrastructure projects globally are available to discuss partnering arrangements.&rdquo;</p>
-                <p class="author"><span>Chris Hussey</span>Director, Global Lead Generation, EcoSys</p>
+                <p class="author"><span>Chris Hussey</span>Partner Executive, e-Builder</p>
             </li>
         </ul>
     </div>
@@ -158,3 +158,5 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
         <a class="btn std lt-blue" href="/signup">Join for Free</a>
     </div>
 </section>
+
+<script src="https://www.youtube.com/iframe_api" async="async"></script>

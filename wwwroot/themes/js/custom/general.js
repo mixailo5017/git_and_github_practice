@@ -378,6 +378,25 @@ jQuery(document).ready(function(){
 		}
 	}
 	
+	/* Remove placeholder text when user clicks inside an input box */
+	jQuery('input').focus(function() {
+		jQuery(this).removeAttr('placeholder');
+	});
+
+	jQuery('.copybutton').click(function() {
+		var copyFromID = jQuery(this).data('copyfrom');
+		var copyFromElement = jQuery('#' + copyFromID);
+		copyFromElement.select();
+		document.execCommand('copy');
+		return false;
+	});
+
+	jQuery('#email-all-members').click(function() {
+		if (! confirm('Are you sure you want to send recommendations emails to all GViP members?')) {
+			return false;
+		}
+		jQuery(this).prop('disabled', true).addClass('stdbtn').text('Sending email…');
+	});
 	
 
 });

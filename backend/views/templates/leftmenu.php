@@ -66,8 +66,24 @@
         <li <?php if ($fst_segment == "googleapi" ) { echo "class='current'"; } ?>><a href="#reportssub" class="addons">Reports</a>
             <span class="arrow"></span>
             <ul id="reportssub">
+                <li <?php if ($snd_segment == "projects") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/projects">Project Recency</a></li>
                 <li <?php if ($snd_segment == "reports") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/reports">Google Analytics</a></li>
                 <li <?php if ($snd_segment == "setting") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/setting">GA Account Setting</a></li>
+            </ul>
+        </li>
+        <li <?php if ($fst_segment == "algolia" ) { echo "class='current'"; } ?>><a href="#algoliasub" class="typo">Algolia</a>
+            <span class="arrow"></span>
+            <ul id="algoliasub">
+                <li <?php if ($snd_segment == "index") { echo "class='current'"; } ?>><a href="/admin.php/algolia/index">Sync Data</a></li>
+                <li <?php if ($snd_segment == "experts") { echo "class='current'"; } ?>><a href="/admin.php/algolia/experts">View Experts Data</a></li>
+                <li <?php if ($snd_segment == "projects") { echo "class='current'"; } ?>><a href="/admin.php/algolia/projects">View Projects Data</a></li>
+            </ul>
+        </li>
+        <li <?php if ($fst_segment == "marketing" ) { echo "class='current'"; } ?>><a href="#marketingsub" class="sent">Marketing</a>
+            <span class="arrow"></span>
+            <ul id="marketingsub">
+                <li <?php if ($fst_segment === "marketing" && $snd_segment == "index") { echo "class='current'"; } ?>><a href="/admin.php/marketing/index">Weekly Email</a></li>
+                <li <?php if ($fst_segment === "marketing" && $snd_segment == "algosemail") { echo "class='current'"; } ?>><a href="/admin.php/marketing/algosemail">Algorithms Email</a></li>
             </ul>
         </li>
 	</ul>

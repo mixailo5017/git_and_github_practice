@@ -1,5 +1,6 @@
 <?php  if (! defined('BASEPATH')) exit('No direct script access allowed');
 
+use League\Glide\Urls\UrlBuilderFactory;
 
 if (! function_exists('company_image'))
 {
@@ -100,65 +101,92 @@ if (! function_exists('forum_image'))
 if (! function_exists('safe_image'))
 {
     /**
-     * @param string $path
-     * @param string $image
+     * @param string $imageDirectory
+     * @param string $imageFilename
      * @param string $fallback
      * @param array $options
      * @return string
      */
-    function safe_image($path, $image = null, $fallback = null, $options = null)
+    function safe_image($imageDirectory, $imageFilename = null, $fallback = null, $mixedFormatOptions = null)
     {
-        $CI =& get_instance();
 
-        // Make sure that ce_image is loaded
-        if (! isset($CI->ce_image)) {
-            $CI->load->library('ce_image');
-            $CI->ce_image->set_default_settings(array(
-                'cache_dir'	 => '/cache/made/',
-                'remote_dir' => '/cache/remote/',
-            ));
-        }
+        $glideOptions = [];
 
-        $defaults = array(
-            'max' => 50,
-            'rounded_corners' => array( 'all','3' ),
-            'bg_color' => '#ffffff',
-            'crop' => TRUE,
-            'allow_scale_larger' => TRUE,
-        );
+        $permissibleGlideOptions  = array_flip([
+            'or',
+            'crop',
+            'w',
+            'h',
+            'fit',
+            'dpr',
+            'bri',
+            'con',
+            'gam',
+            'sharp',
+            'blur',
+            'pixel',
+            'filt',
+            'mark',
+            'markw',
+            'markh',
+            'markx',
+            'marky',
+            'markpad',
+            'markpos',
+            'markalpha',
+            'bg',
+            'border',
+            'q',
+            'fm'
+        ]);
 
-        //Merge provided and default options
-        if (! is_null($options) && is_array($options)) {
-            $options = array_merge($defaults, $options);
-        }
-
-        // Set default return value to an empty string
-        $src = '';
-        // Let's default to a fallback image first
-        $full_path = $fallback;
-
-        // If image is set check its dimensions first
-        if (! is_null($image) && $image != '') {
-            if ($CI->ce_image->open($path . $image, $options)) {
-                // get width and height of the image in pixels
-                $width  = $CI->ce_image->get_original_width();
-                $height = $CI->ce_image->get_original_height();
-
-                // If dimensions are less than max allowed then use that image
-                if ($width && $height && $width * $height < MAX_IMAGE_DIMENSIONS) {
-                    $full_path = $path . $image;
-                }
+        // Convert options in CE Image format into Glide format, 
+        // then merge in any remaining options that are in the Glide format already
+        if (! is_null($mixedFormatOptions) && is_array($mixedFormatOptions)) {
+            // Convert 'max' to 'w' and 'h'
+            if (isset($mixedFormatOptions['max'])) {
+                $glideOptions['w'] = $mixedFormatOptions['max'];
+                $glideOptions['h'] = $mixedFormatOptions['max'];
+                unset($mixedFormatOptions['max']);
             }
-        }
-        // Fallback image can be null so we check again
-        if (! is_null($full_path) && $full_path != '') {
-            if ($CI->ce_image->make($full_path, $options)) {
-                $src = $CI->ce_image->get_relative_path();
+
+            // To convert bg_color, remove the leading # and convert to upper case
+            if (isset($mixedFormatOptions['bg_color'])) {
+                $glideOptions['bg'] = strtoupper(ltrim($mixedFormatOptions['bg_color'], '#'));
+                unset($mixedFormatOptions['bg_color']);
             }
+
+            if (isset($mixedFormatOptions['width'])) {
+                $glideOptions['w'] = $mixedFormatOptions['width'];
+                unset($mixedFormatOptions['width']);
+            }
+
+            // If there are other options provided, check they are a valid Glide option
+            $glideFormatOptions = array_intersect_key($mixedFormatOptions, $permissibleGlideOptions);
+            // Then merge them in
+            $glideOptions = array_merge($glideFormatOptions, $glideOptions);
         }
 
-        $CI->ce_image->close();
+        // Check image is set and file exists 
+        if (! is_null($imageFilename) && $imageFilename != '' && is_file(ltrim($imageDirectory, '/') . $imageFilename)) {
+            $retrievalDirectoryPath = str_replace(IMAGE_PATH, IMAGE_RETRIEVAL_PATH, $imageDirectory);
+            $urlBuilder = UrlBuilderFactory::create($retrievalDirectoryPath, config_item('glide_image_signature'));
+            $url = $urlBuilder->getUrl($imageFilename, $glideOptions);
+            return $url;
+        }
 
-        return $src;
+        // Main image doesn't exist, so let's use the fallback, if provided
+        if (! is_null($fallback) && $fallback != '') {
+            $finalSlash = strrpos($fallback, '/');
+            $fallbackFilename = substr($fallback, $finalSlash + 1);
+            $fallbackDirectory = substr($fallback, 0, $finalSlash + 1);
+            $retrievalDirectoryPath = str_replace(IMAGE_PATH, IMAGE_RETRIEVAL_PATH, $fallbackDirectory);
+            $urlBuilder = UrlBuilderFactory::create($retrievalDirectoryPath, config_item('glide_image_signature'));
+            $url = $urlBuilder->getUrl($fallbackFilename, $glideOptions);
+            return $url;   
+        }
+
+        // If there's no valid image provided nor a fallback, return empty string
+        return '';
     }
 }

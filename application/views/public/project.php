@@ -14,7 +14,7 @@
 
             </div>
         </div>
-        <p><?php echo $project['description'] ?></p>
+        <p><?php echo nl2br($project['description']) ?></p>
     </section>
     <section class="m-project-lead bordered">
         <h2>Project Executive</h2>
@@ -40,7 +40,7 @@
 
     <section class="m-join-cta">
         <h2><a name="join"></a>Join GViP and View the Full Project Profile for <br><?php echo $project['projectname'] ?>.</h2>
-        <p>As a GViP member, you'll gain access to over 1500 project profiles worldwide, and become part of a worldwide community of project developers and infrastructure professionals focused on delivering projects.</p>
+        <p>As a GViP member, you'll gain access to over 2000 project profiles worldwide, and become part of a worldwide community of project developers and infrastructure professionals focused on delivering projects.</p>
         <div class="btn-container">
             <a href="/login" class="bttn btn-outlined">Sign In</a>
             <a href="/signup" class="bttn btn-filled">Create Account</a>

@@ -49,8 +49,7 @@
 <div class="bodywrapper">
     <div class="topheader">
         <div class="left">
-        	<h1 class="logo">VIP</h1>
-            <span class="slogan">My VIP Workplace Admin</span>
+        	<h1 class="logo">GVIP Admin Interface</h1>
             <br clear="all" />
         </div><!--left-->
         

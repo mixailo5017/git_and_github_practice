@@ -44,3 +44,6 @@ $route['404_override'] = '';
 $route['myaccount/(:num)']	= "myaccount/view/$1";
 
 $route['updates/(:num)'] = "updates/show/$1";
+
+$route['marketing/algosemail/forums/(:num)'] = "marketing/show_forum_recommendations/$1";
+$route['marketing/algosemail/email_all_members'] = "marketing/email_all_members";

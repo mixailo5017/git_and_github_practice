@@ -20,7 +20,6 @@ $lang['AddMachinery'] = 'Agregar Maquinaria';
 $lang['AddMoreEducation'] = 'Agregar Educación';
 $lang['AddNew'] = 'Agregar Nuevo';
 $lang['AddNewFile'] = 'Agregar Archivo';
-$lang['AddNewProject'] = 'Agregar Nuevo Proyecto';
 $lang['AddOrganizations'] = 'Agregar Organizaciones';
 $lang['AddOutsideProject'] = 'Agregar Proyectos Externos';
 $lang['AddOwner'] = 'Agregar Propietario';
@@ -263,7 +262,7 @@ $lang['Keywords'] = 'Palabras clave';
 $lang['LastName'] = 'Apellido';
 $lang['Lat'] = 'Latitud';
 $lang['Latitude'] = 'Latitud ';
-$lang['forums'] = 'Foros';
+$lang['forums'] = 'Comunidades';
 $lang['leadershipForum'] = 'Foro de Liderazgo';
 $lang['Learnmore'] = 'Más información';
 $lang['LeaveaCommentUpdate'] = 'Deje un Comentario / Actualización';
@@ -274,7 +273,10 @@ $lang['Lng'] = 'LNG';
 $lang['Location'] = 'Ubicación';
 $lang['Logout'] = 'Cerrar sesión';
 $lang['Longitude'] = 'Longitud';
-$lang['Machinery'] = 'Maquinaria ';
+$lang['Machinery'] = 'Maquinaria';
+$lang['Process'] = 'Process';
+$lang['AuctionDate'] = 'Fecha de subasta';
+$lang['AuctionCriteria'] = 'Critérios de subasta';
 $lang['Machineryaddedsuccessfully'] = 'Maquinaria Agregada Exitosamente';
 $lang['Machineryupdatedsuccessfully'] = 'Maquinaria Actualizado Exitosamente';
 $lang['Major'] = 'Titulo';
@@ -284,6 +286,7 @@ $lang['MapPointupdatesuccessfully'] = 'Punto en el Mapa Actualizado Exitosamente
 $lang['Maps'] = 'Mapas';
 $lang['memberphoto'] = 'Foto';
 $lang['Message'] = 'Mensaje';
+$lang['EmailBounces'] = 'Desafortunadamente, los mensajes a este usuario han sido previamente marcados como rebote. Todavía puede intentar enviar mensajes al usuario, pero es poco probable que reciba una respuesta.';
 $lang['Messages'] = 'Mensajes';
 $lang['MESSAGESENDFROM'] = '**Este mensaje fue enviado a través de GlobalViP**';
 $lang['MessageSendsuccessfully'] = 'Mensaje enviado con exitosamente';
@@ -467,8 +470,9 @@ $lang['sProjects'] = 'S de Proyectos';
 $lang['sRatings'] = 'S Ratings';
 $lang['Ratings'] = 'Valoraciones';
 $lang['Stage'] = 'Etapa';
+$lang['StageElaboration'] = 'Etapa — Más Detalles';
 $lang['State'] = 'Estado';
-$lang['store'] = 'Compras';
+$lang['store'] = 'Informes';
 $lang['Status'] = 'Estado';
 $lang['StorePurchaseHistory'] = 'Historial de compras';
 $lang['StudyFile'] = 'Documentos de Estudios';
@@ -581,7 +585,7 @@ $lang['NoForumsFound'] = 'No hay foros encontraron para mostrar.';
 $lang['ForumDate'] = 'Fechas';
 $lang['ForumVenue'] = 'Lugar';
 $lang['ForumRegion'] = 'Región';
-$lang['B_FORUMS'] = 'FOROS';
+$lang['B_FORUMS'] = 'COMUNIDADES';
 $lang['ShowAll'] = 'Mostrar Todo';
 $lang['ForumRegister'] = 'Inscríbase para participar en';
 $lang['ForumBookMeeting'] = 'Reserve una Reunión Privada';
@@ -642,7 +646,7 @@ $lang['SimilarProjects'] = 'Proyectos similares';
 
 /* New MyVip */
 $lang['MyVipMyProjects'] = 'MIS PROYECTOS';
-$lang['MyVipGvipStore'] = 'TIENDA GViP';
+$lang['MyVipGvipStore'] = 'INFORMES';
 $lang['MyVipSimilarProjects'] = 'PROYECTOS SIMILARES';
 $lang['MyVipKeyExecutives'] = 'EJECUTIVOS PRINCIPALES';
 $lang['MyVipUpdatesTitle'] = 'PROYECTO FEED';
@@ -654,6 +658,7 @@ $lang['MyVipMyExperts'] = 'MIS EXPERTOS';
 $lang['MyVipMyExpertsNotFound'] = 'Seguir un experto';
 $lang['MyVipMyFollowers'] = 'Mis seguidores';
 $lang['ViewMyFollowers'] = 'Ver mis seguidores';
+$lang['MyVipMyDiscussions'] = 'Mis Discussiones';
 
 /* MyVip My Projects */
 $lang['MyProjectsAll'] = 'Todos';
@@ -676,6 +681,7 @@ $lang['SortMostRelevant'] = 'Los más relevantes';
 $lang['SortAlphabetically'] = 'Alfabéticamente';
 $lang['SortRecentlyJoinedFirst'] = 'Recientemente se unió primero';
 $lang['HighestRatedFirst'] = 'Ordenar por valoración';
+$lang['SortRecentlyUpdatedFirst'] = 'Actualizado recientemente';
 
 /* Map content type dropdown */
 $lang['MapContentMyProjects'] = 'Mis Proyectos';
@@ -725,7 +731,8 @@ $lang['EmailNotUnique'] = 'Ya existe una cuenta con este email.';
 $lang['RegistrationEmailNotUnique'] = 'Ya existe una cuenta con este correo. Inicie su sesión en cima o clique en Olvidó su Contraseña.';
 $lang['Website'] = 'Sitio web';
 
-$lang['WEBScore'] = 'Puntuación Beneficios Económicos Más Amplios';
+$lang['EstJobsCreated'] = 'Estimados Empleos Creados';
+$lang['JobsCreatedExplanation'] = 'Una estimación del total de trabajos (directos e indirectos) que creará este proyecto. Haga click para aprender mas.';
 
 $lang['ProjectTextSearchTip'] = 'Utilice comillas (&quot;Bhopal Metro&quot;) para concretar su búsqueda';
 $lang['ExpertTextSearchTip'] = 'Utilice comillas (&quot;Jason Jones&quot;) para concretar su búsqueda';
@@ -747,3 +754,12 @@ $lang['HowKnowledgeable'] = '¿Es bien <strong>informada</strong> esta persona?'
 $lang['AddRating'] = 'Añadir votación';
 $lang['ThankYouHeader'] = '¡Gracias!';
 $lang['ThankYouBody'] = '¡Sus calificaciones son críticas para fomentar confianza en el mercado!';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';
+
+/* Project profile view */
+$lang['LastUpdated'] = 'Última actualización';
+
+/* Search autcomplete in header */
+$lang['SearchAutocompletePlaceholder'] = "Búsqueda de proyectos o expertos";

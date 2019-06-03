@@ -1,7 +1,9 @@
                 <div id="tabs-1" class="col2_tab">
                     <?php if (($project['projectdata']['lat'] && $project['projectdata']['lng']) || $isAdminorOwner ) { ?>
                         <div class="map_box clearfix">
-                            <div id="project-map"></div>
+                            <div id="project-map">
+                                <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
+                            </div>
 
                             <div class="clearfix">
                                 <p class="left coord"><span class="geo"></span> <span class="address"><?php if ($project['projectdata']['location']!= '') { echo $project['projectdata']['location'];} else { echo "N/A";} ?></span> <?php if ($isAdminorOwner) { ?> <a class="save_location" style="display: none;">Save</a> <?php } ?></p>
@@ -13,10 +15,20 @@
                     <table class="overview_table">
                         <tr>
                             <th><?php echo lang('Stage');?>:</th>
-                            <td><?php if ($project['projectdata']['stage'] != '' ){if($project['projectdata']['stage'] == "om") {echo "Operation &amp; Maintenance"; } else {echo ucfirst($project['projectdata']['stage']);}} else { echo "N/A";} ?></td>
+                            <td>
+                                <?php if ($project['projectdata']['stage'] != '' ){if($project['projectdata']['stage'] == "om") {echo "Operation &amp; Maintenance"; } else {echo ucfirst($project['projectdata']['stage']);}} else { echo "N/A";} ?>
+                            </td>
                             <th><?php echo lang('Location');?>:</th>
                             <td class="city_state"><?php echo $project['prettylocation']; ?></td>
                         </tr>
+                        <?php if ($project['projectdata']['stage_elaboration'] != '') { ?>
+                        <tr>
+                            <th><?php echo lang('StageElaboration');?>:</th>
+                            <td><?php echo $project['projectdata']['stage_elaboration']; ?></td>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                        <?php } ?>
                         <tr>
                             <th><?php echo lang('Sector');?>:</th>
                             <td><?php if ($project['projectdata']['sector']!= '') { echo $project['projectdata']['sector'];} else { echo "N/A";} ?></td>
@@ -57,8 +69,11 @@
                                     N/A
                                 <?php } ?>
                             </td>
-                            <th><?php echo lang('WEBScore') ?>:</th>
-                            <td><?php echo isset($project['webscore']) ? $project['webscore'] : 'N/A' ?></td>
+                            <th><?php echo lang('EstJobsCreated') ?>:</th>
+                            <td class="tooltip-container">
+                                <div><?php echo ($project['projectdata']['jobs_created'] !== null) ? number_format($project['projectdata']['jobs_created']) : 'N/A' ?></div>
+                                <a class="tooltip" title="<?php echo lang('JobsCreatedExplanation') ?>" target="_blank" href="https://gvip.zendesk.com/hc/en-us/articles/360003440613"></a>
+                            </td>
                         </tr>
                     </table>
                 </div>

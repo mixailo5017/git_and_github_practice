@@ -2,14 +2,63 @@
 <div id="profile_tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all project_form" style="display: block;">
 
 				<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
-					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1"><?php echo lang('Machinery');?></a></li>
-					<li class="ui-state-default ui-corner-top"><a href="#tabs-2"><?php echo lang('KeyTechnology');?></a></li>
-					<li class="ui-state-default ui-corner-top"><a href="#tabs-3"><?php echo lang('KeyServices');?></a></li>
+					<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#tabs-1"><?php echo lang('Process');?></a></li>
+					<li class="ui-state-default ui-corner-top"><a href="#tabs-2"><?php echo lang('Machinery');?></a></li>
+					<li class="ui-state-default ui-corner-top"><a href="#tabs-3"><?php echo lang('KeyTechnology');?></a></li>
+					<li class="ui-state-default ui-corner-top"><a href="#tabs-4"><?php echo lang('KeyServices');?></a></li>
 					
 				</ul>
 
 		
 				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-1">
+
+					<div class="clearfix">
+						<?php echo form_open('projects/add_procurement_process/' . $slug, array(
+			                'id' => 'project_procurement_process_form',
+			                'name' => 'project_procurement_process_form',
+			                'method' => 'post',
+			                'class' => 'ajax_form topupdate')) ?>
+
+
+			            <?php
+
+			            $opt['project_procurement_process_form'] = array(
+												'lbl_project_auction_criteria' => array(
+													'class' => 'left_label'
+												),
+												'project_auction_criteria'	=> array(
+													'name' 		=> 'project_auction_criteria',
+													'id' 		=> 'project_auction_criteria',
+													'value'		=> set_value('project_auction_criteria', $project['procurement_criteria'])
+												)
+											);
+						?>
+
+						<?php echo form_label(lang('AuctionDate') . ':', 'project_auction_date', array('class' => 'left_label')) ?>
+						<div class="fld">
+							<?php echo form_input('project_auction_date', set_value('project_auction_date', $project['procurement_date']), 'placeholder="' . lang('mdY') . '" id="project_auction_date_picker" class="sm_left datepicker_month_year" style="width:120px"') ?>
+							<div class="errormsg" id="err_project_auction_date"><?php echo form_error('project_auction_date') ?></div>
+						</div>
+						<br>
+
+						<?php echo form_label(lang("AuctionCriteria").":","project_auction_criteria",$opt["project_procurement_process_form"]["lbl_project_auction_criteria"]); ?>
+						<div class="fld">
+							<?php echo form_input($opt["project_procurement_process_form"]["project_auction_criteria"]); ?>
+							<div class="errormsg" id="err_project_auction_criteria"><?php echo form_error("project_auction_criteria"); ?></div>
+						</div>
+						<br>
+
+						<?php echo form_close();?>
+
+					</div>
+
+
+					
+
+				</div>
+
+
+				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-2">
 
 					<div class="clearfix matrix_dropdown project_machinery">
 						<ul id="load_machinery_form">
@@ -74,21 +123,21 @@
 											<?php echo form_input($opt['update_machinery_form']['project_machinery_name']);?>
 											<div id="err_project_machinery_name" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 	
 										<?php echo form_label(lang('ProcurementProcess').':', '', $opt['update_machinery_form']['lbl_process']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_machinery_form']['project_machinery_process']);?>
 											<div id="err_project_machinery_process" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 										
 										<?php echo form_label(lang('FinancialInformation').':', '', $opt['update_machinery_form']['lbl_info']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_machinery_form']['project_machinery_financial_info']);?>
 											<div id="err_project_machinery_financial_info" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 										
 										<?php echo form_label(lang('Permissions').':', '', $opt['update_machinery_form']['lbl_permissions']);?>
 										<?php
@@ -100,7 +149,7 @@
 											);
 											echo form_dropdown("project_machinery_permission",$machinery_permission_options,$val["permission"],$machinery_permission_attr);
 										?>
-										<?php echo br(); ?>										
+										<br>										
 										<?php echo form_submit('umachinery_submit',lang('Update'),'class = "light_green btn_lml"');?>
 										
 										<?php echo form_close();?>
@@ -157,21 +206,21 @@
 										<?php echo form_input($opt['machinery_form']['project_machinery_name']);?>
 										<div id="err_project_machinery_name" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_label(lang('ProcurementProcess').':', '', $opt['machinery_form']['lbl_process']);?>
 									<div class="fld">
 										<?php echo form_input($opt['machinery_form']['project_machinery_process']);?>
 										<div id="err_project_machinery_process" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label(lang('FinancialInformation').':', '', $opt['machinery_form']['lbl_info']);?>
 									<div class="fld">
 										<?php echo form_input($opt['machinery_form']['project_machinery_financial_info']);?>
 										<div id="err_project_machinery_financial_info" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label(lang('Permissions').':', '', $opt['machinery_form']['lbl_permissions']);?>
 									<?php
@@ -183,7 +232,7 @@
 										);
 										echo form_dropdown("project_machinery_permission",$machinery_permission_options,'',$machinery_permission_attr);
 									?>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_submit('machinery_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
 									
@@ -198,7 +247,7 @@
 				</div>
 
 		
-				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-2">
+				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
 				
 					<div class="clearfix matrix_dropdown project_procurement_technology">
 					
@@ -264,21 +313,21 @@
 											<?php echo form_input($opt['update_procurement_technology_form']['project_procurement_technology_name']);?>
 											<div id="err_project_procurement_technology_name" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 	
 										<?php echo form_label(lang('ProcurementProcess').':', '', $opt['update_procurement_technology_form']['lbl_process']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_procurement_technology_form']['project_procurement_technology_process']);?>
 											<div id="err_project_procurement_technology_process" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 										
 										<?php echo form_label(lang('FinancialInformation').':', '', $opt['update_procurement_technology_form']['lbl_info']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_procurement_technology_form']['project_procurement_technology_financial_info']);?>
 											<div id="err_project_procurement_technology_financial_info" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 										
 										<?php echo form_label(lang('Permissions').':', '', $opt['update_procurement_technology_form']['lbl_permissions']);?>
 										<?php
@@ -290,7 +339,7 @@
 											);
 											echo form_dropdown("project_procurement_technology_permission",$technology_permission_options,$val["permission"],$technology_permission_attr);
 										?>
-										<?php echo br(); ?>										
+										<br>										
 										<?php echo form_submit('utechnology_submit', lang('Update'),'class = "light_green btn_lml"');?>
 										
 										<?php echo form_close();?>
@@ -348,21 +397,21 @@
 										<?php echo form_input($opt['procurement_technology_form']['project_procurement_technology_name']);?>
 										<div id="err_project_procurement_technology_name" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_label(lang('ProcurementProcess').':', '', $opt['procurement_technology_form']['lbl_process']);?>
 									<div class="fld">
 										<?php echo form_input($opt['procurement_technology_form']['project_procurement_technology_process']);?>
 										<div id="err_project_procurement_technology_process" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label(lang('FinancialInformation').':', '', $opt['procurement_technology_form']['lbl_info']);?>
 									<div class="fld">
 										<?php echo form_input($opt['procurement_technology_form']['project_procurement_technology_financial_info']);?>
 										<div id="err_project_procurement_technology_financial_info" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label(lang('Permissions').':', '', $opt['procurement_technology_form']['lbl_permissions']);?>
 									<?php
@@ -374,7 +423,7 @@
 										);
 										echo form_dropdown("project_procurement_technology_permission",$technology_permission_options,'',$technology_permission_attr);
 									?>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_submit('technology_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
 									
@@ -390,7 +439,7 @@
 				</div>
 
 		
-				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-3">
+				<div class="col5_tab ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tabs-4">
 				
 					<div class="clearfix matrix_dropdown project_procurement_services">
 												
@@ -463,28 +512,28 @@
 											<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_name']);?>
 											<div id="err_project_procurement_services_name" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 	
 										<?php echo form_label(lang('Name').':', '', $opt['update_procurement_services_form']['lbl_type']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_type']);?>
 											<div id="err_project_procurement_services_type" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 	
 										<?php echo form_label(lang('ProcurementProcess').':', '', $opt['update_procurement_services_form']['lbl_process']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_process']);?>
 											<div id="err_project_procurement_services_process" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 										
 										<?php echo form_label(lang('FinancialInformation').':', '', $opt['update_procurement_services_form']['lbl_info']);?>
 										<div class="fld">
 											<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_financial_info']);?>
 											<div id="err_project_procurement_services_financial_info" class="errormsg"></div>
 										</div>
-										<?php echo br(); ?>
+										<br>
 										
 										<?php echo form_label(lang('Permissions').':', '', $opt['update_procurement_services_form']['lbl_permissions']);?>
 										<?php
@@ -496,7 +545,7 @@
 											);
 											echo form_dropdown("project_procurement_services_permission",$services_permission_options,$val["permission"],$services_permission_attr);
 										?>
-										<?php echo br(); ?>										
+										<br>										
 										<?php echo form_submit('uservices_submit', lang('Update'),'class = "light_green btn_lml"');?>
 										
 										<?php echo form_close();?>
@@ -561,28 +610,28 @@
 										<?php echo form_input($opt['procurement_services_form']['project_procurement_services_name']);?>
 										<div id="err_project_procurement_services_name" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_label(lang('Type').':', '', $opt['procurement_services_form']['lbl_type']);?>
 									<div class="fld">
 										<?php echo form_input($opt['procurement_services_form']['project_procurement_services_type']);?>
 										<div id="err_project_procurement_services_type" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_label(lang('ProcurementProcess').':', '', $opt['procurement_services_form']['lbl_process']);?>
 									<div class="fld">
 										<?php echo form_input($opt['procurement_services_form']['project_procurement_services_process']);?>
 										<div id="err_project_procurement_services_process" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label(lang('FinancialInformation').':', '', $opt['procurement_services_form']['lbl_info']);?>
 									<div class="fld">
 										<?php echo form_input($opt['procurement_services_form']['project_procurement_services_financial_info']);?>
 										<div id="err_project_procurement_services_financial_info" class="errormsg"></div>
 									</div>
-									<?php echo br(); ?>
+									<br>
 									
 									<?php echo form_label(lang('Permissions').':', '', $opt['procurement_services_form']['lbl_permissions']);?>
 									<?php
@@ -594,7 +643,7 @@
 										);
 										echo form_dropdown("project_procurement_services_permission",$services_permission_options,'',$services_permission_attr);
 									?>
-									<?php echo br(); ?>
+									<br>
 
 									<?php echo form_submit('services_submit', lang('AddNew'),'class = "light_green btn_lml"');?>
 									

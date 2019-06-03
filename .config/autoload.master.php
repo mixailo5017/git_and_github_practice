@@ -56,7 +56,6 @@ $autoload['libraries'] = array(
     'session',
     'app',
     'auth',
-    'ce_image',
     'OAuth2/OAuth2'
 );
 

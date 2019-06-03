@@ -1,6 +1,6 @@
 
-  <!-- Leaflet  Sept 2013 -->
-  <?php echo link_tag('assets/map_resources/leaflet-0.7.2.css'); ?>
+  <!-- Leaflet -->
+  <?php echo link_tag('assets/map_resources/leaflet.css'); ?>
   
-  <?php echo script_tag('assets/map_resources/leaflet-0.7.2.js');?> 
-  <!-- end Sept 2013 -->
+  <?php echo script_tag('assets/map_resources/leaflet.js');?> 
+  <!-- end Leaflet -->

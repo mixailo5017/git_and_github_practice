@@ -1,7 +1,6 @@
 <div id="content" class="clearfix">
         <?php
-            if($project["eststart"] != "1111-11-11" && $project["eststart"] != "" ) { $eststart = DateFormat($project["eststart"],DATEFORMAT_MONTHONLY,FALSE); } else { $eststart = ""; } 
-            if($project["estcompletion"] != "1111-11-11" && $project["estcompletion"] != "") { $estcompletion = DateFormat($project["estcompletion"],DATEFORMAT_MONTHONLY,FALSE); } else { $estcompletion = ""; } 
+            
             $opt["project_form"] = array(
                     'title' => array(
                         'id'    => 'title_input',
@@ -114,7 +113,7 @@
                     'project_eststart' => array(
                         'id'          => 'project_eststart_picker',
                         'name'        => 'project_eststart',
-                        'value'       => set_value('project_eststart', $eststart),
+                        'value'       => set_value('project_eststart', $project["eststart"]),
                         'class'       => 'sm_left',
                         'style'       => 'width:120px',
                         'placeholder' => lang('mY'),
@@ -127,7 +126,7 @@
                     'project_estcompletion' => array(
                         'id'          => 'project_estcompletion_picker',
                         'name'        => 'project_estcompletion',
-                        'value'       => set_value('project_estcompletion', $estcompletion),
+                        'value'       => set_value('project_estcompletion', $project["estcompletion"]),
                         'class'       => 'sm_left',
                         'style'       => 'width:120px',
                         'placeholder' => lang('mY'),
@@ -248,6 +247,7 @@
                                     </div>
                             </div>
                             <?php echo form_close();?>
+
                         </div>
                         <br>
 
@@ -349,14 +349,20 @@
                                     $project_sector_sub_attr    = 'id="project_sector_sub"';
                                     $subsector_options = array();
                                     $subsector_opt = array();
-                                    foreach(subsectors() as $key=>$value)
+                                    foreach(subsectors() as $parentSectorId=>$subsectors)
                                     {
-                                        foreach($value as $key2=>$value2)
+                                        foreach($subsectors as $subsectorName)
                                         {
-                                            $subsector_options[$value2]     = $value2;
-                                            $subsector_opt[$value2]         = 'class="project_sector_sub_'.$key.'"';
+                                            $subsector_options[$subsectorName]     = $subsectorName;
+                                            $subsector_opt[$subsectorName][]       = "project_sector_sub_{$parentSectorId}";
                                         }
                                     }
+
+                                    $subsector_opt = array_map(function(Array $classnames) {
+                                        $classnamesList = implode(' ', $classnames);
+                                        return 'class="'.$classnamesList.'"';
+                                    }, $subsector_opt);
+
                                     $subsector_first            = array('class'=>'hardcode','text'=>lang('SelectASub-Sector'),'value'=>'');
                                     $subsector_last             = array('class'=>'hardcode other','value'=>'Other','text'=>'Other');
                                     echo form_custom_dropdown('project_sector_sub', $subsector_options, set_value('project_sector_sub', $project["subsector"]),$project_sector_sub_attr,$subsector_opt,$subsector_first,$subsector_last);
@@ -407,7 +413,17 @@
                             </div>
                             <br>
 
-                            <?php echo form_label(lang("TotalBudget") . ' ($MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
+                            <?php echo form_label(lang("StageElaboration").":","project_stage_elaboration",array("class"=>"left_label")); ?>
+                            <div class="fld">
+                                <?php 
+                                    $project_stage_elaboration_attr = 'id="project_stage_elaboration"';
+                                    echo form_input('project_stage_elaboration', set_value('project_stage_elaboration', $project["stage_elaboration"]), $project_stage_elaboration_attr);
+                                ?>
+                                <div class="errormsg" id="err_project_stage_elaboration"></div>
+                            </div>
+                            <br>
+
+                            <?php echo form_label(lang("TotalBudget") . ' (US$ MM)'.'*:<a title="'.lang('ProjectEditBudgetHelpMessage').'" class="tooltip"></a>',"project_budget_max",$opt["project_form"]["lbl_project_budget_max"]); ?>
                             <div class="fld">
                                 <?php echo form_input($opt["project_form"]["project_budget_max"]); ?>
                                 <div class="errormsg" id="err_project_budget_max"><?php echo form_error("project_budget_max"); ?></div>
@@ -438,61 +454,6 @@
                                 <?php echo form_input($opt["project_form"]["project_fs_other"]); ?>
                                 <div class="errormsg" id="err_project_fs_other"></div>
                             </div>
-
-
-                            <div id="stage_accordion" class="accordion" style="display:none">
-                                
-                                <?php
-                                    /*$stagearr = array(
-                                        array('name' => 'Conceptual','id' => 'conceptual'),
-                                        array('name' => 'Feasibility','id' => 'feasibility'),
-                                        array('name' => 'Planning','id' => 'planning'),
-                                        array('name' => 'Construction','id' => 'construction'), 
-                                        array('name' => 'Operation & Maintenance','id' => 'om') 
-                                    );
-                                    foreach($stagearr as $key=>$value)
-                                    {
-                                ?>
-                                <?php echo heading('<a href="#">'.$value["name"].'</a>',3); ?>
-                                <div>
-                                    
-                                    <div class="stage_status">
-                                        <?php echo form_label("Status"); ?> 
-                                        <?php
-                                            $stage_status_attr = 'class="stage_status_select" onchange="changestage(this)"';
-                                            $stage_status_options = array(
-                                                'Closed'    => 'Closed',
-                                                'Open'      => 'Open',
-                                                'Complete'  => 'Complete'
-                                            );
-                                            echo form_dropdown('ps_'.$value["id"].'_status', $stage_status_options,$project["".$value["id"]."_status"],$stage_status_attr);
-                                            
-                                        ?>
-                                    </div>
-
-                                    <?php echo form_label("Date","",$opt["project_form"]["lbl_stage_date"]); ?> 
-                                        
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_date_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_from"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT):"")); ?>  
-                                        <?php echo form_hidden_custom("ps_".$value["id"]."_date",DateFormat($project["".$value["id"]."_date_from"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date'"); ?>   
-                                    <span>to</span>
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_date2_picker","class"=>"sm_left datepicker_month_year","value"=>$project["".$value["id"]."_date_to"]!="0000-00-00 00:00:00"?DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT):"")); ?> 
-                                        <?php echo form_hidden_custom("ps_".$value["id"]."_date2",DateFormat($project["".$value["id"]."_date_to"],DATEFORMAT),FALSE,"id='ps_".$value["id"]."_date2'"); ?>   
-                                    <br>    
-
-                                    <?php echo form_label("Budget","",$opt["project_form"]["lbl_stage_budget"]); ?>
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_budget","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_from"]!="0"?$project["".$value["id"]."_budget_from"]:"","name"=>"ps_".$value["id"]."_budget")); ?><span>to</span>
-                                    <?php echo form_input(array("id"=>"ps_".$value["id"]."_budget2","class"=>"sm_left","value"=>$project["".$value["id"]."_budget_to"]!=""?$project["".$value["id"]."_budget_to"]:"","name"=>"ps_".$value["id"]."_budget2")); ?>
-                                    <br>
-
-                                    <?php echo form_label("Comments","",$opt["project_form"]["lbl_stage_comments"]); ?> 
-                                    <?php echo form_textarea(array("name"=>"ps_".$value["id"]."_comments","id"=>"ps_".$value["id"]."_comments","cols"=>"30","rows"=>"10","value"=>$project["".$value["id"]."_comments"]));?>
-
-                                </div>
-                                <?php
-                                    }*/
-                                ?>      
-                            </div>
-                        
                         </div>
                         <br>
 

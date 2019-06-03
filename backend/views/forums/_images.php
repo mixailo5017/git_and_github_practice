@@ -42,7 +42,7 @@
                 <img src="<?php echo safe_image(FORUM_IMAGE_PATH, $details['banner'], FORUM_NO_IMAGE_PATH . 'placeholder_forum_banner.png', array(
                     'max' => 600,
                     'rounded_corners' => null,
-                    'crop' => false,
+                    'fit' => 'contain',
                     'allow_scale_larger' => false)); ?>" class="uploaded_img" alt="" style="margin: 0px;">
             </div>
         </div>

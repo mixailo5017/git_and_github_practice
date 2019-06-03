@@ -7,16 +7,17 @@ $lang['Portuguese'] = 'Portuguese';
 
 $lang['Go'] = 'GO';
 $lang['Stage'] = 'Stage';
+$lang['StageElaboration'] = 'Stage — Additional Details';
 $lang['siteTitle'] = "ViP My VIP Workspace"; 
 $lang['forgotPassword'] = "Forgot your password?"; 
 $lang['myVip']	= "My GViP";
 $lang['map']	= "Map";
 $lang['projects']	= "Projects";
-$lang['forums']	= "Forums";
+$lang['forums']	= "Communities";
 $lang['leadershipForum']	= "Leadership Forum";
-$lang['expertise']	= "Expertise";
+$lang['expertise']	= "Experts";
 $lang['jobs'] = 'Jobs';
-$lang['store']  = "Store";
+$lang['store']  = "Reports";
 $lang['Messages']	= "Messages";
 $lang['Flags']	= "Flags";
 $lang['Connectiong']	= "Connecting infrastructure projects with expertise...";
@@ -95,7 +96,9 @@ $lang['Schedule'] = 'Schedule';
 $lang['NoSchedule'] = 'No Schedule';
 $lang['DesignIssues'] = 'Design Issues';
 $lang['Name'] = 'Name';
-$lang['Description'] = 'Description';
+
+
+
 $lang['Attachments'] = 'Attachments';
 $lang['NoAttachments'] = 'No Attachments';
 $lang['Environment'] = 'Environment';
@@ -115,6 +118,9 @@ $lang['Political'] = 'Political';
 $lang['Companies'] = 'Companies';
 $lang['Owners'] = 'Owners';
 $lang['Machinery'] = 'Machinery';
+$lang['Process'] = 'Process';
+$lang['AuctionDate'] = 'Auction/RFP Date';
+$lang['AuctionCriteria'] = 'Auction/RFP Criteria';
 $lang['ProcurementProcess'] = 'Procurement Process';
 $lang['FinancialInformation'] = 'Financial Information';
 $lang['KeyTechnology'] = 'Key Technology';
@@ -132,7 +138,8 @@ $lang['Organization'] = 'Organization';
 $lang['Overview'] = 'Overview';
 $lang['Map'] = 'Map';
 $lang['KeyServices']= 'Key Services';
-$lang['WEBScore'] = 'Wider Economic Benefits Score';
+$lang['EstJobsCreated'] = 'Est. Jobs Created';
+$lang['JobsCreatedExplanation'] = 'An estimate of the total jobs (direct and indirect) that will be created by this project. Click to learn more.';
 
 
 
@@ -160,6 +167,7 @@ $lang['ShowMore'] = 'Show More';
 $lang['ShowLess'] = 'Show Less';
 $lang['SendMessage'] = 'Send Message';
 $lang['Message'] = 'Message';
+$lang['EmailBounces'] = 'Unfortunately, messages to this user have previously been flagged as bouncing. You may still try messaging the user, but it is unlikely you will receive a response.';
 $lang['close'] = 'close';
 $lang['successupdated'] = 'Your profile has been successfully updated';
 $lang['Ok'] = 'Ok';
@@ -364,7 +372,10 @@ $lang['Yes'] = 'Yes';
 $lang['NO'] = 'NO';
 $lang['Close'] = 'Close';
 $lang['File'] = 'File';
-$lang['Description'] = 'Description';
+
+
+
+
 $lang['Permission'] = 'Permission';
 $lang['Update'] = 'Update';
 $lang['Name'] = 'Name';
@@ -584,6 +595,7 @@ $lang['PhotoExplanation'] = 'Upload a photo or graphic to represent your project
 //projects_files.php
 $lang['File'] = 'File';
 $lang['Type'] = 'Type';
+$lang['Description'] = 'Description';
 
 //projects_financial.php
 $lang['Private'] = 'Private';
@@ -687,7 +699,7 @@ $lang['VideoUrlupdatedsuccessfully'] = 'Video Url updated successfully';
 $lang['ErrorwhileupdatingVideoUrl'] = 'Error while updating Video Url';
 $lang['ExpertiseUpdatedsuccessfully'] = 'Expertise Updated successfully';
 $lang['ErrorwhileupdatingExpertise'] = 'Error while updating Expertise';
-$lang['ExpertisesectorAddedsuccessfully'] = 'Expert is esector Added successfully';
+$lang['ExpertisesectorAddedsuccessfully'] = 'Expertise sector added successfully';
 $lang['ErrorwhileaddingSectordetails'] = 'Error while adding Sector details';
 $lang['ExpertisesectorUpdtedsuccessfully'] = 'Expertise sector Updted successfully';
 $lang['ErrorwhileupdatingSectordetails'] = 'Error while updating Sector details';
@@ -874,7 +886,7 @@ $lang['NoForumsFound'] = 'No forums found to display.';
 $lang['ForumDate'] = 'Dates';
 $lang['ForumVenue'] = 'Venue';
 $lang['ForumRegion'] = 'Region';
-$lang['B_FORUMS'] = 'FORUMS';
+$lang['B_FORUMS'] = 'COMMUNITIES';
 $lang['ShowAll'] = 'Show All';
 $lang['ForumRegister'] = 'Register to Attend';
 $lang['ForumBookMeeting'] = 'Book a Private Meeting';
@@ -933,7 +945,7 @@ $lang['SimilarProjects'] = 'Similar Projects';
 
 /* New MyVip */
 $lang['MyVipMyProjects'] = 'MY PROJECTS';
-$lang['MyVipGvipStore'] = 'GViP STORE';
+$lang['MyVipGvipStore'] = 'REPORTS';
 $lang['MyVipSimilarProjects'] = 'SIMILAR PROJECTS';
 $lang['MyVipKeyExecutives'] = 'KEY EXECUTIVES';
 $lang['MyVipUpdatesTitle'] = 'PROJECT FEED';
@@ -968,6 +980,7 @@ $lang['SortMostRelevant'] = 'Most relevant';
 $lang['SortAlphabetically'] = 'Alphabetically';
 $lang['SortRecentlyJoinedFirst'] = 'Recently joined first';
 $lang['HighestRatedFirst'] = 'Highest rated first';
+$lang['SortRecentlyUpdatedFirst'] = 'Recently updated first';
 
 /* Map content type dropdown */
 $lang['MapContentMyProjects'] = 'My Projects';
@@ -977,7 +990,7 @@ $lang['MapContentLightning'] = 'Lightning';
 
 $lang['InfrastructureProfessionalsNetwork'] = 'Connecting infrastructure project developers with experts';
 
-$lang['Lightning'] = 'Lightning';
+$lang['Lightning'] = 'Companies';
 $lang['B_LIGHTNING'] = 'Lightning';
 
 $lang['Tour'] = 'Tour';
@@ -1037,3 +1050,15 @@ $lang['HowKnowledgeable'] = 'How <strong>knowledgeable</strong> is this person?'
 $lang['AddRating'] = 'Add Rating';
 $lang['ThankYouHeader'] = 'Thank you!';
 $lang['ThankYouBody'] = 'Your expert ratings are critical for building trust in the marketplace!';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';
+
+/* Confirm Unsubscribe */
+$lang['ConfirmUnsubscribe'] = 'Successfully Unsubscribed';
+
+/* Project profile view */
+$lang['LastUpdated'] = 'Last updated';
+
+/* Search autcomplete in header */
+$lang['SearchAutocompletePlaceholder'] = "Search for projects or experts";

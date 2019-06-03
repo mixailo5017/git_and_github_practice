@@ -1,5 +1,7 @@
 <?php
 
+use Dotenv\Dotenv;
+
 //for scripts that are running via CLI
 if (! isset($_SERVER['SERVER_NAME'])) {
     $_SERVER['SERVER_NAME'] = php_uname("n");
@@ -31,7 +33,8 @@ define('MASTER_MIGRATION',	BASE.'.migrations/');
  */
 
 try {
-    Dotenv::load(BASE, '.env');
+    $dotenv = new Dotenv(BASE, '.env');
+	$dotenv->overload();
 } catch (InvalidArgumentException $e) {
     // Ignore the exception if the file is not found
 }

@@ -1,6 +1,7 @@
 <div id="content" class="clearfix">
 	<div id="col5" class="center_col white_box" style="width:965px;">
 		<h1 class="col_top gradient" style="height:100px;"><?php echo lang('Projects');?></h1>
+		<a href="/projects/create" class="light_green create_project"><?php echo lang('CreateProject');?></a>
 		
 		<div class="project_filter clearfix">
 			<?php echo form_open('/projects', array(
@@ -76,10 +77,13 @@
                         <img src="<?php echo $src ?>" alt="<?php echo $project['projectname'] . "'s photo" ?>">
                     </a>
 					<div style="font-size:13px;padding:8px 12px 0px 12px;"><?php echo $project['projectname'] ?></div>
+					<?php if ($project['government_level']) { ?>
+						<div style="font-size:13px;padding:8px 12px 0px 12px;"><strong>&#x2713; Official <?php echo $project['government_level']; ?> Government Project</strong></div>
+					<?php } ?>
 					<div style="padding: 8px 12px;">
 						<strong><?php echo lang('Country') ?>:</strong>&nbsp; <?php echo $project['country'] != '' ? $project['country'] : "&mdash;"; ?><br>
 						<strong><?php echo lang('Sector') ?>:</strong>&nbsp;&nbsp;&nbsp; <?php echo $project['sector'] != '' ? $project['sector'] : "&mdash;"; ?><br>
-						<strong><?php echo lang('Stage') ?>:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $project['stage'] != '' ? ucfirst($project['stage']) : "&mdash;"; ?><br>
+						<strong><?php echo lang('Stage') ?>:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo $project['stage'] != '' ? ucfirst(lang($project['stage'])) : "&mdash;"; ?><br>
 						<strong><?php echo lang('Value') ?>:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <?php echo format_budget($project['totalbudget']) ?>
 					</div>
 				</div><!-- end .project_listing -->

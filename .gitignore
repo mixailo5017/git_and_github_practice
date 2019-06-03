@@ -9,6 +9,8 @@ backend/cache/**
 # Log folders
 application/logs/**
 backend/logs/**
+storage/logs/app/**
+storage/logs/admin/**
 
 # User-uploaded content
 wwwroot/images/content_projects/**
@@ -19,9 +21,23 @@ wwwroot/images/store/**
 
 # Development files
 *.sublime-*
+.php_cs.cache
+wwwroot/node_modules/**
+.idea/**
+
+# Session files
+storage/session/**
 
 # Mac OSX system files
 .DS_Store
+Icon?
 
 # Build artefacts
 wwwroot/.sass-cache/**
+wwwroot/js/main.*.js*
+wwwroot/js/vendor.*.js*
+wwwroot/js/runtime.*.js*
+wwwroot/js/bundles.html
+
+# Composer-installed dependencies
+vendor/

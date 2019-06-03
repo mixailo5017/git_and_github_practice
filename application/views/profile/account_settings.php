@@ -53,7 +53,7 @@
 				<div class="clearfix" id="div_general_photo_form">
 					<h4><?php echo lang('UserPhoto');?>:</h4>
 					<div style="width:150px;">
-						<?php $img_options = array('crop' => FALSE);
+						<?php $img_options = array('fit' => 'contain');
                         if ($users['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) {
                             $src = company_image($users['userphoto'], 150, $img_options);
                         } else {
@@ -212,12 +212,13 @@
 												'lbl_mission' => array(
 														'class' 	=> 'left_label_p'
 														),
-												'member_mission'	=> array(
-														'name' 		=> 'member_mission',
-														'value' 	=> $users["mission"],
-                                                        'class'     => 'tinymce',
-                                                        'data-width' => '600',
-														'style'		=>'margin-bottom:0px;'
+                                                'member_mission' => array(
+                                                    'name'           => 'member_mission',
+                                                    'value'          => $users["mission"],
+                                                    'class'          => 'tinymce',
+                                                    'data-width'     => '600',
+                                                    'data-height'    => '550',
+                                                    'style'          => 'margin-bottom:0px;'
 												)
 
 
@@ -708,7 +709,7 @@
 					<div class="clearfix" id="load_expertise_education_form">
 					
 					<?php 
-					if(count($education) >0)
+					if(count_if_set($education) >0)
 					{
 						foreach($education as $key=>$edu)
 						{

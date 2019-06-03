@@ -30,6 +30,7 @@
                 <p>Everyone gets the full GViP experience.<br>Understanding your role helps us customize GViP to your needs.</p>
                 <div class="form-buttons centered">
                     <input type="submit" name="manual" class="btn std dk-green" value="Continue" />
+                    <input type="submit" name="linkedin" class="btn std lt-blue icon-linkedin" value="Use LinkedIn">
                 </div>
             <?php echo form_close() ?>
         </div>

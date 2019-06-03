@@ -70,7 +70,7 @@
             ?>
                     <div class="project_listing <?php if($i==3) { echo 'project_listing_last'; } ?> left">
                         <a href="/companies/<?php echo $val['uid'] ?>">
-                            <?php $src = company_image($val['userphoto'], 198, array('width' => 198, 'crop' => FALSE)) ?>
+                            <?php $src = company_image($val['userphoto'], 198, array('width' => 198, 'fit' => 'contain')) ?>
                             <div class='div_resize_img198' style='width:198px;height:198px;display:table-cell;vertical-align: middle;text-align: center;'>
                                 <img src="<?php echo $src ?>" alt="<?php echo $val['organization'] ?>'s photo" style="margin:0px">
                             </div>

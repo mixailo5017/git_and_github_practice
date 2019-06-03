@@ -374,220 +374,49 @@
         return $disciplines;
     }
 
-    
+    /**
+     * Fetches list of allowed government levels.
+     * @return array Each item has identical keys and values.
+     */
+    function government_level_dropdown()
+    {
+        $CI =& get_instance();
+        $CI->load->model('myaccount_model');
+        $levels = $CI->myaccount_model->lookup_government_levels();
+        $nullOption = ['' => 'Select a government level'];
+        return array_merge($nullOption, $levels);
+    }
+
     /**
     * Country Dropdown function
     * returns list of countries
     *
     * @access public
-    * @param string
-    * @param array
     * @return array
     */
-    function country_dropdown($name="country", $top_countries=array())
+    function country_dropdown()
     {
-        $countries = array(
-            ''=>lang('SelectCountry') ? : 'Select a country',
-            'United States'=>'United States',
-            'Afghanistan'=>'Afghanistan',
-            'Albania'=>'Albania',
-            'Algeria'=>'Algeria',
-            'Andorra'=>'Andorra',
-            'Angola'=>'Angola',
-            'Antigua & Deps'=>'Antigua &amp; Deps',
-            'Argentina'=>'Argentina',
-            'Armenia'=>'Armenia',
-            'Australia'=>'Australia',
-            'Austria'=>'Austria',
-            'Azerbaijan'=>'Azerbaijan',
-            'Bahamas'=>'Bahamas',
-            'Bahrain'=>'Bahrain',
-            'Bangladesh'=>'Bangladesh',
-            'Barbados'=>'Barbados',
-            'Belarus'=>'Belarus',
-            'Belgium'=>'Belgium',
-            'Belize'=>'Belize',
-            'Benin'=>'Benin',
-            'Bhutan'=>'Bhutan',
-            'Bolivia'=>'Bolivia',
-            'Bosnia Herzegovina'=>'Bosnia Herzegovina',
-            'Botswana'=>'Botswana',
-            'Brazil'=>'Brazil',
-            'Brunei'=>'Brunei',
-            'Bulgaria'=>'Bulgaria',
-            'Burkina'=>'Burkina',
-            'Burundi'=>'Burundi',
-            'Cambodia'=>'Cambodia',
-            'Cameroon'=>'Cameroon',
-            'Canada'=>'Canada',
-            'Cape Verde'=>'Cape Verde',
-            'Central African Rep'=>'Central African Rep',
-            'Chad'=>'Chad',
-            'Chile'=>'Chile',
-            'China'=>'China',
-            'Colombia'=>'Colombia',
-            'Comoros'=>'Comoros',
-            'Congo'=>'Congo',
-            'Congo {Democratic Rep}'=>'Congo {Democratic Rep}',
-            'Costa Rica'=>'Costa Rica',
-            'Croatia'=>'Croatia',
-            'Cuba'=>'Cuba',
-            'Cyprus'=>'Cyprus',
-            'Czech Republic'=>'Czech Republic',
-            'Denmark'=>'Denmark',
-            'Djibouti'=>'Djibouti',
-            'Dominica'=>'Dominica',
-            'Dominican Republic'=>'Dominican Republic',
-            'East Timor'=>'East Timor',
-            'Ecuador'=>'Ecuador',
-            'Egypt'=>'Egypt',
-            'El Salvador'=>'El Salvador',
-            'Equatorial Guinea'=>'Equatorial Guinea',
-            'Eritrea'=>'Eritrea',
-            'Estonia'=>'Estonia',
-            'Ethiopia'=>'Ethiopia',
-            'Fiji'=>'Fiji',
-            'Finland'=>'Finland',
-            'France'=>'France',
-            'Gabon'=>'Gabon',
-            'Gambia'=>'Gambia',
-            'Georgia'=>'Georgia',
-            'Germany'=>'Germany',
-            'Ghana'=>'Ghana',
-            'Greece'=>'Greece',
-            'Grenada'=>'Grenada',
-            'Guatemala'=>'Guatemala',
-            'Guinea'=>'Guinea',
-            'Guinea-Bissau'=>'Guinea-Bissau',
-            'Guyana'=>'Guyana',
-            'Haiti'=>'Haiti',
-            'Honduras'=>'Honduras',
-            'Hungary'=>'Hungary',
-            'Iceland'=>'Iceland',
-            'India'=>'India',
-            'Indonesia'=>'Indonesia',
-            'Iran'=>'Iran',
-            'Iraq'=>'Iraq',
-            'Ireland {Republic}'=>'Ireland {Republic}',
-            'Israel'=>'Israel',
-            'Italy'=>'Italy',
-            'Ivory Coast'=>'Ivory Coast',
-            'Jamaica'=>'Jamaica',
-            'Japan'=>'Japan',
-            'Jordan'=>'Jordan',
-            'Kazakhstan'=>'Kazakhstan',
-            'Kenya'=>'Kenya',
-            'Kiribati'=>'Kiribati',
-            'Korea North'=>'Korea North',
-            'Korea South'=>'Korea South',
-            'Kosovo'=>'Kosovo',
-            'Kuwait'=>'Kuwait',
-            'Kyrgyzstan'=>'Kyrgyzstan',
-            'Laos'=>'Laos',
-            'Latvia'=>'Latvia',
-            'Lebanon'=>'Lebanon',
-            'Lesotho'=>'Lesotho',
-            'Liberia'=>'Liberia',
-            'Libya'=>'Libya',
-            'Liechtenstein'=>'Liechtenstein',
-            'Lithuania'=>'Lithuania',
-            'Luxembourg'=>'Luxembourg',
-            'Macedonia'=>'Macedonia',
-            'Madagascar'=>'Madagascar',
-            'Malawi'=>'Malawi',
-            'Malaysia'=>'Malaysia',
-            'Maldives'=>'Maldives',
-            'Mali'=>'Mali',
-            'Malta'=>'Malta',
-            'Marshall Islands'=>'Marshall Islands',
-            'Mauritania'=>'Mauritania',
-            'Mauritius'=>'Mauritius',
-            'Mexico'=>'Mexico',
-            'Micronesia'=>'Micronesia',
-            'Moldova'=>'Moldova',
-            'Monaco'=>'Monaco',
-            'Mongolia'=>'Mongolia',
-            'Montenegro'=>'Montenegro',
-            'Morocco'=>'Morocco',
-            'Mozambique'=>'Mozambique',
-            'Myanmar, {Burma}'=>'Myanmar, {Burma}',
-            'Namibia'=>'Namibia',
-            'Nauru'=>'Nauru',
-            'Nepal'=>'Nepal',
-            'Netherlands'=>'Netherlands',
-            'New Zealand'=>'New Zealand',
-            'Nicaragua'=>'Nicaragua',
-            'Niger'=>'Niger',
-            'Nigeria'=>'Nigeria',
-            'Norway'=>'Norway',
-            'Oman'=>'Oman',
-            'Pakistan'=>'Pakistan',
-            'Palau'=>'Palau',
-            'Panama'=>'Panama',
-            'Papua New Guinea'=>'Papua New Guinea',
-            'Paraguay'=>'Paraguay',
-            'Peru'=>'Peru',
-            'Philippines'=>'Philippines',
-            'Poland'=>'Poland',
-            'Portugal'=>'Portugal',
-            'Qatar'=>'Qatar',
-            'Romania'=>'Romania',
-            'Russian Federation'=>'Russian Federation',
-            'Rwanda'=>'Rwanda',
-            'St Kitts & Nevis'=>'St Kitts &amp; Nevis',
-            'St Lucia'=>'St Lucia',
-            'Saint Vincent & the Grenadines'=>'Saint Vincent &amp; the Grenadines',
-            'Samoa'=>'Samoa',
-            'San Marino'=>'San Marino',
-            'Sao Tome & Principe'=>'Sao Tome &amp; Principe',
-            'Saudi Arabia'=>'Saudi Arabia',
-            'Senegal'=>'Senegal',
-            'Serbia'=>'Serbia',
-            'Seychelles'=>'Seychelles',
-            'Sierra Leone'=>'Sierra Leone',
-            'Singapore'=>'Singapore',
-            'Slovakia'=>'Slovakia',
-            'Slovenia'=>'Slovenia',
-            'Solomon Islands'=>'Solomon Islands',
-            'Somalia'=>'Somalia',
-            'South Africa'=>'South Africa',
-            'South Sudan'=>'South Sudan',
-            'Spain'=>'Spain',
-            'Sri Lanka'=>'Sri Lanka',
-            'Sudan'=>'Sudan',
-            'Suriname'=>'Suriname',
-            'Swaziland'=>'Swaziland',
-            'Sweden'=>'Sweden',
-            'Switzerland'=>'Switzerland',
-            'Syria'=>'Syria',
-            'Taiwan'=>'Taiwan',
-            'Tajikistan'=>'Tajikistan',
-            'Tanzania'=>'Tanzania',
-            'Thailand'=>'Thailand',
-            'Togo'=>'Togo',
-            'Tonga'=>'Tonga',
-            'Trinidad & Tobago'=>'Trinidad &amp; Tobago',
-            'Tunisia'=>'Tunisia',
-            'Turkey'=>'Turkey',
-            'Turkmenistan'=>'Turkmenistan',
-            'Tuvalu'=>'Tuvalu',
-            'Uganda'=>'Uganda',
-            'Ukraine'=>'Ukraine',
-            'United Arab Emirates'=>'United Arab Emirates',
-            'United Kingdom'=>'United Kingdom',
-            'United States'=>'United States',
-            'Uruguay'=>'Uruguay',
-            'Uzbekistan'=>'Uzbekistan',
-            'Vanuatu'=>'Vanuatu',
-            'Vatican City'=>'Vatican City',
-            'Venezuela'=>'Venezuela',
-            'Vietnam'=>'Vietnam',
-            'Yemen'=>'Yemen',
-            'Zambia'=>'Zambia',
-            'Zimbabwe'=>'Zimbabwe'
+        $CI =& get_instance();
+
+        $countriesArray = $CI->db
+                             ->select('countryname')
+                             ->order_by('countryname', 'asc')
+                             ->get('exp_countries')
+                             ->result_array();
+
+        $countries = array_column($countriesArray, 'countryname');
+
+        $countriesForDropdown = array_combine(
+            $countries,
+            array_map('htmlentities', $countries)
         );
 
-        return $countries;
+        $dropdown = array_merge([
+            ''=>lang('SelectCountry') ? : 'Select a country',
+            'United States'=>'United States'
+        ], $countriesForDropdown);
+
+        return $dropdown;
     }
 
 
@@ -782,7 +611,7 @@ if (! function_exists('is_post_msize_exceeded')) {
     function upload_file($path, $filename, $allowedtypes = '', $required = true)
     {
         if ($allowedtypes == '') {
-            $allowed = 'pdf|doc|ppt|xls|jpg|png|jpeg|gif|zip|mp3|docx|txt|rar';
+            $allowed = 'pdf|doc|ppt|xls|jpg|png|jpeg|gif|zip|mp3|docx|txt|rar|pptx';
         } else {
             $allowed = implode('|', allowedtypes);
         }
@@ -1263,6 +1092,7 @@ if (! function_exists('is_post_msize_exceeded')) {
         $CI->lang->load('upload', $language);
         $CI->lang->load('form_validation', $language);
         $CI->lang->load('js_form_validation', $language);
+        $CI->lang->load('js_searchbox', $language);
         $CI->lang->load('maps', $language);
     }
 
@@ -1605,7 +1435,7 @@ if (! function_exists('format_budget')) {
         if (empty($value) || $value == 0) {
             return 'TBD';
         } else {
-            return '$' .$value . 'MM';
+            return '$' . millions_to_billions($value);
         }
     }
 }
@@ -1628,6 +1458,22 @@ if (! function_exists('format_budget_for_edit')) {
     }
 }
 
+if (! function_exists('millions_to_billions')) {
+    /**
+     * Takes an integer number in millions and produces a string like
+     * '25M' or '3.4B'
+     * @param  int    $millions Input number
+     * @return string           
+     */
+    function millions_to_billions(int $millions): string
+    {
+        if ($millions < 1E3) return $millions . 'M';
+        if ($millions < 1E6) return number_format($millions / 1E3, 1) . 'B'; // Show one number after the decimal point
+        if ($millions < 1E9) return number_format($millions / 1E6, 1) . 'T';
+
+        return $millions . 'M'; // No need to handle numbers above $1 quadrillion
+    }
+}
 
 if (! function_exists('asset_version')) {
     /**
@@ -1691,7 +1537,7 @@ if (! function_exists('auth_check')) {
 
             // Encode the indended URI + query string and redirect to the login page
             $encoded = urlencode(base64_encode($intended));
-            redirect('/login?r=' . $encoded, 'refresh');
+            redirect('/login?r=' . $encoded);
         }
 
         // Check if user has been deleted
@@ -1965,6 +1811,19 @@ if (! function_exists('reminder_token')) {
         $value = str_shuffle(sha1($email . spl_object_hash($CI) . microtime(true)));
 
         return hash_hmac('sha1', $value, $hash_key);
+    }
+}
+
+if (! function_exists('count_if_set')) {
+    /**
+     * Avoids PHP 7.2 errors trying to call count()
+     * on a variable that is not set
+     * @param  mixed $var Either an unset array item or an array
+     * @return int      0 when $var is unset, otherwise the count of items in input array
+     */
+    function count_if_set($var) : int
+    {
+        return isset($var) ? count($var) : 0;
     }
 }
 

@@ -1,6 +1,6 @@
                 <h2><?php echo lang('Financial')    ?></h2>
                 <div id="tabs-3" class="col2_tab">
-                    <?php if (count($project['financial']['financial'])>0) { ?>
+                    <?php if (count_if_set($project['financial']['financial'])>0) { ?>
                         <h3><?php echo lang('FinancialStructure'); ?></h3>
                         <p><strong><?php echo lang('FinancialStructure');?> - </strong><?php if ($project['financial']['financial']['name'] != '') { echo $project['financial']['financial']['name'];} else { echo "N/A";} ?></p>
                         <?php if ($project['financial']['financial']['contactinfo'] != '') { ?>
@@ -8,7 +8,7 @@
                         <?php } ?>
                     <?php } ?>
 
-                    <?php if (count($project['financial']['fund_sources']) >0) { ?>
+                    <?php if (count_if_set($project['financial']['fund_sources']) >0) { ?>
                     <h3><?php echo lang('FundSources');?></h3>
                         <table width="100%">
                             <tr>
@@ -22,14 +22,14 @@
                                 <tr>
                                     <td><?php if ($fund_sources['name']!= '') { echo $fund_sources['name'];} else { echo "N/A";} ?></td>
                                     <td><?php if ($fund_sources['role']!= '') { echo $fund_sources['role'];} else { echo "N/A";} ?></td>
-                                    <td><?php if ($fund_sources['amount']!= '') { echo CURRENCY.$fund_sources['amount'];} else { echo "N/A";} ?></td>
+                                    <td><?php if ($fund_sources['amount']!= '') { echo $fund_sources['amount'];} else { echo "N/A";} ?></td>
                                     <td><?php if ($fund_sources['description']!= '') { echo $fund_sources['description'];} else { echo "N/A";} ?></td>
                                 </tr>
                             <?php } ?>
                         </table>
                     <?php } ?>
 
-                    <?php if (count($project['financial']['roi']) >0) { ?>
+                    <?php if (count_if_set($project['financial']['roi']) >0) { ?>
                     <h3><?php echo lang('ReturnonInvestment'); ?></h3>
                         <table width="100%">
                             <tr>
@@ -49,7 +49,7 @@
                                     <td  class="text_center">
                                         <?php if ($roi['keystudy']!= ''){
                                         ?>
-                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$roi['keystudy'];?>">
+                                        <a class="frontfiles_link" href="<?php echo PROJECT_IMAGE_PATH.$roi['keystudy'];?>" target="_blank">
                                             <img src="/images/icons/<?php echo filetypeIcon($roi['keystudy']);?>" alt=<?php echo lang('file')?> title=<?php echo lang('file')?>>
                                         </a>
                                         <?php } else { echo lang("NoFile"); } ?>
@@ -59,7 +59,7 @@
                         </table>
                     <?php } ?>
 
-                    <?php if (count($project['financial']['critical_participants']) >0) { ?>
+                    <?php if (count_if_set($project['financial']['critical_participants']) >0) { ?>
                     <h3><?php echo lang('CriticalParticipants');?></h3>
                         <table width="100%">
                             <tr>

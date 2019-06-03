@@ -170,6 +170,12 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 	#project_form_upload .tooltip {top: 25px;}
 }
 
+.tooltip-container {
+	display: flex;
+	justify-content: space-between;
+	.tooltip {background:url(#{$site}icon_question_mark.png) center no-repeat;padding: 0px;width:24px;height: 24px;display: inline-block;}
+}
+
 .tip-yellowsimple {z-index:1000;text-align:left;border:1px solid #c7bf93;border-radius:4px;padding:6px 8px;min-width:50px;max-width:300px;color:#000;background-color:#fff9c9;
 
 	 // - If you set a background-image, border/padding/background-color will be ingnored.
@@ -222,13 +228,15 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 		text-align: center;
 		border-radius: 3px;
 		margin: 10px auto;
-		width: 560px;
+		width: 100%;
+		box-sizing: border-box;
 		border: 3px solid #D4D4D4;
 		img {
 			margin: 0;
+			width: 100%;
 		}
 	}
-	.col2_tab { width: 568px; }
+	.col2_tab { width: 100%; }
 	.map_filter { height: 27px; box-shadow: none; border-radius: 3px 3px 0 0; padding-top: 8px;}
 	.map_box { background: #f6f6f8; color: #373b43; margin: 0 0 25px 0; @include box-shadow(0 1px 2px 0 #a7a7a9); border-radius: 2px;
 		p { margin: 10px 16px 8px 16px; padding: 0; }
@@ -245,8 +253,12 @@ input.light_green, input.light_red, input.light_gray, input.btn_create_account, 
 			th{background: #fff;}
 		}
 		&.overview_table{width:100%;
-			td {border-bottom: 1px solid #ddd;
+			td {
 				&:nth-child(even){background:#f5f5f5;}
+				vertical-align: middle;
+			}
+			tr {
+				border-bottom: 1px solid #ddd;
 			}
 			tr:hover{
 				th,td{background:#ddd;}
@@ -613,11 +625,18 @@ div.olControlZoom a {background:#666c77 !important;
 	.ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer;  outline:none;}
 }
 /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
-#project_tabs.ui-tabs {
-	.ui-tabs-panel { display: block; border-width: 0; padding: 1em 1.4em; background: none; }
-	.ui-tabs-hide { display: none !important; }
-	.ui-state-active { background: #fff;  border-top-left-radius: 3px; border-top-right-radius: 3px;
-		a { color: #3f4552 !important; text-shadow: none !important; }
+#project_tabs {
+	display: block; border-width: 0; padding: 1em 1.4em; /* background: none; */
+	h2 {
+		border-bottom: 1px solid black;
+		padding-bottom: 5px;
+		font-weight: bold;
+	}
+	&.ui-tabs {
+		.ui-tabs-hide { display: none !important; }
+		.ui-state-active { background: #fff;  border-top-left-radius: 3px; border-top-right-radius: 3px;
+			a { color: #3f4552 !important; text-shadow: none !important; }
+		}
 	}
 }
 /* profile tabs */
@@ -896,7 +915,7 @@ $bllw: $llwide+20;
 #col2 .map_box p.left {clear:both;}
 .project_form .chzn-choices {border-radius: 3px;}
 .project_form .chzn-choices li input {margin: 0;}
-#profile_tabs, #project_tabs {display: none;}
+#profile_tabs {display: none;}
 
 #col5 input[type="button"].light_gray,
 #col5 input[type="button"].light_green,
@@ -971,6 +990,17 @@ a.external{display: block; color: #526DA3; font-size: 11px; background: url(#{$i
 
 #profile_tabs.ui-widget-content {border: none !important;}
 #update_project{padding: 7px, 15px !important;}
+
+.create_project {
+	position: absolute;
+	left: 22px;
+	top: 56px;
+	z-index: 100;
+	&.light_green:active {
+		position: absolute;
+		top: 57px;
+	}
+}
 
 #title_input {background: none;border:none;font-weight: bold;width: 470px !important;
 	&:focus{border:1px solid black;}
@@ -1049,20 +1079,8 @@ a.external{display: block; color: #526DA3; font-size: 11px; background: url(#{$i
 	}
 }
 
-#stage_accordion {
-	.ui-accordion-content.ui-accordion-content-active {}
-	.stage_status {position: absolute;top: -30px;right: 20px;}
-	.sm_left{width: 120px;}
-	textarea {width: 320px;}
-	.ui-accordion-content span {padding: 0 25px;}
-	.ui-accordion-header {background: #f6f6f6;margin-bottom: 0;}
-	h3.ui-accordion-header a span {font-weight: normal;padding-left: 30px;font-size: 14px;}
-}
 #col2 .forum_attendance {padding: 0 20px 20px;width: 560px; display: table;}
 .comment_box {height: 110px;width: 555px;}
-
-@import "jquery_ui.scss";
-@import "chosen.scss";
 
 
 
@@ -1500,7 +1518,7 @@ a.bolt{background: url(#{$icons}bolt.png) no-repeat 0 0; padding-left:13px;color
 }
 
 /* tooltip styling */
-.tooltip {display:none;background:url(#{$site}black_arrow_big.png);height:360px;padding:40px 30px 10px 30px;width:400px;font-size:11px;color:#fff;
+.tooltip {
 	.label {color:yellow;width:35px;}
 	a {color:#ad4;font-size:11px;font-weight:bold;}
 }
@@ -1524,6 +1542,38 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 // 	float:right!important;
 // }
 
+/* My GViP Accordion Styling */
+#myvip .ui-accordion-header:focus {
+	outline: none;
+}
+#myvip div.ui-accordion-content {
+	padding: 0;
+}
+.accordion-icon-closed, .accordion-icon-open {
+	width: 16px;
+	height: 16px;
+	position: relative !important;
+	left: 0 !important;
+	margin-top: 0 !important;
+	margin-right: 3px;
+	&:before {
+		font-family: 'icomoon';
+		content: "\e603";
+	}
+}
+
+.accordion-icon-closed {
+	transform: rotate(-90deg);
+	float: left;
+	margin-right: 0px;
+	padding-bottom: 7px;
+}
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
 
 
 @import "maps.scss";
@@ -1532,24 +1582,41 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "myvip.scss";
 @import "classes.scss";
 @import "modules.scss";
+@import "project-overview.scss";
 
 @import "_lang/french.scss";
 @import "_lang/spanish.scss";
 @import "_lang/portuguese.scss";
 
 @import "print.scss";
-@import "../../build/_sass/_nav.scss";
 
-/* nav overrides */
+// From GViP 2.0 design
+@import "../../build/_sass/_mq.scss";
+@import "../../build/_sass/_nav.scss";
+@import "../../build/_sass/_nav_mobile.scss";
+@import "../../build/_sass/_searchbox.scss";
+@import "../../build/_sass/_responsive_visibility.scss";
+@import "../../build/_sass/_alerts.scss";
+
+// Libraries
+@import "../../node_modules/magnific-popup/dist/magnific-popup.css";
+@import "jquery_ui.scss";
+@import "chosen.scss";
+
+// For Magnific Popup galleries, to handle small images
+.mfp-content {
+	min-width: 300px;
+}
+
+/* nav override */
 .m-nav li span {
   font-size: 14px;
 }
-
-.m-navbar {
-  position: relative;
-
-  .container {
-	margin: 0 auto;
-  }
+#aa-input-container {
+	font-size: 16px;
 }
+#aa-search-input {
+	margin: 0;
+}
+
 @include clearfix;

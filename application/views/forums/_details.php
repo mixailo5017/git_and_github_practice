@@ -3,10 +3,10 @@
         $banner = safe_image(FORUM_IMAGE_PATH, $details['banner'], FORUM_NO_IMAGE_PATH . 'placeholder_forum_banner.png', array(
             'max' => 600,
             'rounded_corners' => null,
-            'crop' => false,
+            'fit' => 'contain',
             'allow_scale_larger' => false));
 ?>
-        <div class="banner_image" style="width:600px">
+        <div class="banner_image">
             <img src="<?php echo $banner ?>" class="uploaded_img" alt="Forum's banner">
         </div>
 <?php
@@ -32,21 +32,34 @@
             </div>
         </form>
     </div>
-    <div id="p_e_map" class="p_e_map" style="width: 598px; height: 450px; margin-bottom: 20px;"></div>
+    <div id="p_e_map" class="p_e_map" style="width: 598px; height: 450px; margin-bottom: 20px;">
+      <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
+    </div>
 </div>
 
 <div class="forum-actions" style="text-align: center;">
     <?php // TODO: Revisit ans escape data-name content ?>
-    <?php if ($details['register_url']) { ?>
+    <?php if ($details['register_url'] && $details['registration_type'] == FORUM_REGISTER_OFFSITE) { ?>
         <a href="<?php echo $details['register_url'] ?>"
            target="_blank"
            class="button light_gray attend"
            data-id="<?php echo $details['id'] ?>"
            data-name="<?php echo $details['title'] ?>"><?php echo lang('ForumRegister') ?></a>
     <?php } ?>
+    <?php if ($details['registration_type'] == FORUM_REGISTER_ON_GVIP) { ?>
+        <?php echo form_open(
+          'api/experts/' . sess_var('uid') . '/forums/' . $details['id'],
+          [
+            'id'=>'attend_forum_form',
+            'name'=>'attend_forum_form',
+            'class'=>'ajax_form'
+          ]
+          ) ?>
+          <?php echo form_submit('submit_attend_forum', lang('ForumRegister'), 'class="light_green attend"');?>
+        </form>
+    <?php } ?>
     <?php if ($details['meeting_url']) { ?>
         <a href="<?php echo $details['meeting_url'] ?>"
-           target="_blank"
            class="button light_gray book"
            style="margin-left:10px;" ><?php echo lang('ForumBookMeeting') ?></a>
     <?php } ?>

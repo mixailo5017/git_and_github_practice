@@ -1,3 +1,4 @@
+
 <?php
 
 $lang['English'] = 'Anglais';
@@ -7,16 +8,17 @@ $lang['Portuguese'] = 'Portugais';
 
 $lang['Go'] = 'Allez';
 $lang['Stage'] = '&eacute;tape';
+$lang['StageElaboration'] = 'Étape — Détails suppl.';
 $lang['siteTitle'] = 'VIP Mon Espace VIP';
 $lang['forgotPassword'] = 'Mot de passe oubli&eacute;?';
 $lang['myVip'] = 'Mon GViP';
 $lang['map']	= "Carte";
 $lang['projects'] = 'Projets';
-$lang['forums'] = 'Forums';
+$lang['forums'] = 'Communaut&eacute;s';
 $lang['leadershipForum'] = 'Forum sur les dirigeants';
-$lang['expertise'] = 'Comp&eacute;tence';
+$lang['expertise'] = 'Experts';
 $lang['jobs'] = 'Emplois';
-$lang['store'] = 'Magasin';
+$lang['store'] = 'Rapports';
 $lang['Messages'] = 'Messages';
 $lang['Flags'] = 'Drapeaux';
 $lang['Connectiong'] = 'Connexion projets d\'infrastructure avec une expertise ...';
@@ -32,7 +34,6 @@ $lang['Confirm'] = 'Confirmer';
 $lang['CreateAccount'] = 'Créer un compte';
 
 $lang['EditProfile'] = 'Modifier le profil';
-$lang['AddNewProject'] = 'Créer un projet';
 $lang['AccountSettings'] = 'Paramètres';
 $lang['UpdateMyProjects'] = 'Mes projets';
 $lang['ViewCurrentProjects'] = 'Voir Projets';
@@ -86,7 +87,11 @@ $lang['Schedule'] = 'calendrier';
 $lang['NoSchedule'] = 'Pas de planification';
 $lang['DesignIssues'] = 'Probl&egrave;mes de conception';
 $lang['Name'] = 'nom';
-$lang['Description'] = 'description';
+
+
+
+
+
 $lang['Attachments'] = 'Attachments';
 $lang['NoAttachments'] = 'Pas de pi&egrave;ces jointes';
 $lang['Environment'] = 'environnement';
@@ -106,6 +111,9 @@ $lang['Political'] = 'politique';
 $lang['Companies'] = 'entreprises';
 $lang['Owners'] = 'propri&eacute;taires';
 $lang['Machinery'] = 'machinerie';
+$lang['Process'] = 'Processus';
+$lang['AuctionDate'] = 'Date d\'auction';
+$lang['AuctionCriteria'] = 'Critère d\'auction';
 $lang['ProcurementProcess'] = 'Processus d\'approvisionnement';
 $lang['FinancialInformation'] = 'information financi&egrave;re';
 $lang['KeyTechnology'] = 'Key Technology';
@@ -142,6 +150,7 @@ $lang['ShowMore'] = 'Voir plus';
 $lang['ShowLess'] = 'Voir moins';
 $lang['SendMessage'] = 'Envoyer un message';
 $lang['Message'] = 'Message';
+$lang['EmailBounces'] = 'Malheureusement, les messages à cet utilisateur ont déjà été signalés comme rebondissant. Vous pouvez toujours essayer de messager l\'utilisateur, mais il est peu probable que vous recevrez une réponse.';
 $lang['close'] = 'Proche';
 $lang['successupdated'] = 'Votre profil a &eacute;t&eacute; mis &agrave; jour';
 $lang['Ok'] = 'Bien';
@@ -345,7 +354,11 @@ $lang['Yes'] = 'Oui';
 $lang['NO'] = 'NO';
 $lang['Close'] = 'Proche';
 $lang['File'] = 'Dossier';
-$lang['Description'] = 'Description';
+
+
+
+
+
 $lang['Permission'] = 'Autorisation';
 $lang['Update'] = 'Mettre à jour';
 $lang['Name'] = 'Nom';
@@ -562,6 +575,7 @@ $lang['PhotoExplanation'] = 'Ajoutez une photo ou un graphique pour représenter
 /* projects_files.php */
 $lang['File'] = 'Dossier';
 $lang['Type'] = 'Type';
+$lang['Description'] = 'Description';
 
 /* projects_financial.php */
 $lang['Private'] = 'Priv&eacute;';
@@ -846,7 +860,7 @@ $lang['NoForumsFound'] = 'Aucun forum trouvé à afficher.';
 $lang['ForumDate'] = 'Dates';
 $lang['ForumVenue'] = 'Lieu';
 $lang['ForumRegion'] = 'Région';
-$lang['B_FORUMS'] = 'FORUMS';
+$lang['B_FORUMS'] = 'COMMUNAUT&Eacute;S';
 $lang['ShowAll'] = 'Afficher Tout';
 $lang['ForumRegister'] = 'Enregistrer à assister à';
 $lang['ForumBookMeeting'] = 'Réservez une réunion privée';
@@ -898,7 +912,7 @@ $lang['SimilarProjects'] = 'Des projets similaires';
 
 /* New MyVip */
 $lang['MyVipMyProjects'] = 'MES PROJETS';
-$lang['MyVipGvipStore'] = 'GViP MAGASIN';
+$lang['MyVipGvipStore'] = 'RAPPORTS';
 $lang['MyVipSimilarProjects'] = 'DES PROJETS SIMILAIRES';
 $lang['MyVipKeyExecutives'] = 'PRINCIPAUX DIRIGEANTS';
 $lang['MyVipUpdatesTitle'] = 'FLUX DE PROJET';
@@ -910,6 +924,7 @@ $lang['MyVipMyExperts'] = 'MES EXPERTS';
 $lang['MyVipMyExpertsNotFound'] = 'Suivre un expert';
 $lang['MyVipMyFollowers'] = 'Mes suiveurs';
 $lang['ViewMyFollowers'] = 'Voir mes suiveurs';
+$lang['MyVipMyDiscussions'] = 'Mes Discussions';
 
 /* MyVip My Projects */
 $lang['MyProjectsAll'] = 'Tout';
@@ -932,6 +947,7 @@ $lang['SortMostRelevant'] = 'Les plus vus';
 $lang['SortAlphabetically'] = 'Alphabétiquement';
 $lang['SortRecentlyJoinedFirst'] = 'Récemment rejoint la première';
 $lang['HighestRatedFirst'] = "Ordonner par l'évaluation";
+$lang['SortRecentlyUpdatedFirst'] = 'Récemment actualisés';
 
 /* Map content type dropdown */
 $lang['MapContentMyProjects'] = 'Mes Projets';
@@ -981,7 +997,8 @@ $lang['EmailNotUnique'] = 'Il existe déjà un compte avec cette address email.'
 $lang['RegistrationEmailNotUnique'] = 'Il existe déjà un compte avec cette address email. Connectez-vous ci-dessus ou cliquez sur Mot de passe oublié.';
 $lang['Website'] = 'Site web';
 
-$lang['WEBScore'] = 'Score Bénéfices Économiques Élargis';
+$lang['EstJobsCreated'] = 'Est. Postes Créés';
+$lang['JobsCreatedExplanation'] = 'Une estimation du nombre total d\'emplois (directs et indirects) qui seront créés par ce projet. Cliquez pour en savoir plus.';
 
 $lang['ProjectTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Bhopal Metro&quot;) pour affiner votre recherche';
 $lang['ExpertTextSearchTip'] = 'Astuce: Utilisez guillemets (&quot;Jason Jones&quot;) pour affiner votre recherche';
@@ -1003,3 +1020,12 @@ $lang['HowKnowledgeable'] = 'Cette personne est-elle <strong>bien informée</str
 $lang['AddRating'] = 'Ajoutez évaluation';
 $lang['ThankYouHeader'] = 'Merci!';
 $lang['ThankYouBody'] = 'Vos évaluations sont primordiales pour augmenter la confiance dans le marché.';
+
+/* GViP Brazil */
+$lang['BrazilFAQ'] = 'GViP Brazil Frequently Asked Questions';
+
+/* Project profile view */
+$lang['LastUpdated'] = 'Dernière mise à jour';
+
+/* Search autcomplete in header */
+$lang['SearchAutocompletePlaceholder'] = "Cherchez un projet ou un expert";

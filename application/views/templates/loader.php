@@ -185,28 +185,28 @@ if($formname == 'procurement_services')
 							<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_name']);?>
 							<div id="err_project_procurement_services_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Type:', '', $opt['update_procurement_services_form']['lbl_type']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_type']);?>
 							<div id="err_project_procurement_services_type" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Procurement Process:', '', $opt['update_procurement_services_form']['lbl_process']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_process']);?>
 							<div id="err_project_procurement_services_process" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Financial Information:', '', $opt['update_procurement_services_form']['lbl_info']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_procurement_services_form']['project_procurement_services_financial_info']);?>
 							<div id="err_project_procurement_services_financial_info" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Permissions:', '', $opt['update_procurement_services_form']['lbl_permissions']);?>
 						<?php
@@ -218,7 +218,7 @@ if($formname == 'procurement_services')
 							);
 							echo form_dropdown("project_procurement_services_permission",$services_permission_options,$val["permission"],$services_permission_attr);
 						?>
-						<?php echo br(); ?>										
+						<br>										
 						<?php echo form_submit('uservices_submit', 'Update','class = "light_green btn_lml"');?>
 						
 						<?php echo form_close();?>
@@ -296,21 +296,21 @@ if($formname == 'procurement_technology')
 							<?php echo form_input($opt['update_procurement_technology_form']['project_procurement_technology_name']);?>
 							<div id="err_project_procurement_technology_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Procurement Process:', '', $opt['update_procurement_technology_form']['lbl_process']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_procurement_technology_form']['project_procurement_technology_process']);?>
 							<div id="err_project_procurement_technology_process" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Financial Information:', '', $opt['update_procurement_technology_form']['lbl_info']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_procurement_technology_form']['project_procurement_technology_financial_info']);?>
 							<div id="err_project_procurement_technology_financial_info" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Permissions:', '', $opt['update_procurement_technology_form']['lbl_permissions']);?>
 						<?php
@@ -322,7 +322,7 @@ if($formname == 'procurement_technology')
 							);
 							echo form_dropdown("project_procurement_technology_permission",$technology_permission_options,$val["permission"],$technology_permission_attr);
 						?>
-						<?php echo br(); ?>										
+						<br>										
 						<?php echo form_submit('utechnology_submit', 'Update','class = "light_green btn_lml"');?>
 						
 						<?php echo form_close();?>
@@ -399,21 +399,21 @@ if($formname == 'project_machinery')
 								<?php echo form_input($opt['update_machinery_form']['project_machinery_name']);?>
 								<div id="err_project_machinery_name" class="errormsg"></div>
 							</div>
-							<?php echo br(); ?>
+							<br>
 
 							<?php echo form_label('Procurement Process:', '', $opt['update_machinery_form']['lbl_process']);?>
 							<div class="fld">
 								<?php echo form_input($opt['update_machinery_form']['project_machinery_process']);?>
 								<div id="err_project_machinery_process" class="errormsg"></div>
 							</div>
-							<?php echo br(); ?>
+							<br>
 							
 							<?php echo form_label('Financial Information:', '', $opt['update_machinery_form']['lbl_info']);?>
 							<div class="fld">
 								<?php echo form_input($opt['update_machinery_form']['project_machinery_financial_info']);?>
 								<div id="err_project_machinery_financial_info" class="errormsg"></div>
 							</div>
-							<?php echo br(); ?>
+							<br>
 							
 							<?php echo form_label('Permissions:', '', $opt['update_machinery_form']['lbl_permissions']);?>
 							<?php
@@ -425,7 +425,7 @@ if($formname == 'project_machinery')
 								);
 								echo form_dropdown("project_machinery_permission",$machinery_permission_options,$val["permission"],$machinery_permission_attr);
 							?>
-							<?php echo br(); ?>										
+							<br>										
 							<?php echo form_submit('umachinery_submit', 'Update','class = "light_green btn_lml"');?>
 							
 							<?php echo form_close();?>
@@ -1023,21 +1023,21 @@ if($formname == 'project_critical_participants')
 							<?php echo form_input($opt['update_critical_participants_form']['project_critical_participants_name']);?>
 							<div id="err_project_critical_participants_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 	
 						<?php echo form_label('Role:', '', $opt['update_critical_participants_form']['lbl_role']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_critical_participants_form']['project_critical_participants_role']);?>
 							<div id="err_project_critical_participants_role" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Description:', '', $opt['update_critical_participants_form']['lbl_desc']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_critical_participants_form']['project_critical_participants_desc']);?>
 							<div id="err_project_critical_participants_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Permissions:', '', $opt['update_critical_participants_form']['lbl_permissions']);?>
 						<?php
@@ -1049,7 +1049,7 @@ if($formname == 'project_critical_participants')
 							);
 							echo form_dropdown("project_critical_participants_permission",$critical_participants_permission_options,$val["permission"],$critical_participants_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 	
 						<?php echo form_submit('ucritical_submit', 'Update','class = "light_green btn_lml"');?>
 	
@@ -1155,35 +1155,35 @@ if($formname == 'project_roi')
 						<?php echo form_input($opt['update_roi_form']['project_roi_name']);?>
 						<div id="err_project_roi_name" class="errormsg"></div>
 					</div>
-					<?php echo br(); ?>
+					<br>
 
 					<?php echo form_label('Percent:', '', $opt['update_roi_form']['lbl_percent']);?>
 					<div class="fld">
 						<?php echo form_input($opt['update_roi_form']['project_roi_percent']);?>
 						<div id="err_project_roi_percent" class="errormsg"></div>
 					</div>
-					<?php echo br(); ?>
+					<br>
 					
 					<?php echo form_label('Type:', '', $opt['update_roi_form']['lbl_type']);?>
 					<div class="fld">
 						<?php echo form_input($opt['update_roi_form']['project_roi_type']);?>
 						<div id="err_project_roi_type" class="errormsg"></div>
 					</div>
-					<?php echo br(); ?>
+					<br>
 					
 					<?php echo form_label('Approach:', '', $opt['update_roi_form']['lbl_approach']);?>
 					<div class="fld">
 						<?php echo form_input($opt['update_roi_form']['project_roi_approach']);?>
 						<div id="err_project_roi_approach" class="errormsg"></div>
 					</div>
-					<?php echo br(); ?>
+					<br>
 					
 					<?php echo form_label('Key Study:', '', $opt['update_roi_form']['lbl_key_study']);?>
 					<div class="fld">
 						<?php echo form_upload($opt['update_roi_form']['project_roi_keystudy']);?>
 						<div id="err_project_roi_keystudy" class="errormsg"></div>
 					</div>
-					<?php echo br(); ?>
+					<br>
 
 
 					<?php echo form_label('Permissions:', '', $opt['update_roi_form']['lbl_permissions']);?>
@@ -1196,7 +1196,7 @@ if($formname == 'project_roi')
 						);
 						echo form_dropdown("project_roi_permission",$roi_permission_options,$val["permission"],$roi_permission_attr);
 					?>
-					<?php echo br(); ?>
+					<br>
 
 					<?php echo form_submit('uroi_submit', 'Update','class = "light_green btn_lml"');?>
 					
@@ -1283,28 +1283,28 @@ if($formname == 'project_fund_sources')
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_name']);?>
 							<div id="err_project_fund_sources_name" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Role:', '', $opt['update_fund_sources_form']['lbl_role']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_role']);?>
 							<div id="err_project_fund_sources_role" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Amount:', '', $opt['update_fund_sources_form']['lbl_amount']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_amount']);?>
 							<div id="err_project_fund_sources_amount" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_label('Description:', '', $opt['update_fund_sources_form']['lbl_description']);?>
 						<div class="fld">
 							<?php echo form_input($opt['update_fund_sources_form']['project_fund_sources_desc']);?>
 							<div id="err_project_fund_sources_desc" class="errormsg"></div>
 						</div>
-						<?php echo br(); ?>
+						<br>
 
 						<?php echo form_label('Permissions:', '', $opt['update_fund_sources_form']['lbl_permissions']);?>
 						<?php
@@ -1316,7 +1316,7 @@ if($formname == 'project_fund_sources')
 							);
 							echo form_dropdown("project_fund_sources_permission",$fund_sources_permission_options,$val["permissions"],$fund_sources_permission_attr);
 						?>
-						<?php echo br(); ?>
+						<br>
 						
 						<?php echo form_submit('ufund_submit', 'Update','class = "light_green btn_lml"');?>
 						
@@ -1797,7 +1797,7 @@ if($formname == 'project_engineering')
 
 			<span class="left middle">
 				<strong><?php echo $val["contactname"]; ?></strong>
-				<?php echo br(); ?>
+				<br>
 				<?php echo $val["challenges"].", ".$val["innovations"]; ?>
 			</span>
 
@@ -1963,7 +1963,7 @@ if($formname == 'project_executives')
 
 				<span class="left middle">
 					<strong><?php echo $val["executivename"]; ?></strong>
-					<?php echo br(); ?>
+					<br>
 					<?php echo $val["role"].", ".$val["email"]; ?>
 				</span>
 
@@ -1982,14 +1982,14 @@ if($formname == 'project_executives')
 					<?php echo form_input(array("name"=>"project_executives_name","value"=>$val["executivename"])); ?>
 					<div class="errormsg" id="err_project_executives_name"></div>
 				</div>
-				<?php echo br(); ?>
+				<br>
 				
 				<?php echo form_label("Company:","",array("class"=>"left_label")); ?>
 				<div class="fld">
 					<?php echo form_input(array("name"=>"project_executives_company","value"=>$val["company"])); ?>
 					<div class="errormsg" id="err_project_executives_name"></div>
 				</div>
-				<?php echo br(); ?>
+				<br>
 				
 				<?php echo form_label("Role:","",array("class"=>"left_label")); ?>
 				<div class="fld">
@@ -2022,7 +2022,7 @@ if($formname == 'project_executives')
 						<div class="errormsg" id="err_project_executives_name"></div>
 					</div>
 				</div>
-				<?php echo br(); ?>
+				<br>
 				
 				<?php echo form_submit(array("name"=>"Update","class"=>"light_green btn_lml","value"=>"Update")); ?>
 				<?php echo form_reset(array("class"=>"light_red btn_sml","value"=>"Close")); ?>
@@ -2049,7 +2049,7 @@ if($formname == 'project_organization')
 
 			<span class="left middle">
 				<strong><?php echo $val["contact"]; ?></strong>
-				<?php echo br(); ?>
+				<br>
 				<?php echo $val["role"].", ".$val["email"]; ?>
 			</span>
 
@@ -2068,7 +2068,7 @@ if($formname == 'project_organization')
 			<?php echo form_input(array("name"=>"project_organizations_company","id"=>"project_organizations_company","value"=>$val["company"])); ?>
 			<div class="errormsg" id="err_project_organizations_company_name"></div>
 		</div>
-		<?php echo br(); ?>
+		<br>
 		
 		
 		<?php echo form_label("Role:","",array("class"=>"left_label")); ?>
@@ -2084,21 +2084,21 @@ if($formname == 'project_organization')
 			<div class="errormsg"></div>
 		</div>
 		
-		<?php echo br(); ?>
+		<br>
 		
 		<?php echo form_label("Contact:","",array("class"=>"left_label")); ?>
 		<div class="fld">
 		<?php echo form_input(array("name"=>"project_organizations_contact","id"=>"project_organizations_contact","value"=>$val["contact"])); ?>
 			<div class="errormsg"></div>
 		</div>
-		<?php echo br(); ?>
+		<br>
 		
 		<?php echo form_label("Email:","",array("class"=>"left_label")); ?>
 		<div class="fld">
 		<?php echo form_input(array("name"=>"project_organizations_email","id"=>"project_organizations_email","value"=>$val["email"])); ?>
 			<div class="errormsg"></div>
 		</div>
-		<?php echo br(); ?>
+		<br>
 		<?php echo form_submit(array("name"=>"Update","class"=>"light_green btn_lml","value"=>"Update")); ?>
 		<?php echo form_reset(array("class"=>"light_red btn_sml","value"=>"Close")); ?>
 		<?php echo form_close(); ?>
@@ -2450,7 +2450,7 @@ if($formname == "forum_comment" && $type == "view")
 				<a href="javascript:void(0)" class="edit_link">Edit</a>
 				<div class="editCommentBox" style="display:none;">
 					<?php echo form_textarea(array("name"=>"comment","id"=>"comment","rows"=>"8","cols"=>"70","value"=>$comments["comment"])); ?>
-					<?php echo br(); ?>
+					<br>
 					<?php echo form_submit(array("name"=>"cancel","value"=>"Cancel","class"=>"cancel_edit")); ?>
 					<?php echo form_submit(array("name"=>"save","id"=>"submit","value"=>"Save","class"=>"submit_edit")); ?>
 				</div>

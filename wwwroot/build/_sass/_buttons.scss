@@ -77,7 +77,12 @@ Button Styles
 	}
 }
 
-
+.dk-green--disabled {
+	opacity: .2;
+	&:hover {
+		cursor: default;
+	}
+}
 
 .lt-blue {
 	color: $bluish-off-white;
@@ -98,6 +103,7 @@ Button Styles
 		background-position: 10px center;
 		background-size: 20px;
 		padding-left: 45px;
+		line-height: normal;
 
 		&:before {
 			font-family: 'icomoon';
