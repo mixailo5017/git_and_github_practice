@@ -24,6 +24,7 @@ wwwroot/images/store/**
 .php_cs.cache
 wwwroot/node_modules/**
 .idea/**
+wwwroot/phpinfo.php
 
 # Session files
 storage/session/**
