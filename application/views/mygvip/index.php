@@ -1,5 +1,122 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.center {
+      display: block;
+      margin-top: auto;
+      margin-left: auto;
+      margin-right: auto;
+        }
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/new/myvippic.jpg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+</style>
+
+<div class="hero-image">
+  <div class="photo">
+      <img src="/images/new/GViP_Logos_white.png" width="400" height="250" class="center"/>
+  </div>
+</div>
+<hr>
+		<!-- map -->
+    <div class="container" style="margin-left:60px;margin-right:60px">
+		<div class="map">
+            <div class="map_filter my_vip">
+                <form id="map_search">
+                    <div class="form_row">
+                        <!-- <div class="input_group pe_toggle"> -->
+                        <div class="select_wrap input_group">
+<!--                            <span class="show_me">Show:</span>-->
+                            <div class="form_control">
+                                <?php
+                                $members_options = show_members_dropdown2();
+                                $keys = array_keys($members_options);
+                                echo form_dropdown("content_type", $members_options, array(array_shift($keys)), 'id="content_type" class="toggle_experts"');
+                                $keys = null;
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="select_wrap input_group stage toggle_projects">
+<!--                            <span class="word">Stage:</span>-->
+                            <div class="form_control">
+<!--                                <label class="access" for="f4">Stage:</label>-->
+                                <?php
+                                $project_stage_options = stages_dropdown();
+                                echo form_dropdown("project_stage",$project_stage_options,'','class="toggle_projects"');
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="select_wrap input_group discipline toggle_experts">
+<!--                            <span class="word">In:</span>-->
+                            <div class="form_control">
+<!--                                <label class="access" for="f4">In:</label>-->
+                                <?php
+                                $expert_discipline_options =  discipline_dropdown();
+                                array_shift($expert_discipline_options);
+                                $list = array('' => lang('AnyDiscipline')) + $expert_discipline_options;
+                                echo form_dropdown("expert_discipline",$list,'','class="toggle_experts"');
+                                ?>
+                            </div>
+                        </div>
+
+                        <div class="select_wrap input_group sector">
+<!--                            <span class="word">Sector:</span>-->
+                            <div class="form_control">
+<!--                                <label class="access" for="f3">Sectors</label>-->
+                                <select id="f3" name="sector">
+                                    <option value="">All Sectors</option>
+                                    <?php echo map_sector_options() ?>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="select_wrap input_group toggle_projects budget">
+<!--                            <span class="word">Value:</span>-->
+                            <div class="form_control">
+<!--                                <label class="access" for="f6">Budget</label>-->
+                                <?php
+                                $budget_dropdown_options = budget_dropdown();
+                                echo form_dropdown('budget',$budget_dropdown_options,'','class="toggle_projects" id="budget"');
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- end filter -->
+		</div>
+        <div class="dn" id="map_projects"></div>
+        <div class="dn" id="map_experts"></div>
+        <div id="map_wrapper" class="my_vip">
+            <div id="p_e_map" class="p_e_map" style="width:100%; height:500px;">
+                <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
+            </div>
+          </div>
+
 <div class="clearfix" id="content">
 	<div class="column_1">
+    <hr>
         <!-- Key Executives -->
         <section class="similar-experts group">
             <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipKeyExecutives') ?></h2>
@@ -188,85 +305,9 @@
 		</section>
         <?php } ?>
     </div>
-
-	<div class="column_2">
-		<!-- map -->
-		<div class="map">
-            <div class="map_filter my_vip">
-                <form id="map_search">
-                    <div class="form_row">
-                        <!-- <div class="input_group pe_toggle"> -->
-                        <div class="select_wrap input_group">
-<!--                            <span class="show_me">Show:</span>-->
-                            <div class="form_control">
-                                <?php
-                                $members_options = show_members_dropdown2();
-                                $keys = array_keys($members_options);
-                                echo form_dropdown("content_type", $members_options, array(array_shift($keys)), 'id="content_type" class="toggle_experts"');
-                                $keys = null;
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group stage toggle_projects">
-<!--                            <span class="word">Stage:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f4">Stage:</label>-->
-                                <?php
-                                $project_stage_options = stages_dropdown();
-                                echo form_dropdown("project_stage",$project_stage_options,'','class="toggle_projects"');
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group discipline toggle_experts">
-<!--                            <span class="word">In:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f4">In:</label>-->
-                                <?php
-                                $expert_discipline_options =  discipline_dropdown();
-                                array_shift($expert_discipline_options);
-                                $list = array('' => lang('AnyDiscipline')) + $expert_discipline_options;
-                                echo form_dropdown("expert_discipline",$list,'','class="toggle_experts"');
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group sector">
-<!--                            <span class="word">Sector:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f3">Sectors</label>-->
-                                <select id="f3" name="sector">
-                                    <option value="">All Sectors</option>
-                                    <?php echo map_sector_options() ?>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group toggle_projects budget">
-<!--                            <span class="word">Value:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f6">Budget</label>-->
-                                <?php
-                                $budget_dropdown_options = budget_dropdown();
-                                echo form_dropdown('budget',$budget_dropdown_options,'','class="toggle_projects" id="budget"');
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div><!-- end filter -->
-		</div>
-        <div class="dn" id="map_projects"></div>
-        <div class="dn" id="map_experts"></div>
-        <div id="map_wrapper" class="my_vip">
-            <div id="p_e_map" class="p_e_map" style="width:100%; height:450px;">
-                <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
-            </div>
-        </div>
-
+    <hr>
 		<!-- news feed -->
-		<section class="comments">
+		<section class="column_2">
             <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipUpdatesTitle') ?></h2>
 
             <ul class="feed updates">

@@ -10,9 +10,9 @@
                 </li>
             <?php } ?>
                 <li>
-                    <a href="/"><span><img src="/images/new/logo.png" /></span></a>
+                    <a href="/"><span><img src="/images/new/GViP_Logos_white.png" width="64" height="40"/></span></a>
                 </li>
-            </ul>       
+            </ul>
         </nav>
         <?php if (Auth::check() && (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
         <nav class="m-nav nav-main">

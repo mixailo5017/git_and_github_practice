@@ -28,12 +28,3 @@
     <div class="wrapper">
 
     <?php $this->load->view('layouts/header') ?>
-
-    <?php if (isset($breadcrumb) && $breadcrumb != '') { ?>
-
-    <div class="content clearfix">
-        <ul class="header_bread_crumb">
-            <?php echo $breadcrumb ?>
-        </ul>
-    </div>
-    <?php } ?>
