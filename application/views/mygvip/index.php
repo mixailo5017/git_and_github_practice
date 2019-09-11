@@ -21,25 +21,18 @@ body, html {
   background-size: cover;
   position: relative;
 }
-
-.hero-text {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
 </style>
 
 <div class="hero-image">
   <div class="photo">
-      <img src="/images/new/GViP_Logos_white.png" width="400" height="250" class="center"/>
+      <img src="/images/new/GViP_Logos_white.png" height="250" class="center"/>
   </div>
 </div>
 <hr>
+
+<div class="clearfix" id="content">
 		<!-- map -->
-    <div class="container" style="margin-left:60px;margin-right:60px">
+    <div class="container">
 		<div class="map">
             <div class="map_filter my_vip">
                 <form id="map_search">
@@ -113,8 +106,6 @@ body, html {
                 <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
             </div>
           </div>
-
-<div class="clearfix" id="content">
 	<div class="column_1">
     <hr>
         <!-- Key Executives -->
