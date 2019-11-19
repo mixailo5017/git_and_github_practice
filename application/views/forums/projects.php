@@ -24,7 +24,7 @@
                         ),
                         'last' => ($index == 3)
                     );
-                    $this->load->view('templates/_list_block', $data);
+                    $this->load->view('templates/_list_block_blue', $data);
                     $index = ($index == 3) ? 0 : $index + 1;
                 }
             } else {
