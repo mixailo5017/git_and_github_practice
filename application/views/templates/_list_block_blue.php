@@ -10,7 +10,7 @@
  **/
 ?>
 <div class="project_listing <?php if($last) { echo "project_listing_last"; }  ?> left">
-  <img src="/images/new/blue-check-mark-clipart-blue-check-mark-png.png" height="20" width="20" class="left"/>
+  <img src="/images/new/circle-area-blue-point-angle-circle-png-file.jpg" height="20" width="20" class="left"/>
     <a href="<?php echo $url; ?>">
         <img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>" style="margin: 0px;">
     </a>
