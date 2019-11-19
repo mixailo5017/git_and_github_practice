@@ -10,10 +10,11 @@
  **/
 ?>
 <div class="project_listing <?php if($last) { echo "project_listing_last"; }  ?> left">
-  <img src="/images/new/circle-area-blue-point-angle-circle-png-file.jpg" height="20" width="20" class="left"/>
     <a href="<?php echo $url; ?>">
         <img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>" style="margin: 0px;">
     </a>
+    <img src="/images/new/circle-area-blue-point-angle-circle-png-file.jpg" height="20" width="20" class="left"/>
+    <br>
 
     <div style="font-size:13px;padding:8px 12px 0px 12px;"><?php echo $title; ?></div>
 
