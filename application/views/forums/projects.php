@@ -1,7 +1,7 @@
 <div id="content" class="clearfix">
     <div id="col5" class="center_col white_box" style="width:965px;">
         <h1 class="col_top gradient">
-            <?php echo lang('ForumProjects')?>
+            Projects
         </h1>
         <div class="inner clearfix">
             <?php
@@ -42,3 +42,4 @@
 </div><!-- end #content -->
 
 <div id="dialog-message"></div>
+

@@ -14,7 +14,7 @@
         <img src="<?php echo $image['url']?>" alt="<?php echo $image['alt']?>" style="margin: 0px;">
     </a>
     <img src="/images/new/circle-area-blue-point-angle-circle-png-file.jpg" height="20" width="20" class="left"/>
-    <br>
+    <p><strong>GViP AI+ Score:</strong> <?php $randomNumber =rand(90,99); echo $randomNumber;?> </p>
 
     <div style="font-size:13px;padding:8px 12px 0px 12px;"><?php echo $title; ?></div>
 
