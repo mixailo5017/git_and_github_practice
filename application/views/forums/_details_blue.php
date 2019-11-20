@@ -1,6 +1,3 @@
-<h1> HELLO </h1>
-
-
 <!-- MAIN MAP (PROJECTS, EXPERTS)-->
 <div>
         <head>
