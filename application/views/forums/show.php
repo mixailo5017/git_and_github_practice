@@ -28,7 +28,7 @@
     </div>
 
     <div id="col1" style="width:15%">
-        <?php $this->load->view('forums/_side_projects', array_merge($projects, array('id' => $details['id']))); ?>
+        <?php $this->load->view('forums/_side_projects_blue', array_merge($projects, array('id' => $details['id']))); ?>
     </div><!-- end #col1 -->
 
     <div id="col2" style="width:50%">
