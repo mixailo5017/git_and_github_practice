@@ -33,7 +33,7 @@
 
     <div id="col2" style="width:50%">
 
-       <?php if ($details['title'] == '3rd Blueprint 2025 2X Leadership Forum') {
+       <?php if ($details['title'] == 'Eurasia Leadership Forum') {
         $this->load->view('forums/_details_blue', $details);
       }
       else {
