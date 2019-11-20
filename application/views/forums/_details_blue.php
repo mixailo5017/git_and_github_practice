@@ -20,7 +20,7 @@
           container: 'map',
           style: 'mapbox://styles/johnbrisbane/ck36dhmba5a6j1cl9ftrxq6rt', // replace this with your style URL
           center: [20.661557, 50.893748],
-          zoom: 3.7
+          zoom: 2.7
         });
     // code from the next step will go here
         </script>
