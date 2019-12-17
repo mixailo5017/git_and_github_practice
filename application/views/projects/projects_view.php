@@ -30,9 +30,9 @@
 			</section><!-- end .portlet -->
 
 			<div id="project_tabs" class="white_box">
-			
+
 				<?php $this->load->view('projects/projects_view/overview', $project); ?>
-				<?php 
+				<?php
 					foreach ($project_sections as $section => $appears) {
 						$this->load->view("projects/projects_view/$section", $project);
 					}
@@ -48,7 +48,7 @@
                 </div>
             <?php endif; ?>
 
-			<?php 
+			<?php
 			// Don't show Project Feed on official Brazilian projects
 			if ($userdata['uid'] != BRAZIL_USER_ID) {
 			?>
@@ -145,7 +145,7 @@
 
 				<div class="executive-details">
 					<h2 class="name"><a href="/expertise/<?php echo $contactperson["uid"]; ?>"><?php echo $fullname; ?></a></h2>
-					<?php 
+					<?php
 					if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
 						<p><strong><?php echo $contactperson['title'];?></strong></p>
 						<p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $contactperson['organization'];?></a></p>
@@ -275,7 +275,7 @@
 						}
 						if($orgCount < 3)
 						{
-/*							?>
+						/*	?>
 
 							<a href="/expertise/<?php echo $orgexp['uid'];?>">
                                 <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
@@ -296,11 +296,6 @@
 					<a href="/expertise/4019">
 														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
 					</a>
-							
-					<?php }
-						$l++;
-						$orgCount++;
-					} ?>
 				</section><!-- end .portlet -->
 				<?php	}	?>
 		</div><!-- end #col3 -->
