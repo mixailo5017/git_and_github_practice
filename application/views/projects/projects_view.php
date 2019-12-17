@@ -275,11 +275,27 @@
 						}
 						if($orgCount < 3)
 						{
-							?>
-						 
+/*							?>
+
 							<a href="/expertise/<?php echo $orgexp['uid'];?>">
                                 <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
 							</a>
+
+					<?php */ }
+						$l++;
+						$orgCount++;
+					} ?>
+					<a href="/expertise/887">
+														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
+					</a>
+
+					<a href="/expertise/4018">
+														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
+					</a>
+
+					<a href="/expertise/4019">
+														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
+					</a>
 							
 					<?php }
 						$l++;
