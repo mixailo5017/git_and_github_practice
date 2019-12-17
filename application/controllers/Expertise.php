@@ -392,7 +392,7 @@ class Expertise extends CI_Controller {
     private function check_sort($value)
     {
         $allowed = array_keys($this->sort_options);
-        $default = 4;
+        $default = 3;
 
         if (in_array($value, $allowed)) {
             return $value;
