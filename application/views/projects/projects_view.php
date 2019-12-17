@@ -286,15 +286,15 @@
 						$orgCount++;
 					} ?>
 					<a href="/expertise/887">
-														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
+														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/951b6b6a886eb45d6bbe8ccf6c4a26d2.png?fit=contain&w=168&h=168&s=401de461e53034a0ad5df4ff64816ccb" >
 					</a>
 
 					<a href="/expertise/4018">
-														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
+														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/a8c582d69fa5e00aadfc2e55a7afb7ed.png?fit=contain&w=168&h=168s=95d3c025d23152f2923009e7d1accca8" >
 					</a>
 
 					<a href="/expertise/4019">
-														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
+														<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/8483a658011bfc15e066af1f339c9fe8.png?fit=contain&w=168&h=168s=4502bde358664f3f6f68cc647c7622da" >
 					</a>
 				</section><!-- end .portlet -->
 				<?php	}	?>
