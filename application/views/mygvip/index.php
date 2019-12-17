@@ -11,23 +11,14 @@ body, html {
       margin-top: auto;
       margin-left: auto;
       margin-right: auto;
+      margin-bottom: auto;
         }
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/new/myvippic.jpg");
-  height: 40%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
 </style>
 
-<div class="hero-image">
-  <div class="photo">
-      <img src="/images/new/GViP_Logos_white.png" height="250" class="center"/>
-  </div>
-</div>
+<section style="background: url(../images/new/myvippic.jpg) no-repeat;">
+      <img src="/images/new/GViP_Logos_white.png" style="height: 200px" class="center"/>
+</section>
+
 <hr>
 
 <div class="clearfix" id="content">
