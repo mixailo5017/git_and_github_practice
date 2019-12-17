@@ -46,14 +46,11 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
     </div>
 </section>
 
-<section class="global-lt">
-    <div class="container">
-        <h2 class="h1-xl">Engage the World of Infrastructure</h2>
-        <p>Engaging in the infrastructure marketplace presents complex questions every day. GViP is a tool that enables you to find the right solution, quickly. We connect you to the right experts—putting you in conversation with the best resources in the global expert marketplace. With GViP you can follow projects around the world, engage the right expertise, and create a powerful dashboard that lets you see opportunities, and dangers, at a glance.</p>
-        <div class="green cta-box">
-            <h3 class="h3-std">Connect with Global Expertise</h3>
-            <p>Build a powerful community of infrastructure experts — bring the global expert community, public and private, to your fingertips, your dashboard, whenever you want.</p>
-        </div>
+<section class="global-lt" style="background: url(../images/new/world-grid-spotlight.png)">
+    <div style="padding-top:200px;" class="container">
+        <h2 class="h1-xl">#CreateGreat, Globally</h2>
+        <p >You need to make good decisions, quickly.  You need to build your business, with certainty.  You need to find the right data that defines your market, and act.  GViP is the tool that enables you to make decisions, build your business, and powerfully understand the market.  Cut your project's development time by 50%, and reach the finish line on time, and on budget.  The GViP platform helps you find expertise, identify the right tools, choose the right partners, and build a tremendous career.  #CreateGreat
+        </p>
     </div>
 </section>
 
