@@ -50,7 +50,7 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
         <p style="padding-bottom:50px;" >You need to make good decisions, quickly.  You need to build your business, with certainty.  You need to find the right data that defines your market, and act.  GViP is the tool that enables you to make decisions, build your business, and powerfully understand the market.  Cut your project's development time by 50%, and reach the finish line on time, and on budget.  The GViP platform helps you find expertise, identify the right tools, choose the right partners, and build a tremendous career.  #CreateGreat
         </p>
         <h2> Strategic Project Connections Globally (Powered by GViP AI+) </h2>
-        <div style="padding-left:170px">
+        <div>
           <img src="/images/new/connections.png" alt="Connetions">
         </div>
     </div>
