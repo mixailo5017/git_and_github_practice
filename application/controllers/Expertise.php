@@ -231,6 +231,12 @@ class Expertise extends CI_Controller {
             	if ($users['uid'] == 4018) {
 			$view = 'expertise/organization_view_oracle';
 			}
+		elseif ($users['uid'] == 4020) {
+			$view = 'expertise/organization_view_starr';
+			}
+		elseif ($users['uid'] == 4021) {
+			$view = 'expertise/organization_view_kiewit';
+			}
 	    	else {
             		$view = 'expertise/organization_view';
 			}
