@@ -107,10 +107,22 @@
             <div class="inner">
                     <ul>
                             <li class="clearfix">
-                                <a href="/projects/hospital-usme">
-                                    <img alt="Hospital Usme" class="left img_border" width="59" src="/img/site/placeholder_organization.png?fit=contain&w=150&h=150&s=e532ff35b86733b4b86f8d4d794ff3a6">
-                                    <span class="title">Hospital Usme <span class="location">Bogota, Distrito Capital de Bogotá</span></span>
-                                </a>
+                              <a href="/projects/pallas-nuclear-reactor">
+                                  <img alt="Pallas Nuclear Reactor" class="left img_border" width="59" src="/img/content_projects/11e5797d444225393844f26d1c8d6407.jpg?fit=contain&w=150&h=150&s=bb2c5124db5dcad93ad488141213f12b">
+                                  <span class="title">Pallas Nuclear Reactor <span class="location"> Schagen, North Holland</span></span>
+                              </a>
+                            </li>
+                            <li class="clearfix">
+                              <a href="/projects/sweden-eastlink-project">
+                                  <img alt="Sweden Eastlink Project" class="left img_border" width="59" src="/img/content_projects/db89fa4dae6418cb4110701ff45571b2.jpg?fit=contain&w=150&h=150&s=09fb614495afa6a71de7ba5cac247686">
+                                  <span class="title">Sweden Eastlink Project <span class="location">Järna, Stockholm County</span></span>
+                              </a>
+                            </li>
+                            <li class="clearfix">
+                              <a href="/projects/northeast-maglev-project">
+                                  <img alt="Northeast Maglev Project" class="left img_border" width="59" src="/img/content_projects/53a4274dff28baf91e8f4cb174838600.png?fit=contain&w=150&h=150&s=9adbec024d08fd70386845c0c1b2cede">
+                                  <span class="title">Northeast Maglev Project <span class="location">Northeast, United States</span></span>
+                              </a>
                             </li>
                         </ul>
 
