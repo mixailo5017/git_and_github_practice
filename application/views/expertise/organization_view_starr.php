@@ -107,21 +107,21 @@
             <div class="inner">
                     <ul>
                             <li class="clearfix">
-                              <a href="/projects/pallas-nuclear-reactor">
-                                  <img alt="Pallas Nuclear Reactor" class="left img_border" width="59" src="/img/content_projects/11e5797d444225393844f26d1c8d6407.jpg?fit=contain&w=150&h=150&s=bb2c5124db5dcad93ad488141213f12b">
-                                  <span class="title">Pallas Nuclear Reactor <span class="location"> Schagen, North Holland</span></span>
+                              <a href="/projects/develop-a-comprehensive-rating-methodology-international-islamic-rating-agency-iira">
+                                  <img alt="Helwan Power Plant Project (II)" class="left img_border" width="59" src="/img/content_projects/9bb7a551b19ce545441ae55ffd8b206f.JPG?fit=contain&w=150&h=150&s=a04f9cc2eb31ce4a7ef78f1f6ddf2622">
+                                  <span class="title">Helwan Power Plant Project (II) <span class="location"> Helwan, Cairo Governorate</span></span>
                               </a>
                             </li>
                             <li class="clearfix">
-                              <a href="/projects/sweden-eastlink-project">
-                                  <img alt="Sweden Eastlink Project" class="left img_border" width="59" src="/img/content_projects/db89fa4dae6418cb4110701ff45571b2.jpg?fit=contain&w=150&h=150&s=09fb614495afa6a71de7ba5cac247686">
-                                  <span class="title">Sweden Eastlink Project <span class="location">Järna, Stockholm County</span></span>
+                              <a href="/projects/kuwait-international-airport-expansion">
+                                  <img alt="Kuwait International Airport Expansion" class="left img_border" width="59" src="/img/content_projects/8f20a70e37524538763b973a1c703ca3.jpeg?fit=contain&w=150&h=150&s=d51b2bf1326acc4a0bbab52d3d290369">
+                                  <span class="title">Kuwait International Airport Expansion <span class="location">Farwaniya, KW</span></span>
                               </a>
                             </li>
                             <li class="clearfix">
-                              <a href="/projects/northeast-maglev-project">
-                                  <img alt="Northeast Maglev Project" class="left img_border" width="59" src="/img/content_projects/53a4274dff28baf91e8f4cb174838600.png?fit=contain&w=150&h=150&s=9adbec024d08fd70386845c0c1b2cede">
-                                  <span class="title">Northeast Maglev Project <span class="location">Northeast, United States</span></span>
+                              <a href="/projects/gebze-istanbul-motorway">
+                                  <img alt="Gebze-Izmir Motorway" class="left img_border" width="59" src="/img/content_projects/19c08b43cb7b7ae11b85e30ebbfca537.jpg?fit=contain&w=150&h=150&s=4b8a998a5212a70f8ffc80760bcb2ef1">
+                                  <span class="title">Gebze-Izmir Motorway <span class="location">Izmir, Izmir</span></span>
                               </a>
                             </li>
                         </ul>
