@@ -990,7 +990,7 @@ $lang['MapContentLightning'] = 'Lightning';
 
 $lang['InfrastructureProfessionalsNetwork'] = 'Connecting infrastructure project developers with experts';
 
-$lang['Lightning'] = 'Business AI+';
+$lang['Lightning'] = 'AI Showroom';
 $lang['B_LIGHTNING'] = 'Lightning';
 
 $lang['Tour'] = 'Tour';
