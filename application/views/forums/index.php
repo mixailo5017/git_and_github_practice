@@ -31,6 +31,9 @@
                    target="_blank"
                    class="button light_gray book"><?php echo lang('ForumBookMeeting') ?></a>
             <?php } ?>
+                <a href="https://www.gvip.io/forums/projects/<?php echo $featured['id'] ?>" 
+                    target="_blank"
+                    class="button light_gray book"><?php echo 'Strategic 100 Projects' ?></a>
         </div>
     </div>
     <?php } ?>
