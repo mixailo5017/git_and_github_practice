@@ -199,8 +199,7 @@ define('PROJECT_PROFILES_ENABLED', TRUE);
 // which project profiles will not show the project developer, etc.
 // Arrays in constants requires PHP 5.6. Defining them using the define statement only available from PHP 7.0.
 const INTERNAL_USERS = [24, 28, 37, 195, 198, 222, 298, 492, 562, 583, 684, 741, 813, 824, 840, 1138, 1301,
-					    1342, 1495, 1986, 3453, 3456, 3823, 3845, 3871, 3903, 3943, 3963, 4005, 4030, 4033
-		       			    ];
+					    1342, 1495, 1986, 3453, 3456, 3823, 3845, 3871, 3903, 3943, 3963, 4005, 4030, 4033];
 
 // The user ID of the official Brazilian government user account
 // Used to determine whether to display the Project Feed
