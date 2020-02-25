@@ -47,8 +47,12 @@
                     </a>
                 </div>
             <?php endif; ?>
-			<?php
-			// Don't show Project Feed on official Brazilian projects
+
+
+
+
+            <?php
+			// Don't show Project Feed unless internal user
 			if (in_array(Auth::id(), INTERNAL_USERS)) {
 			?>
 			<div class="comments white_box pull_up_white">
@@ -93,6 +97,93 @@
 		        </div>
 			</div>
 			<?php } ?>
+
+
+			<div class="comments white_box pull_up_white">
+				<h2> Project News Feed </h2>
+				<div style="padding-left:20px; padding-right:20px; padding-bottom:20px">
+					<?php
+					$accessKey = 'c4c2bafe03e54ee9b8bbbe3f168ae88c';
+					$endpoint = 'https://gvip-project-feed.cognitiveservices.azure.com/bing/v7.0/news/search';
+					$projectname = $project['projectdata']['projectname'];
+					$term = $projectname." "."project";
+
+                    function BingNewsSearch ($url, $key, $query) {
+                        // Prepare HTTP request
+                        // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+                        // https://php.net/manual/en/function.stream-context-create.php
+                        $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
+                        $options = array ('http' => array (
+                            'header' => $headers,
+                            'method' => 'GET' ));
+
+                        // Perform the Web request and get the JSON response
+                        $context = stream_context_create($options);
+                        $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
+
+                        // Extract Bing HTTP headers
+                        $headers = array();
+                        foreach ($http_response_header as $k => $v) {
+                            $h = explode(":", $v, 2);
+                            if (isset($h[1]))
+                                if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
+                                    $headers[trim($h[0])] = trim($h[1]);
+                        }
+
+                        return array($headers, $result);
+                    }
+
+                    //print "Searching news for: " . $term . "\n";
+
+                    list($headers, $json) = BingNewsSearch($endpoint, $accessKey, $term);
+
+                    //print "\nRelevant Headers:\n\n";
+                    foreach ($headers as $k => $v) {
+                        //print $k . ": " . $v . "\n";
+                    }
+
+					    //print "\nJSON Response:\n\n";
+					    $obj = json_decode($json);
+                        $json = json_encode($obj, JSON_PRETTY_PRINT);
+                        //printf("<pre>%s</pre>", $json);
+
+
+                    if (!empty($obj->value)) {
+
+                            for ($x = 0; $x <= 4; $x++) {
+
+                                if (!empty($obj->value[$x]->name)){
+
+                                    printf("
+                                    <div>
+                                    <a style='font-size: medium' href=\"%s\">%s</a>            
+                                    <p>%s</p> 
+                                    <br> 
+                                    </div>
+                                 
+                                ", $obj->value[$x]->url, $obj->value[$x]->name, $obj->value[$x]->description);
+                                }
+                            }
+                        }
+                    else{
+                        printf("
+                            <div>             
+                                <p>There is no news in the past 30 days</p> 
+                                <br>  
+                             </div>
+                               ");
+
+
+                    }
+					?>
+
+
+			    </div>
+			</div>
+
+
+
+
 		</div><!-- end #col2 -->
 
 		<div id="col3" class="projects">
@@ -119,7 +210,7 @@
                 <a href="/projects/discussions/<?php echo $project['pid'] ?>" class="button discussion light_gray"><?php echo lang('Discussions') ?></a>
             <?php } ?>
             <?php if ($userdata['uid'] == sess_var('uid')) { ?>
-<!--                <a href="/projects/discussions/create/--><?php //echo $project['pid'] ?><!--" class="button discussion light_gray">--><?php //echo lang('DiscussionNew') ?><!--</a>-->
+               <a href="/projects/discussions/create/<?php echo $project['pid'] ?>" class="button discussion light_gray"><?php echo lang('DiscussionNew') ?></a>
                 <a href="/projects/edit/<?php echo $slug ?>" class="button edit light_gray"><?php echo lang('EditProject');?></a>
             <?php } ?>
 
@@ -274,11 +365,11 @@
 						}
 						if($orgCount < 3)
 						{
-						/*	?>
+							?>
 							<a href="/expertise/<?php echo $orgexp['uid'];?>">
                                 <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
 							</a>
-					<?php */ }
+					<?php  }
 						$l++;
 						$orgCount++;
 					} ?>
