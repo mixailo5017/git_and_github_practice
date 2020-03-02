@@ -373,20 +373,6 @@
 						$l++;
 						$orgCount++;
 					} ?>
-
-					<a href="/expertise/4018">
-						<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/a8c582d69fa5e00aadfc2e55a7afb7ed.png?fit=contain&w=168&h=168s=95d3c025d23152f2923009e7d1accca8" >
-					</a>
-
-
-					<a href="/expertise/4020">
-						<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/0add18b7ceafdbfdb8bc3f01651f9137.png?fit=contain&w=168&h=168&s=3e183cf834e10ce8ebc6a69beb2aedc3" >
-					</a>
-
-					<a href="/expertise/4021">
-						<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/fe9162df7c34707d4e7070550062f2fe.png?fit=contain&w=168&h=168&s=4765da7b60f734115538d9725877288b" >
-					</a>
-
 				</section><!-- end .portlet -->
 				<?php	}	?>
 		</div><!-- end #col3 -->
