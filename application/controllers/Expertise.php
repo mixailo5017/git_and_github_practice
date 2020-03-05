@@ -227,19 +227,9 @@ class Expertise extends CI_Controller {
             $fullname = $users['organization'];
 			$project = $this->expertise_model->get_organization_projects($userid);
             $breadcrumb_title = lang('B_EXPERT_ADVERTS');
-            $uri_segment = 'companies';
-            	if ($users['uid'] == 4018) {
-			$view = 'expertise/organization_view_oracle';
-			}
-		elseif ($users['uid'] == 4020) {
-			$view = 'expertise/organization_view_starr';
-			}
-		elseif ($users['uid'] == 4021) {
-			$view = 'expertise/organization_view_kiewit';
-			}
-	    	else {
-            		$view = 'expertise/organization_view';
-			}
+            $uri_segment = 'companies';	
+	    $view = 'expertise/organization_view';
+
 		} else {
             $page_category = 'Expert';
             $fullname = $users['firstname'] . ' ' . $users['lastname'];
