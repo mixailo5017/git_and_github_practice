@@ -89,7 +89,7 @@ class Mygvip extends CI_Controller {
             'key_executives',
             'new_experts',
             'my_experts',
-            'my_discussions'
+            'my_discussions',
             'map'
         );
 
