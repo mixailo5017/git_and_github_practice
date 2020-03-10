@@ -1,5 +1,548 @@
-<div class="clearfix" id="content">
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Display HTML clusters with custom properties</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-assembly/v0.23.2/assembly.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #key {
+            background-color: rgba(0, 0, 0, 0.8);
+            width: 22.22%;
+            height: auto;
+            overflow: auto;
+            position: absolute;
+            top: 0;
+            left: 2%;
+            margin-top: 10%;
+        }
+
+        .total {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 15px;
+        }
+
+        .table {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            border-collapse: collapse;
+        }
+
+
+
+
+
+        #map { border-left: 1px solid #fff;
+            position: absolute;
+            left: 28%;
+            width: 72%;
+            top: 0;
+            bottom: 0;
+            height: 720px
+        }
+
+        .sidebar {
+            width: 28%;
+        }
+
+
+        .pad2 {
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 70%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div id="map"></div>
+<div id="key"></div>
+
+<div class='sidebar'>
+    <div id='listings' class='listings'></div>
+</div>
+
+
+</html>
+
+<?php
+$features = array();
+foreach($map['map_data'] as $key => $orgexp)
+{
+    $features[] = array(
+        'type' => 'Feature',
+        'properties' => array('id' => $orgexp['pid'], 'projectname'=> $orgexp['projectname'], 'sector'=> $orgexp['sector'], 'stage'=> $orgexp['stage'], 'slug'=> $orgexp['slug'], 'projectphoto'=> $orgexp['projectphoto'], 'description'=> $orgexp['description'], 'country'=> $orgexp['country']),
+        'geometry' => array(
+            'type' => 'Point',
+            'coordinates' => array(
+                $orgexp['lng'],
+                $orgexp['lat'],
+                1
+            ),
+        ),
+    );
+}
+$new_data = array(
+    'type' => 'FeatureCollection',
+    'features' => $features,
+);
+$final_data = json_encode($new_data, JSON_PRETTY_PRINT);
+?>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoibG9iZW5pY2hvdSIsImEiOiJjajdrb2czcDQwcHR5MnFycmhuZmo4eWwyIn0.nUf9dWGNVRnMApuhQ44VSw';
+
+    const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/lobenichou/cjto9zfpj00jq1fs7gajbuaas?fresh=true',
+        center: [-79.381000, 43.646000],
+        zoom: 1.8,
+        center: [0, 20]
+    });
+
+    const colors = ['#8dd3c7', '#ffffb3', '#bebada', '#fb8072', '#80b1d3', '#fdb462', '#b3de69', '#fccde5', '#d9d9d9', '#bc80bd', '#ccebc5'];
+
+    const colorScale = d3.scaleOrdinal()
+        .domain(["water", "transport", "energy", "logistics", "social", "oil", "mining", "technology", "tourism", "urban", "others"])
+        .range(colors)
+
+    const water = ['==', ['get', 'sector'], 'Water'];
+    const transport = ['==', ['get', 'sector'], 'Transport'];
+    const energy = ['==', ['get', 'sector'], 'Energy'];
+    const logistics = ['==', ['get', 'sector'], 'Logistics'];
+    const social = ['==', ['get', 'sector'], 'Social'];
+    const oil = ['==', ['get', 'sector'], 'Oil & Gas'];
+    const mining = ['==', ['get', 'sector'], 'Mining & Related'];
+    const technology = ['==', ['get', 'sector'], 'Information & Communication Technologies'];
+    const tourism = ['==', ['get', 'sector'], 'Tourism & Related'];
+    const urban = ['==', ['get', 'sector'], 'Urban Planning & Design'];
+    const others = ['any',
+        ['==', ['get', 'sector'], 'Cogeneration'],
+        ['==', ['get', 'sector'], 'Storage'],
+        ['==', ['get', 'sector'], 'Other'],
+        ['==', ['get', 'sector'], 'Wave and Tidel'],
+        ['==', ['get', 'sector'], 'Petcoke'],
+        ['==', ['get', 'sector'], '']
+    ];
+
+    map.on('load', () => {
+        // add a clustered GeoJSON source for powerplant
+        map.addSource('powerplants', {
+            'type': 'geojson',
+            'data': <?php print_r($final_data); ?>,
+            'cluster': true,
+            'clusterRadius': 100,
+            'clusterProperties': { // keep separate counts for each fuel category in a cluster
+                'water': ['+', ['case', water, 1, 0]],
+                'transport': ['+', ['case', transport, 1, 0]],
+                'energy': ['+', ['case', energy, 1, 0]],
+                'logistics': ['+', ['case', logistics, 1, 0]],
+                'social': ['+', ['case', social, 1, 0]],
+                'oil': ['+', ['case', oil, 1, 0]],
+                'mining': ['+', ['case', mining, 1, 0]],
+                'technology': ['+', ['case', technology, 1, 0]],
+                'tourism': ['+', ['case', tourism, 1, 0]],
+                'urban': ['+', ['case', urban, 1, 0]],
+                'others': ['+', ['case', others, 1, 0]]
+            }
+        });
+
+        map.addLayer({
+            'id': 'powerplant_individual',
+            'type': 'circle',
+            'source': 'powerplants',
+            'filter': ['!=', ['get', 'cluster'], true],
+            'paint': {
+                'circle-color': ['case',
+                    water, colorScale('water'),
+                    transport, colorScale('transport'),
+                    energy, colorScale('energy'),
+                    logistics, colorScale('logistics'),
+                    social, colorScale('social'),
+                    oil, colorScale('oil'),
+                    mining, colorScale('mining'),
+                    technology, colorScale('technology'),
+                    tourism, colorScale('tourism'),
+                    urban, colorScale('urban'),
+                    others, colorScale('others'), '#ffed6f'
+                ],
+                'circle-radius': 5
+            }
+        });
+
+        map.addLayer({
+            'id': 'powerplant_individual_outer',
+            'type': 'circle',
+            'source': 'powerplants',
+            'filter': ['!=', ['get', 'cluster'], true],
+            'paint': {
+                'circle-stroke-color': ['case',
+                    water, colorScale('water'),
+                    transport, colorScale('transport'),
+                    energy, colorScale('energy'),
+                    logistics, colorScale('logistics'),
+                    social, colorScale('social'),
+                    oil, colorScale('oil'),
+                    mining, colorScale('mining'),
+                    technology, colorScale('technology'),
+                    tourism, colorScale('tourism'),
+                    urban, colorScale('urban'),
+                    others, colorScale('others'), '#ffed6f'
+                ],
+                'circle-stroke-width': 2,
+                'circle-radius': 10,
+                'circle-color': "rgba(0, 0, 0, 0)"
+            }
+        });
+
+
+
+        let markers = {};
+        let markersOnScreen = {};
+        let point_counts = [];
+        let totals;
+
+        const getPointCount = (features) => {
+            features.forEach(f => {
+                if (f.properties.cluster) {
+                    point_counts.push(f.properties.point_count)
+                }
+            })
+
+            return point_counts;
+        };
+
+        const updateMarkers = () => {
+            document.getElementById('key').innerHTML = '';
+            let newMarkers = {};
+            const features = map.querySourceFeatures('powerplants');
+            totals = getPointCount(features);
+            features.forEach((feature) => {
+                const coordinates = feature.geometry.coordinates;
+                const props = feature.properties;
+
+                if (!props.cluster) {
+                    return;
+                };
+
+
+                const id = props.cluster_id;
+
+                let marker = markers[id];
+                if (!marker) {
+                    const el = createDonutChart(props, totals);
+                    marker = markers[id] = new mapboxgl.Marker({
+                        element: el
+                    })
+                        .setLngLat(coordinates)
+                }
+
+                newMarkers[id] = marker;
+
+                if (!markersOnScreen[id]) {
+                    marker.addTo(map);
+                }
+            });
+
+            for (id in markersOnScreen) {
+                if (!newMarkers[id]) {
+                    markersOnScreen[id].remove();
+                }
+            }
+            markersOnScreen = newMarkers;
+        };
+
+        const createDonutChart = (props, totals) => {
+            const div = document.createElement('div');
+            const data = [{
+                type: 'water',
+                count: props.water
+            },
+                {
+                    type: 'transport',
+                    count: props.transport
+                },
+                {
+                    type: 'energy',
+                    count: props.energy
+                },
+                {
+                    type: 'social',
+                    count: props.social
+                },
+                {
+                    type: 'logistics',
+                    count: props.logistics
+                },
+                {
+                    type: 'oil',
+                    count: props.oil
+                },
+                {
+                    type: 'mining',
+                    count: props.mining
+                },
+                {
+                    type: 'technology',
+                    count: props.technology
+                },
+                {
+                    type: 'tourism',
+                    count: props.tourism
+                },
+                {
+                    type: 'urban',
+                    count: props.urban
+                },
+                {
+                    type: 'others',
+                    count: props.others
+                },
+            ];
+
+            const thickness = 10;
+            const scale = d3.scaleLinear()
+                .domain([d3.min(totals), d3.max(totals)])
+                .range([500, d3.max(totals)])
+
+            const radius = Math.sqrt(scale(props.point_count));
+            const circleRadius = radius - thickness;
+
+            const svg = d3.select(div)
+                .append('svg')
+                .attr('class', 'pie')
+                .attr('width', radius * 2)
+                .attr('height', radius * 2);
+
+            //center
+            const g = svg.append('g')
+                .attr('transform', `translate(${radius}, ${radius})`);
+
+            const arc = d3.arc()
+                .innerRadius(radius - thickness)
+                .outerRadius(radius);
+
+            const pie = d3.pie()
+                .value(d => d.count)
+                .sort(null);
+
+            const path = g.selectAll('path')
+                .data(pie(data.sort((x, y) => d3.ascending(y.count, x.count))))
+                .enter()
+                .append('path')
+                .attr('d', arc)
+                .attr('fill', (d) => colorScale(d.data.type))
+
+            const circle = g.append('circle')
+                .attr('r', circleRadius)
+                .attr('fill', 'rgba(0, 0, 0, 0.7)')
+                .attr('class', 'center-circle')
+
+            const text = g
+                .append("text")
+                .attr("class", "total")
+                .text(props.point_count_abbreviated)
+                .attr('text-anchor', 'middle')
+                .attr('dy', 5)
+                .attr('fill', 'white')
+
+            const infoEl = createTable(props);
+
+            svg.on('click', () => {
+                d3.selectAll('.center-circle').attr('fill', 'rgba(0, 0, 0, 0.7)')
+                circle.attr('fill', 'rgb(71, 79, 102)')
+                document.getElementById('key').innerHTML = '';
+                document.getElementById('key').append(infoEl);
+            })
+
+            return div;
+        }
+
+        const createTable = (props) => {
+            const getPerc = (count) => {
+                return count / props.point_count;
+            };
+
+            const data = [{
+                type: 'water',
+                perc: getPerc(props.water)
+            },
+                {
+                    type: 'transport',
+                    perc: getPerc(props.transport)
+                },
+                {
+                    type: 'energy',
+                    perc: getPerc(props.energy)
+                },
+                {
+                    type: 'social',
+                    perc: getPerc(props.social)
+                },
+                {
+                    type: 'logistics',
+                    perc: getPerc(props.logistics)
+                },
+                {
+                    type: 'oil',
+                    perc: getPerc(props.oil)
+                },
+                {
+                    type: 'mining',
+                    perc: getPerc(props.mining)
+                },
+                {
+                    type: 'technology',
+                    perc: getPerc(props.technology)
+                },
+                {
+                    type: 'tourism',
+                    perc: getPerc(props.tourism)
+                },
+                {
+                    type: 'urban',
+                    perc: getPerc(props.urban)
+                },
+                {
+                    type: 'others',
+                    perc: getPerc(props.others)
+                },
+            ];
+
+            const columns = ['type', 'perc']
+            const div = document.createElement('div');
+            const table = d3.select(div).append('table').attr('class', 'table')
+            const thead = table.append('thead')
+            const tbody = table.append('tbody');
+
+            thead.append('tr')
+                .selectAll('th')
+                .data(columns).enter()
+                .append('th')
+                .text((d) => {
+                    let colName = d === 'perc' ? '%' : 'Project Sector'
+                    return colName;
+                })
+
+            const rows = tbody.selectAll('tr')
+                .data(data.filter(i => i.perc).sort((x, y) => d3.descending(x.perc, y.perc)))
+                .enter()
+                .append('tr')
+                .style('border-left', (d) => `20px solid ${colorScale(d.type)}`);
+
+            // create a cell in each row for each column
+            const cells = rows.selectAll('td')
+                .data((row) => {
+                    return columns.map((column) => {
+                        let val = column === 'perc' ? d3.format(".2%")(row[column]) : row[column];
+                        return {
+                            column: column,
+                            value: val
+                        };
+                    });
+                })
+                .enter()
+                .append('td')
+                .text((d) => d.value)
+                .style('text-transform', 'capitalize')
+
+            return div;
+        }
+
+        map.on('data', (e) => {
+            if (e.sourceId !== 'powerplants' || !e.isSourceLoaded) return;
+
+            map.on('move', updateMarkers);
+            map.on('moveend', updateMarkers);
+            updateMarkers();
+        });
+
+        // Change the cursor to a pointer when the mouse is over the places layer.
+        map.on('mouseenter', 'powerplant_individual', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+// Change it back to a pointer when it leaves.
+        map.on('mouseleave', 'powerplant_individual', function() {
+            map.getCanvas().style.cursor = '';
+        });
+
+        map.on('click', 'powerplant_individual', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var projectname = e.features[0].properties.projectname;
+            var projectphoto = e.features[0].properties.projectphoto;
+// Ensure that if the map is zoomed out such that multiple
+// copies of the feature are visible, the popup appears
+// over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(
+                    "<div style='height: 300px; width: 300px'>"
+                    + "<h1 style='text-align: center; font-size: 15px'> <strong>"
+                    + projectname
+                    + "</strong> </h1>"
+                    + "<img src=\'" + projectphoto + "\'>"
+                    + "</div>"
+                )
+                .addTo(map);
+        });
+    });
+</script>
+
+<div class="clearfix" id="content" style="padding-top: 700px">
+		<!-- map -->
+
 	<div class="column_1">
+    <hr>
         <!-- Key Executives -->
         <section class="similar-experts group">
             <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipKeyExecutives') ?></h2>
@@ -188,85 +731,9 @@
 		</section>
         <?php } ?>
     </div>
-
-	<div class="column_2">
-		<!-- map -->
-		<div class="map">
-            <div class="map_filter my_vip">
-                <form id="map_search">
-                    <div class="form_row">
-                        <!-- <div class="input_group pe_toggle"> -->
-                        <div class="select_wrap input_group">
-<!--                            <span class="show_me">Show:</span>-->
-                            <div class="form_control">
-                                <?php
-                                $members_options = show_members_dropdown2();
-                                $keys = array_keys($members_options);
-                                echo form_dropdown("content_type", $members_options, array(array_shift($keys)), 'id="content_type" class="toggle_experts"');
-                                $keys = null;
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group stage toggle_projects">
-<!--                            <span class="word">Stage:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f4">Stage:</label>-->
-                                <?php
-                                $project_stage_options = stages_dropdown();
-                                echo form_dropdown("project_stage",$project_stage_options,'','class="toggle_projects"');
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group discipline toggle_experts">
-<!--                            <span class="word">In:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f4">In:</label>-->
-                                <?php
-                                $expert_discipline_options =  discipline_dropdown();
-                                array_shift($expert_discipline_options);
-                                $list = array('' => lang('AnyDiscipline')) + $expert_discipline_options;
-                                echo form_dropdown("expert_discipline",$list,'','class="toggle_experts"');
-                                ?>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group sector">
-<!--                            <span class="word">Sector:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f3">Sectors</label>-->
-                                <select id="f3" name="sector">
-                                    <option value="">All Sectors</option>
-                                    <?php echo map_sector_options() ?>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="select_wrap input_group toggle_projects budget">
-<!--                            <span class="word">Value:</span>-->
-                            <div class="form_control">
-<!--                                <label class="access" for="f6">Budget</label>-->
-                                <?php
-                                $budget_dropdown_options = budget_dropdown();
-                                echo form_dropdown('budget',$budget_dropdown_options,'','class="toggle_projects" id="budget"');
-                                ?>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div><!-- end filter -->
-		</div>
-        <div class="dn" id="map_projects"></div>
-        <div class="dn" id="map_experts"></div>
-        <div id="map_wrapper" class="my_vip">
-            <div id="p_e_map" class="p_e_map" style="width:100%; height:450px;">
-                <a href="http://mapbox.com/about/maps" class='mapbox-wordmark' target="_blank">Mapbox</a>
-            </div>
-        </div>
-
+    <hr>
 		<!-- news feed -->
-		<section class="comments">
+		<section class="column_2">
             <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipUpdatesTitle') ?></h2>
 
             <ul class="feed updates">
