@@ -5125,24 +5125,7 @@ class Projects_model extends CI_Model {
 		$this->db->order_by("es.subsector", "desc");*/
 
 
-		$query_sme = $this->db->query("select  * from (
-		SELECT distinct es.uid,m.* FROM exp_expertise_sector as es INNER JOIN exp_members as m ON m.uid = es.uid
-		WHERE
-		(es.sector='".$prd_sector['sector']."' AND es.subsector='".$prd_sector['subsector']."')
-		AND (m.annualrevenue >= 15 OR m.totalemployee != '1-50') AND m.public_status !='open' AND m.membertype = '8'".$uid_append."
-		union
-		SELECT distinct es.uid,m.* FROM exp_expertise_sector as es INNER JOIN exp_members as m ON m.uid = es.uid
-		WHERE
-		es.sector='".$prd_sector['sector']."' AND es.subsector !='".$prd_sector['subsector']."'
-		AND (m.annualrevenue >= 15 OR m.totalemployee != '1-50') AND m.public_status !='open'  AND m.membertype = '8'".$uid_append."
-		union
-		SELECT distinct es.uid,m.* FROM exp_expertise_sector as es INNER JOIN exp_members as m ON m.uid = es.uid
-		WHERE
-		es.sector !='".$prd_sector['sector']."' AND es.subsector ='".$prd_sector['subsector']."'
-		AND (m.annualrevenue >= 15 OR m.totalemployee != '1-50') AND m.public_status !='open'  AND m.membertype = '8'".$uid_append."
-		)
-		as s
-		");
+		$query_sme = $this->db->query("SELECT * FROM public.exp_members WHERE membertype = '8' AND status = '1'");
 
 		//$query_sme = $this->db->get('exp_expertise_sector as es');
 		//echo $this->db->last_query();
