@@ -5186,6 +5186,21 @@ class Projects_model extends CI_Model {
         return null;
 
     }
+	
+	
+	public function get_proj_map_data()
+	{
+		$query_sme = $this->db->query("SELECT pid, projectname, slug, lat, lng, sector, projectphoto, description, country, subsector, stage
+										FROM public.exp_projects
+										WHERE isdeleted = '0' AND lat IS NOT NULL
+
+										");
+
+		$smearr = $query_sme->result_array();
+		$query_sme->free_result();
+
+		return $smearr;
+	}
 
 
 }
