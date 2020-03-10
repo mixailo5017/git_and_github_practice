@@ -40,7 +40,10 @@ class Mygvip extends CI_Controller {
         $this->load->model('projects_model');
         $my_projects = $this->projects_model->my_projects($this->uid);
         $my_project_ids = flatten_assoc($my_projects, null, 'id');
-        $my_projects_count = count($my_projects);
+        $my_projects_count = count($my_projects);                
+        
+        $map['map_data'] = $this->projects_model->get_proj_map_data();
+
 
         $similar_projects = $this->projects_model->similar_projects($my_project_ids);
         $similar_project_ids = flatten_assoc($similar_projects, null, 'id');
@@ -87,6 +90,7 @@ class Mygvip extends CI_Controller {
             'new_experts',
             'my_experts',
             'my_discussions'
+            'map'
         );
 
         $this->set_headers();
