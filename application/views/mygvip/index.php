@@ -530,7 +530,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                     + "<h1 style='text-align: center; font-size: 15px'> <strong>"
                     + projectname
                     + "</strong> </h1>"
-                    + "<img src=\'" + projectphoto + "\'>"
+                    + "<img src=\'https://www.gvip.io/img/site/" + projectphoto + "?w=198&h=198\'>"
                     + "</div>"
                 )
                 .addTo(map);
