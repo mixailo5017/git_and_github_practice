@@ -357,6 +357,7 @@
 					<h4><?php echo lang('ExpertOrganizations');?></h4>
 				<?php
 					$orgCount = 0;
+					shuffle($project['organizationmatch']);
 					foreach($project['organizationmatch'] as $key => $orgexp)
 					{
 						if($orgexp['uid'] == $userdata['uid'])
