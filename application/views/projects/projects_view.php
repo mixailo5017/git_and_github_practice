@@ -248,6 +248,45 @@
 				</div>
 			</section>
 			<?php } ?>
+			
+			
+			            <?php if (in_array($userdata['uid'], INTERNAL_USERS)) { ?>
+                <section class="executive white_box" id="project_executive">
+                    <h2><?php echo (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : "CG/LA Analyst") ?></h2>
+
+                    <div class="image">
+                        <?php
+                        $src = expert_image($contactperson['userphoto'], 138, array(
+                            'width' => 138,
+                            'rounded_corners' => array( 'all','2' ),
+                            'crop' => TRUE,
+                            'fit'  => ($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? 'contain' : null
+                        ));
+                        $fullname = (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname']);
+                        ?>
+                        <a href="/expertise/<?php echo $contactperson["uid"] ?>">
+                            <img src="<?php echo $src ?>" alt="<?php echo $fullname ?>'s photo" style="margin:0px;">
+                        </a>
+                    </div>
+
+                    <div class="executive-details">
+                        <h2 class="name"><a href="/expertise/<?php echo $contactperson["uid"]; ?>"><?php echo $fullname; ?></a></h2>
+                        <?php
+                        if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
+                            <p><strong><?php echo $contactperson['title'];?></strong></p>
+                            <p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $contactperson['organization'];?></a></p>
+                        <?php } else if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT) {?>
+                            <p><strong><?php echo $contactperson['title'] ?></strong></p>
+                            <p><?php echo $contactperson['organization'] ?></p>
+                        <?php } else { ?>
+                            <p><?php echo $contactperson['discipline'] ?></p>
+                        <?php } ?>
+                    </div>
+                </section>
+            <?php } ?>
+			
+			
+			
 
             <?php // Visible only to the project owner ?>
             <?php if ($userdata['uid'] == sess_var('uid')) { ?>
@@ -357,6 +396,7 @@
 					<h4><?php echo lang('ExpertOrganizations');?></h4>
 				<?php
 					$orgCount = 0;
+					shuffle($project['organizationmatch']);
 					foreach($project['organizationmatch'] as $key => $orgexp)
 					{
 						if($orgexp['uid'] == $userdata['uid'])
@@ -373,20 +413,6 @@
 						$l++;
 						$orgCount++;
 					} ?>
-
-					<a href="/expertise/4018">
-						<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/a8c582d69fa5e00aadfc2e55a7afb7ed.png?fit=contain&w=168&h=168s=95d3c025d23152f2923009e7d1accca8" >
-					</a>
-
-
-					<a href="/expertise/4020">
-						<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/0add18b7ceafdbfdb8bc3f01651f9137.png?fit=contain&w=168&h=168&s=3e183cf834e10ce8ebc6a69beb2aedc3" >
-					</a>
-
-					<a href="/expertise/4021">
-						<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/fe9162df7c34707d4e7070550062f2fe.png?fit=contain&w=168&h=168&s=4765da7b60f734115538d9725877288b" >
-					</a>
-
 				</section><!-- end .portlet -->
 				<?php	}	?>
 		</div><!-- end #col3 -->
