@@ -103,8 +103,8 @@
 				<h2> Project News Feed </h2>
 				<div style="padding-left:20px; padding-right:20px; padding-bottom:20px">
 					<?php
-					$accessKey = 'c4c2bafe03e54ee9b8bbbe3f168ae88c';
-					$endpoint = 'https://gvip-project-feed.cognitiveservices.azure.com/bing/v7.0/news/search';
+					$accessKey = 'e453e9df057848cc8c186bd0222d7060';
+					$endpoint = 'https://gvipprojnews.cognitiveservices.azure.com/bing/v7.0/news/search';
 					$projectname = $project['projectdata']['projectname'];
 					$term = $projectname." "."project";
 
