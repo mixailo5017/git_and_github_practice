@@ -2,7 +2,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Display HTML clusters with custom properties</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -22,8 +21,8 @@
             overflow: auto;
             position: absolute;
             top: 0;
-            left: 2%;
-            margin-top: 10%;
+            left: 1%;
+            margin-top: 5%;
         }
 
         .total {
@@ -44,15 +43,15 @@
 
         #map { border-left: 1px solid #fff;
             position: absolute;
-            left: 28%;
-            width: 72%;
+            left: 25%;
+            width: 75%;
             top: 0;
             bottom: 0;
             height: 720px
         }
 
         .sidebar {
-            width: 28%;
+            width: 25%;
         }
 
 
@@ -103,10 +102,11 @@
 <div id="map"></div>
 <div id="key"></div>
 
-<div class='sidebar'>
-    <div id='listings' class='listings'></div>
-</div>
 
+<div class='sidebar' style="height: 800px">
+    <div style="padding: 25px" id="pop" >
+    </div>
+</div>
 
 </html>
 
@@ -116,12 +116,12 @@ foreach($map['map_data'] as $key => $orgexp)
 {
     $features[] = array(
         'type' => 'Feature',
-        'properties' => array('id' => $orgexp['pid'], 'projectname'=> $orgexp['projectname'], 'sector'=> $orgexp['sector'], 'stage'=> $orgexp['stage'], 'slug'=> $orgexp['slug'], 'projectphoto'=> $orgexp['projectphoto'], 'description'=> $orgexp['description'], 'country'=> $orgexp['country']),
+        'properties' => array('id' => $orgexp['pid'],'location'=> $orgexp['location'], 'description'=> $orgexp['description'], 'projectname'=> $orgexp['projectname'], 'sector'=> $orgexp['sector'], 'stage'=> $orgexp['stage'], 'sponsor'=> $orgexp['sponsor'], 'subsector'=> $orgexp['subsector'], 'slug'=> $orgexp['slug'], 'projectphoto'=> $orgexp['projectphoto'], 'description'=> $orgexp['description'], 'country'=> $orgexp['country'], 'totalbudget'=> $orgexp['totalbudget']),
         'geometry' => array(
             'type' => 'Point',
             'coordinates' => array(
-                $orgexp['lng'],
-                $orgexp['lat'],
+                $orgexp['lng'] + (rand(-1000,1000)*.00001),
+                $orgexp['lat'] + (rand(-1000,1000)*.00001),
                 1
             ),
         ),
@@ -176,7 +176,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             'type': 'geojson',
             'data': <?php print_r($final_data); ?>,
             'cluster': true,
-            'clusterRadius': 100,
+            'clusterRadius': 50,
             'clusterProperties': { // keep separate counts for each fuel category in a cluster
                 'water': ['+', ['case', water, 1, 0]],
                 'transport': ['+', ['case', transport, 1, 0]],
@@ -396,6 +396,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             svg.on('click', () => {
                 d3.selectAll('.center-circle').attr('fill', 'rgba(0, 0, 0, 0.7)')
                 circle.attr('fill', 'rgb(71, 79, 102)')
+                document.getElementById('pop').innerHTML = '';
                 document.getElementById('key').innerHTML = '';
                 document.getElementById('key').append(infoEl);
             })
@@ -513,32 +514,61 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
         });
 
         map.on('click', 'powerplant_individual', function(e) {
+            document.getElementById('key').innerHTML = '';
+
             var coordinates = e.features[0].geometry.coordinates.slice();
             var projectname = e.features[0].properties.projectname;
             var projectphoto = e.features[0].properties.projectphoto;
+            var slug = e.features[0].properties.slug;
+            var location = e.features[0].properties.location;
+            var stage = e.features[0].properties.stage;
+            var sponsor = e.features[0].properties.sponsor;
+            var description = e.features[0].properties.description;
+            var subsector = e.features[0].properties.subsector;
+            var totalbudget = e.features[0].properties.totalbudget;
+
+            if (stage == "om") {
+                stage = "Operation and Maintenance";
+            }
+
+            stage = stage.charAt(0).toUpperCase() + stage.slice(1);
+
+
+
+
+
+
 // Ensure that if the map is zoomed out such that multiple
 // copies of the feature are visible, the popup appears
 // over the copy being pointed to.
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
+            document.getElementById('pop').innerHTML = '';
+            document.getElementById('pop').innerHTML =
+                    "<div style=\"height: 300px; width: 300px\">"
+                    +   "<div>"
+                    +       "<h1 style=\"text-align: center; font-size: 20px\"> <strong>"
+                    +       projectname
+                    +       "</strong> </h1>"
+                    +   "</div>"
+                    +   "<div>"
+                    +      "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'https://www.gvip.io/img/content_projects/" + projectphoto + "?crop=1&w=250&h=250\'>"
+                    +   "</div>"
+                    +   "<div>"
+                    +       "<h2 style=\"text-align: center; margin: 10px; font-size: 15px\">" + location + "</h2>"
+                    +       "<p> <strong>Stage:</strong> " + stage +  "</p>"
+                    +       "<p> <strong> Sponsor: </strong>" + sponsor +  "</p>"
+                    +        "<p style='height: 200px; overflow: scroll; padding-top: 10px'>" + description +  "</p>"
+                    +       "<a style='margin-left: 25%' class=\"light_green\" href=\'/projects/" + slug + "\' role=\"button\">View Project</a>\n"
+                    +"</div>";
 
-            new mapboxgl.Popup()
-                .setLngLat(coordinates)
-                .setHTML(
-                    "<div style='height: 300px; width: 300px'>"
-                    + "<h1 style='text-align: center; font-size: 15px'> <strong>"
-                    + projectname
-                    + "</strong> </h1>"
-                    + "<img src=\'https://www.gvip.io/img/site/" + projectphoto + "?w=198&h=198\'>"
-                    + "</div>"
-                )
-                .addTo(map);
         });
     });
 </script>
 
-<div class="clearfix" id="content" style="padding-top: 700px">
+
+<div class="clearfix" id="content">
 		<!-- map -->
 
 	<div class="column_1">
