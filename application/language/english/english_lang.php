@@ -11,7 +11,7 @@ $lang['StageElaboration'] = 'Stage — Additional Details';
 $lang['siteTitle'] = "ViP My VIP Workspace"; 
 $lang['forgotPassword'] = "Forgot your password?"; 
 $lang['myVip']	= "My GViP";
-$lang['map']	= "Map";
+$lang['map']	= "GIS Map";
 $lang['projects']	= "Projects";
 $lang['forums']	= "Communities";
 $lang['leadershipForum']	= "Leadership Forum";
@@ -136,7 +136,7 @@ $lang['ExpertOrganizations'] = 'Expert Organizations';
 $lang['ProjectExecutive'] = 'Project Executive';
 $lang['Organization'] = 'Organization';
 $lang['Overview'] = 'Overview';
-$lang['Map'] = 'Map';
+$lang['Map'] = 'GIS Map';
 $lang['KeyServices']= 'Key Services';
 $lang['EstJobsCreated'] = 'Est. Jobs Created';
 $lang['JobsCreatedExplanation'] = 'An estimate of the total jobs (direct and indirect) that will be created by this project. Click to learn more.';
@@ -990,7 +990,7 @@ $lang['MapContentLightning'] = 'Lightning';
 
 $lang['InfrastructureProfessionalsNetwork'] = 'Connecting infrastructure project developers with experts';
 
-$lang['Lightning'] = 'AI Showroom';
+$lang['Lightning'] = 'AI Forum';
 $lang['B_LIGHTNING'] = 'Lightning';
 
 $lang['Tour'] = 'Tour';
