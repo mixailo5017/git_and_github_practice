@@ -79,28 +79,6 @@
 
     <div class="side_portlets">
 
-            <?php
-                if((count_if_set($case_studies)) > 0)
-                {
-                    echo '<div class="portlet_list case_studies">';
-                    echo '<div class="inner">';
-                    echo '<h2>'.lang('CaseStudies').'</h2>';
-                    echo "<ul>";
-                    foreach($case_studies as $c => $cstudies)
-                    {?>
-                        <li class="clearfix">
-                        <a href="/profile/view_case_studies/<?php echo $cstudies['uid'];?>/<?php echo $cstudies['casestudyid'];?>">
-                            <img alt="<?php echo lang("CaseStudy"); ?>" class="left img_border" width="59" src="<?php echo expert_image($cstudies['filename'], 59);?>" height="59">
-                            <span class="title"><?php echo $cstudies['name'];?></span>
-                        </a>
-                        </li>
-                    <?php
-                    }
-                    echo "</ul>";
-                    echo '</div></div>';
-                }
-            ?>
-
         <!-- portlet_list -->
         <?php if($project['totalproj'] > 0)
         {
@@ -130,4 +108,28 @@
         <?php }	?>
         <!-- portlet_list -->
     </div>
+</div>
+
+<div class="clearfix" id="content">
+    <?php
+if((count_if_set($case_studies)) > 0)
+{
+    echo '<div class="portlet_list case_studies">';
+    echo '<div class="inner">';
+    echo '<h2>'.lang('CaseStudies').'</h2>';
+    echo "<ul>";
+    foreach($case_studies as $c => $cstudies)
+    {?>
+        <li class="clearfix">
+            <a href="/profile/view_case_studies/<?php echo $cstudies['uid'];?>/<?php echo $cstudies['casestudyid'];?>">
+                <img alt="<?php echo lang("CaseStudy"); ?>" class="left img_border" width="59" src="<?php echo expert_image($cstudies['filename'], 59);?>" height="59">
+                <span class="title"><?php echo $cstudies['name'];?></span>
+            </a>
+        </li>
+        <?php
+    }
+    echo "</ul>";
+    echo '</div></div>';
+}
+?>
 </div>
