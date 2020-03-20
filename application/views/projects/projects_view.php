@@ -187,6 +187,19 @@
 		</div><!-- end #col2 -->
 
 		<div id="col3" class="projects">
+		<a href="/projects/submit/<?php echo $project['pid']?>" onclick="myFunction()" class="button discussion light_gray">Learn More about this Project</a>
+            	<p id="demo"></p>
+            	<script>
+                	function myFunction() {
+                    	var txt;
+                    	if (confirm("Confirm to have a CG/LA Representative contact you")) {
+                        	txt = "We will be contacting you by email shortly!";
+                    	} else {
+                        	txt = "";
+                    	}
+                    	document.getElementById("demo").innerHTML = txt;
+                	}
+            </script>
             <?php if ($userdata['uid'] != sess_var('uid')) {
                 // User can't follow his or her own projects and send a message to him/her self
                 echo form_open('', 'id="project_follow_form" name="follow_form"', array(
