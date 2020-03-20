@@ -148,6 +148,8 @@ $route['projects/discussions/(:num)'] = "projects/discussions/$1";
 
 $route['projects/(:any)']			= "projects/view/$1";
 
+$route['projects/submit/(:num)'] = "projects/view/$1";
+
 //
 $route['expertise/list']         = "expertise/index";
 $route['expertise/list/(:num)']  = "expertise/view/$1";
