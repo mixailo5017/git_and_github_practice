@@ -39,6 +39,8 @@ class Expertise extends CI_Controller {
             2 => lang('SortMostRelevant'),
             3 => lang('SortRecentlyJoinedFirst'),
             4 => lang('HighestRatedFirst'),
+	    5 => 'Random',
+
         );
 	}
 
@@ -388,7 +390,7 @@ class Expertise extends CI_Controller {
     private function check_sort($value)
     {
         $allowed = array_keys($this->sort_options);
-        $default = 3;
+        $default = 5;
 
         if (in_array($value, $allowed)) {
             return $value;

@@ -507,6 +507,10 @@ class Expertise_model extends CI_Model {
 
         if ($member_type == MEMBER_TYPE_MEMBER) {
             switch ($sort) {
+		case 5: // Random
+                    $this->db
+                        ->order_by('firstname', 'RANDOM');
+                    break;
                 case 4: // High ranked first
                     $this->db
                         ->order_by('rating_overall DESC, rating_count DESC, firstname, lastname');
