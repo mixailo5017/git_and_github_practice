@@ -104,6 +104,7 @@
 
 
 <div class='sidebar' style="height: 800px">
+    <h1 id="heading" style="padding-top: 10px; text-align: center; font-size: 20px"></h1>
     <div style="padding: 25px" id="pop" >
         <h1 id="directions"> Click on a cluster to show the breakdown of projects by sector in the cluster. </h1>
     </div>
@@ -402,6 +403,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 d3.selectAll('.center-circle').attr('fill', 'rgba(0, 0, 0, 0.7)')
                 circle.attr('fill', 'rgb(71, 79, 102)')
                 document.getElementById('pop').innerHTML = '';
+                document.getElementById('heading').innerHTML = '';
                 document.getElementById('key').innerHTML = '';
                 document.getElementById('key').append(infoEl);
 
@@ -551,6 +553,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
             document.getElementById('pop').innerHTML = '';
+            document.getElementById('heading').innerHTML = '';
             document.getElementById('pop').innerHTML =
                 "<div style=\"height: 320px; width: 300px\">"
                 +   "<div>"
@@ -574,6 +577,30 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 +"</div>";
 
         });
+
+        map.on('dragend', function(e) {
+
+            document.getElementById('pop').innerHTML = '';
+            var features = map.queryRenderedFeatures();
+            var text = "";
+
+
+            for (i = 0; i < features.length; i++) {
+                if (features[i].properties.projectname && !text.includes(features[i].properties.projectname)) {
+                    text += "<a href='/projects/" + features[i].properties.slug + "'>" + features[i].properties.projectname + "</a><br>";
+                }
+            }
+
+            document.getElementById('pop').innerHTML = text;
+            document.getElementById('heading').innerHTML = 'Un-clustered Projects in View';
+
+
+
+
+
+
+
+
+        });
     });
 </script>
-
