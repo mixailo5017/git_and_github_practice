@@ -27,7 +27,7 @@
                     <a href="/companies"><span><?php echo lang('Lightning') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
-                    <a href="/map"><span><?php echo lang('Map') ?></span></a>
+                    <a href="/gismap"><span><?php echo lang('Map') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
                     <a href="/forums"><span><?php echo lang('forums') ?></span></a>
