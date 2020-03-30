@@ -308,3 +308,6 @@
     var projectCountry = '<?php echo $project['projectdata']['country'] ?>';
 </script>
 <?php } ?>
+
+<iframe src="https://minnit.chat/GViP?embed&nickname=<?php print($userdata['firstname']);?>" style="border:none;width:90%;height:500px;" allowTransparency="true"></iframe><br>
+
