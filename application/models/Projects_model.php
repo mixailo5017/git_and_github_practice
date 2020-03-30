@@ -5195,7 +5195,7 @@ class Projects_model extends CI_Model {
 	
 	public function get_proj_map_data()
 	{
-		$query_sme = $this->db->query("SELECT pid, projectname, slug, lat, lng, sector, projectphoto, description, country, subsector, stage, location, sponsor
+		$query_sme = $this->db->query("SELECT pid, projectname, slug, lat, lng, sector, projectphoto, description, country, subsector, stage, location, sponsor, description, subsector, totalbudget
 										FROM public.exp_projects
 										WHERE isdeleted = '0' AND lat IS NOT NULL
 
