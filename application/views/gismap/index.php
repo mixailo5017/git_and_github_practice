@@ -604,3 +604,61 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
         });
     });
 </script>
+    
+  
+ <?php
+$features = array();
+foreach($map['map_data'] as $key => $orgexp)
+{
+    if ( $orgexp['pid'] > 0 && $orgexp['totalbudget'] > 0 && $orgexp['totalbudget'] < 50000 ){
+
+        $features[] = array(
+        'totalbudget' => $orgexp['totalbudget'], 'id' => $orgexp['pid']
+        );
+
+        sort($features);
+    }
+}
+?>
+<?php
+$final_data = json_encode($features);
+$datadata = json_decode($final_data);
+
+$countArrayLength = count($features);
+?>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Project');
+            data.addColumn('number', 'Value');
+
+            data.addRows([
+
+                <?php
+                for($i=0;$i<$countArrayLength;$i++){
+                    echo "['" . $i . "'," . $features[$i]['totalbudget'] . "],";
+                }
+                ?>
+            ]);
+
+            var options = {
+                title: 'Project Value (In Millions USD)',
+                curveType: 'function',
+                legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<div id="curve_chart" style="width: 50%; height: 500px"></div>
+</body>
