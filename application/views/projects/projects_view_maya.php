@@ -48,57 +48,6 @@
                 </div>
             <?php endif; ?>
 
-
-
-
-            <?php
-			// Don't show Project Feed unless internal user
-			if (in_array(Auth::id(), INTERNAL_USERS)) {
-			?>
-			<div class="comments white_box pull_up_white">
-				<h2><?php echo lang('ProjectUpdatesTitle') ?></h2>
-                <?php
-                // If it is the project owner
-                if ($userdata['uid'] == sess_var('uid')) {
-                    $author_src = project_image($project['projectdata']['projectphoto'], 43);
-                    $placeholder = lang('UpdateStatusPlaceholder');
-                } else {
-                    $author_src = expert_image(sess_var('userphoto'), 43);
-                    $placeholder = lang('UpdateCommentPlaceholder');
-                }
-                ?>
-				<div class="comment-wrapper post main-post">
-					<div class="photo">
-						<img src="<?php echo $author_src ?>" class="thumb" alt="" />
-					</div>
-					<div class="comment">
-                        <?php
-                        echo form_open('updates/post/project/' . $project['pid'], 'name="post_update"', array(
-                            'author' => sess_var('uid'),
-                            'type' => ($userdata['uid'] == sess_var('uid')) ? UPDATE_TYPE_STATUS : UPDATE_TYPE_COMMENT,
-                        ));
-                        ?>
-						<div class="field-wrapper">
-							<textarea class="post-comment" placeholder="<?php echo $placeholder ?>"></textarea>
-                            <div class="errormsg"></div>
-							<input type="submit" class="light_green" value="<?php echo lang('PostUpdate') ?>">
-						</div>
-                        <?php echo form_close() ?>
-					</div>
-				</div>
-
-				<ul class="feed updates">
-                    <!-- Populated in JS -->
-				</ul>
-		        <div class="center">
-		          <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
-		            <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
-		            <?php echo form_close() ?>
-		        </div>
-			</div>
-			<?php } ?>
-
-
 			<div class="comments white_box pull_up_white">
 				<h2> Project News Feed </h2>
 				<div style="padding-left:20px; padding-right:20px; padding-bottom:20px">
