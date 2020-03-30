@@ -268,7 +268,7 @@
                 <ul class="expert_list">
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/3826" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/33fd55a624345e1380fd3d973652822d.png?w=140&h=140&s=e5a03aee7d904fecab714593659c6b43">
+                            <img src="https://www.gvip.io/img/member_photos/33fd55a624345e1380fd3d973652822d.png?w=39&h=39&s=e5a03aee7d904fecab714593659c6b43">
                         </a>
                         <p>
                             <a href="/expertise/3826">Kimihiko Inaba</a><br>
@@ -278,7 +278,7 @@
                     </li>
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/116" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/photo_116.jpg?w=140&h=140&s=1554a13389859b0cfd536aca632d70f9">
+                            <img src="https://www.gvip.io/img/member_photos/photo_116.jpg?w=39&h=39&s=1554a13389859b0cfd536aca632d70f9">
                         </a>
                         <p>
                             <a href="/expertise/116">Pablo Garcia Aguilar</a><br>
@@ -288,7 +288,7 @@
                     </li>
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/1751" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/848f255ee81bb52c5502deb3af7a563f.png?w=140&h=140&s=4602012dddb37191384b5cfc4fc1ba6f">
+                            <img src="https://www.gvip.io/img/member_photos/848f255ee81bb52c5502deb3af7a563f.png?w=39&h=39&s=4602012dddb37191384b5cfc4fc1ba6f">
                         </a>
                         <p>
                             <a href="/expertise/2135">Brian Weihs</a><br>
@@ -298,7 +298,7 @@
                     </li>
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/2135" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/f27a87bfc217587524b0ab72c40c4430.png?w=140&h=140&s=777e69d6cc58d26ada8c98cd8e53b6ff">
+                            <img src="https://www.gvip.io/img/member_photos/f27a87bfc217587524b0ab72c40c4430.png?w=39&h=39&s=777e69d6cc58d26ada8c98cd8e53b6ff">
                         </a>
                         <p>
                             <a href="/expertise/3343">Máximo Muñoz Verda</a><br>
