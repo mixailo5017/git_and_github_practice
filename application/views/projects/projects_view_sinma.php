@@ -1,80 +1,62 @@
-<head>
-    <script type="text/javascript">
-        var _cio = _cio || [];
-        (function() {
-            var a,b,c;a=function(f){return function(){_cio.push([f].
-            concat(Array.prototype.slice.call(arguments,0)))}};b=["load","identify",
-                "sidentify","track","page"];for(c=0;c<b.length;c++){_cio[b[c]]=a(b[c])};
-            var t = document.createElement('script'),
-                s = document.getElementsByTagName('script')[0];
-            t.async = true;
-            t.id    = 'cio-tracker';
-            t.setAttribute('data-site-id', 'b665e610b6be0f3965e1');
-            t.src = 'https://assets.customer.io/assets/track.js';
-            s.parentNode.insertBefore(t, s);
-        })();
-    </script>
-</head>
-
 <div id="content" class="clearfix">
-    <div id="col2" class="projects">
-        <section class="projectdata white_box">
-            <?php $src= project_image($project['projectdata']['projectphoto'], 164, array(
-                'width' => 164,
-                'crop' => TRUE
-            )) ?>
-            <img src="<?php echo $src ?>" alt="<?php echo $project['projectdata']['projectname'] ?>'s photo">
+		<div id="col2" class="projects">
+			<section class="projectdata white_box">
+                <?php $src= project_image($project['projectdata']['projectphoto'], 164, array(
+                    'width' => 164,
+                    'crop' => TRUE
+                )) ?>
+                <img src="<?php echo $src ?>" alt="<?php echo $project['projectdata']['projectname'] ?>'s photo">
 
-            <h1><?php echo $project['projectdata']['projectname'] ?></h1>
+                <h1><?php echo $project['projectdata']['projectname'] ?></h1>
 
-            <p><em><?php echo lang('LastUpdated') ?>: <?php echo $project['projectdata']['last_updated']->diffForHumans() ?></em></p>
-            <p class="project-description">
-                <?php
-                $this->load->helper('text');
-                $limited_description = word_limiter($project['projectdata']['description'], 100, '');
-                echo nl2br($limited_description);
-                if (mb_strlen($limited_description) < mb_strlen($project['projectdata']['description'])) {
+                <p><em><?php echo lang('LastUpdated') ?>: <?php echo $project['projectdata']['last_updated']->diffForHumans() ?></em></p>
+                <p class="project-description">
+                    <?php
+					$this->load->helper('text');
+                    $limited_description = word_limiter($project['projectdata']['description'], 100, '');
+					echo nl2br($limited_description);
+                    if (mb_strlen($limited_description) < mb_strlen($project['projectdata']['description'])) {
                     ?>
-                    <span class="text-cut">…</span>
-                    <button type="button" class="show"><?php echo lang('ShowMore') ?></button>
-                    <span class="overflow-text">
+                        <span class="text-cut">…</span>
+                        <button type="button" class="show"><?php echo lang('ShowMore') ?></button>
+                        <span class="overflow-text">
                         	<?php echo nl2br(mb_substr($project['projectdata']['description'], mb_strlen($limited_description) + 1)) ?>
                         	<button type="button" class="hide"><?php echo lang('ShowLess') ?></button>
                         </span>
                     <?php
-                }
-                ?>
-            </p>
-        </section><!-- end .portlet -->
+                    }
+					?>
+				</p>
+			</section><!-- end .portlet -->
 
-        <div id="project_tabs" class="white_box">
+			<div id="project_tabs" class="white_box">
 
-            <?php $this->load->view('projects/projects_view/overview', $project); ?>
+				<?php $this->load->view('projects/projects_view/overview', $project); ?>
+				<?php
+					foreach ($project_sections as $section => $appears) {
+						$this->load->view("projects/projects_view/$section", $project);
+					}
+				?>
+
+			</div><!-- end #tabs -->
+
+            <?php if (isset($featuredForum)): ?>
+                <div class="banner_image">
+                    <a id="forum-banner" href="/forums/<?= $featuredForum['id'] ?>" data-name="<?= $featuredForum['title'] ?>" data-id="<?= $featuredForum['id'] ?>">
+                        <img src="<?= forum_image($featuredForum['banner'], 600, ['fit' => 'contain']) ?>" class="uploaded_img" alt="<?= $featuredForum['title'] ?>" title="Click to learn more about this upcoming event, where you can meet project executives and infrastructure decision-makers.">
+                    </a>
+                </div>
+            <?php endif; ?>
+
+
+
+
             <?php
-            foreach ($project_sections as $section => $appears) {
-                $this->load->view("projects/projects_view/$section", $project);
-            }
-            ?>
-
-        </div><!-- end #tabs -->
-
-        <?php if (isset($featuredForum)): ?>
-            <div class="banner_image">
-                <a id="forum-banner" href="/forums/<?= $featuredForum['id'] ?>" data-name="<?= $featuredForum['title'] ?>" data-id="<?= $featuredForum['id'] ?>">
-                    <img src="<?= forum_image($featuredForum['banner'], 600, ['fit' => 'contain']) ?>" class="uploaded_img" alt="<?= $featuredForum['title'] ?>" title="Click to learn more about this upcoming event, where you can meet project executives and infrastructure decision-makers.">
-                </a>
-            </div>
-        <?php endif; ?>
-
-
-
-
-        <?php
-        // Don't show Project Feed unless internal user
-        if (in_array(Auth::id(), INTERNAL_USERS)) {
-            ?>
-            <div class="comments white_box pull_up_white">
-                <h2><?php echo lang('ProjectUpdatesTitle') ?></h2>
+			// Don't show Project Feed unless internal user
+			if (in_array(Auth::id(), INTERNAL_USERS)) {
+			?>
+			<div class="comments white_box pull_up_white">
+				<h2><?php echo lang('ProjectUpdatesTitle') ?></h2>
                 <?php
                 // If it is the project owner
                 if ($userdata['uid'] == sess_var('uid')) {
@@ -85,94 +67,94 @@
                     $placeholder = lang('UpdateCommentPlaceholder');
                 }
                 ?>
-                <div class="comment-wrapper post main-post">
-                    <div class="photo">
-                        <img src="<?php echo $author_src ?>" class="thumb" alt="" />
-                    </div>
-                    <div class="comment">
+				<div class="comment-wrapper post main-post">
+					<div class="photo">
+						<img src="<?php echo $author_src ?>" class="thumb" alt="" />
+					</div>
+					<div class="comment">
                         <?php
                         echo form_open('updates/post/project/' . $project['pid'], 'name="post_update"', array(
                             'author' => sess_var('uid'),
                             'type' => ($userdata['uid'] == sess_var('uid')) ? UPDATE_TYPE_STATUS : UPDATE_TYPE_COMMENT,
                         ));
                         ?>
-                        <div class="field-wrapper">
-                            <textarea class="post-comment" placeholder="<?php echo $placeholder ?>"></textarea>
+						<div class="field-wrapper">
+							<textarea class="post-comment" placeholder="<?php echo $placeholder ?>"></textarea>
                             <div class="errormsg"></div>
-                            <input type="submit" class="light_green" value="<?php echo lang('PostUpdate') ?>">
-                        </div>
+							<input type="submit" class="light_green" value="<?php echo lang('PostUpdate') ?>">
+						</div>
                         <?php echo form_close() ?>
-                    </div>
-                </div>
+					</div>
+				</div>
 
-                <ul class="feed updates">
+				<ul class="feed updates">
                     <!-- Populated in JS -->
-                </ul>
-                <div class="center">
-                    <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
-                    <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
-                    <?php echo form_close() ?>
-                </div>
-            </div>
-        <?php } ?>
+				</ul>
+		        <div class="center">
+		          <?php echo form_open('/updates/project/' . $project['pid'], 'name="updates_view_more"'); ?>
+		            <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
+		            <?php echo form_close() ?>
+		        </div>
+			</div>
+			<?php } ?>
 
 
-        <div class="comments white_box pull_up_white">
-            <h2> Project News Feed </h2>
-            <div style="padding-left:20px; padding-right:20px; padding-bottom:20px">
-                <?php
-                $accessKey = 'c4c2bafe03e54ee9b8bbbe3f168ae88c';
-                $endpoint = 'https://gvip-project-feed.cognitiveservices.azure.com/bing/v7.0/news/search';
-                $projectname = $project['projectdata']['projectname'];
-                $term = $projectname." "."project";
+			<div class="comments white_box pull_up_white">
+				<h2> Project News Feed </h2>
+				<div style="padding-left:20px; padding-right:20px; padding-bottom:20px">
+					<?php
+					$accessKey = 'e453e9df057848cc8c186bd0222d7060';
+					$endpoint = 'https://gvipprojnews.cognitiveservices.azure.com/bing/v7.0/news/search';
+					$projectname = $project['projectdata']['projectname'];
+					$term = $projectname." "."project";
 
-                function BingNewsSearch ($url, $key, $query) {
-                    // Prepare HTTP request
-                    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-                    // https://php.net/manual/en/function.stream-context-create.php
-                    $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
-                    $options = array ('http' => array (
-                        'header' => $headers,
-                        'method' => 'GET' ));
+                    function BingNewsSearch ($url, $key, $query) {
+                        // Prepare HTTP request
+                        // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+                        // https://php.net/manual/en/function.stream-context-create.php
+                        $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
+                        $options = array ('http' => array (
+                            'header' => $headers,
+                            'method' => 'GET' ));
 
-                    // Perform the Web request and get the JSON response
-                    $context = stream_context_create($options);
-                    $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
+                        // Perform the Web request and get the JSON response
+                        $context = stream_context_create($options);
+                        $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
 
-                    // Extract Bing HTTP headers
-                    $headers = array();
-                    foreach ($http_response_header as $k => $v) {
-                        $h = explode(":", $v, 2);
-                        if (isset($h[1]))
-                            if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
-                                $headers[trim($h[0])] = trim($h[1]);
+                        // Extract Bing HTTP headers
+                        $headers = array();
+                        foreach ($http_response_header as $k => $v) {
+                            $h = explode(":", $v, 2);
+                            if (isset($h[1]))
+                                if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
+                                    $headers[trim($h[0])] = trim($h[1]);
+                        }
+
+                        return array($headers, $result);
                     }
 
-                    return array($headers, $result);
-                }
+                    //print "Searching news for: " . $term . "\n";
 
-                //print "Searching news for: " . $term . "\n";
+                    list($headers, $json) = BingNewsSearch($endpoint, $accessKey, $term);
 
-                list($headers, $json) = BingNewsSearch($endpoint, $accessKey, $term);
+                    //print "\nRelevant Headers:\n\n";
+                    foreach ($headers as $k => $v) {
+                        //print $k . ": " . $v . "\n";
+                    }
 
-                //print "\nRelevant Headers:\n\n";
-                foreach ($headers as $k => $v) {
-                    //print $k . ": " . $v . "\n";
-                }
-
-                //print "\nJSON Response:\n\n";
-                $obj = json_decode($json);
-                $json = json_encode($obj, JSON_PRETTY_PRINT);
-                //printf("<pre>%s</pre>", $json);
+					    //print "\nJSON Response:\n\n";
+					    $obj = json_decode($json);
+                        $json = json_encode($obj, JSON_PRETTY_PRINT);
+                        //printf("<pre>%s</pre>", $json);
 
 
-                if (!empty($obj->value)) {
+                    if (!empty($obj->value)) {
 
-                    for ($x = 0; $x <= 4; $x++) {
+                            for ($x = 0; $x <= 4; $x++) {
 
-                        if (!empty($obj->value[$x]->name)){
+                                if (!empty($obj->value[$x]->name)){
 
-                            printf("
+                                    printf("
                                     <div>
                                     <a style='font-size: medium' href=\"%s\">%s</a>            
                                     <p>%s</p> 
@@ -180,11 +162,11 @@
                                     </div>
                                  
                                 ", $obj->value[$x]->url, $obj->value[$x]->name, $obj->value[$x]->description);
+                                }
+                            }
                         }
-                    }
-                }
-                else{
-                    printf("
+                    else{
+                        printf("
                             <div>             
                                 <p>There is no news in the past 30 days</p> 
                                 <br>  
@@ -192,14 +174,12 @@
                                ");
 
 
-                }
-                ?>
+                    }
+					?>
 
 
-            </div>
-        </div>
-
-
+			    </div>
+			</div>
 
 
     </div><!-- end #col2 -->
@@ -289,7 +269,7 @@
                 <ul class="expert_list">
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/4003" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/9050082f7c3ac0a8fe7a7425b3bc444a.png?w=140&h=140&s=bce05a29f7e22cb4885297c959364660">
+                            <img src="https://www.gvip.io/img/member_photos/9050082f7c3ac0a8fe7a7425b3bc444a.png?w=39&h=39&s=bce05a29f7e22cb4885297c959364660">
                         </a>
                         <p>
                             <a href="/expertise/4003">George Samaras</a><br>
@@ -299,7 +279,7 @@
                     </li>
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/2774" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/64e06d07e9829575472c309755c4d9da.jpg?w=140&h=140&s=f15e77030747e6b7a8d61264a2eec957">
+                            <img src="https://www.gvip.io/img/member_photos/64e06d07e9829575472c309755c4d9da.jpg?w=39&h=39&s=f15e77030747e6b7a8d61264a2eec957">
                         </a>
                         <p>
                             <a href="/expertise/2774">Khalid Bichou</a><br>
@@ -309,7 +289,7 @@
                     </li>
                     <li class="clearfix" style="min-height:55px;">
                         <a href="/expertise/3343" class="image">
-                            <img src="https://www.gvip.io/img/member_photos/9050082f7c3ac0a8fe7a7425b3bc444a.png?w=140&h=140&s=bce05a29f7e22cb4885297c959364660">
+                            <img src="https://www.gvip.io/img/member_photos/9050082f7c3ac0a8fe7a7425b3bc444a.png?w=39&h=39&s=bce05a29f7e22cb4885297c959364660">
                         </a>
                         <p>
                             <a href="/expertise/3343">Andrew Liao</a><br>
