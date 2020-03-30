@@ -491,7 +491,18 @@ class Projects extends CI_Controller
         );
 
         $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('projects/projects_view', $viewdata);
+
+        if ($viewdata['project']['projectdata']['pid'] == 1150){
+            $this->load->view('projects/projects_view_sinma', $viewdata);
+        }
+        elseif ($viewdata['project']['projectdata']['pid'] == 2877){
+            $this->load->view('projects/projects_view_maya', $viewdata);
+
+        }
+        else {
+            $this->load->view('projects/projects_view', $viewdata);
+
+        }
         $this->load->view('templates/footer', $this->footer_data);
     }
     
