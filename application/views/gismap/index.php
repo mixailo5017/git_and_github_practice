@@ -42,12 +42,11 @@
 
 
         #map { border-left: 1px solid #fff;
-            position: absolute;
-            left: 25%;
+            position: relative;
             width: 75%;
             top: 0;
             bottom: 0;
-            height: 720px
+            height: 755px
         }
 
         .sidebar {
@@ -99,16 +98,24 @@
 
 <body>
 
-<div id="map"></div>
-<div id="key"></div>
+<div style="display: inline-block; width: 100%; height: 100%">
+
+    <div id="map" style="float: right"></div>
+    <div id="key"></div>
 
 
-<div class='sidebar' style="height: 800px">
-    <h1 id="heading" style="padding-top: 10px; text-align: center; font-size: 20px"></h1>
-    <div style="padding: 25px" id="pop" >
-        <h1 id="directions"> Click on a cluster to show the breakdown of projects by sector in the cluster. </h1>
+    <div class='sidebar' style="float: left; height: 800px">
+        <h1 id="heading" style="padding-top: 10px; text-align: center; font-size: 20px"></h1>
+        <div style="padding: 25px" id="pop" >
+            <h1 id="directions"> Click on a cluster to show the breakdown of projects by sector in the cluster. </h1>
+        </div>
     </div>
+
+
 </div>
+
+<div id="curve_chart" style="width: 900px; height: 500px"></div>
+
 
 </html>
 
@@ -194,6 +201,9 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 'others': ['+', ['case', others, 1, 0]]
             }
         });
+
+        map.addControl(new mapboxgl.NavigationControl());
+
 
         map.addLayer({
             'id': 'powerplant_individual',
@@ -587,7 +597,8 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
 
             for (i = 0; i < features.length; i++) {
                 if (features[i].properties.projectname && !text.includes(features[i].properties.projectname)) {
-                    text += "<a href='/projects/" + features[i].properties.slug + "'>" + features[i].properties.projectname + "</a><br>";
+                    text += "<img style=\"display: block; margin: auto\" src=\'https://www.gvip.io/img/content_projects/" + features[i].properties.projectphoto + "?crop=1&w=100&h=100\'>" +
+                        "<a href='/projects/" + features[i].properties.slug + "'>" + features[i].properties.projectname + "</a><br>";
                 }
             }
 
@@ -602,63 +613,6 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
 
 
         });
+
     });
 </script>
-    
-  
- <?php
-$features = array();
-foreach($map['map_data'] as $key => $orgexp)
-{
-    if ( $orgexp['pid'] > 0 && $orgexp['totalbudget'] > 0 && $orgexp['totalbudget'] < 50000 ){
-
-        $features[] = array(
-        'totalbudget' => $orgexp['totalbudget'], 'id' => $orgexp['pid']
-        );
-
-        sort($features);
-    }
-}
-?>
-<?php
-$final_data = json_encode($features);
-$datadata = json_decode($final_data);
-
-$countArrayLength = count($features);
-?>
-
-<head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-        google.charts.load('current', {'packages':['corechart']});
-        google.charts.setOnLoadCallback(drawChart);
-
-        function drawChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Project');
-            data.addColumn('number', 'Value');
-
-            data.addRows([
-
-                <?php
-                for($i=0;$i<$countArrayLength;$i++){
-                    echo "['" . $i . "'," . $features[$i]['totalbudget'] . "],";
-                }
-                ?>
-            ]);
-
-            var options = {
-                title: 'Project Value (In Millions USD)',
-                curveType: 'function',
-                legend: { position: 'bottom' }
-            };
-
-            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-            chart.draw(data, options);
-        }
-    </script>
-</head>
-<body>
-<div id="curve_chart" style="width: 50%; height: 500px"></div>
-</body>
