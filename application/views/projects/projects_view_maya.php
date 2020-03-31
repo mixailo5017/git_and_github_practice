@@ -349,9 +349,9 @@
                     $orgCount++;
                 } ?>
 
-                <a href="/expertise/4114">
-                    <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/f0a2170cbe284059d9ced419420663d2.gif?fit=contain&w=168&h=168s=f1d3b8de004c6f7d49c865d0a7d23ef4" >
-                </a>
+                <a href="/expertise/4074">
+			<img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="/img/member_photos/67694d9f9e88e3fbd16a21c65ecad5d7.png?fit=contain&w=168&h=168s=f524c0c2cecb07a6fa4692dde38db9e7" >
+		</a>
 
 
                 <a href="/expertise/4113">
