@@ -1,3 +1,11 @@
+<div style="float: left; position: absolute">
+    <?php
+    $fullname = $userdata['firstname'] . $userdata['lastname'];
+    ?>
+    <iframe id="iframe" src="https://minnit.chat/GViP?embed&nickname=<?php print($fullname);?>" style="border:none;width:80%;height:500px;" allowTransparency="true"></iframe><br>
+
+</div>
+
 <div id="content" class="clearfix">
 		<div id="col2" class="projects">
 			<section class="projectdata white_box">
@@ -373,9 +381,3 @@
         var projectCountry = '<?php echo $project['projectdata']['country'] ?>';
     </script>
 <?php } ?>
-<?php
-$fullname = $userdata['firstname'] . $userdata['lastname'];
-?>
-<iframe id="iframe" src="https://minnit.chat/GViP?embed&nickname=<?php print($fullname);?>" style="border:none;width:90%;height:500px;" allowTransparency="true"></iframe><br>
-
-
