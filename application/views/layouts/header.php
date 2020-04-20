@@ -35,6 +35,9 @@
                 <li>
                     <a href="https://store.gvip.io" target="_blank"><span><?php echo lang('store') ?></span></a>
                 </li>
+                <li class="<?php echo $segment == 'projects' ? 'active' : '' ?>">
+                    <a href="/stimulus"><span>Stimulus</span></a>
+                </li>
             </ul>
         </nav>
         <?php } ?>
