@@ -42,8 +42,8 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
         var map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/johnbrisbane/ck36dhmba5a6j1cl9ftrxq6rt', // replace this with your style URL
-          center: [20.661557, 50.893748],
-          zoom: 2.7
+          center: [-90.661557, 30.893748],
+          zoom: 2.5
         });
     // code from the next step will go here
 
