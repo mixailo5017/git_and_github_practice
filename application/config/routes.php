@@ -185,7 +185,7 @@ $route['forums/(:num)/privatemeetings'] = "pages/index/privatemeetings";
 
 //Stimulus
 
-$route['stimulus']                        = "stimulus/show/35";
+$route['stimulus']                        = "stimulus/show/37";
 $route['stimulus/projects/(:num)']        = "stimulus/projects/$1";
 $route['stimulus/experts/(:num)']         = "stimulus/experts/$1";
 $route['stimulus/projects']               = "stimulus/index";
