@@ -11,6 +11,11 @@ class Stimulus extends CI_Controller
     {
 
         parent::__construct();
+        if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != 'gvip' || $_SERVER['PHP_AUTH_PW'] != 'strategicprojects2020') {
+            header('WWW-Authenticate: Basic realm="MyProject"');
+            header('HTTP/1.0 401 Unauthorized');
+            die('Access Denied');
+        }
 
         $languageSession = sess_var('lang');
         get_language_file($languageSession);
