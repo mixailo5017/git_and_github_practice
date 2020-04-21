@@ -60,7 +60,7 @@ class Stimulus extends CI_Controller
         }
 
         // Fetch projects and members (experts) accociated with the forum
-        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 60, 0, true);
+        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 500, 0, true);
         $members = $model->get_members_for_forum_homepage($id);
 
         // List of all other forums for navigation bar
