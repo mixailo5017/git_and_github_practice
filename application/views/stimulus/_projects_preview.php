@@ -43,7 +43,7 @@
 if (count($rows) > 0) {
 ?>
 
-    <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 100%; text-align: center"><?php echo 'Show All Projects';?></a>
+    <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 97%; text-align: center"><?php echo 'Show All Projects';?></a>
     <div class="space-2 bg-light">
         <div class="container">
             <div class="row d-flex justify-content-center">
@@ -68,12 +68,20 @@ if (count($rows) > 0) {
                         $progressbar = '90';
                     }
 
+                    if ($project['totalbudget'] > 1000){
+                        $project['totalbudget'] = $project['totalbudget']/1000;
+                        $placeholder = 'T';
+                    }
+                    else {
+                        $placeholder = 'M';
+                    }
+
                     ?>
 
 
-                    <div class="col-lg-6 col-md-6 col-sm-6" style="padding-top: 5px">
+                    <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 5px">
                         <!-- Card -->
-                        <div class="card border-0 shadow">
+                        <div class="card border-0 shadow" style="overflow: hidden">
                             <!-- Card image -->
                             <div class="view ">
                                 <a href="<?php echo $url ?>">
@@ -91,15 +99,11 @@ if (count($rows) > 0) {
                                 <ul class="list-unstyled d-flex justify-content-between mb-3 text-center small">
                                     <li class="pledged">
                                         <p class="mb-1 font-weight-bold text-dark">Value</p>
-                                        <span class="amount"><?php echo $project['totalbudget']; ?> M</span>
-                                    </li>
-                                    <li class="funded">
-                                        <p class="mb-1 font-weight-bold text-dark">Sponsor</p>
-                                        <span class="amount" style="display:inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;"><?php echo $project['sponsor']; ?></span>
+                                        <span class="amount"><?php echo $project['totalbudget']; echo $placeholder; ?> </span>
                                     </li>
                                     <li class="days">
-                                        <p class="mb-1 font-weight-bold text-dark">Subsector</p>
-                                        <span class="amount"><?php echo $project['subsector']; ?></span>
+                                        <p class="mb-1 font-weight-bold text-dark">Sponsor</p>
+                                        <span class="amount" style="display:inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;"><?php echo $project['sponsor']; ?></span>
                                     </li>
                                 </ul>
                                 <div class="progress mb-2">
@@ -129,5 +133,3 @@ else {
     <?php
 }
 ?>
-
-
