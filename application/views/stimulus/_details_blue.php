@@ -76,11 +76,13 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                          '#000000',
                          'Logistics',
                          '#000000',
-                         /* other */ '#ccc'
+                         /* other */ '#ffffff'
                      ]
                 }
 
             });
+            
+            map.addControl(new mapboxgl.NavigationControl());
 
 // Create a popup, but don't add it to the map yet.
             var popup = new mapboxgl.Popup({
