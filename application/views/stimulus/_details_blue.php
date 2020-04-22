@@ -60,10 +60,24 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 'source': 'places',
                  paint: {
                     'circle-radius': 5,
-                    'circle-color': '#223b53',
-                    'circle-stroke-color': 'white',
+                    'circle-color': 'white',
                     'circle-stroke-width': 4,
-                    'circle-opacity': 0.5
+                    'circle-opacity': 0.5,
+                     'circle-stroke-color': [
+                         'match',
+                         ['get', 'sector'],
+                         'Water',
+                         '#0000ff',
+                         'Energy',
+                         '#00FF00',
+                         'Transport',
+                         '#e55e5e',
+                         'Information & Communication Technologies',
+                         '#000000',
+                         'Logistics',
+                         '#000000',
+                         /* other */ '#ccc'
+                     ]
                 }
 
             });
