@@ -75,8 +75,8 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                          'Information & Communication Technologies',
                          '#000000',
                          'Logistics',
-                         '#000000',
-                         /* other */ '#ffffff'
+                         '#ffffff',
+                         /* other */ '#FFFF99'
                      ]
                 }
 
