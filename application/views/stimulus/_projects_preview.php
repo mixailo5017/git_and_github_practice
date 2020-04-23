@@ -70,7 +70,7 @@ if (count($rows) > 0) {
 
                     if ($project['totalbudget'] > 1000){
                         $project['totalbudget'] = $project['totalbudget']/1000;
-                        $placeholder = 'T';
+                        $placeholder = 'B';
                     }
                     else {
                         $placeholder = 'M';
