@@ -43,14 +43,14 @@
 if (count($rows) > 0) {
 ?>
 
-    <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 97%; text-align: center"><?php echo 'Show All Projects';?></a>
+    <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 100%; text-align: center"><?php echo 'Show All Projects';?></a>
     <div class="space-2 bg-light">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <?php foreach($rows as $project) {
                     $url = '/projects/' . $project['slug'];
                     if ($project['stage'] === 'conceptual'){
-                        $progressbar = '15';
+                        $progressbar = '30';
                     }
                     elseif ($project['stage'] === 'feasibility'){
                         $progressbar = '30';
@@ -79,7 +79,7 @@ if (count($rows) > 0) {
                     ?>
 
 
-                    <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 5px">
+                    <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
                         <!-- Card -->
                         <div class="card border-0 shadow" style="overflow: hidden">
                             <!-- Card image -->
@@ -90,24 +90,24 @@ if (count($rows) > 0) {
                                 </a>
                             </div>
                             <!-- Card content -->
-                            <div class="card-body border rounded-bottom">
+                            <div class="card-body border rounded-bottom" style="display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
                                 <a class="card-text small mb-2 d-block"><?php echo $project['sector']; ?></a>
-                                <!-- Title --><a style="display:inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 45ch;" href="<?php echo $url; ?>" class="h5 card-title"><?php echo $project['projectname']; ?></a>
+                                <!-- Title --><a href="<?php echo $url; ?>" class="h5 card-title"><?php echo $project['projectname']; ?></a>
                                 <!-- Description -->
                                 <p><?php echo $project['country'] ?></p>
                                 <hr>
-                                <ul class="list-unstyled d-flex justify-content-between mb-3 text-center small">
+                                <ul class="list-unstyled d-flex mb-3 text-left small">
                                     <li class="pledged">
                                         <p class="mb-1 font-weight-bold text-dark">Value</p>
                                         <span class="amount"><?php echo $project['totalbudget']; echo $placeholder; ?> </span>
                                     </li>
-                                    <li class="days">
+                                    <li style="padding-left: 10%; display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" class="days">
                                         <p class="mb-1 font-weight-bold text-dark">Sponsor</p>
-                                        <span class="amount" style="display:inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 20ch;"><?php echo $project['sponsor']; ?></span>
+                                        <span class="amount"><?php echo $project['sponsor']; ?></span>
                                     </li>
                                 </ul>
                                 <div class="progress mb-2">
-                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="55" aria-valuemin="91" aria-valuemax="100" style="width:<?php echo $progressbar; ?>%"><?php echo $project['stage']; ?></div>
+                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="55" aria-valuemin="91" aria-valuemax="100" style="width:<?php echo $progressbar; ?>%; text-transform:capitalize;"><?php echo $project['stage']; ?></div>
                                 </div>
                                 <!-- end: progress bard -->
                             </div>
