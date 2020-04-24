@@ -41,7 +41,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
         mapboxgl.accessToken = 'pk.eyJ1Ijoiam9obmJyaXNiYW5lIiwiYSI6ImNrMDN5czNjNDJhYWgzb3FkdDJxM3JtcXoifQ.o4w_VxKKH6oH1IP9sygfYg'; // replace this with your access token
         var map = new mapboxgl.Map({
           container: 'map',
-          style: 'mapbox://styles/johnbrisbane/ck36dhmba5a6j1cl9ftrxq6rt', // replace this with your style URL
+          style: 'mapbox://styles/johnbrisbane/ck9bswlro0e371ip7g2tuispy', // replace this with your style URL
           center: [-90.661557, 30.893748],
           zoom: 2.5
         });
