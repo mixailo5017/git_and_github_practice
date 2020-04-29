@@ -101,7 +101,7 @@ if (count($rows) > 0) {
                                         <p class="mb-1 font-weight-bold text-dark">Value</p>
                                         <span class="amount"><?php echo $project['totalbudget']; echo $placeholder; ?> </span>
                                     </li>
-                                    <li style="padding-left: 10%; display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;" class="days">
+                                    <li style="padding-left: 10%; display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 80%" class="days">
                                         <p class="mb-1 font-weight-bold text-dark">Sponsor</p>
                                         <span class="amount"><?php echo $project['sponsor']; ?></span>
                                     </li>
@@ -127,9 +127,12 @@ if (count($rows) > 0) {
 }
 else {
     ?>
-    <li class="clearfix" style="list-style-type:none;">
-        <?php echo lang('Noprojectsfound'); ?>
-    </li>
+    <div class="clearfix" style="list-style-type:none; text-align: center; ">
+       <h3> <?php echo lang('Noprojectsfound'); ?> </h3>
+        <a href="/stimulus" class="light_green" style="width: 20%;"><?php echo 'Reset Filters';?></a>
+    </div>
     <?php
 }
 ?>
+
+
