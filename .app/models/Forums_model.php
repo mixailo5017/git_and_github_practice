@@ -375,11 +375,12 @@ class Forums_model extends CI_Model
      * @param int $limit
      * @param int $offset
      * @param bool $row_count
+     * @param array $filter
      * @return array
      */
-    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false)
+    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null)
     {
-        $this->projects_base_query($id, $select, null, $order_by, $row_count);
+        $this->projects_base_query($id, $select, null, $order_by, $row_count, $filter);
 
         if (! is_null($limit)) {
             $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
@@ -637,9 +638,10 @@ class Forums_model extends CI_Model
      * @param null $where
      * @param null $order_by
      * @param bool $row_count
+     * @param null $filter
      * @return void
      */
-    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false)
+    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false, $filter = null)
     {
         $select = (! is_null($select)) ? $select : 'pid, projectname';
         $this->db
@@ -648,6 +650,18 @@ class Forums_model extends CI_Model
             ->join('exp_projects p', 'fp.project_id = p.pid')
             ->join('exp_members m', 'p.uid = m.uid')
             ->select($select);
+
+        if (! empty($filter['stage'])) {
+            $this->db->where('stage', $filter['stage']);
+        }
+
+        if (! empty($filter['sector'])) {
+            $this->db->where('p.sector', $filter['sector']);
+        }
+
+        if (! empty($filter['country'])) {
+            $this->db->where('p.country', $filter['country']);
+        }
 
         $defaut_where = array(
             'f.id' => $id,
