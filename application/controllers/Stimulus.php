@@ -64,12 +64,23 @@ class Stimulus extends CI_Controller
             show_404();
         }
 
+        $filter = array(
+            'country' => $this->input->get_post('country', true),
+            'sector' => $this->input->get_post('sector', true),
+            'stage' => $this->input->get_post('stage', true),
+        );
+        array_walk($filter, function (&$value, $key) {
+            $value = $value ? : '';
+        });
+
         // Fetch projects and members (experts) accociated with the forum
-        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 500, 0, true);
+        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 500, 0, true, $filter);
         $members = $model->get_members_for_forum_homepage($id);
 
         // List of all other forums for navigation bar
         $forums_by_categories = $model->all_by_categories($id);
+
+
 
         $data = array(
             'projects' => array(
@@ -81,7 +92,9 @@ class Stimulus extends CI_Controller
                 'total_rows' => (count($members) > 0) ? $members[0]['row_count'] : 0
             ),
             'details' => $forum,
-            'forums_by_categories' => $forums_by_categories
+            'forums_by_categories' => $forums_by_categories,
+            'filter'       => $filter,
+
         );
 
         // No Breadcrumb for this page
