@@ -15,6 +15,31 @@
         </div><!-- end #col1 -->
 
         <div style="width: 50%; float: right; height: 650px; overflow: scroll">
+            <div style="float:left;">
+                <?php echo form_open('/stimulus', array(
+                    'id' => 'projects_search_form',
+                    'name' => 'search_form',
+                    'method' => 'GET')); ?>
+                <div class="filter_option">
+                    <p><?php echo lang('Filterby').':';?></p>
+                </div>
+
+                <div class="filter_option">
+                    <?php echo form_dropdown('stage', stages_dropdown('select'), $filter['stage']); //"id='project_stage'" ?>
+                </div>
+
+                <div class="filter_option">
+                    <?php echo form_dropdown('sector', sector_dropdown(), $filter['sector'], 'style="width:170px;"') //id="member_sectors" ?>
+                </div>
+
+                <div class="filter_option">
+                    <?php echo form_dropdown('country', country_dropdown(), $filter['country'], 'style="width:170px;"') //id="member_country" ?>
+                </div>
+                <div class="filter_option">
+                    <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
+                </div>
+                <?php echo form_close(); ?>
+            </div>
             <?php $this->load->view('stimulus/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
         </div><!-- end #col2 -->
     </div>
