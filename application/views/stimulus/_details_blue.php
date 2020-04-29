@@ -20,7 +20,10 @@ $new_data = array(
     'features' => $features,
 );
 $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
+
 ?>
+
+
 <!-- MAIN MAP (PROJECTS, EXPERTS)-->
 <div>
         <head>
@@ -37,16 +40,29 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
           </style>
         </head>
         <div id='map' style='width: 100%; height: 650px'></div>
+    <?php  if(empty($features)){ ?>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1Ijoiam9obmJyaXNiYW5lIiwiYSI6ImNrMDN5czNjNDJhYWgzb3FkdDJxM3JtcXoifQ.o4w_VxKKH6oH1IP9sygfYg'; // replace this with your access token
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/johnbrisbane/ck9bswlro0e371ip7g2tuispy', // replace this with your style URL
+            center: [-90.661557, 30.893748],
+            zoom: 2.5
+        });
+    </script>
+    <?php }
+    else { ?>
+
+
         <script>
         mapboxgl.accessToken = 'pk.eyJ1Ijoiam9obmJyaXNiYW5lIiwiYSI6ImNrMDN5czNjNDJhYWgzb3FkdDJxM3JtcXoifQ.o4w_VxKKH6oH1IP9sygfYg'; // replace this with your access token
         var map = new mapboxgl.Map({
           container: 'map',
           style: 'mapbox://styles/johnbrisbane/ck9bswlro0e371ip7g2tuispy', // replace this with your style URL
           center: [-90.661557, 30.893748],
-          zoom: 2.5
+          zoom: 2.2
         });
     // code from the next step will go here
-
         map.on('load', function() {
             map.addSource('places', {
                 'type': 'geojson',
@@ -81,8 +97,8 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 }
 
             });
-            
             map.addControl(new mapboxgl.NavigationControl());
+
 
 // Create a popup, but don't add it to the map yet.
             var popup = new mapboxgl.Popup({
@@ -130,7 +146,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                         +       "</a>"
                         +   "</div>"
                         +   "<div>"
-                        +      "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'https://www.gvip.io/img/content_projects/" + projectphoto + "?crop=1&w=250&h=200\'>"
+                        +      "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'<?php echo project_image($project['projectphoto'], 300); ?>'>"
                         +   "</div>"
                         +   "<div>"
                         +       "<p> <strong>Country:</strong> " + country +  "</p>"
@@ -150,4 +166,6 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             });
         });
         </script>
+    <?php } ?>
 </div>
+
