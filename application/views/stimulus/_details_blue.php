@@ -146,7 +146,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                         +       "</a>"
                         +   "</div>"
                         +   "<div>"
-                        +      "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'<?php echo project_image($project['projectphoto'], 300); ?>'>"
+                        +      "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'https://www.gvip.io/img/content_projects/" + projectphoto + "?crop=1&w=250&h=200\'>"
                         +   "</div>"
                         +   "<div>"
                         +       "<p> <strong>Country:</strong> " + country +  "</p>"

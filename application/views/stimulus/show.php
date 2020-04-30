@@ -33,7 +33,10 @@
                 </div>
 
                 <div class="filter_option">
-                    <?php echo form_dropdown('country', country_dropdown(), $filter['country'], 'style="width:170px;"') //id="member_country" ?>
+                    <p><?php echo lang('Search');?> :</p>
+                </div>
+                <div class="filter_option">
+                    <?php echo form_input('searchtext', $filter['searchtext'], 'placeholder="'. lang('ProjectTextSearchTip').'"') //"id"=>"search_text" ?>
                 </div>
                 <div class="filter_option">
                     <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
