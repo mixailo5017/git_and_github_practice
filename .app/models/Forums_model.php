@@ -662,6 +662,18 @@ class Forums_model extends CI_Model
         if (! empty($filter['country'])) {
             $this->db->where('p.country', $filter['country']);
         }
+        
+        if (! empty($filter['searchtext'])) {
+            $terms = split_terms2($filter['searchtext']);
+
+            $columns = array(
+                'projectname',
+                'p.country',
+                'p.description',
+            );
+            $where1 = where_like2($columns, $terms);
+            $this->db->where($where1, null, FALSE);
+        }
 
         $defaut_where = array(
             'f.id' => $id,
