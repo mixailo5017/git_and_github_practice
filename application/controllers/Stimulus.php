@@ -11,10 +11,14 @@ class Stimulus extends CI_Controller
     {
 
         parent::__construct();
-        if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != 'gvip' || $_SERVER['PHP_AUTH_PW'] != 'strategicprojects2020') {
-            header('WWW-Authenticate: Basic realm="MyProject"');
-            header('HTTP/1.0 401 Unauthorized');
-            die('Access Denied');
+
+        // If the current user doesn't have access to the forum show 404
+        if (!in_array(Auth::id(), INTERNAL_USERS)) {
+            if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != 'gvip' || !in_array($_SERVER['PHP_AUTH_PW'], PWD_FOR_STIM)) {
+                header('WWW-Authenticate: Basic realm="MyProject"');
+                header('HTTP/1.0 401 Unauthorized');
+                die('Access Denied');
+            }
         }
 
         $languageSession = sess_var('lang');
@@ -59,17 +63,11 @@ class Stimulus extends CI_Controller
             exit;
         }
 
-        // If the current user doesn't have access to the forum show 404
-        if (! $this->forums_model->has_access_to(Auth::id(), $id)) {
-            show_404();
-        }
-
         $filter = array(
             'country' => $this->input->get_post('country', true),
             'sector' => $this->input->get_post('sector', true),
-            'stage' => $this->input->get_post('stage', true),              
+            'stage' => $this->input->get_post('stage', true),
             'searchtext' => $this->input->get_post('searchtext', true)
-
         );
         array_walk($filter, function (&$value, $key) {
             $value = $value ? : '';
