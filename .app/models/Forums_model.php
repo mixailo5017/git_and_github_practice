@@ -662,7 +662,7 @@ class Forums_model extends CI_Model
         if (! empty($filter['country'])) {
             $this->db->where('p.country', $filter['country']);
         }
-        
+
         if (! empty($filter['searchtext'])) {
             $terms = split_terms2($filter['searchtext']);
 
@@ -731,6 +731,9 @@ class Forums_model extends CI_Model
     {
         // Only CG/LA employees have access to the Emergency Projects list for Trump
         if ($forum_id === EMERGENCY_PROJECTS_FORUM_ID && !in_array($uid, INTERNAL_USERS)) {
+            return false;
+        }
+        if ($forum_id === 37 && !in_array($uid, INTERNAL_USERS)) {
             return false;
         }
 
