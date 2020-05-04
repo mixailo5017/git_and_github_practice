@@ -663,6 +663,10 @@ class Forums_model extends CI_Model
             $this->db->where('p.country', $filter['country']);
         }
 
+        if (! empty($filter['state'])) {
+            $this->db->like('keywords', $filter['state']);
+        }
+
         if (! empty($filter['searchtext'])) {
             $terms = split_terms2($filter['searchtext']);
 
@@ -766,3 +770,4 @@ class Forums_model extends CI_Model
         return (is_array($featuredForum) && count($featuredForum) == 1) ? $featuredForum[0] : null;
     }
 }
+
