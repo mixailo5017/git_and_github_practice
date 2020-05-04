@@ -296,6 +296,26 @@
         return $stages;
     }
 
+/**
+ * Project Sector Dropdown for Stimulus
+ *
+ * @param string $first
+ * @return array
+ */
+function sector_dropdown_stim($first = 'all')
+{
+    $sectors = array(
+        ''                => $first == 'all' ? 'All Sectors' : '- Select A Sector -',
+        'Transport'    => 'Transport',
+        'Energy'    => 'Energy',
+        'Water'        => 'Water',
+        'Information & Communications Technologies'    => 'IT',
+        'Social'    => 'Social'
+    );
+
+    return $sectors;
+}
+
 
     /**
     * Expert budget Dropdown
