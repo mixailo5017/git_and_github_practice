@@ -309,7 +309,7 @@ function sector_dropdown_stim($first = 'all')
         'Transport'    => 'Transport',
         'Energy'    => 'Energy',
         'Water'        => 'Water',
-        'Information & Communications Technologies'    => 'IT',
+        'Information & Communication Technologies'    => 'IT',
         'Social'    => 'Social'
     );
 
