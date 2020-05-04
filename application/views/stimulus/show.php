@@ -31,7 +31,10 @@
                 <div class="filter_option">
                     <?php echo form_dropdown('sector', sector_dropdown(), $filter['sector'], 'style="width:170px;"') //id="member_sectors" ?>
                 </div>
-
+                <div class="filter_option">
+                    <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
+                </div>
+                <br>
                 <div class="filter_option">
                     <p><?php echo lang('Search');?> :</p>
                 </div>
@@ -51,5 +54,3 @@
 </div><!-- end #content -->
 
 <div id="dialog-message"></div>
-
-
