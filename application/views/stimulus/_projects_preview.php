@@ -68,7 +68,7 @@ if (count($rows) > 0) {
                         $progressbar = '90';
                     }
 
-                    if ($project['totalbudget'] > 1000){
+                    if ($project['totalbudget'] > 999){
                         $project['totalbudget'] = $project['totalbudget']/1000;
                         $placeholder = 'B';
                     }
