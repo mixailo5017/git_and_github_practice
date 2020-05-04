@@ -64,7 +64,7 @@ class Stimulus extends CI_Controller
         }
 
         $filter = array(
-            'country' => $this->input->get_post('country', true),
+            'state' => $this->input->get_post('state', true),
             'sector' => $this->input->get_post('sector', true),
             'stage' => $this->input->get_post('stage', true),
             'searchtext' => $this->input->get_post('searchtext', true)
