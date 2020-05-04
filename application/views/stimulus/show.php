@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="filter_option">
-                    <?php echo form_dropdown('sector', sector_dropdown(), $filter['sector'], 'style="width:170px;"') //id="member_sectors" ?>
+                    <?php echo form_dropdown('sector', sector_dropdown_stim(), $filter['sector'], 'style="width:170px;"') //id="member_sectors" ?>
                 </div>
                 <div class="filter_option">
                     <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
