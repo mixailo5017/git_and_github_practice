@@ -36,19 +36,27 @@
 
     }
 </style>
+<?php
+$totaljobs=0;
+foreach($rows as $project) {
+    $jobscreated =  $model_obj->get_jobs_created($project['pid']);
+    $totaljobs += $jobscreated;
+}
+?>
 
 
 
 <?php
 if (count($rows) > 0) {
-?>
-
+    ?>
+    <h5 style="text-align: center">Total Jobs Created From Projects: <?php echo $totaljobs;?></h5>
     <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 100%; text-align: center"><?php echo 'Show All Projects';?></a>
     <div class="space-2 bg-light">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <?php foreach($rows as $project) {
                     $url = '/projects/' . $project['slug'];
+
                     if ($project['stage'] === 'conceptual'){
                         $progressbar = '30';
                     }
@@ -76,6 +84,8 @@ if (count($rows) > 0) {
                         $placeholder = 'M';
                     }
 
+                    $jobscreated =  $model_obj->get_jobs_created($project['pid']);
+
                     ?>
 
 
@@ -100,6 +110,10 @@ if (count($rows) > 0) {
                                     <li class="pledged">
                                         <p class="mb-1 font-weight-bold text-dark">Value</p>
                                         <span class="amount"><?php echo $project['totalbudget']; echo $placeholder; ?> </span>
+                                    </li>
+                                    <li style="padding-left: 10%; display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 30%" class="days">
+                                        <p class="mb-1 font-weight-bold text-dark">Jobs</p>
+                                        <span class="amount"><?php echo $jobscreated; ?></span>
                                     </li>
                                     <li style="padding-left: 10%; display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; width: 80%" class="days">
                                         <p class="mb-1 font-weight-bold text-dark">Sponsor</p>
@@ -134,5 +148,3 @@ else {
     <?php
 }
 ?>
-
-
