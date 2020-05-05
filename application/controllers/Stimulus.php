@@ -80,12 +80,13 @@ class Stimulus extends CI_Controller
         // List of all other forums for navigation bar
         $forums_by_categories = $model->all_by_categories($id);
 
-
+        $this->load->model('projects_model');
 
         $data = array(
             'projects' => array(
                 'rows' => $projects,
-                'total_rows' => (count($projects) > 0) ? $projects[0]['row_count'] : 0
+                'total_rows' => (count($projects) > 0) ? $projects[0]['row_count'] : 0,
+
             ),
             'members' => array(
                 'rows' => $members,
@@ -94,8 +95,10 @@ class Stimulus extends CI_Controller
             'details' => $forum,
             'forums_by_categories' => $forums_by_categories,
             'filter'       => $filter,
+            'model_obj' => $this->projects_model,
 
         );
+
 
         // No Breadcrumb for this page
 
@@ -117,6 +120,7 @@ class Stimulus extends CI_Controller
                 'Target Name' => $forum['title']
             )
         );
+
 
         // Render the page
         $this->load->view('stimulus/header_stimulus', $this->headerdata);
