@@ -202,7 +202,9 @@ const INTERNAL_USERS = [24, 28, 37, 195, 198, 222, 298, 492, 562, 583, 684, 741,
     1342, 1495, 1986, 3453, 3456, 3823, 3845, 3871, 3903, 3943, 3963, 4005, 4030, 4033, 4036];
 
 const PWD_FOR_STIM = ['6Z&N!]B7nB\CGTq_', '+8^em#K2p@qBU_PK', 'K=FZxqvt_7NV%M2K', 'Q#M+wb6Se?Xz8eTS', 'gqLYMuc$7#w4#6m_', '64Wf@Scp3-62&N+M',
-                      'uTG+?b6%6*gJ7BUC', 'cQ7TS=GmL7hbatVw', 'qZA_yCBn9G6--rCW', 'XDtux28?*EfMZRXp', 'Rmkr49=hCCbKNKNv', 'c2ZnG5m@U62D_5-g'
+                      'uTG+?b6%6*gJ7BUC', 'cQ7TS=GmL7hbatVw', 'qZA_yCBn9G6--rCW', 'XDtux28?*EfMZRXp', 'Rmkr49=hCCbKNKNv', 'c2ZnG5m@U62D_5-g',
+                      '4Kr1@yU3O$Hv!Fk6', 'adX!LQxNDiF71PsR', 'U_Tdxtm1#DylP+uC', 'Egapd?cchpWw6W85', 'Cz=le_&0D8Xz7cc6', '7^UIOCRJgPZaPp@n',
+                      'KJ3aGzDi%Mq9^7s!', '#Rab1q3#=cJWAz67', '$a7N+Vtt8y-t#=ye', 'hW$di|OaA6g!aGW-', '_^NT8#Cs*2tVXk90', '@Sp$Dz1suwMxK335'
                      ];
 
 
