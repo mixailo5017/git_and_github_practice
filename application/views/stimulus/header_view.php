@@ -32,7 +32,7 @@
                     <a href="/forums"><span><?php echo lang('forums') ?></span></a>
                 </li>
                 <li>
-                    <a href="https://store.gvip.io" target="_blank"><span><?php echo lang('store') ?></span></a>
+                    <a href="https://www.cg-la.com/store?category=Reports" target="_blank"><span><?php echo lang('store') ?></span></a>
                 </li>
             </ul>
         </nav>
