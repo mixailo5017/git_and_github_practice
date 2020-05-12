@@ -49,7 +49,7 @@ foreach($rows as $project) {
 <?php
 if (count($rows) > 0) {
     ?>
-    <h5 style="text-align: center">Total Jobs Created From Projects: <?php echo $totaljobs;?></h5>
+    <h5 style="text-align: center">Total Jobs Created From Projects: <?php echo $totaljobs*2;?></h5>
     <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 100%; text-align: center"><?php echo 'Show All Projects';?></a>
     <div class="space-2 bg-light">
         <div class="container">
