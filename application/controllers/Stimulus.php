@@ -66,12 +66,21 @@ class Stimulus extends CI_Controller
         $filter = array(
             'state' => $this->input->get_post('state', true),
             'sector' => $this->input->get_post('sector', true),
+            'subsector' => $this->input->get_post('subsector', true),
             'stage' => $this->input->get_post('stage', true),
             'searchtext' => $this->input->get_post('searchtext', true)
         );
         array_walk($filter, function (&$value, $key) {
             $value = $value ? : '';
         });
+
+        $sector_data = sector_subsectors();
+        $subsectors = array();
+        if (! empty($subsector)) {
+            if (isset($sector_data[$subsector])) {
+                $subsectors = $sector_data[$subsector];
+            }
+        }
 
         // Fetch projects and members (experts) accociated with the forum
         $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 500, 0, true, $filter);
@@ -95,6 +104,8 @@ class Stimulus extends CI_Controller
             'details' => $forum,
             'forums_by_categories' => $forums_by_categories,
             'filter'       => $filter,
+            'subsectors' => $subsectors,
+            'all_subsectors'   => $sector_data,
             'model_obj' => $this->projects_model,
 
         );

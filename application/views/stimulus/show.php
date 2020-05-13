@@ -35,6 +35,11 @@
                     <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
                 </div>
                 <br>
+                <?php if ($filter['sector'] != ''){?>
+                <div class="filter_option">
+                    <?php echo form_dropdown('subsector', subsector_dropdown($filter['sector']), $filter['subsector'], 'style="width:170px;"') ?>
+                </div>
+                <?php }?>
                 <div class="filter_option">
                     <p><?php echo lang('Search');?> :</p>
                 </div>
@@ -44,6 +49,7 @@
                 <div class="filter_option">
                     <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
                 </div>
+                <a href="/stimulus" style="float: right; padding-left: 10px"><?php echo 'Reset Filters';?></a>
                 <?php echo form_close(); ?>
             </div>
             <?php $this->load->view('stimulus/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
@@ -54,3 +60,6 @@
 </div><!-- end #content -->
 
 <div id="dialog-message"></div>
+
+
+

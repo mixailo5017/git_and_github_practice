@@ -656,7 +656,19 @@ class Forums_model extends CI_Model
         }
 
         if (! empty($filter['sector'])) {
-            $this->db->where('p.sector', $filter['sector']);
+            if ($filter['sector'] == 'Space'){
+
+                $this->db->where('p.sector', 'Information & Communication Technologies');
+                $this->db->where('p.subsector', 'Other');
+
+            }
+            else {
+                $this->db->where('p.sector', $filter['sector']);
+
+                if (!empty($filter['subsector'])) {
+                    $this->db->where('p.subsector', $filter['subsector']);
+                }
+            }
         }
 
         if (! empty($filter['country'])) {

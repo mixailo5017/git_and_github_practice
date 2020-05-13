@@ -304,13 +304,14 @@
  */
 function sector_dropdown_stim($first = 'all')
 {
-    $sectors = array(
+        $sectors = array(
         ''                => $first == 'all' ? '- Select A Sector -' : 'All Sectors',
         'Transport'    => 'Transport',
         'Energy'    => 'Energy',
         'Water'        => 'Water',
-        'Information & Communication Technologies'    => 'IT',
-        'Social'    => 'Social'
+        'Information & Communications Technologies'    => 'Technology',
+        'Social'    => 'Social',
+        'Space'    => 'Space'
     );
 
     return $sectors;
