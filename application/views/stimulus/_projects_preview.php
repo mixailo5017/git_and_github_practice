@@ -143,7 +143,6 @@ else {
     ?>
     <div class="clearfix" style="list-style-type:none; text-align: center; ">
        <h3> <?php echo lang('Noprojectsfound'); ?> </h3>
-        <a href="/stimulus" class="light_green" style="width: 20%;"><?php echo 'Reset Filters';?></a>
     </div>
     <?php
 }
