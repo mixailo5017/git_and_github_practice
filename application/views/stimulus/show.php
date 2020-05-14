@@ -26,20 +26,25 @@
 
                 <div class="filter_option">
                     <?php echo form_dropdown('stage', stages_dropdown('select'), $filter['stage']); //"id='project_stage'" ?>
+                    <?php echo form_dropdown('sector', sector_dropdown_stim(), $filter['sector']) //id="member_sectors" ?>
+                    <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
+
+                    <?php if ($filter['sector'] != ''){?>
+                        <?php echo form_dropdown('subsector', subsector_dropdown($filter['sector']), $filter['subsector'], 'style="width:170px;"') ?>
+                    <?php }?>
                 </div>
 
-                <div class="filter_option">
-                    <?php echo form_dropdown('sector', sector_dropdown_stim(), $filter['sector'], 'style="width:170px;"') //id="member_sectors" ?>
-                </div>
-                <div class="filter_option">
-                    <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
-                </div>
                 <br>
-                <?php if ($filter['sector'] != ''){?>
-                <div class="filter_option">
-                    <?php echo form_dropdown('subsector', subsector_dropdown($filter['sector']), $filter['subsector'], 'style="width:170px;"') ?>
+
+                <div style="float: left; padding-right: 10px;">
+                     <div class="filter_option">
+                         <p><?php echo lang('Sort') ?>:</p>
+                     </div>
+                     <div class="filter_option">
+                         <?php echo form_dropdown('sort_options', $sort_options, $sort) ?>
+                     </div>
                 </div>
-                <?php }?>
+
                 <div class="filter_option">
                     <p><?php echo lang('Search');?> :</p>
                 </div>
@@ -50,8 +55,11 @@
                     <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
                 </div>
                 <a href="/stimulus" style="float: right; padding-left: 10px"><?php echo 'Reset Filters';?></a>
+
+                <input type="hidden" name="sort" value="<?php echo $sort ?>">
                 <?php echo form_close(); ?>
             </div>
+
             <?php $this->load->view('stimulus/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
         </div><!-- end #col2 -->
     </div>
@@ -60,6 +68,3 @@
 </div><!-- end #content -->
 
 <div id="dialog-message"></div>
-
-
-

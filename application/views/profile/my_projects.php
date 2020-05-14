@@ -53,7 +53,7 @@
 						
 							<img alt="<?php echo $projval['projectname'];?>" class="left img_border" width="48px" src="<?php echo project_image($projval["projectphoto"], 50); ?>" height="50">
 		
-							<p class="left"><strong><?php echo $projval['projectname']; ?></strong></p>
+							<p class="left" style="width: 50%"><?php echo $projval['projectname']; ?></strong></p>
 							
 							<span class="right">
 								<a class="open_project" href="/projects/edit/<?php echo $projval['slug']; ?>"><?php echo lang('EditProject');?></a>
