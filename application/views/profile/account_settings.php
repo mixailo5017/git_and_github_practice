@@ -1015,7 +1015,7 @@
 
                             <img alt="<?php echo $projval['projectname'];?>" class="left img_border" width="48px" src="<?php echo project_image($projval["projectphoto"], 50); ?>" height="50">
 
-							<p class="left"><strong><?php echo $projval['projectname']; ?></strong></p>
+							<p class="left" style="width:50%;"><strong><?php echo $projval['projectname']; ?></strong></p>
 							
 							<?php if($usertype == '8')
 							{
