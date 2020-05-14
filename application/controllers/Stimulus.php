@@ -7,6 +7,8 @@ class Stimulus extends CI_Controller
     protected $headerdata = array();
     protected $footer_data = array();
 
+    private $sort_options;
+
     public function __construct()
     {
 
@@ -38,6 +40,11 @@ class Stimulus extends CI_Controller
         $this->output->enable_profiler(FALSE);
 
         $this->footer_data['lang'] = langGet();
+
+        $this->sort_options = array(
+            1 => 'Sort Alphabetically',
+            2 => 'Total Value Descending'
+        );
     }
 
     /**
@@ -63,6 +70,9 @@ class Stimulus extends CI_Controller
             exit;
         }
 
+        $sort = $this->check_sort($this->input->get_post('sort', true));
+
+
         $filter = array(
             'state' => $this->input->get_post('state', true),
             'sector' => $this->input->get_post('sector', true),
@@ -83,8 +93,9 @@ class Stimulus extends CI_Controller
         }
 
         // Fetch projects and members (experts) accociated with the forum
-        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 500, 0, true, $filter);
+        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 500, 0, true, $filter, $sort);
         $members = $model->get_members_for_forum_homepage($id);
+
 
         // List of all other forums for navigation bar
         $forums_by_categories = $model->all_by_categories($id);
@@ -104,6 +115,8 @@ class Stimulus extends CI_Controller
             'details' => $forum,
             'forums_by_categories' => $forums_by_categories,
             'filter'       => $filter,
+            'sort'       => $sort,
+            'sort_options' => $this->sort_options,
             'subsectors' => $subsectors,
             'all_subsectors'   => $sector_data,
             'model_obj' => $this->projects_model,
@@ -131,7 +144,6 @@ class Stimulus extends CI_Controller
                 'Target Name' => $forum['title']
             )
         );
-
 
         // Render the page
         $this->load->view('stimulus/header_stimulus', $this->headerdata);
@@ -199,6 +211,17 @@ class Stimulus extends CI_Controller
         $this->load->view('stimulus/projects', $data);
         $this->load->view('templates/footer', $this->footer_data);
 
+    }
+    private function check_sort($value)
+    {
+        $allowed = array_keys($this->sort_options);
+        $default = 2;
+
+        if (in_array($value, $allowed)) {
+            return $value;
+        } else {
+            return $default;
+        }
     }
 
 }
