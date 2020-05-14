@@ -43,7 +43,9 @@ class Stimulus extends CI_Controller
 
         $this->sort_options = array(
             1 => 'Sort Alphabetically',
-            2 => 'Total Value Descending'
+            2 => 'Total Value Descending',
+            3 => 'Random'
+
         );
     }
 
