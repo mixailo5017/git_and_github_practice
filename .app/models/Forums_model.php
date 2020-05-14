@@ -713,6 +713,9 @@ class Forums_model extends CI_Model
             case 2:
                 $this->db->order_by('p.totalbudget', 'DESC');
                 break;
+            case 3:
+                $this->db->order_by('p.totalbudget', 'RANDOM');
+                break;
         }
     }
 
