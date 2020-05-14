@@ -376,11 +376,12 @@ class Forums_model extends CI_Model
      * @param int $offset
      * @param bool $row_count
      * @param array $filter
+     * @param array $sort
      * @return array
      */
-    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null)
+    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null, $sort = null)
     {
-        $this->projects_base_query($id, $select, null, $order_by, $row_count, $filter);
+        $this->projects_base_query($id, $select, null, $order_by, $row_count, $filter, $sort);
 
         if (! is_null($limit)) {
             $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
@@ -639,9 +640,10 @@ class Forums_model extends CI_Model
      * @param null $order_by
      * @param bool $row_count
      * @param null $filter
+     * @param null $sort
      * @return void
      */
-    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false, $filter = null)
+    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false, $filter = null, $sort = null)
     {
         $select = (! is_null($select)) ? $select : 'pid, projectname';
         $this->db
@@ -699,11 +701,18 @@ class Forums_model extends CI_Model
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
 
-        $order_by = (! is_null($order_by)) ? $order_by : array('projectname' => 'asc');
-        $this->apply_order_by($order_by);
 
         if ($row_count) {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
+        }
+
+        switch ($sort) {
+            case 1: // alphabetical by projectname
+                $this->db->order_by('projectname');
+                break;
+            case 2:
+                $this->db->order_by('p.totalbudget', 'DESC');
+                break;
         }
     }
 
