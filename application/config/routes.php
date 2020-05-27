@@ -190,6 +190,10 @@ $route['stimulus/projects/(:num)']        = "stimulus/projects/$1";
 $route['stimulus/experts/(:num)']         = "stimulus/experts/$1";
 $route['stimulus/projects']               = "stimulus/index";
 
+$route['stimulusBrazil']                        = "stimulusBrazil/show/38";
+$route['stimulusBrazil/projects/(:num)']        = "stimulusBrazil/projects/$1";
+$route['stimulusBrazil/experts/(:num)']         = "stimulusBrazil/experts/$1";
+$route['stimulusBrazil/projects']               = "stimulusBrazil/index";
 
 // Permalinks
 $route['plink/(:num)/(:any)'] = "plink/index/$1/$2";
