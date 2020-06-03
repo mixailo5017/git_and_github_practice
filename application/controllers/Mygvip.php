@@ -98,9 +98,9 @@ class Mygvip extends CI_Controller {
 
         $this->load->view('templates/header', $this->headerdata);
 
-//        if ($show_pci) {
-//            $this->load->view('templates/_pci_meter', $pci);
-//        }
+        if ($show_pci) {
+            $this->load->view('templates/_pci_meter', $pci);
+        }
 
         $this->load->view('templates/_map_assets', '');
         $this->load->view('templates/_map_templates', '');
