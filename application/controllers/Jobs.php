@@ -35,6 +35,12 @@ class Jobs extends CI_Controller {
     public function index() {
 
         $data = array();
+        
+        $to = "john@cg-la.com";
+        $subject = "My subject";
+        $txt = "Hello world!";
+
+        SendHTMLMail('',$to,$subject,$txt);
 
         $this->breadcrumb->append_crumb(lang('B_JOBS'), '/jobs');
         $this->headerdata['breadcrumb'] = $this->breadcrumb->output();
