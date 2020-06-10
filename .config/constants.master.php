@@ -199,7 +199,7 @@ define('PROJECT_PROFILES_ENABLED', TRUE);
 // which project profiles will not show the project developer, etc.
 // Arrays in constants requires PHP 5.6. Defining them using the define statement only available from PHP 7.0.
 const INTERNAL_USERS = [24, 28, 37, 195, 198, 222, 298, 492, 562, 583, 684, 741, 813, 824, 840, 1138, 1301,
-    1342, 1495, 1986, 3453, 3456, 3684, 3823, 3845, 3871, 3903, 3943, 3963, 4005, 4030, 4033, 4036];
+    1342, 1495, 1986, 3453, 3456, 3684, 3823, 3845, 3871, 3903, 3943, 3963, 4005, 4030, 4033, 4036, 4133, 1824];
 
 const PWD_FOR_STIM = ['6Z&N!]B7nB\CGTq_', '+8^em#K2p@qBU_PK', 'K=FZxqvt_7NV%M2K', 'Q#M+wb6Se?Xz8eTS', 'gqLYMuc$7#w4#6m_', '64Wf@Scp3-62&N+M',
                       'uTG+?b6%6*gJ7BUC', 'cQ7TS=GmL7hbatVw', 'qZA_yCBn9G6--rCW', 'XDtux28?*EfMZRXp', 'Rmkr49=hCCbKNKNv', 'c2ZnG5m@U62D_5-g',
