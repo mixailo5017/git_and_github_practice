@@ -1,3 +1,52 @@
+<?php
+if ($project['projectdata']['projectphoto'] != ''){
+    $pci += 10;
+}
+if ($project['projectdata']['website'] != ''){
+    $pci += 5;
+}
+if ($project['projectdata']['eststart'] != '1111-11-11'){
+    $pci += 5;
+}
+if ($project['projectdata']['estcompletion'] != '1111-11-11'){
+    $pci += 5;
+}
+if ($project['projectdata']['sponsor'] != ''){
+    $pci += 5;
+}
+if ($project['projectdata']['developer'] != ''){
+    $pci += 12;
+}
+if ($project['projectdata']['financialstructure'] != ''){
+    $pci += 7;
+}
+
+
+
+if ($pci < 33){
+    $color = "#e5405e";
+}
+elseif ($pci > 33 && $pci < 66){
+    $color = "#e5e619";
+}
+else {
+    $color = "#00FF00";
+}
+
+if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid'), INTERNAL_USERS) ) ) { ?>
+<!-- Project Completeness Index Meter -->
+<div id="meter" class="profile-meter" data-value="<?php echo $pci ?>" data-max="100">
+    <p>Your project profile is <strong><?php echo $pci ?>%</strong> complete. Once you reach 'green' then we will be able to assess your project.</p>
+    <div class="bar">
+        <div class="progress" style="background: <?php echo $color ?>"></div>
+    </div>
+    <div class="cta-container">
+        <button><?php echo lang('DismissReminder') ?></button>
+        <a href="/projects/edit/<?php echo $slug ?>"><?php echo lang('EditProject');?></a>
+    </div>
+</div>
+<?php } ?>
+
 <div id="content" class="clearfix">
 		<div id="col2" class="projects">
 			<section class="projectdata white_box">
