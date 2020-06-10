@@ -377,9 +377,11 @@ class Projects extends CI_Controller
         
         $viewdata = array();
         $viewdata['slug'] = $slug;
+	$viewdata['pci'] = 0;
         $viewdata['project']['pid'] = $pid; // Needed for follow/unfollow functions
         $viewdata['userdata'] = $model->get_user_general($userid);
         $viewdata['orgmemberid'] = is_organization_member($viewdata['userdata']['uid']);
+	    
         // Determine who to display as the contact person for the project. 
         // If the project owner belongs to an organization, display the organization 
         // instead of the individual.
@@ -440,22 +442,28 @@ class Projects extends CI_Controller
                 $viewdata['project']['procurement']['procurement_date'] == '' &&
                 $viewdata['project']['procurement']['procurement_criteria'] == ''
                 )) {
-            $viewdata['project_sections']['procurement'] = true;   
+            $viewdata['project_sections']['procurement'] = true;
+            $viewdata['pci'] += $viewdata['project']['procurement']['totalprocurement'] * 7;
         }
         if (! ($viewdata['project']['financial']['totalfinancial'] == 0)) {
             $viewdata['project_sections']['financial'] = true;
+            $viewdata['pci'] += $viewdata['project']['financial']['totalfinancial'] * 12;
         }
         if (! ($viewdata['project']['regulatory']['totalregulatory'] == 0)) {
             $viewdata['project_sections']['regulatory'] = true;
+            $viewdata['pci'] += $viewdata['project']['regulatory']['totalregulatory'] * 7;
         }
         if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
             $viewdata['project_sections']['fundamentals'] = true;
+            $viewdata['pci'] += $viewdata['project']['fundamental']['totalfundamental'] * 7;
         }
         if (! ($viewdata['project']['participants']['totalparticipants'] == 0)) {
-            $viewdata['project_sections']['participants'] = true;   
+            $viewdata['project_sections']['participants'] = true;
+            $viewdata['pci'] += $viewdata['project']['participants']['totalparticipants'] * 7;
         }
         if (! ($viewdata['project']['files']['totalfiles'] == 0)) {
-            $viewdata['project_sections']['files'] = true;   
+            $viewdata['project_sections']['files'] = true;
+            $viewdata['pci'] += $viewdata['project']['files']['totalfiles'] * 5;
         }
 
 		$viewdata['isAdminorOwner'] = $this->isAdminOrOwner($userid);
