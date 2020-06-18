@@ -41,6 +41,7 @@ $totaljobs=0;
 foreach($rows as $project) {
     $jobscreated =  $model_obj->get_jobs_created($project['pid']);
     $totaljobs += $jobscreated;
+    $jobslist[] = $jobscreated;
 }
 ?>
 
