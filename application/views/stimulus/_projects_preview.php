@@ -41,6 +41,7 @@ $totaljobs=0;
 foreach($rows as $project) {
     $jobscreated =  $model_obj->get_jobs_created($project['pid']);
     $totaljobs += $jobscreated;
+    $jobslist[] = $jobscreated;
 }
 ?>
 
@@ -137,6 +138,29 @@ if (count($rows) > 0) {
             </div>
         </div>
     </div>
+
+ <div style="height: 20px"></div>
+    <?php if (in_array(sess_var('uid'), INTERNAL_USERS) ) { ?>
+        <button onclick="myFunction()">Show Jobs (Internal Only)</button>
+        <div style="height: 20px"></div>
+        <div style="display: none" id="myDIV">
+        <?php
+            foreach ($jobslist as $value) {
+                echo $value . "<br>";
+            }
+        ?>
+        </div>
+    <?php } ?>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
     <?php
 }
 else {
