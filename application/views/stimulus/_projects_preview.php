@@ -137,6 +137,26 @@ if (count($rows) > 0) {
             </div>
         </div>
     </div>
+
+    <button onclick="myFunction()">Show Jobs (Internal Only)</button>
+    <div style="height: 20px"></div>
+    <div style="display: none" id="myDIV">
+        <?php
+    foreach($jobslist as $value){
+        echo $value . "<br>";
+    } ?>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
     <?php
 }
 else {
