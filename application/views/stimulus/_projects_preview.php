@@ -139,14 +139,18 @@ if (count($rows) > 0) {
         </div>
     </div>
 
-    <button onclick="myFunction()">Show Jobs (Internal Only)</button>
-    <div style="height: 20px"></div>
-    <div style="display: none" id="myDIV">
+ <div style="height: 20px"></div>
+    <?php if (in_array(sess_var('uid'), INTERNAL_USERS) ) { ?>
+        <button onclick="myFunction()">Show Jobs (Internal Only)</button>
+        <div style="height: 20px"></div>
+        <div style="display: none" id="myDIV">
         <?php
-    foreach($jobslist as $value){
-        echo $value . "<br>";
-    } ?>
-    </div>
+            foreach ($jobslist as $value) {
+                echo $value . "<br>";
+            }
+        ?>
+        </div>
+    <?php } ?>
     <script>
         function myFunction() {
             var x = document.getElementById("myDIV");
@@ -157,7 +161,6 @@ if (count($rows) > 0) {
             }
         }
     </script>
-
     <?php
 }
 else {
