@@ -13,6 +13,11 @@ class Stimulus extends CI_Controller
     {
 
         parent::__construct();
+        
+        if (!Auth::id() > 0){
+            echo ("Please Create a <a href=\"https://www.gvip.io/signup\">GViP Account</a> or <a href=\"https://www.gvip.io/login\">Sign In</a> to Access this Page <br>");
+            die('Access Denied');
+        }
 
         // If the current user doesn't have access to the forum show 404
         if (!in_array(Auth::id(), INTERNAL_USERS)) {
