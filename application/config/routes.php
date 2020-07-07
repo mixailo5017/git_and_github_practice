@@ -195,6 +195,13 @@ $route['stimulusBrazil/projects/(:num)']        = "stimulusBrazil/projects/$1";
 $route['stimulusBrazil/experts/(:num)']         = "stimulusBrazil/experts/$1";
 $route['stimulusBrazil/projects']               = "stimulusBrazil/index";
 
+
+//VirtualLF
+$route['virtualLF']                        = "virtualLF/show/36";
+$route['virtualLF/projects/(:num)']        = "virtualLF/projects/$1";
+$route['virtualLF/experts/(:num)']         = "virtualLF/experts/$1";
+$route['virtualLF/projects']               = "virtualLF/index";
+
 // Permalinks
 $route['plink/(:num)/(:any)'] = "plink/index/$1/$2";
 
