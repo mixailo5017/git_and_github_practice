@@ -39,7 +39,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Venue</a></li>
+          <li><a href="#venue">Map</a></li>
           <li><a href="#hotels">Hotels</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li>
@@ -443,99 +443,70 @@
     <!-- ======= Venue Section ======= -->
     <section id="venue">
 
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Event Venue</h2>
-          <p>Event venue location info and gallery</p>
-        </div>
-
-        <div class="row no-gutters">
-          <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-
-          <div class="col-lg-6 venue-info">
-            <div class="row justify-content-center">
-              <div class="col-11 col-lg-8">
-                <h3>Downtown Conference Center, New York</h3>
-                <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
-              </div>
+        <div id="content" class="clearfix" style="width: 100%">
+            <div style="text-align: center;">
+                <h1 class="large page-title"><?php echo $details['title']; ?></h1>
             </div>
-          </div>
-        </div>
 
-      </div>
 
-      <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row no-gutters">
+            <div style="padding-top: 10px">
+                <div style="width:50%; display: inline-block">
+                    <?php $this->load->view('stimulus/_details_blue', array_merge($projects, array('id' => $details['id'])));?>
+                </div><!-- end #col1 -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/1.jpg" alt="" class="img-fluid">
-              </a>
+                <div style="width: 50%; float: right; height: 650px; overflow: auto">
+                    <div style="float:left;">
+                        <?php echo form_open('/stimulus', array(
+                            'id' => 'projects_search_form',
+                            'name' => 'search_form',
+                            'method' => 'GET')); ?>
+                        <div class="filter_option">
+                            <p><?php echo lang('Filterby').':';?></p>
+                        </div>
+
+                        <div class="filter_option">
+                            <?php echo form_dropdown('stage', stages_dropdown('select'), $filter['stage']); //"id='project_stage'" ?>
+                            <?php echo form_dropdown('sector', sector_dropdown_stim(), $filter['sector']) //id="member_sectors" ?>
+                            <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
+
+                            <?php if ($filter['sector'] != ''){?>
+                                <?php echo form_dropdown('subsector', subsector_dropdown($filter['sector']), $filter['subsector'], 'style="width:170px;"') ?>
+                            <?php }?>
+                        </div>
+
+                        <br>
+
+                        <div style="float: left; padding-right: 10px;">
+                            <div class="filter_option">
+                                <p><?php echo lang('Sort') ?>:</p>
+                            </div>
+                            <div class="filter_option">
+                                <?php echo form_dropdown('sort_options', $sort_options, $sort) ?>
+                            </div>
+                        </div>
+
+                        <div class="filter_option">
+                            <p><?php echo lang('Search');?> :</p>
+                        </div>
+                        <div class="filter_option">
+                            <?php echo form_input('searchtext', $filter['searchtext'], 'placeholder="'. lang('ProjectTextSearchTip').'"') //"id"=>"search_text" ?>
+                        </div>
+                        <div class="filter_option">
+                            <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
+                        </div>
+                        <a href="/stimulus" style="float: right; padding-left: 10px"><?php echo 'Reset Filters';?></a>
+
+                        <input type="hidden" name="sort" value="<?php echo $sort ?>">
+                        <?php echo form_close(); ?>
+                    </div>
+
+                    <?php $this->load->view('stimulus/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
+                </div><!-- end #col2 -->
             </div>
-          </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/2.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/3.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+        </div><!-- end #content -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/4.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/5.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/5.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/6.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/6.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/7.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/7.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="venue-gallery">
-              <a href="onlineforum/assets/img/venue-gallery/8.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="onlineforum/assets/img/venue-gallery/8.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
 
     </section><!-- End Venue Section -->
 
