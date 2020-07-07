@@ -96,7 +96,7 @@ if (count($rows) > 0) {
                             <!-- Card image -->
                             <div class="view ">
                                 <a href="<?php echo $url ?>">
-                                    <img class="card-img-top rounded-top" src="<?php echo project_image($project['projectphoto'], 500); ?>" alt="Card image cap">
+                                    <img class="card-img-top rounded-top" loading="lazy" src="<?php echo project_image($project['projectphoto'], 500); ?>" alt="Card image cap">
                                     <div class="mask rgba-white-slight"></div>
                                 </a>
                             </div>
