@@ -34,20 +34,24 @@ class Jobs extends CI_Controller {
 
     public function index() {
 
-        $data = array();
-        
-        $to = "john@cg-la.com";
-        $subject = "My subject";
-        $txt = "Hello world!";
+        $this->load->model('projects_model');
+        $map['map_data'] = $this->projects_model->get_all_proj_data();
 
-        SendHTMLMail('',$to,$subject,$txt);
+        $data = array(
+            'map' => $map['map_data'],
+            'model_obj' => $this->projects_model,
+        );
+
 
         $this->breadcrumb->append_crumb(lang('B_JOBS'), '/jobs');
         $this->headerdata['breadcrumb'] = $this->breadcrumb->output();
+
 
         // Render HTML Page from view direcotry
         $this->load->view('templates/header', $this->headerdata);
         $this->load->view('jobs/index', $data);
         $this->load->view('templates/footer',$this->dataLang);
+
+
     }
 }
