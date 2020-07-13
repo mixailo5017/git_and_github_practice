@@ -5206,6 +5206,22 @@ class Projects_model extends CI_Model {
 
 		return $smearr;
 	}
+	
+	
+	public function get_all_proj_data()
+	{
+		$query_sme = $this->db->query("SELECT pid, totalbudget
+										FROM public.exp_projects
+										WHERE isdeleted = '0'
+										ORDER BY totalbudget DESC
+
+										");
+
+		$smearr = $query_sme->result_array();
+		$query_sme->free_result();
+
+		return $smearr;
+	}
 
 
 }
