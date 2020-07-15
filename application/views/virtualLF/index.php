@@ -12,14 +12,14 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="onlineforum/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="onlineforum/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="onlineforum/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="onlineforum/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="onlineforum/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="onlineforum/assets/css/style.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: TheEvent - v2.2.0
@@ -92,7 +92,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="onlineforum/assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
               <div class="details">
                 <h3><a href="virtualLF/speaker-details.php">Brenden Legros</a></h3>
                 <p>Quas alias incidunt</p>
@@ -107,7 +107,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
                 <h3><a href="virtualLF/speaker-details.php">Hubert Hirthe</a></h3>
                 <p>Consequuntur odio aut</p>
@@ -122,7 +122,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
               <div class="details">
                 <h3><a href="virtualLF/speaker-details.php">Cole Emmerich</a></h3>
                 <p>Fugiat laborum et</p>
@@ -137,7 +137,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="onlineforum/assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
               <div class="details">
                 <h3><a href="virtualLF/speaker-details.php">Jack Christiansen</a></h3>
                 <p>Debitis iure vero</p>
@@ -152,7 +152,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
               <div class="details">
                 <h3><a href="virtualLF/speaker-details.php">Alejandrin Littel</a></h3>
                 <p>Qui molestiae natus</p>
@@ -167,7 +167,7 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
               <div class="details">
                 <h3><a href="virtualLF/speaker-details.php">Willow Trantow</a></h3>
                 <p>Non autem dicta</p>
@@ -225,7 +225,7 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
                 <h4>Keynote <span>Brenden Legros</span></h4>
                 <p>Facere provident incidunt quos voluptas.</p>
@@ -236,7 +236,7 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
                 </div>
                 <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
                 <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
@@ -247,7 +247,7 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
                 </div>
                 <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
                 <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
@@ -258,7 +258,7 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
                 </div>
                 <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
                 <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
@@ -269,7 +269,7 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
                 </div>
                 <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
                 <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
@@ -280,7 +280,7 @@
               <div class="col-md-2"><time>04:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
                 </div>
                 <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
                 <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
@@ -297,7 +297,7 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
                 <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
                 <p>Facere provident incidunt quos voluptas.</p>
@@ -308,7 +308,7 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
                 </div>
                 <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
                 <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
@@ -319,7 +319,7 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
                 </div>
                 <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
                 <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
@@ -330,7 +330,7 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
                 </div>
                 <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
                 <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
@@ -341,7 +341,7 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
                 </div>
                 <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
                 <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
@@ -352,7 +352,7 @@
               <div class="col-md-2"><time>04:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
                 </div>
                 <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
                 <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
@@ -369,7 +369,7 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
                 </div>
                 <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
                 <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
@@ -380,7 +380,7 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
                 </div>
                 <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
                 <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
@@ -391,7 +391,7 @@
               <div class="col-md-2"><time>12:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
                 </div>
                 <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
                 <p>Facere provident incidunt quos voluptas.</p>
@@ -402,7 +402,7 @@
               <div class="col-md-2"><time>02:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
                 </div>
                 <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
                 <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
@@ -413,7 +413,7 @@
               <div class="col-md-2"><time>03:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
                 </div>
                 <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
                 <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
@@ -424,7 +424,7 @@
               <div class="col-md-2"><time>04:00 PM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
                 </div>
                 <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
                 <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
@@ -451,12 +451,12 @@
 
             <div style="padding-top: 10px">
                 <div style="width:50%; display: inline-block">
-                    <?php $this->load->view('stimulus/_details_blue', array_merge($projects, array('id' => $details['id'])));?>
+                    <?php $this->load->view('virtualLF/_details_blue', array_merge($projects, array('id' => $details['id'])));?>
                 </div><!-- end #col1 -->
 
                 <div style="width: 50%; float: right; height: 650px; overflow: auto">
                     <div style="float:left;">
-                        <?php echo form_open('/stimulus', array(
+                        <?php echo form_open('/virtualLF', array(
                             'id' => 'projects_search_form',
                             'name' => 'search_form',
                             'method' => 'GET')); ?>
@@ -494,13 +494,13 @@
                         <div class="filter_option">
                             <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
                         </div>
-                        <a href="/stimulus" style="float: right; padding-left: 10px"><?php echo 'Reset Filters';?></a>
+                        <a href="/virtualLF#venue" style="float: right; padding-left: 10px"><?php echo 'Reset Filters';?></a>
 
                         <input type="hidden" name="sort" value="<?php echo $sort ?>">
                         <?php echo form_close(); ?>
                     </div>
 
-                    <?php $this->load->view('stimulus/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
+                    <?php $this->load->view('virtualLF/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
                 </div><!-- end #col2 -->
             </div>
 
@@ -524,7 +524,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="onlineforum/assets/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
+                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 1</a></h3>
               <div class="stars">
@@ -541,7 +541,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="onlineforum/assets/img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
+                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 2</a></h3>
               <div class="stars">
@@ -558,7 +558,7 @@
           <div class="col-lg-4 col-md-6">
             <div class="hotel">
               <div class="hotel-img">
-                <img src="onlineforum/assets/img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
+                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
               </div>
               <h3><a href="#">Hotel 3</a></h3>
               <div class="stars">
@@ -587,14 +587,14 @@
       </div>
 
       <div class="owl-carousel gallery-carousel" data-aos="fade-up" data-aos-delay="100">
-        <a href="onlineforum/assets/img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/1.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/2.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/3.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/4.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/5.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/6.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/7.jpg" alt=""></a>
-        <a href="onlineforum/assets/img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="onlineforum/assets/img/gallery/8.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/1.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/2.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/3.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/4.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/5.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/6.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/7.jpg" alt=""></a>
+        <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/8.jpg" alt=""></a>
       </div>
 
     </section><!-- End Gallery Section -->
@@ -611,49 +611,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/1.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/1.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/2.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/2.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/3.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/3.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/4.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/4.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/5.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/5.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/6.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/6.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/7.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/7.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="supporter-logo">
-              <img src="onlineforum/assets/img/supporters/8.png" class="img-fluid" alt="">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/8.png" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -969,18 +969,18 @@
   <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="onlineforum/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="onlineforum/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="onlineforum/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="onlineforum/assets/vendor/php-email-form/validate.js"></script>
-  <script src="onlineforum/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="onlineforum/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="onlineforum/assets/vendor/superfish/superfish.min.js"></script>
-  <script src="onlineforum/assets/vendor/hoverIntent/hoverIntent.js"></script>
-  <script src="onlineforum/assets/vendor/aos/aos.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/superfish/superfish.min.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="onlineforum/assets/js/main.js"></script>
+  <script src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/js/main.js"></script>
 
 </body>
 
