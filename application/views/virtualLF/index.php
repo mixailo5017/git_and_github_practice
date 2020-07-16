@@ -40,11 +40,11 @@
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#venue">Map</a></li>
-          <li><a href="#hotels">Hotels</a></li>
+          <li><a href="#hotels">Attendees</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="buy-tickets"><a href="#buy-tickets">Buy Tickets</a></li>
+          <li class="buy-tickets"><a href="https://www.cg-la.com/store/blueprint2025-registration">Upgrade</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -190,10 +190,9 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Event Schedule</h2>
-          <p>Here is our event schedule</p>
         </div>
 
-        <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
+        <!--<ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
           <li class="nav-item">
             <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
           </li>
@@ -203,7 +202,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Day 3</a>
           </li>
-        </ul>
+        </ul> -->
 
         <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
           necessitatibus voluptatem quis labore perspiciatis quia.</h3>
@@ -290,7 +289,7 @@
           </div>
           <!-- End Schdule Day 1 -->
 
-          <!-- Schdule Day 2 -->
+          <!-- Schdule Day 2
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
             <div class="row schedule-item">
@@ -360,9 +359,9 @@
             </div>
 
           </div>
-          <!-- End Schdule Day 2 -->
+          //End Schdule Day 2
 
-          <!-- Schdule Day 3 -->
+          //Schdule Day 3
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
 
             <div class="row schedule-item">
@@ -432,7 +431,7 @@
             </div>
 
           </div>
-          <!-- End Schdule Day 2 -->
+          //End Schdule Day 2 -->
 
         </div>
 
@@ -445,7 +444,7 @@
 
         <div id="content" class="clearfix" style="width: 100%">
             <div style="text-align: center;">
-                <h1 class="large page-title"><?php echo $details['title']; ?></h1>
+                <h1 class="large page-title">Featured Projects</h1>
             </div>
 
 
@@ -515,62 +514,51 @@
 
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Hotels</h2>
-          <p>Her are some nearby hotels</p>
+          <h2>Attendees</h2>
+          <p>Member Profiles</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="space-2 bg-light">
+                    <div class="container" style="height: 70em; overflow: scroll">
+                        <div class="row d-flex justify-content-center">
+                            <?php foreach($members['rows'] as $members) {
+                                $url = '/expertise/' . $members['uid'];
 
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/hotels/1.jpg" alt="Hotel 1" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 1</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>0.4 Mile from the Venue</p>
-            </div>
-          </div>
+                                ?>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/hotels/2.jpg" alt="Hotel 2" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 2</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-full"></i>
-              </div>
-              <p>0.5 Mile from the Venue</p>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="hotel">
-              <div class="hotel-img">
-                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/hotels/3.jpg" alt="Hotel 3" class="img-fluid">
-              </div>
-              <h3><a href="#">Hotel 3</a></h3>
-              <div class="stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <p>0.6 Mile from the Venue</p>
-            </div>
-          </div>
+                                <div class="col-lg-3 col-md-4 col-sm-4" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
+                                    <!-- Card -->
+                                    <div class="card border-0 shadow" style="overflow: hidden">
+                                        <!-- Card image -->
+                                        <div class="view ">
+                                            <a href="<?php echo $url ?>">
+                                                <img class="card-img-top rounded-top" loading="lazy" src="<?php echo project_image($members['userphoto'], 500); ?>" alt="Card image cap">
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
+                                        <!-- Card content -->
+                                        <div class="card-body border rounded-bottom" style="display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+                                            <a class="card-text small mb-2 d-block"><?php echo $members['title']; ?></a>
+                                            <!-- Title --><a href="<?php echo $url; ?>" class="h5 card-title"><?php echo $members['firstname'].' '.$members['lastname']; ?></a>
+                                            <!-- Description -->
+                                            <hr>
+                                            <p style="overflow: hidden; text-overflow: ellipsis; width: 99%" class="mb-1 font-weight-bold text-dark"><?php echo $members['organization']; ?></p>
+                                            <!-- end: progress bard -->
+                                        </div>
+                                    </div>
+                                    <!-- Card -->
+                                </div>
+                                <!-- end col -->
 
+
+                                <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
         </div>
       </div>
 
@@ -765,7 +753,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Buy Tickets</h2>
+          <h2>Upgrade Experience</h2>
           <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
         </div>
 
