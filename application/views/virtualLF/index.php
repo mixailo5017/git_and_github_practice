@@ -523,6 +523,14 @@
                     <div class="container" style="height: 70em; overflow: scroll">
                         <div class="row d-flex justify-content-center">
                             <?php foreach($members['rows'] as $members) {
+                              $src = expert_image($members["userphoto"], 198, array(
+                                'max' => 500,
+                                'rounded_corners' => array('all', '3'),
+                                'allow_scale_larger' => TRUE,
+                                'bg_color' => '#ffffff',
+                                'crop' => TRUE
+                                ));
+  
                                 $url = '/expertise/' . $members['uid'];
 
                                 ?>
@@ -534,7 +542,7 @@
                                         <!-- Card image -->
                                         <div class="view ">
                                             <a href="<?php echo $url ?>">
-                                                <img class="card-img-top rounded-top" loading="lazy" src="<?php echo project_image($members['userphoto'], 500); ?>" alt="Card image cap">
+                                                <img class="card-img-top rounded-top" loading="lazy" src="<?php echo $src; ?>" alt="Card image cap">
                                                 <div class="mask rgba-white-slight"></div>
                                             </a>
                                         </div>
