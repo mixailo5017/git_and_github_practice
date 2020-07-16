@@ -6,7 +6,7 @@
 
 <div id="content" class="clearfix" style="width: 100%">
     <div style="text-align: center;">
-        <h1 class="large page-title"><?php echo $details['title']; ?></h1>
+        <h1 class="large page-title">Strategic Projects</h1>
     </div>
 
     <div style="padding-top: 10px">
