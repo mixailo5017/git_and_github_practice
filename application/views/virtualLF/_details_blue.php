@@ -89,7 +89,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 border-radius: 3px;
                 position: absolute;
                 width: 16%;
-                top: 3565px;
+                top: 3100px;
                 left: 16%;
                 padding: 10px;
             }
@@ -100,7 +100,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 border-radius: 3px;
                 position: absolute;
                 width: 16%;
-                top: 3565px;
+                top: 3100px;
                 left: 0px;
                 padding: 10px;
             }

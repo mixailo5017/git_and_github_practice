@@ -265,6 +265,34 @@ class Forums_model extends CI_Model
 
         return $rows;
     }
+    
+    
+       /**
+     * Used for retrieving preview list of members shown on forum overview page
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @return array
+     */
+    public function get_members_for_forum_homepage_vf($id)
+    {
+        $select = "m.uid, firstname, lastname, userphoto, m.title, organization, country, city";
+
+        $order_by = [
+            'm.id' => 'random'
+        ];
+        $row_count = true;
+
+        $this->members_base_query($id, $select, null, $order_by, $row_count);
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
+    
+    
 
     /**
      * Get ALL members (experts) along with a flag whether
@@ -382,6 +410,35 @@ class Forums_model extends CI_Model
     public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null, $sort = null)
     {
         $this->projects_base_query($id, $select, null, $order_by, $row_count, $filter, $sort);
+
+        if (! is_null($limit)) {
+            $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
+        }
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
+    
+    
+     /**
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @param string $select
+     * @param array $order_by
+     * @param int $limit
+     * @param int $offset
+     * @param bool $row_count
+     * @param array $filter
+     * @param array $sort
+     * @return array
+     */
+    public function projects_stim($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null, $sort = null)
+    {
+        $this->projects_base_query(37, $select, null, $order_by, $row_count, $filter, $sort);
 
         if (! is_null($limit)) {
             $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);

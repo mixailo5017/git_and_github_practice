@@ -101,7 +101,7 @@ class VirtualLF extends CI_Controller
 
         // Fetch projects and members (experts) accociated with the forum
         $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 700, 0, true, $filter, $sort);
-        $members = $model->get_members_for_forum_homepage($id);
+        $members = $model->get_members_for_forum_homepage_vf($id);
 
 
         // List of all other forums for navigation bar
