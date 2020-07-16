@@ -285,6 +285,8 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
 
                 map.addControl(new mapboxgl.NavigationControl());
                 map.addControl(new mapboxgl.FullscreenControl());
+                map.scrollZoom.disable();
+
 
 
 
