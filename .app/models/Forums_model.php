@@ -421,6 +421,35 @@ class Forums_model extends CI_Model
 
         return $rows;
     }
+    
+    
+     /**
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @param string $select
+     * @param array $order_by
+     * @param int $limit
+     * @param int $offset
+     * @param bool $row_count
+     * @param array $filter
+     * @param array $sort
+     * @return array
+     */
+    public function projects_stim($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null, $sort = null)
+    {
+        $this->projects_base_query(37, $select, null, $order_by, $row_count, $filter, $sort);
+
+        if (! is_null($limit)) {
+            $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
+        }
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
 
     /**
      * Get ALL projects along with a flag whether a project is being selected for the forum
