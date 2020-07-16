@@ -265,6 +265,34 @@ class Forums_model extends CI_Model
 
         return $rows;
     }
+    
+    
+       /**
+     * Used for retrieving preview list of members shown on forum overview page
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @return array
+     */
+    public function get_members_for_forum_homepage_vf($id)
+    {
+        $select = "m.uid, firstname, lastname, userphoto, m.title, organization, country, city";
+
+        $order_by = [
+            'm.id' => 'random'
+        ];
+        $row_count = true;
+
+        $this->members_base_query($id, $select, null, $order_by, $row_count);
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
+    
+    
 
     /**
      * Get ALL members (experts) along with a flag whether
