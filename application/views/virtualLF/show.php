@@ -12,12 +12,12 @@
 
     <div style="padding-top: 10px">
         <div style="width:50%; display: inline-block">
-            <?php $this->load->view('stimulus/_details_blue', array_merge($projects, array('id' => $details['id'])));?>
+            <?php $this->load->view('virtualLF/_details_blue', array_merge($projects, array('id' => $details['id'])));?>
         </div><!-- end #col1 -->
 
         <div style="width: 50%; float: right; height: 650px; overflow: auto">
             <div style="float:left;">
-                <?php echo form_open('/stimulus', array(
+                <?php echo form_open('/virtualLF/map', array(
                     'id' => 'projects_search_form',
                     'name' => 'search_form',
                     'method' => 'GET')); ?>
@@ -61,7 +61,7 @@
                 <?php echo form_close(); ?>
             </div>
 
-            <?php $this->load->view('stimulus/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
+            <?php $this->load->view('virtualLF/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
         </div><!-- end #col2 -->
     </div>
 
