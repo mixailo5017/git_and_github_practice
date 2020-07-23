@@ -77,39 +77,12 @@ class VirtualLF extends CI_Controller
             exit;
         }
 
-        $sort = $this->check_sort($this->input->get_post('sort', true));
-
-
-        $filter = array(
-            'state' => $this->input->get_post('state', true),
-            'sector' => $this->input->get_post('sector', true),
-            'subsector' => $this->input->get_post('subsector', true),
-            'stage' => $this->input->get_post('stage', true),
-            'searchtext' => $this->input->get_post('searchtext', true)
-        );
-        array_walk($filter, function (&$value, $key) {
-            $value = $value ? : '';
-        });
-
-        $sector_data = sector_subsectors();
-        $subsectors = array();
-        if (! empty($subsector)) {
-            if (isset($sector_data[$subsector])) {
-                $subsectors = $sector_data[$subsector];
-            }
-        }
-
         // Fetch projects and members (experts) accociated with the forum
-        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 700, 0, true, $filter, $sort);
+        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 5, 0, true, null, 3);
         $members = $model->get_members_for_forum_homepage_vf($id);
 
 
-        // List of all other forums for navigation bar
-        $forums_by_categories = $model->all_by_categories($id);
-
         $this->load->model('projects_model');
-
-        $jobscreated1 = array();
 
         foreach($projects as $proj) {
             $jobscreated1 =  $this->projects_model->get_jobs_created($proj['pid']);
@@ -126,28 +99,11 @@ class VirtualLF extends CI_Controller
                 'total_rows' => (count($members) > 0) ? $members[0]['row_count'] : 0
             ),
             'details' => $forum,
-            'forums_by_categories' => $forums_by_categories,
-            'filter'       => $filter,
-            'sort'       => $sort,
             'sort_options' => $this->sort_options,
-            'subsectors' => $subsectors,
-            'all_subsectors'   => $sector_data,
             'model_obj' => $this->projects_model,
-            'jobscreated1' => $jobscreated1,
 
         );
 
-
-        // No Breadcrumb for this page
-
-        // Set the default coordinates for the map to the coordinates of the forum's venue
-        $coordinates = array();
-        if (isset($forum['venue_lat']) && isset($forum['venue_lng'])) {
-            $coordinates = array(
-                'lat' => $forum['venue_lat'],
-                'lng' => $forum['venue_lng'],
-            );
-        }
         $this->headerdata['title'] = build_title($forum['title']);
 
         // Provide page analitics data for Segment Analitics
@@ -237,6 +193,75 @@ class VirtualLF extends CI_Controller
         } else {
             return $default;
         }
+    }
+
+    /**
+     * View Method
+     * Load Individual Detail Page
+     * @param $id
+     */
+    public function map($id)
+    {
+        $id = (int) $id;
+
+        $model = $this->forums_model;
+
+        $forum = $model->find($id);
+        // If we can't find a forum redirect to the forums list view
+        if (empty($forum)) {
+            redirect('forums', 'refresh');
+            exit;
+        }
+
+        $sort = $this->check_sort($this->input->get_post('sort', true));
+
+
+        $filter = array(
+            'state' => $this->input->get_post('state', true),
+            'sector' => $this->input->get_post('sector', true),
+            'subsector' => $this->input->get_post('subsector', true),
+            'stage' => $this->input->get_post('stage', true),
+            'searchtext' => $this->input->get_post('searchtext', true)
+        );
+        array_walk($filter, function (&$value, $key) {
+            $value = $value ? : '';
+        });
+
+        $sector_data = sector_subsectors();
+        $subsectors = array();
+        if (! empty($subsector)) {
+            if (isset($sector_data[$subsector])) {
+                $subsectors = $sector_data[$subsector];
+            }
+        }
+
+        // Fetch projects and members (experts) accociated with the forum
+        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 700, 0, true, $filter, $sort);
+
+        $this->load->model('projects_model');
+
+        $data = array(
+            'projects' => array(
+                'rows' => $projects,
+                'total_rows' => (count($projects) > 0) ? $projects[0]['row_count'] : 0,
+
+            ),
+            'details' => $forum,
+            'filter'       => $filter,
+            'sort'       => $sort,
+            'sort_options' => $this->sort_options,
+            'subsectors' => $subsectors,
+            'all_subsectors'   => $sector_data,
+            'model_obj' => $this->projects_model,
+
+        );
+
+        $this->headerdata['title'] = build_title($forum['title']);
+
+        // Render the page
+        $this->load->view('virtualLF/header_stimulus', $this->headerdata);
+        $this->load->view('virtualLF/show', $data);
+        $this->load->view('templates/footer', $this->footer_data);
     }
 
 }

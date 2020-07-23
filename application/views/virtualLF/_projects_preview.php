@@ -38,6 +38,7 @@
 </style>
 <?php
 $totaljobs=0;
+$projectcount = 0;
 foreach($rows as $project) {
     $jobscreated =  $model_obj->get_jobs_created($project['pid']);
     $totaljobs += $jobscreated;
@@ -50,12 +51,16 @@ foreach($rows as $project) {
 <?php
 if (count($rows) > 0) {
     ?>
-    <a href="/stimulus/projects/<?php echo $id ?>" class="light_green" style="width: 100%; text-align: center"><?php echo 'Show All Projects';?></a>
+    <a href="/virtualLF/projects/<?php echo $id ?>" class="light_green" style="width: 100%; text-align: center"><?php echo 'Show All Projects';?></a>
     <div class="space-2 bg-light">
         <div class="container">
             <h5 style="text-align: center; padding-top: 5px">Total Jobs Created From Projects: <?php echo $totaljobs*2;?></h5>
             <div class="row d-flex justify-content-center">
                 <?php foreach($rows as $project) {
+                    $projectcount += 1;
+                    if ($projectcount > 60){
+                        break;
+                    }
                     $url = '/projects/' . $project['slug'];
 
                     if ($project['stage'] === 'conceptual'){
@@ -138,29 +143,6 @@ if (count($rows) > 0) {
             </div>
         </div>
     </div>
-    <div style="height: 20px"></div>
-
-    <?php if (in_array(sess_var('uid'), INTERNAL_USERS) ) { ?>
-        <button onclick="myFunction()">Show Jobs (Internal Only)</button>
-        <div style="height: 20px"></div>
-        <div style="display: none" id="myDIV">
-        <?php
-            foreach ($jobslist as $value) {
-                echo $value . "<br>";
-            }
-        ?>
-        </div>
-    <?php } ?>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
     <?php
 }
 else {
@@ -171,4 +153,3 @@ else {
     <?php
 }
 ?>
-

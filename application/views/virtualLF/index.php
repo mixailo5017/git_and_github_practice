@@ -38,13 +38,13 @@
           <li class="menu-active"><a href="virtualLF">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#venue">Map</a></li>
+          <li><a href="#schedule">Agenda</a></li>
           <li><a href="#hotels">Attendees</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li class="buy-tickets"><a href="https://www.cg-la.com/store/blueprint2025-registration">Upgrade</a></li>
+            <li class="buy-tickets"><a href="map">Map</a></li>
+
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
@@ -54,14 +54,7 @@
   <section id="intro">
     <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0"> <?php echo $details['title']; ?> </h1>
-      <p class="mb-4 pb-0"><?php
-          $dates = '';
-          if ($details['start_date'] && $details['end_date']) {
-              $dates = forum_dates($details['start_date'], $details['end_date']);
-          }
-          $venue = ($details['venue_url']) ? anchor($details['venue_url'], $details['venue']) : $details['venue'];
-          ?>
-        <?php echo implode(' - ', array_filter(array($dates, $venue))); ?></p>
+      <p class="mb-4 pb-0">July 30, 2020</p>
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
@@ -180,6 +173,96 @@
               </div>
             </div>
           </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="virtualLF/speaker-details.php">Brenden Legros</a></h3>
+                        <p>Quas alias incidunt</p>
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="virtualLF/speaker-details.php">Hubert Hirthe</a></h3>
+                        <p>Consequuntur odio aut</p>
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="virtualLF/speaker-details.php">Cole Emmerich</a></h3>
+                        <p>Fugiat laborum et</p>
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 4" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="virtualLF/speaker-details.php">Jack Christiansen</a></h3>
+                        <p>Debitis iure vero</p>
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 5" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="virtualLF/speaker-details.php">Alejandrin Littel</a></h3>
+                        <p>Qui molestiae natus</p>
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="virtualLF/speaker-details.php">Norman F. Anderson</a></h3>
+                        <p>CG/LA Infrastructure</p>
+                        <div class="social">
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-google-plus"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
 
@@ -189,23 +272,10 @@
     <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h2>Event Schedule</h2>
+          <h2>Agenda</h2>
         </div>
 
-        <!--<ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
-          <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Day 3</a>
-          </li>
-        </ul> -->
-
-        <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
-          necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+        <h3 class="sub-heading">Driving our Economic Recovery • July 30, 2020</h3>
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
@@ -213,10 +283,47 @@
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>09:30 AM</time></div>
+              <div class="col-md-2"><time>08:00 AM</time></div>
               <div class="col-md-10">
-                <h4>Registration</h4>
-                <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
+                  <div class="speaker">
+                      <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Norman Anderson">
+                  </div>
+                <h4>Welcome &amp; Introductory Presentation</h4>
+                <p>&quot;Assessment:  The Need for a Big &amp; Bold Infrastructure Stimulus,&quot; Norman F. Anderson</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>8:30 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
+                </div>
+                <h4>CARES Act Funding and Infrastructure Investment</h4>
+                  <p>French Hill, U.S. House of Representatives, State of Arkansas</p>
+                  <p>Denny Heck, U.S. House of Representatives, State of Washington</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>9:00 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg">
+                </div>
+                <h4>U.S. Army Corps of Engineers – Meeting Covid Challenges with Priority Projects</h4>
+                <p>Lt. Gen. Todd T. Semonite (invited)</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>9:03 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg">
+                </div>
+                <h4>Dry Powder &amp; the Build America Bureau</h4>
+                <p>Roger Boehnert, Director of Business Outreach</p>
               </div>
             </div>
 
@@ -224,10 +331,21 @@
               <div class="col-md-2"><time>10:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg">
                 </div>
-                <h4>Keynote <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
+                <h4>Meeting the Covid Challenge with Infrastructure Stimulus: How Washington Will Respond</h4>
+                <p>Bruce Mehlman (invited), Founder, Mehlman Castagnetti</p>
+              </div>
+            </div>
+
+            <div class="row schedule-item">
+              <div class="col-md-2"><time>10:30 AM</time></div>
+              <div class="col-md-10">
+                <div class="speaker">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg">
+                </div>
+                <h4>The View from the White House on Infrastructure &amp; Stimulus</h4>
+                <p>Francis Brooke, Deputy Director, National Economic Council</p>
               </div>
             </div>
 
@@ -235,279 +353,85 @@
               <div class="col-md-2"><time>11:00 AM</time></div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg">
                 </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
+                <h4>The U.S. Development Finance Corporation (DFC) Funding for Reshoring Critical Capabilities</h4>
+                <p>David J. Penna, Senior Vice President, U.S. DFC</p>
               </div>
             </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
+              <div class="row schedule-item">
+                  <div class="col-md-2"><time>11:30 AM</time></div>
+                  <div class="col-md-10">
+                      <div class="speaker">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg">
+                      </div>
+                      <h4>Leadership Panel:  What the Infrastructure Community Needs from Washington</h4>
+                      <p>Mike Johnson, Vice Chairman, Kiewit</p>
+                      <p>Ed Smith, CEO, Ullico</p>
+                      <p>Pierce Homer, Director, Moffat &amp; Nichol (former Sec. of Transportation, Virginia)</p>
+                  </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
+              <div class="row schedule-item">
+                  <div class="col-md-2"><time>12:15 PM</time></div>
+                  <div class="col-md-10">
+                      <div class="speaker">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg">
+                      </div>
+                      <h4>Governor&#39;s Panel</h4>
+                      <p>Gov. Jim Justice, Governor, West Virginia</p>
+                      <p>&quot;How We Can Meet the Covid Challenge through Targetted Infrastructure Investment&quot;</p>
+                  </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
+              <div class="row schedule-item">
+                  <div class="col-md-2"><time>1:00 PM</time></div>
+                  <div class="col-md-10">
+                      <div class="speaker">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg">
+                      </div>
+                      <h4>Private Session (by invitation only)</h4>
+                      <p>Public Sector Discussion with Public Officials - What is Happening in the States</p>
+                  </div>
               </div>
-            </div>
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
+              <div class="row schedule-item">
+                  <div class="col-md-2"><time>1:45 PM</time></div>
+                  <div class="col-md-10">
+                      <div class="speaker">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg">
+                      </div>
+                      <h4>Creation of a Benefits Index (public sector only)</h4>
+                      <p>Dahlberg &amp; CG/LA Infrastructure, Inc.</p>
+                  </div>
               </div>
-            </div>
 
           </div>
-          <!-- End Schdule Day 1 -->
-
-          <!-- Schdule Day 2
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
-
-          </div>
-          //End Schdule Day 2
-
-          //Schdule Day 3
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Hubert Hirthe">
-                </div>
-                <h4>Et voluptatem iusto dicta nobis. <span>Hubert Hirthe</span></h4>
-                <p>Maiores dignissimos neque qui cum accusantium ut sit sint inventore.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Cole Emmerich">
-                </div>
-                <h4>Explicabo et rerum quis et ut ea. <span>Cole Emmerich</span></h4>
-                <p>Veniam accusantium laborum nihil eos eaque accusantium aspernatur.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>12:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
-                </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>02:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Jack Christiansen">
-                </div>
-                <h4>Qui non qui vel amet culpa sequi. <span>Jack Christiansen</span></h4>
-                <p>Nam ex distinctio voluptatem doloremque suscipit iusto.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>03:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Alejandrin Littel">
-                </div>
-                <h4>Quos ratione neque expedita asperiores. <span>Alejandrin Littel</span></h4>
-                <p>Eligendi quo eveniet est nobis et ad temporibus odio quo.</p>
-              </div>
-            </div>
-
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>04:00 PM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Willow Trantow">
-                </div>
-                <h4>Quo qui praesentium nesciunt <span>Willow Trantow</span></h4>
-                <p>Voluptatem et alias dolorum est aut sit enim neque veritatis.</p>
-              </div>
-            </div>
-
-          </div>
-          //End Schdule Day 2 -->
-
         </div>
 
       </div>
 
     </section><!-- End Schedule Section -->
 
-    <!-- ======= Venue Section ======= -->
-    <section id="venue">
+      <!-- ======= Subscribe Section ======= -->
+      <section id="subscribe">
+          <div class="container" data-aos="zoom-in">
+              <div class="section-header">
+                  <h2>View Stimulus Map</h2>
+                  <p>Click to interact with GViP's Stimulus Project Map</p>
+              </div>
 
-        <div id="content" class="clearfix" style="width: 100%">
-            <div style="text-align: center;">
-                <h1 class="large page-title">Featured Projects</h1>
-            </div>
+              <form method="POST" action="/virtualLF/map">
+                  <div class="form-row justify-content-center">
+                      <div class="col-auto">
+                          <button type="submit">View Map</button>
+                      </div>
+                  </div>
+              </form>
 
-
-            <div style="padding-top: 10px">
-                <div style="width:50%; display: inline-block">
-                    <?php $this->load->view('virtualLF/_details_blue', array_merge($projects, array('id' => $details['id'])));?>
-                </div><!-- end #col1 -->
-
-                <div style="width: 50%; float: right; height: 650px; overflow: auto">
-                    <div style="float:left;">
-                        <?php echo form_open('/virtualLF', array(
-                            'id' => 'projects_search_form',
-                            'name' => 'search_form',
-                            'method' => 'GET')); ?>
-                        <div class="filter_option">
-                            <p><?php echo lang('Filterby').':';?></p>
-                        </div>
-
-                        <div class="filter_option">
-                            <?php echo form_dropdown('stage', stages_dropdown('select'), $filter['stage']); //"id='project_stage'" ?>
-                            <?php echo form_dropdown('sector', sector_dropdown_stim(), $filter['sector']) //id="member_sectors" ?>
-                            <?php echo form_dropdown('state', state_dropdown('select'), $filter['state']); //"id='project_stage'" ?>
-
-                            <?php if ($filter['sector'] != ''){?>
-                                <?php echo form_dropdown('subsector', subsector_dropdown($filter['sector']), $filter['subsector'], 'style="width:170px;"') ?>
-                            <?php }?>
-                        </div>
-
-                        <br>
-
-                        <div style="float: left; padding-right: 10px;">
-                            <div class="filter_option">
-                                <p><?php echo lang('Sort') ?>:</p>
-                            </div>
-                            <div class="filter_option">
-                                <?php echo form_dropdown('sort_options', $sort_options, $sort) ?>
-                            </div>
-                        </div>
-
-                        <div class="filter_option">
-                            <p><?php echo lang('Search');?> :</p>
-                        </div>
-                        <div class="filter_option">
-                            <?php echo form_input('searchtext', $filter['searchtext'], 'placeholder="'. lang('ProjectTextSearchTip').'"') //"id"=>"search_text" ?>
-                        </div>
-                        <div class="filter_option">
-                            <?php echo form_submit('search', lang('Search'), 'class = "light_green"') ?>
-                        </div>
-                        <a href="/virtualLF#venue" style="float: right; padding-left: 10px"><?php echo 'Reset Filters';?></a>
-
-                        <input type="hidden" name="sort" value="<?php echo $sort ?>">
-                        <?php echo form_close(); ?>
-                    </div>
-
-                    <?php $this->load->view('virtualLF/_projects_preview', array_merge($projects, array('id' => $details['id'])));?>
-                </div><!-- end #col2 -->
-            </div>
-
-
-        </div><!-- end #content -->
-
-
-    </section><!-- End Venue Section -->
+          </div>
+      </section><!-- End Subscribe Section -->
 
     <!-- ======= Hotels Section ======= -->
     <section id="hotels" class="section-with-bg">
@@ -522,16 +446,14 @@
                 <div class="space-2 bg-light">
                     <div class="container" style="height: 70em; overflow: scroll">
                         <div class="row d-flex justify-content-center">
-                            <?php foreach($members['rows'] as $members) {
-                              $src = expert_image($members["userphoto"], 198, array(
-                                'max' => 500,
-                                'rounded_corners' => array('all', '3'),
-                                'allow_scale_larger' => TRUE,
-                                'bg_color' => '#ffffff',
-                                'crop' => TRUE
-                                ));
-  
+                            <?php
+                            $count = 0;
+                                foreach($members['rows'] as $members) {
                                 $url = '/expertise/' . $members['uid'];
+                                $count += 1;
+                                if ($count > 24){
+                                    break;
+                                }
 
                                 ?>
 
@@ -542,7 +464,7 @@
                                         <!-- Card image -->
                                         <div class="view ">
                                             <a href="<?php echo $url ?>">
-                                                <img class="card-img-top rounded-top" loading="lazy" src="<?php echo $src; ?>" alt="Card image cap">
+                                                <img class="card-img-top rounded-top" loading="lazy" src="<?php echo project_image($members['userphoto'], 500); ?>" alt="Card image cap">
                                                 <div class="mask rgba-white-slight"></div>
                                             </a>
                                         </div>
@@ -673,7 +595,7 @@
             <ul id="faq-list">
 
               <li>
-                <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="fa fa-minus-circle"></i></a>
+                <a data-toggle="collapse" class="collapsed" href="#faq1">How do I access the webinar sessions? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq1" class="collapse" data-parent="#faq-list">
                   <p>
                     Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
@@ -734,143 +656,6 @@
 
     </section><!-- End  F.A.Q Section -->
 
-    <!-- ======= Subscribe Section ======= -->
-    <section id="subscribe">
-      <div class="container" data-aos="zoom-in">
-        <div class="section-header">
-          <h2>Newsletter</h2>
-          <p>Rerum numquam illum recusandae quia mollitia consequatur.</p>
-        </div>
-
-        <form method="POST" action="#">
-          <div class="form-row justify-content-center">
-            <div class="col-auto">
-              <input type="text" class="form-control" placeholder="Enter your Email">
-            </div>
-            <div class="col-auto">
-              <button type="submit">Subscribe</button>
-            </div>
-          </div>
-        </form>
-
-      </div>
-    </section><!-- End Subscribe Section -->
-
-    <!-- ======= Buy Ticket Section ======= -->
-    <section id="buy-tickets" class="section-with-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>Upgrade Experience</h2>
-          <p>Velit consequatur consequatur inventore iste fugit unde omnis eum aut.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Standard Access</h5>
-                <h6 class="card-price text-center">$150</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Community Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="standard-access">Buy Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="card mb-5 mb-lg-0">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Pro Access</h5>
-                <h6 class="card-price text-center">$250</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>Workshop Access</li>
-                  <li class="text-muted"><span class="fa-li"><i class="fa fa-times"></i></span>After Party</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="pro-access">Buy Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Pro Tier -->
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title text-muted text-uppercase text-center">Premium Access</h5>
-                <h6 class="card-price text-center">$350</h6>
-                <hr>
-                <ul class="fa-ul">
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Regular Seating</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Coffee Break</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Custom Badge</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Community Access</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>Workshop Access</li>
-                  <li><span class="fa-li"><i class="fa fa-check"></i></span>After Party</li>
-                </ul>
-                <hr>
-                <div class="text-center">
-                  <button type="button" class="btn" data-toggle="modal" data-target="#buy-ticket-modal" data-ticket-type="premium-access">Buy Now</button>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Modal Order Form -->
-      <div id="buy-ticket-modal" class="modal fade">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Buy Tickets</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form method="POST" action="#">
-                <div class="form-group">
-                  <input type="text" class="form-control" name="your-name" placeholder="Your Name">
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="your-email" placeholder="Your Email">
-                </div>
-                <div class="form-group">
-                  <select id="ticket-type" name="ticket-type" class="form-control">
-                    <option value="">-- Select Your Ticket Type --</option>
-                    <option value="standard-access">Standard Access</option>
-                    <option value="pro-access">Pro Access</option>
-                    <option value="premium-access">Premium Access</option>
-                  </select>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn">Buy Now</button>
-                </div>
-              </form>
-            </div>
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal -->
-
-    </section><!-- End Buy Ticket Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="section-bg">
@@ -879,7 +664,7 @@
 
         <div class="section-header">
           <h2>Contact Us</h2>
-          <p>Nihil officia ut sint molestiae tenetur.</p>
+          <p>CG/LA Infrastructure</p>
         </div>
 
         <div class="row contact-info">
@@ -888,7 +673,10 @@
             <div class="contact-address">
               <i class="ion-ios-location-outline"></i>
               <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>729 15th St. NW
+                  Suite 600
+                  Washington, D.C. 20005
+              </address>
             </div>
           </div>
 
@@ -896,7 +684,7 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <p><a href="tel:+12027760990">+1 (202) 776-0990</a></p>
             </div>
           </div>
 
@@ -904,41 +692,11 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@cg-la.com">info@cg-la.com</a></p>
             </div>
           </div>
 
         </div>
-
-        <div class="form">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                <div class="validate"></div>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                <div class="validate"></div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-              <div class="validate"></div>
-            </div>
-            <div class="mb-3">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-            </div>
-            <div class="text-center"><button type="submit">Send Message</button></div>
-          </form>
-        </div>
-
       </div>
     </section><!-- End Contact Section -->
 
