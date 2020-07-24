@@ -55,7 +55,7 @@
     <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
       <h1 class="mb-4 pb-0"> <?php echo $details['title']; ?> </h1>
       <p class="mb-4 pb-0">July 30, 2020</p>
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
+      <a href="https://www.youtube.com/watch?v=fVkrz-W1rY4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
       <a href="#about" class="about-btn scrollto">About The Event</a>
     </div>
   </section><!-- End Intro Section -->
@@ -87,8 +87,8 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
               <div class="details">
-                <h3><a href="virtualLF/speaker-details.php">Brenden Legros</a></h3>
-                <p>Quas alias incidunt</p>
+                <h3><a href="#schedule">Congressman French Hill</a></h3>
+                <p>(R-AR)</p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -102,8 +102,8 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
-                <h3><a href="virtualLF/speaker-details.php">Hubert Hirthe</a></h3>
-                <p>Consequuntur odio aut</p>
+                <h3><a href="#schedule">K.N. Gunalan</a></h3>
+                <p>Senior Vice President, Alternative Delivery, Americas, AECOM</p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -117,8 +117,8 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
               <div class="details">
-                <h3><a href="virtualLF/speaker-details.php">Cole Emmerich</a></h3>
-                <p>Fugiat laborum et</p>
+                <h3><a href="#schedule">Roger Bohnert</a></h3>
+                <p>Director of Outreach and Project Development, Build America Bureau, U.S. Department of Transportation</p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -132,8 +132,8 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
               <div class="details">
-                <h3><a href="virtualLF/speaker-details.php">Jack Christiansen</a></h3>
-                <p>Debitis iure vero</p>
+                <h3><a href="#schedule">Jennifer Schmitz</a></h3>
+                <p>Founder & CEO, Lattice Industries Inc.</p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -147,8 +147,8 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
               <div class="details">
-                <h3><a href="virtualLF/speaker-details.php">Alejandrin Littel</a></h3>
-                <p>Qui molestiae natus</p>
+                <h3><a href="#schedule">Francis Brooke</a></h3>
+                <p>Deputy Director, National Economic Council</p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -162,8 +162,8 @@
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
               <div class="details">
-                <h3><a href="virtualLF/speaker-details.php">Willow Trantow</a></h3>
-                <p>Non autem dicta</p>
+                <h3><a href="#schedule">David Penna</a></h3>
+                <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</p>
                 <div class="social">
                   <a href=""><i class="fa fa-twitter"></i></a>
                   <a href=""><i class="fa fa-facebook"></i></a>
@@ -177,8 +177,8 @@
                 <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid">
                     <div class="details">
-                        <h3><a href="virtualLF/speaker-details.php">Brenden Legros</a></h3>
-                        <p>Quas alias incidunt</p>
+                        <h3><a href="#schedule">Mike Johnson</a></h3>
+                        <p>Senior Vice President, Infrastructure Market & Strategy, Kiewit</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -192,8 +192,8 @@
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg" alt="Speaker 2" class="img-fluid">
                     <div class="details">
-                        <h3><a href="virtualLF/speaker-details.php">Hubert Hirthe</a></h3>
-                        <p>Consequuntur odio aut</p>
+                        <h3><a href="#schedule">Pierce Homer</a></h3>
+                        <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -207,8 +207,8 @@
                 <div class="speaker" data-aos="fade-up" data-aos-delay="300">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid">
                     <div class="details">
-                        <h3><a href="virtualLF/speaker-details.php">Cole Emmerich</a></h3>
-                        <p>Fugiat laborum et</p>
+                        <h3><a href="#schedule">Ian Rainey</a></h3>
+                        <p>Senior Vice President, Northeast Maglev</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-facebook"></i></a>
@@ -222,7 +222,7 @@
                 <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 4" class="img-fluid">
                     <div class="details">
-                        <h3><a href="virtualLF/speaker-details.php">Jack Christiansen</a></h3>
+                        <h3><a href="#schedule">Jack Christiansen</a></h3>
                         <p>Debitis iure vero</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
@@ -237,7 +237,7 @@
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 5" class="img-fluid">
                     <div class="details">
-                        <h3><a href="virtualLF/speaker-details.php">Alejandrin Littel</a></h3>
+                        <h3><a href="#schedule">Alejandrin Littel</a></h3>
                         <p>Qui molestiae natus</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
@@ -252,7 +252,7 @@
                 <div class="speaker" data-aos="fade-up" data-aos-delay="300">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid">
                     <div class="details">
-                        <h3><a href="virtualLF/speaker-details.php">Norman F. Anderson</a></h3>
+                        <h3><a href="#schedule">Norman F. Anderson</a></h3>
                         <p>CG/LA Infrastructure</p>
                         <div class="social">
                             <a href=""><i class="fa fa-twitter"></i></a>
@@ -283,7 +283,16 @@
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
 
             <div class="row schedule-item">
-              <div class="col-md-2"><time>08:00 AM</time></div>
+                <div class="col-md-2">
+                    <time>8:00 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
               <div class="col-md-10">
                   <div class="speaker">
                       <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Norman Anderson">
@@ -293,8 +302,18 @@
               </div>
             </div>
 
+
             <div class="row schedule-item">
-              <div class="col-md-2"><time>8:30 AM</time></div>
+                <div class="col-md-2">
+                    <time>8:30 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
               <div class="col-md-10">
                 <div class="speaker">
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
@@ -305,41 +324,83 @@
               </div>
             </div>
 
+
             <div class="row schedule-item">
-              <div class="col-md-2"><time>9:00 AM</time></div>
+                <div class="col-md-2">
+                    <time>9:00 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/army.jpg">
                 </div>
                 <h4>U.S. Army Corps of Engineers – Meeting Covid Challenges with Priority Projects</h4>
-                <p>Lt. Gen. Todd T. Semonite (invited)</p>
+                <p>U.S. Army Corps of Engineers (invited)</p>
               </div>
             </div>
 
+
             <div class="row schedule-item">
-              <div class="col-md-2"><time>9:03 AM</time></div>
+                <div class="col-md-2">
+                    <time>9:30 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
               <div class="col-md-10">
                 <div class="speaker">
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg">
                 </div>
                 <h4>Dry Powder &amp; the Build America Bureau</h4>
-                <p>Roger Boehnert, Director of Business Outreach</p>
+                <p>Roger Bohnert, Director of Business Outreach, Build America Bureau, U.S. DOT</p>
               </div>
             </div>
 
+
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg">
+                <div class="col-md-2">
+                    <time>10:00 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <h4>Meeting the Covid Challenge with Infrastructure Stimulus: How Washington Will Respond</h4>
-                <p>Bruce Mehlman (invited), Founder, Mehlman Castagnetti</p>
+                <div class="col-md-10">
+                    <div class="speaker">
+                        <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/hsr.jpg">
+                    </div>
+                <h4>Three Visionary Projects Driving Growth</h4>
+                  <p>The Northeast Maglev Project - Ian Rainey, Senior Vice President, Northeast Maglev</p>
+                  <p>Smart Cities Project - Jennifer Schmitz, Managing Partner, Lattice Industries</p>
+                  <p>Theia - Presenter TBD</p>
               </div>
             </div>
 
+
             <div class="row schedule-item">
-              <div class="col-md-2"><time>10:30 AM</time></div>
+                <div class="col-md-2">
+                    <time>10:30 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
               <div class="col-md-10">
                 <div class="speaker">
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg">
@@ -349,8 +410,18 @@
               </div>
             </div>
 
+
             <div class="row schedule-item">
-              <div class="col-md-2"><time>11:00 AM</time></div>
+                <div class="col-md-2">
+                    <time>11:00 AM</time>
+                    <form method="POST" action="/virtualLF/map">
+                        <div class="form-row">
+                            <div class="col-auto">
+                                <button type="submit">Join Session</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
               <div class="col-md-10">
                 <div class="speaker">
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg">
@@ -360,24 +431,45 @@
               </div>
             </div>
 
+
               <div class="row schedule-item">
-                  <div class="col-md-2"><time>11:30 AM</time></div>
+                  <div class="col-md-2">
+                      <time>11:30 AM</time>
+                      <form method="POST" action="/virtualLF/map">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
                   <div class="col-md-10">
                       <div class="speaker">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cap.jpg">
                       </div>
                       <h4>Leadership Panel:  What the Infrastructure Community Needs from Washington</h4>
                       <p>Mike Johnson, Vice Chairman, Kiewit</p>
+                      <p>Pierce Homer, Director, Moffat & Nichol (former Sec. of Transportation, Virginia)</p>
+                      <p>K. N. Gunalan, Senior Vice President, Alternative Delivery, Americas, AECOM (current ASCE 2020 President)</p>
                       <p>Ed Smith, CEO, Ullico</p>
-                      <p>Pierce Homer, Director, Moffat &amp; Nichol (former Sec. of Transportation, Virginia)</p>
                   </div>
               </div>
 
+
               <div class="row schedule-item">
-                  <div class="col-md-2"><time>12:15 PM</time></div>
+                  <div class="col-md-2">
+                      <time>12:15 PM</time>
+                      <form method="POST" action="/virtualLF/map">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
                   <div class="col-md-10">
                       <div class="speaker">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
                       <h4>Governor&#39;s Panel</h4>
                       <p>Gov. Jim Justice, Governor, West Virginia</p>
@@ -385,22 +477,42 @@
                   </div>
               </div>
 
+
               <div class="row schedule-item">
-                  <div class="col-md-2"><time>1:00 PM</time></div>
+                  <div class="col-md-2">
+                      <time>1:00 PM</time>
+                      <form method="POST" action="/virtualLF/map">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
                   <div class="col-md-10">
                       <div class="speaker">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
                       <h4>Private Session (by invitation only)</h4>
                       <p>Public Sector Discussion with Public Officials - What is Happening in the States</p>
                   </div>
               </div>
 
+
               <div class="row schedule-item">
-                  <div class="col-md-2"><time>1:45 PM</time></div>
+                  <div class="col-md-2">
+                      <time>1:45 PM</time>
+                      <form method="POST" action="/virtualLF/map">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
                   <div class="col-md-10">
                       <div class="speaker">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
                       <h4>Creation of a Benefits Index (public sector only)</h4>
                       <p>Dahlberg &amp; CG/LA Infrastructure, Inc.</p>
@@ -433,75 +545,6 @@
           </div>
       </section><!-- End Subscribe Section -->
 
-    <!-- ======= Hotels Section ======= -->
-    <section id="hotels" class="section-with-bg">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Attendees</h2>
-          <p>Member Profiles</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-                <div class="space-2 bg-light">
-                    <div class="container" style="height: 70em; overflow: scroll">
-                        <div class="row d-flex justify-content-center">
-                            <?php
-                            $count = 0;
-                                foreach($members['rows'] as $members) {
-                                 $src = expert_image($members["userphoto"], 198, array(
-                                'max' => 500,
-                                'rounded_corners' => array('all', '3'),
-                                'allow_scale_larger' => TRUE,
-                                'bg_color' => '#ffffff',
-                                'crop' => TRUE
-                                ));
-                                  
-                                $url = '/expertise/' . $members['uid'];
-                                $count += 1;
-                                if ($count > 24){
-                                    break;
-                                }
-
-                                ?>
-
-
-                                <div class="col-lg-3 col-md-4 col-sm-4" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
-                                    <!-- Card -->
-                                    <div class="card border-0 shadow" style="overflow: hidden">
-                                        <!-- Card image -->
-                                        <div class="view ">
-                                            <a href="<?php echo $url ?>">
-                                                <img class="card-img-top rounded-top" loading="lazy" src="<?php echo $src; ?>" alt="Card image cap">
-                                                <div class="mask rgba-white-slight"></div>
-                                            </a>
-                                        </div>
-                                        <!-- Card content -->
-                                        <div class="card-body border rounded-bottom" style="display:inline-block; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
-                                            <a class="card-text small mb-2 d-block"><?php echo $members['title']; ?></a>
-                                            <!-- Title --><a href="<?php echo $url; ?>" class="h5 card-title"><?php echo $members['firstname'].' '.$members['lastname']; ?></a>
-                                            <!-- Description -->
-                                            <hr>
-                                            <p style="overflow: hidden; text-overflow: ellipsis; width: 99%" class="mb-1 font-weight-bold text-dark"><?php echo $members['organization']; ?></p>
-                                            <!-- end: progress bard -->
-                                        </div>
-                                    </div>
-                                    <!-- Card -->
-                                </div>
-                                <!-- end col -->
-
-
-                                <?php
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-        </div>
-      </div>
-
-    </section><!-- End Hotels Section -->
-
     <!-- ======= Gallery Section ======= -->
     <section id="gallery">
 
@@ -521,6 +564,9 @@
         <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/6.jpg" alt=""></a>
         <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/7.jpg" alt=""></a>
         <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/8.jpg" alt=""></a>
+          <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/9.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/9.jpg" alt=""></a>
+          <a href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/10.jpg" class="venobox" data-gall="gallery-carousel"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/gallery/10.jpg" alt=""></a>
+
       </div>
 
     </section><!-- End Gallery Section -->
@@ -535,54 +581,9 @@
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
 
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
+          <div class="col-lg-1 col-md-1 col-xs-1">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/1.png" class="img-fluid" alt="">
-            </div>
           </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/2.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/3.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/4.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/5.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/6.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/7.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4 col-xs-6">
-            <div class="supporter-logo">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/8.png" class="img-fluid" alt="">
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -606,7 +607,7 @@
                 <a data-toggle="collapse" class="collapsed" href="#faq1">How do I access the webinar sessions? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq1" class="collapse" data-parent="#faq-list">
                   <p>
-                    Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                      <a href="#schedule">Click here</a> to go to the agenda and click the "Join Session" button on the left side of the session you would like to join.
                   </p>
                 </div>
               </li>
