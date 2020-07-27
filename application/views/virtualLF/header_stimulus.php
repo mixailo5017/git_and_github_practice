@@ -31,4 +31,4 @@
 <body id="<?php echo isset($bodyid) ? $bodyid : '' ?>" class="<?php echo isset($bodyclass) ? $bodyclass : '' ?>">
     <div class="wrapper">
 
-    <?php $this->load->view('stimulus/header_view') ?>
+    <?php $this->load->view('virtualLF/header_view') ?>
