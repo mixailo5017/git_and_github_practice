@@ -137,6 +137,8 @@
               <div class="details">
                 <h3><a href="#schedule">Francis Brooke</a></h3>
                 <p>Deputy Director, National Economic Council</p>
+                  <div class="social">
+                  </div>
               </div>
             </div>
           </div>
@@ -165,15 +167,6 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg" alt="Speaker 2" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="#schedule">Pierce Homer</a></h3>
-                        <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="300">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid">
                     <div class="details">
@@ -194,6 +187,41 @@
                         <div class="social">
                             <a href="https://twitter.com/anderson_norman?s=20"><i class="fa fa-twitter"></i></a>
                             <a href="https://www.linkedin.com/in/norman-f-anderson-b4a9984/"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="#schedule">Pierce Homer</a></h3>
+                        <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="#schedule">Gov. Jim Justice</a></h3>
+                        <p>Governor, West Virginia</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="#schedule">Robert Cardillo</a></h3>
+                        <p>President at The Cardillo Group</p>
+                        <p>Speaking on Theia Satellite Network Project</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/robert-cardillo/"><i class="fa fa-linkedin"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -220,7 +248,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>8:00 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="/virtualLF">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -241,7 +269,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>8:30 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="/virtualLF">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -263,7 +291,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>9:00 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="/virtualLF">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -305,7 +333,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>10:00 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="/virtualLF">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -320,7 +348,7 @@
                 <h4>Three Visionary Projects Driving Growth</h4>
                   <p>The Northeast Maglev Project - Ian Rainey, Senior Vice President, Northeast Maglev</p>
                   <p>Smart Cities Project - Jennifer Schmitz, Managing Partner, Lattice Industries</p>
-                  <p>Theia - Presenter TBD</p>
+                  <p>Theia – Robert Cardillo, President, The Cardillo Group</p>
               </div>
             </div>
 
@@ -328,7 +356,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>10:30 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="/virtualLF">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -349,7 +377,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>11:00 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="/virtualLF">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -370,7 +398,7 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>11:30 AM</time>
-                      <form method="POST" action="/virtualLF/map">
+                      <form method="POST" action="/virtualLF">
                           <div class="form-row">
                               <div class="col-auto">
                                   <button type="submit">Join Session</button>
@@ -394,7 +422,7 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>12:15 PM</time>
-                      <form method="POST" action="/virtualLF/map">
+                      <form method="POST" action="/virtualLF">
                           <div class="form-row">
                               <div class="col-auto">
                                   <button type="submit">Join Session</button>
@@ -404,7 +432,7 @@
                   </div>
                   <div class="col-md-10">
                       <div class="speaker">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg">
                       </div>
                       <h4>Governor&#39;s Panel</h4>
                       <p>Gov. Jim Justice, Governor, West Virginia</p>
@@ -429,7 +457,12 @@
                           <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
                       <h4>Private Session (by invitation only)</h4>
-                      <p>Public Sector Discussion with Public Officials - What is Happening in the States</p>
+                      <p>Public Sector Discussion on State Infrastructure Banks - Revitalizing a Critical Investment Channel</p>
+                      <p>Hosted by CG/LA Infrastructure</p>
+                      <br>
+                      <p>This discussion will explore how the 37+ state infrastructure banks can best be revitalized to play a critical role in
+                          our economic recovery. The Build America Bureau will participate, and the session will explore potential state
+                          infrastructure banks, creating a ready channel for CARES Act funding to move into infrastructure.</p>
                   </div>
               </div>
 
@@ -437,7 +470,7 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>1:45 PM</time>
-                      <form method="POST" action="/virtualLF/map">
+                      <form method="POST" action="/virtualLF">
                           <div class="form-row">
                               <div class="col-auto">
                                   <button type="submit">Join Session</button>
@@ -450,7 +483,14 @@
                           <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
                       <h4>Creation of a Benefits Index (public sector only)</h4>
-                      <p>Dahlberg &amp; CG/LA Infrastructure, Inc.</p>
+                      <p>Hosted by Dalberg & CG/LA Infrastructure</p>
+                      <br>
+                      <br>
+                      <p>The session is reserved for public sector executives and focuses on the creation of a simple, userfocused index that offers scoring and reporting on the user benefits of infrastructure projects. The aim is to
+                          measure critical public goods results of projects - mobility, equity, inclusion, health, job creation, business
+                          creation, increased tax base, technology innovation, etc. Just as with ROI reporting, and ESG reporting, it is
+                          increasingly critical to measure and optimize project performance - highlighting the strategic and long-term role
+                          of the public sector in project development and operation.</p>
                   </div>
               </div>
 
