@@ -22,18 +22,13 @@
                 <li class="<?php echo $segment == 'expertise' ? 'active' : '' ?>">
                     <a href="/expertise"><span><?php echo lang('expertise') ?></span></a>
                 </li>
-                <li class="<?php echo $segment == 'companies' ? 'active' : '' ?>">
-                    <a href="/companies"><span><?php echo lang('Lightning') ?></span></a>
-                </li>
-                <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
-                    <a href="/gismap"><span><?php echo lang('Map') ?></span></a>
-                </li>
                 <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
-                    <a href="/forums"><span><?php echo lang('forums') ?></span></a>
+                    <a href="/virtualLF"><span>Blueprint Leadership Forum</span></a>
                 </li>
                 <li>
-                    <a href="https://www.cg-la.com/store?category=Reports" target="_blank"><span><?php echo lang('store') ?></span></a>
+                    <a href="/virtualLF/map"><span>Stimulus Map</span></a>
                 </li>
+
             </ul>
         </nav>
         <?php } ?>
@@ -135,3 +130,4 @@
         <?= $alert['message'] ?>
     </div>
 <?php } ?>
+
