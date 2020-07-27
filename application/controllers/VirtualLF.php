@@ -65,30 +65,9 @@ class VirtualLF extends CI_Controller
             exit;
         }
 
-        // Fetch projects and members (experts) accociated with the forum
-        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 5, 0, true, null, 3);
-        $members = $model->get_members_for_forum_homepage_vf($id);
-
-
-        $this->load->model('projects_model');
-
-        foreach($projects as $proj) {
-            $jobscreated1 =  $this->projects_model->get_jobs_created($proj['pid']);
-        }
-
         $data = array(
-            'projects' => array(
-                'rows' => $projects,
-                'total_rows' => (count($projects) > 0) ? $projects[0]['row_count'] : 0,
-
-            ),
-            'members' => array(
-                'rows' => $members,
-                'total_rows' => (count($members) > 0) ? $members[0]['row_count'] : 0
-            ),
             'details' => $forum,
             'sort_options' => $this->sort_options,
-            'model_obj' => $this->projects_model,
 
         );
 
