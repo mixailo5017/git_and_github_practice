@@ -39,7 +39,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Agenda</a></li>
-          <li><a href="#hotels">Attendees</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -90,10 +89,7 @@
                 <h3><a href="#schedule">Congressman French Hill</a></h3>
                 <p>(R-AR)</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href="https://twitter.com/RepFrenchHill?s=20"><i class="fa fa-twitter"></i></a>
                 </div>
               </div>
             </div>
@@ -105,10 +101,8 @@
                 <h3><a href="#schedule">K.N. Gunalan</a></h3>
                 <p>Senior Vice President, Alternative Delivery, Americas, AECOM</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href="https://twitter.com/gunalankn?s=20"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/gunalankn/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -120,10 +114,7 @@
                 <h3><a href="#schedule">Roger Bohnert</a></h3>
                 <p>Director of Outreach and Project Development, Build America Bureau, U.S. Department of Transportation</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/roger-bohnert-2925a6a/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -135,10 +126,7 @@
                 <h3><a href="#schedule">Jennifer Schmitz</a></h3>
                 <p>Founder & CEO, Lattice Industries Inc.</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/jennifer-schmitz-62767362/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -149,12 +137,6 @@
               <div class="details">
                 <h3><a href="#schedule">Francis Brooke</a></h3>
                 <p>Deputy Director, National Economic Council</p>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
               </div>
             </div>
           </div>
@@ -165,10 +147,7 @@
                 <h3><a href="#schedule">David Penna</a></h3>
                 <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</p>
                 <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-facebook"></i></a>
-                  <a href=""><i class="fa fa-google-plus"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
+                  <a href="https://www.linkedin.com/in/david-penna-053005134/"><i class="fa fa-linkedin"></i></a>
                 </div>
               </div>
             </div>
@@ -180,10 +159,7 @@
                         <h3><a href="#schedule">Mike Johnson</a></h3>
                         <p>Senior Vice President, Infrastructure Market & Strategy, Kiewit</p>
                         <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/mike-johnson-8092319/"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -194,12 +170,6 @@
                     <div class="details">
                         <h3><a href="#schedule">Pierce Homer</a></h3>
                         <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -210,40 +180,7 @@
                         <h3><a href="#schedule">Ian Rainey</a></h3>
                         <p>Senior Vice President, Northeast Maglev</p>
                         <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 4" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="#schedule">Jack Christiansen</a></h3>
-                        <p>Debitis iure vero</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 5" class="img-fluid">
-                    <div class="details">
-                        <h3><a href="#schedule">Alejandrin Littel</a></h3>
-                        <p>Qui molestiae natus</p>
-                        <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/ian-rainey-465991125/"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -255,10 +192,8 @@
                         <h3><a href="#schedule">Norman F. Anderson</a></h3>
                         <p>CG/LA Infrastructure</p>
                         <div class="social">
-                            <a href=""><i class="fa fa-twitter"></i></a>
-                            <a href=""><i class="fa fa-facebook"></i></a>
-                            <a href=""><i class="fa fa-google-plus"></i></a>
-                            <a href=""><i class="fa fa-linkedin"></i></a>
+                            <a href="https://twitter.com/anderson_norman?s=20"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/norman-f-anderson-b4a9984/"><i class="fa fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -581,7 +516,7 @@
 
         <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
 
-          <div class="col-lg-1 col-md-1 col-xs-1">
+          <div class="col-lg-12 col-md-12 col-xs-12">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/1.png" class="img-fluid" alt="">
           </div>
         </div>
@@ -607,52 +542,25 @@
                 <a data-toggle="collapse" class="collapsed" href="#faq1">How do I access the webinar sessions? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq1" class="collapse" data-parent="#faq-list">
                   <p>
-                      <a href="#schedule">Click here</a> to go to the agenda and click the "Join Session" button on the left side of the session you would like to join.
+                      Scroll up to the agenda and click the "Join Session" button on the left side of the session you would like to join.
                   </p>
                 </div>
               </li>
 
               <li>
-                <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="fa fa-minus-circle"></i></a>
+                <a data-toggle="collapse" href="#faq2" class="collapsed">What is GViP? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq2" class="collapse" data-parent="#faq-list">
                   <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                    GViP stands for "Global Visualization of Infrastructure Projects", and is a web application designed to be the LinkedIn of the Infrastructure community.
                   </p>
                 </div>
               </li>
 
               <li>
-                <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="fa fa-minus-circle"></i></a>
+                <a data-toggle="collapse" href="#faq3" class="collapsed">What is the Stimulus Map? <i class="fa fa-minus-circle"></i></a>
                 <div id="faq3" class="collapse" data-parent="#faq-list">
                   <p>
-                    Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq4" class="collapse" data-parent="#faq-list">
-                  <p>
-                    Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq5" class="collapse" data-parent="#faq-list">
-                  <p>
-                    Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                  </p>
-                </div>
-              </li>
-
-              <li>
-                <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="fa fa-minus-circle"></i></a>
-                <div id="faq6" class="collapse" data-parent="#faq-list">
-                  <p>
-                    Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+                      The Stimulus Map is an interactive digital platform that identifies more than 550 infrastructure projects. These projects have the potential to revitalize the U.S. economy through strategic investments. They cover all infrastructure sectors, have an overall investment value of approximately $1 trillion, and could create approximately 2.4 million direct and indirect jobs.
                   </p>
                 </div>
               </li>
