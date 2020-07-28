@@ -83,18 +83,6 @@
 
         <div class="row">
           <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
-              <div class="details">
-                <h3><a href="#schedule">Congressman French Hill</a></h3>
-                <p>(R-AR)</p>
-                <div class="social">
-                  <a href="https://twitter.com/RepFrenchHill?s=20"><i class="fa fa-twitter"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
               <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
               <div class="details">
@@ -193,7 +181,7 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/8.jpg" alt="Speaker 2" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/16.jpg" alt="Speaker 2" class="img-fluid">
                     <div class="details">
                         <h3><a href="#schedule">Pierce Homer</a></h3>
                         <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
@@ -221,6 +209,29 @@
                         <p>Chief Strategist, Theia</p>
                         <div class="social">
                             <a href="https://www.linkedin.com/in/robert-cardillo/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/14.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="#schedule">Former Rep. Bill Shuster</a></h3>
+                        <p>Former Representative for Pennsylvania’s 9th District</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="#schedule">William T. Nolan</a></h3>
+                        <p>Managing Member and President at Infra-Bk, LLC</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/william-t-nolan-b8b111b/"><i class="fa fa-linkedin"></i> </a>
                         </div>
                     </div>
                 </div>
@@ -280,7 +291,7 @@
                 <div class="speaker">
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/111.jpg" alt="Brenden Legros">
                 </div>
-                <h4>CARES Act Funding and Infrastructure Investment</h4>
+                <h4>Prospects for a National Infrastructure Bank and Infrastructure Stimulus, Now and in the Future</h4>
                   <p>William T. Nolan, Managing Member & President, The Infrastructure Bank for America</p>
                   <p>Former Rep. Bill Shuster (PA-9), Senior Policy Advisor, Squire Patton Boggs</p>
               </div>
