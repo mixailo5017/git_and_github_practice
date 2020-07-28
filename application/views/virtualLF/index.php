@@ -42,7 +42,7 @@
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#supporters">Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
-            <li class="buy-tickets"><a href="map">Map</a></li>
+            <li class="buy-tickets"><a href="https://www.gvip.io/virtualLF/map">Map</a></li>
 
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -508,7 +508,7 @@
                   <p>Click to interact with GViP's Stimulus Project Map</p>
               </div>
 
-              <form method="POST" action="/virtualLF/map">
+              <form method="POST" action="https://www.gvip.io/virtualLF/map">
                   <div class="form-row justify-content-center">
                       <div class="col-auto">
                           <button type="submit">View Map</button>
