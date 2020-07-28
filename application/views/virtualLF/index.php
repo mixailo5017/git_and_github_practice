@@ -218,8 +218,7 @@
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid">
                     <div class="details">
                         <h3><a href="#schedule">Robert Cardillo</a></h3>
-                        <p>President at The Cardillo Group</p>
-                        <p>Speaking on Theia Satellite Network Project</p>
+                        <p>Chief Strategist, Theia</p>
                         <div class="social">
                             <a href="https://www.linkedin.com/in/robert-cardillo/"><i class="fa fa-linkedin"></i> </a>
                         </div>
