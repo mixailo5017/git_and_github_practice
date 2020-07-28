@@ -226,6 +226,17 @@
             </div>
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg" alt="Speaker 2" class="img-fluid">
+                    <div class="details">
+                        <h3><a href="#schedule">Courtney Degener</a></h3>
+                        <p>Vice President, Communications & External Relations, Cadiz</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15.jpg" alt="Speaker 2" class="img-fluid">
                     <div class="details">
                         <h3><a href="#schedule">William T. Nolan</a></h3>
@@ -448,6 +459,30 @@
                       <p>&quot;How We Can Meet the Covid Challenge through Targetted Infrastructure Investment&quot;</p>
                   </div>
               </div>
+
+
+              <div class="row schedule-item">
+                  <div class="col-md-2">
+                      <time>12:45 PM</time>
+                      <form method="POST" action="/virtualLF">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+                  <div class="col-md-10">
+                      <div class="speaker">
+                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg">
+                      </div>
+                      <h4>The Cadiz Water Conveyance Project - Revitalizing our Long-term Assets</h4>
+                      <p>Courtney Degener, Vice President, Communications & External Relations, Cadiz</p>
+                  </div>
+              </div>
+
+
+              <h3 style="text-align: center; padding-top: 20px"><strong>Afternoon Special Sessions</strong></h3>
 
 
               <div class="row schedule-item">
