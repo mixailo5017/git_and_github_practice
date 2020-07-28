@@ -278,11 +278,11 @@
                 </div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Brenden Legros">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/111.jpg" alt="Brenden Legros">
                 </div>
                 <h4>CARES Act Funding and Infrastructure Investment</h4>
-                  <p>French Hill, U.S. House of Representatives, State of Arkansas</p>
-                  <p>Denny Heck, U.S. House of Representatives, State of Washington</p>
+                  <p>William T. Nolan, Managing Member & President, The Infrastructure Bank for America</p>
+                  <p>Former Rep. Bill Shuster (PA-9), Senior Policy Advisor, Squire Patton Boggs</p>
               </div>
             </div>
 
@@ -303,7 +303,7 @@
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/army.jpg">
                 </div>
                 <h4>U.S. Army Corps of Engineers – Meeting Covid Challenges with Priority Projects</h4>
-                <p>U.S. Army Corps of Engineers (invited)</p>
+                <p>Peter Dodgion, Asset Management Program Manager, U.S. Army Corps of Engineers</p>
               </div>
             </div>
 
@@ -413,7 +413,6 @@
                       <p>Mike Johnson, Vice Chairman, Kiewit</p>
                       <p>Pierce Homer, Director, Moffat & Nichol (former Sec. of Transportation, Virginia)</p>
                       <p>K. N. Gunalan, Senior Vice President, Alternative Delivery, Americas, AECOM (current ASCE 2020 President)</p>
-                      <p>Ed Smith, CEO, Ullico</p>
                   </div>
               </div>
 
