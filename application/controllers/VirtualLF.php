@@ -14,8 +14,6 @@ class VirtualLF extends CI_Controller
 
         parent::__construct();
 
-        auth_check();
-
         $languageSession = sess_var('lang');
         get_language_file($languageSession);
 
@@ -49,6 +47,8 @@ class VirtualLF extends CI_Controller
      */
     public function show($id)
     {
+        auth_check();
+
         $id = (int) $id;
 
         $model = $this->forums_model;
@@ -228,6 +228,61 @@ class VirtualLF extends CI_Controller
         // Render the page
         $this->load->view('virtualLF/header_stimulus', $this->headerdata);
         $this->load->view('virtualLF/show', $data);
+        $this->load->view('templates/footer', $this->footer_data);
+    }
+
+    /**
+     * View Method
+     * Load Individual Detail Page
+     * @param $id
+     */
+    public function press()
+    {
+
+        // If the current user doesn't have access to the forum show 404
+            if (!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != 'press' || $_SERVER['PHP_AUTH_PW'] != 'blueprint2020') {
+                header('WWW-Authenticate: Basic realm="MyProject"');
+                header('HTTP/1.0 401 Unauthorized');
+                die('Access Denied');
+            }
+
+        $id = 37;
+
+        $model = $this->forums_model;
+
+        $forum = $model->find($id);
+        // If we can't find a forum redirect to the forums list view
+        if (empty($forum)) {
+            redirect('forums', 'refresh');
+            exit;
+        }
+        // Prevent the forum in a draft status to be shown
+        if (isset($forum['status']) && $forum['status'] != STATUS_ACTIVE) {
+            redirect('forums', 'refresh');
+            exit;
+        }
+
+        $data = array(
+            'details' => $forum,
+            'sort_options' => $this->sort_options,
+
+        );
+
+        $this->headerdata['title'] = build_title($forum['title']);
+
+        // Provide page analitics data for Segment Analitics
+        $this->headerdata['page_analytics'] = array(
+            'category' => 'Forum',
+            'properties' => array(
+                'Target Id' => $id,
+                'Target Name' => $forum['title']
+            )
+        );
+
+
+        // Render the page
+        $this->load->view('virtualLF/header_stimulus', $this->headerdata);
+        $this->load->view('virtualLF/index', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
 
