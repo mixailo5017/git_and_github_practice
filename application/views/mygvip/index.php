@@ -15,9 +15,13 @@ body, html {
         }
 </style>
 
-<section style="background: url(../images/new/myvippic.jpg) no-repeat;">
-      <img src="/images/new/GViP_Logos_white.png" style="height: 200px" class="center"/>
-</section>
+<div style="padding-bottom: 3%; padding-top: 3%; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/intro-bg.jpg') no-repeat fixed center" class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4" style="text-align: center; color: white">BLUEPRINT 2025 2X LEADERSHIP FORUM</h1>
+        <h3 class="lead" style="text-align: center; color: white">July 30, 2020</h3>
+        <a class="light_green center" style="width: 20%" href="https://gvip.io/virtualLF" role="button">Blueprint Forum Homepage</a>
+    </div>
+</div>
 
 <hr>
 
