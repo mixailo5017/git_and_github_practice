@@ -47,7 +47,6 @@ class VirtualLF extends CI_Controller
      */
     public function show($id)
     {
-        auth_check();
 
         $id = (int) $id;
 
@@ -97,7 +96,7 @@ class VirtualLF extends CI_Controller
     public function projects($id) {
 
         // If the user is not logged in then redirect to the login page
-        auth_check();
+        
 
         $perpage =	12;
         $page = $this->input->get_post('per_page', TRUE);
