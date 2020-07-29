@@ -268,7 +268,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>8:00 AM</time>
+                    <time>8:00 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/1399073979336068876">
                         <div class="form-row">
                             <div class="col-auto">
@@ -289,7 +289,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>8:30 AM</time>
+                    <time>8:30 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/6795798105855523084">
                         <div class="form-row">
                             <div class="col-auto">
@@ -311,7 +311,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>9:00 AM</time>
+                    <time>9:00 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/5177410448258111244">
                         <div class="form-row">
                             <div class="col-auto">
@@ -332,7 +332,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>9:30 AM</time>
+                    <time>9:30 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/1029915149333155340">
                         <div class="form-row">
                             <div class="col-auto">
@@ -353,7 +353,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>10:00 AM</time>
+                    <time>10:00 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/7154870016185367052">
                         <div class="form-row">
                             <div class="col-auto">
@@ -376,7 +376,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>10:30 AM</time>
+                    <time>10:30 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/2375947179661245708">
                         <div class="form-row">
                             <div class="col-auto">
@@ -397,7 +397,7 @@
 
             <div class="row schedule-item">
                 <div class="col-md-2">
-                    <time>11:00 AM</time>
+                    <time>11:00 AM EST</time>
                     <form method="POST" action="https://attendee.gotowebinar.com/register/7311129310190047244">
                         <div class="form-row">
                             <div class="col-auto">
@@ -418,7 +418,7 @@
 
               <div class="row schedule-item">
                   <div class="col-md-2">
-                      <time>11:30 AM</time>
+                      <time>11:30 AM EST</time>
                       <form method="POST" action="https://attendee.gotowebinar.com/register/8995830713082029580">
                           <div class="form-row">
                               <div class="col-auto">
@@ -441,7 +441,7 @@
 
               <div class="row schedule-item">
                   <div class="col-md-2">
-                      <time>12:15 PM</time>
+                      <time>12:15 PM EST</time>
                       <form method="POST" action="https://attendee.gotowebinar.com/register/6985690361042804492">
                           <div class="form-row">
                               <div class="col-auto">
@@ -463,7 +463,7 @@
 
               <div class="row schedule-item">
                   <div class="col-md-2">
-                      <time>12:45 PM</time>
+                      <time>12:45 PM EST</time>
                       <form method="POST" action="https://attendee.gotowebinar.com/register/2559179692918629388">
                           <div class="form-row">
                               <div class="col-auto">
@@ -487,7 +487,7 @@
 
               <div class="row schedule-item">
                   <div class="col-md-2">
-                      <time>1:00 PM</time>
+                      <time>1:00 PM EST</time>
                       <form method="POST" action="https://go.cg-la.com/l/311431/2020-07-29/ly57m">
                           <div class="form-row">
                               <div class="col-auto">
@@ -515,7 +515,7 @@
 
               <div class="row schedule-item">
                   <div class="col-md-2">
-                      <time>1:45 PM</time>
+                      <time>1:45 PM EST</time>
                       <form method="POST" action="https://go.cg-la.com/l/311431/2020-07-29/ly57m">
                           <div class="form-row">
                               <div class="col-auto">
