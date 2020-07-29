@@ -269,7 +269,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>8:00 AM</time>
-                    <form method="POST" action="/virtualLF">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/1399073979336068876">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -290,7 +290,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>8:30 AM</time>
-                    <form method="POST" action="/virtualLF">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/6795798105855523084">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -312,7 +312,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>9:00 AM</time>
-                    <form method="POST" action="/virtualLF">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/5177410448258111244">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -333,7 +333,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>9:30 AM</time>
-                    <form method="POST" action="/virtualLF/map">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/1029915149333155340">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -354,7 +354,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>10:00 AM</time>
-                    <form method="POST" action="/virtualLF">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/7154870016185367052">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -377,7 +377,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>10:30 AM</time>
-                    <form method="POST" action="/virtualLF">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/2375947179661245708">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -398,7 +398,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>11:00 AM</time>
-                    <form method="POST" action="/virtualLF">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/7311129310190047244">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
@@ -419,7 +419,7 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>11:30 AM</time>
-                      <form method="POST" action="/virtualLF">
+                      <form method="POST" action="https://attendee.gotowebinar.com/register/8995830713082029580">
                           <div class="form-row">
                               <div class="col-auto">
                                   <button type="submit">Join Session</button>
@@ -442,7 +442,7 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>12:15 PM</time>
-                      <form method="POST" action="/virtualLF">
+                      <form method="POST" action="https://attendee.gotowebinar.com/register/6985690361042804492">
                           <div class="form-row">
                               <div class="col-auto">
                                   <button type="submit">Join Session</button>
@@ -464,7 +464,7 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>12:45 PM</time>
-                      <form method="POST" action="/virtualLF">
+                      <form method="POST" action="https://attendee.gotowebinar.com/register/2559179692918629388">
                           <div class="form-row">
                               <div class="col-auto">
                                   <button type="submit">Join Session</button>
@@ -488,13 +488,6 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>1:00 PM</time>
-                      <form method="POST" action="/virtualLF/map">
-                          <div class="form-row">
-                              <div class="col-auto">
-                                  <button type="submit">Join Session</button>
-                              </div>
-                          </div>
-                      </form>
                   </div>
                   <div class="col-md-10">
                       <div class="speaker">
@@ -514,13 +507,6 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>1:45 PM</time>
-                      <form method="POST" action="/virtualLF">
-                          <div class="form-row">
-                              <div class="col-auto">
-                                  <button type="submit">Join Session</button>
-                              </div>
-                          </div>
-                      </form>
                   </div>
                   <div class="col-md-10">
                       <div class="speaker">
