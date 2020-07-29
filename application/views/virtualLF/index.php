@@ -488,12 +488,21 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>1:00 PM</time>
+                      <form method="POST" action="https://go.cg-la.com/l/311431/2020-07-29/ly57m">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
                   </div>
                   <div class="col-md-10">
                       <div class="speaker">
                           <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
-                      <h4>Private Session (by invitation only)</h4>
+                      <h4>Private Session (Invitation Only)</h4>
+                      <h5>Limited 24 Participants</h5>
+                      <br>
                       <p>Public Sector Discussion on State Infrastructure Banks - Revitalizing a Critical Investment Channel</p>
                       <p>Hosted by CG/LA Infrastructure</p>
                       <br>
@@ -507,12 +516,22 @@
               <div class="row schedule-item">
                   <div class="col-md-2">
                       <time>1:45 PM</time>
+                      <form method="POST" action="https://go.cg-la.com/l/311431/2020-07-29/ly57m">
+                          <div class="form-row">
+                              <div class="col-auto">
+                                  <button type="submit">Join Session</button>
+                              </div>
+                          </div>
+                      </form>
                   </div>
                   <div class="col-md-10">
                       <div class="speaker">
                           <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/cgla.jpg">
                       </div>
-                      <h4>Creation of a Benefits Index (public sector only)</h4>
+                      <h4>Creation of a Benefits Index (Invitation Only)</h4>
+                      <h5>Limited 24 Participants</h5>
+                      <br>
+                      <br>
                       <p>Hosted by Dalberg & CG/LA Infrastructure</p>
                       <br>
                       <br>
