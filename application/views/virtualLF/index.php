@@ -121,10 +121,10 @@
           </div>
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg" alt="Speaker 5" class="img-fluid">
               <div class="details">
-                <h3><a href="#schedule">Francis Brooke</a></h3>
-                <p>Deputy Director, National Economic Council</p>
+                <h3><a href="#schedule">Representative J. French Hill</a></h3>
+                <p>Representative for Arkansas’s 2nd Congressional District</p>
                   <div class="social">
                   </div>
               </div>
@@ -387,10 +387,10 @@
                 </div>
               <div class="col-md-10">
                 <div class="speaker">
-                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg">
+                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg">
                 </div>
-                <h4>The View from the White House on Infrastructure &amp; Stimulus</h4>
-                <p>Francis Brooke, Deputy Director, National Economic Council</p>
+                <h4>Representative French Hill</h4>
+                <p>Representative French Hill</p>
               </div>
             </div>
 
