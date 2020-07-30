@@ -377,7 +377,7 @@
             <div class="row schedule-item">
                 <div class="col-md-2">
                     <time>10:30 AM EST</time>
-                    <form method="POST" action="https://attendee.gotowebinar.com/register/2375947179661245708">
+                    <form method="POST" action="https://attendee.gotowebinar.com/register/1791065267833977614">
                         <div class="form-row">
                             <div class="col-auto">
                                 <button type="submit">Join Session</button>
