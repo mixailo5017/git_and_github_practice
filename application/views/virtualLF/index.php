@@ -389,8 +389,9 @@
                 <div class="speaker">
                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/1.jpg">
                 </div>
-                <h4>Representative French Hill</h4>
-                <p>Representative French Hill</p>
+                <h4> Rep. French Hill; Carlos Aguilar</h4>
+                <p> 10:30-10:45 Representative French Hill</p>
+                <p> 10:45-11:00 Carlos Aguilar, President and CEO, Texas Central Rail</p>
               </div>
             </div>
 
