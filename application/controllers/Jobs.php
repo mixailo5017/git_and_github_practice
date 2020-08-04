@@ -35,11 +35,17 @@ class Jobs extends CI_Controller {
     public function index() {
 
         $this->load->model('projects_model');
-        $map['map_data'] = $this->projects_model->get_all_proj_data();
+        $allProj['map_data'] = $this->projects_model->get_all_proj_data();
+
+
+        $this->load->model('forums_model');
+        $model = $this->forums_model;
+        $stimMap['map_data'] = $projects = $model->projects(37, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 700, 0, true);
 
         $data = array(
-            'map' => $map['map_data'],
+            'allProj' => $allProj['map_data'],
             'model_obj' => $this->projects_model,
+            'stimMap'   => $stimMap['map_data']
         );
 
 
