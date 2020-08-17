@@ -23,10 +23,7 @@
                     <a href="/expertise"><span><?php echo lang('expertise') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
-                    <a href="/virtualLF"><span>Blueprint Leadership Forum</span></a>
-                </li>
-                <li>
-                    <a href="/virtualLF/map"><span>Stimulus Map</span></a>
+                    <a href="/virtualLF"><span>Global Leadership Forum</span></a>
                 </li>
 
             </ul>
