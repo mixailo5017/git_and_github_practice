@@ -1,12 +1,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
 
-.center {
+    body, html {
+        height: 100%;
+    }
+
+    .hero-image {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: url("https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Global+Banner.jpg");
+
+        /* Set a specific height */
+        height: 50%;
+
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    /* Place text in the middle of the image */
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    .center {
       display: block;
       margin-top: auto;
       margin-left: auto;
@@ -15,13 +38,12 @@ body, html {
         }
 </style>
 
-<div style="padding-bottom: 3%; padding-top: 3%; background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/intro-bg.jpg') no-repeat fixed center" class="jumbotron jumbotron-fluid">
-    <div class="container">
-        <h1 class="display-4" style="text-align: center; color: white">BLUEPRINT 2025 2X LEADERSHIP FORUM</h1>
-        <h3 class="lead" style="text-align: center; color: white">July 30, 2020</h3>
-        <a class="light_green center" style="width: 20%" href="https://gvip.io/virtualLF" role="button">Blueprint Forum Homepage</a>
+<a href="https://gvip.io/virtualLF">
+<div class="hero-image">
+    <div class="hero-text">
     </div>
 </div>
+</a>
 
 <hr>
 
