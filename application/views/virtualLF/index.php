@@ -753,7 +753,7 @@
                   <h2>Register Now</h2>
               </div>
 
-              <form method="POST" action="https://www.cg-la.com/store/global-registration-all-access">
+              <form action="https://www.cg-la.com/store/global-registration-all-access">
                   <div class="form-row justify-content-center">
                       <div class="col-auto">
                           <button type="submit">Register All Access</button>
@@ -761,7 +761,7 @@
                   </div>
               </form>
               <br>
-              <form method="POST" action="https://www.cg-la.com/store/r2xmfwrzr5gjrbw4luvs2s5racfx1t">
+              <form action="https://www.cg-la.com/store/r2xmfwrzr5gjrbw4luvs2s5racfx1t">
                   <div class="form-row justify-content-center">
                       <div class="col-auto">
                           <button type="submit">Register Basic</button>
