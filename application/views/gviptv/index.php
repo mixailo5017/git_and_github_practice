@@ -64,7 +64,7 @@
     </div>
 </a>
 
-<div style="padding-top: 50px"></div>
+<div style="padding-top: 25px; padding-bottom: 25px"><h1 style="text-align: center">Video Gallery</h1></div>
 
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
