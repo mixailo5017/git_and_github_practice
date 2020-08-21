@@ -192,7 +192,7 @@
         <!--Modal: Name-->
 
         <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/4+Army+Corps.png" alt="video"
-                data-toggle="modal" data-target="#modal1"></a>
+                data-toggle="modal" data-target="#modal2"></a>
         <h3>Army Corps</h3>
         <p>U.S. Army Corps of Engineers - Meeting Covid Challenges with Priority Projects</p>
         <p>Peter Dodgion, Asset Management Program Manager, U.S. Army Corps of Engineers</p>
@@ -221,7 +221,7 @@
         </div>
         <!--Modal: Name-->
         <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/5+Dry+Power.png" alt="video"
-                data-toggle="modal" data-target="#modal6"></a>
+                data-toggle="modal" data-target="#modal3"></a>
         <h3>Dry Powder & the Build America Bureau</h3>
         <p>Roger Bohnert, Director of Business Outreach, Build America Bureau, U.S. DOT</p>
 
@@ -250,7 +250,7 @@
         </div>
         <!--Modal: Name-->
         <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/6.+Petreus.png" alt="video"
-                data-toggle="modal" data-target="#modal4"></a>
+                data-toggle="modal" data-target="#modal5"></a>
 
         <h3>General David H. Petraeus</h3>
         <p>General David H. Petraeus AO, MSC,</p>
