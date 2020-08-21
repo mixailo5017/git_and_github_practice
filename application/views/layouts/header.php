@@ -29,8 +29,8 @@
                 <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
                     <a href="/gismap"><span><?php echo lang('Map') ?></span></a>
                 </li>
-                <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
-                    <a href="/forums"><span><?php echo lang('forums') ?></span></a>
+                <li>
+                    <a href="/gviptv"><span>GViP TV</span></a>
                 </li>
                 <li>
                     <a href="https://www.cg-la.com/store?category=Reports" target="_blank"><span><?php echo lang('store') ?></span></a>
