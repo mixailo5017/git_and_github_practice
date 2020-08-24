@@ -24,7 +24,7 @@
                     <a href="/expertise"><span><?php echo lang('expertise') ?></span></a>
                 </li>
                 <li class="<?php echo $segment == 'companies' ? 'active' : '' ?>">
-                    <a href="/companies"><span><?php echo lang('Lightning') ?></span></a>
+                    <a href="/companies"><span>Industry Hubs</span></a>
                 </li>
                 <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
                     <a href="/gismap"><span><?php echo lang('Map') ?></span></a>
