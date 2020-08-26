@@ -39,8 +39,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Agenda</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#supporters">Sponsors</a></li>
+          <li><a href="#booths">Booths and Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
             <li class="buy-tickets"><a href="https://www.cg-la.com/store/global-registration-all-access">Register Now</a></li>
 
