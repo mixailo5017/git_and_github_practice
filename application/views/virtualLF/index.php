@@ -799,61 +799,35 @@
 
     </section><!-- End Gallery Section -->
 
-      <!-- ======= Supporters Section =======
-      <section id="supporters" class="section-with-bg">
+      <!-- ======= Supporters Section ======= -->
+      <section id="booths" class="section-with-bg">
 
           <div class="container" data-aos="fade-up">
               <div class="section-header">
-                  <h2>Sponsors</h2>
+                  <h2>Booths and Sponsors</h2>
               </div>
 
               <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
 
-                  <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="col-lg-4 col-md-4 col-xs-6" style="padding: 1em">
                       <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/1.png" class="img-fluid" alt="">
+                          <a href="https://gvip.io/virtualLF/boothsview/4018">
+                             <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Oracle+Booth.jpg" class="img-fluid" alt="">
+                          </a>
                       </div>
                   </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="col-lg-4 col-md-4 col-xs-6" style="padding: 1em">
                       <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/2.png" class="img-fluid" alt="">
+                          <a href="https://gvip.io/virtualLF/boothsview/4018">
+                              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Oracle+Booth.jpg" class="img-fluid" alt="">
+                          </a>
                       </div>
                   </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="col-lg-4 col-md-4 col-xs-6" style="padding: 1em">
                       <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/3.png" class="img-fluid" alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                      <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/4.png" class="img-fluid" alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                      <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/supporters/5.png" class="img-fluid" alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                      <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/img/supporters/6.png" class="img-fluid" alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                      <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/img/supporters/7.png" class="img-fluid" alt="">
-                      </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-4 col-xs-6">
-                      <div class="supporter-logo">
-                          <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/img/supporters/8.png" class="img-fluid" alt="">
+                          <a href="https://gvip.io/virtualLF/boothsview/4018">
+                              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Oracle+Booth.jpg" class="img-fluid" alt="">
+                          </a>
                       </div>
                   </div>
 
@@ -861,7 +835,7 @@
 
           </div>
 
-      </section> End Sponsors Section -->
+      </section> <!-- End Sponsors Section -->
 
     <!-- =======  F.A.Q Section ======= -->
     <section id="faq">
