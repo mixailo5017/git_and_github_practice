@@ -26,33 +26,34 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
 </head>
-
-
+<style>
+    #speakers-details{
+        padding-top: 0px;
+    }
+</style>
 <main id="main" class="main-page">
-
     <!-- ======= Speaker Details Sectionn ======= -->
     <section id="speakers-details">
         <div class="container">
-            <div class="section-header">
-                <h2><?php echo $users['organization'];?></h2>
-                <?php
-                $fulllocation = array();
-                if ($users['city']) { $fulllocation[] = $users['city']; }
-                if ($users['state']) { $fulllocation[] = $users['state']; }
-                if ($users['country']) { $fulllocation[] = $users['country']; }
-                ?>
-                <?php if (count($fulllocation) > 0){ ?>
-                    <p class="location"><?php echo implode(', ', $fulllocation) ?></p>
-                <?php } ?>
-            </div>
-
             <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <?php $src = company_image($users['userphoto'], 150, array('width' => 150, 'fit' => 'contain')) ?>
-                    <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
+                    <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo" style="height: 30em">
                 </div>
 
                 <div class="col-md-6" style="text-align: center">
+                    <div class="section-header">
+                        <h2><?php echo $users['organization'];?></h2>
+                        <?php
+                        $fulllocation = array();
+                        if ($users['city']) { $fulllocation[] = $users['city']; }
+                        if ($users['state']) { $fulllocation[] = $users['state']; }
+                        if ($users['country']) { $fulllocation[] = $users['country']; }
+                        ?>
+                        <?php if (count($fulllocation) > 0){ ?>
+                            <p class="location"><?php echo implode(', ', $fulllocation) ?></p>
+                        <?php } ?>
+                    </div>
                     <div class="details row">
                         <div class="col-md-4">
                             <h3>Contact</h3>
@@ -78,7 +79,55 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+            </div>
+
+
+            <div class="row">
+            <div class="col-md-6">
+                <div class="details" style="height: 40em; overflow: scroll">
+                    <h2 style="text-align: center">Information</h2>
+                    <p><?php echo $users['mission'] ?></p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="our_experts" style="height: 30em; overflow:scroll;">
+                    <h2><?php echo lang('OurExperts')?></h2>
+                    <?php
+                    $totalassigned  = 0;
+                    $j = 0;
+                    $totalassigned  = count($seats['approved']);
+
+                    if (count($seats['approved']) > 0) {
+                        for ($k = 0; $k<count($seats['approved']); $k++) { ?>
+                            <div class="expert">
+                                <a href="/expertise/<?php echo $seats['approved'][$k]['uid'];?>">
+                                    <?php
+                                    $img = expert_image($seats['approved'][$k]["userphoto"],130,array('rounded_corners' => array( 'all','1' )) );
+                                    $alt = $seats['approved'][$k]['firstname'].' '.$seats['approved'][$k]['lastname'].lang('sphoto');
+                                    ?>
+
+                                    <img alt="<?php echo $alt; ?>" style="margin:0px" src="<?php echo $img; ?>" width="130" height="130">
+                                    <h3><?php echo $seats['approved'][$k]['firstname'].' '.$seats['approved'][$k]['lastname']; ?></h3>
+                                </a>
+                                <?php
+                                $seat_status = $seats['approved'][$k]['title'];
+                                if($seat_status){?><span class="title"><?php echo $seats['approved'][$k]['title']; ?></span>
+                                <?php } ?>
+                            </div>
+                            <?php
+                        }
+                    }
+                    else{
+                        echo '<center>'.lang('noexpAssoc').' '.$users['organization'].'.</center>';
+                    }
+
+                    ?>
+                    <?php // } ?>
+                </div><!-- our_experts -->
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <h2 style="text-align: center">Promotional Materials</h2>
                     <?php
                     if((count_if_set($case_studies)) > 0)
@@ -101,49 +150,7 @@
                     }
                     ?>
                 </div>
-
-            </div>
-
-
-            <div class="row">
-            <div class="col-md-6">
-            <div class="our_experts">
-                <h2><?php echo lang('OurExperts')?></h2>
-                <?php
-                $totalassigned  = 0;
-                $j = 0;
-                $totalassigned  = count($seats['approved']);
-
-                if (count($seats['approved']) > 0) {
-                    for ($k = 0; $k<count($seats['approved']); $k++) { ?>
-                        <div class="expert">
-                            <a href="/expertise/<?php echo $seats['approved'][$k]['uid'];?>">
-                                <?php
-                                $img = expert_image($seats['approved'][$k]["userphoto"],130,array('rounded_corners' => array( 'all','1' )) );
-                                $alt = $seats['approved'][$k]['firstname'].' '.$seats['approved'][$k]['lastname'].lang('sphoto');
-                                ?>
-
-                                <img alt="<?php echo $alt; ?>" style="margin:0px" src="<?php echo $img; ?>" width="130" height="130">
-                                <h3><?php echo $seats['approved'][$k]['firstname'].' '.$seats['approved'][$k]['lastname']; ?></h3>
-                            </a>
-                            <?php
-                            $seat_status = $seats['approved'][$k]['title'];
-                            if($seat_status){?><span class="title"><?php echo $seats['approved'][$k]['title']; ?></span>
-                            <?php } ?>
-                        </div>
-                        <?php
-                    }
-                }
-                else{
-                    echo '<center>'.lang('noexpAssoc').' '.$users['organization'].'.</center>';
-                }
-
-                ?>
-                <?php // } ?>
-            </div><!-- our_experts -->
-            </div>
-            <div class="col-md-6">
-                <section id="subscribe">
+                <section id="subscribe" class="col-md-6">
                     <div class="container">
                         <div class="section-header">
                             <h2>Virtual Booth</h2>
@@ -167,19 +174,6 @@
 
                     </div>
                 </section>
-            </div>
-            </div>
-
-
-
-
-            <div class="row" style="padding-top: 3em">
-                <div class="col-md-12">
-                    <div class="details">
-                        <h2 style="text-align: center">Information</h2>
-                        <p><?php echo $users['mission'] ?></p>
-                    </div>
-                </div>
             </div>
         </div>
 
