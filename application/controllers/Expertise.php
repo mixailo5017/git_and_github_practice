@@ -229,13 +229,15 @@ class Expertise extends CI_Controller {
             $fullname = $users['organization'];
 			$project = $this->expertise_model->get_organization_projects($userid);
             $breadcrumb_title = lang('B_EXPERT_ADVERTS');
-            $uri_segment = 'companies';	
-	    if($userid == 4020){
+            $uri_segment = 'companies';
+            if($userid == 4020){
                 $view = 'expertise/organization_view_starr';
             }
 	        else{
 	            $view = 'expertise/organization_view';
-            } else {
+            }
+
+		} else {
             $page_category = 'Expert';
             $fullname = $users['firstname'] . ' ' . $users['lastname'];
             $project = $this->expertise_model->get_projects($userid);
@@ -419,3 +421,4 @@ class Expertise extends CI_Controller {
         return email(array($following['email'], $following['fullname']), $subject, $content, array(ADMIN_EMAIL, ADMIN_EMAIL_NAME));
     }
 }
+
