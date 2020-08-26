@@ -230,9 +230,12 @@ class Expertise extends CI_Controller {
 			$project = $this->expertise_model->get_organization_projects($userid);
             $breadcrumb_title = lang('B_EXPERT_ADVERTS');
             $uri_segment = 'companies';	
-	    $view = 'expertise/organization_view';
-
-		} else {
+	    if($userid == 4020){
+                $view = 'expertise/organization_view_starr';
+            }
+	        else{
+	            $view = 'expertise/organization_view';
+            } else {
             $page_category = 'Expert';
             $fullname = $users['firstname'] . ' ' . $users['lastname'];
             $project = $this->expertise_model->get_projects($userid);
