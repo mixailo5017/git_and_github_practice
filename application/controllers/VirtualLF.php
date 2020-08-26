@@ -19,6 +19,8 @@ class VirtualLF extends CI_Controller
 
         //Load the default model for this controller
         $this->load->model('forums_model');
+        $this->load->model('expertise_model');
+
 
         // Load breadcrumb library
         $this->load->library('breadcrumb');
