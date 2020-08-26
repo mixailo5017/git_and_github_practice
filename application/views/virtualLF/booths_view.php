@@ -37,7 +37,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <?php $src = company_image($users['userphoto'], 150, array('width' => 150, 'fit' => 'contain')) ?>
+                    <?php $src = company_image($users['userphoto'], 500, array('width' => 500, 'fit' => 'contain')) ?>
                     <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo" style="height: 30em">
                 </div>
 
