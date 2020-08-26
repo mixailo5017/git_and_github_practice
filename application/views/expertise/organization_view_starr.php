@@ -1,3 +1,6 @@
+<div class="speaker" style="float: right; padding-right:3em; padding-top: 2em">
+    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/starr+booth.jpg" style="height: 250px" alt="Norman Anderson">
+</div>
 <div class="clearfix" id="content">
     <div class="view_organization">
         <div class="col1" style="text-align:center;">
@@ -101,35 +104,6 @@
                 }
             ?>
 
-        <!-- portlet_list -->
-        <div class="portlet_list">
-            <h2><?php echo lang('CurrentProjects')?></h2>
-            <div class="inner">
-                    <ul>
-                            <li class="clearfix">
-                              <a href="/projects/develop-a-comprehensive-rating-methodology-international-islamic-rating-agency-iira">
-                                  <img alt="Helwan Power Plant Project (II)" class="left img_border" width="59" src="/img/content_projects/9bb7a551b19ce545441ae55ffd8b206f.JPG?fit=contain&w=150&h=150&s=a04f9cc2eb31ce4a7ef78f1f6ddf2622">
-                                  <span class="title">Helwan Power Plant Project (II) <span class="location"> Helwan, Cairo Governorate</span></span>
-                              </a>
-                            </li>
-                            <li class="clearfix">
-                              <a href="/projects/kuwait-international-airport-expansion">
-                                  <img alt="Kuwait International Airport Expansion" class="left img_border" width="59" src="/img/content_projects/8f20a70e37524538763b973a1c703ca3.jpeg?fit=contain&w=150&h=150&s=d51b2bf1326acc4a0bbab52d3d290369">
-                                  <span class="title">Kuwait International Airport Expansion <span class="location">Farwaniya, KW</span></span>
-                              </a>
-                            </li>
-                            <li class="clearfix">
-                              <a href="/projects/gebze-istanbul-motorway">
-                                  <img alt="Gebze-Izmir Motorway" class="left img_border" width="59" src="/img/content_projects/19c08b43cb7b7ae11b85e30ebbfca537.jpg?fit=contain&w=150&h=150&s=4b8a998a5212a70f8ffc80760bcb2ef1">
-                                  <span class="title">Gebze-Izmir Motorway <span class="location">Izmir, Izmir</span></span>
-                              </a>
-                            </li>
-                        </ul>
-
-
-                </div>
-
-        </div>
         <!-- portlet_list -->
     </div>
 </div>
