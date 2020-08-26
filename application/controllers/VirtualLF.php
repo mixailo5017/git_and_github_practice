@@ -339,5 +339,88 @@ class VirtualLF extends CI_Controller
         $this->load->view('virtualLF/index', $data);
         $this->load->view('templates/footer', $this->footer_data);
     }
+    
+        /**
+     * Show a page displaying a specific expert
+     *
+     * @param $userid
+     */
+    public function boothsview($userid)
+    {
+        $userid = (int) $userid;
+
+        $users = $this->expertise_model->get_user($userid);
+        if (empty($users)) show_404();
+        unset($users['password']);
+
+        if (! in_array((int) $users['membertype'], array(MEMBER_TYPE_EXPERT_ADVERT))) show_404();
+
+        $expertise = $this->expertise_model->get_expertise($userid);
+        $myexpertise = $this->expertise_model->get_expertise_sector_subsector($userid);
+        $education = $this->expertise_model->get_education($userid);
+
+        // TODO: Revisit the logic
+        if ($users['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) {
+            $page_category = 'Lightning';
+            $fullname = $users['organization'];
+            $project = $this->expertise_model->get_organization_projects($userid);
+            $breadcrumb_title = lang('B_EXPERT_ADVERTS');
+            $uri_segment = 'companies';
+            $view = 'virtualLF/booths_view';
+
+        } else {
+            show_404();
+
+        }
+
+        $isexpert		= 	check_is_topexpert($userid);
+        $seats 			= 	$this->expertise_model->get_seats($userid);
+        $case_studies	= 	$this->expertise_model->get_case_studies($userid, '', '1');
+        $org_info		= 	$this->expertise_model->get_org_info($userid);
+
+        $data =	compact(
+            'users',
+            'expertise',
+            'education',
+            'project',
+            'isexpert',
+            'seats',
+            'case_studies',
+            'org_info',
+            'myexpertise'
+        );
+
+        // Expert specific data
+        if ($users['membertype'] == MEMBER_TYPE_MEMBER) {
+
+            $this->load->model('members_model');
+            $data['isfollowing'] = $this->members_model->isfollowing($userid, $this->sess_uid);
+
+            // Fetch ratings for the expert
+            $this->load->model('ratings_model');
+            $data['ratings'] = $this->ratings_model->ratings($userid);
+            $data['rated_by_me'] = $this->ratings_model->exists($userid, $this->sess_uid);
+        }
+
+        $this->breadcrumb->append_crumb($breadcrumb_title, "/$uri_segment");
+        $this->breadcrumb->append_crumb($fullname, $users['uid']);
+        $this->headerdata['breadcrumb'] = $this->breadcrumb->output();
+
+        $this->headerdata['title'] = build_title($fullname);
+
+        // Provide page analitics data for Segment Analitics
+        $this->headerdata['page_analytics'] = array(
+            'category' => $page_category,
+            'properties' => array(
+                'Target Id' => $userid,
+                'Target Name' => $fullname
+            )
+        );
+
+        // Render the page
+        $this->load->view('virtualLF/header_stimulus', $this->headerdata);
+        $this->load->view($view, $data);
+        $this->load->view('templates/footer');
+    }
 
 }
