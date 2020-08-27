@@ -233,6 +233,9 @@ class Expertise extends CI_Controller {
             if($userid == 4020){
                 $view = 'expertise/organization_view_starr';
             }
+            elseif($userid == 4340){
+                $view = 'expertise/premium_view';
+            }
 	        else{
 	            $view = 'expertise/organization_view';
             }
@@ -251,6 +254,8 @@ class Expertise extends CI_Controller {
 		$seats 			= 	$this->expertise_model->get_seats($userid);
 		$case_studies	= 	$this->expertise_model->get_case_studies($userid, '', '1');
 		$org_info		= 	$this->expertise_model->get_org_info($userid);
+		$this->load->model('projects_model');
+        $model_obj      =   $this->projects_model;
 
 		$data =	compact(
 			'users',
@@ -261,7 +266,8 @@ class Expertise extends CI_Controller {
 			'seats',
 			'case_studies',
 			'org_info',
-			'myexpertise'
+			'myexpertise',
+            'model_obj'
 		);
 
         // Expert specific data
@@ -420,5 +426,7 @@ class Expertise extends CI_Controller {
 
         return email(array($following['email'], $following['fullname']), $subject, $content, array(ADMIN_EMAIL, ADMIN_EMAIL_NAME));
     }
+
+
 }
 
