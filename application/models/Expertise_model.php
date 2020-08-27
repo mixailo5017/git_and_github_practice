@@ -924,7 +924,6 @@ class Expertise_model extends CI_Model {
 		$this->db->select("pid,ep.uid,projectname,slug,projectphoto,country,ep.sector,ep.subsector,stage,location");
 		$this->db->where('exs.isdeleted','0');
 		$this->db->where('ep.isdeleted','0');
-		$this->db->where('exs.status','1');
 		$this->db->where('exs.orgid', $userid);
 		$query_project = $this->db->get('exp_proj_expertadvert as exs');
 
