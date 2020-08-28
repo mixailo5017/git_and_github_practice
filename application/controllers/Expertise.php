@@ -227,7 +227,7 @@ class Expertise extends CI_Controller {
 		if ($users['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) {
             $page_category = 'Lightning';
             $fullname = $users['organization'];
-			$project = $this->expertise_model->get_organization_projects($userid);
+			$project = $this->expertise_model->get_organization_projects_data($userid);
             $breadcrumb_title = lang('B_EXPERT_ADVERTS');
             $uri_segment = 'companies';
             if($userid == 4020){
