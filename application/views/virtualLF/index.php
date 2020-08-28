@@ -41,6 +41,7 @@
           <li><a href="#schedule">Agenda</a></li>
           <li><a href="#booths">Booths and Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
+          <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
             <li class="buy-tickets"><a href="https://www.cg-la.com/store/global-registration-all-access">Register Now</a></li>
 
         </ul>
