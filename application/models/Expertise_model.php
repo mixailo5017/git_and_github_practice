@@ -924,6 +924,7 @@ class Expertise_model extends CI_Model {
 		$this->db->select("pid,ep.uid,projectname,slug,projectphoto,country,ep.sector,ep.subsector,stage,location");
 		$this->db->where('exs.isdeleted','0');
 		$this->db->where('ep.isdeleted','0');
+		$this->db->where('exs.status','1');
 		$this->db->where('exs.orgid', $userid);
 		$query_project = $this->db->get('exp_proj_expertadvert as exs');
 
@@ -936,6 +937,32 @@ class Expertise_model extends CI_Model {
 		}
 		return $projectdata;
 	}
+	
+	
+	    /**
+     * Get List of expert sectors of user
+     * this one works better than the above one 
+     * @return	array
+     */
+    public function get_organization_projects_data($userid)
+    {
+        $this->db->select("a.pid, a.uid, projectname,slug,projectphoto,country,a.sector,a.subsector,stage,location,lat,lng, description, sponsor, description, totalbudget");
+        $this->db->from('exp_projects a');
+        $this->db->join('exp_invite_experts b', 'b.uid=a.uid', 'left');
+        $this->db->where('a.isdeleted','0');
+        $this->db->where('b.existance','1');
+        $this->db->where('b.orgid', $userid);
+        $query_project = $this->db->get();
+
+        $totalproj = $query_project->num_rows();
+        $projectdata["totalproj"] = $totalproj;
+
+        foreach($query_project->result_array() as $row)
+        {
+            $projectdata["proj"][] = $row;
+        }
+        return $projectdata;
+    }
 
     /**
      * Send an email message to a member
