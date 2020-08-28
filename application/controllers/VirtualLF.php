@@ -424,5 +424,14 @@ class VirtualLF extends CI_Controller
         $this->load->view($view, $data);
         $this->load->view('templates/footer');
     }
+    
+    public function privatemeetings()
+    {
+
+        // Render the page
+        $this->load->view('virtualLF/header_stimulus');
+        $this->load->view('virtualLF/privatemeetings');
+        $this->load->view('templates/footer');
+    }
 
 }
