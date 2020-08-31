@@ -39,7 +39,6 @@
           <li><a href="#about">About</a></li>
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Agenda</a></li>
-          <li><a href="#booths">Booths and Sponsors</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
             <li class="buy-tickets"><a href="https://www.cg-la.com/store/global-registration-all-access">Register Now</a></li>
@@ -798,44 +797,6 @@
       </div>
 
     </section><!-- End Gallery Section -->
-
-      <!-- ======= Supporters Section ======= -->
-      <section id="booths" class="section-with-bg">
-
-          <div class="container" data-aos="fade-up">
-              <div class="section-header">
-                  <h2>Booths and Sponsors</h2>
-              </div>
-
-              <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-
-                  <div class="col-lg-4 col-md-4 col-xs-6" style="padding: 1em">
-                      <div class="supporter-logo">
-                          <a href="https://gvip.io/virtualLF/boothsview/4018">
-                             <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Oracle+Booth.jpg" class="img-fluid" alt="">
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-xs-6" style="padding: 1em">
-                      <div class="supporter-logo">
-                          <a href="https://gvip.io/virtualLF/boothsview/4018">
-                              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Oracle+Booth.jpg" class="img-fluid" alt="">
-                          </a>
-                      </div>
-                  </div>
-                  <div class="col-lg-4 col-md-4 col-xs-6" style="padding: 1em">
-                      <div class="supporter-logo">
-                          <a href="https://gvip.io/virtualLF/boothsview/4018">
-                              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Oracle+Booth.jpg" class="img-fluid" alt="">
-                          </a>
-                      </div>
-                  </div>
-
-              </div>
-
-          </div>
-
-      </section> <!-- End Sponsors Section -->
 
     <!-- =======  F.A.Q Section ======= -->
     <section id="faq">
