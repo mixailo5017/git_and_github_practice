@@ -264,6 +264,39 @@
 </div>
 
 
+<div style="padding-right: 2%; padding-left: 2%" class="row">
+
+    <!-- Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/spr1zDAr5uM"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/NioCorp.png" alt="video"
+                data-toggle="modal" data-target="#modal7"></a>
+        <h3>NioCorp</h3>
+        <p>NioCorp’s Elk Creek Project - "Bringing Neobium to America</p>
+        <p>Mark A. Smith, P.E., Esq.</p>
+    </div>
+    <!-- Grid column -->
+</div>
+
+
 
 <script>
     $('#modal1').on('hidden.bs.modal', function (e) {
@@ -294,6 +327,10 @@
     $('#modal5').on('hidden.bs.modal', function (e) {
         // do something...
         $('#modal5 iframe').attr("src", $("#modal5 iframe").attr("src"));
+    });
+    $('#modal7').on('hidden.bs.modal', function (e) {
+        // do something...
+        $('#modal7 iframe').attr("src", $("#modal7 iframe").attr("src"));
     });
 
 </script>
