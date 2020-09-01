@@ -1,3 +1,8 @@
+<?php if($users['uid'] == 4071){?>
+<div class="speaker" style="float: right; padding-right:3em; padding-top: 2em">
+    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/apex+booth.jpg" style="height: 250px">
+</div>
+<?php } ?>
 <div class="clearfix" id="content">
     <div class="view_organization">
         <div class="col1" style="text-align:center;">
