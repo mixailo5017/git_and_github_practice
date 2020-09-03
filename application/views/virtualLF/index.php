@@ -40,8 +40,9 @@
           <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Agenda</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
+            <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
             <li class="buy-tickets"><a href="https://www.cg-la.com/store/global-registration-all-access">Register Now</a></li>
+
 
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -267,49 +268,21 @@
                   <li class="nav-item">
                       <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Track B</a>
                   </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Track C</a>
+                  </li>
               </ul>
 
               <h3 class="sub-heading">At a time of enormous change worldwide, we bring together top leadership to discuss global economic recovery and develop 50+ real project opportunities in the Global Marketplace (a $2.5 trillion annual market), across all infrastructure sectors – transportation, energy, water/wastewater and digitization. “Vision and Leadership; Creating Tomorrow’s World” brings the major projects together with key funders, critical technology disruptors and great designers and builders.</h3>
 
               <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
-                  <div class="row schedule-item" style="width: 75%">
-                      <div class="col-md-2">
-                          <time>8:00 AM EST</time>
-                          <form method="POST" action="#">
-                              <div class="form-row">
-                                  <div class="col-auto">
-                                      <button type="submit">Join Session</button>
-                                  </div>
-                              </div>
-                          </form>
-                          <br><br>
-                          <div class="speaker">
-                              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                          </div>
-                      </div>
-                      <div class="col-md-10">
-                          <h4>Welcome Remarks</h4>
-                          <p>Norman Anderson, Chairman & CEO, CG/LA Infrastructure</p>
-
-                          <br><br>
-
-                          <h4>Fireside Chat: Recreating a Strong U.S. Infrastructure Model, for Domestic Growth & Global Success</h4>
-                          <p>Maurice R. “Hank” Greenberg, Chairman, Starr Holdings</p>
-                          <p>General David H. Petraeus, Chairman, KKR Global Institute</p>
-                          <br>
-                          <p><strong>Moderator: Maria Bartiromo, Fox Business News</strong></p>
-
-                      </div>
-
-                  </div>
-
                   <!-- Schdule Day 1 -->
                   <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-                      <h2>Track A</h2>
+                      <h2>Track A: Plenary</h2>
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>8:30 AM EST</time>
+                              <time>7:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -323,23 +296,13 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Vision & Action – Creating a Better Infrastructure Future</h4>
-                              <p>The Honorable Steven Mnuchin, United States Secretary of the Treasury</p>
-                              <p>Introduction: Maurice R. “Hank” Greenberg, Chairman, Starr Holdings</p>
-                              <br>
-                              <p>Bringing Institutional Investors to the United State Infrastructure Fight – What is Required?: There is an enormous challenge in bringing institutional investors, including pension funds, sovereign wealth funds and life insurance funds to the infrastructure funding gap. Not only do we need a much better pipeline of projects, but we also need much more capable decision-makers in the funds themselves. Currently only 2% of funding goes to infrastructure, and doubling that to 4% would bring a whole new level of strategic capability to long-term infrastructure investment. How do we do that?</p>
-                              <br>
-                              <p>Edward “Ed” M. Smith, President and CEO, Ullico</p>
-                              <p>John Perdue, Treasurer, State of West Virginia</p>
-                              <p>Karen Carraher, Executive Director, Ohio Public Employees Retirement System (OPERS)</p>
-                              <br>
-                              <p><strong>Special Remarks: Mitch Silk, Assistant Secretary (acting) for International Affairs, U.S. Department of the Treasury</strong></p>
+                              <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4>
                           </div>
                       </div>
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>9:15 AM EST</time>
+                              <time>8:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -353,26 +316,20 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>The New Development Finance Corporation & The Blue Dot Network: Working with the DFC to Fund key projects (Your Project) in Latin America and around the world</h4>
-                              <p>Kristie Pellecchia, Senior Advisor for Western Hemisphere, US Development Finance Corporation (formerly OPIC).</p>
+                              <h4>Bom Dia Brasil - Top 5 Brazilian Projects Live!</h4>
                           </div>
 
                           <div class="col-md-2">
                           </div>
 
                           <div class="col-md-10">
-                              <h4>Technologies Defining our Future: Sensor Strategy, Large Structure 3D Printing & Hydrogen</h4>
-                              <p>Huw Thomas, Development Director, Magway Limited</p>
-                              <p>Michael Woods, CEO & COO, Black Buffalo</p>
-                              <p>Joaquim Levy, Lemann Visiting Fellow of Practice Programme Oxford University and former Minister of Finance of Brazil and former CFO of the World Bank</p>
-                              <br>
-                              <p><strong>Moderator: General James A. “Spider” Marks</strong></p>
+
                           </div>
                       </div>
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>10:00 AM EST</time>
+                              <time>9:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -386,12 +343,7 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Critical Services/Mobility Solutions</h4>
-                              <p>Increasingly moving around cities is absolutely critical to solving the problem of congested urban areas. Michael Woods, CEO of Black Buffalo, addresses this issue with a panel of mobility experts.</p>
-                              <p>John Krafcik, CEO, Waymo</p>
-                              <p>Nick Cleary, Chairman & CEO, The Clara Plan</p>
-                              <br>
-                              <p><strong>Moderator: Michael Woods, CEO & COO, Black Buffalo</strong></p>
+                              <h4>Top 5 Global Strategic Projects - Projects that are Critical to Country Growth</h4>
                           </div>
                       </div>
 
@@ -411,18 +363,16 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Invitation Only - Building Strong National Infrastructure Brands and Communicating Project Benefits</h4>
-                              <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instill public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'. </p>
-                              <p>Mark Freedman, Partner, Dalberg Advisors </p>
-                              <p>Representative from Oracle</p>
+                              <h4>"Innovation & Infrastructure - The Role of the Global CEO"</h4>
                               <br>
-                              <p><strong>Moderator: Norman Anderson, CEO & Chairman, CG/LA Infrastructure</strong></p>
+                              <p>Panelist:</p>
+                              <p><strong>Andrés Gluski, CEO, AES Corporation</strong></p>
                           </div>
                       </div>
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>10:45 AM EST</time>
+                              <time>11:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -436,19 +386,17 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Creating the Infrastructure for Smart Cities</h4>
-                              <p>The key is to build the infrastructure that will allow for new solutions to be developed by the entrepreneurial community. Jen Schmitz, CEO of Lattice Industries, is creating a platform that will allow cities to both commercialize data and invest in the capacity.</p>
-                              <p>Massimiliano Garri, Chief Innovation & Information Officer, ACEA</p>
-                              <p>Jim Gibbs, Principal, Sperry Capital Inc.</p>
-                              <p>Brian Snider, CEO, Lit Communities</p>
+                              <h4>Panel Discussion - The Global Economy, 2020 - 2023</h4>
                               <br>
-                              <p><strong>Moderator: Jennifer Schmitz, Managing Partner, Lattice Industries</strong></p>
+                              <p>Panelists:</p>
+                              <p><strong>Jeff Hill, Senior Managing Director, BCG (invited)</strong></p>
+                              <p><strong>Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil (invited)</strong></p>
                           </div>
                       </div>
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>11:30 AM EST</time>
+                              <time>12:00 PM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -462,37 +410,15 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Transforming Technology: AI Creating and Measuring Benefits</h4>
-                              <p>Dev Amratia, CEO and Co-Founder, nPlan</p>
-                              <p>Eve Psalti, Head of Strategic Platforms, Google Cloud</p>
-                              <p>Glady Singh, General Manager, Innovation and Federal Services, AkitaBox</p>
+                              <h4>Oracle Project of the Year Awards:</h4>
+                              <p>Each year working with Oracle we identify and select the Best Global Projects.  This year the awards will be televised on GViP TV!</p>
                               <br>
-                              <p><strong>Moderator: Ibrahim Odeh, Founder, Global Leaders in Construction Management, Columbia University</strong></p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>12:15 PM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>Financing the Global Infrastructure Build</h4>
-                              <p>The Impact of Global and Domestic/State Infrastructure Banks: Hear from experts on the necessity and effectiveness of infrastructure banks to provide a central source of funds for projects.</p>
-                              <p>Pierre Lavallee, President & CEO, Canadian Infrastructure Bank</p>
-                              <p>Leo Hindery, Chairman, Intermedia Partners (Founder, with George Steinbrenner of the Yes! Networks)</p>
-                              <br>
-                              <p><strong>Moderator: Norman F. Anderson, Chairman & CEO, CG/LA Infrastructure</strong></p>
+                              <p>Categories include:</p>
+                              <p><strong>- Strategic Project of the Year</strong></p>
+                              <p><strong>- Engineering Project of the Year</strong></p>
+                              <p><strong>- Finance Project of the Year</strong></p>
+                              <p><strong>- Innovation Project of the Year</strong></p>
+                              <p><strong>- Job Creation Project of the Year</strong></p>
                           </div>
                       </div>
 
@@ -512,25 +438,155 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Building a Cross-Border Megaproject: The Gordie Howe Experience</h4>
-                              <p>This project is a $5.7 billion P3 undertaking that will see the first new border transportation system between Canada and the US construction in four decades.</p>
-                              <p>Heather Grondin, Vice President Communications and Stakeholder Relations, Windsor Detroit Bridge Authority</p>
-                              <p>Carmen Wade, Partner, Deloitte </p>
-                              <p>Tom Barlow, Partner, Fasken</p>
+                              <h4>Critical Technologies Driving Opportunity and Growth:</h4>
+                              <p>In this panel we bring people together from throughout the world to highlight the visionary technology applications that will change our world - and that offer immediate opportunities to project developers, and business executives.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>2:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
                               <br>
-                              <p><strong>Moderator: Mark Butler, Director of Communications, Windsor-Detroit Bridge Authority</strong></p>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Revitalizing Emerging Market Economies - Roundtable Discussion</h4>
+                              <br>
+                              <p>Moderator:</p>
+                              <p><strong>Nicolas Firzli, Director General, World Pensions Council</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>3:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Bringing Supply Chains Home - The Case of Rare Earths</h4>
+                              <br>
+                              <p>Moderator:</p>
+                              <p><strong>USGS</strong></p>
+                              <br>
+                              <p>Special Case Study:</p>
+                              <p><strong>The Niobium Elk Creek Project in Nebraska</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>4:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>The Blue Dot Network - Global Cooperation in Infrastructure Investment:</h4>
+                              <p>The BDN is an initiative of Australia, Japan and the U.S., and headquartered at the OECD in Paris. Isabel Cane of the OECD in Paris will lead this discussion, along with a parallel workshop, on creating a long-term and effective market-based global infrastructure initiative.</p>
+                              <br>
+                              <p>Panelist</p>
+                              <p><strong>Isabel Cane, OECD</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>5:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>First Annual Global Benefits Prize:</h4>
+                              <p>Focus on the project developer whose project will drive the widest and deepest benefits for people in the project's footprint, including health, mobilit, job creation, business creation and overall opportunity.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>6:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
+                              <p>The focus is on identifying investment targets and strategies for this critical sector.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>7:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Good Morning Australia - the Top 5 Australian Infrastructure Projects</h4>
                           </div>
                       </div>
 
                   </div>
                   <!-- End Schdule Day 1 -->
 
-                  <!-- Schdule Day 2 -->
+                  <!-- Start Track B -->
                   <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-                      <h2>Track B</h2>
+                      <h2>Track B: Projects</h2>
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>8:30 AM EST</time>
+                              <time>9:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -544,40 +600,12 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Top 5 Strategic Projects for Global Recovery</h4>
-                              <p>Transformative Projects Offering Business & Investment Opportunities in 2020. These are all projects that contribute towards regional / national competitiveness and business opportunities in the next 3-12 months, catalyzing economic recovery. </p>
-                              <p>Port of Corpus Christi - Channel Improvement (United States)</p>
-                              <p>The CLARA Plan (Australia)</p>
-                              <p>SeaOne Caribbean Fuels Supply (United States)</p>
-                              <p>New Noida International Airport at Jewar - Phase I (India)</p>
-                              <p>Theia Satellite Network (United States)</p>
+                              <h4>Water/Wastewater:</h4>
+                              <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
                               <br>
-                              <p><strong>Moderator: Mark Butler, Director of Communications, Windsor-Detroit Bridge Authority</strong></p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>9:15 AM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>Top 5 Energy Projects Project Presentations</h4>
-                              <p>Jordan Cove LNG Terminal and Pacific Connector Gas Pipeline (United States)</p>
-                              <p>Transbrasilia Gas Pipeline - Paulínia (SP) to Brasilia (DF) (Brazil)</p>
-                              <p>Ruzizi III Hydropower Project (Burundi, DRC, Rwanda)</p>
-                              <p>920MW Brooke County Natural Gas-fired Combined Cycle Power Plant (United States)</p>
-                              <p>OceanGrids Offshore Wind (United States)</p>
+                              <p>Project Presentations:</p>
+                              <p><strong>Aqaba – Amman Water Desalination & Conveyance Project (AAWDC) (Jordan)</strong></p>
+                              <p><strong>Additional projects from Colombia, the U.S. and Egypt</strong></p>
                           </div>
                       </div>
 
@@ -597,21 +625,18 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Top 5 Rail & Transit Project Opportunities</h4>
-                              <p>Halkalı-Kapıkule Railway (Turkey)</p>
-                              <p>Mayan Train (Mexico)</p>
-                              <p>FIOL East-West Integration Railway and FICO Center-West Integration Railway (Brazil)</p>
-                              <p>Intercity Trains (Campina-Sao Paulo) + Line 7 O&M PPPs (Brazil)</p>
-                              <p>UMT Metro lines 8 and 9 PPPs (Brazil)</p>
-                              <p>Isthmus of Tehuantepec Corridor (Mexico)</p>
+                              <h4>Ports & Logistics:</h4>
+                              <p>Leading Ports & Logistics projects globally, tremendous opportunities, and tremendous drivers of economic recovery and job creation.</p>
                               <br>
-                              <p><strong>Keynote: The Hon Andrew Robb AO, Former Australian Minister for Trade and Investment; Principal, Andrew Robb Pty Ltd.</strong></p>
+                              <p>Project Presentations:</p>
+                              <p><strong>Alcantara Port Terminal (TPA) (Brazil)</strong></p>
+                              <p><strong>Additional projects from Myanmar, Portugal, and the UK.</strong></p>
                           </div>
                       </div>
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>10:00 AM EST</time>
+                              <time>11:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -625,61 +650,12 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Invitation Only - Building Strong National Infrastructure Brands and Communicating Project Benefits</h4>
-                              <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instill public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'. </p>
-                              <p>Mark Freedman, Partner, Dalberg Advisors </p>
-                              <p>Representative from Oracle</p>
+                              <h4>Transit Networks:</h4>
+                              <p>Mobility is one of the key values for infrastructure investment, and we present some of the best global opportunities for infrastructure project development.</p>
                               <br>
-                              <p><strong>Moderator: Norman Anderson, CEO & Chairman, CG/LA Infrastructure</strong></p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>10:45 AM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>Top 5 Highways, Bridges, and Tunnels Infrastructure Project Opportunities</h4>
-                              <p>Gordie Howe International Bridge (Canada-USA)</p>
-                              <p>I-10 Calcasieu River Bridge (United States)</p>
-                              <p>Portal North Bridge (United States)</p>
-                              <p>Great Lakes Basin Transportation (United States)</p>
-                              <p>Coastal Highway Concessions (Brazil)</p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>11:30 AM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>Top 5 Water/Wastewater Project Presentations</h4>
-                              <p>The Lesotho Highlands Water Project (LHWP) (Lesotho) Integrated Solid Waste System in Nuevo Leon (SIMEPRODE) (Mexico) </p>
-                              <p>Aqaba – Amman Water Desalination & Conveyance Project (AAWDC) (Jordan)</p>
-                              <p>Cadiz Water Project (United States)</p>
-                              <p>Bahamas Water Supply & Improvement Project (Bahamas)</p>
+                              <p>Project Presentations:</p>
+                              <p><strong>Metropolitan Integrated Transit System (Brazil)</strong></p>
+                              <p><strong>Additional projects from Canada, the U.S., and Indonesia</strong></p>
                           </div>
                       </div>
 
@@ -699,45 +675,344 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Reshoring the Supply Chain - The Strategic Metal Initiative</h4>
-                              <p>Activate key projects, ensuring the availability of critical minerals to the infrastructure market economy.</p>
-                              <p>Sarah Ryker, Director, Energy and Minerals, US Geological Survey</p>
-                              <p>Professor Amine Naghadi, Vice President, African Mining and Energy Council</p>
-                              <p>Jim Sims, VP, External Affairs, NioCorp Developments Ltd.</p>
-                              <p>Don Bubar, President & CEO, Avalon Advanced Materials</p>
+                              <h4>Highways, Bridges & Tunnels:</h4>
+                              <p>The largest single category of infrastructure investment, these projects are transforming the productive capacity of countries worldwide, and have enormous potential to drive economic recovery.</p>
                               <br>
-                              <p><strong>Moderator: Howard Margulis, Senior Managing Director, MaxEn Capital Advisors</strong></p>
+                              <p>Project Presentations:</p>
+                              <p><strong>Gordie Howe International Bridge (Canada)</strong></p>
+                              <p><strong>Additional projects in Brazil, Colombia and Turkey</strong></p>
                           </div>
                       </div>
 
-                  </div>
-                  <!-- End Schdule Day 2 -->
-
-                  <div class="row schedule-item" style="width: 75%">
-                      <div class="col-md-2">
-                          <time>1:45 PM EST</time>
-                          <form method="POST" action="#">
-                              <div class="form-row">
-                                  <div class="col-auto">
-                                      <button type="submit">Join Session</button>
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>2:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
                                   </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
                               </div>
-                          </form>
-                          <br>
-                          <div class="speaker">
-                              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Smart Cities/Smart Infrastructure:</h4>
+                              <p>In fact, all infrastructure going forward will be ‘smart,’ and the opportunity now is to create a strategy for commercializing data to both securitize investments, and pay for new investments.</p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>ContraCosta Project, California (USA)</strong></p>
+                              <p><strong>Additional projects in Brazil, the UK and Italy</strong></p>
                           </div>
                       </div>
-                      <div class="col-md-10">
-                          <h4>Project of the Year Awards</h4>
-                          <p>2020 CG/LA Infrastructure Project of the Year Awards sponsored by Oracle</p>
-                          <p>Engineering Project of the Year</p>
-                          <p>Finance Project of the Year</p>
-                          <p>Job Creation Project of the Year</p>
-                          <p>Green/New Sustainability Project of the Year</p>
-                          <p>Strategic Project of the Year</p>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>3:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Electricity Transmission:</h4>
+                              <p>Projects bring wind energy from source to load, onshort and offshore, with the capacity to completely transform the ESG equation.</p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>Anbaric Offshore Wind (USA)</strong></p>
+                              <p><strong>Additional projects in Brazil, Peru and Somalia</strong></p>
+                          </div>
                       </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>4:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Autonomous Vehicle Projects:</h4>
+                              <p>The future of mobility is clearly autonomy, from commercial vehicles, to long-haul trucks, and wireless charging.  Hear from leaders across the U.S. in this area of transformative technology.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>5:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Opportunities from Space:</h4>
+                              <p>The ability to see, measure and process data from space about the earth - minerals, public safety, agriculture - is going to transform how we live and work</p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>Theia Satellite Project</strong></p>
+                              <p><strong>Additional projects from Brazil, the Philippines and India</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>6:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>New Energy Technologies:</h4>
+                              <p>The pace of digitization in electricity is tremendous, from renewable energy, to storage, to new ‘behind the meter’ technologies.  </p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>Solar Project, Australia</strong></p>
+                              <p><strong>And projects from the U.S., Brazil, and Saudi Arabia</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>7:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>InterCity and High Speed Trains:</h4>
+                              <p>Some of the most exciting projects in the world are intercity high speed rail projects, driving critical connections between cities like São Paulo and Campinas, Dallas and Houston, and Tokyo and Kyoto.  </p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>São Paulo Intercity Trains project, $1.6 billion</strong></p>
+                              <p><strong>Additional projects from the U.S., Japan and northern Europe</strong></p>
+                          </div>
+                      </div>
+
                   </div>
+                  <!-- End Schdule Track B-->
+
+                  <!-- Start Track C -->
+                  <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
+                      <h2>Track C: Strategic Workshops</h2>
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>9:00 AM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Benefits Index Creation:</h4>
+                              <p>For citizens around the world to invest in infrastructure it is critical to select projects according to the critical results of those projects, and then to measure and manage those results throughout the life of the project.  These results should be defined in terms of benefits for citizens:  health (clean water, clean air), mobility, jobs, business creation and opportunities.  What are some of the other key project results, and how can we create an effective benefits index?</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>10:00 AM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Blue Dot Network:</h4>
+                              <p>An innovative initiative of the international community, including leadership from Australia, Japan and the U.S., and housed in Paris at the OECD this new initiative is focused on market-based infrastructure development.  A special workshop will be held by the BDN exclusively for project developers and public officials from around the world.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>11:00 AM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Funding for Economic Recovery:</h4>
+                              <p>The decline in global GDP has changed the risk profile of countries and projects at a time when they need increased investment to address critical issues around health, as well as those issues that will lead to rapid economic recovery.  This section focuses on funding, financing and risk mitigation strategies to address those issue.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>1:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Transformative Technologies:</h4>
+                              <p>PThe world is facing a tidal wave of new and transformative technologies, and we will both present and make sense of these technologies to emerging market, and developed country, project developers.  Technologies include:  wireless vehicle charging, 5G driving everything, 3D printing, blockchain, AI, Big Data, electric and autonomous vehicles and new ways of designing and managing projects.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>2:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Strategic Minerals Production:</h4>
+                              <p>Many countries have realized that the dependence on other countries for critical needs, from rare earth minerals to PPE, is something that must be addressed.  Under this theme we will highlight how the U.S. and the EU are bringing their critical supply chains home, with case studies and policy recommendations.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>3:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>"Building Strong National Infrastructure Brands and Communicating Project Benefits:</h4>
+                              <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instil public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'. </p>
+                              <br>
+                              <p>Discussion Leaders:</p>
+                              <p><strong>Mark Freedman, Partner, Dalberg Advisors</strong></p>
+                              <p><strong>Representative from Oracle</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>4:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>The Creation of a National Infrastructure Bank: </h4>
+                              <p>Discussion topics include:</p>
+                              <p>1)Securing an adequately-sized source of long-term financing to support infrastructure (that is politically sellable because it complements existing legislation and does not increase the Federal debt).</p>
+                              <p>2)Emphasizing information, efficiencies, and latest technologies to ensure proper design and management of projects.</p>
+                              <p>3)And Re-booting the American economy by creating lots of great-paying jobs, while raising economic growth and productivity.</p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>5:00 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Clean Water & Wastewater Infrastructure Investment:</h4>
+                              <p>The great forgotten infrastructure, in developed and emerging markets alike is the water and wastewater sector.  To drive economic recovery it is critical that resources be directed at this sector, and not just at economic sectors that generate a high face value ROI.  Critically, smart infrastructure - and Xylem's smart water technology - are poised to address this issue</p>
+                          </div>
+                      </div>
+
+                  </div>
+                  <!-- End of Track C-->
 
               </div>
 
