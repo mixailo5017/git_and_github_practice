@@ -77,6 +77,16 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
 					?>
 				</p>
 			</section><!-- end .portlet -->
+			
+			
+		<!-- temporary video embed fix for certain projects -->
+		<?php if($project['pid'] == 3169){ ?>
+            		<section class="projectdata white_box">
+            			<div style="text-align: center">
+                    			<iframe width="560" height="315" src="https://www.youtube.com/embed/30RECLGlTOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                		</div>
+            		</section>
+            	<?php } ?>
 
 			<div id="project_tabs" class="white_box">
 
