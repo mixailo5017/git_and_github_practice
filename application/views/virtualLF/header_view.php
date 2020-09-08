@@ -25,7 +25,9 @@
                 <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
                     <a href="/virtualLF"><span>Global Leadership Forum</span></a>
                 </li>
-
+                <li class="<?php echo $segment == 'forums' ? 'active' : '' ?>">
+                    <a href="https://www.cg-la.com/store?category=GViP"><span>Custom Services</span></a>
+                </li>
             </ul>
         </nav>
         <?php } ?>

@@ -258,7 +258,7 @@
       <section id="schedule" class="section-with-bg">
           <div class="container" data-aos="fade-up">
               <div class="section-header">
-                  <h2>Agenda</h2>
+                  <h2>Agenda Preview</h2>
               </div>
 
               <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
@@ -269,7 +269,7 @@
                       <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Track B</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Track C</a>
+                      <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Strategic Workshops</a>
                   </li>
               </ul>
 
