@@ -26,7 +26,7 @@
 
     .hero-image {
         /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-        background-image: url("https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Global+Banner.jpg");
+        background-image: url("https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/GVIP 13th Global Banner.jpg");
 
         /* Set a specific height */
         height: 50%;
@@ -69,10 +69,10 @@
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
 
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
+    <!--7 Grid column -->
+      <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
-        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <!--Content-->
                 <div style="top: 10em" class="modal-content">
@@ -80,7 +80,7 @@
                     <div class="modal-body mb-0 p-0">
 
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DwWyTQHcSSw"
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/spr1zDAr5uM"
                                     allowfullscreen></iframe>
                         </div>
                     </div>
@@ -90,30 +90,56 @@
         </div>
         <!--Modal: Name-->
 
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/1+Penna.png" alt="video"
-                data-toggle="modal" data-target="#modal1"></a>
-        <h3>David Penna</h3>
-        <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation (DFC)</p>
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/NioCorp.png" alt="video"
+                data-toggle="modal" data-target="#modal7"></a>
+        <h3>NioCorp</h3>
+        <p>NioCorp’s Elk Creek Project - "Bringing Neobium to America</p>
+        <p>Mark A. Smith, P.E., Esq.</p>
+    </div>
+    <!-- Grid column -->
+
+    <!--6 Grid column -->
+     <div class="col-lg-4 col-md-6 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O49MWYEgeYw"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/6.+Petreus.png" alt="video"
+                data-toggle="modal" data-target="#modal5"></a>
+
+        <h3>General David H. Petraeus</h3>
+        <p>General David H. Petraeus AO, MSC,</p>
+        <p>Former Director of the Central Intelligence Agency</p>
         <p>in conversation with Norman Anderson, President, and CEO, CG-LA Infrastructure</p>
-        <p><strong>The U.S. Development Corporation (DFC)</strong></p>
-        <p><strong>Funding for Reshoring Critical Capabilities</strong></p>
+        <p><strong>Filmed live at the North American Infrastructure Leadership Forum, Washington DC, 2019</strong></p>
 
     </div>
     <!-- Grid column -->
 
-
-
-    <!-- Grid column -->
+    <!--5 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
-        <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <!--Content-->
                 <div style="top: 10em" class="modal-content">
                     <!--Body-->
                     <div class="modal-body mb-0 p-0">
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VqVZKK6jUc4"
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OGbw2-aUhZU"
                                     allowfullscreen></iframe>
                         </div>
                     </div>
@@ -122,18 +148,50 @@
             </div>
         </div>
         <!--Modal: Name-->
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/2.+French+Hill.png" alt="video"
-                data-toggle="modal" data-target="#modal6"></a>
-        <h3>French Hill</h3>
-        <p>U.S. House of Representatives from Arkansas's 2nd district</p>
-        <p>in conversation with Norman Anderson, President, and CEO, CG-LA Infrastructure</p>
-        <p><strong>View from the White House on Infrastructure  and Stimulus</strong></p>
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/5+Dry+Power.png" alt="video"
+                data-toggle="modal" data-target="#modal3"></a>
+        <h3>Dry Powder & the Build America Bureau</h3>
+        <p>Roger Bohnert, Director of Business Outreach, Build America Bureau, U.S. DOT</p>
+
     </div>
     <!-- Grid column -->
 
+</div>
+<!-- Grid row -->
 
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
 
+    <!--4 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0Klp_VSCp0w"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/4+Army+Corps.png" alt="video"
+                data-toggle="modal" data-target="#modal2"></a>
+        <h3>Army Corps</h3>
+        <p>U.S. Army Corps of Engineers - Meeting Covid Challenges with Priority Projects</p>
+        <p>Peter Dodgion, Asset Management Program Manager, U.S. Army Corps of Engineers</p>
+    </div>
     <!-- Grid column -->
+
+    <!--3 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -164,16 +222,43 @@
     </div>
     <!-- Grid column -->
 
+    <!--2 Grid column -->
+    <div class="col-lg-4 col-md-6 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VqVZKK6jUc4"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/2.+French+Hill.png" alt="video"
+                data-toggle="modal" data-target="#modal6"></a>
+        <h3>French Hill</h3>
+        <p>U.S. House of Representatives from Arkansas's 2nd district</p>
+        <p>in conversation with Norman Anderson, President, and CEO, CG-LA Infrastructure</p>
+        <p><strong>View from the White House on Infrastructure  and Stimulus</strong></p>
+    </div>
+    <!-- Grid column -->
+
 </div>
 <!-- Grid row -->
 
-
+<!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
+ <!--1 Grid column -->
+ <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
-        <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <!--Content-->
                 <div style="top: 10em" class="modal-content">
@@ -181,7 +266,7 @@
                     <div class="modal-body mb-0 p-0">
 
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0Klp_VSCp0w"
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DwWyTQHcSSw"
                                     allowfullscreen></iframe>
                         </div>
                     </div>
@@ -191,111 +276,19 @@
         </div>
         <!--Modal: Name-->
 
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/4+Army+Corps.png" alt="video"
-                data-toggle="modal" data-target="#modal2"></a>
-        <h3>Army Corps</h3>
-        <p>U.S. Army Corps of Engineers - Meeting Covid Challenges with Priority Projects</p>
-        <p>Peter Dodgion, Asset Management Program Manager, U.S. Army Corps of Engineers</p>
-    </div>
-    <!-- Grid column -->
-
-
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-6 mb-4">
-        <!--Modal: Name-->
-        <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <!--Content-->
-                <div style="top: 10em" class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body mb-0 p-0">
-                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OGbw2-aUhZU"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: Name-->
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/5+Dry+Power.png" alt="video"
-                data-toggle="modal" data-target="#modal3"></a>
-        <h3>Dry Powder & the Build America Bureau</h3>
-        <p>Roger Bohnert, Director of Business Outreach, Build America Bureau, U.S. DOT</p>
-
-    </div>
-    <!-- Grid column -->
-
-
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-6 mb-4">
-        <!--Modal: Name-->
-        <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <!--Content-->
-                <div style="top: 10em" class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body mb-0 p-0">
-                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O49MWYEgeYw"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: Name-->
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/6.+Petreus.png" alt="video"
-                data-toggle="modal" data-target="#modal5"></a>
-
-        <h3>General David H. Petraeus</h3>
-        <p>General David H. Petraeus AO, MSC,</p>
-        <p>Former Director of the Central Intelligence Agency</p>
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/1+Penna.png" alt="video"
+                data-toggle="modal" data-target="#modal1"></a>
+        <h3>David Penna</h3>
+        <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation (DFC)</p>
         <p>in conversation with Norman Anderson, President, and CEO, CG-LA Infrastructure</p>
-        <p><strong>Filmed live at the North American Infrastructure Leadership Forum, Washington DC, 2019</strong></p>
+        <p><strong>The U.S. Development Corporation (DFC)</strong></p>
+        <p><strong>Funding for Reshoring Critical Capabilities</strong></p>
 
     </div>
     <!-- Grid column -->
-
+  
 </div>
-
-
-<div style="padding-right: 2%; padding-left: 2%" class="row">
-
-    <!-- Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
-        <!--Modal: Name-->
-        <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <!--Content-->
-                <div style="top: 10em" class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body mb-0 p-0">
-
-                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/spr1zDAr5uM"
-                                    allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: Name-->
-
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/NioCorp.png" alt="video"
-                data-toggle="modal" data-target="#modal7"></a>
-        <h3>NioCorp</h3>
-        <p>NioCorp’s Elk Creek Project - "Bringing Neobium to America</p>
-        <p>Mark A. Smith, P.E., Esq.</p>
-    </div>
-    <!-- Grid column -->
-</div>
-
+<!-- Grid row -->
 
 
 <script>
