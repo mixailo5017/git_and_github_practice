@@ -41,6 +41,7 @@
           <li><a href="#schedule">Agenda</a></li>
           <li><a href="#contact">Contact</a></li>
             <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
+            <li><a href="https://www.cg-la.com/store?category=GViP">Custom Services</a></li>
             <li class="buy-tickets"><a href="https://www.cg-la.com/store/global-registration-all-access">Register Now</a></li>
 
 
@@ -296,7 +297,13 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4>
+                              <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4> 
+                              <br/>
+                              <p>Project Presentations:</p>
+                              <p><strong>Sinma Deepwater Port</strong>(Myanmar)</p>
+                              <p><strong>Ali Jinnah, Mazar 200 Bed Hospital, and other Healthcare Projects </strong>(Afghanistan)</p>
+                              <p><strong>New Noida International Airport at Jewar - Phase I </strong>(India)</p>
+                              <p><strong>Additional projects in India and Indonesia</strong></p>
                           </div>
                       </div>
 
@@ -316,7 +323,14 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Bom Dia Brasil - Top 5 Brazilian Projects Live!</h4>
+                              <h4>Bom Dia Brasil - Top 5 Brazilian Projects Live!</h4> 
+                              <br/>
+                              <p>Project Presentations:</p>
+                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais</strong></p>
+                              <p><strong>Alcantara Port Terminal </strong></p>
+                              <p><strong>Metropolitan Integrated Transit System, Florianopolis </strong></p>
+                              <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong></p>
+                              <p><strong>Road Concession - State Coastline Lot A, Sao Paulo </strong></p>
                           </div>
 
                           <div class="col-md-2">
@@ -343,7 +357,14 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Top 5 Global Strategic Projects - Projects that are Critical to Country Growth</h4>
+                              <h4>Top 5 NA Strategic Projects - Projects that are Critical to Country Growth</h4>
+                              <br/>
+                              <p>Project Presentations:</p>
+                              <p><strong>Great Lakes Transportation Basin </strong>(United States)</p>
+                              <p><strong>The Northeast Maglev </strong>(United States)</p>
+                              <p><strong>Gordie Howe International Bridge</strong>(Canada)</p>
+                              <p><strong>Montreal Contrecœuer Container Terminal</strong>(Canada)</p>
+                              <p><strong>JFK Terminal One Redevelopment </strong>(United States) </p>
                           </div>
                       </div>
 
@@ -389,8 +410,8 @@
                               <h4>Panel Discussion - The Global Economy, 2020 - 2023</h4>
                               <br>
                               <p>Panelists:</p>
-                              <p><strong>Jeff Hill, Senior Managing Director, BCG (invited)</strong></p>
-                              <p><strong>Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil (invited)</strong></p>
+                              <p><strong>Jeff Hill, Senior Managing Director, BCG </strong>(invited)</p>
+                              <p><strong>Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil </strong>(invited)</p>
                           </div>
                       </div>
 
@@ -485,7 +506,10 @@
                               <h4>Bringing Supply Chains Home - The Case of Rare Earths</h4>
                               <br>
                               <p>Moderator:</p>
-                              <p><strong>USGS</strong></p>
+                              <p><strong>Sarah Ryker, Associate Director, Energy and Minerals, USGS</strong></p>
+                              <br>
+                              <p>Panelist:</p>
+                              <p><strong>Mark Smith, NioCorp Developments Ltd.</strong></p>
                               <br>
                               <p>Special Case Study:</p>
                               <p><strong>The Niobium Elk Creek Project in Nebraska</strong></p>
@@ -555,6 +579,9 @@
                           <div class="col-md-10">
                               <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
                               <p>The focus is on identifying investment targets and strategies for this critical sector.</p>
+                              <br/>
+                              <p>Moderator:  </p>
+                              <p><strong>CDPQ Global CEO</strong>(invited)</p>
                           </div>
                       </div>
 
@@ -575,6 +602,9 @@
                           </div>
                           <div class="col-md-10">
                               <h4>Good Morning Australia - the Top 5 Australian Infrastructure Projects</h4>
+                              <br/>
+                              <p>Project Presentations:</p>
+                              <p><strong>The Clara Plan </strong>(Australia)</p>
                           </div>
                       </div>
 
@@ -584,34 +614,10 @@
                   <!-- Start Track B -->
                   <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
                       <h2>Track B: Projects</h2>
+             
                       <div class="row schedule-item">
                           <div class="col-md-2">
                               <time>9:00 AM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>Water/Wastewater:</h4>
-                              <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
-                              <br>
-                              <p>Project Presentations:</p>
-                              <p><strong>Aqaba – Amman Water Desalination & Conveyance Project (AAWDC) (Jordan)</strong></p>
-                              <p><strong>Additional projects from Colombia, the U.S. and Egypt</strong></p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>10:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -629,8 +635,40 @@
                               <p>Leading Ports & Logistics projects globally, tremendous opportunities, and tremendous drivers of economic recovery and job creation.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Alcantara Port Terminal (TPA) (Brazil)</strong></p>
-                              <p><strong>Additional projects from Myanmar, Portugal, and the UK.</strong></p>
+                                <p><strong>Montreal Contrecœuer Container Terminal</strong>(Canada)</p>
+                                <p><strong>Port of Tangier Med</strong>(Morocco)</p>
+                                <p><strong>Sinma Deepwater Port</strong>(Myanmar)</p>
+                                <p><strong>Port of Corpus Christi - Channel Improvement</strong>(United States) </p>
+                                <p><strong>Femarn Belt Link</strong></p>
+                                <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
+                                <p><strong>New Vasco da Gama Terminal, Port of Sines </strong>(Portugal)</p>
+                                <p><strong>Commerical Port and Cargo Train, Sinaloa State</strong>(Mexico)</p>
+                          </div>
+                        </div>
+
+                        <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>10:00 AM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
+                              <h4>Water/Wastewater:</h4>
+                              <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>Aqaba – Amman Water Desalination & Conveyance Project (AAWDC) </strong>(Jordan)</p>
+                                <p><strong>Hydropower Power Plants Revitalization Project</strong>(Puerto Rico)</p>
+                                <p><strong>The Lesotho Highlands Water Project </strong>(Lesotho)</p>
                           </div>
                       </div>
 
@@ -654,8 +692,9 @@
                               <p>Mobility is one of the key values for infrastructure investment, and we present some of the best global opportunities for infrastructure project development.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Metropolitan Integrated Transit System (Brazil)</strong></p>
-                              <p><strong>Additional projects from Canada, the U.S., and Indonesia</strong></p>
+                              <p><strong>Concession of Belo Horizonte's Bus Terminal </strong>(Brazil)</p>
+                              <p><strong>Ontario Line Subway</strong>(Canada)</p>
+                              <p><strong>Portal Bridge North</strong>(United States)</p>
                           </div>
                       </div>
 
@@ -679,8 +718,10 @@
                               <p>The largest single category of infrastructure investment, these projects are transforming the productive capacity of countries worldwide, and have enormous potential to drive economic recovery.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Gordie Howe International Bridge (Canada)</strong></p>
-                              <p><strong>Additional projects in Brazil, Colombia and Turkey</strong></p>
+                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais </strong>(Brazil)</p>
+                              <p><strong>Fehmarn Belt Fixed Link</strong>(Germany)</p>
+                              <p><strong>Tunnel Euralpin Lyon Turin</strong>(France, Italy)</p>
+                              <p><strong>Calcasieu River Bridge </strong>(United States)</p>
                           </div>
                       </div>
 
@@ -704,8 +745,8 @@
                               <p>In fact, all infrastructure going forward will be ‘smart,’ and the opportunity now is to create a strategy for commercializing data to both securitize investments, and pay for new investments.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>ContraCosta Project, California (USA)</strong></p>
-                              <p><strong>Additional projects in Brazil, the UK and Italy</strong></p>
+                              <p><strong>ContraCosta Project, California </strong>(United States)</p>
+                                <p><strong>Minas Smart Roads</strong>(Brazil)</p>
                           </div>
                       </div>
 
@@ -725,14 +766,17 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Electricity Transmission:</h4>
-                              <p>Projects bring wind energy from source to load, onshort and offshore, with the capacity to completely transform the ESG equation.</p>
+                              <h4>Ports & Logistics:</h4>
+                              <p>Leading Ports & Logistics projects globally, tremendous opportunities, and tremendous drivers of economic recovery and job creation.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Anbaric Offshore Wind (USA)</strong></p>
-                              <p><strong>Additional projects in Brazil, Peru and Somalia</strong></p>
+                             <p><strong>Port of Tangier Med </strong>(Morocco)</p>
+                             <p><strong>Port of Corpus Christi - Channel Improvement </strong>(United States) </p>
+                             <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
+                             <p><strong>New Vasco da Gama Terminal, Port of Sines </strong>(Portugal)</p>
+                             <p><strong>Commerical Port and Cargo Train, Sinaloa State</strong> (Mexico)</p>
                           </div>
-                      </div>
+                        </div>
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
@@ -750,10 +794,17 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Autonomous Vehicle Projects:</h4>
-                              <p>The future of mobility is clearly autonomy, from commercial vehicles, to long-haul trucks, and wireless charging.  Hear from leaders across the U.S. in this area of transformative technology.</p>
+                              <h4>Electricity Transmission:</h4>
+                              <p>Projects bring wind energy from source to load, onshort and offshore, with the capacity to completely transform the ESG equation.</p>
+                              <br>
+                              <p>Project Presentations:</p>
+                              <p><strong>Anbaric Offshore Wind </strong>(USA)</p>
+                              <p><strong>Temane Regional Electricity Project </strong>(Mozambique)</p>
+                              <p><strong>Additional projects in Brazil, Peru and Somalia</strong></p>
                           </div>
                       </div>
+
+                      
 
                       <div class="row schedule-item">
                           <div class="col-md-2">
@@ -775,7 +826,7 @@
                               <p>The ability to see, measure and process data from space about the earth - minerals, public safety, agriculture - is going to transform how we live and work</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Theia Satellite Project</strong></p>
+                              <p><strong>Theia Satellite Project</strong>(USA)</p>
                               <p><strong>Additional projects from Brazil, the Philippines and India</strong></p>
                           </div>
                       </div>
@@ -800,8 +851,9 @@
                               <p>The pace of digitization in electricity is tremendous, from renewable energy, to storage, to new ‘behind the meter’ technologies.  </p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Solar Project, Australia</strong></p>
-                              <p><strong>And projects from the U.S., Brazil, and Saudi Arabia</strong></p>
+                              <p><strong>Tire Recycling Waste-to-Energy Plant </strong> (Brazil)</p>
+                              <p><strong>Battery Energy Storage System & Flexible Distributed Energy Units</strong>(Puerto Rico)</p>
+                              <p><strong>SeaOne Puerto Solo</strong>(United States)</p>
                           </div>
                       </div>
 
@@ -825,8 +877,12 @@
                               <p>Some of the most exciting projects in the world are intercity high speed rail projects, driving critical connections between cities like São Paulo and Campinas, Dallas and Houston, and Tokyo and Kyoto.  </p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>São Paulo Intercity Trains project, $1.6 billion</strong></p>
-                              <p><strong>Additional projects from the U.S., Japan and northern Europe</strong></p>
+                              <p><strong>São Paulo Intercity Trains project </strong>(Brazil)</p>
+                              <p><strong>FIOL & FICO Railways</strong>(Brazil)</p>
+                              <p><strong>Ferropista Railway</strong>(Colombia)</p>
+                              <p><strong>Isthmus of Tehuantepec</strong>(Mexico)</p>
+                              <p><strong>Mayan Train</strong>(Mexico)</p>
+                              <p><strong>Halkalı-Kapıkule Railway</strong>(Turkey)</p>
                           </div>
                       </div>
 
