@@ -54,10 +54,7 @@ class Jobs extends CI_Controller {
 
 
         // Render HTML Page from view direcotry
-        $this->load->view('templates/header', $this->headerdata);
         $this->load->view('jobs/index', $data);
-        $this->load->view('templates/footer',$this->dataLang);
-
 
     }
 }
