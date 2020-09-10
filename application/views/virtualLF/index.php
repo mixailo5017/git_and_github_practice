@@ -20,6 +20,7 @@
 
   <!-- Template Main CSS File -->
   <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style.css" rel="stylesheet">
+ 
 
   <!-- =======================================================
   * Template Name: TheEvent - v2.2.0
@@ -30,7 +31,6 @@
 </head>
 
 <body>
-
   <!-- ======= Header ======= -->
   <header id="header">
       <nav>
@@ -53,10 +53,15 @@
   <!-- ======= Intro Section ======= -->
   <section id="intro">
     <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0"> <?php echo $details['title']; ?> </h1>
+   
+      <h1 style="fonst-size:2rem" class="mb-4 pb-0"> <?php echo $details['title']; ?> </h1>
+      <h2 style="color:white; font-size:2.5rem"> Real Opportunities, Bold Recovery </h2>
       <p class="mb-4 pb-0">September 17, 2020</p>
       <!-- <a href="https://www.youtube.com/watch?v=fVkrz-W1rY4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>-->
-      <a href="#about" class="about-btn scrollto">About The Event</a>
+      <div>
+      <a href="#schedule" style="font-size:2rem" class="about-btn scrollto">Agenda </a>
+      <a href="https://www.cg-la.com/store/global-registration-all-access" style="font-size:2rem" class="about-btn scrollto">Register Now</a>
+      </div>
     </div>
   </section><!-- End Intro Section -->
 
@@ -451,7 +456,7 @@
                                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
                               </div>
                           </div>
-                          <div class="col-md-10">
+                          <div class="col-md-10 " >
                               <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4>
                               <br>
                               <p>Keynote:</p>
@@ -467,7 +472,7 @@
                           </div>
                       </div>
 
-                      <div class="row schedule-item">
+                      <div class="row schedule-item" >
                           <div class="col-md-2">
                               <time>8:00 AM EST</time>
                               <form method="POST" action="#">
@@ -504,7 +509,7 @@
                           </div>
                       </div>
 
-                      <div class="row schedule-item">
+                      <div class="row schedule-item" >
                           <div class="col-md-2">
                               <time>9:00 AM EST</time>
                               <form method="POST" action="#">
@@ -534,7 +539,7 @@
                           </div>
                       </div>
 
-                      <div class="row schedule-item">
+                      <div class="row schedule-item" >
                           <div class="col-md-2">
                               <time>10:00 AM EST</time>
                               <form method="POST" action="#">
@@ -549,7 +554,7 @@
                                   <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
                               </div>
                           </div>
-                          <div class="col-md-10">
+                          <div class="col-md-10" >
                               <h4>"Innovation & Infrastructure - The Role of the Global CEO"</h4>
                               <br>
                               <p>Keynote:</p>
@@ -557,6 +562,12 @@
                               <br/>
                                 <p>Andrés Gluski has served as President and CEO since 2011, after serving as COO for five years. During his tenure as President and CEO, Andrés has led AES through a dramatic transformation by focusing on simplification, risk improvement and innovation. He has led the company through a $5 billion divestiture program, increased the credit rating by multiple notches and initiated a quarterly dividend, which has grown at an 8% annual rate. Andrés has also overseen the largest construction program in AES’ history, with more than 5,000 MW of new power generation completed. Under his leadership, AES has become a world leader in implementing new clean technologies, including energy storage, wind, solar and LNG. 
                                 </p>
+                                <br> <br>
+                                <p><strong>10:30AM</strong></p>
+                                <p>Keynote:</p>
+                                <p><strong>Sean Strawbridge, CEO, Port of Corpus Christi</strong></p>
+                                <br>
+                                <p>Sean Strawbridge has over 25 years of experience in the global transportation, trade and energy sectors in both public administration and the private sector. Strawbridge has held executive leadership positions in such world-class organizations as the Port of Long Beach, Ports America Group, Oxbow Energy, and Sea-Land Service, in fiancé, corporate development, operations and capital structuring. In his role as CEO of the Port of Corpus Christi, Strawbridge focuses his attentions on capital placement, organizational alignment and culture, and strategic execution. Currently the Port of Corpus Christi is the third largest port in the nation in revenue tonnage and the second largest port in Texas behind the Port of Houston.</p>
                           </div>
                       </div>
 
@@ -634,7 +645,7 @@
                               <p>In this panel we bring people together from throughout the world to highlight the visionary technology applications that will change our world - and that offer immediate opportunities to project developers, and business executives.</p>
                             <br>
                             <p>Panelists:</p>
-                            <p><strong>Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</strong></p>
+                            <p><strong><a class="schedule-link" href="https://www.gvip.io/expertise/4103">Jennifer Schmitz</a>, Founder and CEO, Lattice Industries, Inc.</strong></p>
                             <p><strong>Jeffrey DeCoux, Chairman, Autonomy Institute</strong></p>
                             <p><strong>Tim Sylvester, Founder, Integrated Roadways</strong></p>
                           
