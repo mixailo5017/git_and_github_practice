@@ -74,7 +74,7 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Speakers Section =======
+    
     <section id="speakers">
       <div class="container" data-aos="fade-up">
         <div class="section-header">
@@ -85,7 +85,7 @@
         <div class="row">
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid w-100">
               <div class="details">
                 <h3><a href="#schedule">K.N. Gunalan</a></h3>
                 <p>Senior Vice President, Alternative Delivery, Americas, AECOM</p>
@@ -96,9 +96,10 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid w-100">
               <div class="details">
                 <h3><a href="#schedule">Roger Bohnert</a></h3>
                 <p>Director of Outreach and Project Development, Build America Bureau, U.S. Department of Transportation</p>
@@ -108,9 +109,10 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/jen.jpg" alt="Speaker 4" class="img-fluid w-100">
               <div class="details">
                 <h3><a href="#schedule">Jennifer Schmitz</a></h3>
                 <p>Founder & CEO, Lattice Industries Inc.</p>
@@ -120,9 +122,10 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid w-100">
               <div class="details">
                 <h3><a href="#schedule">Francis Brooke</a></h3>
                 <p>Deputy Director, National Economic Council</p>
@@ -131,9 +134,10 @@
               </div>
             </div>
           </div>
+
           <div class="col-lg-4 col-md-6">
             <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid w-100">
               <div class="details">
                 <h3><a href="#schedule">David Penna</a></h3>
                 <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</p>
@@ -143,9 +147,10 @@
               </div>
             </div>
           </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Mike Johnson</a></h3>
                         <p>Senior Vice President, Infrastructure Market & Strategy, Kiewit</p>
@@ -155,9 +160,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Ian Rainey</a></h3>
                         <p>Senior Vice President, Northeast Maglev</p>
@@ -167,9 +173,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Norman F. Anderson</a></h3>
                         <p>CG/LA Infrastructure</p>
@@ -180,9 +187,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/16.jpg" alt="Speaker 2" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/16.jpg" alt="Speaker 2" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Pierce Homer</a></h3>
                         <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
@@ -191,9 +199,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 2" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 2" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Gov. Jim Justice</a></h3>
                         <p>Governor, West Virginia</p>
@@ -202,9 +211,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Robert Cardillo</a></h3>
                         <p>Chief Strategist, Theia</p>
@@ -214,9 +224,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/14.jpg" alt="Speaker 2" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/14.jpg" alt="Speaker 2" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Former Rep. Bill Shuster</a></h3>
                         <p>Former Representative for Pennsylvania’s 9th District</p>
@@ -225,9 +236,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
                 <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg" alt="Speaker 2" class="img-fluid">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg" alt="Speaker 2" class="img-fluid w-100">
                     <div class="details">
                         <h3><a href="#schedule">Courtney Degener</a></h3>
                         <p>Vice President, Communications & External Relations, Cadiz</p>
@@ -236,9 +248,12 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15.jpg" alt="Speaker 2" class="img-fluid">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                  <div>
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15_new.jpg" style="object-fit:cover" alt="Speaker 2" class="img-fluid w-100">
+                    </div>
                     <div class="details">
                         <h3><a href="#schedule">William T. Nolan</a></h3>
                         <p>Managing Member and President at Infra-Bk, LLC</p>
@@ -248,10 +263,150 @@
                     </div>
                 </div>
             </div>
-        </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Al-Wer_Issa_MWI.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Issa Al-Wer</a></h3>
+                        <p>Project Manager, Ministry of Water and Irrigation (MWI)</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/issa-al-wer-87964a71/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">  
+               
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Engler_Gabriela_Sao-Paolo.jpeg " alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Gabriela Engler</a></h3>
+                        <p>Executive Secretary, Sao Paulo's State Government</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/gabriela-m-engler-pinto-08897653/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Butler_Mark_Windsor-Detroit.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Mark Butler</a></h3>
+                        <p>Director of Communications, Windsor Detroit Bridge Authority</p>
+                        <div class="social"> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Zinder_Ramiro_PPP.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Ramiro Zinder</a></h3>
+                        <p>PPP Executive Secretary, SCPAR TEAM (SANTA CATARINA PPP UNIT)</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Emond_Charles_CDPQ.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Charles Emond</a></h3>
+                        <p>CEO, CDPQ Global(invited)</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Cane_Isabel_OECD.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Isabel Cane</a></h3>
+                        <p>Head of Trust in Business initiative, Directorate for Financial and Enterprise Affairs, Organisation for Economic Cooperation and Development (OECD)</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/isabel-cane-61716832/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Thorne_Karen_USGS.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Karen Thorne</a></h3>
+                        <p>Principal Investigator, USGS</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Firzli_Nicolas_WPC.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Nicolas Firzli</a></h3>
+                        <p>Director General, World Pensions Council</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/m-nicolas-j-firzli-ll-m-1a4a3b/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Levy_Joaquim_Safra-Bank.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Joaquim Levy</a></h3>
+                        <p>Chief Economist, Safra bank and former Minister of Finance, Brazil</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Gluski_Andres_AES.png" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Andrés Gluski</a></h3>
+                        <p>CEO, AES Corporation</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/agluski/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Hill_Jeff_BCG.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Jeff Hill</a></h3>
+                        <p> Senior Managing Director, BCG (invited)</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/jeff-hill-18b507/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
       </div>
 
-    </section> End Speakers Section -->
+    </section> 
+    <!-- End Speakers Section --> 
 
 
 
@@ -297,7 +452,12 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4> 
+                              <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4>
+                              <br>
+                              <p>Keynote:</p>
+                              <p><strong>Parag Khanna, Founder & Managing Partner, FutureMap</strong></p>
+                              <br>
+                              <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
                               <br/>
                               <p>Project Presentations:</p>
                               <p><strong>Sinma Deepwater Port</strong>(Myanmar)</p>
@@ -323,14 +483,17 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Bom Dia Brasil - Top 5 Brazilian Projects Live!</h4> 
+                              <h4>Bom Dia Brasil - Top 5 Brazilian Projects Live!</h4>
+                              <br>
+                              <p>Keynote:</p> 
+                              <p><strong>Roberto Escoto, Manager, Investment Department, APEX</strong></p>
                               <br/>
                               <p>Project Presentations:</p>
-                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais</strong></p>
-                              <p><strong>Alcantara Port Terminal </strong></p>
-                              <p><strong>Metropolitan Integrated Transit System, Florianopolis </strong></p>
-                              <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong></p>
-                              <p><strong>Road Concession - State Coastline Lot A, Sao Paulo </strong></p>
+                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais</strong>(Brazil)</p>
+                              <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
+                              <p><strong>Metropolitan Integrated Transit System, Florianopolis </strong>(Brazil)</p>
+                              <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong>(Brazil)</p>
+                              <p><strong>Road Concession - State Coastline Lot A, Sao Paulo </strong>(Brazil) </p>
                           </div>
 
                           <div class="col-md-2">
@@ -358,6 +521,9 @@
                           </div>
                           <div class="col-md-10">
                               <h4>Top 5 NA Strategic Projects - Projects that are Critical to Country Growth</h4>
+                              <br>
+                              <p>Keynote:</p>
+                              <p><strong>Keith Krach, Under Secretary for Economic Growth, Energy, and the Environment </strong></p>
                               <br/>
                               <p>Project Presentations:</p>
                               <p><strong>Great Lakes Transportation Basin </strong>(United States)</p>
@@ -386,8 +552,11 @@
                           <div class="col-md-10">
                               <h4>"Innovation & Infrastructure - The Role of the Global CEO"</h4>
                               <br>
-                              <p>Panelist:</p>
+                              <p>Keynote:</p>
                               <p><strong>Andrés Gluski, CEO, AES Corporation</strong></p>
+                              <br/>
+                                <p>Andrés Gluski has served as President and CEO since 2011, after serving as COO for five years. During his tenure as President and CEO, Andrés has led AES through a dramatic transformation by focusing on simplification, risk improvement and innovation. He has led the company through a $5 billion divestiture program, increased the credit rating by multiple notches and initiated a quarterly dividend, which has grown at an 8% annual rate. Andrés has also overseen the largest construction program in AES’ history, with more than 5,000 MW of new power generation completed. Under his leadership, AES has become a world leader in implementing new clean technologies, including energy storage, wind, solar and LNG. 
+                                </p>
                           </div>
                       </div>
 
@@ -410,8 +579,10 @@
                               <h4>Panel Discussion - The Global Economy, 2020 - 2023</h4>
                               <br>
                               <p>Panelists:</p>
-                              <p><strong>Jeff Hill, Senior Managing Director, BCG </strong>(invited)</p>
-                              <p><strong>Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil </strong>(invited)</p>
+                              <p><strong>Jeff Hill, Senior Managing Director, BCG </strong></p>
+                              <p><strong>Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil </strong></p>
+                              <p><strong>Perez Fortea, CEO, Globalvia</strong></p>
+                              <p><strong>Jim Pass, Senior Managing Director, Guggenheim Partners</strong></p>
                           </div>
                       </div>
 
@@ -461,7 +632,13 @@
                           <div class="col-md-10">
                               <h4>Critical Technologies Driving Opportunity and Growth:</h4>
                               <p>In this panel we bring people together from throughout the world to highlight the visionary technology applications that will change our world - and that offer immediate opportunities to project developers, and business executives.</p>
-                          </div>
+                            <br>
+                            <p>Panelists:</p>
+                            <p><strong>Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</strong></p>
+                            <p><strong>Jeffrey DeCoux, Chairman, Autonomy Institute</strong></p>
+                            <p><strong>Tim Sylvester, Founder, Integrated Roadways</strong></p>
+                          
+                            </div>
                       </div>
 
                       <div class="row schedule-item">
@@ -484,6 +661,7 @@
                               <br>
                               <p>Moderator:</p>
                               <p><strong>Nicolas Firzli, Director General, World Pensions Council</strong></p>
+                              <p><strong>Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</strong></p>
                           </div>
                       </div>
 
@@ -510,6 +688,7 @@
                               <br>
                               <p>Panelist:</p>
                               <p><strong>Mark Smith, NioCorp Developments Ltd.</strong></p>
+                               <p><strong>CBMM</strong></p>
                               <br>
                               <p>Special Case Study:</p>
                               <p><strong>The Niobium Elk Creek Project in Nebraska</strong></p>
@@ -532,11 +711,17 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>The Blue Dot Network - Global Cooperation in Infrastructure Investment:</h4>
-                              <p>The BDN is an initiative of Australia, Japan and the U.S., and headquartered at the OECD in Paris. Isabel Cane of the OECD in Paris will lead this discussion, along with a parallel workshop, on creating a long-term and effective market-based global infrastructure initiative.</p>
+                              <h4>The Creation of a National Infrastructure Bank:</h4>
+                              <br>
+                              <p>Discussion topics include: </p>
+                              <p>1) Securing an adequately-sized source of long-term financing to support infrastructure (that is politically sellable because it complements existing legislation and does not increase the Federal debt)</p>
+                              <p>2) Emphasizing information, efficiencies, and latest technologies to ensure proper design and management of projects.</p>
+                              <p>3) And Re-booting the American economy by creating lots of great-paying jobs, while raising economic growth and productivity.</p>
                               <br>
                               <p>Panelist</p>
-                              <p><strong>Isabel Cane, OECD</strong></p>
+                              <p><strong>BNDES</strong></p>
+                              <p><strong>William T. Nolan, President, Infra-Bk, LLC</strong></p>
+                              <p><strong>Annie Ropar, CAO and CFO, Canada Infrastructure Bank</strong></p>
                           </div>
                       </div>
 
@@ -580,8 +765,10 @@
                               <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
                               <p>The focus is on identifying investment targets and strategies for this critical sector.</p>
                               <br/>
-                              <p>Moderator:  </p>
-                              <p><strong>CDPQ Global CEO</strong>(invited)</p>
+                              <p>Panelists:  </p>
+                              <p><strong>Charles Emond, CEO, CDPQ</strong></p>
+                              <p><strong>Nilton Seuaciuc, President, Vita Ambiental, Brazil </strong>(Performance Contracts)</p>
+                              <p><strong>Xylem</strong></p>
                           </div>
                       </div>
 
@@ -894,7 +1081,7 @@
                       <h2>Track C: Strategic Workshops</h2>
                       <div class="row schedule-item">
                           <div class="col-md-2">
-                              <time>9:00 AM EST</time>
+                              <time>10:00 AM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -910,27 +1097,6 @@
                           <div class="col-md-10">
                               <h4>Benefits Index Creation:</h4>
                               <p>For citizens around the world to invest in infrastructure it is critical to select projects according to the critical results of those projects, and then to measure and manage those results throughout the life of the project.  These results should be defined in terms of benefits for citizens:  health (clean water, clean air), mobility, jobs, business creation and opportunities.  What are some of the other key project results, and how can we create an effective benefits index?</p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>10:00 AM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>Blue Dot Network:</h4>
-                              <p>An innovative initiative of the international community, including leadership from Australia, Japan and the U.S., and housed in Paris at the OECD this new initiative is focused on market-based infrastructure development.  A special workshop will be held by the BDN exclusively for project developers and public officials from around the world.</p>
                           </div>
                       </div>
 
@@ -1013,12 +1179,12 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>"Building Strong National Infrastructure Brands and Communicating Project Benefits:</h4>
+                              <h4>Building Strong National Infrastructure Brands and Communicating Project Benefits:</h4>
                               <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instil public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'. </p>
                               <br>
-                              <p>Discussion Leaders:</p>
+                              <p>Presenters:</p>
                               <p><strong>Mark Freedman, Partner, Dalberg Advisors</strong></p>
-                              <p><strong>Representative from Oracle</strong></p>
+                              <p><strong>Oracle</strong></p>
                           </div>
                       </div>
 
