@@ -37,8 +37,8 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="virtualLF">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#speakers">Speakers</a></li>
           <li><a href="#schedule">Agenda</a></li>
+          <li><a href="#speakers">Speakers</a></li>
           <li><a href="#contact">Contact</a></li>
             <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
             <li><a href="https://www.cg-la.com/store?category=GViP">Custom Services</a></li>
@@ -80,339 +80,6 @@
     </section><!-- End About Section -->
 
     
-    <section id="speakers">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Event Speakers</h2>
-          <p>Here are some of our speakers</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid w-100">
-              <div class="details">
-                <h3><a href="#schedule">K.N. Gunalan</a></h3>
-                <p>Senior Vice President, Alternative Delivery, Americas, AECOM</p>
-                <div class="social">
-                  <a href="https://twitter.com/gunalankn?s=20"><i class="fa fa-twitter"></i></a>
-                  <a href="https://www.linkedin.com/in/gunalankn/"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid w-100">
-              <div class="details">
-                <h3><a href="#schedule">Roger Bohnert</a></h3>
-                <p>Director of Outreach and Project Development, Build America Bureau, U.S. Department of Transportation</p>
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/roger-bohnert-2925a6a/"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/jen.jpg" alt="Speaker 4" class="img-fluid w-100">
-              <div class="details">
-                <h3><a href="#schedule">Jennifer Schmitz</a></h3>
-                <p>Founder & CEO, Lattice Industries Inc.</p>
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/jennifer-schmitz-62767362/"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid w-100">
-              <div class="details">
-                <h3><a href="#schedule">Francis Brooke</a></h3>
-                <p>Deputy Director, National Economic Council</p>
-                  <div class="social">
-                  </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid w-100">
-              <div class="details">
-                <h3><a href="#schedule">David Penna</a></h3>
-                <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</p>
-                <div class="social">
-                  <a href="https://www.linkedin.com/in/david-penna-053005134/"><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Mike Johnson</a></h3>
-                        <p>Senior Vice President, Infrastructure Market & Strategy, Kiewit</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/mike-johnson-8092319/"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Ian Rainey</a></h3>
-                        <p>Senior Vice President, Northeast Maglev</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/ian-rainey-465991125/"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Norman F. Anderson</a></h3>
-                        <p>CG/LA Infrastructure</p>
-                        <div class="social">
-                            <a href="https://twitter.com/anderson_norman?s=20"><i class="fa fa-twitter"></i></a>
-                            <a href="https://www.linkedin.com/in/norman-f-anderson-b4a9984/"><i class="fa fa-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/16.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Pierce Homer</a></h3>
-                        <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Gov. Jim Justice</a></h3>
-                        <p>Governor, West Virginia</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Robert Cardillo</a></h3>
-                        <p>Chief Strategist, Theia</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/robert-cardillo/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/14.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Former Rep. Bill Shuster</a></h3>
-                        <p>Former Representative for Pennsylvania’s 9th District</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Courtney Degener</a></h3>
-                        <p>Vice President, Communications & External Relations, Cadiz</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                  <div>
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15_new.jpg" style="object-fit:cover" alt="Speaker 2" class="img-fluid w-100">
-                    </div>
-                    <div class="details">
-                        <h3><a href="#schedule">William T. Nolan</a></h3>
-                        <p>Managing Member and President at Infra-Bk, LLC</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/william-t-nolan-b8b111b/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Al-Wer_Issa_MWI.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Issa Al-Wer</a></h3>
-                        <p>Project Manager, Ministry of Water and Irrigation (MWI)</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/issa-al-wer-87964a71/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">  
-               
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Engler_Gabriela_Sao-Paolo.jpeg " alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Gabriela Engler</a></h3>
-                        <p>Executive Secretary, Sao Paulo's State Government</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/gabriela-m-engler-pinto-08897653/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Butler_Mark_Windsor-Detroit.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Mark Butler</a></h3>
-                        <p>Director of Communications, Windsor Detroit Bridge Authority</p>
-                        <div class="social"> 
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Zinder_Ramiro_PPP.jpeg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Ramiro Zinder</a></h3>
-                        <p>PPP Executive Secretary, SCPAR TEAM (SANTA CATARINA PPP UNIT)</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Emond_Charles_CDPQ.jpeg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Charles Emond</a></h3>
-                        <p>CEO, CDPQ Global(invited)</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Cane_Isabel_OECD.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Isabel Cane</a></h3>
-                        <p>Head of Trust in Business initiative, Directorate for Financial and Enterprise Affairs, Organisation for Economic Cooperation and Development (OECD)</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/isabel-cane-61716832/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Thorne_Karen_USGS.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Karen Thorne</a></h3>
-                        <p>Principal Investigator, USGS</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Firzli_Nicolas_WPC.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Nicolas Firzli</a></h3>
-                        <p>Director General, World Pensions Council</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/m-nicolas-j-firzli-ll-m-1a4a3b/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Levy_Joaquim_Safra-Bank.jpg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Joaquim Levy</a></h3>
-                        <p>Chief Economist, Safra bank and former Minister of Finance, Brazil</p>
-                        <div class="social">
-                        </div>
-                    </div>
-                </div>
-            </div> 
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Gluski_Andres_AES.png" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Andrés Gluski</a></h3>
-                        <p>CEO, AES Corporation</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/agluski/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6">
-                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
-                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Hill_Jeff_BCG.jpeg" alt="Speaker 2" class="img-fluid w-100">
-                    <div class="details">
-                        <h3><a href="#schedule">Jeff Hill</a></h3>
-                        <p> Senior Managing Director, BCG (invited)</p>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/jeff-hill-18b507/"><i class="fa fa-linkedin"></i> </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-      </div>
-
-    </section> 
-    <!-- End Speakers Section --> 
-
 
 
       <!-- ======= Schedule Section ======= -->
@@ -1251,7 +918,341 @@
 
           </div>
 
-      </section><!-- End Schedule Section -->
+      </section><!-- End Schedule Section -->    
+
+
+    <section id="speakers">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2>Event Speakers</h2>
+          <p>Here are some of our speakers</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid w-100">
+              <div class="details">
+                <h3><a href="#schedule">K.N. Gunalan</a></h3>
+                <p>Senior Vice President, Alternative Delivery, Americas, AECOM</p>
+                <div class="social">
+                  <a href="https://twitter.com/gunalankn?s=20"><i class="fa fa-twitter"></i></a>
+                  <a href="https://www.linkedin.com/in/gunalankn/"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid w-100">
+              <div class="details">
+                <h3><a href="#schedule">Roger Bohnert</a></h3>
+                <p>Director of Outreach and Project Development, Build America Bureau, U.S. Department of Transportation</p>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/roger-bohnert-2925a6a/"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/jen.jpg" alt="Speaker 4" class="img-fluid w-100">
+              <div class="details">
+                <h3><a href="#schedule">Jennifer Schmitz</a></h3>
+                <p>Founder & CEO, Lattice Industries Inc.</p>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/jennifer-schmitz-62767362/"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid w-100">
+              <div class="details">
+                <h3><a href="#schedule">Francis Brooke</a></h3>
+                <p>Deputy Director, National Economic Council</p>
+                  <div class="social">
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+              <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid w-100">
+              <div class="details">
+                <h3><a href="#schedule">David Penna</a></h3>
+                <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</p>
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/david-penna-053005134/"><i class="fa fa-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Mike Johnson</a></h3>
+                        <p>Senior Vice President, Infrastructure Market & Strategy, Kiewit</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/mike-johnson-8092319/"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Ian Rainey</a></h3>
+                        <p>Senior Vice President, Northeast Maglev</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/ian-rainey-465991125/"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Norman F. Anderson</a></h3>
+                        <p>CG/LA Infrastructure</p>
+                        <div class="social">
+                            <a href="https://twitter.com/anderson_norman?s=20"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/norman-f-anderson-b4a9984/"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/16.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Pierce Homer</a></h3>
+                        <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Gov. Jim Justice</a></h3>
+                        <p>Governor, West Virginia</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Robert Cardillo</a></h3>
+                        <p>Chief Strategist, Theia</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/robert-cardillo/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/14.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Former Rep. Bill Shuster</a></h3>
+                        <p>Former Representative for Pennsylvania’s 9th District</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Courtney Degener</a></h3>
+                        <p>Vice President, Communications & External Relations, Cadiz</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                  <div>
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15_new.jpg" style="object-fit:cover" alt="Speaker 2" class="img-fluid w-100">
+                    </div>
+                    <div class="details">
+                        <h3><a href="#schedule">William T. Nolan</a></h3>
+                        <p>Managing Member and President at Infra-Bk, LLC</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/william-t-nolan-b8b111b/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Al-Wer_Issa_MWI.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Issa Al-Wer</a></h3>
+                        <p>Project Manager, Ministry of Water and Irrigation (MWI)</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/issa-al-wer-87964a71/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">  
+               
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Engler_Gabriela_Sao-Paolo.jpeg " alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Gabriela Engler</a></h3>
+                        <p>Executive Secretary, Sao Paulo's State Government</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/gabriela-m-engler-pinto-08897653/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Butler_Mark_Windsor-Detroit.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Mark Butler</a></h3>
+                        <p>Director of Communications, Windsor Detroit Bridge Authority</p>
+                        <div class="social"> 
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Zinder_Ramiro_PPP.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Ramiro Zinder</a></h3>
+                        <p>PPP Executive Secretary, SCPAR TEAM (SANTA CATARINA PPP UNIT)</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Emond_Charles_CDPQ.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Charles Emond</a></h3>
+                        <p>CEO, CDPQ Global(invited)</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Cane_Isabel_OECD.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Isabel Cane</a></h3>
+                        <p>Head of Trust in Business initiative, Directorate for Financial and Enterprise Affairs, Organisation for Economic Cooperation and Development (OECD)</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/isabel-cane-61716832/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Thorne_Karen_USGS.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Karen Thorne</a></h3>
+                        <p>Principal Investigator, USGS</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Firzli_Nicolas_WPC.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Nicolas Firzli</a></h3>
+                        <p>Director General, World Pensions Council</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/m-nicolas-j-firzli-ll-m-1a4a3b/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Levy_Joaquim_Safra-Bank.jpg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Joaquim Levy</a></h3>
+                        <p>Chief Economist, Safra bank and former Minister of Finance, Brazil</p>
+                        <div class="social">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Gluski_Andres_AES.png" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Andrés Gluski</a></h3>
+                        <p>CEO, AES Corporation</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/agluski/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker" data-aos="fade-up" data-aos-delay="200">   
+                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Hill_Jeff_BCG.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                    <div class="details">
+                        <h3><a href="#schedule">Jeff Hill</a></h3>
+                        <p> Senior Managing Director, BCG (invited)</p>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/jeff-hill-18b507/"><i class="fa fa-linkedin"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+      </div>
+
+    </section> 
+    <!-- End Speakers Section --> 
 
       <!-- ======= Subscribe Section ======= -->
       <section id="subscribe">
