@@ -68,6 +68,66 @@
 
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
+    
+<!--10 Grid column -->
+<div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X2n-vGVBnWo"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Clara.jpg" alt="video"
+                data-toggle="modal" data-target="#modal10"></a>
+        <h3>The CLARA Plan: Maximizing the Value of the Sydney-Melbourne Corridor with HSR and Smart Cities</h3>
+       <p>Nick Cleary, Chairman and CEO, Consolidated Land and Rail Australia (CLARA), and Norman Anderson, President, and CEO, CG/LA Infrastructure: In conversation.</p> 
+    </div>
+    <!-- Grid column -->
+
+
+
+
+ <!--9 Grid column -->
+ <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r2du_jL2qQs"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/prang.jpg" alt="video"
+                data-toggle="modal" data-target="#modal9"></a>
+        <h3>Looking to Asia: Recovery, Growth, and What Lies Ahead</h3>
+       <p>Dr. Parag Khanna, Managing Partner, FutureMaps, and Norman Anderson, President and CEO, CG/LA Infrastructure</p> 
+    </div>
+    <!-- Grid column -->
+
 
     <!--8 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
@@ -96,9 +156,14 @@
        <p>David Zimmer, NJIB Executive Director, and CG/LA CEO Norman Anderson explore the strength of state-level I-Banks and how to leverage their full potential.</p> 
     </div>
     <!-- Grid column -->
+</div>
 
-    <!--7 Grid column -->
-      <div class="col-lg-4 col-md-12 mb-4">
+
+
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
+ <!--7 Grid column -->
+ <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -158,11 +223,6 @@
     <!-- Grid column -->
 
    
-</div>
-<!-- Grid row -->
-
-<!-- Grid row -->
-<div style="padding-right: 2%; padding-left: 2%" class="row">
 
  <!--5 Grid column -->
  <div class="col-lg-4 col-md-6 mb-4">
@@ -189,10 +249,19 @@
         <p>Roger Bohnert, Director of Business Outreach, Build America Bureau, U.S. DOT</p>
 
     </div>
+
     <!-- Grid column -->
 
     <!--4 Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
+  
+</div>
+
+
+
+
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
+<div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -251,12 +320,6 @@
     </div>
     <!-- Grid column -->
  
-</div>
-<!-- Grid row -->
-
-<!-- Grid row -->
-<div style="padding-right: 2%; padding-left: 2%" class="row">
-
  <!--2 Grid column -->
  <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
@@ -285,8 +348,13 @@
     </div>
     <!-- Grid column -->
 
- <!--1 Grid column -->
- <div class="col-lg-4 col-md-12 mb-4">
+ 
+</div>
+
+<div style="padding-right: 2%; padding-left: 2%" class="row">
+
+<!--1 Grid column -->
+<div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
@@ -318,7 +386,11 @@
     <!-- Grid column -->
   
 </div>
-<!-- Grid row -->
+
+
+
+
+
 
 
 <script>
