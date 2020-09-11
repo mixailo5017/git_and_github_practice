@@ -782,26 +782,7 @@
                     <!-- Start Track C -->
                     <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
                         <h2>Track C: Strategic Workshops</h2>
-                        <div class="row schedule-item">
-                            <div class="col-md-2">
-                                <time>10:00 AM EST</time>
-                                <form method="POST" action="#">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>Benefits Index Creation:</h4>
-                                <p>For citizens around the world to invest in infrastructure it is critical to select projects according to the critical results of those projects, and then to measure and manage those results throughout the life of the project. These results should be defined in terms of benefits for citizens: health (clean water, clean air), mobility, jobs, business creation and opportunities. What are some of the other key project results, and how can we create an effective benefits index?</p>
-                            </div>
-                        </div>
+                        
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
@@ -824,48 +805,7 @@
                             </div>
                         </div>
 
-                        <div class="row schedule-item">
-                            <div class="col-md-2">
-                                <time>1:00 PM EST</time>
-                                <form method="POST" action="#">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>Transformative Technologies:</h4>
-                                <p>The world is facing a tidal wave of new and transformative technologies, and we will both present and make sense of these technologies to emerging market, and developed country, project developers. Technologies include: wireless vehicle charging, 5G driving everything, 3D printing, blockchain, AI, Big Data, electric and autonomous vehicles and new ways of designing and managing projects.</p>
-                            </div>
-                        </div>
-
-                        <div class="row schedule-item">
-                            <div class="col-md-2">
-                                <time>2:00 PM EST</time>
-                                <form method="POST" action="#">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>Strategic Minerals Production:</h4>
-                                <p>Many countries have realized that the dependence on other countries for critical needs, from rare earth minerals to PPE, is something that must be addressed. Under this theme we will highlight how the U.S. and the EU are bringing their critical supply chains home, with case studies and policy recommendations.</p>
-                            </div>
-                        </div>
-
+                      
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>3:00 PM EST</time>
@@ -907,12 +847,37 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Clean Water & Wastewater Infrastructure Investment:</h4>
-                                <p>The great forgotten infrastructure, in developed and emerging markets alike is the water and wastewater sector. To drive economic recovery it is critical that resources be directed at this sector, and not just at economic sectors that generate a high face value ROI. Critically, smart infrastructure - and Xylem's smart water technology - are poised to address this issue</p>
-                            </div>
+                                <h4>US Deal Team Discussion:</h4>
+
                         </div>
 
                     </div>
+
+
+                    <div class="row schedule-item">
+                            <div class="col-md-2">
+                                <time>6:00 PM EST</time>
+                                <form method="POST" action="#">
+                                    <div class="form-row">
+                                        <div class="col-auto">
+                                            <button type="submit">Join Session</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="speaker">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h4>Benefits Index Creation:</h4>
+                                <p>For citizens around the world to invest in infrastructure it is critical to select projects according to the critical results of those projects, and then to measure and manage those results throughout the life of the project.  These results should be defined in terms of benefits for citizens:  health (clean water, clean air), mobility, jobs, business creation and opportunities.  What are some of the other key project results, and how can we create an effective benefits index?
+                                </p>
+
+                        </div>
+
+                    </div>
+
                     <!-- End of Track C-->
 
                 </div>
