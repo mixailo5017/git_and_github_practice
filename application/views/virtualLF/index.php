@@ -132,10 +132,10 @@
                               <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
                               <br/>
                               <p>Project Presentations:</p>
-                              <p><strong>Sinma Deepwater Port</strong>(Myanmar)</p>
-                              <p><strong>Ali Jinnah, Mazar 200 Bed Hospital, and other Healthcare Projects </strong>(Afghanistan)</p>
-                              <p><strong>The Clara Plan </strong>(Australia)</p>
-                              <p><strong>New Noida International Airport at Jewar - Phase I </strong>(India)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah, Mazar 200 Bed Hospital</a>, and other Healthcare Projects </strong>(Afghanistan)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a></strong>(Australia)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/new-noida-international-airport-at-jewar-phase-i" class="schedule-link">New Noida International Airport at Jewar - Phase I</a></strong>(India)</p>
                               <p><strong>Additional projects in India and Indonesia</strong></p>
                           </div>
                       </div>
@@ -162,10 +162,10 @@
                               <p><strong>Roberto Escoto, Manager, Investment Department, APEX</strong></p>
                               <br/>
                               <p>Project Presentations:</p>
-                                <p><strong>Pampulha Airport Concession</strong>(Brazil)</p>
-                              <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
-                              <p><strong>Metropolitan Integrated Transit System, Florianopolis </strong>(Brazil)</p>
-                              <p><strong>Road Concession - State Coastline Lot A, Sao Paulo </strong>(Brazil) </p>
+                                <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/alcantara-port-terminal-tpa" class="schedule-link">Alcantara Port Terminal</a></strong>(TPA) (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/metropolitan-integrated-transit-system" class="schedule-link">Metropolitan Integrated Transit System, Florianopolis</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo</a></strong>(Brazil) </p>
                           </div>
 
                           <div class="col-md-2">
@@ -199,9 +199,9 @@
                                 <p><strong>Keith Krach, Under Secretary for Economic Growth, Energy, and the Environment </strong></p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong>Great Lakes Transportation Basin</strong>(United States)</p>
-                                <p><strong>Calcasieu River Bridge </strong> (United States)</p>
-                                <p><strong>Ontario Line Subway</strong>(Canada)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin</a></strong>(United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a></strong> (United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
                                 
                           </div>
                       </div>
@@ -520,10 +520,10 @@
                               <p>Projects that are critical to rejuvinating the region. </p>
                               <br>
                               <p>Project Presentations:</p>
-                                <p><strong>Solidarity Transport Hub</strong>(Poland)</p>
-                                <p><strong>Tunnel Euralpin Lyon Turin</strong>(France, Italy)</p>
-                                <p><strong>Fehmarn Belt Fixed Link </strong>(Germany, Denmark)</p>
-                                <p><strong>Halkalı-Kapıkule Railway</strong>(Turkey)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a></strong>(Poland)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/tunnel-euralpin-lyon-turin-telt" class="schedule-link">Tunnel Euralpin Lyon Turin</a></strong>(France, Italy)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Germany, Denmark)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/halkal-kapkule-high-speed-rail-route" class="schedule-link">Halkalı-Kapıkule Railway</a></strong>(Turkey)</p>
                           </div>
                         </div>
 
@@ -547,11 +547,11 @@
                               <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Aqaba – Amman Water Desalination & Conveyance Project (AAWDC) </strong>(Jordan)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project (AAWDC)</a></strong>(Jordan)</p>
                                 <p><strong>Hydropower Power Plants Revitalization Project</strong>(Puerto Rico)</p>
-                                <p><strong>Oceanus Project </strong>(Chile)</p>
-                                <p><strong>Cadiz Water Conveyance</strong>(United States)</p>
-                                <p><strong>The Lesotho Highlands Water Project </strong>(Lesotho)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/oceanus-chile" class="schedule-link">Oceanus Project</a></strong>(Chile)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/cadiz-valley-water" class="schedule-link">Cadiz Water Conveyance</a></strong>(United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/lesotho-highlands-water-project" class="schedule-link">The Lesotho Highlands Water Project</a></strong>(Lesotho)</p>
                           </div>
                       </div>
 
@@ -575,10 +575,10 @@
                               <p>Mobility is one of the key values for infrastructure investment, and we present some of the best global opportunities for infrastructure project development.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Concession of Belo Horizonte's Bus Terminal </strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a></strong>(Brazil)</p>
                               <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong> (Brazil)</p>
-                             <p><strong>Ferropista Railway </strong>(Colombia)</p>
-                             <p><strong>Rail Baltica </strong>(Estonia-Latvia-Lithuania)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a></strong>(Colombia)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="shcedule-link">Rail Baltica</a></strong>(Estonia-Latvia-Lithuania)</p>
                           </div>
                       </div>
 
@@ -602,8 +602,8 @@
                               <p>The largest single category of infrastructure investment, these projects are transforming the productive capacity of countries worldwide, and have enormous potential to drive economic recovery.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais </strong>(Brazil)</p>
-                            <p><strong>Gordie Howe International Bridge </strong>(Canada)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a></strong>(Brazil)</p>
+                            <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a></strong>(Canada)</p>
                             <p><strong>Aydin- Denizli and Nakkas-Basaksehir Highway Projects </strong>(Turkey)</p>
                           </div>
                       </div>
@@ -632,9 +632,9 @@
                               <p><strong>Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</strong></p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>ContraCosta Project</strong>(United States)</p>
-                              <p><strong>Ibirapuera Park Concession & Zoo and Botanical Garden Project </strong> (Brazil)</p>
-                              <p><strong>The Clara Smart Cities Project </strong>(Australia)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a></strong>(United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a></strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Smart Cities Project</a> </strong>(Australia)</p>
                           </div>
                       </div>
 
@@ -659,10 +659,10 @@
                               <br>
                               <p>Project Presentations:</p>
                              <p><strong>Port of Tangier Med </strong>(Morocco)</p>
-                             <p><strong>Port of Corpus Christi - Channel Improvement </strong>(United States) </p>
-                             <p><strong>HydroPort Wales </strong>(United Kingdom)</p>
-                             <p><strong>New Vasco da Gama Terminal, Port of Sines </strong>(Portugal)</p>
-                             <p><strong>Commerical Port and Cargo Train, Sinaloa State</strong> (Mexico)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/corpus-christi-ship-channel" class="schedule-link">Port of Corpus Christi - Channel Improvement</a></strong>(United States) </p>
+                             <p><strong><a href="https://www.gvip.io/projects/hydroport-wales" class="schedule-link">HydroPort Wales</a></strong>(United Kingdom)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/new-vasco-da-gama-terminal-port-of-sines" class="schedule-link">New Vasco da Gama Terminal, Port of Sines</a></strong>(Portugal)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/cargo-train-and-commercial-port-1" class="schedule-link">Commerical Port and Cargo Train, Sinaloa State</a></strong> (Mexico)</p>
                           </div>
                         </div>
 
@@ -740,10 +740,10 @@
                               <p>The pace of digitization in electricity is tremendous, from renewable energy, to storage, to new ‘behind the meter’ technologies.  </p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Tire Recycling Waste-to-Energy Plant </strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/tire-recycling-waste-to-energy-plant" class="schedule-link">Tire Recycling Waste-to-Energy Plant</a></strong> (Brazil)</p>
                               <p><strong>Battery Energy Storage System & Flexible Distributed Energy Units</strong>(Puerto Rico)</p>
                               <p><strong>The Clara Plan Hydrogen Project </strong>(Australia)</p>
-                              <p><strong>SeaOne Puerto Solo</strong>(United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/seaone-puerto-rico-fuel-supply" class="schedule-link">SeaOne Puerto Solo</a></strong>(United States)</p>
                           </div>
                       </div>
 
@@ -767,12 +767,12 @@
                               <p>Some of the most exciting projects in the world are intercity high speed rail projects, driving critical connections between cities like São Paulo and Campinas, Dallas and Houston, and Tokyo and Kyoto.  </p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>São Paulo Intercity Trains project </strong>(Brazil)</p>
-                              <p><strong>FIOL & FICO Railways</strong>(Brazil)</p>
-                              <p><strong>Maranhao Railway</strong>(Brazil)</p>
-                              <p><strong>Serra Gaúcha Regional Commuter Train </strong> (Brazil)</p>
-                              <p><strong>The Northeast Maglev</strong> (United States)</p>
-                              <p><strong>Mayan Train</strong>(Mexico)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/maranhao-railway" class="schedule-link">Maranhao Railway</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a></strong> (United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a></strong>(Mexico)</p>
                           </div>
                       </div>
 
