@@ -19,7 +19,7 @@
   <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style_updated.css" rel="stylesheet">
  
 
   <!-- =======================================================
@@ -84,7 +84,7 @@
 
       <!-- ======= Schedule Section ======= -->
       <section id="schedule" class="section-with-bg">
-          <div class="container" data-aos="fade-up">
+          <div class="container-fluid" data-aos="fade-up">
               <div class="section-header">
                   <h2>Agenda Preview</h2>
               </div>
@@ -132,9 +132,10 @@
                               <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
                               <br/>
                               <p>Project Presentations:</p>
-                              <p><strong>Sinma Deepwater Port</strong>(Myanmar)</p>
-                              <p><strong>Ali Jinnah, Mazar 200 Bed Hospital, and other Healthcare Projects </strong>(Afghanistan)</p>
-                              <p><strong>New Noida International Airport at Jewar - Phase I </strong>(India)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah, Mazar 200 Bed Hospital</a>, and other Healthcare Projects </strong>(Afghanistan)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a></strong>(Australia)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/new-noida-international-airport-at-jewar-phase-i" class="schedule-link">New Noida International Airport at Jewar - Phase I</a></strong>(India)</p>
                               <p><strong>Additional projects in India and Indonesia</strong></p>
                           </div>
                       </div>
@@ -161,11 +162,10 @@
                               <p><strong>Roberto Escoto, Manager, Investment Department, APEX</strong></p>
                               <br/>
                               <p>Project Presentations:</p>
-                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais</strong>(Brazil)</p>
-                              <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
-                              <p><strong>Metropolitan Integrated Transit System, Florianopolis </strong>(Brazil)</p>
-                              <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong>(Brazil)</p>
-                              <p><strong>Road Concession - State Coastline Lot A, Sao Paulo </strong>(Brazil) </p>
+                                <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/alcantara-port-terminal-tpa" class="schedule-link">Alcantara Port Terminal</a></strong>(TPA) (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/metropolitan-integrated-transit-system" class="schedule-link">Metropolitan Integrated Transit System, Florianopolis</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo</a></strong>(Brazil) </p>
                           </div>
 
                           <div class="col-md-2">
@@ -192,17 +192,17 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Top 5 NA Strategic Projects - Projects that are Critical to Country Growth</h4>
-                              <br>
-                              <p>Keynote:</p>
-                              <p><strong>Keith Krach, Under Secretary for Economic Growth, Energy, and the Environment </strong></p>
-                              <br/>
-                              <p>Project Presentations:</p>
-                              <p><strong>Great Lakes Transportation Basin </strong>(United States)</p>
-                              <p><strong>The Northeast Maglev </strong>(United States)</p>
-                              <p><strong>Gordie Howe International Bridge</strong>(Canada)</p>
-                              <p><strong>Montreal Contrecœuer Container Terminal</strong>(Canada)</p>
-                              <p><strong>JFK Terminal One Redevelopment </strong>(United States) </p>
+                              <h4>Top North American Strategic Projects </h4>
+                                <p>Projects that are critical to country growth</p>
+                                <br>
+                                <p>Keynote:</p>
+                                <p><strong>Keith Krach, Under Secretary for Economic Growth, Energy, and the Environment </strong></p>
+                                <br>
+                                <p>Project Presentations:</p>
+                                <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin</a></strong>(United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a></strong> (United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
+                                
                           </div>
                       </div>
 
@@ -280,6 +280,29 @@
                               </div>
                           </div>
                           <div class="col-md-10">
+                              <h4>The Path Forward - U.S. Leadership and the Global Recovery</h4>
+                              <br>
+                              <p>Keynote:</p>
+                              <p><strong>Joseph Semsar, Deputy Under Secretary for International Trade, US Department of Commerce</strong></p>
+                          </div>
+                      </div>
+
+                      <div class="row schedule-item">
+                          <div class="col-md-2">
+                              <time>12:30 PM EST</time>
+                              <form method="POST" action="#">
+                                  <div class="form-row">
+                                      <div class="col-auto">
+                                          <button type="submit">Join Session</button>
+                                      </div>
+                                  </div>
+                              </form>
+                              <br>
+                              <div class="speaker">
+                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                              </div>
+                          </div>
+                          <div class="col-md-10">
                               <h4>Oracle Project of the Year Awards:</h4>
                               <p>Each year working with Oracle we identify and select the Best Global Projects.  This year the awards will be televised on GViP TV!</p>
                               <br>
@@ -312,8 +335,7 @@
                               <p>In this panel we bring people together from throughout the world to highlight the visionary technology applications that will change our world - and that offer immediate opportunities to project developers, and business executives.</p>
                             <br>
                             <p>Panelists:</p>
-                            <p><strong><a class="schedule-link" href="https://www.gvip.io/expertise/4103">Jennifer Schmitz</a>, Founder and CEO, Lattice Industries, Inc.</strong></p>
-                            <p><strong>Jeffrey DeCoux, Chairman, Autonomy Institute</strong></p>
+                            <p><strong>Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</strong></p>
                             <p><strong>Tim Sylvester, Founder, Integrated Roadways</strong></p>
                           
                             </div>
@@ -369,7 +391,7 @@
                                <p><strong>CBMM</strong></p>
                               <br>
                               <p>Special Case Study:</p>
-                              <p><strong>The Niobium Elk Creek Project in Nebraska</strong></p>
+                              <p><strong>The Niobium Elk Creek Project, Nebraska</strong></p>
                           </div>
                       </div>
 
@@ -466,10 +488,8 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Good Morning Australia - the Top 5 Australian Infrastructure Projects</h4>
-                              <br/>
-                              <p>Project Presentations:</p>
-                              <p><strong>The Clara Plan </strong>(Australia)</p>
+                              <h4>Real Opportunities, Bold Recovery - Leadership Discussion From Around the World</h4>
+                             
                           </div>
                       </div>
 
@@ -496,18 +516,14 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Ports & Logistics:</h4>
-                              <p>Leading Ports & Logistics projects globally, tremendous opportunities, and tremendous drivers of economic recovery and job creation.</p>
+                              <h4>Top European Strategic Projects</h4>
+                              <p>Projects that are critical to rejuvinating the region. </p>
                               <br>
                               <p>Project Presentations:</p>
-                                <p><strong>Montreal Contrecœuer Container Terminal</strong>(Canada)</p>
-                                <p><strong>Port of Tangier Med</strong>(Morocco)</p>
-                                <p><strong>Sinma Deepwater Port</strong>(Myanmar)</p>
-                                <p><strong>Port of Corpus Christi - Channel Improvement</strong>(United States) </p>
-                                <p><strong>Femarn Belt Link</strong></p>
-                                <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
-                                <p><strong>New Vasco da Gama Terminal, Port of Sines </strong>(Portugal)</p>
-                                <p><strong>Commerical Port and Cargo Train, Sinaloa State</strong>(Mexico)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a></strong>(Poland)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/tunnel-euralpin-lyon-turin-telt" class="schedule-link">Tunnel Euralpin Lyon Turin</a></strong>(France, Italy)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Germany, Denmark)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/halkal-kapkule-high-speed-rail-route" class="schedule-link">Halkalı-Kapıkule Railway</a></strong>(Turkey)</p>
                           </div>
                         </div>
 
@@ -531,9 +547,11 @@
                               <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Aqaba – Amman Water Desalination & Conveyance Project (AAWDC) </strong>(Jordan)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project (AAWDC)</a></strong>(Jordan)</p>
                                 <p><strong>Hydropower Power Plants Revitalization Project</strong>(Puerto Rico)</p>
-                                <p><strong>The Lesotho Highlands Water Project </strong>(Lesotho)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/oceanus-chile" class="schedule-link">Oceanus Project</a></strong>(Chile)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/cadiz-valley-water" class="schedule-link">Cadiz Water Conveyance</a></strong>(United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/lesotho-highlands-water-project" class="schedule-link">The Lesotho Highlands Water Project</a></strong>(Lesotho)</p>
                           </div>
                       </div>
 
@@ -557,9 +575,10 @@
                               <p>Mobility is one of the key values for infrastructure investment, and we present some of the best global opportunities for infrastructure project development.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Concession of Belo Horizonte's Bus Terminal </strong>(Brazil)</p>
-                              <p><strong>Ontario Line Subway</strong>(Canada)</p>
-                              <p><strong>Portal Bridge North</strong>(United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a></strong>(Brazil)</p>
+                              <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong> (Brazil)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a></strong>(Colombia)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="shcedule-link">Rail Baltica</a></strong>(Estonia-Latvia-Lithuania)</p>
                           </div>
                       </div>
 
@@ -583,10 +602,9 @@
                               <p>The largest single category of infrastructure investment, these projects are transforming the productive capacity of countries worldwide, and have enormous potential to drive economic recovery.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Road Concessions Program, Rodoanel Concession Program, Minas Gerais </strong>(Brazil)</p>
-                              <p><strong>Fehmarn Belt Fixed Link</strong>(Germany)</p>
-                              <p><strong>Tunnel Euralpin Lyon Turin</strong>(France, Italy)</p>
-                              <p><strong>Calcasieu River Bridge </strong>(United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a></strong>(Brazil)</p>
+                            <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a></strong>(Canada)</p>
+                            <p><strong>Aydin- Denizli and Nakkas-Basaksehir Highway Projects </strong>(Turkey)</p>
                           </div>
                       </div>
 
@@ -609,9 +627,14 @@
                               <h4>Smart Cities/Smart Infrastructure:</h4>
                               <p>In fact, all infrastructure going forward will be ‘smart,’ and the opportunity now is to create a strategy for commercializing data to both securitize investments, and pay for new investments.</p>
                               <br>
+                              <p>Keynote:</p>
+                              <p><strong>Jeffrey DeCoux, Chairman, Autonomy Institute  </strong></p>
+                              <p><strong>Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</strong></p>
+                              <br>
                               <p>Project Presentations:</p>
-                              <p><strong>ContraCosta Project, California </strong>(United States)</p>
-                                <p><strong>Minas Smart Roads</strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a></strong>(United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a></strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Smart Cities Project</a> </strong>(Australia)</p>
                           </div>
                       </div>
 
@@ -631,15 +654,15 @@
                               </div>
                           </div>
                           <div class="col-md-10">
-                              <h4>Ports & Logistics:</h4>
-                              <p>Leading Ports & Logistics projects globally, tremendous opportunities, and tremendous drivers of economic recovery and job creation.</p>
+                              <h4>Ports:</h4>
+                              <p>Leading Ports projects offer tremendous opportunities globally and are drivers of economic recovery and job creation.</p>
                               <br>
                               <p>Project Presentations:</p>
                              <p><strong>Port of Tangier Med </strong>(Morocco)</p>
-                             <p><strong>Port of Corpus Christi - Channel Improvement </strong>(United States) </p>
-                             <p><strong>Alcantara Port Terminal </strong>(TPA) (Brazil)</p>
-                             <p><strong>New Vasco da Gama Terminal, Port of Sines </strong>(Portugal)</p>
-                             <p><strong>Commerical Port and Cargo Train, Sinaloa State</strong> (Mexico)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/corpus-christi-ship-channel" class="schedule-link">Port of Corpus Christi - Channel Improvement</a></strong>(United States) </p>
+                             <p><strong><a href="https://www.gvip.io/projects/hydroport-wales" class="schedule-link">HydroPort Wales</a></strong>(United Kingdom)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/new-vasco-da-gama-terminal-port-of-sines" class="schedule-link">New Vasco da Gama Terminal, Port of Sines</a></strong>(Portugal)</p>
+                             <p><strong><a href="https://www.gvip.io/projects/cargo-train-and-commercial-port-1" class="schedule-link">Commerical Port and Cargo Train, Sinaloa State</a></strong> (Mexico)</p>
                           </div>
                         </div>
 
@@ -663,9 +686,10 @@
                               <p>Projects bring wind energy from source to load, onshort and offshore, with the capacity to completely transform the ESG equation.</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Anbaric Offshore Wind </strong>(USA)</p>
-                              <p><strong>Temane Regional Electricity Project </strong>(Mozambique)</p>
-                              <p><strong>Additional projects in Brazil, Peru and Somalia</strong></p>
+                              <p><strong>Anbaric Offshore Wind </strong>(United States)</p>
+                                <p><strong>Azito plant </strong>(Côte d’Ivoire)</p>
+                                <p><strong>Malindi PV</strong>(Kenya)</p>
+                                <p><strong>Additional projects in Brazil, Peru and Somalia</strong></p>
                           </div>
                       </div>
 
@@ -691,7 +715,7 @@
                               <p>The ability to see, measure and process data from space about the earth - minerals, public safety, agriculture - is going to transform how we live and work</p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Theia Satellite Project</strong>(USA)</p>
+                              <p><strong>Theia Satellite Project</strong>(United States)</p>
                               <p><strong>Additional projects from Brazil, the Philippines and India</strong></p>
                           </div>
                       </div>
@@ -716,9 +740,10 @@
                               <p>The pace of digitization in electricity is tremendous, from renewable energy, to storage, to new ‘behind the meter’ technologies.  </p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>Tire Recycling Waste-to-Energy Plant </strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/tire-recycling-waste-to-energy-plant" class="schedule-link">Tire Recycling Waste-to-Energy Plant</a></strong> (Brazil)</p>
                               <p><strong>Battery Energy Storage System & Flexible Distributed Energy Units</strong>(Puerto Rico)</p>
-                              <p><strong>SeaOne Puerto Solo</strong>(United States)</p>
+                              <p><strong>The Clara Plan Hydrogen Project </strong>(Australia)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/seaone-puerto-rico-fuel-supply" class="schedule-link">SeaOne Puerto Solo</a></strong>(United States)</p>
                           </div>
                       </div>
 
@@ -742,12 +767,12 @@
                               <p>Some of the most exciting projects in the world are intercity high speed rail projects, driving critical connections between cities like São Paulo and Campinas, Dallas and Houston, and Tokyo and Kyoto.  </p>
                               <br>
                               <p>Project Presentations:</p>
-                              <p><strong>São Paulo Intercity Trains project </strong>(Brazil)</p>
-                              <p><strong>FIOL & FICO Railways</strong>(Brazil)</p>
-                              <p><strong>Ferropista Railway</strong>(Colombia)</p>
-                              <p><strong>Isthmus of Tehuantepec</strong>(Mexico)</p>
-                              <p><strong>Mayan Train</strong>(Mexico)</p>
-                              <p><strong>Halkalı-Kapıkule Railway</strong>(Turkey)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/maranhao-railway" class="schedule-link">Maranhao Railway</a></strong>(Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a></strong> (United States)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a></strong>(Mexico)</p>
                           </div>
                       </div>
 
@@ -816,7 +841,7 @@
                           </div>
                           <div class="col-md-10">
                               <h4>Transformative Technologies:</h4>
-                              <p>PThe world is facing a tidal wave of new and transformative technologies, and we will both present and make sense of these technologies to emerging market, and developed country, project developers.  Technologies include:  wireless vehicle charging, 5G driving everything, 3D printing, blockchain, AI, Big Data, electric and autonomous vehicles and new ways of designing and managing projects.</p>
+                              <p>The world is facing a tidal wave of new and transformative technologies, and we will both present and make sense of these technologies to emerging market, and developed country, project developers.  Technologies include:  wireless vehicle charging, 5G driving everything, 3D printing, blockchain, AI, Big Data, electric and autonomous vehicles and new ways of designing and managing projects.</p>
                           </div>
                       </div>
 
@@ -858,7 +883,7 @@
                           </div>
                           <div class="col-md-10">
                               <h4>Building Strong National Infrastructure Brands and Communicating Project Benefits:</h4>
-                              <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instil public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'. </p>
+                              <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instil public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'.</p>
                               <br>
                               <p>Presenters:</p>
                               <p><strong>Mark Freedman, Partner, Dalberg Advisors</strong></p>
@@ -869,30 +894,6 @@
                       <div class="row schedule-item">
                           <div class="col-md-2">
                               <time>4:00 PM EST</time>
-                              <form method="POST" action="#">
-                                  <div class="form-row">
-                                      <div class="col-auto">
-                                          <button type="submit">Join Session</button>
-                                      </div>
-                                  </div>
-                              </form>
-                              <br>
-                              <div class="speaker">
-                                  <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                              </div>
-                          </div>
-                          <div class="col-md-10">
-                              <h4>The Creation of a National Infrastructure Bank: </h4>
-                              <p>Discussion topics include:</p>
-                              <p>1)Securing an adequately-sized source of long-term financing to support infrastructure (that is politically sellable because it complements existing legislation and does not increase the Federal debt).</p>
-                              <p>2)Emphasizing information, efficiencies, and latest technologies to ensure proper design and management of projects.</p>
-                              <p>3)And Re-booting the American economy by creating lots of great-paying jobs, while raising economic growth and productivity.</p>
-                          </div>
-                      </div>
-
-                      <div class="row schedule-item">
-                          <div class="col-md-2">
-                              <time>5:00 PM EST</time>
                               <form method="POST" action="#">
                                   <div class="form-row">
                                       <div class="col-auto">
@@ -925,7 +926,6 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Event Speakers</h2>
-          <p>Here are some of our speakers</p>
         </div>
 
         <div class="row">
