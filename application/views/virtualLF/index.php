@@ -782,30 +782,7 @@
                     <!-- Start Track C -->
                     <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
                         <h2>Track C: Strategic Workshops</h2>
-                        
-
-                        <div class="row schedule-item">
-                            <div class="col-md-2">
-                                <time>11:00 AM EST</time>
-                                <form method="POST" action="#">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>Funding for Economic Recovery:</h4>
-                                <p>The decline in global GDP has changed the risk profile of countries and projects at a time when they need increased investment to address critical issues around health, as well as those issues that will lead to rapid economic recovery. This section focuses on funding, financing and risk mitigation strategies to address those issue.</p>
-                            </div>
-                        </div>
-
-                      
+                    
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>3:00 PM EST</time>
