@@ -19,7 +19,7 @@
   <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style.css" rel="stylesheet">
+  <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style_updated.css" rel="stylesheet">
  
 
   <!-- =======================================================
@@ -84,7 +84,7 @@
 
       <!-- ======= Schedule Section ======= -->
       <section id="schedule" class="section-with-bg">
-          <div class="container" data-aos="fade-up">
+          <div class="container-fluid" data-aos="fade-up">
               <div class="section-header">
                   <h2>Agenda Preview</h2>
               </div>
@@ -926,7 +926,6 @@
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Event Speakers</h2>
-          <p>Here are some of our speakers</p>
         </div>
 
         <div class="row">
