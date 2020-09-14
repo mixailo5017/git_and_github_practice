@@ -32,6 +32,11 @@ $route['projects/follow']    = "projects/follow";
 $route['projects/unfollow']  = "projects/unfollow";
 $route['projects/isfollowing/(:num)']    = "projects/isfollowing/$1";
 
+// like/unlike rules for projects
+$route['projects/like']    = "projects/like";
+$route['projects/unlike']  = "projects/unlike";
+$route['projects/isliked/(:num)']    = "projects/isliked/$1";
+
 $route['projects/add_executive/(:any)']	= "projects/add_executive/$1";
 $route['projects/update_executive/(:any)']	= "projects/update_executive/$1";
 $route['projects/delete_executive/(:any)']	= "projects/delete_executive/$1";
