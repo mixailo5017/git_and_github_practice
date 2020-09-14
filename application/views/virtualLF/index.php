@@ -132,11 +132,11 @@
                                 <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
                                 <br />
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah, Mazar 200 Bed Hospital</a>, and other Healthcare Projects </strong>(Afghanistan)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a></strong>(Australia)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/new-noida-international-airport-at-jewar-phase-i" class="schedule-link">New Noida International Airport at Jewar - Phase I</a></strong>(India)</p>
-                                <p><strong>Additional projects in India and Indonesia</strong></p>
+                                <p><strong>Regional Digital Hub</strong>(Kazakhstan, Georgia, Turkmenistan)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project</a></strong>(AAWDC) (Jordan)</p>
                             </div>
                         </div>
 
@@ -161,11 +161,11 @@
                                 <p>Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Roberto Escoto, Manager, Investment Department, APEX</a></strong></p>
                                 <br />
-                                <p>Project Presentations:</p>
+                                <p>Key Brazilian Federal and State Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/alcantara-port-terminal-tpa" class="schedule-link">Alcantara Port Terminal</a></strong>(TPA) (Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/metropolitan-integrated-transit-system" class="schedule-link">Metropolitan Integrated Transit System, Florianopolis</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo</a></strong>(Brazil) </p>
+                                <p><strong><a href="https://www.gvip.io/projects/metropolitan-train-lines-8-diamond-and-9-emerald" class="schedule-link">Metropolitan Train Lines 8 and 9, São Paulo</a></strong>(Brazil)</p>
                             </div>
 
                             <div class="col-md-2">
@@ -195,13 +195,14 @@
                                 <h4>Top North American Strategic Projects </h4>
                                 <p>Projects that are critical to country growth</p>
                                 <br>
-                                <p>Keynote:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Keith Krach, Under Secretary for Economic Growth, Energy, and the Environment</a> </strong></p>
+                                <p>Special Keynote - Key Actions to Drive Global Growth:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Andrew Robb, Former Minister of Trade and Investment, Government of Australia </a> </strong></p>
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin</a></strong>(United States)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a></strong> (United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/container-terminal-at-contrecoeur" class="schedule-link">Montreal Contrecœuer Container Terminal</a></strong>(Canada)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/jfk-airport-modernization" class="schedule-link">JFK Terminal One Redevelopment</a></strong>(United States)</p>
 
                             </div>
                         </div>
@@ -229,12 +230,6 @@
                                 <br />
                                 <p>Andrés Gluski has served as President and CEO since 2011, after serving as COO for five years. During his tenure as President and CEO, Andrés has led AES through a dramatic transformation by focusing on simplification, risk improvement and innovation. He has led the company through a $5 billion divestiture program, increased the credit rating by multiple notches and initiated a quarterly dividend, which has grown at an 8% annual rate. Andrés has also overseen the largest construction program in AES’ history, with more than 5,000 MW of new power generation completed. Under his leadership, AES has become a world leader in implementing new clean technologies, including energy storage, wind, solar and LNG.
                                 </p>
-                                <br> <br>
-                                <p><strong>10:30AM</strong></p>
-                                <p>Keynote:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Sean Strawbridge, CEO, Port of Corpus Christi</a></strong></p>
-                                <br>
-                                <p>Sean Strawbridge has over 25 years of experience in the global transportation, trade and energy sectors in both public administration and the private sector. Strawbridge has held executive leadership positions in such world-class organizations as the Port of Long Beach, Ports America Group, Oxbow Energy, and Sea-Land Service, in fiancé, corporate development, operations and capital structuring. In his role as CEO of the Port of Corpus Christi, Strawbridge focuses his attentions on capital placement, organizational alignment and culture, and strategic execution. Currently the Port of Corpus Christi is the third largest port in the nation in revenue tonnage and the second largest port in Texas behind the Port of Houston.</p>
                             </div>
                         </div>
 
@@ -254,12 +249,13 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Panel Discussion - The Global Economy, 2020 - 2023</h4>
+                                <h4>Insight Discussion - The Global Economy, 2020 - 2023</h4>
+                                <p>Given the 'fog of war' nature of the current global economy, this panel - made up of investors, operators and policymakers, critical thinkers all, will discuss the most likely scenarios for the next three years - and how they think about that 36 month period.</p>
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Jeff Hill, Senior Managing Director, BCG</a> </strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Perez Fortea, CEO, Globalvia</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Javier Perez Fortea, CEO, Globalvia</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Jim Pass, Senior Managing Director, Guggenheim Partners</a></strong></p>
                             </div>
                         </div>
@@ -282,7 +278,7 @@
                             <div class="col-md-10">
                                 <h4>The Path Forward - U.S. Leadership and the Global Recovery</h4>
                                 <br>
-                                <p>Keynote:</p>
+                                <p>Special Policy Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Joseph Semsar, Deputy Under Secretary for International Trade, US Department of Commerce</a></strong></p>
                             </div>
                         </div>
@@ -305,6 +301,9 @@
                             <div class="col-md-10">
                                 <h4>Oracle Project of the Year Awards:</h4>
                                 <p>Each year working with Oracle we identify and select the Best Global Projects. This year the awards will be televised on GViP TV!</p>
+                                <br>
+                                <p>Special Strategic Keynote:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">David H. Petraeus, Chairman, KKR Global Institute and Former Director, Central Intelligence Agency</a></strong></p>
                                 <br>
                                 <p>Categories include:</p>
                                 <p><strong>- Strategic Project of the Year</strong></p>
@@ -331,12 +330,15 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Critical Technologies Driving Opportunity and Growth:</h4>
-                                <p>In this panel we bring people together from throughout the world to highlight the visionary technology applications that will change our world - and that offer immediate opportunities to project developers, and business executives.</p>
+                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic  Growth:</h4>
+                                <p>We bring people together to highlight new and visionary technology applications that will change our world - and that offer immediate opportunities to project developers, business executives and national policymakers.</p>
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4103" class="schedule-link">Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Tim Sylvester, Founder, Integrated Roadways</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/4062" class="schedule-link">Michael J. Woods, CEO and COO, Big Sun Holdings Group Corporation</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/3816" class="schedule-link">Mike Day, Director, Clara Smart Cities</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/1664" class="schedule-link">JP Giometti, Executive Director, Global Strategy & Corporate Development, HCSS</a></strong></p>
 
                             </div>
                         </div>
@@ -357,11 +359,13 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Revitalizing Emerging Market Economies - Roundtable Discussion</h4>
+                                <h4>US Deal Team Discussion:</h4>
                                 <br>
-                                <p>Moderator:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Nicolas Firzli, Director General, World Pensions Council</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</a></strong></p>
+                                <p>Thought Leaders:</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Pat Kirwan, Director, TPCC, United States Department of Commerce</a> </strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Thomas Hardy, Director for Program Management of the U.S. Trade and Development Agency</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">David Penna, Senior Vice President, Office of Strategic Initiatives, US Development Finance Corporation</a></strong></p>
                             </div>
                         </div>
 
@@ -382,16 +386,17 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Bringing Supply Chains Home - The Case of Rare Earths</h4>
-                                <br>
-                                <p>Moderator:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Sarah Ryker, Associate Director, Energy and Minerals, USGS</a></strong></p>
-                                <br>
-                                <p>Panelist:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Mark Smith, NioCorp Developments Ltd.</a></strong></p>
-                                <p><strong>CBMM</strong></p>
+                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health.  This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth metals.  This panel brings together critical rare earths actors focused on Niobium in the Americas.</p>
                                 <br>
                                 <p>Special Case Study:</p>
                                 <p><strong>The Niobium Elk Creek Project, Nebraska</strong></p>
+                                <br>
+                                <p>Panelists:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Sarah Ryker, Associate Director, Energy and Minerals, USGS</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Mark Smith, NioCorp Developments Ltd.</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Alexandre Magnus Jordão, Niobium Market Development Specialist, CBMM</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Dave Penna, Managing Director, DFC*</a></strong></p>
+                               
                             </div>
                         </div>
 
@@ -411,17 +416,13 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>The Creation of a National Infrastructure Bank:</h4>
+                                <h4>National Infrastructure Banks - Driving Economic Recovery:</h4>
+                                <p>Infrastructure banks can focus and drive investment during a period of economic crisis, and so this panel looks at the priorities of such institutions,and how their capacity can be maximized over the next 36 months. </p>
                                 <br>
-                                <p>Discussion topics include: </p>
-                                <p>1) Securing an adequately-sized source of long-term financing to support infrastructure (that is politically sellable because it complements existing legislation and does not increase the Federal debt)</p>
-                                <p>2) Emphasizing information, efficiencies, and latest technologies to ensure proper design and management of projects.</p>
-                                <p>3) And Re-booting the American economy by creating lots of great-paying jobs, while raising economic growth and productivity.</p>
-                                <br>
-                                <p>Panelist</p>
-                                <p><strong>BNDES</strong></p>
+                                <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4154" class="schedule-link">William T. Nolan, President, Infra-Bk, LLC</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Annie Ropar, CAO and CFO, Canada Infrastructure Bank</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">John Casola, Chief Investment Officer, Canada Infrastructure Bank</a></strong></p>
+                                <p><strong><a href="#spakers" class="schedule-link">Francisco Gomez, Vice President of Strategy & Development, FDN</a></strong>(Colombia)</p>
                             </div>
                         </div>
 
@@ -441,8 +442,13 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>First Annual Global Benefits Prize:</h4>
-                                <p>Focus on the project developer whose project will drive the widest and deepest benefits for people in the project's footprint, including health, mobilit, job creation, business creation and overall opportunity.</p>
+                                <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
+                                <p>TThe focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world.  We combine key practitioners with policymakers and developers.</p>
+                                <br />
+                                <p>Panelists: </p>
+                                <p><strong><a href="#speakers" class="schedule-link">Nilton Seuaciuc, President, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/3493" class="schedule-link">Antonino Ferreira, International CEO, ACEA </a></strong>(Rome)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Albert Cho, Vice President & General Manager, Advanced Infrastructure Analytics, Xylem</a></strong></p>
                             </div>
                         </div>
 
@@ -462,13 +468,14 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
-                                <p>The focus is on identifying investment targets and strategies for this critical sector.</p>
-                                <br />
-                                <p>Panelists: </p>
-                                <p><strong><a href="#speakers" class="schedule-link">Charles Emond, CEO, CDPQ</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Nilton Seuaciuc, President, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Xylem</a></strong></p>
+                                <h4>First Annual Global Benefits Prize:</h4>
+                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects.  Technology allows us to increasingly focus on users - and on the results of projects from the user perspective.  This includes health, mobility, job creation, business creation and overall opportunity creation.  Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced!</p>
+                                <br>
+                                <p>Thought Leaders:</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Michael Bühler, HTCW - Constance, Construction Economics</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Konrad Nübel, Technical University of Munich, Construction Process Managemen</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/4023" class="schedule-link">Andrew Verone, Oracle Corporation</a></strong></p>
                             </div>
                         </div>
 
@@ -521,8 +528,10 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a></strong>(Poland)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Denmark)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a></strong> (Estonia-Latvia-Lithuania)</p>
+                                <p><strong>Ankara-Niğde Highway</strong>(Turkey)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/tunnel-euralpin-lyon-turin-telt" class="schedule-link">Tunnel Euralpin Lyon Turin</a></strong>(France, Italy)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Germany, Denmark)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/halkal-kapkule-high-speed-rail-route" class="schedule-link">Halkalı-Kapıkule Railway</a></strong>(Turkey)</p>
                             </div>
                         </div>
@@ -547,8 +556,9 @@
                                 <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project (AAWDC)</a></strong>(Jordan)</p>
                                 <p><strong>Hydropower Power Plants Revitalization Project</strong>(Puerto Rico)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/optimizing-prasas-metering-system-and-customer-experience" class="schedule-link">PRASA Metering project</a></strong>(Puerto Rico)</p>
+                                <p><strong>Vita Ambient Water Performance Contracts</strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/oceanus-chile" class="schedule-link">Oceanus Project</a></strong>(Chile)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/cadiz-valley-water" class="schedule-link">Cadiz Water Conveyance</a></strong>(United States)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/lesotho-highlands-water-project" class="schedule-link">The Lesotho Highlands Water Project</a></strong>(Lesotho)</p>
@@ -576,9 +586,9 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a></strong>(Brazil)</p>
-                                <p><strong>Metropolitan Train Lines 8 and 9, São Paulo </strong> (Brazil)</p>
+                              <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a></strong>(Brazil)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a></strong>(Colombia)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="shcedule-link">Rail Baltica</a></strong>(Estonia-Latvia-Lithuania)</p>
                             </div>
                         </div>
 
@@ -624,12 +634,13 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Smart Cities/Smart Infrastructure:</h4>
+                                <h4>Smart & Sustainable Infrastructure:</h4>
                                 <p>In fact, all infrastructure going forward will be ‘smart,’ and the opportunity now is to create a strategy for commercializing data to both securitize investments, and pay for new investments.</p>
                                 <br>
                                 <p>Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Jeffrey DeCoux, Chairman, Autonomy Institute</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4103" class="schedule-link">Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/4062" class="schedule-link">Michael J. Woods, CEO and COO, Big Sun Holdings Group Corporation</a></strong></p>
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a></strong>(United States)</p>
@@ -659,10 +670,10 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong>Port of Tangier Med </strong>(Morocco)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/corpus-christi-ship-channel" class="schedule-link">Port of Corpus Christi - Channel Improvement</a></strong>(United States) </p>
                                 <p><strong><a href="https://www.gvip.io/projects/hydroport-wales" class="schedule-link">HydroPort Wales</a></strong>(United Kingdom)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/new-vasco-da-gama-terminal-port-of-sines" class="schedule-link">New Vasco da Gama Terminal, Port of Sines</a></strong>(Portugal)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/cargo-train-and-commercial-port-1" class="schedule-link">Commerical Port and Cargo Train, Sinaloa State</a></strong> (Mexico)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/seaone-puerto-rico-fuel-supply" class="schedule-link">SeaOne Puerto Solo</a></strong>(United States)</p>
                             </div>
                         </div>
 
@@ -689,7 +700,6 @@
                                 <p><strong>Anbaric Offshore Wind </strong>(United States)</p>
                                 <p><strong>Azito plant </strong>(Côte d’Ivoire)</p>
                                 <p><strong>Malindi PV</strong>(Kenya)</p>
-                                <p><strong>Additional projects in Brazil, Peru and Somalia</strong></p>
                             </div>
                         </div>
 
@@ -711,12 +721,13 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Opportunities from Space:</h4>
+                                <h4>The View from Space - Business Opportunities that will change Life on Earth</h4>
                                 <p>The ability to see, measure and process data from space about the earth - minerals, public safety, agriculture - is going to transform how we live and work</p>
                                 <br>
-                                <p>Project Presentations:</p>
-                                <p><strong>Theia Satellite Project</strong>(United States)</p>
-                                <p><strong>Additional projects from Brazil, the Philippines and India</strong></p>
+                                <p>Thought Leader Discussion:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olsen, Theia Satellite Project</a></strong>(United States)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Dr. Joseph N. Pelton, Executive Board,International Association for the Advancement of Space Safety (IAASS)
+</a></strong></p>
                             </div>
                         </div>
 
@@ -743,7 +754,7 @@
                                 <p><strong><a href="https://www.gvip.io/projects/tire-recycling-waste-to-energy-plant" class="schedule-link">Tire Recycling Waste-to-Energy Plant</a></strong> (Brazil)</p>
                                 <p><strong>Battery Energy Storage System & Flexible Distributed Energy Units</strong>(Puerto Rico)</p>
                                 <p><strong>The Clara Plan Hydrogen Project </strong>(Australia)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/seaone-puerto-rico-fuel-supply" class="schedule-link">SeaOne Puerto Solo</a></strong>(United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/mauritania-hybrid-photovoltaic-power-plants" class="schedule-link">8 Hybrid Photovoltaic (PV) Power Plants</a></strong>(Mauritania)</p>
                             </div>
                         </div>
 
@@ -769,7 +780,6 @@
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/maranhao-railway" class="schedule-link">Maranhao Railway</a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a></strong> (United States)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a></strong>(Mexico)</p>
@@ -785,7 +795,7 @@
                     
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>3:00 PM EST</time>
+                                <time>2:00 PM EST</time>
                                 <form method="POST" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
@@ -799,39 +809,17 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Building Strong National Infrastructure Brands and Communicating Project Benefits:</h4>
-                                <p>The infrastructure industry faces a crisis of confidence, trust, and perception internationally, hindering the execution of critical and urgent projects. This session explores the state of infrastructure brands across different regions and what is necessary to instil public trust in their outcomes. Moreover, what can be captured and communicated effectively among all stakeholders in a push to create a working industry 'Benefits Index'.</p>
+                                <h4>Revitalizing Emerging Market Economies:</h4>
                                 <br>
-                                <p>Presenters:</p>
-                                <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Partner, Dalberg Advisors</a></strong></p>
-                                <p><strong>Oracle</strong></p>
+                                <p> Thought Leaders:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Nicolas Firzli, Director General, World Pensions Council</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Pereira dos Santos, Special Advisor - Infrastructure, Inter-American Development Bank</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/705" class="schedule-link"></a></strong></p>
+
                             </div>
                         </div>
-
                         <div class="row schedule-item">
-                            <div class="col-md-2">
-                                <time>4:00 PM EST</time>
-                                <form method="POST" action="#">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>US Deal Team Discussion:</h4>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>6:00 PM EST</time>
                                 <form method="POST" action="#">
@@ -848,15 +836,22 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Benefits Index Creation:</h4>
-                                <p>For citizens around the world to invest in infrastructure it is critical to select projects according to the critical results of those projects, and then to measure and manage those results throughout the life of the project.  These results should be defined in terms of benefits for citizens:  health (clean water, clean air), mobility, jobs, business creation and opportunities.  What are some of the other key project results, and how can we create an effective benefits index?
-                                </p>
-
+                                <br>
+                                <p>Thought Leaders:</p>
+                                <p><strong>Project Management Institute</strong> (Australia chapter)</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
+                                
                         </div>
 
                     </div>
 
                     <!-- End of Track C-->
 
+                    </div>
+
+
+                 
                 </div>
 
             </div>
