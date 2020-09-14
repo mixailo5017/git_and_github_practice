@@ -5184,6 +5184,106 @@ class Projects_model extends CI_Model {
 
 		return $smearr;
 	}
+	
+	
+		/**
+	 * Like the project
+	 *
+	 * @param int $project_id
+	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function like($project_id, $follower) {
+		if (is_null($project_id) || is_null($follower)) {
+			return false;
+		}
+
+		// BEGIN TRANSACCTION
+		$this->db->trans_start();
+
+		$this->unlike($project_id, $follower);
+		$result = $this->db
+			->set(array(
+				'proj_id' => $project_id,
+				'rated_by' => $follower,
+				'created_at' => date('Y-m-d H:i:s')
+			))
+			->insert('exp_proj_likes');
+
+		// COMMIT
+		$this->db->trans_complete();
+		$this->db->trans_off(); // TODO: Revisit this
+
+		if ($this->db->trans_status() === FALSE) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Unlike the project
+	 *
+	 * @param int $project_id
+	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function unlike($project_id, $follower) {
+		if (is_null($project_id) || is_null($follower)) {
+			return false;
+		}
+
+		$result = $this->db
+			->where('proj_id', $project_id)
+			->where('rated_by', $follower)
+			->delete('exp_proj_likes');
+
+		if ($result === FALSE) {
+			return false;
+		}
+
+		return true;
+	}
+
+	/**
+	 * Create a new like record(s)
+	 *
+	 * @param $proj_id
+	 * @return bool
+	 */
+	public function get_likes($proj_id)
+	{
+		$fetchlikes=$this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\'');
+		$result=$fetchlikes->num_rows();
+
+		return $result;
+
+	}
+
+	/**
+	 * Check if the member (user) has liked a specific project
+	 *
+	 * @param int $project_id
+	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function isliked($project_id, $follower) {
+		if (is_null($project_id) || is_null($follower)) {
+			return false;
+		}
+
+		$result = $this->db
+			->where('proj_id', $project_id)
+			->where('rated_by', $follower)
+			->count_all_results('exp_proj_likes');
+
+		return ($result > 0);
+	}
+
+
+}
+?>
+
 
 
 }
