@@ -349,22 +349,22 @@ class Projects extends CI_Controller
     /**
      * Load Individual Project Detail Page
      *
-     * @param $params
+     * @param $project_identifier Either a PID or a slug
      */
-    public function view($params)
+    public function view($project_identifier)
     {
         $model = $this->projects_model;
 
-        // Allow for $params to be either a slug or an id
-        if (is_numeric($params)) {
-            $slug = $model->get_slug_from_pid((int) $params);
+        // Allow for $project_identifier to be either a slug or an id
+        if (is_numeric($project_identifier)) {
+            $slug = $model->get_slug_from_pid((int) $project_identifier);
             if (! empty($slug)) {
                 redirect("projects/$slug", 'refresh');
             }
         }
 
         // TODO: Revisit this logic and eliminate unnecessary call to DB
-        $slug = $params;
+        $slug = $project_identifier;
         $userid    = $model->get_uid_from_slug($slug);
         $exist_slug = $model->check_project($slug);
         $pid = (int) $model->get_pid_from_slug($slug);
@@ -377,9 +377,11 @@ class Projects extends CI_Controller
         
         $viewdata = array();
         $viewdata['slug'] = $slug;
+	$viewdata['pci'] = 0;
         $viewdata['project']['pid'] = $pid; // Needed for follow/unfollow functions
         $viewdata['userdata'] = $model->get_user_general($userid);
         $viewdata['orgmemberid'] = is_organization_member($viewdata['userdata']['uid']);
+	    
         // Determine who to display as the contact person for the project. 
         // If the project owner belongs to an organization, display the organization 
         // instead of the individual.
@@ -395,6 +397,7 @@ class Projects extends CI_Controller
         }
 
         $viewdata['project']['isfollowing'] = $model->isfollowing($pid, $this->uid); // Is current user following the project
+        $viewdata['project']['isliked'] = $model->isliked($pid, $this->uid); // Is current user liked the project
         $viewdata['project']['projectdata'] = $model->get_project_data($slug, $userid);
         $viewdata['project']['projectdata']['jobs_created'] = $model->get_jobs_created($pid);
 		$viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
@@ -440,22 +443,28 @@ class Projects extends CI_Controller
                 $viewdata['project']['procurement']['procurement_date'] == '' &&
                 $viewdata['project']['procurement']['procurement_criteria'] == ''
                 )) {
-            $viewdata['project_sections']['procurement'] = true;   
+            $viewdata['project_sections']['procurement'] = true;
+            $viewdata['pci'] += $viewdata['project']['procurement']['totalprocurement'] * 7;
         }
         if (! ($viewdata['project']['financial']['totalfinancial'] == 0)) {
             $viewdata['project_sections']['financial'] = true;
+            $viewdata['pci'] += $viewdata['project']['financial']['totalfinancial'] * 12;
         }
         if (! ($viewdata['project']['regulatory']['totalregulatory'] == 0)) {
             $viewdata['project_sections']['regulatory'] = true;
+            $viewdata['pci'] += $viewdata['project']['regulatory']['totalregulatory'] * 7;
         }
         if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
             $viewdata['project_sections']['fundamentals'] = true;
+            $viewdata['pci'] += $viewdata['project']['fundamental']['totalfundamental'] * 7;
         }
         if (! ($viewdata['project']['participants']['totalparticipants'] == 0)) {
-            $viewdata['project_sections']['participants'] = true;   
+            $viewdata['project_sections']['participants'] = true;
+            $viewdata['pci'] += $viewdata['project']['participants']['totalparticipants'] * 7;
         }
         if (! ($viewdata['project']['files']['totalfiles'] == 0)) {
-            $viewdata['project_sections']['files'] = true;   
+            $viewdata['project_sections']['files'] = true;
+            $viewdata['pci'] += $viewdata['project']['files']['totalfiles'] * 5;
         }
 
 		$viewdata['isAdminorOwner'] = $this->isAdminOrOwner($userid);
@@ -468,6 +477,9 @@ class Projects extends CI_Controller
         // Discussions
         $this->load->model('discussions_model');
         $viewdata['project']['discussions_access'] = $this->discussions_model->has_access($this->uid, $pid);
+
+        //likes
+        $viewdata['likes'] = $this->get_likes($pid);
 
         // Forum ad
         $this->load->model('forums_model');
@@ -490,7 +502,7 @@ class Projects extends CI_Controller
             )
         );
 
-        $this->load->view('templates/header', $this->headerdata);
+        $this->load->view('templates/header', $this->headerdata); 
         $this->load->view('projects/projects_view', $viewdata);
         $this->load->view('templates/footer', $this->footer_data);
     }
@@ -3308,4 +3320,71 @@ class Projects extends CI_Controller
             redirect('/p/' . $this->uri->segment(2));
         }
     }
+
+    public function get_likes($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+
+        $this->load->model('projects_model');
+        $likes = $this->projects_model->get_likes($proj_id);
+
+        return $likes;
+    }
+
+    /**
+     * Makes a relationship between a project a currently logged in user (member)
+     * User (member) likes the project
+     *
+     * @return bool
+     */
+    public function like()
+    {
+        $model = $this->projects_model;
+
+        $userid = (int) sess_var('uid');
+        $id = (int) $this->input->post('id', true);
+
+        if (! $result = $model->like($id, $userid)) {
+            sendResponse(array('status' => 'error'));
+            exit;
+        }
+
+        $response = array('status' => 'success');
+
+        if ($this->input->post('return_likes', true) == '1') {
+            $response['liked'] = $model->follows($id);
+        }
+
+        sendResponse($response);
+        exit;
+    }
+
+    /**
+     * Deletes a relationship between a project a currently logged in user (member)
+     * User (member) unfollows the project
+     *
+     * @return bool
+     */
+    public function unlike()
+    {
+        $model = $this->projects_model;
+
+        $userid = (int) sess_var('uid');
+        $id = (int) $this->input->post('id', true);
+
+        if (! $result = $model->unfollow($id, $userid)) {
+            sendResponse(array('status' => 'error'));
+            exit;
+        }
+
+        $response = array('status' => 'success');
+
+        if ($this->input->post('return_likes', true) == '1') {
+            $response['liked'] = $model->follows($id);
+        }
+
+        sendResponse($response);
+        exit;
+    }
 }
+
