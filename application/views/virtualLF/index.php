@@ -531,7 +531,6 @@
                                 <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Denmark)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a></strong> (Estonia-Latvia-Lithuania)</p>
                                 <p><strong>Ankara-Niğde Highway</strong>(Turkey)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/tunnel-euralpin-lyon-turin-telt" class="schedule-link">Tunnel Euralpin Lyon Turin</a></strong>(France, Italy)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/halkal-kapkule-high-speed-rail-route" class="schedule-link">Halkalı-Kapıkule Railway</a></strong>(Turkey)</p>
                             </div>
                         </div>
@@ -724,10 +723,12 @@
                                 <h4>The View from Space - Business Opportunities that will change Life on Earth</h4>
                                 <p>The ability to see, measure and process data from space about the earth - minerals, public safety, agriculture - is going to transform how we live and work</p>
                                 <br>
+                                <p>Moderator:</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
+                                <br>
                                 <p>Thought Leader Discussion:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Erlend Olsen, Theia Satellite Project</a></strong>(United States)</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Dr. Joseph N. Pelton, Executive Board,International Association for the Advancement of Space Safety (IAASS)
-</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Dr. Joseph N. Pelton, Executive Board, International Association for the Advancement of Space Safety (IAASS)</a></strong></p>
                             </div>
                         </div>
 
