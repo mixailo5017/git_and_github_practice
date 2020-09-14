@@ -1,3 +1,76 @@
+<?php if ($userdata['uid'] != sess_var('uid')) {
+    echo form_open('', 'id="project_like_form" name="like_form"', array(
+        'context' => 'projects',
+        'id' => $project['pid'],
+        'action' => $project['isliked'] > 0 ? 'Unlike' : 'Like',
+        'return_likes' => 0
+    )); ?>
+    <a href="#" id="submit" name="submit"
+       data-unlike="<?php echo($project['isliked'] > 0 ? 'Unlike' : '') ?>"
+       class="button like light_gray <?php echo($project['isliked'] > 0 ? 'Unlike' : '') ?>">
+        <span class="like-text"><?php echo($project['isliked'] > 0 ? 'Liked' : 'Like') ?></span>
+        <!--[if IE 8]><span class="ie-8-unfollow">Unlike</span><![endif]-->
+    </a>
+    <?php echo form_close();
+}
+?>
+
+<h2><?php echo lang('Rating') ?>
+    <span class="star-rating" id="expert_rating"></span>
+    <span class="score"><?php echo $likes ?></span><span class="votes"></span>
+</h2>
+
+
+
+<?php
+if ($project['projectdata']['projectphoto'] != ''){
+    $pci += 10;
+}
+if ($project['projectdata']['website'] != ''){
+    $pci += 5;
+}
+if ($project['projectdata']['eststart'] != '1111-11-11'){
+    $pci += 5;
+}
+if ($project['projectdata']['estcompletion'] != '1111-11-11'){
+    $pci += 5;
+}
+if ($project['projectdata']['sponsor'] != ''){
+    $pci += 5;
+}
+if ($project['projectdata']['developer'] != ''){
+    $pci += 12;
+}
+if ($project['projectdata']['financialstructure'] != ''){
+    $pci += 7;
+}
+
+
+
+if ($pci < 33){
+    $color = "#e5405e";
+}
+elseif ($pci > 33 && $pci < 66){
+    $color = "#e5e619";
+}
+else {
+    $color = "#00FF00";
+}
+
+if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid'), INTERNAL_USERS) ) ) { ?>
+<!-- Project Completeness Index Meter -->
+<div id="meter" class="profile-meter" data-value="<?php echo $pci ?>" data-max="100">
+    <p>Your project profile is <strong><?php echo $pci ?>%</strong> complete. Once you reach 'green' then we will be able to assess your project.</p>
+    <div class="bar">
+        <div class="progress" style="background: <?php echo $color ?>"></div>
+    </div>
+    <div class="cta-container">
+        <button><?php echo lang('DismissReminder') ?></button>
+        <a href="/projects/edit/<?php echo $slug ?>"><?php echo lang('EditProject');?></a>
+    </div>
+</div>
+<?php } ?>
+
 <div id="content" class="clearfix">
 		<div id="col2" class="projects">
 			<section class="projectdata white_box">
@@ -28,11 +101,21 @@
 					?>
 				</p>
 			</section><!-- end .portlet -->
+			
+			
+		<!-- temporary video embed fix for certain projects -->
+		<?php if($project['pid'] == 3169){ ?>
+            		<section class="projectdata white_box">
+            			<div style="text-align: center">
+                    			<iframe width="560" height="315" src="https://www.youtube.com/embed/30RECLGlTOg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                		</div>
+            		</section>
+            	<?php } ?>
 
 			<div id="project_tabs" class="white_box">
-			
+
 				<?php $this->load->view('projects/projects_view/overview', $project); ?>
-				<?php 
+				<?php
 					foreach ($project_sections as $section => $appears) {
 						$this->load->view("projects/projects_view/$section", $project);
 					}
@@ -48,9 +131,12 @@
                 </div>
             <?php endif; ?>
 
-			<?php 
-			// Don't show Project Feed on official Brazilian projects
-			if ($userdata['uid'] != BRAZIL_USER_ID) {
+
+
+
+            <?php
+			// Don't show Project Feed unless internal user
+			if (in_array(Auth::id(), INTERNAL_USERS)) {
 			?>
 			<div class="comments white_box pull_up_white">
 				<h2><?php echo lang('ProjectUpdatesTitle') ?></h2>
@@ -94,9 +180,109 @@
 		        </div>
 			</div>
 			<?php } ?>
+
+
+			<div class="comments white_box pull_up_white">
+				<h2> Project News Feed </h2>
+				<div style="padding-left:20px; padding-right:20px; padding-bottom:20px">
+					<?php
+					$accessKey = 'e453e9df057848cc8c186bd0222d7060';
+					$endpoint = 'https://gvipprojnews.cognitiveservices.azure.com/bing/v7.0/news/search';
+					$projectname = $project['projectdata']['projectname'];
+					$term = $projectname." "."project";
+
+                    function BingNewsSearch ($url, $key, $query) {
+                        // Prepare HTTP request
+                        // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+                        // https://php.net/manual/en/function.stream-context-create.php
+                        $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
+                        $options = array ('http' => array (
+                            'header' => $headers,
+                            'method' => 'GET' ));
+
+                        // Perform the Web request and get the JSON response
+                        $context = stream_context_create($options);
+                        $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
+
+                        // Extract Bing HTTP headers
+                        $headers = array();
+                        foreach ($http_response_header as $k => $v) {
+                            $h = explode(":", $v, 2);
+                            if (isset($h[1]))
+                                if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
+                                    $headers[trim($h[0])] = trim($h[1]);
+                        }
+
+                        return array($headers, $result);
+                    }
+
+                    //print "Searching news for: " . $term . "\n";
+
+                    list($headers, $json) = BingNewsSearch($endpoint, $accessKey, $term);
+
+                    //print "\nRelevant Headers:\n\n";
+                    foreach ($headers as $k => $v) {
+                        //print $k . ": " . $v . "\n";
+                    }
+
+					    //print "\nJSON Response:\n\n";
+					    $obj = json_decode($json);
+                        $json = json_encode($obj, JSON_PRETTY_PRINT);
+                        //printf("<pre>%s</pre>", $json);
+
+
+                    if (!empty($obj->value)) {
+
+                            for ($x = 0; $x <= 4; $x++) {
+
+                                if (!empty($obj->value[$x]->name)){
+
+                                    printf("
+                                    <div>
+                                    <a style='font-size: medium' href=\"%s\">%s</a>            
+                                    <p>%s</p> 
+                                    <br> 
+                                    </div>
+                                 
+                                ", $obj->value[$x]->url, $obj->value[$x]->name, $obj->value[$x]->description);
+                                }
+                            }
+                        }
+                    else{
+                        printf("
+                            <div>             
+                                <p>There is no news in the past 30 days</p> 
+                                <br>  
+                             </div>
+                               ");
+
+
+                    }
+					?>
+
+
+			    </div>
+			</div>
+
+
+
+
 		</div><!-- end #col2 -->
 
 		<div id="col3" class="projects">
+		<a href="/projects/submit/<?php echo $project['pid']?>" onclick="myFunction()" class="button discussion light_gray">Learn More about this Project</a>
+            	<p id="demo"></p>
+            	<script>
+                	function myFunction() {
+                    	var txt;
+                    	if (confirm("Confirm to have a CG/LA Representative contact you")) {
+                        	txt = "We will be contacting you by email shortly!";
+                    	} else {
+                        	txt = "";
+                    	}
+                    	document.getElementById("demo").innerHTML = txt;
+                	}
+            </script>
             <?php if ($userdata['uid'] != sess_var('uid')) {
                 // User can't follow his or her own projects and send a message to him/her self
                 echo form_open('', 'id="project_follow_form" name="follow_form"', array(
@@ -120,7 +306,7 @@
                 <a href="/projects/discussions/<?php echo $project['pid'] ?>" class="button discussion light_gray"><?php echo lang('Discussions') ?></a>
             <?php } ?>
             <?php if ($userdata['uid'] == sess_var('uid')) { ?>
-<!--                <a href="/projects/discussions/create/--><?php //echo $project['pid'] ?><!--" class="button discussion light_gray">--><?php //echo lang('DiscussionNew') ?><!--</a>-->
+               <a href="/projects/discussions/create/<?php echo $project['pid'] ?>" class="button discussion light_gray"><?php echo lang('DiscussionNew') ?></a>
                 <a href="/projects/edit/<?php echo $slug ?>" class="button edit light_gray"><?php echo lang('EditProject');?></a>
             <?php } ?>
 
@@ -145,7 +331,7 @@
 
 				<div class="executive-details">
 					<h2 class="name"><a href="/expertise/<?php echo $contactperson["uid"]; ?>"><?php echo $fullname; ?></a></h2>
-					<?php 
+					<?php
 					if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
 						<p><strong><?php echo $contactperson['title'];?></strong></p>
 						<p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $contactperson['organization'];?></a></p>
@@ -158,6 +344,45 @@
 				</div>
 			</section>
 			<?php } ?>
+			
+			
+			            <?php if (in_array($userdata['uid'], INTERNAL_USERS)) { ?>
+                <section class="executive white_box" id="project_executive">
+                    <h2><?php echo (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? lang('Organization') : "CG/LA Analyst") ?></h2>
+
+                    <div class="image">
+                        <?php
+                        $src = expert_image($contactperson['userphoto'], 138, array(
+                            'width' => 138,
+                            'rounded_corners' => array( 'all','2' ),
+                            'crop' => TRUE,
+                            'fit'  => ($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? 'contain' : null
+                        ));
+                        $fullname = (($contactperson['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) ? $contactperson['organization'] : $contactperson['firstname'] . ' ' . $contactperson['lastname']);
+                        ?>
+                        <a href="/expertise/<?php echo $contactperson["uid"] ?>">
+                            <img src="<?php echo $src ?>" alt="<?php echo $fullname ?>'s photo" style="margin:0px;">
+                        </a>
+                    </div>
+
+                    <div class="executive-details">
+                        <h2 class="name"><a href="/expertise/<?php echo $contactperson["uid"]; ?>"><?php echo $fullname; ?></a></h2>
+                        <?php
+                        if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT && isset($orgmemberid) && $orgmemberid!= '' ) { ?>
+                            <p><strong><?php echo $contactperson['title'];?></strong></p>
+                            <p><a href="/expertise/<?php echo $orgmemberid; ?>"><?php echo $contactperson['organization'];?></a></p>
+                        <?php } else if ($contactperson["membertype"] != MEMBER_TYPE_EXPERT_ADVERT) {?>
+                            <p><strong><?php echo $contactperson['title'] ?></strong></p>
+                            <p><?php echo $contactperson['organization'] ?></p>
+                        <?php } else { ?>
+                            <p><?php echo $contactperson['discipline'] ?></p>
+                        <?php } ?>
+                    </div>
+                </section>
+            <?php } ?>
+			
+			
+			
 
             <?php // Visible only to the project owner ?>
             <?php if ($userdata['uid'] == sess_var('uid')) { ?>
@@ -277,12 +502,10 @@
 						if($orgCount < 3)
 						{
 							?>
-						 
 							<a href="/expertise/<?php echo $orgexp['uid'];?>">
                                 <img alt="<?php echo $orgexp['firstname']." ".$orgexp['lastname']; ?>" src="<?php echo expert_image($orgexp["userphoto"], 168, array('fit' => 'contain'));?>" >
 							</a>
-							
-					<?php }
+					<?php  }
 						$l++;
 						$orgCount++;
 					} ?>
@@ -299,6 +522,7 @@
         'from' => sess_var('uid')
     )) ?>
 
+
 <?php if (($project['projectdata']['lat'] && $project['projectdata']['lng']) || $isAdminorOwner )  { ?>
 <script>
 	var mapCoords = [<?php echo $project['projectdata']['lat'],',', $project['projectdata']['lng'];?>];
@@ -308,6 +532,4 @@
     var projectCountry = '<?php echo $project['projectdata']['country'] ?>';
 </script>
 <?php } ?>
-
-<iframe src="https://minnit.chat/GViP?embed&nickname=<?php print($userdata['firstname']);?>" style="border:none;width:90%;height:500px;" allowTransparency="true"></iframe><br>
 
