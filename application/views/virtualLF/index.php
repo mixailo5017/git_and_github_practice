@@ -77,6 +77,14 @@
             display: initial;
             opacity: 1;
         }
+
+
+        #oracle-specific{
+            width: 125px !important;
+            height: 125px !important;
+        }
+
+
     </style>
     <!-- ======= Header ======= -->
     <header id="header">
@@ -388,8 +396,8 @@
                                     </div>
                                 </form>
                                 <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                                <div class="speaker" id="oracle-specific">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg"  alt="Norman Anderson">
                                 </div>
                             </div>
                             <div class="col-md-10">
