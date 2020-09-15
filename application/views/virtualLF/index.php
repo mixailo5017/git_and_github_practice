@@ -31,6 +31,59 @@
 </head>
 
 <body>
+    <style>
+        .thumbnail {
+            margin-bottom: 2em;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(6, 12, 34, 0.25);
+        }
+
+        .overlay-head {
+            text-align: center;
+            width: 90%;
+            font-weight: 600;
+            color: white;
+            font-size: 4rem !important;
+        }
+
+        .overlay-text {
+            display: none;
+            opacity: 0;
+            width: 80%;
+            font-weight: 700;
+            font-size: 2rem !important;
+        }
+
+        .overlay:hover {
+            cursor: pointer;
+            transition: 500ms;
+            background: rgba(6, 12, 34, 0.75);
+        }
+
+        .overlay:hover .overlay-head {
+            display: none;
+        }
+
+        .overlay:hover .overlay-text {
+            display: initial;
+            opacity: 1;
+        }
+
+
+        #oracle-specific {
+            min-width: 125px !important;
+            min-height: 125px !important;
+        }
+    </style>
     <!-- ======= Header ======= -->
     <header id="header">
         <nav>
@@ -39,6 +92,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#schedule">Agenda</a></li>
                 <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
                 <li><a href="https://www.cg-la.com/store?category=GViP">Custom Services</a></li>
@@ -74,6 +128,52 @@
                     <div class="col-lg-9">
                         <h2>About The Event</h2>
                         <p><?php echo $details['content']; ?></p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">Private Meetings:</h1>
+                                    <p class="overlay-text">
+                                        Schedule one-on-one meetings with project owners and industry experts
+                                        across the globe with our private meeting system. See who is available
+                                        to build your business now!
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Private_Meeting.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">Virtual Trade Show:</h1>
+                                    <p class="overlay-text">
+                                        Our virtual trade show booth experience is aninteractive experience!
+                                        Check out our exhibition booths, chat with sponsors live, enter
+                                        raffles to win!
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Virtual_Private_Tradeship.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">GVIP Member Services</h1>
+                                    <p class="overlay-text">
+                                        Harness the power of GVIP On time solutions, Expert Insight,
+                                        Unprecedented connectivity.Make projects happen.
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPmember1.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">GVIPTV</h1>
+                                    <p class="overlay-text">
+                                        Next Generation TV. Vital discussions with infra insider - exclusive
+                                        interviews with industry experts.
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPTV.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,9 +224,9 @@
                                 </div>
                             </div>
                             <div class="col-md-10 ">
-                                <h4>Good Evening Asia - Top 5 Asian Projects Live!</h4>
+                                <h4>Top 5 Asian Projects Live (Breakfast in Washington, Lunch in Europe & Dinner in Asia)!</h4>
                                 <br>
-                                <p>Keynote:</p>
+                                <p>Special Keynote:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4360" class="schedule-link">Parag Khanna, Founder & Managing Partner, FutureMap</a></strong></p>
                                 <br>
                                 <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
@@ -134,7 +234,7 @@
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah, Mazar 200 Bed Hospital</a>, and other Healthcare Projects </strong>(Afghanistan)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a></strong>(Australia)</p>
-                                <p><strong>Regional Digital Hub</strong>(Kazakhstan, Georgia, Turkmenistan)</p>
+                                <p><strong>Digital Silk Way</strong>(Kazakhstan, Georgia, Turkmenistan)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project</a></strong>(AAWDC) (Jordan)</p>
                             </div>
@@ -201,7 +301,7 @@
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin</a></strong>(United States)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a></strong> (United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/container-terminal-at-contrecoeur" class="schedule-link">Montreal Contrecœuer Container Terminal</a></strong>(Canada)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a></strong>(Mexico)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/jfk-airport-modernization" class="schedule-link">JFK Terminal One Redevelopment</a></strong>(United States)</p>
 
                             </div>
@@ -235,6 +335,33 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
+                                <time>10:30 AM EST</time>
+                                <form method="POST" action="#">
+                                    <div class="form-row">
+                                        <div class="col-auto">
+                                            <button type="submit">Join Session</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="speaker">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h4>Owning & Operating Major Infrastructure Assets</h4>
+                                <br>
+                                <p>Panelist:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Javier Perez Fortea, CEO, Globalvia</a></strong></p>
+                                <br />
+                                <p>Mr. Perez Fortea joined GLOBALVIA in 2011 and has been serving as Chief Executive Officer since 2013. Mr. Perez Fortea has been responsible for the financing, construction and operation of infrastructure projects in 14 countries in 3 different continents. He worked on a US $ 2.5 billion railroad PPP project in Manila (Philippines), in Indonesia he built a US $500 Million New Town in the rainforest of Irian Jaya with 3,500 local workers in only 18 months.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="row schedule-item">
+                            <div class="col-md-2">
                                 <time>11:00 AM EST</time>
                                 <form method="POST" action="#">
                                     <div class="form-row">
@@ -255,7 +382,6 @@
                                 <p>Panelists:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Jeff Hill, Senior Managing Director, BCG</a> </strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Joaquim Levy, Chief Economist, Safra bank and former Minister of Finance, Brazil</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Javier Perez Fortea, CEO, Globalvia</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Jim Pass, Senior Managing Director, Guggenheim Partners</a></strong></p>
                             </div>
                         </div>
@@ -294,13 +420,13 @@
                                     </div>
                                 </form>
                                 <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                                <div class="speaker" id="oracle-specific">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="Norman Anderson">
                                 </div>
                             </div>
                             <div class="col-md-10">
                                 <h4>Oracle Project of the Year Awards:</h4>
-                                <p>Each year working with Oracle we identify and select the Best Global Projects. This year the awards will be televised on GViP TV!</p>
+                                <p>Each year working with Oracle we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
                                 <br>
                                 <p>Special Strategic Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">David H. Petraeus, Chairman, KKR Global Institute and Former Director, Central Intelligence Agency</a></strong></p>
@@ -330,7 +456,7 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic  Growth:</h4>
+                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic Growth:</h4>
                                 <p>We bring people together to highlight new and visionary technology applications that will change our world - and that offer immediate opportunities to project developers, business executives and national policymakers.</p>
                                 <br>
                                 <p>Panelists:</p>
@@ -338,7 +464,8 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Tim Sylvester, Founder, Integrated Roadways</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4062" class="schedule-link">Michael J. Woods, CEO and COO, Big Sun Holdings Group Corporation</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3816" class="schedule-link">Mike Day, Director, Clara Smart Cities</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/1664" class="schedule-link">JP Giometti, Executive Director, Global Strategy & Corporate Development, HCSS</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Lisa Stine, Technical Solutions Executive, Construction, Autodesk</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Oracle</a></strong></p>
 
                             </div>
                         </div>
@@ -359,13 +486,14 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>US Deal Team Discussion:</h4>
+                                <h4>Revitalizing Emerging Market Economies :</h4>
                                 <br>
                                 <p>Thought Leaders:</p>
-                                <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Pat Kirwan, Director, TPCC, United States Department of Commerce</a> </strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Thomas Hardy, Director for Program Management of the U.S. Trade and Development Agency</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">David Penna, Senior Vice President, Office of Strategic Initiatives, US Development Finance Corporation</a></strong></p>
+
+                                <p><strong><a href="#speakers" class="schedule-link">Nicolas Firzli, Director General, World Pensions Council</a> </strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Andrew Charlesworth, CEO, CAMG Infrastructure</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/4269" class="schedule-link">Mark Davis, Chief Infrastructure Officer, Alaska Industrial Development and Export Authority</a></strong></p>
                             </div>
                         </div>
 
@@ -386,7 +514,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Bringing Supply Chains Home - The Case of Rare Earths</h4>
-                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health.  This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth metals.  This panel brings together critical rare earths actors focused on Niobium in the Americas.</p>
+                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health. This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth metals. This panel brings together critical rare earths actors focused on Niobium in the Americas.</p>
                                 <br>
                                 <p>Special Case Study:</p>
                                 <p><strong>The Niobium Elk Creek Project, Nebraska</strong></p>
@@ -394,9 +522,9 @@
                                 <p>Panelists:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Sarah Ryker, Associate Director, Energy and Minerals, USGS</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Mark Smith, NioCorp Developments Ltd.</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Alexandre Magnus Jordão, Niobium Market Development Specialist, CBMM</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Dave Penna, Managing Director, DFC*</a></strong></p>
-                               
+                                <p><strong><a href="#speakers" class="schedule-link">Eric Jones, Managing Director, U.S. International Development Finance Corporation
+                                        </a></strong></p>
+
                             </div>
                         </div>
 
@@ -417,12 +545,14 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>National Infrastructure Banks - Driving Economic Recovery:</h4>
-                                <p>Infrastructure banks can focus and drive investment during a period of economic crisis, and so this panel looks at the priorities of such institutions,and how their capacity can be maximized over the next 36 months. </p>
+                                <p>Infrastructure banks can focus and drive investment during a period of economic crisis, and so this panel looks at the priorities of such institutions, and how their capacity can be enhanced. Critical issues include funding for feasibility studies, crowding out private investment, and politicization. </p>
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4154" class="schedule-link">William T. Nolan, President, Infra-Bk, LLC</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">John Casola, Chief Investment Officer, Canada Infrastructure Bank</a></strong></p>
                                 <p><strong><a href="#spakers" class="schedule-link">Francisco Gomez, Vice President of Strategy & Development, FDN</a></strong>(Colombia)</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2072" class="schedule-link">Brian Ross, CEO, InfraShares </a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Manager, Infrastructure - Inter-American Development Bank</a></strong></p>
                             </div>
                         </div>
 
@@ -443,7 +573,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
-                                <p>TThe focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world.  We combine key practitioners with policymakers and developers.</p>
+                                <p>TThe focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world. We combine key practitioners with policymakers and developers.</p>
                                 <br />
                                 <p>Panelists: </p>
                                 <p><strong><a href="#speakers" class="schedule-link">Nilton Seuaciuc, President, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
@@ -469,13 +599,13 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>First Annual Global Benefits Prize:</h4>
-                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects.  Technology allows us to increasingly focus on users - and on the results of projects from the user perspective.  This includes health, mobility, job creation, business creation and overall opportunity creation.  Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced!</p>
+                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects. Technology allows us to increasingly focus on users - and on the results of projects from the user perspective. This includes health, mobility, job creation, business creation and overall opportunity creation. Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced!</p>
                                 <br>
-                                <p>Thought Leaders:</p>
+                                <p>Discussion Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Michael Bühler, HTCW - Constance, Construction Economics</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Konrad Nübel, Technical University of Munich, Construction Process Managemen</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/4023" class="schedule-link">Andrew Verone, Oracle Corporation</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Manager, Infrastructure Manager, InterAmerican Development Bank</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Stephen Townsend, Network Engagement </a></strong></p>
                             </div>
                         </div>
 
@@ -495,8 +625,10 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Real Opportunities, Bold Recovery - Leadership Discussion From Around the World</h4>
-
+                                <h4>Real Opportunities, Bold Recovery - Action Items From Around the World</h4>
+                                <p>(Breakfast in Tokyo, Dinner in the U.S., and late Dinner in Madrid!)</p>
+                                <br>
+                                <p>The wrap-up will focus on action items compiled from discussions throughout the day. The overall aim of this 13th Global Strategic Infrastructure Leadership Forum is swift and robust economic recovery. We believe that infrastructure is key, and so the recommendations will focus on that topic.</p>
                             </div>
                         </div>
 
@@ -528,10 +660,10 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a></strong>(Poland)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Denmark)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Denmark-Germany)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a></strong> (Estonia-Latvia-Lithuania)</p>
                                 <p><strong>Ankara-Niğde Highway</strong>(Turkey)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/halkal-kapkule-high-speed-rail-route" class="schedule-link">Halkalı-Kapıkule Railway</a></strong>(Turkey)</p>
+
                             </div>
                         </div>
 
@@ -585,7 +717,7 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a></strong>(Brazil)</p>
-                              <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a></strong>(Brazil)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a></strong>(Colombia)</p>
                             </div>
@@ -783,7 +915,6 @@
                                 <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a></strong> (United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a></strong>(Mexico)</p>
                             </div>
                         </div>
 
@@ -793,10 +924,10 @@
                     <!-- Start Track C -->
                     <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
                         <h2>Track C: Strategic Workshops</h2>
-                    
+
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>2:00 PM EST</time>
+                                <time>5:00 PM EST</time>
                                 <form method="POST" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
@@ -810,13 +941,14 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Revitalizing Emerging Market Economies:</h4>
+                                <h4> US Deal Team Discussion:</h4>
                                 <br>
                                 <p> Thought Leaders:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Nicolas Firzli, Director General, World Pensions Council</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Pereira dos Santos, Special Advisor - Infrastructure, Inter-American Development Bank</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Pat Kirwan, Director, TPCC, United States Department of Commerce </a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/705" class="schedule-link"></a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency
+                                            U.S. International Development Finance Corporation</a></strong></p>
 
                             </div>
                         </div>
@@ -839,20 +971,20 @@
                                 <h4>Benefits Index Creation:</h4>
                                 <br>
                                 <p>Thought Leaders:</p>
-                                <p><strong>Project Management Institute</strong> (Australia chapter)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Stephen Townsend, Network Engagement Facilitator, Project Management Institute</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
-                                
+
+                            </div>
+
                         </div>
 
-                    </div>
-
-                    <!-- End of Track C-->
+                        <!-- End of Track C-->
 
                     </div>
 
 
-                 
+
                 </div>
 
             </div>
@@ -1244,6 +1376,59 @@
             </div>
 
         </section><!-- End Gallery Section -->
+
+
+        <!-- Sponsors Section -->
+        <section id="sponsors">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Event Sponsors</h2>
+                </div>
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Strategic Sponsors</h1>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Apcoll.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Hexagon.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/starr.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Trimble.jpg" alt="" class="img-fluid w-100"></div>
+                </div>
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Platinum Sponsors</h1>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/acea.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/apexbrasil copy.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/CamGLLp.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/crowell.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/Northeastmaglev.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/theia.jpg" alt="" class="img-fluid w-100"></div>
+                </div>
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Gold Sponsors</h1>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Arup.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/blackbuffalo.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/BNA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/CCR.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/COLE.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/DP.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Global VIA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Lattice.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Simco.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Structural.jpg" alt="" class="img-fluid w-100"></div>
+                </div>
+
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Silver Sponsors</h1>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Autodesk.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Cadiz.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/GreatLakes.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Port of Montreal.jpg" alt="" class="img-fluid w-100"></div>
+
+                </div>
+
+
+            </div>
+        </section>
+        <!-- End  Sponsors Section -->
 
         <!-- =======  F.A.Q Section ======= -->
         <section id="faq">
