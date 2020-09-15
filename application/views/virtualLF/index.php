@@ -86,6 +86,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#schedule">Agenda</a></li>
                 <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
                 <li><a href="https://www.cg-la.com/store?category=GViP">Custom Services</a></li>
@@ -1311,7 +1312,7 @@
             </div>
         </section>
         <!-- End Subscribe Section -->
-        
+
         <!-- ======= Gallery Section ======= -->
         <section id="gallery">
 
@@ -1337,6 +1338,58 @@
             </div>
 
         </section><!-- End Gallery Section -->
+
+
+        <!-- Sponsors Section -->
+        <section id="sponsors">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Event Sponsors</h2>
+                </div>
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Strategic Sponsors</h1>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/apcol.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Hexagon.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/starr.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Trimble.jpg" alt="" class="img-fluid w-100"></div>
+                </div>
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Platinum Sponsors</h1>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/acea.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/apexbrasil copy.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/CamGLLp.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/crowell.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/Northeastmaglev.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/theia.jpg" alt="" class="img-fluid w-100"></div>
+                </div>
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Gold Sponsors</h1>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Arup.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/blackbuffalo.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/BNA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/CCR.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/COLE.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Global VIA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Lattice.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Simco.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Structural.jpg" alt="" class="img-fluid w-100"></div>
+                </div>
+
+                <div class="row">
+                    <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Silver Sponsors</h1>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Autodesk.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Cadiz.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/GreatLakes.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-3"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Port of Montreal.jpg" alt="" class="img-fluid w-100"></div>
+
+                </div>
+
+
+            </div>
+        </section>
+        <!-- End  Sponsors Section -->
 
         <!-- =======  F.A.Q Section ======= -->
         <section id="faq">
