@@ -19,9 +19,9 @@
     <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/vendor/aos/aos.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style_updated.css" rel="stylesheet">
+        <link href="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/css/style_updated_v4.css" rel="stylesheet">
 
-
+    
     <!-- =======================================================
   * Template Name: TheEvent - v2.2.0
   * Template URL: https://bootstrapmade.com/theevent-conference-event-bootstrap-template/
@@ -32,70 +32,59 @@
 
 <body>
     <style>
-        .thumbnail {
-            margin-bottom: 2em;
-        }
-
-        .overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background: rgba(6, 12, 34, 0.25);
-        }
-
-        .overlay-head {
-            text-align: center;
-            width: 90%;
-            font-weight: 600;
-            color: white;
-            font-size: 4rem !important;
-        }
-
-        .overlay-text {
-            display: none;
-            opacity: 0;
-            width: 80%;
-            font-weight: 700;
-            font-size: 2rem !important;
-        }
-
-        .overlay:hover {
-            cursor: pointer;
-            transition: 500ms;
-            background: rgba(6, 12, 34, 0.75);
-        }
-
-        .overlay:hover .overlay-head {
-            display: none;
-        }
-
-        .overlay:hover .overlay-text {
-            display: initial;
-            opacity: 1;
+        /* .nav-link {
+            color: #fff !important;
         }
 
 
-        #oracle-specific {
-            min-width: 125px !important;
-            min-height: 125px !important;
+        #intro::before {
+            background: rgba(100, 100, 100, 0.4) !important;
         }
+
+        #intro-p {
+            color: #366 !important;
+        }
+
+        #intro-h1 {
+            color: #366 !important;
+        }
+
+        #intro-h2 {
+            color: #366 !important;
+        }
+
+        .intro-btn {
+            color: #366 !important;
+        }
+
+        .intro-btn:hover {
+            color: white !important;
+        }
+
+        #about::before {
+            background: rgba(150, 150, 150, 0.4) !important;
+        }
+
+        #about-text * {
+            color: #366 !important;
+        }
+
+        #subscribe-h2 {
+            color: #366 !important;
+        } */
     </style>
     <!-- ======= Header ======= -->
     <header id="header">
         <nav>
             <ul class="nav-menu">
-                <li class="menu-active"><a href="virtualLF">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#schedule">Agenda</a></li>
-                <li><a href="#speakers">Speakers</a></li>
-                <li><a href="#sponsors">Sponsors</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
-                <li><a href="https://www.cg-la.com/store?category=GViP">Custom Services</a></li>
+                <li class="menu-active"><a class="nav-link" href="virtualLF">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#schedule">Agenda</a></li>
+                <li><a class="nav-link" href="#speakers">Speakers</a></li>
+                <li><a class="nav-link" href="#sponsors">Sponsors</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <li><a class="nav-link" href="https://www.gvip.io/virtualLF/privatemeetings">Private Meetings</a></li>
+                <li><a class="nav-link" href="https://www.cg-la.com/store?category=GViP">Custom Services</a></li>
                 <li class="buy-tickets"><a href="https://www.cg-la.com/store/global-registration-all-access">Register Now</a></li>
 
 
@@ -108,13 +97,13 @@
     <section id="intro">
         <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
 
-            <h1 style="fonst-size:2rem" class="mb-4 pb-0"> <?php echo $details['title']; ?> </h1>
-            <h2 style="color:white; font-size:2.5rem"> Real Opportunities, Bold Recovery </h2>
-            <p class="mb-4 pb-0">September 17, 2020</p>
+            <h1 id="intro-h1" class="mb-4 pb-0"> <?php echo $details['title']; ?> </h1>
+            <h2 id='intro-h2' style="font-size:2.5rem"> Real Opportunities, Bold Recovery </h2>
+            <p id="intro-p" class="mb-4 pb-0">September 17, 2020</p>
             <!-- <a href="https://www.youtube.com/watch?v=fVkrz-W1rY4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>-->
             <div>
-                <a href="#schedule" style="font-size:2rem" class="about-btn scrollto">Agenda </a>
-                <a href="https://www.cg-la.com/store/global-registration-all-access" style="font-size:2rem" class="about-btn scrollto">Register Now</a>
+                <a href="#schedule" style="font-size:2rem" class="about-btn scrollto intro-btn">Agenda </a>
+                <a href="https://www.cg-la.com/store/global-registration-all-access" style="font-size:2rem" class="about-btn intro-btn scrollto">Register Now</a>
             </div>
         </div>
     </section><!-- End Intro Section -->
@@ -125,13 +114,13 @@
         <section id="about">
             <div class="container" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-lg-9">
-                        <h2>About The Event</h2>
-                        <p><?php echo $details['content']; ?></p>
+                    <div id="about-text" class="col-lg-9">
+                        <h2 id="about-h2">About The Event</h2>
+                        <p id="about-p"><?php echo $details['content']; ?></p>
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-6 thumbnail">
+                            <a href="https://www.cg-la.com/privatemeetings" class="col-lg-6 thumbnail">
                                 <div class="overlay">
                                     <h1 class="overlay-head">Private Meetings:</h1>
                                     <p class="overlay-text">
@@ -141,8 +130,8 @@
                                     </p>
                                 </div>
                                 <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Private_Meeting.jpg" class="img-fluid w-100" alt="" />
-                            </div>
-                            <div class="col-lg-6 thumbnail">
+                            </a>
+                            <a href="https://www.cg-la.com/virtualtradeshow" class="col-lg-6 thumbnail">
                                 <div class="overlay">
                                     <h1 class="overlay-head">Virtual Trade Show:</h1>
                                     <p class="overlay-text">
@@ -152,8 +141,8 @@
                                     </p>
                                 </div>
                                 <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Virtual_Private_Tradeship.jpg" class="img-fluid w-100" alt="" />
-                            </div>
-                            <div class="col-lg-6 thumbnail">
+                            </a>
+                            <a href="https://www.cg-la.com/store" class="col-lg-6 thumbnail">
                                 <div class="overlay">
                                     <h1 class="overlay-head">GVIP Member Services</h1>
                                     <p class="overlay-text">
@@ -162,8 +151,8 @@
                                     </p>
                                 </div>
                                 <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPmember1.jpg" class="img-fluid w-100" alt="" />
-                            </div>
-                            <div class="col-lg-6 thumbnail">
+                            </a>
+                            <a href="https://www.gvip.io/gviptv" class="col-lg-6 thumbnail">
                                 <div class="overlay">
                                     <h1 class="overlay-head">GVIPTV</h1>
                                     <p class="overlay-text">
@@ -172,7 +161,7 @@
                                     </p>
                                 </div>
                                 <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPTV.jpg" class="img-fluid w-100" alt="" />
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1328,7 +1317,7 @@
         <section id="subscribe">
             <div class="container" data-aos="zoom-in">
                 <div class="section-header">
-                    <h2>Register Now</h2>
+                    <h2 id="subscribe-h2">Register Now</h2>
                 </div>
 
                 <form action="https://www.cg-la.com/store/global-registration-all-access">
