@@ -31,6 +31,53 @@
 </head>
 
 <body>
+    <style>
+        .thumbnail {
+            margin-bottom: 2em;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(6, 12, 34, 0.25);
+        }
+
+        .overlay-head {
+            text-align: center;
+            width: 90%;
+            font-weight: 600;
+            color: white;
+            font-size: 4rem !important;
+        }
+
+        .overlay-text {
+            display: none;
+            opacity: 0;
+            width: 80%;
+            font-weight: 700;
+            font-size: 2rem !important;
+        }
+
+        .overlay:hover {
+            cursor: pointer;
+            transition: 500ms;
+            background: rgba(6, 12, 34, 0.75);
+        }
+
+        .overlay:hover .overlay-head {
+            display: none;
+        }
+
+        .overlay:hover .overlay-text {
+            display: initial;
+            opacity: 1;
+        }
+    </style>
     <!-- ======= Header ======= -->
     <header id="header">
         <nav>
@@ -74,6 +121,52 @@
                     <div class="col-lg-9">
                         <h2>About The Event</h2>
                         <p><?php echo $details['content']; ?></p>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">Private Meetings:</h1>
+                                    <p class="overlay-text">
+                                        Schedule one-on-one meetings with project owners and industry experts
+                                        across the globe with our private meeting system. See who is available
+                                        to build your business now!
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Private_Meeting.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">Virtual Trade Show:</h1>
+                                    <p class="overlay-text">
+                                        Our virtual trade show booth experience is aninteractive experience!
+                                        Check out our exhibition booths, chat with sponsors live, enter
+                                        raffles to win!
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Virtual_Private_Tradeship.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">GVIP Member Services</h1>
+                                    <p class="overlay-text">
+                                        Harness the power of GVIP On time solutions, Expert Insight,
+                                        Unprecedented connectivity.Make projects happen.
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPmember1.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                            <div class="col-lg-6 thumbnail">
+                                <div class="overlay">
+                                    <h1 class="overlay-head">GVIPTV</h1>
+                                    <p class="overlay-text">
+                                        Next Generation TV. Vital discussions with infra insider - exclusive
+                                        interviews with industry experts.
+                                    </p>
+                                </div>
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPTV.jpg" class="img-fluid w-100" alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -330,7 +423,7 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic  Growth:</h4>
+                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic Growth:</h4>
                                 <p>We bring people together to highlight new and visionary technology applications that will change our world - and that offer immediate opportunities to project developers, business executives and national policymakers.</p>
                                 <br>
                                 <p>Panelists:</p>
@@ -386,7 +479,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Bringing Supply Chains Home - The Case of Rare Earths</h4>
-                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health.  This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth metals.  This panel brings together critical rare earths actors focused on Niobium in the Americas.</p>
+                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health. This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth metals. This panel brings together critical rare earths actors focused on Niobium in the Americas.</p>
                                 <br>
                                 <p>Special Case Study:</p>
                                 <p><strong>The Niobium Elk Creek Project, Nebraska</strong></p>
@@ -396,7 +489,7 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Mark Smith, NioCorp Developments Ltd.</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Alexandre Magnus Jordão, Niobium Market Development Specialist, CBMM</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Dave Penna, Managing Director, DFC*</a></strong></p>
-                               
+
                             </div>
                         </div>
 
@@ -443,7 +536,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
-                                <p>TThe focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world.  We combine key practitioners with policymakers and developers.</p>
+                                <p>TThe focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world. We combine key practitioners with policymakers and developers.</p>
                                 <br />
                                 <p>Panelists: </p>
                                 <p><strong><a href="#speakers" class="schedule-link">Nilton Seuaciuc, President, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
@@ -469,7 +562,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>First Annual Global Benefits Prize:</h4>
-                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects.  Technology allows us to increasingly focus on users - and on the results of projects from the user perspective.  This includes health, mobility, job creation, business creation and overall opportunity creation.  Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced!</p>
+                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects. Technology allows us to increasingly focus on users - and on the results of projects from the user perspective. This includes health, mobility, job creation, business creation and overall opportunity creation. Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced!</p>
                                 <br>
                                 <p>Thought Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
@@ -585,7 +678,7 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a></strong>(Brazil)</p>
-                              <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a></strong>(Brazil)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a></strong>(Colombia)</p>
                             </div>
@@ -793,7 +886,7 @@
                     <!-- Start Track C -->
                     <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
                         <h2>Track C: Strategic Workshops</h2>
-                    
+
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>2:00 PM EST</time>
@@ -842,17 +935,17 @@
                                 <p><strong>Project Management Institute</strong> (Australia chapter)</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
-                                
+
+                            </div>
+
                         </div>
 
-                    </div>
-
-                    <!-- End of Track C-->
+                        <!-- End of Track C-->
 
                     </div>
 
 
-                 
+
                 </div>
 
             </div>
@@ -1218,7 +1311,7 @@
             </div>
         </section>
         <!-- End Subscribe Section -->
-
+        
         <!-- ======= Gallery Section ======= -->
         <section id="gallery">
 
