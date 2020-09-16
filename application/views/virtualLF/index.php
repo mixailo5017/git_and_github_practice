@@ -103,7 +103,6 @@
             <!-- <a href="https://www.youtube.com/watch?v=fVkrz-W1rY4" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>-->
             <div>
                 <a href="#schedule" style="font-size:2rem" class="about-btn scrollto intro-btn">Agenda </a>
-                <a href="https://www.cg-la.com/store/global-registration-all-access" style="font-size:2rem" class="about-btn intro-btn scrollto">Register Now</a>
             </div>
         </div>
     </section><!-- End Intro Section -->
@@ -200,7 +199,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>7:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/8873692564475474448">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -232,7 +231,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>8:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/3212808570402491407">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -250,6 +249,9 @@
                                 <p>Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Roberto Escoto, Manager, Investment Department, APEX</a></strong></p>
                                 <br />
+                                <p>Introduction:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Renan Marcondes Fachinatto, Partner, Dal Pozzo Advogados</a></strong></p>
+                                <br>
                                 <p>Key Brazilian Federal and State Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/alcantara-port-terminal-tpa" class="schedule-link">Alcantara Port Terminal (TPA) </a>, Brazil, <a href="https://www.gvip.io/expertise/4183" class="schedule-link">Mr. Paulo Salvador, Executive Director</a></strong></p>
@@ -268,7 +270,29 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>9:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/5124703160453846543">
+                                    <div class="form-row">
+                                        <div class="col-auto">
+                                            <button type="submit">Join Session</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="speaker">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h4>Special Keynote - Key Actions to Drive Global Growth:</h4>
+                                <p><strong><a href="#speakers" class="schedule-link">Andrew Robb, Former Minister of Trade and Investment, Government of Australia </a> </strong></p>
+                                <br>
+                                
+                            </div>
+                        </div>
+                        <div class="row schedule-item">
+                            <div class="col-md-2">
+                                <time>9:15 AM EST</time>
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/7976415209951380495">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -284,9 +308,6 @@
                                 <h4>Top North American Strategic Projects </h4>
                                 <p>Projects that are critical to country growth</p>
                                 <br>
-                                <p>Special Keynote - Key Actions to Drive Global Growth:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Andrew Robb, Former Minister of Trade and Investment, Government of Australia </a> </strong></p>
-                                <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin, </a> United States, <a href="https://www.gvip.io/expertise/3959" class="schedule-link">Mr. Frank Patton, Chairman</a></strong>(United States)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a>, United States, <a href="#speakers" class="schedule-link">Mr. Shawn Wilson, Secretary of the Louisiana Department of Transportation</a>
@@ -300,7 +321,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>10:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/5200987277189001999">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -325,7 +346,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>10:30 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/7863703173476491279">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -351,7 +372,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>11:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/1575657746876738063">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -377,7 +398,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/5540108549032415759">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -400,7 +421,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -424,7 +445,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:30 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -445,7 +466,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:50 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -473,7 +494,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>1:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/236365722827130383">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -502,7 +523,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>2:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/4109558159389078287">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -528,7 +549,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>3:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/8014368152319301903">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -559,7 +580,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>4:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/3767304378918302479">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -585,7 +606,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>5:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/2943721791202478351">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -614,7 +635,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>6:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/1339289135184329231">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -643,7 +664,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>7:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/7491702105916585231">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -673,7 +694,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>9:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/3132086824738438927">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -701,7 +722,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>10:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/5743053106753019151">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -728,7 +749,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>11:00 AM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/3652574738606718479">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -755,7 +776,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>1:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/8203683163901838095">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -782,7 +803,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>2:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/2792052958244182543">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -811,7 +832,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>3:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/7059104753526598671">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -838,7 +859,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>4:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/3715240304320295695">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -867,7 +888,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>5:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/2511426804510236431">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -895,7 +916,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>6:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/2322370178160693007">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -930,7 +951,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>5:00 PM EST</time>
-                                <form method="POST" action="#">
+                                <form method="GET" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -950,36 +971,11 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Roland de Marcellus, Deputy Assistant Secretary, US Department of State</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">U.S. International Development Finance Corporation</a></strong></p>
+                                <p><strong><a href="" class="schedule-link"></a></strong></p>
 
                             </div>
                         </div>
-                        <div class="row schedule-item">
-                            <div class="col-md-2">
-                                <time>6:00 PM EST</time>
-                                <form method="POST" action="#">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>Benefits Index Creation:</h4>
-                                <br>
-                                <p>Thought Leaders:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Stephen Townsend, Network Engagement Facilitator, Project Management Institute</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
-
-                            </div>
-
-                        </div>
-
+                      
                         <!-- End of Track C-->
 
                     </div>
