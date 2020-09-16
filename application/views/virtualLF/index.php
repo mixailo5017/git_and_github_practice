@@ -221,7 +221,7 @@
                                 <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
                                 <br />
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah 250 Bed Hospital, Afghanistan</strong>(Afghanistan)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah 250 Bed Hospital</a></strong>(Afghanistan)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a></strong>(Australia)</p>
                                 <p><strong>Digital Silk Way</strong>(Georgia, Azerbaijan, Kazakhstan)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
@@ -542,7 +542,7 @@
                                 <p><strong><a href="#speakers" class="schedule-link">John Casola, Chief Investment Officer, Canada Infrastructure Bank</a></strong></p>
                                 <p><strong><a href="#spakers" class="schedule-link">Francisco Gomez, Vice President of Strategy & Development, FDN</a></strong>(Colombia)</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/2072" class="schedule-link">Brian Ross, CEO, InfraShares </a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Manager, Infrastructure - Inter-American Development Bank</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
                             </div>
                         </div>
                         <div class="row schedule-item">
@@ -767,7 +767,6 @@
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a> - <a href="https://www.gvip.io/expertise/4103" class="schedule-link">Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong>(United States)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a> - <a href="#speakers" class="schedule-link">Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo </a></strong>(Brazil)</p>
-                                <p><strong>Clara Project - <a href="https://www.gvip.io/expertise/3816" class="schedule-link"> Mike Day, Director, Clara Smart Cities</a></strong></p>
                             </div>
                         </div>
 
