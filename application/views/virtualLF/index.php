@@ -454,8 +454,9 @@
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4103" class="schedule-link">Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Lisa Stine, Technical Solutions Executive, Construction, Autodesk</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/3772" class="schedule-link">Tim Beck, Principal, Strategic Transportation Solutions, Oracle</a></strong></p>
+
                                 <p><strong><a href="https://www.gvip.io/expertise/4048" class="schedule-link">Dev Amratia, Co-Founder & CEO, nPlan</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/3772" class="schedule-link">Tim Beck, Principal, Strategic Transportation Solutions, Oracle</a></strong></p>
 
                             </div>
                         </div>
@@ -878,8 +879,9 @@
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a></strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a></strong> (United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
+
                             </div>
                         </div>
 
@@ -910,7 +912,6 @@
                                 <br>
                                 <p> Thought Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Pat Kirwan, Director, TPCC, United States Department of Commerce </a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Roland de Marcellus, Deputy Assistant Secretary, US Department of State</a></strong></p>
