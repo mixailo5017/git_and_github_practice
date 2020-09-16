@@ -398,7 +398,7 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>12:50 PM EST</time>
+                                <time>12:00 PM EST</time>
                                 <form method="POST" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
@@ -412,11 +412,16 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Oracle Project of the Year Awards:</h4>
-                                <p>Each year working with Oracle we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
+                                <h4>The Path Forward - U.S. Leadership and the Global Recovery</h4>
                                 <br>
-                                <p>Special Strategic Keynote:</p>
+                                <p>Special Policy Keynote:</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Joseph Semsar, Deputy Under Secretary for International Trade, US Department of Commerce</a></strong></p>
+                                <br><br>
+                                <p><strong>12:30PM</strong> &nbsp; Special Strategic Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">David H. Petraeus, Chairman, KKR Global Institute and Former Director, Central Intelligence Agency</a></strong></p>
+                                <br><br>
+                                <h4>12:50PM &nbsp; Oracle Project of the Year Awards:</h4><br>
+                                <p>Each year working with Oracle we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
                                 <br>
                                 <p>Categories include:</p>
                                 <p><strong>- Strategic Project of the Year</strong></p>
