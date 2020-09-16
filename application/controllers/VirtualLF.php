@@ -22,6 +22,10 @@ class VirtualLF extends CI_Controller
         $this->load->model('expertise_model');
 
 
+        // If the user is not logged in then redirect to the login page
+        auth_check();
+        
+        
         // Load breadcrumb library
         $this->load->library('breadcrumb');
 
