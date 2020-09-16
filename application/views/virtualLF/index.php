@@ -129,7 +129,7 @@
                                         to build your business now!
                                     </p>
                                 </div>
-                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Private_Meeting.jpg" class="img-fluid w-100" alt="" />
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/aboutopt/Private_Meeting.jpg" class="img-fluid w-100" alt="" />
                             </a>
                             <a href="https://www.cg-la.com/virtualtradeshow" class="col-lg-6 thumbnail">
                                 <div class="overlay">
@@ -140,7 +140,7 @@
                                         raffles to win!
                                     </p>
                                 </div>
-                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/Virtual_Private_Tradeship.jpg" class="img-fluid w-100" alt="" />
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/aboutopt/Virtual_Private_Tradeship.jpg" class="img-fluid w-100" alt="" />
                             </a>
                             <a href="https://www.cg-la.com/store" class="col-lg-6 thumbnail">
                                 <div class="overlay">
@@ -150,7 +150,7 @@
                                         Unprecedented connectivity.Make projects happen.
                                     </p>
                                 </div>
-                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPmember1.jpg" class="img-fluid w-100" alt="" />
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/aboutopt/GVIPmember1.jpg" class="img-fluid w-100" alt="" />
                             </a>
                             <a href="https://www.gvip.io/gviptv" class="col-lg-6 thumbnail">
                                 <div class="overlay">
@@ -160,7 +160,7 @@
                                         interviews with industry experts.
                                     </p>
                                 </div>
-                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/about/GVIPTV.jpg" class="img-fluid w-100" alt="" />
+                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/aboutopt/GVIPTV.jpg" class="img-fluid w-100" alt="" />
                             </a>
                         </div>
                     </div>
