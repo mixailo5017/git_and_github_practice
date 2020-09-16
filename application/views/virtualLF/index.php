@@ -443,7 +443,7 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic  Growth:</h4>
+                                <h4>New Technologies Driving Real Opportunity for Improved Project Performance & Economic Growth:</h4>
                                 <p>We bring people together to highlight new and visionary technology applications that will change our world - and that offer immediate opportunities to project developers, business executives and national policymakers.</p>
                                 <br>
                                 <p>Panelists:</p>
@@ -498,7 +498,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Bringing Supply Chains Home - The Case of Rare Earths and Speciality Metals</h4>
-                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health.  This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth and specialty metals.  This panel brings together critical rare earths and specialty metals  actors focused on Niobium in the Americas.</p>
+                                <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health. This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth and specialty metals. This panel brings together critical rare earths and specialty metals actors focused on Niobium in the Americas.</p>
                                 <br>
                                 <p>Special Case Study:</p>
                                 <p><strong>The Niobium Elk Creek Project, Nebraska</strong></p>
@@ -529,7 +529,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>National Infrastructure Banks - Driving Economic Recovery:</h4>
-                                <p>Infrastructure banks can focus and drive investment during a period of economic crisis, and so this panel looks at the priorities of such institutions, and how their capacity can be enhanced.  Critical issues include funding for feasibility studies, crowding out private investment, and politicization. </p>
+                                <p>Infrastructure banks can focus and drive investment during a period of economic crisis, and so this panel looks at the priorities of such institutions, and how their capacity can be enhanced. Critical issues include funding for feasibility studies, crowding out private investment, and politicization. </p>
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4154" class="schedule-link">William T. Nolan, President, Infra-Bk, LLC</a></strong></p>
@@ -585,7 +585,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>First Annual Global Benefits Prize:</h4>
-                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects.  Technology allows us to increasingly focus on users - and on the results of projects from the user perspective.  This includes health, mobility, job creation, business creation and overall opportunity creation.  Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced! </p>
+                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects. Technology allows us to increasingly focus on users - and on the results of projects from the user perspective. This includes health, mobility, job creation, business creation and overall opportunity creation. Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced! </p>
                                 <br>
                                 <p>Discussion Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
@@ -812,11 +812,13 @@
                                 <p>The pace of transformative energy projects is tremendous, from renewable energy, to storage, to new ‘behind the meter’ technologies.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong>Azito plant</strong><p>(Côte d’Ivoire)</p><strong>& Malindi PV Projects </strong>(Kenya)</p>
+                                <p><strong>Azito plant</strong>
+                                    <p>(Côte d’Ivoire)</p><strong>& Malindi PV Projects </strong>(Kenya)
+                                </p>
                                 <p><strong>Tire Recycling Waste-to-Energy Plant</strong>(Brazil)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/mauritania-hybrid-photovoltaic-power-plants" class="schedule-link">8 Hybrid Photovoltaic (PV) Power Plants</a></strong>(Mauritania)</p>
                                 <p><strong><a href="https://www.gvip.io/projects/puerto-rico-electric-power-authority-utility-scale-energy-storage-system" class="schedule-link">Battery Energy Storage System & Flexible Distributed Energy Units</a></strong>(Puerto Rico)</p>
-                            
+
                             </div>
                         </div>
 
@@ -838,7 +840,7 @@
                             </div>
                             <div class="col-md-10">
                                 <h4>Water and Wastewater - Reviving Investment in the Forgotten Infrastructure:</h4>
-                                <p>The focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world.  We combine key practitioners with policymakers and developers.</p>
+                                <p>The focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world. We combine key practitioners with policymakers and developers.</p>
                                 <br />
                                 <p>Panelists: </p>
                                 <p><strong><a href="#speakers" class="schedule-link">Mohsen Mortada, President and CEO at Cole Engineering Group</a></strong></p>
@@ -848,7 +850,7 @@
                             </div>
                         </div>
 
-                     
+
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>6:00 PM EST</time>
@@ -960,38 +962,23 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Khanna_Parag_FutureMap.jpg" alt="Speaker 1" class="img-fluid w-100">
                             <div class="details">
-                                <h3><a href="#schedule">K.N. Gunalan</a></h3>
-                                <p>Senior Vice President, Alternative Delivery, Americas, AECOM</p>
+                                <h3><a href="#schedule">Parag Khanna</a></h3>
+                                <p>Founder & Managing Partner, FutureMap</p>
                                 <div class="social">
-
+                                    <a href="https://www.gvip.io/expertise/4360"><strong style="font-size: larger;">GVIP</strong></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid w-100">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Petraeus_David_KKR.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
-                                <h3><a href="#schedule">Roger Bohnert</a></h3>
-                                <p>Director of Outreach and Project Development, Build America Bureau, U.S. Department of Transportation</p>
+                                <h3><a href="#schedule">David H. Petraeus</a></h3>
+                                <p>Chairman, KKR Global Institute and Former Director, Central Intelligence</p>
                                 <div class="social">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/jen.jpg" alt="Speaker 4" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Jennifer Schmitz</a></h3>
-                                <p>Founder & CEO, Lattice Industries Inc.</p>
-                                <div class="social">
-                                    <a href="https://www.gvip.io/expertise/4103"><strong style="font-size: larger;">GVIP</strong></a>
                                 </div>
                             </div>
                         </div>
@@ -999,58 +986,31 @@
 
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/5.jpg" alt="Speaker 5" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Levy_Joaquim_Safra-Bank.jpg" alt="Speaker 3" class="img-fluid w-100">
                             <div class="details">
-                                <h3><a href="#schedule">Francis Brooke</a></h3>
-                                <p>Deputy Director, National Economic Council</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/6.jpg" alt="Speaker 6" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">David Penna</a></h3>
-                                <p>Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</p>
+                                <h3><a href="#schedule">Joaquim Levy</a></h3>
+                                <p>Chief Economist, Safra bank and former Minister of Finance, Brazil</p>
                                 <div class="social">
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/7.jpg" alt="Speaker 1" class="img-fluid w-100">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Fortea_Javier_Globalvia.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
-                                <h3><a href="#schedule">Mike Johnson</a></h3>
-                                <p>Senior Vice President, Infrastructure Market & Strategy, Kiewit</p>
+                                <h3><a href="#schedule">Javier Perez Fortea</a></h3>
+                                <p>CEO, Globalvia</p>
                                 <div class="social">
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/9.jpg" alt="Speaker 3" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Ian Rainey</a></h3>
-                                <p>Senior Vice President, Northeast Maglev</p>
-                                <div class="social">
-                                    <a href="https://www.gvip.io/expertise/4297"><strong style="font-size: larger;">GVIP</strong></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 6" class="img-fluid w-100">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/norm.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
                                 <h3><a href="#schedule">Norman F. Anderson</a></h3>
                                 <p>CG/LA Infrastructure</p>
@@ -1060,226 +1020,77 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/16.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Escoto_Roberto_Apex.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
-                                <h3><a href="#schedule">Pierce Homer</a></h3>
-                                <p>Director, Moffat & Nichol (Former VA Secretary of Transportation)</p>
-                                <div class="social">
-                                    <a href="https://www.gvip.io/expertise/999"><strong style="font-size: larger;">GVIP</strong></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/10.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Gov. Jim Justice</a></h3>
-                                <p>Governor, West Virginia</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/11.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Robert Cardillo</a></h3>
-                                <p>Chief Strategist, Theia</p>
+                                <h3><a href="#schedule">Roberto Escoto</a></h3>
+                                <p>Manager, Investment Department, APEX</p>
                                 <div class="social">
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/14.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Former Rep. Bill Shuster</a></h3>
-                                <p>Former Representative for Pennsylvania’s 9th District</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/17.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Courtney Degener</a></h3>
-                                <p>Vice President, Communications & External Relations, Cadiz</p>
-                                <div class="social">
-                                    <a href="https://www.gvip.io/expertise/3563"><strong style="font-size: larger;">GVIP</strong></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <div>
-                                <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/15_new.jpg" style="object-fit:cover" alt="Speaker 2" class="img-fluid w-100">
-                            </div>
-                            <div class="details">
-                                <h3><a href="#schedule">William T. Nolan</a></h3>
-                                <p>Managing Member and President at Infra-Bk, LLC</p>
-                                <div class="social">
-                                    <a href="https://www.gvip.io/expertise/4154"><strong style="font-size: larger;">GVIP</strong></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Al-Wer_Issa_MWI.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Issa Al-Wer</a></h3>
-                                <p>Project Manager, Ministry of Water and Irrigation (MWI)</p>
-                                <div class="social">
-                                    <a href="https://www.gvip.io/expertise/4089"><strong style="font-size: larger;">GVIP</strong></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Engler_Gabriela_Sao-Paolo.jpeg " alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Gabriela Engler</a></h3>
-                                <p>Executive Secretary, Sao Paulo's State Government</p>
-                                <div class="social">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Butler_Mark_Windsor-Detroit.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Mark Butler</a></h3>
-                                <p>Director of Communications, Windsor Detroit Bridge Authority</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Zinder_Ramiro_PPP.jpeg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Ramiro Zinder</a></h3>
-                                <p>PPP Executive Secretary, SCPAR TEAM (SANTA CATARINA PPP UNIT)</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Emond_Charles_CDPQ.jpeg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Charles Emond</a></h3>
-                                <p>CEO, CDPQ Global(invited)</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Cane_Isabel_OECD.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Isabel Cane</a></h3>
-                                <p>Head of Trust in Business initiative, Directorate for Financial and Enterprise Affairs, Organisation for Economic Cooperation and Development (OECD)</p>
-                                <div class="social">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Thorne_Karen_USGS.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Karen Thorne</a></h3>
-                                <p>Principal Investigator, USGS</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Firzli_Nicolas_WPC.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Nicolas Firzli</a></h3>
-                                <p>Director General, World Pensions Council</p>
-                                <div class="social">
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Levy_Joaquim_Safra-Bank.jpg" alt="Speaker 2" class="img-fluid w-100">
-                            <div class="details">
-                                <h3><a href="#schedule">Joaquim Levy</a></h3>
-                                <p>Chief Economist, Safra bank and former Minister of Finance, Brazil</p>
-                                <div class="social">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
                             <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Gluski_Andres_AES.png" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
                                 <h3><a href="#schedule">Andrés Gluski</a></h3>
-                                <p>CEO, AES Corporation</p>
+                                <p> CEO, AES Corporation</p>
                                 <div class="social">
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Hill_Jeff_BCG.jpeg" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Robb_Andrew_Australia.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
-                                <h3><a href="#schedule">Jeff Hill</a></h3>
-                                <p> Senior Managing Director, BCG (invited)</p>
+                                <h3><a href="#schedule">Andrew Robb</a></h3>
+                                <p>Minister of Trade and Investment, Government of Australia</p>
+                                <div class="social">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Semsar_Joe_US-Department.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <div class="details">
+                                <h3><a href="#schedule">Joseph Semsar</a></h3>
+                                <p>Acting Under Secretary for International Trade, US Department of Commerce Agency</p>
+                                <div class="social">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Pass_James_Guggenheim.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <div class="details">
+                                <h3><a href="#schedule">Jim Pass</a></h3>
+                                <p>Senior Managing Director, Guggenheim Partners</p>
                                 <div class="social">
 
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Jones_Eric_US-International-Finance.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <div class="details">
+                                <h3><a href="#schedule">Eric Jones</a></h3>
+                                <p>Managing Director, U.S. International Development Finance Corporation</p>
+                                <div class="social">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
+            </div>
         </section>
         <!-- End Speakers Section -->
 
