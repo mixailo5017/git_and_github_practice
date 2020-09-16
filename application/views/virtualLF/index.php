@@ -409,7 +409,7 @@
                                 </form>
                                 <br>
                                 <div class="speaker" id="oracle-specific">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="Norman Anderson">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
                                 </div>
                             </div>
                             <div class="col-md-10">
@@ -433,7 +433,7 @@
                                 </form>
                                 <br>
                                 <div class="speaker" id="oracle-specific">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="Norman Anderson">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
                                 </div>
                             </div>
                             <div class="col-md-10">
