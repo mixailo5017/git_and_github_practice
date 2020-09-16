@@ -250,7 +250,7 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Roberto Escoto, Manager, Investment Department, APEX</a></strong></p>
                                 <br />
                                 <p>Introduction:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Renan Marcondes Fachinatto, Partner, Dal Pozzo Advogados</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Renan Marcondes Facchinatto, Partner, Dal Pozzo Advogados</a></strong></p>
                                 <br>
                                 <p>Key Brazilian Federal and State Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure</a></strong></p>
@@ -286,7 +286,7 @@
                                 <h4>Special Keynote - Key Actions to Drive Global Growth:</h4>
                                 <p><strong><a href="#speakers" class="schedule-link">Andrew Robb, Former Minister of Trade and Investment, Government of Australia </a> </strong></p>
                                 <br>
-                                
+
                             </div>
                         </div>
                         <div class="row schedule-item">
@@ -421,7 +421,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:00 PM EST</time>
-                                <form method="GET" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/6116202064452254223">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -445,7 +445,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:30 PM EST</time>
-                                <form method="GET" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/6116202064452254223">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -562,7 +562,7 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Bringing Supply Chains Home - The Case of Rare Earths and Speciality Metals</h4>
+                                <h4>Bringing Supply Chains Home - The Case of Rare Earths and Specialty Metals</h4>
                                 <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health. This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth and specialty metals. This panel brings together critical rare earths and specialty metals actors focused on Niobium in the Americas.</p>
                                 <br>
                                 <p>Special Case Study:</p>
@@ -598,9 +598,9 @@
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4154" class="schedule-link">William T. Nolan, President, Infra-Bk, LLC</a></strong></p>
-                                <p><strong><a href="#spakers" class="schedule-link">Francisco Gomez, Vice President of Strategy & Development, FDN (Colombia)</a></strong>(Colombia)</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/2072" class="schedule-link">Brian Ross, CEO, InfraShares </a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Kristie Pellecchia, Former Senior Advisor, Western Hemisphere US DFC</a></strong></p>
                             </div>
                         </div>
                         <div class="row schedule-item">
@@ -626,7 +626,7 @@
                                 <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
                                 <br>
                                 <p>Thought Leader Discussion:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olsen, Theia Satellite Project</a></strong>(United States)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olseon, Theia Satellite Project</a></strong>(United States)</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Dr. Joseph N. Pelton, Executive Board, International Association for the Advancement of Space Safety (IAASS)</a></strong></p>
                             </div>
                         </div>
@@ -739,7 +739,6 @@
                                 <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong>Hydropower Power Plants Revitalization Project & PRASA Metering Project, Puerto Rico, <a href="#speakers" class="schedule-link">Mr. Omar Marrero, Executive Director</a></strong></p>
                                 <p><strong>Vita Ambient Water Performance Contracts, Brazil, <a href="#speakers" class="schedule-link">Ms. Milene Aguiar, Engineer</a></strong></p>
                                 <p><strong>Headworks Water and Sanitation Project, Peru, <a href="#speakers" class="schedule-link">Mr. Jorge Sulem, Project Manager</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/cadiz-valley-water" class="schedule-link">Cadiz Water Conveyance</a>, United States, <a href="https://www.gvip.io/expertise/3563" class="schedule-link">Ms. Courtney Degener, Vice President</a></strong></p>
@@ -879,8 +878,7 @@
                                 <p><strong>Azito plant & Malindi PV Projects, Côte d’Ivoire and Kenya, <a href="https://www.gvip.io/expertise/2651" class="schedule-link">Mr. Jonathan Hoffman, Chief Development Officer</a></strong></p>
                                 <p><strong>Tire Recycling Waste-to-Energy Plant, Brazil, <a href="#speakers" class="schedule-link">Mr. Luis Fernando Martinez, CEO</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/mauritania-hybrid-photovoltaic-power-plants" class="schedule-link">8 Hybrid Photovoltaic (PV) Power Plants</a>, Mauritania, <a href="#speakers" class="schedule-link">Dr. Hemmat Safwat</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/puerto-rico-electric-power-authority-utility-scale-energy-storage-system" class="schedule-link">Battery Energy Storage System & Flexible Distributed Energy Units</a>, Puerto Rico, <a href="#speakres" class="schedule-link">Mr. Omar Marrero, Executive Director</a></strong></p>
-
+                                <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The CLARA Plan Hydrogen Project</a>, Australia, <a href="https://www.gvip.io/expertise/4378" class="schedule-link">Mr. Nick Cleary, Chairman & CEO</a></strong></p>
                             </div>
                         </div>
 
@@ -907,8 +905,9 @@
                                 <p>Panelists: </p>
                                 <p><strong><a href="#speakers" class="schedule-link">Mohsen Mortada, President and CEO at Cole Engineering Group</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Nilton Seuaciuc, President, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
-                                <p><strong><a href="https://www.gvip.io/expertise/3493" class="schedule-link">Antonino Ferreira, International CEO, ACEA </a></strong>(Rome)</p>
+                                <p><strong><a href="https://www.gvip.io/expertise/3493" class="schedule-link">Antonino Ferrera, International CEO, ACEA </a></strong>(Rome)</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Albert Cho, Vice President & General Manager, Advanced Infrastructure Analytics, Xylem</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Travis Smith, Sr. Director Product Marketing*, Sensus, Xylem</a></strong></p>
                             </div>
                         </div>
 
@@ -946,7 +945,7 @@
 
                     <!-- Start Track C -->
                     <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-                        <h2>Track C: Strategic Workshops</h2>
+                        <h2>Track C: Strategic HWorkshops</h2>
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
@@ -971,11 +970,11 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Roland de Marcellus, Deputy Assistant Secretary, US Department of State</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">U.S. International Development Finance Corporation</a></strong></p>
-                                <p><strong><a href="" class="schedule-link"></a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Garrett Marquis, Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</a></strong></p>
 
                             </div>
                         </div>
-                      
+
                         <!-- End of Track C-->
 
                     </div>
