@@ -221,11 +221,11 @@
                                 <p>Parag Khanna is a leading global strategy advisor, world traveler, and best-selling author. He is Founder & Managing Partner of FutureMap, a data and scenario based strategic advisory firm. Parag’s newest book, The Future is Asian: Commerce, Conflict & Culture in the 21st Century(2019), presents this irrepressible global Asianization through detailed analysis, data and maps of Asia’s major markets and their combined impact on global economy, society and governance.</p>
                                 <br />
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah 250 Bed Hospital</a></strong>(Afghanistan)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a></strong>(Australia)</p>
-                                <p><strong>Digital Silk Way</strong>(Georgia, Azerbaijan, Kazakhstan)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a></strong>(Myanmar)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project</a></strong>(AAWDC) (Jordan)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/ali-jinnah-supper-specialty-hospital" class="schedule-link">Ali Jinnah 250 Bed Hospital</a>Afghanistan, <a href="https://www.gvip.io/expertise/4028" class="schedule-link">Matin Zahid, Head of PPP Unit</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The Clara Plan</a>,Australia,<a href="https://www.gvip.io/expertise/4378" class="schedule-link">Mr. Nick Cleary, Chairman & CEO</a></strong></p>
+                                <p><strong>Digital Silk Way Georgia, Azerbaijan and Kazakhstan,<a href="#speaker" class="schedule-link">Mr. Teymur Taghiyev, Head of Strategy at NEQSOL Holding</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/sinma-or-nga-yok-bay-area-development-deep-sea-port-project-ayeyarwady-region-myanmar" class="schedule-link">Sinma Deepwater Port</a>,Myanmar,<a href="https://www.gvip.io/expertise/1385" class="schedule-link">Mr. Thu Rein Aung, Chairman & CEO</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/aqaba-amman-water-desalination-conveyance-project-aawdc" class="schedule-link">Aqaba – Amman Water Desalination & Conveyance Project(AAWDC)</a>,Jordan,<a href="https://www.gvip.io/expertise/4089" class="schedule-link">Mr. Issa Al-wer</a></strong></p>
                             </div>
                         </div>
 
@@ -251,10 +251,10 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Roberto Escoto, Manager, Investment Department, APEX</a></strong></p>
                                 <br />
                                 <p>Key Brazilian Federal and State Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/alcantara-port-terminal-tpa" class="schedule-link">Alcantara Port Terminal</a></strong>(TPA) (Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/metropolitan-integrated-transit-system" class="schedule-link">Metropolitan Integrated Transit System, Florianopolis</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/metropolitan-train-lines-8-diamond-and-9-emerald" class="schedule-link">Metropolitan Train Lines 8 and 9, São Paulo</a></strong>(Brazil)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/pampulha-airport-concession" class="schedule-link">Pampulha Airport Concession</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/alcantara-port-terminal-tpa" class="schedule-link">Alcantara Port Terminal (TPA) </a>, Brazil, <a href="https://www.gvip.io/expertise/4183" class="schedule-link">Mr. Paulo Salvador, Executive Director</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/metropolitan-integrated-transit-system" class="schedule-link">Metropolitan Integrated Transit System, Florianopolis</a>,Brazil, <a href="https://www.gvip.io/expertise/4219" class="schedule-link">Mr. Ramiro Zinder, Executive Secretary for PPPs</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/metropolitan-train-lines-8-diamond-and-9-emerald" class="schedule-link">Metropolitan Train Lines 8 and 9, São Paulo</a>, Brazil, <a href="#speakers" class="schedule-link"> Ms. Gabriela Engler, Executive Secretary for Partnerships</a></strong></p>
                             </div>
 
                             <div class="col-md-2">
@@ -288,11 +288,12 @@
                                 <p><strong><a href="#speakers" class="schedule-link">Andrew Robb, Former Minister of Trade and Investment, Government of Australia </a> </strong></p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin</a></strong>(United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a></strong> (United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a></strong>(Mexico)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/jfk-airport-modernization" class="schedule-link">JFK Terminal One Redevelopment</a></strong>(United States)</p>
-
+                                <p><strong><a href="https://www.gvip.io/projects/great-lakes-basin-railroad" class="schedule-link">Great Lakes Transportation Basin, </a> United States, <a href="https://www.gvip.io/expertise/3959" class="schedule-link">Mr. Frank Patton, Chairman</a></strong>(United States)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/calcasieu-river-bridge-i-10-ppg-drive-us-90e" class="schedule-link">Calcasieu River Bridge</a>, United States, <a href="#speakers" class="schedule-link">Mr. Shawn Wilson, Secretary of the Louisiana Department of Transportation</a>
+                                    </strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/the-mayan-train" class="schedule-link">Mayan Train</a>, Mexico, <a href="#speakers" class="schedule-link">Mr. Alejandro Vareia, Legal Director</a>
+                                    </strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/jfk-airport-modernization" class="schedule-link">JFK Terminal One Redevelopment</a>, United States, <a href="https://www.gvip.io/expertise/2728" class="schedule-link">Mr. Amit Rikhy, President/CEO</a></strong></p>
                             </div>
                         </div>
 
@@ -398,7 +399,7 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>12:50 PM EST</time>
+                                <time>12:00 PM EST</time>
                                 <form method="POST" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
@@ -416,11 +417,48 @@
                                 <br>
                                 <p>Special Policy Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Joseph Semsar, Deputy Under Secretary for International Trade, US Department of Commerce</a></strong></p>
-                                <br><br>
-                                <p><strong>12:30PM</strong> &nbsp; Special Strategic Keynote:</p>
+
+                            </div>
+                        </div>
+
+                        <div class="row schedule-item">
+                            <div class="col-md-2">
+                                <time>12:30 PM EST</time>
+                                <form method="POST" action="#">
+                                    <div class="form-row">
+                                        <div class="col-auto">
+                                            <button type="submit">Join Session</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="speaker" id="oracle-specific">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="Norman Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h4>Special Strategic Keynote:</h4>
                                 <p><strong><a href="#speakers" class="schedule-link">David H. Petraeus, Chairman, KKR Global Institute and Former Director, Central Intelligence Agency</a></strong></p>
-                                <br><br>
-                                <h4>12:50PM &nbsp; Oracle Project of the Year Awards:</h4><br>
+                            </div>
+                        </div>
+
+                        <div class="row schedule-item">
+                            <div class="col-md-2">
+                                <time>12:50 PM EST</time>
+                                <form method="POST" action="#">
+                                    <div class="form-row">
+                                        <div class="col-auto">
+                                            <button type="submit">Join Session</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <br>
+                                <div class="speaker" id="oracle-specific">
+                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="Norman Anderson">
+                                </div>
+                            </div>
+                            <div class="col-md-10">
+                                <h4>Oracle Project of the Year Awards:</h4>
                                 <p>Each year working with Oracle we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
                                 <br>
                                 <p>Categories include:</p>
@@ -507,7 +545,7 @@
                                 <p>Covid has highlighted the fact that many countries around the world have dangerously exported their ability to produce and/or make necessities strategic to their economic health. This includes PPE as well as medicines, and also includes data collection and analytics and - most critically - rare earth and specialty metals. This panel brings together critical rare earths and specialty metals actors focused on Niobium in the Americas.</p>
                                 <br>
                                 <p>Special Case Study:</p>
-                                <p><strong>The Niobium Elk Creek Project, Nebraska</strong></p>
+                                <p><strong>The Niobium Elk Creek Project, Nebraska, United States, <a href="#speakers" class="schedule-link">Mr. Mark Smiti, CEO & Chairman</a></strong></p>
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Sarah Ryker, Associate Director, Energy and Minerals, USGS</a></strong></p>
@@ -539,8 +577,7 @@
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4154" class="schedule-link">William T. Nolan, President, Infra-Bk, LLC</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">John Casola, Chief Investment Officer, Canada Infrastructure Bank</a></strong></p>
-                                <p><strong><a href="#spakers" class="schedule-link">Francisco Gomez, Vice President of Strategy & Development, FDN</a></strong>(Colombia)</p>
+                                <p><strong><a href="#spakers" class="schedule-link">Francisco Gomez, Vice President of Strategy & Development, FDN (Colombia)</a></strong>(Colombia)</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/2072" class="schedule-link">Brian Ross, CEO, InfraShares </a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
                             </div>
@@ -590,14 +627,16 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>First Annual Global Benefits Prize:</h4>
-                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects. Technology allows us to increasingly focus on users - and on the results of projects from the user perspective. This includes health, mobility, job creation, business creation and overall opportunity creation. Forty-two projects, from all sectors, have entered this competition - after a discussion the winners will be announced! </p>
+                                <h4>Benefits Index Creation & First Annual Global Benefits Prize:</h4>
+                                <p>The world needs a better way to think about infrastructure, and how to prioritize projects. Technology allows us to increasingly focus on users - and on the results of projects from the user perspective. This includes health, mobility, job creation, business creation and overall opportunity creation. A leading group of industry leaders will debate the creation of an overarching and inter-communicable Benefits Index across the different verticals in infrastructure. Additionally, forty-two projects, from all sectors, have entered this competition - after a discussion, the winners will be announced, predicated on the merit of the projects’ ability to effectively frame their benefits to the community and constituents.</p>
                                 <br>
                                 <p>Discussion Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Kiran Wilmot, Partner, Dalberg Advisors</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Michael Bühler, HTCW - Constance, Construction Economics</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Manager, Infrastructure Manager, InterAmerican Development Bank</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Stephen Townsend, Network Engagement </a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/222" class="schedule-link">Anand Hemnani, Senior VP & Chief Investment Officer, CG/LA Infrastructure</a></strong></p>
                             </div>
                         </div>
 
@@ -651,10 +690,10 @@
                                 <p>Projects that are critical to rejuvinating the region. </p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a></strong>(Poland)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a></strong>(Denmark-Germany)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a></strong> (Estonia-Latvia-Lithuania)</p>
-                                <p><strong>Ankara-Niğde Highway</strong>(Turkey)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a>, Poland, <a href="#speakers" class="schedule-link">Mr. Pzremyslaw Walendziak, Airport Planning and Capacity Manager</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a>, Denmark-Germany, <a href="#spekers" class="schedule-link">Mr. Kim Smedegaard Andersen, Deputy Technical Director</a></strong> </p>
+                                <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a>, Estonia-Latvia-Lithuania, <a href="https://www.gvip.io/expertise/4375" class="schedule-link">Mr. Mark Loader, Chief Program Management Officer</a></strong></p>
+                                <p><strong>Ankara-Niğde Highway Turkey, <a href="#speakers" class="schedule-link">Mr. Tijen Siphai, CEO & CFO</a></strong></p>
 
                             </div>
                         </div>
@@ -679,11 +718,10 @@
                                 <p>The water business is the great forgotten infrastructure, and one that is critical for realizing the benefits of infrastructure investment for the hardest hit members of the global community.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong>Hydropower Power Plants Revitalization Project & PRASA Metering Project</strong>(Puerto Rico)</p>
-                                <p><strong>Vita Ambient Water Performance Contracts</strong>(Brazil)</p>
-                                <p><strong>Vita Ambient Water Performance Contracts</strong>(Brazil)</p>
-                                <p><strong>Headworks Water and Sanitation Project</strong>(Peru)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/cadiz-valley-water" class="schedule-link">Cadiz Water Conveyance</a></strong>(United States)</p>
+                                <p><strong>Hydropower Power Plants Revitalization Project & PRASA Metering Project, Puerto Rico, <a href="#speakers" class="schedule-link">Mr. Omar Marrero, Executive Director</a></strong></p>
+                                <p><strong>Vita Ambient Water Performance Contracts, Brazil, <a href="#speakers" class="schedule-link">Ms. Milene Aguiar, Engineer</a></strong></p>
+                                <p><strong>Headworks Water and Sanitation Project, Peru, <a href="#speakers" class="schedule-link">Mr. Jorge Sulem, Project Manager</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/cadiz-valley-water" class="schedule-link">Cadiz Water Conveyance</a>, United States, <a href="https://www.gvip.io/expertise/3563" class="schedule-link">Ms. Courtney Degener, Vice President</a></strong></p>
                             </div>
                         </div>
 
@@ -707,10 +745,10 @@
                                 <p>Mobility is one of the key values for infrastructure investment, and we present some of the best global opportunities for infrastructure project development.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a></strong>(Canada)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a></strong>(Colombia)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a>Brazil, <a href="#spekers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary of Partnerships, Government of São Paulo</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a>, Canada, <a href="#spekers" class="schedule-link">Mr. Duncan Law, Head Sponsor, Subway Team</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a>Colombia, <a href="https://www.gvip.io/expertise/923" class="schedule-link">Mr. Juan Alba, Technical Director</a></strong></p>
                             </div>
                         </div>
 
@@ -734,10 +772,10 @@
                                 <p>The largest single category of infrastructure investment, these projects are transforming the productive capacity of countries worldwide, and have enormous potential to drive economic recovery.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a></strong>(Canada)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/peripheral-ring-road" class="schedule-link">Peripheral Ring Road</a></strong>(Peru)</p>
-                                <p><strong>Aydin- Denizli and Nakkas-Basaksehir Highway Projects </strong>(Turkey)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a>, Brazil, <a href="#speakers" class="scedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a>, Canada, <a href="#speakers" class="schedule-link">Mr. Mark Butler, Director of Communications</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/peripheral-ring-road" class="schedule-link">Peripheral Ring Road</a>, Peru, <a href="#speakers" class="schedule-link">Mr. Luis del Carpio, Project Manager</a></strong></p>
+                                <p><strong>Aydin- Denizli and Nakkas-Basaksehir Highway Projects, Turkey, <a href="#speakers" class="schedule-link">Mr. Zeki Tekin, Investment Office of the Presidency of Turkey</a> </strong></p>
                             </div>
                         </div>
 
@@ -760,13 +798,13 @@
                                 <h4>Smart & Sustainable Infrastructure:</h4>
                                 <p>In fact, all infrastructure going forward will be ‘smart,’ and the opportunity now is to create a strategy for commercializing data to both securitize investments, and pay for new investments.</p>
                                 <br>
-                                <p>Thought Leaders::</p>
+                                <p>Thought Leaders:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Jeffrey DeCoux, Chairman, Autonomy Institute</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4062" class="schedule-link">Michael J. Woods, CEO and COO, Big Sun Holdings Group Corporation</a></strong></p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a> - <a href="https://www.gvip.io/expertise/4103" class="schedule-link">Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong>(United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a> - <a href="#speakers" class="schedule-link">Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo </a></strong>(Brazil)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a>, United States, <a href="https://www.gvip.io/expertise/4103" class="schedule-link">Ms. Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo</a></strong></p>
                             </div>
                         </div>
 
@@ -790,9 +828,9 @@
                                 <p>Leading Ports projects offer tremendous opportunities globally and are drivers of economic recovery and job creation.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong>Port of Tangier Med </strong>(Morocco)</p>
-                                <p><strong>Port Privatization Program </strong>(Guinea - Bissau)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/hydroport-wales" class="schedule-link">HydroPort Wales</a></strong>(United Kingdom)</p>
+                                <p><strong>Port of Tangier Med, Morocco, <a href="https://www.gvip.io/expertise/4337" class="schedule-link">Pr. Amine Laghidi, General Manager & International Expert</a> </strong></p>
+                                <p><strong>Port Privatization Program, Guinea-Bissau, <a href="https://www.gvip.io/expertise/4046" class="schedule-link">Mr. Arthur Medel, Project Representative</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/hydroport-wales" class="schedule-link">HydroPort Wales</a>, United Kingdom, <a href="https://www.gvip.io/expertise/4100" class="schedule-link">Mr. James Sutcliffe, CEO & Founder</a></strong></p>
 
                             </div>
                         </div>
@@ -817,12 +855,10 @@
                                 <p>The pace of transformative energy projects is tremendous, from renewable energy, to storage, to new ‘behind the meter’ technologies.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong>Azito plant</strong>
-                                    <p>(Côte d’Ivoire)</p><strong>& Malindi PV Projects </strong>(Kenya)
-                                </p>
-                                <p><strong>Tire Recycling Waste-to-Energy Plant</strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/mauritania-hybrid-photovoltaic-power-plants" class="schedule-link">8 Hybrid Photovoltaic (PV) Power Plants</a></strong>(Mauritania)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/puerto-rico-electric-power-authority-utility-scale-energy-storage-system" class="schedule-link">Battery Energy Storage System & Flexible Distributed Energy Units</a></strong>(Puerto Rico)</p>
+                                <p><strong>Azito plant & Malindi PV Projects, Côte d’Ivoire and Kenya, <a href="https://www.gvip.io/expertise/2651" class="schedule-link">Mr. Jonathan Hoffman, Chief Development Officer</a></strong></p>
+                                <p><strong>Tire Recycling Waste-to-Energy Plant, Brazil, <a href="#speakers" class="schedule-link">Mr. Luis Fernando Martinez, CEO</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/mauritania-hybrid-photovoltaic-power-plants" class="schedule-link">8 Hybrid Photovoltaic (PV) Power Plants</a>, Mauritania, <a href="#speakers" class="schedule-link">Dr. Hemmat Safwat</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/puerto-rico-electric-power-authority-utility-scale-energy-storage-system" class="schedule-link">Battery Energy Storage System & Flexible Distributed Energy Units</a>, Puerto Rico, <a href="#speakres" class="schedule-link">Mr. Omar Marrero, Executive Director</a></strong></p>
 
                             </div>
                         </div>
@@ -876,10 +912,10 @@
                                 <p>Some of the most exciting projects in the world are rail projects, driving critical connections between cities like São Paulo and Campinas, Dallas and Houston, and Tokyo and Kyoto. </p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a></strong>(Brazil)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a></strong> (United States)</p>
-                                <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a></strong> (Brazil)</p>
+                                <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of São Paulo</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a> Brazil, <a href="#speakres" class="schedule-link">Mr. Ramon Silva, Project Manager</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a>, United States, <a href="https://www.gvip.io/expertise/4297" class="schedule-link">Mr. Ian Rainey, Senior Vice President</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Rogério Rodrigues, Executive Director</a></strong></p>
 
                             </div>
                         </div>
@@ -911,7 +947,6 @@
                                 <br>
                                 <p> Thought Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Fernando Marcatto, Infrastructure Secretary, State of Minas Gerais, Brazil</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Roland de Marcellus, Deputy Assistant Secretary, US Department of State</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">U.S. International Development Finance Corporation</a></strong></p>
