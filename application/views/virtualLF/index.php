@@ -458,8 +458,8 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-                                <h4>Oracle Project of the Year Awards:</h4>
-                                <p>Each year working with Oracle we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
+                                <h4>Project of the Year Awards (Sponsored By Oracle):</h4>
+                                <p>Each year, we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
                                 <br>
                                 <p>Categories include:</p>
                                 <p><strong>- Strategic Project of the Year</strong></p>
