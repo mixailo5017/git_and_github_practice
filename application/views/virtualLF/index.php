@@ -398,7 +398,7 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>12:00 PM EST</time>
+                                <time>12:50 PM EST</time>
                                 <form method="POST" action="#">
                                     <div class="form-row">
                                         <div class="col-auto">
@@ -412,12 +412,7 @@
                                 </div>
                             </div>
                             <div class="col-md-10">
-
                                 <h4>The Path Forward - U.S. Leadership and the Global Recovery</h4>
-
-                                <h4>Project of the Year Awards (Sponsored By Oracle):</h4>
-                                <p>Each year we identify and select the best global projects from an initial list of as many as 250 projects across the globe. The next step is to have people worldwide vote on a long list, reducing the candidates from 5-3 projects - and finally our sponsors and Forum participants, the creme de la creme of infrastructure - choose the winners. This year the awards will be broadcasted, on GViP TV! </p>
-
                                 <br>
                                 <p>Special Policy Keynote:</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Joseph Semsar, Deputy Under Secretary for International Trade, US Department of Commerce</a></strong></p>
