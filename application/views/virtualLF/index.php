@@ -1062,7 +1062,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Escoto_Roberto_Apex.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/SpeakersOpt/Escoto_Roberto_Apex.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
                                 <h3><a href="#schedule">Roberto Escoto</a></h3>
                                 <p>Manager, Investment Department, APEX</p>
@@ -1074,7 +1074,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Gluski_Andres_AES.png" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/SpeakersOpt/Gluski_Andres_AES.png" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
                                 <h3><a href="#schedule">Andrés Gluski</a></h3>
                                 <p> CEO, AES Corporation</p>
@@ -1086,7 +1086,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Robb_Andrew_Australia.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/SpeakersOpt/Robb_Andrew_Australia.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
                                 <h3><a href="#schedule">Andrew Robb</a></h3>
                                 <p>Minister of Trade and Investment, Government of Australia</p>
@@ -1120,7 +1120,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/speakers/Jones_Eric_US-International-Finance.jpg" alt="Speaker 2" class="img-fluid w-100">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/SpeakersOpt/Jones_Eric_US-International-Finance.jpg" alt="Speaker 2" class="img-fluid w-100">
                             <div class="details">
                                 <h3><a href="#schedule">Eric Jones</a></h3>
                                 <p>Managing Director, U.S. International Development Finance Corporation</p>
