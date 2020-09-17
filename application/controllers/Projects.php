@@ -422,7 +422,7 @@ class Projects extends CI_Controller
             $sme_experts = $this->expertise_model->get_sme_experts($pid, array($userid));
         } else {
             // Similar project are visible only for non project owners
-            $similar_projects = $this->projects_model->similar_projects2($pid);
+            //$similar_projects = $this->projects_model->similar_projects2($pid);
         }
 
         $viewdata['project']['topexperts'] = $global_experts;
