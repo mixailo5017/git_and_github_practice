@@ -558,7 +558,7 @@
                                 <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
                                 <br>
                                 <p>Thought Leader Discussion:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olsen, Theia Satellite Project</a></strong>(United States)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olsen, COO of Theia Group, Theia Satellite Network</a></strong>(United States)</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Dr. Joseph N. Pelton, Executive Board, International Association for the Advancement of Space Safety (IAASS)</a></strong></p>
                             </div>
                         </div>
