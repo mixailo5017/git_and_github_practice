@@ -71,6 +71,32 @@
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
 
+    <!--12 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/O1Uwk8vyvNk" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Jenifer.jpg" alt="video" data-toggle="modal" data-target="#modal12"></a>
+        <h3>Jennifer Schmitz, CEO, Founder at Lattice Industries, Inc.</h3>
+        <p>Lattice Industries: Using the Data Marketplace to Fund the Future of Infrastructure.</p>
+    </div>
+    <!-- Grid column -->
+
     <!--11 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
@@ -122,10 +148,12 @@
         <p>Nick Cleary, Chairman and CEO, Consolidated Land and Rail Australia (CLARA), and Norman Anderson, President, and CEO, CG/LA Infrastructure: In conversation.</p>
     </div>
     <!-- Grid column -->
+</div>
 
 
 
-
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
     <!--9 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
@@ -154,12 +182,6 @@
 
 
 
-</div>
-
-
-
-<!-- Grid row -->
-<div style="padding-right: 2%; padding-left: 2%" class="row">
 
     <!--8 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
@@ -215,6 +237,14 @@
     </div>
     <!-- Grid column -->
 
+
+</div>
+
+
+
+
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
     <!--6 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
@@ -243,13 +273,7 @@
 
     </div>
     <!-- Grid column -->
-</div>
 
-
-
-
-<!-- Grid row -->
-<div style="padding-right: 2%; padding-left: 2%" class="row">
     <!--5 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
@@ -301,7 +325,9 @@
         <p>Peter Dodgion, Asset Management Program Manager, U.S. Army Corps of Engineers</p>
     </div>
     <!-- Grid column -->
+</div>
 
+<div style="padding-right: 2%; padding-left: 2%" class="row">
     <!--3 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
@@ -330,9 +356,6 @@
 
     </div>
     <!-- Grid column -->
-</div>
-
-<div style="padding-right: 2%; padding-left: 2%" class="row">
 
     <!--2 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">

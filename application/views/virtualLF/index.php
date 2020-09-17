@@ -420,30 +420,6 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>12:00 PM EST</time>
-                                <form method="GET" action="https://attendee.gotowebinar.com/register/6116202064452254223">
-                                    <div class="form-row">
-                                        <div class="col-auto">
-                                            <button type="submit">Join Session</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <br>
-                                <div class="speaker" id="oracle-specific">
-                                    <img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/Agenda/CGLA_newlogo.jpg" alt="Norman Anderson">
-                                </div>
-                            </div>
-                            <div class="col-md-10">
-                                <h4>The Path Forward - U.S. Leadership and the Global Recovery</h4>
-                                <br>
-                                <p>Special Policy Keynote:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Joseph Semsar, Deputy Under Secretary for International Trade, US Department of Commerce</a></strong></p>
-
-                            </div>
-                        </div>
-
-                        <div class="row schedule-item">
-                            <div class="col-md-2">
                                 <time>12:30 PM EST</time>
                                 <form method="GET" action="https://attendee.gotowebinar.com/register/6116202064452254223">
                                     <div class="form-row">
@@ -466,7 +442,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>12:50 PM EST</time>
-                                <form method="GET" action="#">
+                                <form method="GET" action="https://attendee.gotowebinar.com/register/6116202064452254223">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
@@ -765,7 +741,7 @@
                                 <p>Mobility is one of the key values for infrastructure investment, and we present some of the best global opportunities for infrastructure project development.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a>, Brazil, <a href="#speakers" class="schedule-link"> Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a>Brazil, <a href="#spekers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary of Partnerships, Government of São Paulo</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a>, Canada, <a href="#spekers" class="schedule-link">Mr. Duncan Law, Head Sponsor, Subway Team</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a>Colombia, <a href="https://www.gvip.io/expertise/923" class="schedule-link">Mr. Juan Alba, Technical Director</a></strong></p>
@@ -792,7 +768,7 @@
                                 <p>The largest single category of infrastructure investment, these projects are transforming the productive capacity of countries worldwide, and have enormous potential to drive economic recovery.</p>
                                 <br>
                                 <p>Project Presentations:</p>
-                                <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a>, Brazil, <a href="#speakers" class="scedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a>, Canada, <a href="#speakers" class="schedule-link">Mr. Mark Butler, Director of Communications</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/peripheral-ring-road" class="schedule-link">Peripheral Ring Road</a>, Peru, <a href="#speakers" class="schedule-link">Mr. Luis del Carpio, Project Manager</a></strong></p>
                                 <p><strong>Aydin- Denizli and Nakkas-Basaksehir Highway Projects, Turkey, <a href="#speakers" class="schedule-link">Mr. Zeki Tekin, Investment Office of the Presidency of Turkey</a> </strong></p>
@@ -825,6 +801,7 @@
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a>, United States, <a href="https://www.gvip.io/expertise/4103" class="schedule-link">Ms. Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">Clara Project </a> - <a href="https://www.gvip.io/expertise/3816" class="schedule-link">Mike Day, Director, Clara Smart Cities</a></strong></p>
                             </div>
                         </div>
 
