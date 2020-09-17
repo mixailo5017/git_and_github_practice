@@ -31,48 +31,6 @@
 </head>
 
 <body>
-    <style>
-        /* .nav-link {
-            color: #fff !important;
-        }
-
-
-        #intro::before {
-            background: rgba(100, 100, 100, 0.4) !important;
-        }
-
-        #intro-p {
-            color: #366 !important;
-        }
-
-        #intro-h1 {
-            color: #366 !important;
-        }
-
-        #intro-h2 {
-            color: #366 !important;
-        }
-
-        .intro-btn {
-            color: #366 !important;
-        }
-
-        .intro-btn:hover {
-            color: white !important;
-        }
-
-        #about::before {
-            background: rgba(150, 150, 150, 0.4) !important;
-        }
-
-        #about-text * {
-            color: #366 !important;
-        }
-
-        #subscribe-h2 {
-            color: #366 !important;
-        } */
-    </style>
     <!-- ======= Header ======= -->
     <header id="header">
         <nav>
@@ -1170,41 +1128,43 @@
                 </div>
                 <div class="row">
                     <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Strategic Sponsors</h1>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Apcoll.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Hexagon.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/starr.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Trimble.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Apcoll.jpg" alt="Apcol" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Hexagon.jpg" alt="Hexagon" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/oracle.jpg" alt="Oracle" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/starr.jpg" alt="Starr" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Strategic/Trimble.jpg" alt="Trimble" class="img-fluid w-100"></div>
                 </div>
                 <div class="row">
                     <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Platinum Sponsors</h1>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/acea.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/apexbrasil copy.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/CamGLLp.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/crowell.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/Northeastmaglev.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/theia.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/acea.jpg" alt="Acea" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/apexbrasil copy.jpg" alt="Apex Brasil" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/CamGLLp.jpg" alt="CamGLL" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/crowell.jpg" alt="Crowell" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/Northeastmaglev.jpg" alt="Northeast Maglev" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Platinum/theia.jpg" alt="Theia" class="img-fluid w-100"></div>
                 </div>
                 <div class="row">
                     <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Gold Sponsors</h1>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Arup.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/CCR.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/blackbuffalo.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/COLE.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/BNA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Arup.jpg" alt="Arup" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/CCR.jpg" alt="CCR" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/blackbuffalo.jpg" alt="Black Buffalo" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/COLE.jpg" alt="COLE" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/BNA.jpg" alt="BNA" class="img-fluid w-100"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Lattice.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/DP.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Global VIA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/DP.jpg" alt="DP" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Global VIA.jpg" alt="Gloal Via" class="img-fluid w-100"></div>
                     <!--                    
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Simco.jpg" alt="" class="img-fluid w-100"></div> -->
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Simco.jpg" alt="Simco" class="img-fluid w-100"></div> -->
+                    <!-- 
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Structural.jpg" alt="Structural" class="img-fluid w-100"></div>-->
                 </div>
 
                 <div class="row">
                     <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Silver Sponsors</h1>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Autodesk.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Cadiz.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/GreatLakes.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Port of Montreal.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Autodesk.jpg" alt="Autodesk" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Cadiz.jpg" alt="Cadiz" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/GreatLakes.jpg" alt="Great Lakes" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Silver/Port of Montreal.jpg" alt="Port of Montreal" class="img-fluid w-100"></div>
 
                 </div>
 
