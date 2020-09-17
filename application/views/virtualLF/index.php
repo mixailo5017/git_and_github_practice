@@ -901,7 +901,6 @@
                                 <p> Thought Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Roland de Marcellus, Deputy Assistant Secretary, US Department of State</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">U.S. International Development Finance Corporation</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Garrett Marquis, Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</a></strong></p>
 
