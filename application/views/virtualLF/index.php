@@ -886,7 +886,7 @@
                         <div class="row schedule-item">
                             <div class="col-md-2">
                                 <time>5:00 PM EST</time>
-                                <form method="GET" action="#">
+                                <form method="GET" action="https://www.gotomeet.me/michelle682">
                                     <div class="form-row">
                                         <div class="col-auto">
                                             <button type="submit">Join Session</button>
