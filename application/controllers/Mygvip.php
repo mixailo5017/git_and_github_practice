@@ -58,9 +58,7 @@ class Mygvip extends CI_Controller {
 
         // New Experts
         $new_experts = $this->expertise_model->get_new_experts(array($this->uid));
-        // GViP Store Items
-        $this->load->model('store_items_model');
-        $store_items = $this->store_items_model->all();
+       
 
         // My Experts (Experts that I follow)
         $this->load->model('members_model');
@@ -76,7 +74,6 @@ class Mygvip extends CI_Controller {
 
         $data = compact(
             'my_projects',
-            'store_items',
             'key_executives',
             'new_experts',
             'my_discussions'
