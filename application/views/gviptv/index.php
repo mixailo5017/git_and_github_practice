@@ -117,7 +117,7 @@
         </div>
         <!--Modal: Name-->
 
-        <a><img class="img-fluid w-100 z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/black_buffalo.png" alt="video" data-toggle="modal" data-target="#modal11"></a>
+        <a><img class="img-fluid w-100 z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/black_buffalo_test.jpg" alt="video" data-toggle="modal" data-target="#modal11"></a>
         <h3>Big Sun Holdings: Printing Buildings and Securing Your IoT Future</h3>
         <p>Michael Woods, CEO, Black Buffalo & Flash Labs and Norman Anderson, CEO, CG/LA Infrastructure in conversation.</p>
     </div>
