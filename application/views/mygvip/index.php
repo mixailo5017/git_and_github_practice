@@ -126,32 +126,7 @@
 	<div class="column_1">
     <hr>
         <!-- Key Executives -->
-        <section class="similar-experts group">
-            <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipKeyExecutives') ?></h2>
-            <div>
-                <ul class="reset">
-                    <?php if (count($key_executives) == 0) { ?>
-                        <li class="not_found">
-                            <?php echo lang('MyVipKeyExecutivesNotFound'); ?>
-                        </li>
-                    <?php } ?>
 
-                    <?php foreach($key_executives as $expert) { ?>
-                    <?php $fullname = $expert['firstname'] . ' ' . $expert['lastname'] ?>
-                    <li class="m_person">
-                        <a href="/expertise/<?php echo $expert['uid'] ?>" class="image recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="Key Executives" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $fullname ?>">
-                            <img src="<?php echo expert_image($expert['userphoto']) ?>" alt="<?php echo $fullname ?>'s photo">
-                        </a>
-                        <p class="content">
-                            <a href="/expertise/<?php echo $expert['uid'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Expert" data-recommendation-section="Key Executives" data-recommendation-target-id="<?php echo $expert['uid'] ?>" data-recommendation-target-name="<?php echo $fullname ?>"><?php echo $fullname ?></a>
-                            <span class="title"><?php echo $expert['title'] ?></span>
-                            <span class="title"><?php echo $expert['organization'] ?></span>
-                        </p>
-                    </li>
-                <?php } ?>
-                </ul>
-            </div>
-        </section>
 
         <!-- My Projects -->
 		<section class="my-projects group">
@@ -236,23 +211,7 @@
 
         <!-- gvip store -->
         <!--  If store items not found don't show the whole section -->
-        <?php if (count($store_items) > 0) { ?>
-		<section class="gvip-store group">
-            <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipGvipStore') ?></h2>
-            <div>
-                <ul class="m_store reset">
-                    <?php foreach($store_items as $item) { ?>
-                    <li class="item">
-                        <a href="<?php echo $item['url'] ?>" class="recommendation" data-recommendation-location="My GViP" data-recommendation-category="Product" data-recommendation-section="GViP Store" data-recommendation-target-id="<?php echo $item['url'] ?>" data-recommendation-target-name="<?php echo $item['title'] ?>">
-                            <img src="<?php echo store_item_image($item['photo'], 50) ?>" alt="Store item's photo">
-                            <span><?php echo $item['title'] ?></span>
-                        </a>
-                    </li>
-                    <?php } ?>
-                </ul>
-            </div>
-		</section>
-        <?php } ?>
+
     </div>
     <hr>
 		<!-- news feed -->
