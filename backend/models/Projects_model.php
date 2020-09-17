@@ -116,7 +116,7 @@ class Projects_model extends CI_Model
     public function get_projects()
     {
 
-        $this->db->select("pid,uid,projectname,slug,projectphoto,country,sector,stage,fundamental_legal");
+        $this->db->select("pid,uid,projectname,slug,country,sector,stage,fundamental_legal");
         $this->db->order_by("projectname", "asc");
         $qryproj = $this->db->get_where('exp_projects', array('isdeleted' => '0'));
 
@@ -126,8 +126,8 @@ class Projects_model extends CI_Model
 
         if ($totalproj > 0) {
             foreach ($qryproj->result_array() as $row) {
-                $imgurl = $row["projectphoto"];
-                $row["projectphoto"] = $imgurl;
+                //$imgurl = $row["projectphoto"];
+                //$row["projectphoto"] = $imgurl;
                 $projectdata["proj"][] = $row;
             }
             $projectdata["totalproj"] = $totalproj;
