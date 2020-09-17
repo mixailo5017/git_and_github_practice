@@ -840,7 +840,7 @@
                                 <br />
                                 <p>Panelists: </p>
                                 <p><strong><a href="#speakers" class="schedule-link">Mohsen Mortada, President and CEO at Cole Engineering Group</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Nilton Seuaciuc, President, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Milene Aguiar, Engineer, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3493" class="schedule-link">Antonino Ferrera, International CEO, ACEA </a></strong>(Rome)</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Albert Cho, Vice President & General Manager, Advanced Infrastructure Analytics, Xylem</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Travis Smith, Sr. Director Product Marketing*, Sensus, Xylem</a></strong></p>
