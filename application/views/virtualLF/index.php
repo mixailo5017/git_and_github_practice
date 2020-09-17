@@ -648,7 +648,7 @@
                                 <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a>, Poland, <a href="#speakers" class="schedule-link">Mr. Pzremyslaw Walendziak, Airport Planning and Capacity Manager</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a>, Denmark-Germany, <a href="#spekers" class="schedule-link">Mr. Kim Smedegaard Andersen, Deputy Technical Director</a></strong> </p>
                                 <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a>, Estonia-Latvia-Lithuania, <a href="https://www.gvip.io/expertise/4375" class="schedule-link">Mr. Mark Loader, Chief Program Management Officer</a></strong></p>
-                                <p><strong>Ankara-Niğde Highway Turkey, <a href="#speakers" class="schedule-link">Mr. Tijen Siphai, CEO & CFO</a></strong></p>
+                                <p><strong>Ankara-Niğde Highway Turkey, <a href="#speakers" class="schedule-link">Ms. Tijen Siphai, CEO & CFO</a></strong></p>
 
                             </div>
                         </div>
