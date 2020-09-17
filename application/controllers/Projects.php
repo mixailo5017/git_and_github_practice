@@ -49,7 +49,8 @@ class Projects extends CI_Controller
 
         $this->sort_options = array(
             1 => lang('SortAlphabetically'),
-            2 => lang('SortRecentlyUpdatedFirst')
+            2 => lang('SortRecentlyUpdatedFirst'),
+            3 => 'Most Liked'
         );
 
         // TODO: Revisit this logic to use array of events
@@ -476,6 +477,10 @@ class Projects extends CI_Controller
         // Discussions
         $this->load->model('discussions_model');
         $viewdata['project']['discussions_access'] = $this->discussions_model->has_access($this->uid, $pid);
+
+        //likes
+        $viewdata['likes'] = $this->get_likes($pid);
+        $viewdata['isliked'] = $this->is_liked($pid);
 
         // Forum ad
         $this->load->model('forums_model');
@@ -3327,4 +3332,39 @@ class Projects extends CI_Controller
             redirect('/p/' . $this->uri->segment(2));
         }
     }
+
+    public function saveLikes($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+        $userid = (int) sess_var('uid');
+
+        $this->load->model('projects_model');
+        $this->projects_model->saveLikes($proj_id, $userid);
+
+        redirect('/projects/' . $proj_id);
+
+    }
+
+    public function get_likes($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+
+        $this->load->model('projects_model');
+        $likes = $this->projects_model->get_likes($proj_id);
+
+        return $likes;
+    }
+
+    public function is_liked($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+        $userid = (int) sess_var('uid');
+
+        $this->load->model('projects_model');
+        $likes = $this->projects_model->is_liked($proj_id, $userid);
+
+        return $likes;
+    }
+
+
 }

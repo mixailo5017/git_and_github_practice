@@ -246,6 +246,16 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
 		</div><!-- end #col2 -->
 
 		<div id="col3" class="projects">
+		<h2>This Project Has <?php echo $likes; ?> Like(s)</h2>
+        	<?php if ($isliked){ ?>
+            		<a href="saveLikes/<?php echo $project['projectdata']['pid']; ?>" id="submit" name="submit"
+               			class="button like light_gray">Unlike Project
+            		</a>
+        	<?php } else { ?>
+            		<a href="saveLikes/<?php echo $project['projectdata']['pid']; ?>" id="submit" name="submit"
+               			class="button like light_gray">Like Project
+            		</a>
+        	<?php }?>
 		<a href="/projects/submit/<?php echo $project['pid']?>" onclick="myFunction()" class="button discussion light_gray">Learn More about this Project</a>
             	<p id="demo"></p>
             	<script>

@@ -835,6 +835,16 @@ class Projects_model extends CI_Model {
            case 1: // alphabetical by projectname
                $this->db->order_by('projectname');
                break;
+	   case 3: // Most Liked
+			   $this->db
+			   ->join("(SELECT proj_id, COUNT(proj_id) FROM exp_proj_likes
+						JOIN exp_projects
+						ON exp_proj_likes.proj_id = exp_projects.pid
+						WHERE isdeleted = '0'
+						GROUP BY proj_id
+						ORDER BY COUNT(proj_id) DESC) AS update_likes", 'p.pid = update_likes.proj_id', 'left outer')
+			   ->order_by('proj_id ASC');
+		break;
            default: // Most recently updated first (option 2, default)
                $this->db
                     ->join("(SELECT t1.pid, t1.last_date
@@ -5221,6 +5231,78 @@ class Projects_model extends CI_Model {
 		$query_sme->free_result();
 
 		return $smearr;
+	}
+	
+	
+	/**
+	 * Create a new like record(s)
+	 *
+	 * @param int $proj_id
+     	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function saveLikes($proj_id, $follower)
+	{
+
+		$totallikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\'');
+		$resulttotallikes = $totallikes->num_rows();
+
+		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
+                                    and rated_by=\''.$follower.'\'');
+		$resultchecklikes = $checklikes->num_rows();
+
+		if($resultchecklikes == '0' ){
+
+			$data=array('proj_id'=>$proj_id,'rated_by'=>$follower, 'isliked'=>'1');
+			$this->db->insert('exp_proj_likes',$data);
+
+		}else{
+			$this->db->delete('exp_proj_likes', array('proj_id'=>$proj_id,
+				'rated_by'=>$follower));
+		}
+		return true;
+
+	}
+
+	/**
+	 * Create a new like record(s)
+	 *
+	 * @param int $proj_id
+	 * @return bool
+	 */
+	public function get_likes($proj_id)
+	{
+
+		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
+                                    and proj_id=\''.$proj_id.'\'');
+		$resultchecklikes = $checklikes->num_rows();
+
+
+		return $resultchecklikes;
+
+	}
+
+	/**
+	 * Does user Like project
+	 *
+	 * @param int $proj_id
+	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function is_liked($proj_id, $follower)
+	{
+
+		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
+                                    and rated_by=\''.$follower.'\'');
+		$resultchecklikes = $checklikes->num_rows();
+
+		if ($resultchecklikes == 1){
+			return true;
+		}
+		else {
+			return false;
+		}
+
 	}
 
 
