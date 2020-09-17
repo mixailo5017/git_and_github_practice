@@ -68,7 +68,7 @@ class Updates extends CI_Controller
      * Returns JSON formatted array of updates for MyVip page
      * @param int $last_id
      */
-    public function myvip($last_id = 0) {
+    /*public function myvip($last_id = 0) {
         $last_id = (int) $last_id;
 
         $updates = $this->updates_model->myvip_feed(sess_var('uid'), $last_id, MAX_UPDATES);
@@ -85,7 +85,7 @@ class Updates extends CI_Controller
         );
         sendResponse($response);
         exit;
-    }
+    }*/
 
     /**
      * Post an update
