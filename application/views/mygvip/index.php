@@ -256,18 +256,7 @@
     </div>
     <hr>
 		<!-- news feed -->
-		<section class="column_2">
-            <h2 class="shadow my_vip_header h2"><?php echo lang('MyVipUpdatesTitle') ?></h2>
 
-            <ul class="feed updates">
-                <!-- populated from JS -->
-            </ul>
-            <div class="center">
-                <?php echo form_open('updates/myvip', 'name="updates_view_more"'); ?>
-                <input type="submit" class="view-more button" value="<?php echo lang('LoadMoreUpdates') ?>">
-                <?php echo form_close() ?>
-            </div>
-		</section>
 	</div>
 </div>
 
