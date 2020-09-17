@@ -446,8 +446,6 @@
                                 <br>
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4103" class="schedule-link">Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Lisa Stine, Technical Solutions Executive, Construction, Autodesk</a></strong></p>
-
                                 <p><strong><a href="https://www.gvip.io/expertise/4048" class="schedule-link">Dev Amratia, Co-Founder & CEO, nPlan</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3772" class="schedule-link">Tim Beck, Principal, Strategic Transportation Solutions, Oracle</a></strong></p>
 
@@ -727,7 +725,7 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/rodoanel-concession-program" class="schedule-link">Road Concessions Program, Rodoanel Concession Program, Minas Gerais</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a>, Canada, <a href="#speakers" class="schedule-link">Mr. Mark Butler, Director of Communications</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/gordie-howe-international-bridge-detroit-mi-windsor-on" class="schedule-link">Gordie Howe International Bridge</a>, Canada, <a href="#speakers" class="schedule-link">Ms. Heather Grondin, Vice President of Communications and Stakeholder Relations</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/peripheral-ring-road" class="schedule-link">Peripheral Ring Road</a>, Peru, <a href="#speakers" class="schedule-link">Mr. Luis del Carpio, Project Manager</a></strong></p>
                                 <p><strong>Aydin- Denizli and Nakkas-Basaksehir Highway Projects, Turkey, <a href="#speakers" class="schedule-link">Mr. Zeki Tekin, Investment Office of the Presidency of Turkey</a> </strong></p>
                             </div>
@@ -840,10 +838,9 @@
                                 <br />
                                 <p>Panelists: </p>
                                 <p><strong><a href="#speakers" class="schedule-link">Mohsen Mortada, President and CEO at Cole Engineering Group</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Milene Aguiar, Engineer, Vita Ambiental, Brazil</a> </strong>(Performance Contracts)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Thiago Theo, Vita Ambiental, Brazil</a> </strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3493" class="schedule-link">Antonino Ferrera, International CEO, ACEA </a></strong>(Rome)</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Albert Cho, Vice President & General Manager, Advanced Infrastructure Analytics, Xylem</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Travis Smith, Sr. Director Product Marketing*, Sensus, Xylem</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Travis Smith, Sr. Director Product Marketing, Sensus, Xylem</a></strong></p>
                             </div>
                         </div>
 
@@ -904,7 +901,6 @@
                                 <p> Thought Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Roland de Marcellus, Deputy Assistant Secretary, US Department of State</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">U.S. International Development Finance Corporation</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Garrett Marquis, Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</a></strong></p>
 
