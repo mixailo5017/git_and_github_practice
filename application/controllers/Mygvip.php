@@ -42,9 +42,26 @@ class Mygvip extends CI_Controller {
         $my_project_ids = flatten_assoc($my_projects, null, 'id');
         $my_projects_count = count($my_projects);
 
+        // Key Executives
+        $this->load->model('expertise_model');
+        $key_executives = array();
+
+        if ($my_projects_count > 0) {
+            // Add similar projects' ids and limit the number of ids to 3
+        }
+        // If the user don't have My projects or there are no matching experts
+        // Default to getting random experts
+        if (empty($key_executives)) {
+            $data = $this->expertise_model->get_filter_user_list2(3, rand(1, 500));
+            $key_executives = $data['filter'];
+        }
+
         // New Experts
         $new_experts = $this->expertise_model->get_new_experts(array($this->uid));
-        
+        // GViP Store Items
+        $this->load->model('store_items_model');
+        $store_items = $this->store_items_model->all();
+
         // My Experts (Experts that I follow)
         $this->load->model('members_model');
         $my_experts = $this->members_model->my_experts($this->uid);
@@ -59,6 +76,8 @@ class Mygvip extends CI_Controller {
 
         $data = compact(
             'my_projects',
+            'store_items',
+            'key_executives',
             'new_experts',
             'my_discussions'
         );
@@ -407,6 +426,5 @@ class Mygvip extends CI_Controller {
         }
     }
 }
-
 
 
