@@ -575,7 +575,7 @@
                                 <p>Panelists:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/4154" class="schedule-link">William T. Nolan, President, Infra-Bk, LLC</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/2072" class="schedule-link">Brian Ross, CEO, InfraShares </a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Pereira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Kristie Pellecchia, Former Senior Advisor, Western Hemisphere US DFC</a></strong></p>
                             </div>
                         </div>
@@ -630,8 +630,8 @@
                                 <p>Discussion Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3976" class="schedule-link">Mark Freedman, Managing Director, Dalberg</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Kiran Wilmot, Partner, Dalberg Advisors</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Michael Bühler, HTCW - Constance, Construction Economics</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Perreira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Prof. Dr.-Ing. Michael Bühler, Professor of Construction Business Management, University of Applied Science Konstanz (HTWG)</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/expertise/2759" class="schedule-link">Pablo Pereira dos Santos, Special Advisor, Infrastructure, Inter-American Development Bank</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Stephen Townsend, Network Engagement </a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/222" class="schedule-link">Anand Hemnani, Senior VP & Chief Investment Officer, CG/LA Infrastructure</a></strong></p>
                             </div>
@@ -856,6 +856,7 @@
                                 <p><strong>Tire Recycling Waste-to-Energy Plant, Brazil, <a href="#speakers" class="schedule-link">Mr. Luis Fernando Martinez, CEO</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/mauritania-hybrid-photovoltaic-power-plants" class="schedule-link">8 Hybrid Photovoltaic (PV) Power Plants</a>, Mauritania, <a href="#speakers" class="schedule-link">Dr. Hemmat Safwat</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">The CLARA Plan Hydrogen Project</a>, Australia, <a href="https://www.gvip.io/expertise/4378" class="schedule-link">Mr. Nick Cleary, Chairman & CEO</a></strong></p>
+                                <p><strong>Transmission & Distribution System Concession, Puerto Rico, <a href="#speakers" class="schedule-link">Mr. Omar Marrero, Executive Director</a></strong></p>
                             </div>
                         </div>
 
@@ -1187,15 +1188,15 @@
                 <div class="row">
                     <h1 class="col-12" style="border-bottom: 2px solid #060c22;">Gold Sponsors</h1>
                     <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Arup.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/blackbuffalo.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/BNA.jpg" alt="" class="img-fluid w-100"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/CCR.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/blackbuffalo.jpg" alt="" class="img-fluid w-100"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/COLE.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/BNA.jpg" alt="" class="img-fluid w-100"></div>
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Lattice.jpg" alt="" class="img-fluid w-100"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/DP.jpg" alt="" class="img-fluid w-100"></div>
                     <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Global VIA.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Lattice.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Simco.jpg" alt="" class="img-fluid w-100"></div>
-                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Structural.jpg" alt="" class="img-fluid w-100"></div>
+                    <!--                    
+                    <div class="col-lg-3 col-md-4 col-sm-6"><img src="https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/sponsors/Gold/Simco.jpg" alt="" class="img-fluid w-100"></div> -->
                 </div>
 
                 <div class="row">
