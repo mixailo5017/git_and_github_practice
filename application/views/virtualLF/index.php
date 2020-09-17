@@ -558,7 +558,7 @@
                                 <p><strong><a href="https://www.gvip.io/expertise/28" class="schedule-link">Norman Anderson, CEO, CG/LA Infrastructure</a></strong></p>
                                 <br>
                                 <p>Thought Leader Discussion:</p>
-                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olseon, Theia Satellite Project</a></strong>(United States)</p>
+                                <p><strong><a href="#speakers" class="schedule-link">Erlend Olsen, Theia Satellite Project</a></strong>(United States)</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Dr. Joseph N. Pelton, Executive Board, International Association for the Advancement of Space Safety (IAASS)</a></strong></p>
                             </div>
                         </div>
@@ -756,7 +756,7 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a>, United States, <a href="https://www.gvip.io/expertise/4103" class="schedule-link">Ms. Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Arena Concession & Zoo and Botanical Garden Project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">Clara Project </a> - <a href="https://www.gvip.io/expertise/3816" class="schedule-link">Mike Day, Director, Clara Smart Cities</a></strong></p>
                             </div>
                         </div>
