@@ -625,7 +625,7 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>9:15 AM EST</time>
+                                <time>9:00 AM EST</time>
                                 <form method="GET" action="https://attendee.gotowebinar.com/register/3132086824738438927">
                                     <div class="form-row">
                                         <div class="col-auto">
@@ -646,7 +646,7 @@
                                 <p><strong><a href="https://www.gvip.io/projects/new-central-polish-airport-cpk" class="schedule-link">Solidarity Transport Hub</a>, Poland, <a href="#speakers" class="schedule-link">Mr. Pzremyslaw Walendziak, Airport Planning and Capacity Manager</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/fehmarn-belt-fixed-link" class="schedule-link">Fehmarn Belt Fixed Link</a>, Denmark-Germany, <a href="#spekers" class="schedule-link">Mr. Kim Smedegaard Andersen, Deputy Technical Director</a></strong> </p>
                                 <p><strong><a href="https://www.gvip.io/projects/west-africa-rail-network" class="schedule-link">Rail Baltica</a>, Estonia-Latvia-Lithuania, <a href="https://www.gvip.io/expertise/4375" class="schedule-link">Mr. Mark Loader, Chief Program Management Officer</a></strong></p>
-                                <p><strong>Ankara-Niğde Highway Turkey, <a href="#speakers" class="schedule-link">Ms. Tijen Siphai, CEO & CFO</a></strong></p>
+                                <p><strong>Ankara-Niğde Highway, Turkey, <a href="#speakers" class="schedule-link">Ms. Tijen Siphai, CEO & CFO</a></strong></p>
 
                             </div>
                         </div>
@@ -698,9 +698,9 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/concession-of-belo-horizontes-bus-terminal-tergip" class="schedule-link">Concession of Belo Horizonte's Bus Terminal</a>, Brazil, <a href="#speakers" class="schedule-link"> Mr. Fernando Marcatto, Secretary of Infrastructure, Government of Minas Gerais</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, Sao Paulo </a>Brazil, <a href="#spekers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary of Partnerships, Government of São Paulo</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/lote-litoral-paulista-coastline-road-concession" class="schedule-link">Road Concession - State Coastline Lot A, São Paulo, </a>Brazil, <a href="#spekers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary of Partnerships, Government of São Paulo</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/ontario-line-subway" class="schedule-link">Ontario Line Subway</a>, Canada, <a href="#spekers" class="schedule-link">Mr. Duncan Law, Head Sponsor, Subway Team</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway</a>Colombia, <a href="https://www.gvip.io/expertise/923" class="schedule-link">Mr. Juan Alba, Technical Director</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/ferropista-en-la-linea-colombia" class="schedule-link">Ferropista Railway, </a>Colombia, <a href="https://www.gvip.io/expertise/4336" class="schedule-link">Mr. Alfonso Alba, Technical Director</a></strong></p>
                             </div>
                         </div>
 
@@ -756,7 +756,7 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/contra-costa-countywide-digital-infrastructure-project" class="schedule-link">ContraCosta Project</a>, United States, <a href="https://www.gvip.io/expertise/4103" class="schedule-link">Ms. Jennifer Schmitz, Founder and CEO, Lattice Industries, Inc.</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Arena Concession & Zoo and Botanical Garden Project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/ibirapuera-park-concession" class="schedule-link">Ibirapuera Park Concession & Zoo and Botanical Garden Project</a>, Brazil, <a href="#speakers" class="schedule-link"> Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of the State of São Paulo </a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/the-clara-plan" class="schedule-link">Clara Project </a> - <a href="https://www.gvip.io/expertise/3816" class="schedule-link">Mike Day, Director, Clara Smart Cities</a></strong></p>
                             </div>
                         </div>
@@ -837,7 +837,7 @@
                                 <p>The focus is on identifying investment targets and strategies for this critical sector, often overlooked - but always considered the #1 priority by voters around the world. We combine key practitioners with policymakers and developers.</p>
                                 <br />
                                 <p>Panelists: </p>
-                                <p><strong><a href="#speakers" class="schedule-link">Mohsen Mortada, President and CEO at Cole Engineering Group</a></strong></p>
+                                <p><strong><a href="#speakers" class="schedule-link">Mohsen Mortada, President and CEO, Cole Engineering Group</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Thiago Theo, Vita Ambiental, Brazil</a> </strong></p>
                                 <p><strong><a href="https://www.gvip.io/expertise/3493" class="schedule-link">Antonino Ferrera, International CEO, ACEA </a></strong>(Rome)</p>
                                 <p><strong><a href="#speakers" class="schedule-link">Travis Smith, Sr. Director Product Marketing, Sensus, Xylem</a></strong></p>
@@ -866,10 +866,10 @@
                                 <br>
                                 <p>Project Presentations:</p>
                                 <p><strong><a href="https://www.gvip.io/projects/intercity-train-tic" class="schedule-link">São Paulo Intercity Trains project</a>, Brazil, <a href="#speakers" class="schedule-link">Ms. Gabriela Engler, Executive Secretary for Partnerships, Government of São Paulo</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a> Brazil, <a href="#speakres" class="schedule-link">Mr. Ramon Silva, Project Manager</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/fiol-i-west-east-integration-railway-part-one" class="schedule-link">FIOL & FICO Railways</a>, Brazil, <a href="#speakres" class="schedule-link">Mr. Ramon Silva, Project Manager</a></strong></p>
                                 <p><strong><a href="https://www.gvip.io/projects/northeast-maglev-project" class="schedule-link">The Northeast Maglev</a>, United States, <a href="https://www.gvip.io/expertise/4297" class="schedule-link">Mr. Ian Rainey, Senior Vice President</a></strong></p>
-                                <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a>, Brazil, <a href="#speakers" class="schedule-link">Mr. Rogério Rodrigues, Executive Director</a></strong></p>
-
+                                <p><strong><a href="https://www.gvip.io/projects/serra-gacha-regional-train" class="schedule-link">Serra Gaúcha Regional Commuter Train</a>, Brazil, <a href="https://www.gvip.io/expertise/488" class="schedule-link">Mr. Arnildo Shildt, Project Director</a></strong></p>
+                                <p><strong><a href="https://www.gvip.io/projects/serra-gaucha-regional-airport" class="schedule-link">Serra Gaúcha Regional Airport</a>, Brazil,<a href="#speakers" class="schedule-link">Mr. Rogério Rodrigues, Executive Director</a></strong></p>
                             </div>
                         </div>
 
@@ -901,7 +901,6 @@
                                 <p> Thought Leaders:</p>
                                 <p><strong><a href="https://www.gvip.io/expertise/1774" class="schedule-link">Craig O'Connor, Director, Office of Renewable Energy, Export-Import Bank of the United States</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Paul Alvaro Marin, Director, Public Affairs (Acting), U.S. Trade and Development Agency</a></strong></p>
-                                <p><strong><a href="#speakers" class="schedule-link">U.S. International Development Finance Corporation</a></strong></p>
                                 <p><strong><a href="#speakers" class="schedule-link">Garrett Marquis, Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation</a></strong></p>
 
                             </div>
