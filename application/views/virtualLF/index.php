@@ -625,7 +625,7 @@
 
                         <div class="row schedule-item">
                             <div class="col-md-2">
-                                <time>9:00 AM EST</time>
+                                <time>9:15 AM EST</time>
                                 <form method="GET" action="https://attendee.gotowebinar.com/register/3132086824738438927">
                                     <div class="form-row">
                                         <div class="col-auto">
