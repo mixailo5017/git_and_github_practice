@@ -134,7 +134,7 @@
                     <div class="modal-body mb-0 p-0">
 
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X2n-vGVBnWo" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-rLD_4I49m0" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -165,7 +165,7 @@
                     <div class="modal-body mb-0 p-0">
 
                         <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/r2du_jL2qQs" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Wnd4WZpuWYc" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
