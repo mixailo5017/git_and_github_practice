@@ -1,20 +1,29 @@
 <?php  if (! defined('BASEPATH')) exit('No direct script access allowed');
 
+//  Redirects you to the login page
 $route['myvip'] = "redirect";
 $route['myvip/(:any)'] = "redirect";
 
+//  ???
 $route['default_controller'] = "home";
+//  Not found
 $route['404_override'] = 'pages/error_404';
 
+//  Returns a string describing witch language is being used
 $route['language'] = "pages/language";
 
+// Not sure witch number shuld I input to get this page
 $route['login/admin/(:num)'] = "login/impersonate/$1";
+//  Login and logout
 $route['login'] = "login/index";
 $route['logout'] = "profile/logout";
+//  Probbably gets your info from linkedin and if its successfull goes to linkedin
 $route['signup/linkedin/authorized'] = "signup/linkedin_authorized";
+// Gets your signup photo?
 $route['signup/photo/(:any)'] = "signup/photo/$1";
 $route['signup/(:any)'] = "signup/index/$1";
 
+//  Not soure what does remind attribute to this 
 $route['password/remind/sent'] = "reminders/remind_sent";
 $route['password/remind'] = "reminders/remind";
 $route['password/reset/(:any)'] = "reminders/reset/$1";
@@ -22,6 +31,8 @@ $route['password/reset/(:any)'] = "reminders/reset/$1";
 /*
  * Projects
  */
+
+//  List - Create - Update - Edit Projects
 //$route['projects']                  = "projects/listing";
 $route['projects/edit/(:any)']		= "projects/edit/$1";
 $route['projects/create']			= "projects/create";
@@ -35,96 +46,124 @@ $route['projects/isfollowing/(:num)']    = "projects/isfollowing/$1";
 // like/unlike rules for projects
 $route['projects/saveLikes/(:num)']    = "projects/saveLikes/$1";
 
+//  Add - Update - Delete executives for projects
 $route['projects/add_executive/(:any)']	= "projects/add_executive/$1";
 $route['projects/update_executive/(:any)']	= "projects/update_executive/$1";
 $route['projects/delete_executive/(:any)']	= "projects/delete_executive/$1";
 
+//  Add - Update - Delete organizations for projects
 $route['projects/add_organization/(:any)']	= "projects/add_organization/$1";
 $route['projects/update_organization/(:any)']	= "projects/update_organization/$1";
 $route['projects/delete_organization/(:any)']	= "projects/delete_organization/$1";
 
+//  Add - Update - Delete engineering for projects
 $route['projects/add_engineering/(:any)']		= "projects/add_engineering/$1";
 $route['projects/update_engineering/(:any)']	= "projects/update_engineering/$1";
 $route['projects/delete_engineering/(:any)']	= "projects/delete_engineering/$1";
 
+//  Update a mapbox map for the projects
 $route['projects/update_map_/(:any)']	= "projects/update_engineering/$1";
+
+//  Is this a duplicate?
 $route['projects/delete_engineering/(:any)']	= "projects/delete_engineering/$1";
 
+//  Add - Update - Delete a map point for projects (Probabbly the icon on the map)
 $route['projects/add_map_point/(:any)']	= "projects/add_map_point/$1";
 $route['projects/update_map_point/(:any)']	= "projects/update_map_point/$1";
 $route['projects/delete_map_point/(:any)']	= "projects/delete_map_point/$1";
 
+//  ??
 $route['projects/update_map_draw/(:any)']	= "projects/update_map_draw/$1";
 
+//  Add - Update - Delete design issues for projects
 $route['projects/add_design_issue/(:any)']	= "projects/add_design_issue/$1";
 $route['projects/update_design_issue/(:any)']	= "projects/update_design_issue/$1";
 $route['projects/delete_design_issue/(:any)']	= "projects/delete_design_issue/$1";
 
+//  Add - Update - Delete environment for projects
 $route['projects/add_environment/(:any)']	= "projects/add_environment/$1";
 $route['projects/update_environment/(:any)']	= "projects/update_environment/$1";
 $route['projects/delete_environment/(:any)']	= "projects/delete_environment/$1";
 
+//  Add - Update - Delete studies for projects
 $route['projects/add_studies/(:any)']		= "projects/add_studies/$1";
 $route['projects/update_studies/(:any)']	= "projects/update_studies/$1";
 $route['projects/delete_studies/(:any)']	= "projects/delete_studies/$1";
 
+//  Add - Update - Delete fund sources for projects
 $route['projects/add_fund_sources/(:any)']		= "projects/add_fund_sources/$1";
 $route['projects/update_fund_sources/(:any)']	= "projects/update_fund_sources/$1";
 $route['projects/delete_fund_sources/(:any)']	= "projects/delete_fund_sources/$1";
 
+//  Add - Update - Delete roi for projects (Side node : Wtf is roi?)
 $route['projects/add_roi/(:any)']		= "projects/add_roi/$1";
 $route['projects/update_roi/(:any)']	= "projects/update_roi/$1";
 $route['projects/delete_roi/(:any)']	= "projects/delete_roi/$1";
 
+//  Add - Update - Dekete critical participants for projects
 $route['projects/add_critical_participants/(:any)']		= "projects/add_critical_participants/$1";
 $route['projects/update_critical_participants/(:any)']	= "projects/update_critical_participants/$1";
 $route['projects/delete_critical_participants/(:any)']	= "projects/delete_critical_participants/$1";
 
+//  Add - Update - Delete regulatory for projects
 $route['projects/add_regulatory/(:any)']		= "projects/add_regulatory/$1";
 $route['projects/update_regulatory/(:any)']	= "projects/update_regulatory/$1";
 $route['projects/delete_regulatory/(:any)']	= "projects/delete_regulatory/$1";
 
+//  Add - Update - Delete public particpitants for projects
 $route['projects/add_participants_public/(:any)']		= "projects/add_participants_public/$1";
 $route['projects/update_participants_public/(:any)']	= "projects/update_participants_public/$1";
 $route['projects/delete_participants_public/(:any)']	= "projects/delete_participants_public/$1";
 
+//  Add - Update - Delete political participants for projects
 $route['projects/add_participants_political/(:any)']		= "projects/add_participants_political/$1";
 $route['projects/update_participants_political/(:any)']	= "projects/update_participants_political/$1";
 $route['projects/delete_participants_political/(:any)']	= "projects/delete_participants_political/$1";
 
+// Add - Update  - Delete participant companies for projects
 $route['projects/add_participants_companies/(:any)']		= "projects/add_participants_companies/$1";
 $route['projects/update_participants_companies/(:any)']	= "projects/update_participants_companies/$1";
 $route['projects/delete_participants_companies/(:any)']	= "projects/delete_participants_companies/$1";
 
+//  Add - Update - Delete participant owners for projects
 $route['projects/add_participants_owners/(:any)']		= "projects/add_participants_owners/$1";
 $route['projects/update_participants_owners/(:any)']	= "projects/update_participants_owners/$1";
 $route['projects/delete_participants_owners/(:any)']	= "projects/delete_participants_owners/$1";
 
+//  Add - Update - Delete machinery for projects
 $route['projects/add_machinery/(:any)']		= "projects/add_machinery/$1";
 $route['projects/update_machinery/(:any)']	= "projects/update_machinery/$1";
 $route['projects/delete_machinery/(:any)']	= "projects/delete_machinery/$1";
 
+//  Add - Update - Delete procurement technology for projects
 $route['projects/add_procurement_technology/(:any)']		= "projects/add_procurement_technology/$1";
 $route['projects/update_procurement_technology/(:any)']	= "projects/update_procurement_technology/$1";
 $route['projects/delete_procurement_technology/(:any)']	= "projects/delete_procurement_technology/$1";
 
+
+// Add - Update - Delete procurement  services for projects
 $route['projects/add_procurement_services/(:any)']		= "projects/add_procurement_services/$1";
 $route['projects/update_procurement_services/(:any)']	= "projects/update_procurement_services/$1";
 $route['projects/delete_procurement_services/(:any)']	= "projects/delete_procurement_services/$1";
 
+//  Add - Update - Delete projects files for projects
 $route['projects/add_project_files/(:any)']		= "projects/add_project_files/$1";
 $route['projects/update_project_files/(:any)']	= "projects/update_project_files/$1";
 $route['projects/delete_project_files/(:any)']	= "projects/delete_project_files/$1";
 
+// Update projects loaction?
 $route['projects/update_project_location/(:any)']   = "projects/update_project_location/$1";
 
+// Add financial,legal and procurement process
 $route['projects/add_financial/(:any)']	= "projects/add_financial/$1";
 
 $route['projects/add_legal/(:any)']	= "projects/add_legal/$1";
 $route['projects/add_procurement_process/(:any)']	= "projects/add_procurement_process/$1";
 
+// ?
 $route['projects/load_tab/(:any)']	= "projects/load_tab/$1";
 
+//  Edit specific input fields (fundamentals,financial,regulatory,partipants,procurments,files)
 $route['projects/form_load/(:any)']	= "projects/form_load/$1";
 $route['projects/edit_fundamentals/(:any)']	= "projects/edit_fundamentals/$1";
 $route['projects/edit_financial/(:any)']	= "projects/edit_financial/$1";
@@ -133,9 +172,11 @@ $route['projects/edit_participants/(:any)']	= "projects/edit_participants/$1";
 $route['projects/edit_procurement/(:any)']	= "projects/edit_procurement/$1";
 $route['projects/edit_files/(:any)']	= "projects/edit_files/$1";
 
+// Add comments?
 $route['projects/add_comment/(:any)']	= "projects/add_comment/$1";
 $route['projects/delete_comment/(:num)']	= "projects/delete_comment/$1";
 
+//  Add a photo and upload experts
 $route['projects/upload_projectphoto/(:any)']	= "projects/upload_projectphoto/$1";
 $route['projects/topexperts/(:any)']	= "projects/topexperts/$1";
 $route['projects/smeexperts/(:any)']	= "projects/smeexperts/$1";
@@ -153,7 +194,7 @@ $route['projects/(:any)']			= "projects/view/$1";
 
 $route['projects/submit/(:num)'] = "projects/view/$1";
 
-//
+
 $route['expertise/list']         = "expertise/index";
 $route['expertise/list/(:num)']  = "expertise/view/$1";
 
@@ -187,12 +228,13 @@ $route['forums/experts']                = "forums/index";
 $route['forums/(:num)/privatemeetings'] = "pages/index/privatemeetings";
 
 //Stimulus
-
+//  What exactly is this?
 $route['stimulus']                        = "stimulus/show/37";
 $route['stimulus/projects/(:num)']        = "stimulus/projects/$1";
 $route['stimulus/experts/(:num)']         = "stimulus/experts/$1";
 $route['stimulus/projects']               = "stimulus/index";
 
+//  What exactly is this ?
 $route['stimulusBrazil']                        = "stimulusBrazil/show/38";
 $route['stimulusBrazil/projects/(:num)']        = "stimulusBrazil/projects/$1";
 $route['stimulusBrazil/experts/(:num)']         = "stimulusBrazil/experts/$1";
