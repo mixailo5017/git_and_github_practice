@@ -68,14 +68,75 @@
     <h1 style="text-align: center">Video Gallery</h1>
 </div>
 
-<div style="padding: 25px 2% 25px 2%; font-weight: 700">
-    <h2>Investment</h2>
+<div style="padding: 25px 2% 25px 2%;">
+    <h2 style="font-weight: bolder">Recent Uploads</h2>
     <hr>
 </div>
 
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
     <!--15 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/e7rWFTxGz08" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Petraeus.jpg" alt="video" data-toggle="modal" data-target="#modal15"></a>
+        <h3>13th Global Strategic Infrastructure Leadership Forum : Special Strategic Keynote</h3>
+        <p>David H. Petraeus, Chairman, KKR Global Institute and Former Director, Central Intelligence Agency</p>
+    </div>
+    <!-- Grid column -->
+
+    <!--14 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KmkCHU_Sy_8" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Gluski.jpg" alt="video" data-toggle="modal" data-target="#modal14"></a>
+        <h3>Andrés Gluski, CEO, AES Corporation:<br />"Innovation & Infrastructure - The Role of the Global CEO"</h3>
+        <p>Andrés Gluski has served as President and CEO since 2011, after serving as COO for five years. He has led AES through a dramatic transformation by focusing on simplification, risk improvement and innovation - including a $5 billion divestiture program, dramatically increased credit rating and the initiation of a quarterly dividend, which has grown at an 8% annual rate. Under his leadership, AES has become a world leader in implementing new clean technologies, including energy storage, wind, solar and LNG.</p>
+    </div>
+    <!-- Grid column -->
+
+</div>
+
+<div style="padding: 25px 2% 25px 2%;">
+    <h2 style="font-weight: bolder">Investment</h2>
+    <hr>
+</div>
+
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
+    <!--13 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -101,7 +162,7 @@
     </div>
     <!-- Grid column -->
 
-    <!--14 Grid column -->
+    <!--12 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -127,7 +188,7 @@
     </div>
     <!-- Grid column -->
 
-    <!--13 Grid column -->
+    <!--11 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -152,7 +213,7 @@
     </div>
     <!-- Grid column -->
 
-    <!--12 Grid column -->
+    <!--10 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -185,64 +246,12 @@
 </div>
 
 <div style="padding: 25px 2% 25px 2%;">
-    <h2>Leadership</h2>
+    <h2 style="font-weight: bolder">Leadership</h2>
     <hr>
 </div>
 
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
-
-    <!--11 Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
-        <!--Modal: Name-->
-        <div class="modal fade" id="modal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <!--Content-->
-                <div style="top: 10em" class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body mb-0 p-0">
-
-                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/e7rWFTxGz08" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: Name-->
-
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Petraeus.jpg" alt="video" data-toggle="modal" data-target="#modal15"></a>
-        <h3>13th Global Strategic Infrastructure Leadership Forum : Special Strategic Keynote</h3>
-        <p>David H. Petraeus, Chairman, KKR Global Institute and Former Director, Central Intelligence Agency</p>
-    </div>
-    <!-- Grid column -->
-
-    <!--10 Grid column -->
-    <div class="col-lg-4 col-md-12 mb-4">
-        <!--Modal: Name-->
-        <div class="modal fade" id="modal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <!--Content-->
-                <div style="top: 10em" class="modal-content">
-                    <!--Body-->
-                    <div class="modal-body mb-0 p-0">
-
-                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
-                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KmkCHU_Sy_8" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                <!--/.Content-->
-            </div>
-        </div>
-        <!--Modal: Name-->
-
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Gluski.jpg" alt="video" data-toggle="modal" data-target="#modal14"></a>
-        <h3>Andrés Gluski, CEO, AES Corporation:<br />"Innovation & Infrastructure - The Role of the Global CEO"</h3>
-        <p>Andrés Gluski has served as President and CEO since 2011, after serving as COO for five years. He has led AES through a dramatic transformation by focusing on simplification, risk improvement and innovation - including a $5 billion divestiture program, dramatically increased credit rating and the initiation of a quarterly dividend, which has grown at an 8% annual rate. Under his leadership, AES has become a world leader in implementing new clean technologies, including energy storage, wind, solar and LNG.</p>
-    </div>
-    <!-- Grid column -->
 
     <!--9 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
@@ -358,7 +367,7 @@
 </div>
 
 <div style="padding: 25px 2% 25px 2%;">
-    <h2>Projects</h2>
+    <h2 style="font-weight: bolder">Projects</h2>
     <hr>
 </div>
 
@@ -451,7 +460,7 @@
 
 
 <div style="padding: 25px 2% 25px 2%;">
-    <h2>Tech</h2>
+    <h2 style="font-weight: bolder">Tech</h2>
     <hr>
 </div>
 
