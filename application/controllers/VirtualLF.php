@@ -44,6 +44,10 @@ class VirtualLF extends CI_Controller
             3 => 'Random'
 
         );
+        
+        if (!in_array(sess_var('uid'), INTERNAL_USERS)){
+            show_404();
+        }
     }
 
     /**
