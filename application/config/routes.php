@@ -4,6 +4,7 @@ $route['myvip'] = "redirect";
 $route['myvip/(:any)'] = "redirect";
 
 $route['default_controller'] = "home";
+
 $route['404_override'] = 'pages/error_404';
 
 $route['language'] = "pages/language";
@@ -22,6 +23,7 @@ $route['password/reset/(:any)'] = "reminders/reset/$1";
 /*
  * Projects
  */
+
 //$route['projects']                  = "projects/listing";
 $route['projects/edit/(:any)']		= "projects/edit/$1";
 $route['projects/create']			= "projects/create";
@@ -48,6 +50,7 @@ $route['projects/update_engineering/(:any)']	= "projects/update_engineering/$1";
 $route['projects/delete_engineering/(:any)']	= "projects/delete_engineering/$1";
 
 $route['projects/update_map_/(:any)']	= "projects/update_engineering/$1";
+
 $route['projects/delete_engineering/(:any)']	= "projects/delete_engineering/$1";
 
 $route['projects/add_map_point/(:any)']	= "projects/add_map_point/$1";
@@ -153,7 +156,7 @@ $route['projects/(:any)']			= "projects/view/$1";
 
 $route['projects/submit/(:num)'] = "projects/view/$1";
 
-//
+
 $route['expertise/list']         = "expertise/index";
 $route['expertise/list/(:num)']  = "expertise/view/$1";
 
@@ -187,7 +190,6 @@ $route['forums/experts']                = "forums/index";
 $route['forums/(:num)/privatemeetings'] = "pages/index/privatemeetings";
 
 //Stimulus
-
 $route['stimulus']                        = "stimulus/show/37";
 $route['stimulus/projects/(:num)']        = "stimulus/projects/$1";
 $route['stimulus/experts/(:num)']         = "stimulus/experts/$1";
