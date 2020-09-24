@@ -7,7 +7,7 @@
 
     .hero-image {
         /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-        background-image: url("https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/GVIP 13th Global Banner.jpg");
+        background-image: url("https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/GVIPTV Banner Sep 24.jpg");
 
         /* Set a specific height */
         height: 50%;
@@ -39,10 +39,10 @@
 </style>
 
 <a href="https://gvip.io/virtualLF">
-<!-- <div class="hero-image">
+<div class="hero-image">
     <div class="hero-text">
     </div>
-</div> -->
+</div>
 </a>
 
 <hr>
