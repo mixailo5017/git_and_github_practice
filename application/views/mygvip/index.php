@@ -39,10 +39,10 @@
 </style>
 
 <a href="https://gvip.io/virtualLF">
-<div class="hero-image">
+<!-- <div class="hero-image">
     <div class="hero-text">
     </div>
-</div>
+</div> -->
 </a>
 
 <hr>
