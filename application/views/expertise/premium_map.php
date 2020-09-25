@@ -53,7 +53,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 container: 'map',
                 style: 'mapbox://styles/johnbrisbane/ck9bswlro0e371ip7g2tuispy', // replace this with your style URL
                 center: [-90.661557, 30.893748],
-                zoom: 2.5
+                zoom: 2
             });
         </script>
     <?php }
@@ -66,7 +66,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                center: [-98, 38.88],
+                center: [-38.476665,-12.974722 ],
                 minZoom: 2,
                 zoom: 3
             });
