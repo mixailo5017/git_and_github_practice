@@ -1052,6 +1052,69 @@ class Expertise_model extends CI_Model {
         );
         sendResponse($response);
 	}
+	
+	
+	/**
+     * Get List of messages sent to user
+     * @return	array
+     */
+    public function get_user_messages($userid, $messageid=null)
+    {
+        $this->db->select("a.msgid, a.msgfrom, a.msgto, a.msgsubject, a.msgmessage, a.msgdatetime, b.uid, b.firstname, b.lastname, b.userphoto, b.membertype, b.organization, b.email");
+        $this->db->from('exp_model_email a');
+        $this->db->join('exp_members b', 'b.uid=a.msgfrom', 'left'); //from
+        //$this->db->where('a.isdeleted','0');
+        $this->db->where('b.status','1');
+        if ($messageid != null){
+            $this->db->where('a.msgid', $messageid);
+        }
+        else {
+            $this->db->where('a.msgto', $userid);
+        }
+        $this->db->order_by('a.msgdatetime', 'DESC');
+        $query_messages = $this->db->get();
+
+        $totalmessages = $query_messages->num_rows();
+
+        $messagedata["totalmessages"] = $totalmessages;
+
+        foreach($query_messages->result_array() as $row)
+        {
+            $messagedata["msg"][] = $row;
+        }
+        return $messagedata;
+
+    }
+
+    /**
+     * Get List of messages sent to user
+     * @return	array
+     */
+    public function get_sent_messages($userid, $messageid=null)
+    {
+        $this->db->select("a.msgid, a.msgfrom, a.msgto, a.msgsubject, a.msgmessage, a.msgdatetime, b.uid, b.firstname, b.lastname, b.userphoto, b.membertype, b.organization, b.email");
+        $this->db->from('exp_model_email a');
+        $this->db->join('exp_members b', 'b.uid=a.msgto', 'left');
+        //$this->db->where('a.isdeleted','0');
+        $this->db->where('b.status','1');
+        $this->db->where('a.msgfrom', $userid);
+        if ($messageid != null){
+            $this->db->where('a.msgid', $messageid);
+        }
+        $this->db->order_by('a.msgdatetime', 'DESC');
+        $query_messages = $this->db->get();
+
+        $totalmessages = $query_messages->num_rows();
+
+        $messagedata["totalmessages"] = $totalmessages;
+
+        foreach($query_messages->result_array() as $row)
+        {
+            $messagedata["msg"][] = $row;
+        }
+        return $messagedata;
+
+    }
 
     /**
      * Most likely it used once for one time data population
