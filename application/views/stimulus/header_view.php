@@ -60,6 +60,7 @@
                         <?php } ?>
 
                         <li><a href="/profile/account_settings#project-involvement"><span><?php echo $project_involvement ?></span></a></li>
+                        <li><a href="/inbox"><span>Inbox</span></a></li>
                         <li><a href="/profile/account_settings_email"><span><?php echo lang('AccountSettings') ?></span></a></li>
                         <li><a href="/profile/account_settings"><span><?php echo lang('EditProfile') ?></span></a></li>
                         <li><a href="/expertise/<?php echo Auth::id() ?>"><span><?php echo lang('ViewPublicProfile') ?></span></a></li>
