@@ -89,7 +89,7 @@ foreach($project['proj'] as $proj=>$project2) {
                 ?>
 
 
-                <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
+                <div class="col-xl-4 col-lg-6 col-md-4 col-sm-6" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
                     <!-- Card -->
                     <div class="card border-0 shadow" style="overflow: hidden">
                         <!-- Card image -->
