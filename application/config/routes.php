@@ -165,6 +165,11 @@ $route['expertise/(:num)/ratings']  = "expertise/ratings/$1";
 
 $route['expertise/(:num)/recommendationfeedback/expert/(:num)/(up|down)'] = "recommendationfeedback/store/$1/expert/$2/$3";
 
+//messages
+$route['inbox']       = "inbox/view";
+$route['inbox/sent/']       = "inbox/sent_view";
+$route['inbox/message_view/(:num)']   = "inbox/message_view/$1";
+
 $route['expertise/(:num)']       = "expertise/view/$1";
 //$route['expertise']			        = "expertise/index";
 
