@@ -455,6 +455,18 @@
     </div>
     <!-- Grid column -->
 
+
+</div>
+
+
+<div style="padding: 25px 2% 25px 2%;">
+    <h2 style="font-weight: bolder">Tech</h2>
+    <hr>
+</div>
+
+<!-- Grid row -->
+<div style="padding-right: 2%; padding-left: 2%" class="row">
+
     <!--2 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
@@ -480,18 +492,6 @@
         <p>Michael Woods, CEO, Black Buffalo & Flash Labs and Norman Anderson, CEO, CG/LA Infrastructure in conversation.</p>
     </div>
     <!-- Grid column -->
-
-
-</div>
-
-
-<div style="padding: 25px 2% 25px 2%;">
-    <h2 style="font-weight: bolder">Tech</h2>
-    <hr>
-</div>
-
-<!-- Grid row -->
-<div style="padding-right: 2%; padding-left: 2%" class="row">
 
     <!--1 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
