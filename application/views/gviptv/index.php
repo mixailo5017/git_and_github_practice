@@ -57,7 +57,7 @@
     }
 </style>
 
-<a href="https://gvip.io/virtualLF">
+<a href="#">
     <div class="hero-image">
         <div class="hero-text">
         </div>
