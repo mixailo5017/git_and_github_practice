@@ -180,7 +180,7 @@
 
 
             <!--======== Information Section ========-->
-            <div class="row mt-5">
+            <div class="row ml-5 mt-5">
                 <div class="details">
                     <h2 style="text-align: center">Information</h2>
                     <p><?php echo $users['mission'] ?></p>
