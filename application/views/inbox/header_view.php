@@ -4,17 +4,17 @@
     <div class="container">
         <nav class="m-nav logo">
             <ul>
-                <?php if (Auth::check() && (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
+                <?php if (Auth::check() && (!App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
                     <li>
                         <span class="iicon-menu m-menu-btn"></span>
                     </li>
                 <?php } ?>
                 <li>
-                    <a href="/"><span><img src="/images/new/GViP_Logos_white.png" width="64" height="40"/></span></a>
+                    <a href="/"><span><img src="/images/new/GViP_Logos_white.png" width="64" height="40" /></span></a>
                 </li>
             </ul>
         </nav>
-        <?php if (Auth::check() && (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
+        <?php if (Auth::check() && (!App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
             <nav class="m-nav nav-main">
                 <ul>
                     <li class="<?php echo $segment == 'projects' ? 'active' : '' ?>">
@@ -24,7 +24,7 @@
                         <a href="/expertise"><span><?php echo lang('expertise') ?></span></a>
                     </li>
                     <li class="<?php echo $segment == 'companies' ? 'active' : '' ?>">
-                        <a href="/companies"><span>Industry Hubs</span></a>
+                        <a href="/companies"><span>Network Hubs</span></a>
                     </li>
                     <li class="<?php echo $segment == 'map' ? 'active' : '' ?>">
                         <a href="/gismap"><span><?php echo lang('Map') ?></span></a>
@@ -42,7 +42,7 @@
             </nav>
         <?php } ?>
 
-        <?php if (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down()) { ?>
+        <?php if (!App::is_down_for_maintenence() || App::is_ip_allowed_when_down()) { ?>
             <nav class="m-nav m-right">
                 <ul>
                     <?php if (Auth::check()) { ?>
@@ -79,15 +79,16 @@
                         <?php if ($segment != 'login') { ?>
                             <li><a href="/login"><span>Sign In</span></a></li>
                         <?php } ?>
-                        <?php if (! in_array($segment, array('', 'signup', 'password'))) { ?>
+                        <?php if (!in_array($segment, array('', 'signup', 'password'))) { ?>
                             <li class="join"><a href="/signup"><span>Join for Free</span></a></li>
                         <?php } ?>
                     <?php } ?>
                 </ul>
             </nav>
-        <?php } // is_down_for_maintenance ?>
+        <?php } // is_down_for_maintenance 
+        ?>
 
-        <?php if (Auth::check() && (! App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
+        <?php if (Auth::check() && (!App::is_down_for_maintenence() || App::is_ip_allowed_when_down())) { ?>
             <nav class="m-nav m-right">
                 <ul>
                     <li class="m-dropdown m-language">
