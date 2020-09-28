@@ -75,6 +75,34 @@
 
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
+
+    <!--16 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal16" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EHkhlNcPxkU" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Space.jpg" alt="video" data-toggle="modal" data-target="#modal15"></a>
+        <h3>The View from Space - Business Opportunities that will Change Life on Earth</h3>
+        <p>Erlend Olson, Co-Founder and COO, Theia Group </p>
+        <p>Guest interviewer: Dr. Joseph N. Pelton, Executive Board, International Association for the Advancement of Space Safety (IAASS) </p>
+    </div>
+    <!-- Grid column -->
+
     <!--15 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
