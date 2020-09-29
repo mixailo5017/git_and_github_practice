@@ -96,7 +96,7 @@
         </div>
         <!--Modal: Name-->
 
-        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Space.jpg" alt="video" data-toggle="modal" data-target="#modal15"></a>
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Space.jpg" alt="video" data-toggle="modal" data-target="#modal16"></a>
         <h3>The View from Space - Business Opportunities that will Change Life on Earth</h3>
         <p>Erlend Olson, Co-Founder and COO, Theia Group </p>
         <p>Guest interviewer: Dr. Joseph N. Pelton, Executive Board, International Association for the Advancement of Space Safety (IAASS) </p>
