@@ -281,6 +281,32 @@
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
 
+    <!--18 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal18" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H-zWCqVWtGQ" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/POY.jpg" alt="video" data-toggle="modal" data-target="#modal18"></a>
+        <h3>Project of the Year Awards</h3>
+        <p>Announced at the 13th Global Infrastructure Leadership Virtual Forum, sponsored by Oracle Construction and Engineering. </p>
+    </div>
+    <!-- Grid column -->
+
     <!--9 Grid column -->
     <div class="col-lg-4 col-md-6 mb-4">
         <!--Modal: Name-->
@@ -402,7 +428,7 @@
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
 
-    <!--16 Grid column -->
+    <!--17 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
         <div class="modal fade" id="modal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
