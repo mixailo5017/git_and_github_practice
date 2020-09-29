@@ -402,6 +402,32 @@
 <!-- Grid row -->
 <div style="padding-right: 2%; padding-left: 2%" class="row">
 
+    <!--16 Grid column -->
+    <div class="col-lg-4 col-md-12 mb-4">
+        <!--Modal: Name-->
+        <div class="modal fade" id="modal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <!--Content-->
+                <div style="top: 10em" class="modal-content">
+                    <!--Body-->
+                    <div class="modal-body mb-0 p-0">
+
+                        <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7buloKcgpUE" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                <!--/.Content-->
+            </div>
+        </div>
+        <!--Modal: Name-->
+
+        <a><img class="img-fluid z-depth-1" src="https://d2huw5an5od7zn.cloudfront.net/gviptv/images/Rail_Baltica.jpg" alt="video" data-toggle="modal" data-target="#modal17"></a>
+        <h3>Rail Baltica - Europe's Greatest Connectivity Project</h3>
+        <p>Mark Loader, Chief Project Officer, RB Rail AS and Norman Anderson, President and CEO of CG/LA Infrastructure, discuss Rail Baltica. </p>
+    </div>
+    <!-- Grid column -->
+
     <!--5 Grid column -->
     <div class="col-lg-4 col-md-12 mb-4">
         <!--Modal: Name-->
