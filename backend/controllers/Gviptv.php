@@ -89,6 +89,7 @@ class Gviptv extends CI_Controller {
         }
     }
 
+
     /**
      * Create a new forum entry
      *
@@ -97,21 +98,19 @@ class Gviptv extends CI_Controller {
         // Process updates first
         if ($this->input->post('submit')) {
 
-            if ($this->form_validation->run() === TRUE) {
                 $now = date('Y-m-d H:i:s');
                 $data = array(
-                    'title' => $this->input->post('title'),
-                    'category' => $this->input->post('category_id'),
                     'link' => $this->input->post('link'),
-                    'status' => '0',
-                    'created_at' => $now,
+                    'thumbnail' => $this->input->post('thumbnail'),
+                    'title' => $this->input->post('title'),
                     'description' => $this->input->post('description'),
-                    'thumbnail' => $this->input->post('thumbnail')
+                    'category' => $this->input->post('category_id'),
+                    'created_at' => $now,
+                    'status' => '0'
                 );
                 if ($id = $this->gviptv_model->create($data)) {
                     redirect("gviptv/edit/$id", 'refresh');
                 }
-            }
         }
 
         // Then load the view
