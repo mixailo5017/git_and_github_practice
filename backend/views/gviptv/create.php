@@ -15,7 +15,7 @@
                         'id'	=> 'title',
                         'value' => 'title',
                         'name'	=> 'title',
-                        'placeholder' => 'Forum title (e.g. 8th Global Infrastructure Leadership Forum)'
+                        'placeholder' => 'Title'
                     )); ?>
                     <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
                 </div>
@@ -29,6 +29,61 @@
                     <?php echo form_dropdown('category_id', $categories, set_value('category_id')); ?>
                     <div class="errormsg" id="err_category_id"><?php echo form_error('category_id'); ?></div>
                 </div>
+            </div>
+
+            <div class="field">
+                <?php echo form_label('Title:', 'title_label', array('class' => 'left_label')); ?>
+                <div class="fld">
+                    <?php echo form_input(array(
+                        'id'	=> 'link',
+                        'value' => 'link',
+                        'name'	=> 'link',
+                        'placeholder' => 'youtube.com/43tnjej3'
+                    )); ?>
+                    <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
+                </div>
+            </div>
+
+            <div class="field">
+                <?php echo form_label('Title:', 'title_label', array('class' => 'left_label')); ?>
+                <div class="fld">
+                    <?php echo form_input(array(
+                        'id'	=> 'thumbnail',
+                        'value' => 'thumbnail',
+                        'name'	=> 'thumbnail',
+                        'placeholder' => 'Cloudfront link'
+                    )); ?>
+                    <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
+                </div>
+            </div>
+
+            <div class="field">
+                <?php echo form_label('Title:', 'title_label', array('class' => 'left_label')); ?>
+                <div class="fld">
+                    <?php echo form_input(array(
+                        'id'	=> 'thumbnail',
+                        'value' => 'thumbnail',
+                        'name'	=> 'thumbnail',
+                        'placeholder' => 'Cloudfront link'
+                    )); ?>
+                    <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
+                </div>
+            </div>
+
+            <div class="contenttitle2">
+                <h3>Video Description</h3>
+            </div>
+            <br/>
+            <div>
+                <?php echo form_textarea(array(
+                    'type' => 'text',
+                    'class' => 'tinymce',
+                    'id' => 'description',
+                    'name' => 'description',
+                    'value' => 'description',
+                    'data-width' => '675',
+                    'data-height' => '400'
+                )); ?>
             </div>
         </div>
 
