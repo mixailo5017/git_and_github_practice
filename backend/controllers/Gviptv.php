@@ -71,7 +71,7 @@ class Gviptv extends CI_Controller {
      */
     public function destroy($id) {
 
-            if ($this->forums_model->delete($id)) {
+            if ($this->gviptv_model->delete($id)) {
                 sendResponse(array(
                     'status' => 'success',
                     'msgtype' => 'success',
