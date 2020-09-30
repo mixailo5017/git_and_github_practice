@@ -5,7 +5,7 @@ class Gviptv_model extends CI_Model {
      * @var string
      */
     protected $select = 'id, link, thumbnail, title, description, category,
-        created_at, status';
+        created_at';
 
 
     /**
@@ -39,7 +39,7 @@ class Gviptv_model extends CI_Model {
     }
 
     /**
-     * Return an array of forums
+     * Return an array of videos
      *
      * @param array $where
      * @param string $select
@@ -112,40 +112,6 @@ class Gviptv_model extends CI_Model {
             ->set($data)
             ->insert('exp_gviptv');
         return $this->db->insert_id();
-    }
-
-
-    /**
-     * Get Account Details of loged in user
-     *
-     * @access	public
-     * @param	int
-     * @return	array
-     */
-    public function add_forum(){
-
-        $this->db->select(array("uid","firstname","lastname","email","registerdate","membertype","organization","typename","m.status"));
-        $this->db->from("exp_members m");
-        $this->db->join("exp_member_type mt","m.membertype=mt.typeid");
-        if($groupid != "") {
-            $this->db->where(array("m.membertype"=>$groupid));
-        }
-        $this->db->order_by("m.firstname", "asc");
-
-        $query_user = $this->db->get();
-        $memberarray = array();
-        $totalmembers = $query_user->num_rows();
-        if ($totalmembers > 0)
-        {
-            $memberarray["data"] = $query_user->result_array();
-        }
-
-        $memberarray["totalmembers"] = $totalmembers;
-        $memberarray["member_group"] = "";
-        if($groupid != "" && $totalmembers > 0) {
-            $memberarray["member_group"] = $memberarray["data"][0]["typename"];
-        }
-        return $memberarray;
     }
 
 
@@ -285,7 +251,7 @@ class Gviptv_model extends CI_Model {
             return $ret_data;
         }
     }
-    
+
     /**
      * Generates a base query for forums
      *
@@ -311,8 +277,8 @@ class Gviptv_model extends CI_Model {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
     }
-    
-        /**
+
+    /**
      * Receives an array of conditions and applies the to ORDER BY clause of the current query
      *
      * @param array $order_by
