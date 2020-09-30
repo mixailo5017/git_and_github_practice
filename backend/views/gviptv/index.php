@@ -49,7 +49,7 @@
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td>
-                        <a href="/<?php echo index_page(); ?>/forums/edit/<?php echo $row['id']; ?>">
+                        <a href="/<?php echo index_page(); ?>/gviptv/edit/<?php echo $row['id']; ?>">
                             <?php echo $row['title']; ?>
                         </a>
                     </td>
