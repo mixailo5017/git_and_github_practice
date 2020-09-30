@@ -29,6 +29,14 @@
                 <li <?php if ($fst_segment == "forums" && $snd_segment == "create") { echo "class='current'"; } ?>><a href="/admin.php/forums/create">Add New Forum</a></li>
             </ul>
         </li>
+		
+	<li <?php if ($fst_segment == "gviptv") { echo "class='current'"; } ?>><a href="#gviptvsub" class="gallery">GViP TV</a>
+            <span class="arrow"></span>
+            <ul id="gviptvsub">
+                <li <?php if ($fst_segment == "gviptv" && ($snd_segment == "index" || $snd_segment == "")) { echo "class='current'"; } ?>><a href="/admin.php/gviptv">View All</a></li>
+                <li <?php if ($fst_segment == "gviptv" && $snd_segment == "create") { echo "class='current'"; } ?>><a href="/admin.php/gviptv/create">Add New GViP TV Video</a></li>
+            </ul>
+        </li>
 
         <li <?php if($fst_segment == "store") { echo "class='current'"; } ?>><a href="#storesub" class="gallery">Store</a>
             <span class="arrow"></span>
