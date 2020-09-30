@@ -25,7 +25,6 @@ class Migration_create_exp_gviptv extends CI_Migration {
             $sql = array(
                 // Default value of NOW() for created_at
                 "ALTER TABLE {$this->table} ALTER created_at SET DEFAULT CURRENT_TIMESTAMP",
-                "CREATE INDEX {$this->table}_status_idx ON {$this->table} (status)",
             );
 
             $this->execute($sql);
