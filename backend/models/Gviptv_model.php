@@ -289,6 +289,32 @@ class Gviptv_model extends CI_Model {
             return $ret_data;
         }
     }
+    
+    /**
+     * Generates a base query for forums
+     *
+     * @param string $select
+     * @param array $where
+     * @param string|array $order_by
+     * @param bool $row_count
+     * @return void
+     */
+    private function base_query($select = null, $where = null, $order_by = null, $row_count = false)
+    {
+        $select = (! is_null($select)) ? $select : $this->select;
+        $this->db
+            ->from('exp_gviptv')
+            ->select($select);
+
+        $this->apply_where($where);
+
+        $order_by = (! is_null($order_by)) ? $order_by : $this->order_by;
+        $this->apply_order_by($order_by);
+
+        if ($row_count) {
+            $this->db->select('COUNT(*) OVER () AS row_count', false);
+        }
+    }
 
 }
 
