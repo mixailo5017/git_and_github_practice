@@ -23,7 +23,7 @@ class Gviptv extends CI_Controller {
         }
 
         //Load model for this controller
-        $this->load->model('gvip_model');
+        $this->load->model('gviptv_model');
 
         //load form_validation library for default validation methods
         $this->load->library('form_validation');
