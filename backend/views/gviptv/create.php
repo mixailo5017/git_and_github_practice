@@ -13,63 +13,55 @@
                 <div class="fld">
                     <?php echo form_input(array(
                         'id'	=> 'title',
-                        'value' => 'title',
-                        'name'	=> 'title',
-                        'placeholder' => 'Title'
+                        'value' => '',
+                        'name'	=> 'title'
                     )); ?>
                     <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
                 </div>
             </div>
 
-            <?php $categories = array('Tech','Investment', 'Leadership','Projects');?>
+            <?php
+            $categories = [
+                'Technology' => 'Technology',
+                'Investment' => 'Investment',
+                'Leadership' => 'Leadership',
+                'Projects'   => 'Projects',
+            ]
+
+            ?>
 
             <div class="field">
                 <?php echo form_label('Category:', 'category_id_label', array('class' => 'left_label')); ?>
                 <div class="fld">
-                    <?php echo form_dropdown('category_id', $categories, set_value('category_id')); ?>
+                    <?php echo form_dropdown('category_id', $categories, 'Technology'); ?>
                     <div class="errormsg" id="err_category_id"><?php echo form_error('category_id'); ?></div>
                 </div>
             </div>
 
             <div class="field">
-                <?php echo form_label('Title:', 'title_label', array('class' => 'left_label')); ?>
+                <?php echo form_label('Video Link (Format Must Match Placeholder!) :', 'title_label', array('class' => 'left_label')); ?>
                 <div class="fld">
                     <?php echo form_input(array(
                         'id'	=> 'link',
-                        'value' => 'link',
-                        'name'	=> 'link',
-                        'placeholder' => 'youtube.com/43tnjej3'
+                        'value' => 'https://www.youtube.com/embed/O1Uwk8vyvNk',
+                        'name'	=> 'link'
                     )); ?>
                     <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
                 </div>
             </div>
 
             <div class="field">
-                <?php echo form_label('Title:', 'title_label', array('class' => 'left_label')); ?>
+                <?php echo form_label('Thumbnail (Format Must Match Placeholder!):', 'title_label', array('class' => 'left_label')); ?>
                 <div class="fld">
                     <?php echo form_input(array(
                         'id'	=> 'thumbnail',
-                        'value' => 'thumbnail',
-                        'name'	=> 'thumbnail',
-                        'placeholder' => 'Cloudfront link'
+                        'value' => 'https://d2huw5an5od7zn.cloudfront.net/gviptv/images/POY.jpg',
+                        'name'	=> 'thumbnail'
                     )); ?>
                     <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
                 </div>
             </div>
-
-            <div class="field">
-                <?php echo form_label('Title:', 'title_label', array('class' => 'left_label')); ?>
-                <div class="fld">
-                    <?php echo form_input(array(
-                        'id'	=> 'thumbnail',
-                        'value' => 'thumbnail',
-                        'name'	=> 'thumbnail',
-                        'placeholder' => 'Cloudfront link'
-                    )); ?>
-                    <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
-                </div>
-            </div>
-
+            
             <div class="contenttitle2">
                 <h3>Video Description</h3>
             </div>
