@@ -28,7 +28,6 @@
                 <th class="head1">ID</th>
                 <th class="head0">Title</th>
                 <th class="head1">Category</th>
-                <th class="head0">Status</th>
                 <th class="head0 nosort">Action</th>
             </tr>
             </thead>
@@ -37,7 +36,6 @@
                 <th class="head1">ID</th>
                 <th class="head0">Title</th>
                 <th class="head1">Category</th>
-                <th class="head0">Status</th>
                 <th class="head0 nosort">Action</th>
             </tr>
             </tfoot>
@@ -54,7 +52,6 @@
                         </a>
                     </td>
                     <td><?php echo $row['category']; ?></td>
-                    <td><?php echo ($row['status'] == '1') ? 'Active' : 'Draft'; ?></td>
 
                     <td>
                         <a class="delete" href="gviptv/destroy/<?php echo $row['id']; ?>" >Delete</a>
