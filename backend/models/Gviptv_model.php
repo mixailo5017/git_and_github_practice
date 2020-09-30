@@ -315,6 +315,42 @@ class Gviptv_model extends CI_Model {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
         }
     }
+    
+        /**
+     * Receives an array of conditions and applies the to ORDER BY clause of the current query
+     *
+     * @param array $order_by
+     * @return void
+     */
+    private function apply_order_by($order_by)
+    {
+        if (! is_null($order_by) && is_array($order_by)) {
+            foreach ($order_by as $column => $direction) {
+                $this->db->order_by($column, $direction);
+            }
+        }
+    }
+
+    /**
+     * Receives an array of conditions and applies them to WHERE clause of the current query
+     *
+     * @param array $where
+     * @return void
+     */
+    private function apply_where($where)
+    {
+        if (! is_null($where) && is_array($where)) {
+            foreach ($where as $column => $value) {
+                // If the key is of type int that means that it is a RAW WHERE clause.
+                // Therefore we need to apply it as such
+                if (is_int($column)) {
+                    $this->db->where($value, null, false);
+                } else {
+                    $this->db->where($column, $value);
+                }
+            }
+        }
+    }
 
 }
 
