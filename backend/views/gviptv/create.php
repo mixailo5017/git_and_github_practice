@@ -13,7 +13,7 @@
                 <div class="fld">
                     <?php echo form_input(array(
                         'id'	=> 'title',
-                        'value' => '',
+                        'value' => 'Video Name',
                         'name'	=> 'title'
                     )); ?>
                     <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
@@ -61,7 +61,7 @@
                     <div class="errormsg" id="err_title"><?php echo form_error('title'); ?></div>
                 </div>
             </div>
-            
+
             <div class="contenttitle2">
                 <h3>Video Description</h3>
             </div>
