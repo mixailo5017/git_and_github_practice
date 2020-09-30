@@ -77,6 +77,7 @@ class Gviptv extends CI_Controller {
                     'msgtype' => 'success',
                     'msg' => 'GViP TV Video deleted successfully'
                 ));
+                redirect("gviptv", 'refresh');
             } else {
                 sendResponse(array(
                     'status' => 'success',
