@@ -97,8 +97,6 @@ class Gviptv extends CI_Controller {
         // Process updates first
         if ($this->input->post('submit')) {
 
-            $this->set_create_validation_rules();
-
             if ($this->form_validation->run() === TRUE) {
                 $now = date('Y-m-d H:i:s');
                 $data = array(
