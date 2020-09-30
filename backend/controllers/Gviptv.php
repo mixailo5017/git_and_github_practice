@@ -72,11 +72,6 @@ class Gviptv extends CI_Controller {
     public function destroy($id) {
 
             if ($this->gviptv_model->delete($id)) {
-                sendResponse(array(
-                    'status' => 'success',
-                    'msgtype' => 'success',
-                    'msg' => 'GViP TV Video deleted successfully'
-                ));
                 redirect("gviptv", 'refresh');
             } else {
                 sendResponse(array(
@@ -102,11 +97,10 @@ class Gviptv extends CI_Controller {
                     'title' => $this->input->post('title'),
                     'description' => $this->input->post('description'),
                     'category' => $this->input->post('category_id'),
-                    'created_at' => $now,
-                    'status' => '0'
+                    'created_at' => $now
                 );
                 if ($id = $this->gviptv_model->create($data)) {
-                    redirect("gviptv/edit/$id", 'refresh');
+                    redirect("gviptv", 'refresh');
                 }
         }
 
@@ -193,11 +187,8 @@ class Gviptv extends CI_Controller {
      * @return bool
      */
     private function update($id, $input) {
-        $this->set_update_validation_rules();
 
         if ($this->form_validation->run() === TRUE) {
-            // Ensure we have required flags set
-            $input['status'] = (isset($input['status'])) ? '1' : '0';
 
             // Convert empty strings to NULLs
             $input = array_map(function($value) {
@@ -209,40 +200,4 @@ class Gviptv extends CI_Controller {
         }
     }
 
-
-    /**
-     * Validation callback
-     * Returns true if an argument contains only alpha (supporting UTF)-numeric characters, underscores, dashes and spaces
-     *
-     * @param $value
-     * @return bool
-     */
-    public function alpha_dash_space($value) {
-        $regex = "/^([\pL\s\d_-])+$/u";
-        return (! preg_match($regex, $value)) ? FALSE : TRUE;
-    }
-
-    /**
-     * Set validation rules for update and create methods
-     *
-     */
-    private function set_common_validation_rules() {
-        $this->form_validation->set_error_delimiters('<label>', '</label>');
-        $this->form_validation->set_rules('title', 'Title', 'trim|required|callback_alpha_dash_space');
-        $this->form_validation->set_message('alpha_dash_space', 'The %s field may only contain alpha-numeric characters, underscores, dashes and spaces.');
-    }
-
-    /**
-     * Set validation rules for forum update method
-     *
-     */
-    private function set_update_validation_rules() {
-        $this->set_common_validation_rules();
-
-        $this->form_validation->set_rules('link', 'Link', 'trim');
-        $this->form_validation->set_rules('status', ' GViP TV Video enabled', ''); // Needed for set_value to work properly
-        $this->form_validation->set_rules('thumbnail', 'Thumbnail URL', 'trim');
-        $this->form_validation->set_rules('description', 'GViP TV Video Description', 'trim');
-
-    }
 }
