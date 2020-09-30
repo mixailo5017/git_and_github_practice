@@ -13,13 +13,9 @@
             <a class="close"></a>
             <p></p>
         </div>
-        <div class="tableoptions">
-            <button class="deletebutton radius3" title="Delete Selected" name="dyntable_forums" id="#/admin.php/gviptv/destroy">Delete Selected</button> &nbsp;
-        </div><!--tableoptions-->
 
         <table cellpadding="0" cellspacing="0" border="0" class="stdtable" id="dyntable_forums">
             <colgroup>
-                <col class="con0" style="width: 4%" />
                 <col class="con1" />
                 <col class="con0" />
                 <col class="con1" />
@@ -29,13 +25,6 @@
             </colgroup>
             <thead>
             <tr>
-                <th class="head0 nosort" align="center"><span class="center">
-                        <?php echo form_checkbox(array(
-                            'id' => 'select_all_header',
-                            'name' => 'select_all_header',
-                            'class' => 'checkall'
-                        )); ?></span>
-                </th>
                 <th class="head1">ID</th>
                 <th class="head0">Title</th>
                 <th class="head1">Category</th>
@@ -45,13 +34,6 @@
             </thead>
             <tfoot>
             <tr>
-                <th class="head0 nosort" align="center"><span class="center">
-                        <?php echo form_checkbox(array(
-                            'id' => 'select_all_header',
-                            'name' => 'select_all_header',
-                            'class' => 'checkall'
-                        )); ?></span>
-                </th>
                 <th class="head1">ID</th>
                 <th class="head0">Title</th>
                 <th class="head1">Category</th>
@@ -65,12 +47,6 @@
 
                 ?>
                 <tr>
-                    <td align="center"><span class="center"><?php echo form_checkbox(array(
-                                'id' => 'select_' . $row['id'],
-                                'name' =>' select_' . $row['id'],
-                                'value' => $row['id']
-                            )); ?></span></td>
-
                     <td><?php echo $row['id']; ?></td>
                     <td>
                         <a href="/<?php echo index_page(); ?>/forums/edit/<?php echo $row['id']; ?>">
