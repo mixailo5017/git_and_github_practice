@@ -56,7 +56,7 @@
                     <td><?php echo ($row['status'] == '1') ? 'Active' : 'Draft'; ?></td>
 
                     <td>
-                        <a class="delete" href="#destroy/<?php echo $row['id']; ?>">Delete</a>
+                        <a class="delete" href="admin.php/gviptv/destroy/<?php echo $row['id']; ?>">Delete</a>
                     </td>
                 </tr>
                 <?php
