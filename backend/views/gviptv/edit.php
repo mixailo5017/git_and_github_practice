@@ -17,7 +17,7 @@
                     <li><a href="#general">General</a></li>
                 </ul>
                 <div id="general">
-                    <?php $this->load->view('forums/_general', $details); ?>
+                    <?php $this->load->view('gviptv/_general', $details); ?>
                 </div>
             </div><!-- tabs -->
         </div><!-- widgetcontent -->
