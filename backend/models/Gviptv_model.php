@@ -67,21 +67,17 @@ class Gviptv_model extends CI_Model {
     /**
      * Delete forum(s) by id(s)
      *
-     * @param int|array $id
+     * @param int
      * @return bool
      */
     public function delete($id)
     {
-        if (! is_array($id)) {
-            $id = array($id);
-        }
-
         // BEGIN TRANSACCTION
         $this->db->trans_start();
 
         // And only now we can delete forum records themselves
         $this->db
-            ->where_in('id', $id)
+            ->where('id', $id)
             ->delete('exp_gviptv');
 
         // COMMIT
