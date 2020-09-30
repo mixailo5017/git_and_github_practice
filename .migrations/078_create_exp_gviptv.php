@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_create_exp_messages extends CI_Migration {
+class Migration_create_exp_gviptv extends CI_Migration {
 
     protected $table = 'exp_gviptv';
 
