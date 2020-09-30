@@ -181,7 +181,7 @@ class Gviptv extends CI_Controller {
         // Render the page
         $this->load->view('templates/header', $headers);
         $this->load->view('templates/leftmenu');
-        $this->load->view('forums/edit', $data);
+        $this->load->view('gviptv/edit', $data);
         $this->load->view('templates/footer');
     }
 
