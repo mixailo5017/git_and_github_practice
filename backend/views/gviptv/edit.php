@@ -1,6 +1,6 @@
 <div class="centercontent">
     <div class="pageheader notab">
-        <h1 class="pagetitle">Edit Forum</h1>
+        <h1 class="pagetitle">Edit Video</h1>
         <span class="pagedesc">&nbsp;</span>
         <a class="right goback" style="margin-right:20px;" href="/admin.php/gviptv"><span>Back</span></a>
     </div><!-- pageheader -->
