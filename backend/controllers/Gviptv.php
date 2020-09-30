@@ -69,20 +69,15 @@ class Gviptv extends CI_Controller {
      * Delete forum(s) entry(ies) by id(s)
      *
      */
-    public function destroy($id = null) {
-        
-        if ($id == null){
-            $id = $this->input->get('delids');
-        }
-        
+    public function destroy($id) {
 
-        if (count($id) > 0) {
             if ($this->forums_model->delete($id)) {
                 sendResponse(array(
                     'status' => 'success',
                     'msgtype' => 'success',
                     'msg' => 'GViP TV Video deleted successfully'
                 ));
+                redirect("gviptv", 'refresh');
             } else {
                 sendResponse(array(
                     'status' => 'success',
@@ -90,9 +85,7 @@ class Gviptv extends CI_Controller {
                     'msg' => 'Error while deleting GViP TV Video.'
                 ));
             }
-        }
     }
-
 
     /**
      * Create a new forum entry
