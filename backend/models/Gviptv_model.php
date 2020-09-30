@@ -81,7 +81,7 @@ class Gviptv_model extends CI_Model {
 
         // And only now we can delete forum records themselves
         $this->db
-            ->where_in('id', $id)
+            ->where('id', $id)
             ->delete('exp_gviptv');
 
         // COMMIT
