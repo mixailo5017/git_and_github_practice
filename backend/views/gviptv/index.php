@@ -46,12 +46,6 @@
 
                 ?>
                 <tr>
-                    <td align="center"><span class="center"><?php echo form_checkbox(array(
-                                'id' => 'select_' . $row['id'],
-                                'name' =>' select_' . $row['id'],
-                                'value' => $row['id']
-                            )); ?></span></td>
-
                     <td><?php echo $row['id']; ?></td>
                     <td>
                         <a href="/<?php echo index_page(); ?>/forums/edit/<?php echo $row['id']; ?>">
@@ -62,7 +56,7 @@
                     <td><?php echo ($row['status'] == '1') ? 'Active' : 'Draft'; ?></td>
 
                     <td>
-                        <a class="delete" href="#/admin.php/forums/destroy/<?php echo $row['id']; ?>">Delete</a>
+                        <a class="delete" href="#destroy/<?php echo $row['id']; ?>">Delete</a>
                     </td>
                 </tr>
                 <?php
