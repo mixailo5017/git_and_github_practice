@@ -212,18 +212,18 @@
     })
     $('#btn-invest').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'investment');
+        populate(hardcodedData, 'Investment');
     })
     $('#btn-leader').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'leadership');
+        populate(hardcodedData, 'Leadership');
     })
     $('#btn-projects').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'projects');
+        populate(hardcodedData, 'Projects');
     })
     $('#btn-tech').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'technology');
+        populate(hardcodedData, 'Technology');
     })
 </script>
