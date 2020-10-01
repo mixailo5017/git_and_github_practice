@@ -33,7 +33,7 @@
             <div class="field">
                 <?php echo form_label('Category:', 'category_id_label', array('class' => 'left_label')); ?>
                 <div class="fld">
-                    <?php echo form_dropdown('category_id', $categories, set_value('category', $details['category'])); ?>
+                    <?php echo form_dropdown('category', $categories, set_value('category', $details['category'])); ?>
                     <div class="errormsg" id="err_category_id"><?php echo form_error('category_id'); ?></div>
                 </div>
             </div>
