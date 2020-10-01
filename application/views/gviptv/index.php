@@ -131,7 +131,7 @@
                     <li id='btn-tech' class="list-group-item h3 my-2 font-weight-light select-item ">Technology</li>
                 </ul>
             </div>
-        
+
         </div>
         <!-- Sidebar end -->
 
@@ -313,7 +313,7 @@
                     </div>
                     <!--Modal: Name-->
 
-                    <a><img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video" data-toggle="modal" data-target="#modal${i}"></a>
+                    <a href="/gviptv/view/<?php echo $details['id']; ?>"><img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video" data-toggle="modal" data-target="#modal${i}"></a>
                     <h3>${el.head}</h3>
                     <p>${el.body}</p>
                 </div>
@@ -321,7 +321,7 @@
         })
 
     }
-    
+
     //  Toggle sidebar on and off
     $('#toggle-btn').on('click', function(e) {
         $('#sidebar').toggle()
