@@ -100,7 +100,6 @@ class Gviptv_model extends CI_Model {
         $this->db
             ->where('id', $id)
             ->update('exp_gviptv', $data);
-        return true;
     }
 
     /**
