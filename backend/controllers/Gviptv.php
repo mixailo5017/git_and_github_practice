@@ -155,7 +155,6 @@ class Gviptv extends CI_Controller {
                 'created_at' => $now
             );
             $this->update($id, $input);
-            redirect("gviptv", 'refresh');
 
         }
 
