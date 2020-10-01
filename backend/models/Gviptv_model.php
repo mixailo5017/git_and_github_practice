@@ -99,8 +99,7 @@ class Gviptv_model extends CI_Model {
     {
         $this->db
             ->where('id', $id)
-            ->set($data)
-            ->update('exp_gviptv');
+            ->update('exp_gviptv', $data);
     }
 
     /**
