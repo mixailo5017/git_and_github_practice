@@ -140,7 +140,7 @@ class Gviptv extends CI_Controller {
                 'thumbnail' => $this->input->post('thumbnail'),
                 'title' => $this->input->post('title'),
                 'description' => $this->input->post('description'),
-                'category' => $this->input->post('category_id'),
+                'category' => $this->input->post('category'),
                 'created_at' => $now
             );
             $this->update($id, $input);
