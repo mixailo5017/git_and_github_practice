@@ -143,6 +143,22 @@ class Gviptv extends CI_Controller {
             $this->update($id, $input);
         }
 
+        if ($this->input->post('submit')) {
+
+            $now = date('Y-m-d H:i:s');
+            $input = array(
+                'link' => $this->input->post('link'),
+                'thumbnail' => $this->input->post('thumbnail'),
+                'title' => $this->input->post('title'),
+                'description' => $this->input->post('description'),
+                'category' => $this->input->post('category_id'),
+                'created_at' => $now
+            );
+            $this->update($id, $input);
+            redirect("gviptv", 'refresh');
+
+        }
+
         $headers = array(
 //            'bodyid' => 'Forums',
             'bodyclass' => 'withvernav',
@@ -178,7 +194,6 @@ class Gviptv extends CI_Controller {
         $this->load->view('gviptv/edit', $data);
         $this->load->view('templates/footer');
     }
-
     /**
      * Update a specified forum entry
      *
