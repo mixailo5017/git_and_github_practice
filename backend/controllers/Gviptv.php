@@ -188,20 +188,11 @@ class Gviptv extends CI_Controller {
      *
      * @param int $id
      * @param array $input
-     * @return bool
      */
     private function update($id, $input) {
-
-        if ($this->form_validation->run() === TRUE) {
-
-            // Convert empty strings to NULLs
-            $input = array_map(function($value) {
-                return $value === '' ? null : $value;
-            }, $input);
-
+        
             $this->gviptv_model->update($id, $input);
             redirect('/gviptv/edit/' . $id, 'refresh');
-        }
     }
 
 }
