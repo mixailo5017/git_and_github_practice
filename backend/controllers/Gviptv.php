@@ -132,16 +132,6 @@ class Gviptv extends CI_Controller {
         // Convert $id to integer
         $id = (int)$id;
 
-        // Process updates first
-        if ($this->input->post('submit')) {
-            // Grab all input and remove submit
-            $input = array_diff_key($this->input->post(NULL, TRUE), array(
-                'submit' => null,
-                'update' => null
-            ));
-
-            $this->update($id, $input);
-        }
 
         if ($this->input->post('submit')) {
 
@@ -151,7 +141,7 @@ class Gviptv extends CI_Controller {
                 'thumbnail' => $this->input->post('thumbnail'),
                 'title' => $this->input->post('title'),
                 'description' => $this->input->post('description'),
-                'category' => $this->input->post('category_id'),
+                'category' => $this->input->post('category'),
                 'created_at' => $now
             );
             $this->update($id, $input);
