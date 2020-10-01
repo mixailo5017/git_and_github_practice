@@ -139,11 +139,11 @@
     echo 'const hardcodedData = [';
 
     foreach($rows as $videos){
-        echo '{head: "'.$videos['title'].'",';
-        echo 'body: "'.$videos['description'].'",';
-        echo 'type: "'.$videos['category'].'",';
-        echo 'videoUrl: "'.$videos['link'].'",';
-        echo 'imageUrl: "'.$videos['thumbnail'].'"},';
+        echo "{head: \"".$videos['title']."\",";
+        echo "body: \"".$videos['description']."\",";
+        echo "type: \"".$videos['category']."\",";
+        echo "videoUrl: \"".$videos['link']."\",";
+        echo "imageUrl: \"".$videos['thumbnail']."\"},";
     }
 
     echo ']';
@@ -212,11 +212,11 @@
     })
     $('#btn-invest').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'Investment');
+        populate(hardcodedData, 'investment');
     })
     $('#btn-leader').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'Leadership');
+        populate(hardcodedData, 'leadership');
     })
     $('#btn-projects').on('click', function(e) {
         replaceSelected(e.target.id)
@@ -224,6 +224,6 @@
     })
     $('#btn-tech').on('click', function(e) {
         replaceSelected(e.target.id)
-        populate(hardcodedData, 'Technology');
+        populate(hardcodedData, 'technology');
     })
 </script>
