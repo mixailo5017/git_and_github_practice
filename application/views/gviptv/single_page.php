@@ -25,21 +25,16 @@
     html {
         height: 100%;
     }
-
     .header {
         background: #2774A5;
-
     }
-
     .header h1 {
         padding: 0.25em 0;
         color: white;
     }
-
     #sidebar {
         overflow-y: scroll;
     }
-
     .share-btn {
         color: white !important;
         width: 100% !important;
@@ -47,16 +42,49 @@
         padding-left: 1em !important;
         padding-right: 1em !important;
         background: #2774A5 !important;
-
     }
-
-
     @media screen and (min-width:992px) {
-
-
         #sidebar {
             height: 90vh !important;
         }
+    }
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 140px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
     }
 </style>
 <div style="height: 90vh; min-height:600px;" class="container-fluid">
@@ -66,78 +94,88 @@
             <!-- Video -->
             <div class="row">
                 <div class="embed-responsive embed-responsive-21by9">
-                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RojqQ-lMsAU" allowfullscreen></iframe>
+                    <iframe class="embed-responsive-item" src="<?php echo $details['link']; ?>" allowfullscreen></iframe>
                 </div>
             </div>
             <!-- Description,Header and Share -->
             <div class="row mt-3">
                 <div class="col-md-9 col-12">
-                    <h1 class="display-4 border-bottom mb-1">A Catalyst for Necessary Investment: the California I-Bank</h1>
+                    <h1 class="display-4 border-bottom mb-1"><?php echo $details['title']; ?></h1>
                 </div>
-                <div class="col-md-2 col-sm-4 col-5  my-md-auto mr-auto my-2 ml-md-auto"><button type="button" class="btn btn-block share-btn btn-primary">Share</button></div>
-                <h2 class="font-weight-light ml-4">Scott Wu, Executive Director, California Infrastructure and Economic Development Bank</h2>
-
-
+                <div class="col-md-2 col-sm-4 col-5  my-md-auto mr-auto my-2 ml-md-auto">
+                    <button onClick="copyFunction()" onmouseout="outFunc()" id="copy-text" type="button" class="btn btn-block share-btn btn-primary">Share Link</button>
+                    <br>
+                    <input readonly="readonly" style="width: 100%" type="text" value="https://gvip.io/gviptv/view/<?php echo $details['id']; ?>" id="myInput">
+                </div>
+                <h2 class="font-weight-light ml-4"><?php echo $details['description']; ?></h2>
             </div>
         </div>
         <!-- Main Content end -->
-
-
         <!-- Sidebar  -->
         <div id="sidebar" class="col-lg-2 mt-md-0 border mx-auto">
             <!-- Sidebar Header -->
             <div class="row header mx-md-0 mx-1">
-                <h1 class="text-center mx-auto mb-4 font-weight-light">Investment Channel</h1>
+                <h1 class="text-center mx-auto mb-4 font-weight-light"><?php echo $details['category']; ?> Channel</h1>
             </div>
-
             <!-- Sidebar Content -->
             <div id="sidebar-content" class="row">
                 <!-- Dynaicly loaded content -->
             </div>
-
         </div>
         <!-- Sidebar end -->
     </div>
-
-
-
-
 </div>
 <script>
     const sidebarContent = document.querySelector('#sidebar-content');
-    // Hardcoded test data  
-    const hardcodedData = [{
-            head: "David Zimmer",
-            body: "David Zimmer, NJIB Executive Director, and CG/LA CEO Norman Anderson explore the strength of state-level I-Banks and how to leverage their full potential.",
-            type: "investment",
-            videoUrl: "https://www.youtube.com/embed/vT7gmmCbenk",
-            imageUrl: "https://d2huw5an5od7zn.cloudfront.net/gviptv/images/David_Zimmer.png"
-        },
-        {
-            head: "Dry Powder & the Build America Bureau",
-            body: "Roger Bohnert, Director of Business Outreach, Build America Bureau, U.S. DOT",
-            type: "investment",
-            videoUrl: "https://www.youtube.com/embed/OGbw2-aUhZU",
-            imageUrl: "https://d2huw5an5od7zn.cloudfront.net/gviptv/images/5+Dry+Power.png"
-        },
-        {
-            head: "David Penna",
-            body: "Senior Vice President, Office of Strategic Initiatives, U.S. International Development Finance Corporation (DFC)<br/>in conversation with Norman Anderson, President, and CEO, CG-LA Infrastructure<br/>The U.S. Development Corporation (DFC)<br/>Funding for Reshoring Critical Capabilities",
-            type: "i    nvestment",
-            videoUrl: "https://www.youtube.com/embed/DwWyTQHcSSw",
-            imageUrl: "https://d2huw5an5od7zn.cloudfront.net/gviptv/images/1+Penna.png"
-        },
+    // Hardcoded test data
+    <?php
+    echo 'const hardcodedData = [';
 
-    ];
+    foreach($rows as $videos){
+        if ($details['category'] == $videos['category'] && $details['id'] != $videos['id']){
+
+            echo "{head: \"".$videos['title']."\",";
+            echo "body: \"".$videos['description']."\",";
+            echo "type: \"".$videos['category']."\",";
+            echo "videoUrl: \"".$videos['link']."\",";
+            echo "id: \"".$videos['id']."\",";
+            echo "imageUrl: \"".$videos['thumbnail']."\"},";
+
+        }
+    }
+
+    echo ']';
+
+    ?>
     // Loads the rest of the videos from the same channel
     $(document).ready(() => {
         hardcodedData.forEach(el => {
             sidebarContent.innerHTML += ` <div class="col-lg-12 col-md-4 col-sm-6 col-xs-12 my-4">
-                    <a>
+                    <a href="/gviptv/view/${el.id}">
                         <img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video">
                     </a>
                     <h3 class="mt-1">${el.head}</h3>
                 </div>`;
         });
     })
+
+    function copyFunction() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+        /* Copy the text inside the text field */
+        document.execCommand("copy");
+
+        var tooltip = document.getElementById("copy-text");
+        tooltip.innerHTML = "Copied";
+    }
+
+    function outFunc() {
+        var tooltip = document.getElementById("copy-text");
+        tooltip.innerHTML = "Share Link";
+    }
 </script>
