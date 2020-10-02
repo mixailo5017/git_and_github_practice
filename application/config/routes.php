@@ -205,6 +205,9 @@ $route['stimulusBrazil/projects/(:num)']        = "stimulusBrazil/projects/$1";
 $route['stimulusBrazil/experts/(:num)']         = "stimulusBrazil/experts/$1";
 $route['stimulusBrazil/projects']               = "stimulusBrazil/index";
 
+//GViPTv
+$route['gviptv/view/(:num)']               = "gviptv/view/$1";
+
 
 //VirtualLF
 $route['virtualLF']                        = "virtualLF/show/36";
