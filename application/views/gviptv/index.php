@@ -143,6 +143,7 @@
         echo "body: \"".$videos['description']."\",";
         echo "type: \"".$videos['category']."\",";
         echo "videoUrl: \"".$videos['link']."\",";
+        echo "id: \"".$videos['id']."\",";
         echo "imageUrl: \"".$videos['thumbnail']."\"},";
     }
 
@@ -185,7 +186,7 @@
             </div>
             </div>
                 <!--Modal: Name-->
-            <a href="/gviptv/view/<?php echo $videos['id']; ?>"><img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video" data-toggle="modal" data-target="#modal${i}"></a>
+            <a href="/gviptv/view/${el.id}"><img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video" data-toggle="modal" data-target="#modal${i}"></a>
             <h3>${el.head}</h3>
             <p>${el.body}</p>
             </div>
