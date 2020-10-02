@@ -87,7 +87,7 @@
         opacity: 1;
     }
 </style>
-<div style="height: 90vh; min-height:600px;" class="container-fluid">
+<div style="min-height:600px;" class="container-fluid">
     <div class="row my-3">
         <!-- Main Content -->
         <div class="col-lg-9 border mx-auto">
