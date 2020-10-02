@@ -47,4 +47,29 @@ class Gviptv extends CI_Controller
         $this->load->view('templates/footer', $this->footer_data);
 
     }
+    
+    public function view($id){
+
+        //get project from id
+        $model = $this->gviptv_model;
+        $details  = $model->find($id);
+
+        if (empty($details)){
+            show_404();
+        }
+
+        // Load a list of all forums from the model.
+        $rows = $this->gviptv_model->all();
+
+        // Render the page
+        $this->load->view('gviptv/header');
+
+        $this->load->view('gviptv/single_page', array(
+            'main_content' => 'rows',
+            'rows' => $rows,
+            'details' => $details,
+        ));
+        $this->load->view('templates/footer', $this->footer_data);
+
+    }
 }
