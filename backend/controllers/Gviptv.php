@@ -132,15 +132,19 @@ class Gviptv extends CI_Controller {
         // Convert $id to integer
         $id = (int)$id;
 
-        // Process updates first
         if ($this->input->post('submit')) {
-            // Grab all input and remove submit
-            $input = array_diff_key($this->input->post(NULL, TRUE), array(
-                'submit' => null,
-                'update' => null
-            ));
 
+            $now = date('Y-m-d H:i:s');
+            $input = array(
+                'link' => $this->input->post('link'),
+                'thumbnail' => $this->input->post('thumbnail'),
+                'title' => $this->input->post('title'),
+                'description' => $this->input->post('description'),
+                'category' => $this->input->post('category'),
+                'created_at' => $now
+            );
             $this->update($id, $input);
+
         }
 
         $headers = array(
@@ -175,7 +179,7 @@ class Gviptv extends CI_Controller {
         // Render the page
         $this->load->view('templates/header', $headers);
         $this->load->view('templates/leftmenu');
-        $this->load->view('forums/edit', $data);
+        $this->load->view('gviptv/edit', $data);
         $this->load->view('templates/footer');
     }
 
@@ -184,20 +188,11 @@ class Gviptv extends CI_Controller {
      *
      * @param int $id
      * @param array $input
-     * @return bool
      */
     private function update($id, $input) {
 
-        if ($this->form_validation->run() === TRUE) {
-
-            // Convert empty strings to NULLs
-            $input = array_map(function($value) {
-                return $value === '' ? null : $value;
-            }, $input);
-
             $this->gviptv_model->update($id, $input);
             redirect('/gviptv/edit/' . $id, 'refresh');
-        }
     }
 
 }

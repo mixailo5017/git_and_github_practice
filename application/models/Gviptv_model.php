@@ -17,28 +17,6 @@ class Gviptv_model extends CI_Model {
 
 
     /**
-     * Retrieving a record by primary key
-     *
-     * @param int $id
-     * @param null $select
-     * @return array
-     */
-    public function find($id, $select = null)
-    {
-        $this->base_query($select, array('id' => (int) $id));
-
-        $row = $this->db
-            ->get()
-            ->result_array();
-
-        if (count($row) > 0) {
-            $row = $row[0];
-        }
-
-        return $row;
-    }
-
-    /**
      * Return an array of videos
      *
      * @param array $where
@@ -63,81 +41,6 @@ class Gviptv_model extends CI_Model {
 
         return $rows;
     }
-
-    /**
-     * Delete forum(s) by id(s)
-     *
-     * @param int
-     * @return bool
-     */
-    public function delete($id)
-    {
-        // BEGIN TRANSACCTION
-        $this->db->trans_start();
-
-        // And only now we can delete forum records themselves
-        $this->db
-            ->where('id', $id)
-            ->delete('exp_gviptv');
-
-        // COMMIT
-        $this->db->trans_complete();
-        $this->db->trans_off(); // TODO: Revisit this
-
-        if ($this->db->trans_status() === false) {
-            return false;
-        }
-
-        return true;
-    }
-
-    /**
-     * @param $id
-     * @param $data
-     */
-    public function update($id, $data)
-    {
-        $this->db
-            ->where('id', $id)
-            ->update('exp_gviptv', $data);
-    }
-
-    /**
-     * @param $data
-     */
-    public function create($data)
-    {
-        $this->db
-            ->set($data)
-            ->insert('exp_gviptv');
-        return $this->db->insert_id();
-    }
-
-
-
-    public function delete_forum()
-    {
-        $delids = $this->input->get("delids");
-        if(count($delids) > 0)
-        {
-            $response = array();
-            $this->db->where_in("uid",$delids);
-            if($this->db->delete("exp_members"))
-            {
-                $this->db->where_in("uid",$delids);
-                $this->db->update("exp_projects",array("isdeleted"=>"1"));
-                $response["status"] = "success";
-                $response["msgtype"] = "success";
-                $response["msg"] = "Member(s) Deleted Successfully";
-            }
-
-            header('Content-type: application/json');
-            echo json_encode($response);
-        }
-    }
-
-
-
 
     /**
      * Generates a base query for forums

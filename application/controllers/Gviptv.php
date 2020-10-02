@@ -26,15 +26,24 @@ class Gviptv extends CI_Controller
         $this->output->enable_profiler(FALSE);
 
         $this->footer_data['lang'] = langGet();
+
+        //Load model for this controller
+        $this->load->model('gviptv_model');
     }
 
     public function index()
     {
         auth_check();
 
+        // Load a list of all forums from the model.
+        $rows = $this->gviptv_model->all();
+
         // Render the page
         $this->load->view('gviptv/header');
-        $this->load->view('gviptv/index');
+        $this->load->view('gviptv/index', array(
+            'main_content' => 'rows',
+            'rows' => $rows,
+        ));
         $this->load->view('templates/footer', $this->footer_data);
 
     }
