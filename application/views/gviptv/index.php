@@ -170,6 +170,28 @@
             mainContent.innerHTML += `
                 <div class="col-lg-4 col-md-12 mb-4">
                     <!--Modal: Name-->
+                    <div class="modal fade" id="modal${i}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <!--Content-->
+                            <div style="top: 10em" class="modal-content">
+                                <!--Body-->
+                                <div class="modal-body mb-0 p-0">
+
+                                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                                        <iframe class="embed-responsive-item" src="${el.videoUrl}" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.Content-->
+                        </div>
+                    </div>
+                    <!--Modal: Name-->
+
+                    <a href="/gviptv/view/<?php echo $details['id']; ?>"><img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video" data-toggle="modal" data-target="#modal${i}"></a>
+                    <h3>${el.head}</h3>
+                    <p>${el.body}</p>
+                </div>
+                `;
             <div class="modal fade" id="modal${i}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg" role="document">
                 <!--Content-->
