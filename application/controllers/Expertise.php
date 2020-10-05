@@ -236,6 +236,9 @@ class Expertise extends CI_Controller {
             elseif($userid == 4340){
                 $view = 'expertise/premium_view';
             }
+	    elseif($userid == 4070){
+                $view = 'expertise/premium_view';
+            }
 	    elseif($userid == 4489){
                 $view = 'expertise/premium_view';
             }
