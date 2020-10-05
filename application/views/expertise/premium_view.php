@@ -39,10 +39,10 @@
 
                 <div data-aos='zoom-in' class="col-md-6 header custom_scrollbar color">
                     <div class="row">
-                        <div class="col-md-6 ">
-                            <?php $src = company_image($users['userphoto'], 500, array('width' => 500, 'fit' => 'contain')) ?>
-                            <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo" style="height: 30em">
-                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                        <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
+                        <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo" >
+                    </div>
                         <div class="col-lg-5 ml-lg-auto ml-xl-0 header-container">
                             <div class="section-header">
                                 <h2 class="heading-text mt-lg-0 mt-md-2"><?php echo $users['organization']; ?></h2>
