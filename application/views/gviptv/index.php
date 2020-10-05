@@ -140,7 +140,7 @@
 
     foreach($rows as $videos){
         echo "{head: \"".$videos['title']."\",";
-        echo "body: \"".$videos['description']."\",";
+        echo "body: `".$videos['description']."`,";
         echo "type: \"".$videos['category']."\",";
         echo "videoUrl: \"".$videos['link']."\",";
         echo "imageUrl: \"".$videos['thumbnail']."\"},";
