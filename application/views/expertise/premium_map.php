@@ -1,5 +1,9 @@
 <?php
 $features = array();
+$averagecoordsx = 0;
+$averagecoordsy = 0;
+$count = 0;
+
 foreach($project['proj'] as $projkey=>$orgexp)
 {
     $features[] = array(
@@ -14,12 +18,21 @@ foreach($project['proj'] as $projkey=>$orgexp)
             ),
         ),
     );
+
+    $averagecoordsx += $orgexp['lng'];
+    $averagecoordsy += $orgexp['lat'];
+    $count++;
 }
+
 $new_data = array(
     'type' => 'FeatureCollection',
     'features' => $features,
 );
 $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
+
+$averagecoordsx = $averagecoordsx / $count;
+$averagecoordsy = $averagecoordsy / $count;
+
 
 ?>
 
@@ -52,7 +65,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/johnbrisbane/ck9bswlro0e371ip7g2tuispy', // replace this with your style URL
-                center: [-90.661557, 30.893748],
+                center: [<?php echo $averagecoordsx; ?>, <?php echo $averagecoordsy; ?>],
                 zoom: 2
             });
         </script>
@@ -66,7 +79,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: 'mapbox://styles/mapbox/streets-v11',
-                center: [-38.476665,-12.974722 ],
+                center: [<?php echo $averagecoordsx; ?>, <?php echo $averagecoordsy; ?>],
                 minZoom: 2,
                 zoom: 3
             });
