@@ -135,7 +135,7 @@
         if ($details['category'] == $videos['category'] && $details['id'] != $videos['id']){
 
             echo "{head: \"".$videos['title']."\",";
-            echo "body: \"".$videos['description']."\",";
+            echo "body: `".$videos['description']."`,";
             echo "type: \"".$videos['category']."\",";
             echo "videoUrl: \"".$videos['link']."\",";
             echo "id: \"".$videos['id']."\",";
