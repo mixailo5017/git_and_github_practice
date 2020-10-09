@@ -1,12 +1,44 @@
+<style>
+  .hero-image{
+      position: relative;
+      height: 600px;
+  }
+
+
+    video {
+        object-fit: cover;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        z-index: 1 !important;
+        top: 0;
+        left: 0;
+    }
+    .wrap{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: rgba(0,0,0,0.4);
+    }
+</style>
+
+
+
 <section class="hero-image">
-    <div class="container">
-        <div class="headline">
-            <h1 class="h1-xl">Build your Membership in the Global Infrastructure Community</h1>
-        </div>
-        <div class="head-cta">
-            <div>
-                <a class="btn std lt-blue" href="/signup">Join for Free</a>
-                <a class="btn std clear play" href="https://youtube.com/watch?v=U_xIrk7P_KY"><span>Watch It in Action</span></a>
+    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+        <source src="https://d2huw5an5od7zn.cloudfront.net/Meet GVIP.mp4" type="video/webm">
+    </video>
+    <div class="wrap">
+        <div class="container">
+            <div class="headline">
+                <h1 class="h1-xl">Build your Membership in the Global Infrastructure Community</h1>
+            </div>
+            <div class="head-cta">
+                <div>
+                    <a class="btn std lt-blue" href="/signup">Join for Free</a>
+                    <a class="btn std clear play" href="https://youtube.com/watch?v=U_xIrk7P_KY"><span>Watch It in Action</span></a>
+                </div>
             </div>
         </div>
     </div>
@@ -37,7 +69,7 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
                 <img src="/images/new/testimonial4.jpg" width="100" height="100" />
             </li>
             <li class="quote">
-                <p>&ldquo;GViP is becoming the LinkedIn of the infrastructure world.  It's a community where we all trust each other and are looking for ways to improve our projects and business relationships.  There is no other place on the web where this quality and quantity of decision makers for the major infrastructure projects globally are available to discuss partnering arrangements.&rdquo;</p>
+                <p>&ldquo;GViP is becoming the LinkedIn of the infrastructure world. It's a community where we all trust each other and are looking for ways to improve our projects and business relationships. There is no other place on the web where this quality and quantity of decision makers for the major infrastructure projects globally are available to discuss partnering arrangements.&rdquo;</p>
                 <p class="author"><span>Chris Hussey</span>Partner Executive, e-Builder</p>
             </li>
         </ul>
@@ -47,11 +79,11 @@ $counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
 <section class="global-lt" style="background: url(../images/new/world-grid-spotlight.png)">
     <div class="container">
         <h2 class="h1-xl">#CreateGreat, Globally</h2>
-        <p style="padding-bottom:50px;" >You need to make good decisions, quickly.  You need to build your business, with certainty.  You need to find the right data that defines your market, and act.  GViP is the tool that enables you to make decisions, build your business, and powerfully understand the market.  Cut your project's development time by 50%, and reach the finish line on time, and on budget.  The GViP platform helps you find expertise, identify the right tools, choose the right partners, and build a tremendous career.  #CreateGreat
+        <p style="padding-bottom:50px;">You need to make good decisions, quickly. You need to build your business, with certainty. You need to find the right data that defines your market, and act. GViP is the tool that enables you to make decisions, build your business, and powerfully understand the market. Cut your project's development time by 50%, and reach the finish line on time, and on budget. The GViP platform helps you find expertise, identify the right tools, choose the right partners, and build a tremendous career. #CreateGreat
         </p>
         <h2> Strategic Project Connections Globally (Powered by GViP AI+) </h2>
         <div>
-          <img src="/images/new/connections.png" alt="Connetions">
+            <img src="/images/new/connections.png" alt="Connetions">
         </div>
     </div>
 </section>
