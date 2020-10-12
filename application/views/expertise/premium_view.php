@@ -28,21 +28,57 @@
     ======================================================== -->
 </head>
 <style>
+    .details-section {
+        background: white;
+        border: 0.1px solid rgba(28, 28, 28, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    }
 
+    .details-section section {
+        margin-top: 50px;
+        margin-bottom: 100px !important;
+    }
+
+    .information-head {
+        font-size: 4.5rem;
+        font-weight: bold;
+        margin-bottom:1em;
+    }
+
+
+    @media screen and (max-width:990px) {
+        .information-container {
+            margin-left: 0 !important;
+            padding: 0 !important;
+            left: 0 !important;
+            position: absolute !important;
+            width: 100vw !important;
+        }
+
+    }
+
+    @media screen and (max-width:400px) {
+        .information-head {
+            margin: auto;
+            text-align: center !important;
+            font-size: 2.5rem;
+        }
+    }
 </style>
 <main id="main" class="main-page">
     <section id="speakers-details">
         <!-- Banner Image yet to be added -->
         <div class="container-fluid">
-            <!-- ======= Header & Map  Section ======= -->
+            <!-- ======= Header & Map  S.ection ======= -->
             <div class="row">
 
                 <div data-aos='zoom-in' class="col-md-6 header custom_scrollbar color">
                     <div class="row">
                         <div class="col-md-6" style="text-align: center">
-                        <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
-                        <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo" >
-                    </div>
+                            <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
+                            <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
+                        </div>
                         <div class="col-lg-5 ml-lg-auto ml-xl-0 header-container">
                             <div class="section-header">
                                 <h2 class="heading-text mt-lg-0 mt-md-2"><?php echo $users['organization']; ?></h2>
@@ -90,15 +126,15 @@
                 </div>
 
                 <?php if (!empty($project['proj'])) { ?>
-                <!-- Map Section -->
-                <div class="col-md-6">
-                    <?php $this->load->view('expertise/premium_map', $project['proj']); ?>
-                </div>
-                <?php } else {?>
-                <div class="col-md-6">
-                    <h3>There Are No Projects Associated with <?php echo $users['organization'];?></h3>
-                </div>
-                <?php }?>
+                    <!-- Map Section -->
+                    <div class="col-md-6">
+                        <?php $this->load->view('expertise/premium_map', $project['proj']); ?>
+                    </div>
+                <?php } else { ?>
+                    <div class="col-md-6">
+                        <h3>There Are No Projects Associated with <?php echo $users['organization']; ?></h3>
+                    </div>
+                <?php } ?>
                 <!-- Map Section end -->
 
             </div>
@@ -109,16 +145,16 @@
             <div class="row mt-5">
                 <!-- Projects Section  -->
                 <?php if (!empty($project['proj'])) { ?>
-                <div data-aos='zoom-in' class="col-lg-3 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
-                    <h2 style="text-align: center"><strong>Our Projects</strong></h2>
-                    <?php $this->load->view('expertise/projects_preview', $project['proj']); ?>
-                </div>
-                <?php } else {?>
-                <div data-aos='zoom-in' class="col-lg-3 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
-                    <h2 style="text-align: center"><strong>Our Projects</strong></h2>
-                    <h3>There Are No Projects Associated with <?php echo $users['organization'];?></h3>
-                </div>
-                <?php }?>
+                    <div data-aos='zoom-in' class="col-lg-3 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
+                        <h2 style="text-align: center"><strong>Our Projects</strong></h2>
+                        <?php $this->load->view('expertise/projects_preview', $project['proj']); ?>
+                    </div>
+                <?php } else { ?>
+                    <div data-aos='zoom-in' class="col-lg-3 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
+                        <h2 style="text-align: center"><strong>Our Projects</strong></h2>
+                        <h3>There Are No Projects Associated with <?php echo $users['organization']; ?></h3>
+                    </div>
+                <?php } ?>
                 <!-- Projects Section end-->
 
 
@@ -193,10 +229,14 @@
 
 
             <!--======== Information Section ========-->
-            <div class="row ml-5 mt-5">
-                <div class="details">
-                    <h2 style="text-align: center">Information</h2>
-                    <p><?php echo $users['mission'] ?></p>
+            <div class="container-fluid information-container mt-5">
+                <div class="col-12 information-container mx-auto">
+                    <div class="details py-5 details-section">
+                        <h1 class="container information-head" style=" text-align: left">Information</h1>
+
+                        <p><?php echo $users['mission'] ?></p>
+
+                    </div>
                 </div>
             </div>
             <!--======== Information Section End ========-->
