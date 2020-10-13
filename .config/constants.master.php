@@ -207,7 +207,7 @@ const PWD_FOR_STIM = ['6Z&N!]B7nB\CGTq_', '+8^em#K2p@qBU_PK', 'K=FZxqvt_7NV%M2K'
                       'KJ3aGzDi%Mq9^7s!', '#Rab1q3#=cJWAz67', '$a7N+Vtt8y-t#=ye', 'hW$di|OaA6g!aGW-', '_^NT8#Cs*2tVXk90', '@Sp$Dz1suwMxK335'
                      ];
 
-const PREMIUM_COMPANIES = [4340, 4070, 4489, 4507];
+const PREMIUM_COMPANIES = [4340, 4070, 4489, 4507, 4517];
 
 
 // The user ID of the official Brazilian government user account
