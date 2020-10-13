@@ -43,7 +43,7 @@
     .information-head {
         font-size: 4.5rem;
         font-weight: bold;
-        margin-bottom:1em;
+        margin-bottom: 1em;
     }
 
 
@@ -161,7 +161,7 @@
                 <!-- Experts Section -->
                 <div data-aos='zoom-in' class="col-lg-4 mx-auto  mt-5 color">
                     <!-- If a scrollbar is needed,add overflow-y:scroll -->
-                    <div class="our_experts custom_scrollbar color" style="height: 50em; ">
+                    <div class="our_experts custom_scrollbar color" style="height: 50em; overflow-y:scroll;">
                         <h2 style="text-align: center"><strong>Our Experts</strong></h2>
                         <div class="row">
                             <?php
