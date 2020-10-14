@@ -33,7 +33,6 @@ class Gviptv extends CI_Controller
 
     public function index()
     {
-        auth_check();
 
         // Load a list of all forums from the model.
         $rows = $this->gviptv_model->all();
