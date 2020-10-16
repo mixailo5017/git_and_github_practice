@@ -230,5 +230,75 @@ class Stimulus extends CI_Controller
             return $default;
         }
     }
+     /**
+     * Display a paginated list of all projects associated with the forum
+     *
+     * @param $id
+     */
+    public function rank($id){
+
+        $id = (int) $id;
+
+        $model = $this->forums_model;
+
+        $forum = $model->find($id);
+        // If we can't find a forum redirect to the forums list view
+        if (empty($forum)) {
+            redirect('forums', 'refresh');
+            exit;
+        }
+        // Prevent the forum in a draft status to be shown
+        if (isset($forum['status']) && $forum['status'] != STATUS_ACTIVE) {
+            redirect('forums', 'refresh');
+            exit;
+        }
+
+        // Fetch projects and members (experts) accociated with the forum
+        $projects = $model->projects($id, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 700, 0, true);
+
+        $this->load->model('projects_model');
+
+        $weights = array(
+            'jobweight' => $this->input->get_post('jobweight', true),
+            'valueweight' => $this->input->get_post('valueweight', true),
+            'jovweight' => $this->input->get_post('jovweight', true),
+            'likeweight' => $this->input->get_post('likeweight', true),
+            'pciweight' => $this->input->get_post('pciweight', true),
+            'strategicweight' => $this->input->get_post('strategicweight', true),
+            'economicweight' => $this->input->get_post('economicweight', true),
+            'localbenefitweight' => $this->input->get_post('localbenefitweight', true),
+            'greenweight' => $this->input->get_post('greenweight', true),
+            'businessweight' => $this->input->get_post('businessweight', true)
+        );
+        $this->input->get_post('searchtext', true);
+
+        $data = array(
+            'projects' => array(
+                'rows' => $projects,
+                'total_rows' => (count($projects) > 0) ? $projects[0]['row_count'] : 0,
+
+            ),
+            'details' => $forum,
+            'model_obj' => $this->projects_model,
+            'weights' => $weights
+        );
+
+        $this->headerdata['title'] = build_title($forum['title']);
+
+        // Provide page analitics data for Segment Analitics
+        $this->headerdata['page_analytics'] = array(
+            'category' => 'Forum',
+            'properties' => array(
+                'Target Id' => $id,
+                'Target Name' => $forum['title']
+            )
+        );
+
+        // Render the page
+        $this->load->view('stimulus/header_stimulus', $this->headerdata);
+        $this->load->view('stimulus/proj_ranks', $data);
+        $this->load->view('templates/footer', $this->footer_data);
+
+    }
 
 }
