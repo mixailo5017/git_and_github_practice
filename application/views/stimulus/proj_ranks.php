@@ -113,8 +113,21 @@ foreach($projects['rows'] as $project => $orgexp)
     foreach ($all_rows as $rows => $row) {
         if ($row['pid'] === $orgexp['pid']) {
 
-            $totalscore = $jobweight*($model_obj->get_jobs_created($orgexp['pid']) / $maxjobs * 5) +
-                $jovweight * round((($model_obj->get_jobs_created($orgexp['pid']) / $orgexp['totalbudget'])) - .1, 2) +
+            if ($orgexp['totalbudget'] <= 100){
+                $jobs = $model_obj->get_jobs_created($orgexp['pid']) * 1.75;
+            }
+            elseif ($orgexp['totalbudget'] > 100 && $orgexp['totalbudget'] <= 500){
+                $jobs = $model_obj->get_jobs_created($orgexp['pid']) * 1.5;
+            }
+            elseif ($orgexp['totalbudget'] > 500 && $orgexp['totalbudget'] <= 750){
+                $jobs = $model_obj->get_jobs_created($orgexp['pid']);
+            }
+            else {
+                $jobs = $model_obj->get_jobs_created($orgexp['pid']);
+            }
+
+            $totalscore = $jobweight*($jobs / $maxjobs * 25) +
+                $jovweight * round(($jobs / $orgexp['totalbudget'])/2, 2) +
                 $likeweight * $model_obj->get_likes($orgexp['pid']) +
                 $pciweight * $pci / 20 +
                 $strategicweight * $row['strategic'] +
@@ -125,11 +138,11 @@ foreach($projects['rows'] as $project => $orgexp)
 
 
             $features[] = array(
-                'jobs' => $model_obj->get_jobs_created($orgexp['pid']) / $maxjobs * 5,
+                'jobs' => $jobs / $maxjobs * 5,
                 'projectname' => $orgexp['projectname'],
                 'totalbudget' => $orgexp['totalbudget'],
                 'likes' => $model_obj->get_likes($orgexp['pid']),
-                'jov' => round((($model_obj->get_jobs_created($orgexp['pid']) / $orgexp['totalbudget'])) - .1, 2),
+                'jov' => round($jobs / $orgexp['totalbudget'], 2),
                 'pid' => $orgexp['pid'],
                 'strategic' => $row['strategic'],
                 'economic' => $row['economic'],
@@ -193,7 +206,7 @@ function aasort (&$array, $key) {
             echo '<td>'.$projects['projectname'].'</td> ';
             echo '<td>'.$projects['jov'].'</td>';
             echo '<td style="padding-left: 10px">'.round($projects['jobs'],2).'</td>';
-            echo '<td style="padding-left: 10px">'.$projects['value']/10000 .'</td>';
+            echo '<td style="padding-left: 10px">'.$projects['value'] .'</td>';
             echo '<td style="padding-left: 10px">'.$projects['likes'].'</td>';
             echo '<td style="padding-left: 10px">'.$projects['pci'].'</td>';
             echo '<td style="padding-left: 10px">'.$projects['strategic'].'</td>';
