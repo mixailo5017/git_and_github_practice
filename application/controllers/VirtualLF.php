@@ -22,10 +22,6 @@ class VirtualLF extends CI_Controller
         $this->load->model('expertise_model');
 
 
-        // If the user is not logged in then redirect to the login page
-        auth_check();
-        
-        
         // Load breadcrumb library
         $this->load->library('breadcrumb');
 
@@ -44,10 +40,15 @@ class VirtualLF extends CI_Controller
             3 => 'Random'
 
         );
-        
-        if (!in_array(sess_var('uid'), INTERNAL_USERS)){
-            show_404();
-        }
+    }
+
+    public function index()
+    {
+        auth_check();
+        // Render the page
+        $this->load->view('templates/header', $this->headerdata);
+        $this->load->view('virtualLF/intro.html');
+        $this->load->view('templates/footer', $this->footer_data);
     }
 
     /**
@@ -360,3 +361,4 @@ class VirtualLF extends CI_Controller
     }
 
 }
+
