@@ -210,7 +210,6 @@ $route['gviptv/view/(:num)']               = "gviptv/view/$1";
 
 
 //VirtualLF
-$route['virtualLF']                        = "virtualLF/show/36";
 $route['virtualLF/map']                    = "virtualLF/map/36";
 $route['virtualLF/projects/(:num)']        = "virtualLF/projects/$1";
 $route['virtualLF/experts/(:num)']         = "virtualLF/experts/$1";
