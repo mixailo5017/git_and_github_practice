@@ -6,8 +6,7 @@
     .main-content {
         background: white;
         min-height: 50em;
-        background-image: url('https://d2huw5an5od7zn.cloudfront.net/1039');
-        background-size: cover;
+        background-size: contain;
         background-size: 100%;
         background-repeat: no-repeat;
         bottom: 0;
@@ -16,6 +15,7 @@
     }
 
     .page_row {
+
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -24,8 +24,24 @@
     }
 
     .col {
+
         margin: 0 3em;
     }
+
+    .login-text__container {
+        align-self: center !important;
+        width: 35%;
+    }
+
+    .login-text__head {
+      
+        font-size: 3.6rem !important;
+        font-weight: lighter !important;
+        line-height: 1.3;
+    }
+
+
+
 
     #form {
         margin-top: 4em;
@@ -126,7 +142,24 @@
             align-items: center;
             flex-direction: column !important;
 
+
         }
+
+        .login-text__container {
+            align-self: center !important;
+            width: initial !important;
+        }
+
+        .login-text__head {
+           
+            line-height: 1.3;
+        }
+
+        .login-text__head {
+            font-size: 1.8rem !important;
+            font-weight: lighter !important;
+        }
+
 
         #form {
             margin-top: 4em;
@@ -146,10 +179,16 @@
 
     <div class="container-fluid">
         <div class="page_row">
-            <div class="col">
+            <div class="col ">
                 <div class="img_container">
                     <img src="https://d2huw5an5od7zn.cloudfront.net/GViP_newlogo.png" alt="">
                 </div>
+            </div>
+            <div class="col login-text__container">
+                <h1 class="login-text__head">
+                    LOGIN TO ACCESS <br>
+                    THE FORUM PAGE
+                </h1>
             </div>
             <div id="form" class="col">
                 <div class="form-ct">
