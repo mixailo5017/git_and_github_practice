@@ -145,7 +145,7 @@
             <div class="row mt-5">
                 <!-- Projects Section  -->
                 <?php if (!empty($project['proj'])) { ?>
-                    <div data-aos='zoom-in' class="col-lg-3 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
+                    <div data-aos='zoom-in' class="col-lg-4 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
                         <h2 style="text-align: center"><strong>Our Projects</strong></h2>
                         <?php $this->load->view('expertise/projects_preview', $project['proj']); ?>
                     </div>
