@@ -3365,6 +3365,15 @@ class Projects extends CI_Controller
 
         return $likes;
     }
+	
+
+	public function top100()
+    {
+        // Render the page
+        $this->load->view('templates/header', $this->headerdata);
+        $this->load->view('projects/top100');
+        $this->load->view('templates/footer', $this->dataLang);
+    }
 
 
 }
