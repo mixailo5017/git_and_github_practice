@@ -27,7 +27,7 @@
     }
 
     .hero-image {
-        background-image: url("https://d2huw5an5od7zn.cloudfront.net/Nalf12 Banner 1.jpg");
+        background-image: url("https://d2huw5an5od7zn.cloudfront.net/Nalf_new_Banner.jpg");
     }
 
     .tv-image {
@@ -130,7 +130,7 @@
 
         .hero-image {
             background-position: center !important;
-            background-image: url("https://d2huw5an5od7zn.cloudfront.net/Nalf12 Banner 1.jpg");
+            background-image: url("https://d2huw5an5od7zn.cloudfront.net/Nalf_new_Banner.jpg");
         }
 
         .tv-image {
@@ -187,7 +187,7 @@
     }
 </style>
 <!-- Head Banner -->
-<a href=" https://www.cg-la.com/store/nalf-registration">
+<a target="_blank" href="https://gvip.io/virtualLF">
     <div class="hero-image">
     </div>
 </a>
