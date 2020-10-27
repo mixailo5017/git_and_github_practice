@@ -34,6 +34,7 @@
     }
 
     .default-style {
+        display: inline-block;
         color: white !important;
         padding: 0.15em 0.5em;
         border-radius: 15px;
