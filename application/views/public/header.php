@@ -1,3 +1,14 @@
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43491822-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-43491822-3');
+</script>
+</head>
 <header class="search">
     <div class="container">
         <nav class="m-nav logo">
