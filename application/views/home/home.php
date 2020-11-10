@@ -3,6 +3,15 @@
       position: relative;
       height: 600px;
   }  
+  video {
+        object-fit: cover;
+        position: absolute;
+        width: 100vw;
+        height: 100%;
+        z-index: 1 !important;
+        top: 0;
+        left: 0;
+    }
     .wrap{
         position: relative;
         width: 100%;
@@ -15,9 +24,9 @@
 
 
 <section class="hero-image">
-    <!-- <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+    <video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
         <source src="https://d2huw5an5od7zn.cloudfront.net/Meet GVIP.mp4" type="video/webm">
-    </video> -->
+    </video>
     <div class="wrap">
         <div class="container">
             <div class="headline">
