@@ -35,6 +35,7 @@
             <div class="head-cta">
                 <div>
                     <a class="btn std lt-blue" href="/signup">Join for Free</a>
+                    <a class="btn std lt-blue" href="/publicprofiles">Continue as Guest</a>
                     <a class="btn std clear play" href="https://youtube.com/watch?v=U_xIrk7P_KY"><span>Watch It in Action</span></a>
                 </div>
             </div>
