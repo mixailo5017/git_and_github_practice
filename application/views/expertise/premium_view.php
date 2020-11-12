@@ -28,6 +28,9 @@
     ======================================================== -->
 </head>
 <style>
+.premium-main-page{
+    margin-top: 10px;
+}
     .details-section {
         background: white;
         border: 0.1px solid rgba(28, 28, 28, 0.1);
@@ -46,6 +49,15 @@
         margin-bottom: 1em;
     }
 
+    .our_experts {
+        padding: 0;
+        overflow-x: hidden;
+
+    }
+
+    .h2__experts {
+        font-size: 1.2em;
+    }
 
     @media screen and (max-width:990px) {
         .information-container {
@@ -65,17 +77,24 @@
             font-size: 2.5rem;
         }
     }
+    .personal{
+        font-weight: 600;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 </style>
-<main id="main" class="main-page">
+<main id="main" class="premium-main-page">
     <section id="speakers-details">
         <!-- Banner Image yet to be added -->
         <div class="container-fluid">
             <!-- ======= Header & Map  S.ection ======= -->
-            <div class="row">
+            <div class="row mt-2">
 
                 <div data-aos='zoom-in' class="col-md-6 header custom_scrollbar color">
                     <div class="row">
-                        <div class="col-md-6" style="text-align: center">
+                        <div class="col-md-6 img_container" style="text-align: center">
                             <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
                             <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
                         </div>
@@ -102,20 +121,20 @@
                     </div>
                     <div class="details row">
                         <div class="col-lg-4 social-details col-12 mx-auto ">
-                            <h3>Contact</h3>
+                            <h3 class="personal">Contact</h3>
                             <div class="social">
                                 <p>Phone: <?php echo $users['vcontact']; ?></p>
                                 <p>Email: <?php echo $users['email']; ?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 social-details col-12 mx-auto">
-                            <h3>Experts</h3>
+                            <h3 class="personal">Experts</h3>
                             <div class="social">
                                 <p><?php echo empty($users['discipline']) ? '&mdash;' : $users['discipline'] ?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 social-details  col-12 mx-auto">
-                            <h3>Sector</h3>
+                            <h3 class="personal">Sector</h3>
                             <div class="social">
                                 <?php foreach ($myexpertise as $id => $sector) { ?>
                                     <p><?php echo $sector['sector'] ?>&nbsp;(<?php echo $sector['subsector'] ?>)</p>
@@ -142,10 +161,10 @@
 
 
             <!--======== Basic Content ========-->
-            <div class="row mt-5">
+            <div class="row mt-2">
                 <!-- Projects Section  -->
                 <?php if (!empty($project['proj'])) { ?>
-                    <div data-aos='zoom-in' class="col-lg-4 mx-auto  mt-5  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
+                    <div data-aos='zoom-in' class="col-lg-4 mx-auto  mt-2  color custom_scrollbar" style="height: 50em; overflow-y: scroll;">
                         <h2 style="text-align: center"><strong>Our Projects</strong></h2>
                         <?php $this->load->view('expertise/projects_preview', $project['proj']); ?>
                     </div>
@@ -159,10 +178,10 @@
 
 
                 <!-- Experts Section -->
-                <div data-aos='zoom-in' class="col-lg-4 mx-auto  mt-5 color">
+                <div data-aos='zoom-in' class="col-lg-4 mx-auto  mt-2 color">
                     <!-- If a scrollbar is needed,add overflow-y:scroll -->
                     <div class="our_experts custom_scrollbar color" style="height: 50em; overflow-y:scroll;">
-                        <h2 style="text-align: center"><strong>Our Experts</strong></h2>
+                        <h2 style="text-align: center; font-size:2rem; font-weight:normal; color:#0e1b4d;"><strong>Our Experts</strong></h2>
                         <div class="row">
                             <?php
                             $totalassigned  = 0;
@@ -202,8 +221,8 @@
 
                 <!-- Promotional Materials  -->
                 <!-- If a scrollbar is needed,add overflow-y:scroll -->
-                <div data-aos='zoom-in' class="col-lg-3 mx-auto mt-5 custom_scrollbar color" style="height: 50em;">
-                    <h2 style="text-align: center">Promotional Materials</h2>
+                <div data-aos='zoom-in' class="col-lg-3 mx-auto mt-2 custom_scrollbar color" style="height: 50em;">
+                    <h2 style="text-align: center"><strong>Promotional Materials</strong></h2>
                     <?php
                     if ((count_if_set($case_studies)) > 0) {
                         echo '<div class="portlet_list case_studies">';
@@ -229,9 +248,9 @@
 
 
             <!--======== Information Section ========-->
-            <div class="container-fluid information-container mt-5">
+            <div class="container-fluid information-container mt-2">
                 <div class="col-12 information-container mx-auto">
-                    <div class="details py-5 details-section">
+                    <div class="details px-3 py-5 details-section">
                         <h1 class="container information-head" style=" text-align: left">Information</h1>
 
                         <p><?php echo $users['mission'] ?></p>
