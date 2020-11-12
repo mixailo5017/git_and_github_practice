@@ -23,6 +23,7 @@
     html {
         height: 100%;
     }
+
     .hero-image {
         /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
         background-image: url("https://d2huw5an5od7zn.cloudfront.net/onlineforum/assets/img/GVIPTV Banner 2.jpg");
@@ -34,6 +35,7 @@
         background-size: cover;
         position: relative;
     }
+
     /* Place text in the middle of the image */
     .hero-text {
         text-align: center;
@@ -43,6 +45,7 @@
         transform: translate(-50%, -50%);
         color: white;
     }
+
     .center {
         display: block;
         margin-top: auto;
@@ -50,51 +53,59 @@
         margin-right: auto;
         margin-bottom: auto;
     }
+
     .sidebar-head {
         background-color: #2774A5;
         color: white;
     }
+
     .select-item:hover {
         transition: 300ms;
         background: #2774A5;
         color: white;
         cursor: pointer;
     }
+
     .active-item {
-        background: #2774A5;
+        background: #2774a5;
         color: white;
         cursor: initial;
     }
+
     .search-btn {
-        font-size: 1.5em;
-        border: 1px solid #2774A5 !important;
+        font-size: 2em !important;
+        font-weight: 500;
         border-radius: 4px;
-        color: #2774A5 !important;
+        color: white !important;
+        background: #2774a5 !important;
+
+
     }
+
     .search-btn:hover {
+        font-weight: 500;
         background-color: white !important;
         cursor: pointer;
+        color: #2774a5 !important;
+        border: 1px solid #2774a5 !important;
     }
 </style>
 <!-- Banner -->
 <a href="#">
-    <div class="hero-image">
+    <div class="gviptv-banner">
         <div class="hero-text">
         </div>
     </div>
 </a>
 <!-- Banner end -->
 
-<!-- Header -->
-<div class="row" style="padding-top: 25px; padding-bottom: 25px">
-    <h1 class="col-md-9 mx-auto" style="text-align: center">Video Gallery</h1>
-</div>
-<!-- Header end -->
+
+
 
 <!-- Toggle Sidebar button -->
 <div class="row" style="padding-top: 25px; padding-bottom: 25px;padding-left: 2%">
     <div class="col-md-2 col-12 mb-5 mr-md-auto">
-        <button id="toggle-btn" type="button" class="btn w-100 search-btn ">Channels</button>
+        <button id="toggle-btn" type="button" class="btn w-100 search-btn ">GVIPTV Channels</button>
     </div>
 </div>
 <!-- Toggle Sidebar button end -->
@@ -103,12 +114,8 @@
     <div class="row">
         <!-- Sidebar -->
         <div style="min-height: 500px;" id="sidebar" class="col-lg-2 border ml-5">
-            <div class="row sidebar-head">
-                <h1 class="display-4 text-light mb-4">GVIPTV Channels:</h1>
-            </div>
-            <div class="row sidebar-head">
-                <p class="h3 font-weight-light px-2"></p>
-            </div>
+
+
             <div class="row sidebar-body my-5">
                 <ul class="list-group w-100">
                     <li id="btn-all" class="list-group-item h3 my-2 font-weight-light select-item active-item">All Videos</li>
@@ -138,13 +145,13 @@
     <?php
     echo 'const hardcodedData = [';
 
-    foreach($rows as $videos){
-        echo "{head: \"".$videos['title']."\",";
-        echo "body: `".$videos['description']."`,";
-        echo "type: \"".$videos['category']."\",";
-        echo "videoUrl: \"".$videos['link']."\",";
-        echo "id: \"".$videos['id']."\",";
-        echo "imageUrl: \"".$videos['thumbnail']."\"},";
+    foreach ($rows as $videos) {
+        echo "{head: \"" . $videos['title'] . "\",";
+        echo "body: `" . $videos['description'] . "`,";
+        echo "type: \"" . $videos['category'] . "\",";
+        echo "videoUrl: \"" . $videos['link'] . "\",";
+        echo "id: \"" . $videos['id'] . "\",";
+        echo "imageUrl: \"" . $videos['thumbnail'] . "\"},";
     }
 
     echo ']';
@@ -187,7 +194,7 @@
             </div>
                 <!--Modal: Name-->
             <a href="/gviptv/view/${el.id}"><img class="img-fluid w-100 z-depth-1" src="${el.imageUrl}" alt="video" data-toggle="modal" data-target="#modal${i}"></a>
-            <h3>${el.head}</h3>
+            <h3 class="my-3">${el.head}</h3>
             <p>${el.body}</p>
             </div>
 

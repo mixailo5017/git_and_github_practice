@@ -55,7 +55,7 @@ $averagecoordsy = $averagecoordsy / $count;
 
         </style>
     </head>
-    <div id='map' style='width: 100%; height: 50em'></div>
+    <div id='map' style='width: 100%; height: 50em; border-radius:10px;'></div>
 
 
 
@@ -81,7 +81,7 @@ $averagecoordsy = $averagecoordsy / $count;
                 style: 'mapbox://styles/mapbox/streets-v11',
                 center: [<?php echo $averagecoordsx; ?>, <?php echo $averagecoordsy; ?>],
                 minZoom: 2,
-                zoom: 3
+                zoom: 4
             });
 
             var geocoder = new MapboxGeocoder({
