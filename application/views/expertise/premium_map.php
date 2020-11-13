@@ -47,13 +47,7 @@ $averagecoordsy = $averagecoordsy / $count;
         <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
         <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
         <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css' type='text/css' />
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-
-        </style>
+    
     </head>
     <div id='map' style='width: 100%; height: 50em; border-radius:10px;'></div>
 

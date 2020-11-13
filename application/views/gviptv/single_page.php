@@ -20,73 +20,7 @@
 
 
 
-<style>
-    body,
-    html {
-        height: 100%;
-    }
-    .header {
-        background: #2774A5;
-    }
-    .header h1 {
-        padding: 0.25em 0;
-        color: white;
-    }
-    #sidebar {
-        overflow-y: scroll;
-    }
-    .share-btn {
-        color: white !important;
-        width: 100% !important;
-        font-size: 1.5em;
-        padding-left: 1em !important;
-        padding-right: 1em !important;
-        background: #2774A5 !important;
-    }
-    @media screen and (min-width:992px) {
-        #sidebar {
-            height: 90vh !important;
-        }
-    }
 
-    .tooltip {
-        position: relative;
-        display: inline-block;
-    }
-
-    .tooltip .tooltiptext {
-        visibility: hidden;
-        width: 140px;
-        background-color: #555;
-        color: #fff;
-        text-align: center;
-        border-radius: 6px;
-        padding: 5px;
-        position: absolute;
-        z-index: 1;
-        bottom: 150%;
-        left: 50%;
-        margin-left: -75px;
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .tooltip .tooltiptext::after {
-        content: "";
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: #555 transparent transparent transparent;
-    }
-
-    .tooltip:hover .tooltiptext {
-        visibility: visible;
-        opacity: 1;
-    }
-</style>
 <div style="min-height:600px;" class="container-fluid">
     <div class="row my-3">
         <!-- Main Content -->
