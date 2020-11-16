@@ -26,10 +26,6 @@
         position: relative;
     }
 
-    .hero-image {
-        background-image: url("https://d2huw5an5od7zn.cloudfront.net/Nalf_new_Banner.jpg");
-    }
-
     .tv-image {
         background-image: url("https://d2huw5an5od7zn.cloudfront.net/GVIPTV Banner 2.jpg");
 
@@ -66,7 +62,7 @@
         margin-bottom: auto;
     }
 
-    .row {
+    .section-row {
         background: white;
         margin: 2em 0;
         display: flex !important;
@@ -180,15 +176,14 @@
             font-size: 1.5rem;
         }
 
-
         .reverese {
             flex-direction: column-reverse !important;
         }
     }
 </style>
-<!-- Head Banner -->
-<a target="_blank" href="https://gvip.io/virtualLF">
-    <div class="hero-image">
+<!-- Footer Banner -->
+<a href="https://www.gvip.io/gviptv">
+    <div class="tv-image">
     </div>
 </a>
 
@@ -196,7 +191,7 @@
 <section id="main-content">
     <div class="container-fluid">
         <!--1. Row -->
-        <div class="row">
+        <div class="section-row">
             <div class="column">
                 <div class="embed-responsive embed">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/UGNw0KWsYOg"></iframe>
@@ -215,10 +210,10 @@
         <!-- Row end -->
 
         <!-- 2. Row -->
-        <div class="row reverese">
+        <div class="section-row reverese">
             <div class="column gvip-text" data-aos='fade-in-up'>
                 <p>
-                    Interactive Data, Maps and Visualizations, Access to Global Multisector Experts, Project pages updated by Owner Operators in real-time, Access to financiers and industry leaders, exclusives interviews and roundtable discussions.
+                    Interactive Data, <a href="https://www.gvip.io/gismap" class="link-in">Maps</a> and Visualizations, Access to Global Multisector <a href="https://www.gvip.io/expertise" class="link-in">Experts</a>, Project pages updated by Owner Operators in real-time, Access to financiers and industry leaders, exclusives <a href="https://www.gvip.io/gviptv" class="link-in">interviews</a> and <a href="https://www.gvip.io/gviptv" class="link-in">roundtable discussions.</a>
                 </p>
 
                 <p>
@@ -233,7 +228,7 @@
         <!-- Row end -->
 
         <!-- 3. Row -->
-        <div class="row">
+        <div class="section-row">
             <div class="column">
                 <div class="image-2"></div>
             </div>
@@ -249,7 +244,7 @@
         <!-- Row end -->
 
         <!-- 4. Row -->
-        <div class="row reverese">
+        <div class="section-row reverese">
 
             <div class="column gvip-text" data-aos="zoom-in-up">
                 <br>
@@ -272,8 +267,3 @@
 
 </section>
 
-<!-- Footer Banner -->
-<a href="https://www.gvip.io/gviptv">
-    <div class="tv-image">
-    </div>
-</a>

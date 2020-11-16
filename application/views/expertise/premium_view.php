@@ -58,7 +58,10 @@
     .h2__experts {
         font-size: 1.2em;
     }
-
+    .premium__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
     @media screen and (max-width:990px) {
         .information-container {
             margin-left: 0 !important;
@@ -80,10 +83,7 @@
     .personal{
         font-weight: 600;
     }
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+  
 </style>
 <main id="main" class="premium-main-page">
     <section id="speakers-details">
@@ -96,7 +96,7 @@
                     <div class="row">
                         <div class="col-md-6 img_container" style="text-align: center">
                             <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
-                            <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
+                            <img class='premium__img' src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
                         </div>
                         <div class="col-lg-5 ml-lg-auto ml-xl-0 header-container">
                             <div class="section-header">

@@ -14,8 +14,8 @@
     }
     .single-icon__container{
         position: relative;
-        width: 75px;
-        height: 75px;
+        width: 40px;
+        height: 40px;
         border: 1px solid white;
        
     }
@@ -157,7 +157,7 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
                     <?php if ($isliked){ ?>
                     <div data-tooltip='Dislike Project' class="single-icon__container">
             		    <a href="saveLikes/<?php echo $project['projectdata']['pid']; ?>" id="submit" name="submit">
-                            <img src="https://d2huw5an5od7zn.cloudfront.net/project_svgs/thumb_down.svg" class="sidebar-icon__image" >
+                        <img src="https://d2huw5an5od7zn.cloudfront.net/project_svgs/thumb_down.svg" class="sidebar-icon__image" >
                         </a>
                     </div>
                     <?php } else { ?>
