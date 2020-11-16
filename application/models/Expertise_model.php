@@ -952,6 +952,7 @@ class Expertise_model extends CI_Model {
         $this->db->where('a.isdeleted','0');
         $this->db->where('b.existance','1');
         $this->db->where('b.orgid', $userid);
+	$this->db->or_where('a.uid', $userid);
         $query_project = $this->db->get();
 
         $totalproj = $query_project->num_rows();
