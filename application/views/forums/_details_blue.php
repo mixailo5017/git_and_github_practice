@@ -6,12 +6,7 @@
           <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
           <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.js'></script>
           <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.4.0/mapbox-gl.css' rel='stylesheet' />
-          <style>
-            body {
-              margin: 0;
-              padding: 0;
-            }
-          </style>
+
         </head>
         <div id='map' style='width: 1000px; height: 650px'></div>
         <script>

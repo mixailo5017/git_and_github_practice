@@ -32,12 +32,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
           <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
             <script src="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.js"></script>
             <link href="https://api.mapbox.com/mapbox-gl-js/v1.9.1/mapbox-gl.css" rel="stylesheet" />
-          <style>
-            body {
-              margin: 0;
-              padding: 0;
-            }
-          </style>
+
         </head>
         <div id='map' style='width: 100%; height: 650px'></div>
     <?php  if(empty($features)){ ?>

@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#key {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 22.22%;
+  height: auto;
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  left: 1%;
+  margin-top: 5%;
+}
+
+.total {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.table {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  border-collapse: collapse;
+}
+
+#map {
+  border-left: 1px solid #fff;
+  position: relative;
+  width: 75%;
+  top: 0;
+  bottom: 0;
+  height: 755px;
+}
+
+.sidebar {
+  width: 25%;
+}
+
+.pad2 {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form.example input[type="text"] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196f3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

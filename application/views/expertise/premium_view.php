@@ -28,62 +28,6 @@
     ======================================================== -->
 </head>
 <style>
-.premium-main-page{
-    margin-top: 10px;
-}
-    .details-section {
-        background: white;
-        border: 0.1px solid rgba(28, 28, 28, 0.1);
-        border-radius: 10px;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    }
-
-    .details-section section {
-        margin-top: 50px;
-        margin-bottom: 100px !important;
-    }
-
-    .information-head {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 1em;
-    }
-
-    .our_experts {
-        padding: 0;
-        overflow-x: hidden;
-
-    }
-
-    .h2__experts {
-        font-size: 1.2em;
-    }
-
-    @media screen and (max-width:990px) {
-        .information-container {
-            margin-left: 0 !important;
-            padding: 0 !important;
-            left: 0 !important;
-            position: absolute !important;
-            width: 100vw !important;
-        }
-
-    }
-
-    @media screen and (max-width:400px) {
-        .information-head {
-            margin: auto;
-            text-align: center !important;
-            font-size: 2.5rem;
-        }
-    }
-    .personal{
-        font-weight: 600;
-    }
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
 </style>
 <main id="main" class="premium-main-page">
     <section id="speakers-details">
@@ -96,7 +40,7 @@
                     <div class="row">
                         <div class="col-md-6 img_container" style="text-align: center">
                             <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
-                            <img src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
+                            <img class="premium__img" src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
                         </div>
                         <div class="col-lg-5 ml-lg-auto ml-xl-0 header-container">
                             <div class="section-header">
@@ -119,22 +63,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="details row">
+                    <div style="margin-top: 2em;" class="details row">
                         <div class="col-lg-4 social-details col-12 mx-auto ">
-                            <h3 class="personal">Contact</h3>
+                            <h3 class="information__header-text">Contact</h3>
                             <div class="social">
                                 <p>Phone: <?php echo $users['vcontact']; ?></p>
                                 <p>Email: <?php echo $users['email']; ?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 social-details col-12 mx-auto">
-                            <h3 class="personal">Experts</h3>
+                            <h3 class="information__header-text">Experts</h3>
                             <div class="social">
                                 <p><?php echo empty($users['discipline']) ? '&mdash;' : $users['discipline'] ?></p>
                             </div>
                         </div>
                         <div class="col-lg-4 social-details  col-12 mx-auto">
-                            <h3 class="personal">Sector</h3>
+                            <h3 class="information__header-text">Sector</h3>
                             <div class="social">
                                 <?php foreach ($myexpertise as $id => $sector) { ?>
                                     <p><?php echo $sector['sector'] ?>&nbsp;(<?php echo $sector['subsector'] ?>)</p>

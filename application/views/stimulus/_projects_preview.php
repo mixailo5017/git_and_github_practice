@@ -1,76 +1,42 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
 <style>
-    a {
-        color: #000;
-    }
+.default-style {
+color: white !important;
+padding: 0.15em 0.5em;
+border-radius: 15px;
+}
 
+.color-energy {
+background: firebrick;
+}
 
-    .card {
-        background-color: #FFFFFF;
-        padding: 0;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    }
+.color-oil {
+background: teal;
+}
 
+.color-information {
+background: darkslateblue;
+}
 
-    .card:hover {
-        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-        color: black;
-    }
+.color-transport {
+background: darkgreen;
+}
 
-    address {
-        margin-bottom: 0px;
-    }
+.color-water {
+background: royalblue;
+}
 
+.color-other {
+background: lightslategrey;
+}
 
-
-
-    #author a {
-        color: #fff;
-        text-decoration: none;
-
-    }
-
-    .default-style {
-        display: inline-block;
-        color: white !important;
-        padding: 0.15em 0.5em;
-        border-radius: 15px;
-    }
-
-    .color-energy {
-        background: firebrick;
-    }
-
-    .color-oil {
-        background: teal;
-    }
-
-    .color-information {
-        background: darkslateblue;
-    }
-
-    .color-transport {
-        background: darkgreen;
-    }
-
-    .color-water {
-        background: royalblue;
-    }
-
-    .color-other {
-        background: lightslategrey;
-    }
-
-    .color-social {
-        background: darkorchid;
-    }
-
-    .color-logistics {
-        background: #c44b28;
-    }
+.color-social {
+background: darkorchid;
+}
+.color-logistics{
+background:#c44b28;
+}
 </style>
 <?php
 $totaljobs = 0;
@@ -120,7 +86,7 @@ if (count($rows) > 0) {
                 ?>
 
 
-                    <div class="col-lg-4 col-md-4 col-sm-4" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
+                    <div class="col-lg-4 col-md-4 col-sm-4 projects-preview" style="padding-top: 5px; padding-right: 5px; padding-left: 5px">
                         <!-- Card -->
                         <div class="card h-100 border-0 shadow" style="overflow: hidden">
                             <!-- Card image -->

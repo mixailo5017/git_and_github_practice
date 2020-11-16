@@ -9,128 +9,48 @@
     <link href="https://api.mapbox.com/mapbox-assembly/v0.23.2/assembly.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        #key {
-            background-color: rgba(0, 0, 0, 0.8);
-            width: 22.22%;
-            height: auto;
-            overflow: auto;
-            position: absolute;
-            top: 0;
-            left: 1%;
-            margin-top: 5%;
-        }
-
-        .total {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 15px;
-        }
-
         .table {
             font-family: 'Montserrat', sans-serif;
             color: white;
             border-collapse: collapse;
         }
-
-
-
-
-
-        #map { border-left: 1px solid #fff;
-            position: relative;
-            width: 75%;
-            top: 0;
-            bottom: 0;
-            height: 755px
-        }
-
-        .sidebar {
-            width: 25%;
-        }
-
-
-        .pad2 {
-            padding: 20px;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-
-        form.example input[type=text] {
-            padding: 10px;
-            font-size: 17px;
-            border: 1px solid grey;
-            float: left;
-            width: 70%;
-            background: #f1f1f1;
-        }
-
-        form.example button {
-            float: left;
-            width: 20%;
-            padding: 10px;
-            background: #2196F3;
-            color: white;
-            font-size: 17px;
-            border: 1px solid grey;
-            border-left: none;
-            cursor: pointer;
-        }
-
-        form.example button:hover {
-            background: #0b7dda;
-        }
-
-        form.example::after {
-            content: "";
-            clear: both;
-            display: table;
-        }
-
-
     </style>
 </head>
 
 <body>
 
-<div style="display: inline-block; width: 100%; height: 100%">
+    <div style="display: inline-block; width: 100%; height: 100%">
 
-    <div id="map" style="float: right"></div>
-    <div id="key"></div>
+        <div id="map" style="float: right"></div>
+        <div id="key"></div>
 
 
-    <div class='sidebar' style="float: left; height: 800px">
-        <h1 id="heading" style="padding-top: 10px; text-align: center; font-size: 20px"></h1>
-        <div style="padding: 25px" id="pop" >
-            <h1 id="directions"> Click on a cluster to show the breakdown of projects by sector in the cluster. </h1>
+        <div class='sidebar' style="float: left; height: 800px">
+            <h1 id="heading" style="padding-top: 10px; text-align: center; font-size: 20px"></h1>
+            <div style="padding: 25px" id="pop">
+                <h1 id="directions"> Click on a cluster to show the breakdown of projects by sector in the cluster. </h1>
+            </div>
         </div>
+
+
     </div>
 
-
-</div>
-
-<div id="curve_chart" style="width: 900px; height: 500px"></div>
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
 
 
 </html>
 
 <?php
 $features = array();
-foreach($map['map_data'] as $key => $orgexp)
-{
+foreach ($map['map_data'] as $key => $orgexp) {
     $features[] = array(
         'type' => 'Feature',
-        'properties' => array('id' => $orgexp['pid'],'location'=> $orgexp['location'], 'description'=> $orgexp['description'], 'projectname'=> $orgexp['projectname'], 'sector'=> $orgexp['sector'], 'stage'=> $orgexp['stage'], 'sponsor'=> $orgexp['sponsor'], 'subsector'=> $orgexp['subsector'], 'slug'=> $orgexp['slug'], 'projectphoto'=> $orgexp['projectphoto'], 'description'=> $orgexp['description'], 'country'=> $orgexp['country'], 'totalbudget'=> $orgexp['totalbudget']),
+        'properties' => array('id' => $orgexp['pid'], 'location' => $orgexp['location'], 'description' => $orgexp['description'], 'projectname' => $orgexp['projectname'], 'sector' => $orgexp['sector'], 'stage' => $orgexp['stage'], 'sponsor' => $orgexp['sponsor'], 'subsector' => $orgexp['subsector'], 'slug' => $orgexp['slug'], 'projectphoto' => $orgexp['projectphoto'], 'description' => $orgexp['description'], 'country' => $orgexp['country'], 'totalbudget' => $orgexp['totalbudget']),
         'geometry' => array(
             'type' => 'Point',
             'coordinates' => array(
-                $orgexp['lng'] + (rand(-1000,1000)*.00001),
-                $orgexp['lat'] + (rand(-1000,1000)*.00001),
+                $orgexp['lng'] + (rand(-1000, 1000) * .00001),
+                $orgexp['lat'] + (rand(-1000, 1000) * .00001),
                 1
             ),
         ),
@@ -292,8 +212,8 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 if (!marker) {
                     const el = createDonutChart(props, totals);
                     marker = markers[id] = new mapboxgl.Marker({
-                        element: el
-                    })
+                            element: el
+                        })
                         .setLngLat(coordinates)
                 }
 
@@ -316,9 +236,9 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
         const createDonutChart = (props, totals) => {
             const div = document.createElement('div');
             const data = [{
-                type: 'water',
-                count: props.water
-            },
+                    type: 'water',
+                    count: props.water
+                },
                 {
                     type: 'transport',
                     count: props.transport
@@ -366,7 +286,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
                 .domain([d3.min(totals), d3.max(totals)])
                 .range([500, d3.max(totals)])
 
-            const radius = Math.log(props.point_count)*5+13;
+            const radius = Math.log(props.point_count) * 5 + 13;
             const circleRadius = radius - thickness;
 
             const svg = d3.select(div)
@@ -428,9 +348,9 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             };
 
             const data = [{
-                type: 'water',
-                perc: getPerc(props.water)
-            },
+                    type: 'water',
+                    perc: getPerc(props.water)
+                },
                 {
                     type: 'transport',
                     perc: getPerc(props.transport)
@@ -526,7 +446,7 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             map.getCanvas().style.cursor = 'pointer';
         });
 
-// Change it back to a pointer when it leaves.
+        // Change it back to a pointer when it leaves.
         map.on('mouseleave', 'powerplant_individual', function() {
             map.getCanvas().style.cursor = '';
         });
@@ -534,7 +454,9 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
         map.on('click', 'powerplant_individual', function(e) {
             document.getElementById('key').innerHTML = '';
 
-            map.flyTo({ center: e.features[0].geometry.coordinates });
+            map.flyTo({
+                center: e.features[0].geometry.coordinates
+            });
 
             var coordinates = e.features[0].geometry.coordinates.slice();
             var projectname = e.features[0].properties.projectname;
@@ -556,35 +478,35 @@ $final_data = json_encode($new_data, JSON_PRETTY_PRINT);
             stage = stage.charAt(0).toUpperCase() + stage.slice(1);
 
 
-// Ensure that if the map is zoomed out such that multiple
-// copies of the feature are visible, the popup appears
-// over the copy being pointed to.
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
             document.getElementById('pop').innerHTML = '';
             document.getElementById('heading').innerHTML = '';
             document.getElementById('pop').innerHTML =
-                "<div style=\"height: 320px; width: 300px\">"
-                +   "<div>"
-                +       "<a href=\'/projects/" + slug + "\'>"
-                +       "<h1 style=\"text-align: center; font-size: 20px\"> <strong>"
-                +       projectname
-                +       "</strong> </h1>"
-                +       "</a>"
-                +   "</div>"
-                +   "<div>"
-                +      "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'https://www.gvip.io/img/content_projects/" + projectphoto + "?crop=1&w=250&h=200\'>"
-                +   "</div>"
-                +   "<div>"
-                +       "<h2 style=\"text-align: center; margin: 10px; font-size: 15px\">" + location + "</h2>"
-                +       "<p> <strong>Country:</strong> " + country +  "</p>"
-                +       "<p> <strong>Stage:</strong> " + stage +  "</p>"
-                +       "<p> <strong> Sponsor: </strong>" + sponsor +  "</p>"
-                +       "<p> <strong> Value: </strong>" + totalbudget +  "M</p>"
-                +        "<p style='height: 200px; overflow: scroll; padding: 10px'>" + description +  "</p>"
-                +       "<a style='margin-left: 25%' class=\"light_green\" href=\'/projects/" + slug + "\' role=\"button\">View Project</a>\n"
-                +"</div>";
+                "<div style=\"height: 320px; width: 300px\">" +
+                "<div>" +
+                "<a href=\'/projects/" + slug + "\'>" +
+                "<h1 style=\"text-align: center; font-size: 20px\"> <strong>" +
+                projectname +
+                "</strong> </h1>" +
+                "</a>" +
+                "</div>" +
+                "<div>" +
+                "<img style=\"display: block; margin: auto; padding-top: 10px\" src=\'https://www.gvip.io/img/content_projects/" + projectphoto + "?crop=1&w=250&h=200\'>" +
+                "</div>" +
+                "<div>" +
+                "<h2 style=\"text-align: center; margin: 10px; font-size: 15px\">" + location + "</h2>" +
+                "<p> <strong>Country:</strong> " + country + "</p>" +
+                "<p> <strong>Stage:</strong> " + stage + "</p>" +
+                "<p> <strong> Sponsor: </strong>" + sponsor + "</p>" +
+                "<p> <strong> Value: </strong>" + totalbudget + "M</p>" +
+                "<p style='height: 200px; overflow: scroll; padding: 10px'>" + description + "</p>" +
+                "<a style='margin-left: 25%' class=\"light_green\" href=\'/projects/" + slug + "\' role=\"button\">View Project</a>\n" +
+                "</div>";
 
         });
 

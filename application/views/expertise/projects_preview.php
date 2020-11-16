@@ -1,40 +1,6 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
 <style>
-    hr {
-        border-top: 1px solid #007bff;
-        width: 70%;
-    }
-
-    a {
-        color: #000;
-    }
-
-
-    .card {
-        background-color: #FFFFFF;
-        padding: 0;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    }
-
-
-    .card:hover {
-        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
-        color: black;
-    }
-
-    address {
-        margin-bottom: 0px;
-    }
-
-    #author a {
-        color: #fff;
-        text-decoration: none;
-
-    }
-
+ 
     .default-style {
         color: white !important;
         padding: 0.15em 0.5em;
