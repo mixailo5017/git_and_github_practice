@@ -49,7 +49,8 @@ class Projects extends CI_Controller
 
         $this->sort_options = array(
             1 => lang('SortAlphabetically'),
-            2 => lang('SortRecentlyUpdatedFirst')
+            2 => lang('SortRecentlyUpdatedFirst'),
+            3 => 'Most Liked'
         );
 
         // TODO: Revisit this logic to use array of events
@@ -423,7 +424,7 @@ class Projects extends CI_Controller
             $sme_experts = $this->expertise_model->get_sme_experts($pid, array($userid));
         } else {
             // Similar project are visible only for non project owners
-            $similar_projects = $this->projects_model->similar_projects2($pid);
+            //$similar_projects = $this->projects_model->similar_projects2($pid);
         }
 
         $viewdata['project']['topexperts'] = $global_experts;
@@ -480,6 +481,8 @@ class Projects extends CI_Controller
 
         //likes
         $viewdata['likes'] = $this->get_likes($pid);
+        $viewdata['isliked'] = $this->is_liked($pid);
+
 
         // Forum ad
         $this->load->model('forums_model');
@@ -502,8 +505,20 @@ class Projects extends CI_Controller
             )
         );
 
-        $this->load->view('templates/header', $this->headerdata); 
-        $this->load->view('projects/projects_view', $viewdata);
+        $this->load->view('templates/header', $this->headerdata);
+
+        if ($viewdata['project']['projectdata']['pid'] == 1150){
+            $this->load->view('projects/projects_view_sinma', $viewdata);
+        }
+        elseif ($viewdata['project']['projectdata']['pid'] == 2877){
+            $this->load->view('projects/projects_view_maya', $viewdata);
+
+        }
+        else {
+            $this->load->view('projects/projects_view', $viewdata);
+
+        }
+
         $this->load->view('templates/footer', $this->footer_data);
     }
     
@@ -3321,6 +3336,18 @@ class Projects extends CI_Controller
         }
     }
 
+    public function saveLikes($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+        $userid = (int) sess_var('uid');
+
+        $this->load->model('projects_model');
+        $this->projects_model->saveLikes($proj_id, $userid);
+
+        redirect('/projects/' . $proj_id);
+
+    }
+
     public function get_likes($proj_id)
     {
         $proj_id = (int) $proj_id;
@@ -3331,60 +3358,27 @@ class Projects extends CI_Controller
         return $likes;
     }
 
-    /**
-     * Makes a relationship between a project a currently logged in user (member)
-     * User (member) likes the project
-     *
-     * @return bool
-     */
-    public function like()
+    public function is_liked($proj_id)
     {
-        $model = $this->projects_model;
-
+        $proj_id = (int) $proj_id;
         $userid = (int) sess_var('uid');
-        $id = (int) $this->input->post('id', true);
 
-        if (! $result = $model->like($id, $userid)) {
-            sendResponse(array('status' => 'error'));
-            exit;
-        }
+        $this->load->model('projects_model');
+        $likes = $this->projects_model->is_liked($proj_id, $userid);
 
-        $response = array('status' => 'success');
+        return $likes;
+    }
+	
 
-        if ($this->input->post('return_likes', true) == '1') {
-            $response['liked'] = $model->follows($id);
-        }
-
-        sendResponse($response);
-        exit;
+	public function top100()
+    {
+        // Render the page
+        $this->load->view('templates/header', $this->headerdata);
+        $this->load->view('projects/top100');
+        $this->load->view('templates/footer', $this->dataLang);
     }
 
-    /**
-     * Deletes a relationship between a project a currently logged in user (member)
-     * User (member) unfollows the project
-     *
-     * @return bool
-     */
-    public function unlike()
-    {
-        $model = $this->projects_model;
 
-        $userid = (int) sess_var('uid');
-        $id = (int) $this->input->post('id', true);
 
-        if (! $result = $model->unfollow($id, $userid)) {
-            sendResponse(array('status' => 'error'));
-            exit;
-        }
-
-        $response = array('status' => 'success');
-
-        if ($this->input->post('return_likes', true) == '1') {
-            $response['liked'] = $model->follows($id);
-        }
-
-        sendResponse($response);
-        exit;
-    }
 }
 

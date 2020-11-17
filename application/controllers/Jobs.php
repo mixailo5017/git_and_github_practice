@@ -34,14 +34,27 @@ class Jobs extends CI_Controller {
 
     public function index() {
 
-        $data = array();
+        $this->load->model('projects_model');
+        $allProj['map_data'] = $this->projects_model->get_all_proj_data();
+
+
+        $this->load->model('forums_model');
+        $model = $this->forums_model;
+        $stimMap['map_data'] = $projects = $model->projects(37, 'pid, slug, projectname, projectphoto, p.sector, p.country, p.lat, p.lng, p.totalbudget, p.sponsor, p.stage, p.subsector, p.location, p.description', array('p.id' => 'random'), 700, 0, true);
+
+        $data = array(
+            'allProj' => $allProj['map_data'],
+            'model_obj' => $this->projects_model,
+            'stimMap'   => $stimMap['map_data']
+        );
+
 
         $this->breadcrumb->append_crumb(lang('B_JOBS'), '/jobs');
         $this->headerdata['breadcrumb'] = $this->breadcrumb->output();
 
+
         // Render HTML Page from view direcotry
-        $this->load->view('templates/header', $this->headerdata);
         $this->load->view('jobs/index', $data);
-        $this->load->view('templates/footer',$this->dataLang);
+
     }
 }

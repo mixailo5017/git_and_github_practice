@@ -24,12 +24,14 @@ wwwroot/images/store/**
 .php_cs.cache
 wwwroot/node_modules/**
 .idea/**
+wwwroot/phpinfo.php
 
 # Session files
 storage/session/**
 
 # Mac OSX system files
 .DS_Store
+Icon?
 
 # Build artefacts
 wwwroot/.sass-cache/**

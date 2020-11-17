@@ -22,18 +22,20 @@
     <?php $this->load->view('templates/_segment_analytics', empty($page_analytics) ? array() : $page_analytics);?>
 
 	<?php if (isset($header_extra) && $header_extra != '') echo $header_extra; ?>
+	
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43491822-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-43491822-3');
+    </script>
 </head>
 
 <body id="<?php echo isset($bodyid) ? $bodyid : '' ?>" class="<?php echo isset($bodyclass) ? $bodyclass : '' ?>">
     <div class="wrapper">
 
     <?php $this->load->view('layouts/header') ?>
-
-    <?php if (isset($breadcrumb) && $breadcrumb != '') { ?>
-
-    <div class="content clearfix">
-        <ul class="header_bread_crumb">
-            <?php echo $breadcrumb ?>
-        </ul>
-    </div>
-    <?php } ?>

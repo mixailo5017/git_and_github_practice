@@ -15,8 +15,7 @@ class Migration_create_exp_gviptv extends CI_Migration {
                 'title' => array('type' => 'varchar', 'constraint' => 1024, 'null' => FALSE),
                 'description' => array('type' => 'text', 'null' => TRUE),
                 'category'   => array('type' => 'varchar', 'constraint' => 255, 'null' => FALSE),
-                'created_at' => array('type' => 'timestamp', 'null' => TRUE),
-                'status' => array('type' => 'varchar', 'constraint' => 1, 'null' => FALSE, 'default' => '0')
+                'created_at' => array('type' => 'timestamp', 'null' => TRUE)
 
             );
             $this->dbforge->add_field($fields);
@@ -26,7 +25,7 @@ class Migration_create_exp_gviptv extends CI_Migration {
             $sql = array(
                 // Default value of NOW() for created_at
                 "ALTER TABLE {$this->table} ALTER created_at SET DEFAULT CURRENT_TIMESTAMP",
-                "CREATE INDEX {$this->table}_status_idx ON {$this->table} (status)",
+
             );
 
             $this->execute($sql);

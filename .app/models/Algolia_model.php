@@ -80,17 +80,8 @@ class Algolia_model extends CI_Model {
 	 */
 	public function save_all_experts()
 	{
-		$config = $this->config->item('algolia');
-		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
-		$index = $client->initIndex($config['index_members']);
-
-		$response = $index->clearIndex();
-		$this->log_response($response, 'clear the index');
-
 		$members = $this->get_all_experts();
-		$response = $index->saveObjects($members);
-		$this->log_response($response, 'save the member objects');
-
+		$this->refresh_index('index_members', $members);
 		return 'experts';
 	}
 
@@ -155,18 +146,30 @@ class Algolia_model extends CI_Model {
 	 */
 	public function save_all_projects()
 	{
-		$config = $this->config->item('algolia');
-		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
-		$index = $client->initIndex($config['index_projects']);
-
-		$response = $index->clearIndex();
-		$this->log_response($response, 'clear the index');
-
 		$projects = $this->get_all_projects();
-		$response = $index->saveObjects($projects);
-		$this->log_response($response, 'save the project objects');
+		$this->refresh_index('index_projects', $projects);
 
 		return 'projects';
+	}
+
+	/**
+	 * Clears an Algolia index then populates it with the data provided
+	 * @param  string $indexNameInConfig The key with which to look up the Algolia index name in the Algolia config array
+	 * @param  array  $data              Data to upload to Algolia
+	 * @return void                    
+	 */
+	private function refresh_index(string $indexNameInConfig, array $data)
+	{
+		$config = $this->config->item('algolia');
+		$client = new \AlgoliaSearch\Client($config['application_id'], $config['admin_api_key']);
+		$index = $client->initIndex($config[$indexNameInConfig]);
+
+		$clearIndexResponse = $index->clearIndex();
+		$this->log_response($clearIndexResponse, 'clear the index');
+		$index->waitTask($clearIndexResponse['taskID']); // Wait for Algolia to confirm the index has been cleared
+
+		$saveObjectsResponse = $index->saveObjects($data);
+		$this->log_response($saveObjectsResponse, "save the $indexNameInConfig objects");
 	}
 
 	/**

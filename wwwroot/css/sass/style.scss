@@ -1082,9 +1082,6 @@ a.external{display: block; color: #526DA3; font-size: 11px; background: url(#{$i
 #col2 .forum_attendance {padding: 0 20px 20px;width: 560px; display: table;}
 .comment_box {height: 110px;width: 555px;}
 
-@import "jquery_ui.scss";
-@import "chosen.scss";
-
 
 
 /* CIPL Css Change Start */
@@ -1585,6 +1582,31 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 @import "myvip.scss";
 @import "classes.scss";
 @import "modules.scss";
+@import "project-overview.scss";
+
+@import "mygvip.scss";
+
+@import "premium-map.scss";
+@import "premium-view.scss";
+
+@import "gviptv.scss";
+@import "landing-page.scss";
+@import "gismap.scss";
+@import "gviptv_single.scss";
+
+// Details Blue (repeating files)
+@import "_details_blue/stimulus.scss";
+@import "_details_blue/stimulusBrazil.scss";
+@import "_details_blue/forums.scss";
+@import "_details_blue/leadership-forum.scss";
+
+// Projects Preview (repeating files)
+@import "_projects_preview/stimulus.scss";
+@import "_projects_preview/_stimulusBrazil.scss";
+@import "_projects_preview/expertise.scss";
+@import "_projects_preview/leadership-forum.scss";
+
+
 
 @import "_lang/french.scss";
 @import "_lang/spanish.scss";
@@ -1592,12 +1614,23 @@ html .edit_case_study_form .errormsg label{ color: red!important; display: block
 
 @import "print.scss";
 
+// From GViP 2.0 design
 @import "../../build/_sass/_mq.scss";
 @import "../../build/_sass/_nav.scss";
 @import "../../build/_sass/_nav_mobile.scss";
 @import "../../build/_sass/_searchbox.scss";
 @import "../../build/_sass/_responsive_visibility.scss";
 @import "../../build/_sass/_alerts.scss";
+
+// Libraries
+@import "../../node_modules/magnific-popup/dist/magnific-popup.css";
+@import "jquery_ui.scss";
+@import "chosen.scss";
+
+// For Magnific Popup galleries, to handle small images
+.mfp-content {
+	min-width: 300px;
+}
 
 /* nav override */
 .m-nav li span {

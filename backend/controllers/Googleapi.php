@@ -51,10 +51,8 @@ class GoogleApi extends CI_Controller {
 		$data = array();
 		$data["setting"] = $this->googleapi_model->get_ga_data();
 		$data["headertitle"] = "Google Analytics";
-		$this->load->view('templates/header',$this->headerdata);
-		$this->load->view('templates/leftmenu');	
-		$this->load->view('reports/gapi',$data);
-		$this->load->view('templates/footer');	
+
+		$this->loadViews('reports/gapi', $data);
 	}
 	
 	public function setting()
@@ -69,12 +67,31 @@ class GoogleApi extends CI_Controller {
 		
 		$data["setting"] = $this->googleapi_model->get_ga_data();
 		
-		$this->load->view('templates/header',$this->headerdata);
-		$this->load->view('templates/leftmenu');	
-		$this->load->view('reports/setting',$data);
-		$this->load->view('templates/footer');	
+		$this->loadViews('reports/setting', $data);
+	}
+
+	public function projects()
+	{
+		$data['headertitle'] = 'Project Recency';
+
+		$data['averageRecency'] = $this->googleapi_model->averageRecency();
+		$data['recencyBuckets'] = $this->googleapi_model->recencyGroupings();
+
+		$this->loadViews('reports/projects', $data);
 	}
 	
+	/**
+	 * Loads the various views required to compose the page
+	 * @param  string $viewName Name of the view to load for the main part of the page
+	 * @param  array  $data     Data to feed to the main view
+	 */
+	private function loadViews(string $viewName, array $data)
+	{
+		$this->load->view('templates/header',$this->headerdata);
+		$this->load->view('templates/leftmenu');	
+		$this->load->view($viewName, $data);
+		$this->load->view('templates/footer');	
+	}
 	
 }
 

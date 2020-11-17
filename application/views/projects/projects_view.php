@@ -1,26 +1,79 @@
-<?php if ($userdata['uid'] != sess_var('uid')) {
-    echo form_open('', 'id="project_like_form" name="like_form"', array(
-        'context' => 'projects',
-        'id' => $project['pid'],
-        'action' => $project['isliked'] > 0 ? 'Unlike' : 'Like',
-        'return_likes' => 0
-    )); ?>
-    <a href="#" id="submit" name="submit"
-       data-unlike="<?php echo($project['isliked'] > 0 ? 'Unlike' : '') ?>"
-       class="button like light_gray <?php echo($project['isliked'] > 0 ? 'Unlike' : '') ?>">
-        <span class="like-text"><?php echo($project['isliked'] > 0 ? 'Liked' : 'Like') ?></span>
-        <!--[if IE 8]><span class="ie-8-unfollow">Unlike</span><![endif]-->
-    </a>
-    <?php echo form_close();
-}
-?>
+<style>
+    #col2 section{
+       background: white !important; 
+    }
+    .project-icons__container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 100%;
+       
+        height: fit-content;
+        background: 1px solid black;    
+    }
+    .single-icon__container{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+       
+    }
+    .sidebar-icon__image {
+        width: 70%;
+        height: 70%;
+        
+       
+        position: absolute;
+        
+    }
+    
 
-<h2><?php echo lang('Rating') ?>
-    <span class="star-rating" id="expert_rating"></span>
-    <span class="score"><?php echo $likes ?></span><span class="votes"></span>
-</h2>
+    .single-icon__container::before {
+        position: absolute;
+        top: -.35rem;
+        padding: 1rem;
+        border: 1px solid #2274A5;
+        color: #2274a5;
+        text-align: center;
+        border-radius: .3rem;
+        font-size: 2rem !important;
+        background: white;
+        width: max-content;
+        max-width: 15vw;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%) scale(0);
+        content: attr(data-tooltip);
+        transition: 100ms;
+    }
+    .single-icon__container:hover{
+        transform: scale(1.1);
+    }
+     .single-icon__container:hover::before {
+        
+        transform: translateX(-50%) translateY(-100%) scale(1);
+    } 
 
 
+    .project-icons__likecount{
+        width: 70%;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        
+    }
+    .project-icons__likecount h2{
+        font-weight: 600;
+        font-size:2.1rem;
+        color: #2274a5;
+    }
+
+
+
+
+
+</style>
 
 <?php
 if ($project['projectdata']['projectphoto'] != ''){
@@ -99,7 +152,38 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
                     <?php
                     }
 					?>
-				</p>
+                </p>
+                <div class='project-icons__container'>
+                    <!-- Like/Dislike Feature -->
+                    <?php if ($isliked){ ?>
+                    <div data-tooltip='Dislike Project' class="single-icon__container">
+            		    <a href="saveLikes/<?php echo $project['projectdata']['pid']; ?>" id="submit" name="submit">
+                            <img src="https://d2huw5an5od7zn.cloudfront.net/project_svgs/thumb_filled.svg" class="sidebar-icon__image" >
+                        </a>
+                    </div>
+                    <?php } else { ?>
+                    <div data-tooltip='Like Project' class="single-icon__container">
+                        <a href="saveLikes/<?php echo $project['projectdata']['pid']; ?>" id="submit" name="submit">
+                        <img src="https://d2huw5an5od7zn.cloudfront.net/project_svgs/thumb_up.svg" class="sidebar-icon__image" >
+                        </a> 
+                    </div>
+                    <?php }?>
+                     
+                    <div class="project-icons__likecount">
+                    <h2><?php 
+                    if($likes==0)
+                    echo 'Be The First One To Like This Project';
+                    else if($likes==1)
+                    echo '1 Person Has Liked This Project';
+                    else 
+                    echo $likes . ' People Have Liked This Project'; 
+                    
+                    ?> </h2>
+                    </div>
+
+
+
+                </div>
 			</section><!-- end .portlet -->
 			
 			
@@ -283,6 +367,7 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
                     	document.getElementById("demo").innerHTML = txt;
                 	}
             </script>
+
             <?php if ($userdata['uid'] != sess_var('uid')) {
                 // User can't follow his or her own projects and send a message to him/her self
                 echo form_open('', 'id="project_follow_form" name="follow_form"', array(
@@ -298,10 +383,14 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
                         <!--[if IE 8]><span class="ie-8-unfollow">Unfollow</span><![endif]-->
                     </a>
                 <?php echo form_close(); ?>
+
+
                 <?php if (!in_array($userdata['uid'], INTERNAL_USERS)) { ?>
 	                <a href="#" id="project_send_message" class="button mail light_gray"><?php echo lang('Message') ?></a>
 	            <?php } ?>
             <?php } ?>
+
+
             <?php if ($project['discussions_access']) { ?>
                 <a href="/projects/discussions/<?php echo $project['pid'] ?>" class="button discussion light_gray"><?php echo lang('Discussions') ?></a>
             <?php } ?>

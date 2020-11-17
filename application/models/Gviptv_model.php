@@ -104,7 +104,30 @@ class Gviptv_model extends CI_Model {
         }
     }
 
+    /**
+     * Retrieving a record by primary key
+     *
+     * @param int $id
+     * @param null $select
+     * @return array
+     */
+    public function find($id, $select = null)
+    {
+        $this->base_query($select, array('id' => (int) $id));
+
+        $row = $this->db
+            ->get()
+            ->result_array();
+
+        if (count($row) > 0) {
+            $row = $row[0];
+        }
+
+        return $row;
+    }
+
 }
 
 
 ?>
+

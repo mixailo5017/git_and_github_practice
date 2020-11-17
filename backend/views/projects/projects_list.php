@@ -98,7 +98,6 @@
                             <td><?php echo $proj["pid"]; ?></td>
                             <td>
                             <div style="float:left;width:60px;">
-                            <img alt="<?php echo $proj["projectname"];?>" style="float:left;" src="<?php echo project_image($proj["projectphoto"], 50);?>" width="50" >
 							</div>
 							<span style="float:left;padding-left:5px;">
 								<a href="/<?php echo index_page(); ?>/projects/edit/<?php echo $proj["slug"];?>"><?php echo $proj["projectname"];?></a>

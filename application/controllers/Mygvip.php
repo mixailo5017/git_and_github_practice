@@ -45,17 +45,12 @@ class Mygvip extends CI_Controller {
         $map['map_data'] = $this->projects_model->get_proj_map_data();
 
 
-        $similar_projects = $this->projects_model->similar_projects($my_project_ids);
-        $similar_project_ids = flatten_assoc($similar_projects, null, 'id');
-
         // Key Executives
         $this->load->model('expertise_model');
         $key_executives = array();
 
         if ($my_projects_count > 0) {
             // Add similar projects' ids and limit the number of ids to 3
-            $ids = array_slice(array_merge($my_project_ids, $similar_project_ids), 0, 3);
-            $key_executives = $this->expertise_model->get_key_executives($ids, array($this->uid));
         }
         // If the user don't have My projects or there are no matching experts
         // Default to getting random experts
@@ -66,9 +61,7 @@ class Mygvip extends CI_Controller {
 
         // New Experts
         $new_experts = $this->expertise_model->get_new_experts(array($this->uid));
-        // GViP Store Items
-        $this->load->model('store_items_model');
-        $store_items = $this->store_items_model->all();
+       
 
         // My Experts (Experts that I follow)
         $this->load->model('members_model');
@@ -84,13 +77,10 @@ class Mygvip extends CI_Controller {
 
         $data = compact(
             'my_projects',
-            'store_items',
-            'similar_projects',
             'key_executives',
             'new_experts',
-            'my_experts',
-            'my_discussions',
-            'map'
+            'my_discussions'
+
         );
 
         $this->set_headers();
@@ -110,6 +100,7 @@ class Mygvip extends CI_Controller {
         $this->load->view('templates/_map_templates', '');
         $this->load->view('mygvip/index', $data);
         $this->load->view('templates/footer', $this->footer_data);
+
     }
 
     public function mydiscussions()
@@ -436,4 +427,5 @@ class Mygvip extends CI_Controller {
         }
     }
 }
+
 

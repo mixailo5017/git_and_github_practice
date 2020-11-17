@@ -183,6 +183,7 @@ class Gviptv extends CI_Controller {
         $this->load->view('gviptv/edit', $data);
         $this->load->view('templates/footer');
     }
+
     /**
      * Update a specified forum entry
      *
@@ -190,7 +191,7 @@ class Gviptv extends CI_Controller {
      * @param array $input
      */
     private function update($id, $input) {
-        
+
             $this->gviptv_model->update($id, $input);
             redirect('/gviptv/edit/' . $id, 'refresh');
     }

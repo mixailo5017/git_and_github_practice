@@ -74,6 +74,7 @@
         <li <?php if ($fst_segment == "googleapi" ) { echo "class='current'"; } ?>><a href="#reportssub" class="addons">Reports</a>
             <span class="arrow"></span>
             <ul id="reportssub">
+                <li <?php if ($snd_segment == "projects") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/projects">Project Recency</a></li>
                 <li <?php if ($snd_segment == "reports") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/reports">Google Analytics</a></li>
                 <li <?php if ($snd_segment == "setting") { echo "class='current'"; } ?>><a href="/admin.php/googleapi/setting">GA Account Setting</a></li>
             </ul>
