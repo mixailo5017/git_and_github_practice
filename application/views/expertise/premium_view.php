@@ -28,62 +28,14 @@
     ======================================================== -->
 </head>
 <style>
-.premium-main-page{
-    margin-top: 10px;
-}
-    .details-section {
-        background: white;
-        border: 0.1px solid rgba(28, 28, 28, 0.1);
-        border-radius: 10px;
-        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    img{
+        max-width: 100% !important;
+        max-height: 100% !important;
     }
-
-    .details-section section {
-        margin-top: 50px;
-        margin-bottom: 100px !important;
+  .premium__img {
+        max-width: 100% !important;
+        max-height: 100% !important;
     }
-
-    .information-head {
-        font-size: 4.5rem;
-        font-weight: bold;
-        margin-bottom: 1em;
-    }
-
-    .our_experts {
-        padding: 0;
-        overflow-x: hidden;
-
-    }
-
-    .h2__experts {
-        font-size: 1.2em;
-    }
-    .premium__img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    @media screen and (max-width:990px) {
-        .information-container {
-            margin-left: 0 !important;
-            padding: 0 !important;
-            left: 0 !important;
-            position: absolute !important;
-            width: 100vw !important;
-        }
-
-    }
-
-    @media screen and (max-width:400px) {
-        .information-head {
-            margin: auto;
-            text-align: center !important;
-            font-size: 2.5rem;
-        }
-    }
-    .personal{
-        font-weight: 600;
-    }
-  
 </style>
 <main id="main" class="premium-main-page">
     <section id="speakers-details">
