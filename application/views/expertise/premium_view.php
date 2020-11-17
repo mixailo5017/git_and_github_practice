@@ -28,6 +28,14 @@
     ======================================================== -->
 </head>
 <style>
+    img{
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+  .premium__img {
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
 </style>
 <main id="main" class="premium-main-page">
     <section id="speakers-details">
@@ -40,7 +48,7 @@
                     <div class="row">
                         <div class="col-md-6 img_container" style="text-align: center">
                             <?php $src = company_image($users['userphoto'], array('fit' => 'contain')) ?>
-                            <img class="premium__img" src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
+                            <img class='premium__img' src="<?php echo $src ?>" alt="<?php echo $users['organization'] ?>'s photo">
                         </div>
                         <div class="col-lg-5 ml-lg-auto ml-xl-0 header-container">
                             <div class="section-header">
