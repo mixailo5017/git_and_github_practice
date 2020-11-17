@@ -136,9 +136,6 @@ class Gviptv_model extends CI_Model {
         }
     }
 
-
-
-
     /**
      * Generates a base query for forums
      *

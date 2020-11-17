@@ -132,6 +132,7 @@ class Gviptv extends CI_Controller {
         // Convert $id to integer
         $id = (int)$id;
 
+
         if ($this->input->post('submit')) {
 
             $now = date('Y-m-d H:i:s');

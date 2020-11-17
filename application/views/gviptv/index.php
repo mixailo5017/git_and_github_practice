@@ -88,11 +88,13 @@
         cursor: pointer;
         color: #2774a5 !important;
         border: 1px solid #2774a5 !important;
+
     }
 </style>
 <!-- Banner -->
 <a href="#">
     <div class="gviptv-banner">
+
         <div class="hero-text">
         </div>
     </div>
@@ -101,11 +103,11 @@
 
 
 
-
 <!-- Toggle Sidebar button -->
 <div class="row" style="padding-top: 25px; padding-bottom: 25px;padding-left: 2%">
     <div class="col-md-2 col-12 mb-5 mr-md-auto">
         <button id="toggle-btn" type="button" class="btn w-100 search-btn ">GVIPTV Channels</button>
+
     </div>
 </div>
 <!-- Toggle Sidebar button end -->
@@ -114,6 +116,7 @@
     <div class="row">
         <!-- Sidebar -->
         <div style="min-height: 500px;" id="sidebar" class="col-lg-2 border ml-5">
+
 
 
             <div class="row sidebar-body my-5">
@@ -152,6 +155,7 @@
         echo "videoUrl: \"" . $videos['link'] . "\",";
         echo "id: \"" . $videos['id'] . "\",";
         echo "imageUrl: \"" . $videos['thumbnail'] . "\"},";
+
     }
 
     echo ']';
@@ -201,6 +205,7 @@
                     `;
         })
     }
+
     //  Toggle sidebar on and off
     $('#toggle-btn').on('click', function(e) {
         $('#sidebar').toggle()
@@ -225,6 +230,7 @@
     $('#btn-leader').on('click', function(e) {
         replaceSelected(e.target.id)
         populate(hardcodedData, 'Leadership');
+
     })
     $('#btn-projects').on('click', function(e) {
         replaceSelected(e.target.id)
@@ -235,3 +241,4 @@
         populate(hardcodedData, 'Technology');
     })
 </script>
+

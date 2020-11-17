@@ -850,5 +850,6 @@ class Forums_model extends CI_Model
 
         return (is_array($featuredForum) && count($featuredForum) == 1) ? $featuredForum[0] : null;
     }
+    
 }
 

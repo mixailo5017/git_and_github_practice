@@ -74,6 +74,7 @@
 
 
 </style>
+
 <?php
 if ($project['projectdata']['projectphoto'] != ''){
     $pci += 10;
@@ -367,7 +368,6 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
                 	}
             </script>
 
-
             <?php if ($userdata['uid'] != sess_var('uid')) {
                 // User can't follow his or her own projects and send a message to him/her self
                 echo form_open('', 'id="project_follow_form" name="follow_form"', array(
@@ -611,6 +611,7 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
         'from' => sess_var('uid')
     )) ?>
 
+
 <?php if (($project['projectdata']['lat'] && $project['projectdata']['lng']) || $isAdminorOwner )  { ?>
 <script>
 	var mapCoords = [<?php echo $project['projectdata']['lat'],',', $project['projectdata']['lng'];?>];
@@ -620,3 +621,4 @@ if ($pci < 100 && ($userdata['uid'] == sess_var('uid') || in_array(sess_var('uid
     var projectCountry = '<?php echo $project['projectdata']['country'] ?>';
 </script>
 <?php } ?>
+

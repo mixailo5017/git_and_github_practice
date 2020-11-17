@@ -398,6 +398,7 @@ class Projects extends CI_Controller
         }
 
         $viewdata['project']['isfollowing'] = $model->isfollowing($pid, $this->uid); // Is current user following the project
+        $viewdata['project']['isliked'] = $model->isliked($pid, $this->uid); // Is current user liked the project
         $viewdata['project']['projectdata'] = $model->get_project_data($slug, $userid);
         $viewdata['project']['projectdata']['jobs_created'] = $model->get_jobs_created($pid);
 		$viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
@@ -482,6 +483,7 @@ class Projects extends CI_Controller
         $viewdata['likes'] = $this->get_likes($pid);
         $viewdata['isliked'] = $this->is_liked($pid);
 
+
         // Forum ad
         $this->load->model('forums_model');
         if ($featuredForum = $this->forums_model->get_featured_forum()) {
@@ -516,6 +518,7 @@ class Projects extends CI_Controller
             $this->load->view('projects/projects_view', $viewdata);
 
         }
+
         $this->load->view('templates/footer', $this->footer_data);
     }
     
@@ -3376,4 +3379,6 @@ class Projects extends CI_Controller
     }
 
 
+
 }
+

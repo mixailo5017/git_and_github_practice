@@ -91,7 +91,7 @@ $(function(){
 		
 		/* Add markers */
 		var markers = new OpenLayers.Layer.Markers( "Markers" );
-		map.addLayer(markers);
+		//map.addLayer(markers);
 		
 		var size = new OpenLayers.Size(25,41);
 		var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);

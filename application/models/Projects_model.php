@@ -5203,6 +5203,7 @@ class Projects_model extends CI_Model {
 
     }
 	
+
 	public function get_proj_map_data()
 	{
 		$query_sme = $this->db->query("SELECT pid, projectname, slug, lat, lng, sector, projectphoto, description, country, subsector, stage, location, sponsor, description, subsector, totalbudget
@@ -5272,13 +5273,13 @@ class Projects_model extends CI_Model {
 	 */
 	public function get_likes($proj_id)
 	{
-
 		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
                                     and proj_id=\''.$proj_id.'\'');
 		$resultchecklikes = $checklikes->num_rows();
 
 
 		return $resultchecklikes;
+
 
 	}
 
@@ -5304,6 +5305,7 @@ class Projects_model extends CI_Model {
 		}
 
 	}
+
 
 
 }
