@@ -398,7 +398,6 @@ class Projects extends CI_Controller
         }
 
         $viewdata['project']['isfollowing'] = $model->isfollowing($pid, $this->uid); // Is current user following the project
-        $viewdata['project']['isliked'] = $model->isliked($pid, $this->uid); // Is current user liked the project
         $viewdata['project']['projectdata'] = $model->get_project_data($slug, $userid);
         $viewdata['project']['projectdata']['jobs_created'] = $model->get_jobs_created($pid);
 		$viewdata['project']['fundamental'] = $model->get_fundamental_data($slug, $userid);
