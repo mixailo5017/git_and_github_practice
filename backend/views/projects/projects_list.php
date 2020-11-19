@@ -86,8 +86,12 @@
                     </tfoot>
                     <tbody>
                     	<?php 
+                            $i =0;
 							foreach($proj as $proj)
 							{
+							    if ($i >25){
+							        break;
+                                }
 								$proj_userinfo = get_project_userinfo($proj['uid']);
 						?>
 						<tr>
@@ -104,6 +108,7 @@
                         </tr>
 
 						<?php
+                                $i++;
 							}
 						?>
                     </tbody>
