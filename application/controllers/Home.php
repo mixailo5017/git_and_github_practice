@@ -42,7 +42,8 @@ class Home extends CI_Controller {
 		// Get counters
 		// TODO: Implement caching for counters
 		// benedmunds/codeigniter-cache (https://github.com/benedmunds/codeigniter-cache)
-		$counters = $this->home_model->get_counters();
+		//$counters = $this->home_model->get_counters();
+        $counters = 55;
 
 		// Render the page
 		$page = array(
