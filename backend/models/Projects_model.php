@@ -117,6 +117,7 @@ class Projects_model extends CI_Model
     {
 
         $this->db->select("pid,uid,projectname,slug,country,sector,stage,fundamental_legal");
+	$this->db->limit(25);
         $this->db->order_by("projectname", "asc");
         $qryproj = $this->db->get_where('exp_projects', array('isdeleted' => '0'));
 
