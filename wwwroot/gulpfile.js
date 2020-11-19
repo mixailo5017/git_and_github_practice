@@ -106,48 +106,6 @@ gulp.task('fileinclude', function() {
     .pipe(livereload({ auto: true }));
 });
 
-gulp.task('js-browserify-v1', function () {
-  // set up the browserify instance on a task basis
-  var b = browserify({
-    entries: js_build + '_custom/script.js',
-    debug: true
-  });
-
-  return b.bundle()
-    .pipe(source('script.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(production(uglify())) // Only minify for production environment
-    .on('error', notify.onError("Error: <%= error.message %>"))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(js_output))
-    .pipe(notify('Script.js recompiled!'));
-});
-
-gulp.task('js-browserify', function () {
-  // set up the browserify instance on a task basis
-  var b = browserify({
-    entries: js_build + '_custom/main.js',
-    debug: true
-  });
-
-  return b.bundle()
-    .pipe(source('main.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-        // Add transformation tasks to the pipeline here.
-        .pipe(jshint())
-        .pipe(jshint.reporter('jshint-stylish'))
-        .pipe(jshint.reporter('fail'))
-        .on("error", notify.onError(function (error) {
-            return  error.message;
-        }))
-        // .pipe(uglify())
-        // .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(js_output));
-});
-
 gulp.task('js-libs', function() {
   // First, copy across any modules that will be included directly, not bundled
   gulp.src(node_modules + 'leaflet-draw/dist/**/*')

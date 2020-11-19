@@ -198,11 +198,17 @@ define('PROJECT_PROFILES_ENABLED', TRUE);
 // Used to determine which users' projects will be shown to the public, 
 // which project profiles will not show the project developer, etc.
 // Arrays in constants requires PHP 5.6. Defining them using the define statement only available from PHP 7.0.
-const INTERNAL_USERS = [24, 28, 37, 195, 198, 222, 298, 492, 562, 583, 684, 741, 813, 824, 840, 1121, 1138, 1301,
-					    1307, 1318, 1342, 1347, 1495, 1554, 1578, 1589, 1610, 1623, 1641, 1693, 1742, 1766, 1821, 
-					    1986, 2088, 2252, 2374, 2377, 2579, 2689, 2802, 2806, 2811, 2836, 2930, 3065, 3069, 3090, 
-					    3096, 3127, 3156, 3157, 3163, 3165, 3169, 3207, 3254, 3371, 3424, 3443, 3453, 3456, 3463, 
-					    3479];
+const INTERNAL_USERS = [24, 28, 37, 195, 198, 222, 298, 492, 562, 583, 684, 741, 813, 824, 840, 1138, 1301,
+    1342, 1495, 1986, 3453, 3456, 3684, 3823, 3845, 3871, 3903, 3943, 3963, 4005, 4030, 4033, 4036, 4133, 4170, 4345, 4349];
+
+const PWD_FOR_STIM = ['6Z&N!]B7nB\CGTq_', '+8^em#K2p@qBU_PK', 'K=FZxqvt_7NV%M2K', 'Q#M+wb6Se?Xz8eTS', 'gqLYMuc$7#w4#6m_', '64Wf@Scp3-62&N+M',
+                      'uTG+?b6%6*gJ7BUC', 'cQ7TS=GmL7hbatVw', 'qZA_yCBn9G6--rCW', 'XDtux28?*EfMZRXp', 'Rmkr49=hCCbKNKNv', 'c2ZnG5m@U62D_5-g',
+                      '4Kr1@yU3O$Hv!Fk6', 'adX!LQxNDiF71PsR', 'U_Tdxtm1#DylP+uC', 'Egapd?cchpWw6W85', 'Cz=le_&0D8Xz7cc6', '7^UIOCRJgPZaPp@n',
+                      'KJ3aGzDi%Mq9^7s!', '#Rab1q3#=cJWAz67', '$a7N+Vtt8y-t#=ye', 'hW$di|OaA6g!aGW-', '_^NT8#Cs*2tVXk90', '@Sp$Dz1suwMxK335'
+                     ];
+
+const PREMIUM_COMPANIES = [4340, 4070, 4489, 4507, 4517];
+
 
 // The user ID of the official Brazilian government user account
 // Used to determine whether to display the Project Feed

@@ -4,6 +4,7 @@ $route['myvip'] = "redirect";
 $route['myvip/(:any)'] = "redirect";
 
 $route['default_controller'] = "home";
+
 $route['404_override'] = 'pages/error_404';
 
 $route['language'] = "pages/language";
@@ -22,6 +23,7 @@ $route['password/reset/(:any)'] = "reminders/reset/$1";
 /*
  * Projects
  */
+
 //$route['projects']                  = "projects/listing";
 $route['projects/edit/(:any)']		= "projects/edit/$1";
 $route['projects/create']			= "projects/create";
@@ -31,6 +33,11 @@ $route['projects/updatename/(:any)']	= "projects/updatename/$1";
 $route['projects/follow']    = "projects/follow";
 $route['projects/unfollow']  = "projects/unfollow";
 $route['projects/isfollowing/(:num)']    = "projects/isfollowing/$1";
+
+// like/unlike rules for projects
+$route['projects/saveLikes/(:num)']    = "projects/saveLikes/$1";
+$route['projects/top100']			= "projects/top100";
+
 
 $route['projects/add_executive/(:any)']	= "projects/add_executive/$1";
 $route['projects/update_executive/(:any)']	= "projects/update_executive/$1";
@@ -45,6 +52,7 @@ $route['projects/update_engineering/(:any)']	= "projects/update_engineering/$1";
 $route['projects/delete_engineering/(:any)']	= "projects/delete_engineering/$1";
 
 $route['projects/update_map_/(:any)']	= "projects/update_engineering/$1";
+
 $route['projects/delete_engineering/(:any)']	= "projects/delete_engineering/$1";
 
 $route['projects/add_map_point/(:any)']	= "projects/add_map_point/$1";
@@ -148,7 +156,9 @@ $route['projects/discussions/(:num)'] = "projects/discussions/$1";
 
 $route['projects/(:any)']			= "projects/view/$1";
 
-//
+$route['projects/submit/(:num)'] = "projects/view/$1";
+
+
 $route['expertise/list']         = "expertise/index";
 $route['expertise/list/(:num)']  = "expertise/view/$1";
 
@@ -156,6 +166,11 @@ $route['expertise/(:num)/rate']  = "expertise/rate/$1";
 $route['expertise/(:num)/ratings']  = "expertise/ratings/$1";
 
 $route['expertise/(:num)/recommendationfeedback/expert/(:num)/(up|down)'] = "recommendationfeedback/store/$1/expert/$2/$3";
+
+//messages
+$route['inbox']       = "inbox/view";
+$route['inbox/sent/']       = "inbox/sent_view";
+$route['inbox/message_view/(:num)']   = "inbox/message_view/$1";
 
 $route['expertise/(:num)']       = "expertise/view/$1";
 //$route['expertise']			        = "expertise/index";
@@ -180,6 +195,27 @@ $route['forums/experts/(:num)']         = "forums/experts/$1";
 $route['forums/projects']               = "forums/index";
 $route['forums/experts']                = "forums/index";
 $route['forums/(:num)/privatemeetings'] = "pages/index/privatemeetings";
+
+//Stimulus
+$route['stimulus']                        = "stimulus/show/37";
+$route['stimulus/projects/(:num)']        = "stimulus/projects/$1";
+$route['stimulus/experts/(:num)']         = "stimulus/experts/$1";
+$route['stimulus/projects']               = "stimulus/index";
+
+$route['stimulusBrazil']                        = "stimulusBrazil/show/38";
+$route['stimulusBrazil/projects/(:num)']        = "stimulusBrazil/projects/$1";
+$route['stimulusBrazil/experts/(:num)']         = "stimulusBrazil/experts/$1";
+$route['stimulusBrazil/projects']               = "stimulusBrazil/index";
+
+//GViPTv
+$route['gviptv/view/(:num)']               = "gviptv/view/$1";
+
+
+//VirtualLF
+$route['virtualLF/map']                    = "virtualLF/map/36";
+$route['virtualLF/projects/(:num)']        = "virtualLF/projects/$1";
+$route['virtualLF/experts/(:num)']         = "virtualLF/experts/$1";
+$route['virtualLF/projects']               = "virtualLF/index";
 
 // Permalinks
 $route['plink/(:num)/(:any)'] = "plink/index/$1/$2";

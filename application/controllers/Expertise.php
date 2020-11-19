@@ -39,6 +39,8 @@ class Expertise extends CI_Controller {
             2 => lang('SortMostRelevant'),
             3 => lang('SortRecentlyJoinedFirst'),
             4 => lang('HighestRatedFirst'),
+	    5 => 'Random',
+
         );
 	}
 
@@ -225,11 +227,17 @@ class Expertise extends CI_Controller {
 		if ($users['membertype'] == MEMBER_TYPE_EXPERT_ADVERT) {
             $page_category = 'Lightning';
             $fullname = $users['organization'];
-			$project = $this->expertise_model->get_organization_projects($userid);
+	    $project = $this->expertise_model->get_organization_projects_data($userid);
             $breadcrumb_title = lang('B_EXPERT_ADVERTS');
             $uri_segment = 'companies';
-            $view = 'expertise/organization_view';
-		} else {
+            if(in_array($userid, PREMIUM_COMPANIES)){
+                $view = 'expertise/premium_view';
+            }
+	        else{
+	            $view = 'expertise/organization_view';
+            }
+
+	} else {
             $page_category = 'Expert';
             $fullname = $users['firstname'] . ' ' . $users['lastname'];
             $project = $this->expertise_model->get_projects($userid);
@@ -243,6 +251,8 @@ class Expertise extends CI_Controller {
 		$seats 			= 	$this->expertise_model->get_seats($userid);
 		$case_studies	= 	$this->expertise_model->get_case_studies($userid, '', '1');
 		$org_info		= 	$this->expertise_model->get_org_info($userid);
+		$this->load->model('projects_model');
+        $model_obj      =   $this->projects_model;
 
 		$data =	compact(
 			'users',
@@ -253,7 +263,8 @@ class Expertise extends CI_Controller {
 			'seats',
 			'case_studies',
 			'org_info',
-			'myexpertise'
+			'myexpertise',
+            'model_obj'
 		);
 
         // Expert specific data
@@ -387,7 +398,7 @@ class Expertise extends CI_Controller {
     private function check_sort($value)
     {
         $allowed = array_keys($this->sort_options);
-        $default = 2;
+        $default = 4;
 
         if (in_array($value, $allowed)) {
             return $value;
@@ -412,4 +423,7 @@ class Expertise extends CI_Controller {
 
         return email(array($following['email'], $following['fullname']), $subject, $content, array(ADMIN_EMAIL, ADMIN_EMAIL_NAME));
     }
+
+
 }
+

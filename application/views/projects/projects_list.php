@@ -56,6 +56,7 @@
                 </div>
                 <div class="filter_option">
                     <?php echo form_dropdown('sort_options', $sort_options, $sort) ?>
+			<a href="/projects/top100" class="light_green">View Top 100 US Projects</a>
                 </div>
                 <div class="filter_option">
                     <?php echo form_dropdown('limit_options', view_limit_options(), $limit) ?>

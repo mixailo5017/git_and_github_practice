@@ -296,6 +296,28 @@
         return $stages;
     }
 
+/**
+ * Project Sector Dropdown for Stimulus
+ *
+ * @param string $first
+ * @return array
+ */
+function sector_dropdown_stim($first = 'all')
+{
+        $sectors = array(
+        ''                => $first == 'all' ? '- Select A Sector -' : 'All Sectors',
+        'Transport'    => 'Transport',
+        'Energy'    => 'Energy',
+        'Water'        => 'Water',
+        'Information & Communication Technologies'    => 'Technology',
+        'Social'    => 'Social',
+        'Space'    => 'Space'
+    );
+
+    return $sectors;
+}
+
+
     /**
     * Expert budget Dropdown
     * returns list of budget options for expert map serch
@@ -314,6 +336,73 @@
         );
         return $budget;
     }
+
+
+/**
+ * Project Stages Dropdown
+ * returns list of Stages options for project map serch
+ *
+ * @param string $first
+ * @return array
+ */
+function state_dropdown($first = 'all')
+{
+    $state = array(
+        ''                => $first == 'all' ? 'All States' : '- Select A State -',
+        'AL'     => 'Alabama',
+        'AK'     => 'Alaska',
+        'AZ'     => 'Arizona',
+        'AR'     => 'Arkansas',
+        'CA'     => 'California',
+        'CO'     => 'Colorado',
+        'CT'     => 'Connecticut',
+        'DE'     => 'Delaware',
+        'DC'     => 'District of Columbia',
+        'FL'     => 'Florida',
+        'GA'     => 'Georgia',
+        'HI'     => 'Hawaii',
+        'ID'     => 'Idaho',
+        'IL'     => 'Illinois',
+        'IN'     => 'Indiana',
+        'IA'     => 'Iowa',
+        'KS'     => 'Kansas',
+        'KY'     => 'Kentucky',
+        'LA'     => 'Louisiana',
+        'ME'     => 'Maine',
+        'MD'     => 'Maryland',
+        'MA'     => 'Massachusetts',
+        'MI'     => 'Michigan',
+        'MN'     => 'Minnesota',
+        'MS'     => 'Mississippi',
+        'MO'     => 'Missouri',
+        'MT'     => 'Montana',
+        'NE'     => 'Nebraska',
+        'NV'     => 'Nevada',
+        'NH'     => 'New Hampshire',
+        'NJ'     => 'New Jersey',
+        'NM'     => 'New Mexico',
+        'NY'     => 'New York',
+        'NC'     => 'North Carolina',
+        'ND'     => 'North Dakota',
+        'OH'     => 'Ohio',
+        'OK'     => 'Oklahoma',
+        'OR'     => 'Oregon',
+        'PA'     => 'Pennsylvania',
+        'RI'     => 'Rhode Island',
+        'SC'     => 'South Carolina',
+        'SD'     => 'South Dakota',
+        'TN'     => 'Tennessee',
+        'TX'     => 'Texas',
+        'UT'     => 'Utah',
+        'VT'     => 'Vermont',
+        'VA'     => 'Virginia',
+        'WA'     => 'Washington',
+        'WV'     => 'West Virginia ',
+        'WI'     => 'Wisconsin',
+        'WY'     => 'Wyoming',
+    );
+    return $state;
+}
 
     /**
     * Project revenue Dropdown

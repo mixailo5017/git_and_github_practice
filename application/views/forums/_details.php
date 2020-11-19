@@ -58,7 +58,7 @@
           <?php echo form_submit('submit_attend_forum', lang('ForumRegister'), 'class="light_green attend"');?>
         </form>
     <?php } ?>
-    <?php if ($details['meeting_url'] && Auth::check()) { ?>
+    <?php if ($details['meeting_url']) { ?>
         <a href="<?php echo $details['meeting_url'] ?>"
            class="button light_gray book"
            style="margin-left:10px;" ><?php echo lang('ForumBookMeeting') ?></a>

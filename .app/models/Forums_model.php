@@ -265,6 +265,34 @@ class Forums_model extends CI_Model
 
         return $rows;
     }
+    
+    
+       /**
+     * Used for retrieving preview list of members shown on forum overview page
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @return array
+     */
+    public function get_members_for_forum_homepage_vf($id)
+    {
+        $select = "m.uid, firstname, lastname, userphoto, m.title, organization, country, city";
+
+        $order_by = [
+            'm.id' => 'random'
+        ];
+        $row_count = true;
+
+        $this->members_base_query($id, $select, null, $order_by, $row_count);
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
+    
+    
 
     /**
      * Get ALL members (experts) along with a flag whether
@@ -375,11 +403,42 @@ class Forums_model extends CI_Model
      * @param int $limit
      * @param int $offset
      * @param bool $row_count
+     * @param array $filter
+     * @param array $sort
      * @return array
      */
-    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false)
+    public function projects($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null, $sort = null)
     {
-        $this->projects_base_query($id, $select, null, $order_by, $row_count);
+        $this->projects_base_query($id, $select, null, $order_by, $row_count, $filter, $sort);
+
+        if (! is_null($limit)) {
+            $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
+        }
+
+        $rows = $this->db
+            ->get()
+            ->result_array();
+
+        return $rows;
+    }
+    
+    
+     /**
+     * Get members (experts) along with a flag whether a member is being selected for the forum
+     *
+     * @param $id
+     * @param string $select
+     * @param array $order_by
+     * @param int $limit
+     * @param int $offset
+     * @param bool $row_count
+     * @param array $filter
+     * @param array $sort
+     * @return array
+     */
+    public function projects_stim($id, $select = null, $order_by = null, $limit = null, $offset = null, $row_count = false, $filter = null, $sort = null)
+    {
+        $this->projects_base_query(37, $select, null, $order_by, $row_count, $filter, $sort);
 
         if (! is_null($limit)) {
             $this->db->limit($limit, (! is_null($offset)) ? $offset : 0);
@@ -637,9 +696,11 @@ class Forums_model extends CI_Model
      * @param null $where
      * @param null $order_by
      * @param bool $row_count
+     * @param null $filter
+     * @param null $sort
      * @return void
      */
-    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false)
+    private function projects_base_query($id, $select = null, $where = null, $order_by = null, $row_count = false, $filter = null, $sort = null)
     {
         $select = (! is_null($select)) ? $select : 'pid, projectname';
         $this->db
@@ -649,6 +710,46 @@ class Forums_model extends CI_Model
             ->join('exp_members m', 'p.uid = m.uid')
             ->select($select);
 
+        if (! empty($filter['stage'])) {
+            $this->db->where('stage', $filter['stage']);
+        }
+
+        if (! empty($filter['sector'])) {
+            if ($filter['sector'] == 'Space'){
+
+                $this->db->where('p.sector', 'Information & Communication Technologies');
+                $this->db->where('p.subsector', 'Other');
+
+            }
+            else {
+                $this->db->where('p.sector', $filter['sector']);
+
+                if (!empty($filter['subsector'])) {
+                    $this->db->where('p.subsector', $filter['subsector']);
+                }
+            }
+        }
+
+        if (! empty($filter['country'])) {
+            $this->db->where('p.country', $filter['country']);
+        }
+
+        if (! empty($filter['state'])) {
+            $this->db->like('keywords', $filter['state']);
+        }
+
+        if (! empty($filter['searchtext'])) {
+            $terms = split_terms2($filter['searchtext']);
+
+            $columns = array(
+                'projectname',
+                'p.country',
+                'p.description',
+            );
+            $where1 = where_like2($columns, $terms);
+            $this->db->where($where1, null, FALSE);
+        }
+
         $defaut_where = array(
             'f.id' => $id,
             'p.isdeleted' => '0',
@@ -657,11 +758,21 @@ class Forums_model extends CI_Model
         $where = (! is_null($where)) ? array_merge($defaut_where, $where) : $defaut_where;
         $this->apply_where($where);
 
-        $order_by = (! is_null($order_by)) ? $order_by : array('projectname' => 'asc');
-        $this->apply_order_by($order_by);
 
         if ($row_count) {
             $this->db->select('COUNT(*) OVER () AS row_count', false);
+        }
+
+        switch ($sort) {
+            case 1: // alphabetical by projectname
+                $this->db->order_by('projectname');
+                break;
+            case 2:
+                $this->db->order_by('p.totalbudget', 'DESC');
+                break;
+            case 3:
+                $this->db->order_by('p.totalbudget', 'RANDOM');
+                break;
         }
     }
 
@@ -707,6 +818,9 @@ class Forums_model extends CI_Model
         if ($forum_id === EMERGENCY_PROJECTS_FORUM_ID && !in_array($uid, INTERNAL_USERS)) {
             return false;
         }
+        if ($forum_id === 37 && !in_array($uid, INTERNAL_USERS)) {
+            return false;
+        }
 
         return true;
     }
@@ -736,4 +850,6 @@ class Forums_model extends CI_Model
 
         return (is_array($featuredForum) && count($featuredForum) == 1) ? $featuredForum[0] : null;
     }
+    
 }
+

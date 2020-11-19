@@ -142,11 +142,6 @@ class Marketing extends CI_Controller {
 		$membersWithRecommendations = array_filter($recommendationsData, function($member) {
 			return count($member['recommendations']) === 3;
 		});
-		
-		// $membersForTestEmail = array_slice($membersWithRecommendations, 0, 10); // TODO: Remove this testing code
-		$membersForTestEmail = array_filter($membersWithRecommendations, function($member) {
-			return $member['forMember']['uid'] === 824; // Only send to Michael while testing
-		});
 
 		$recipients = array_map(function($member) {
 			return (new EmailRecipient(
@@ -159,7 +154,7 @@ class Marketing extends CI_Controller {
 				'month' => date('F'),
 				'uid' => $member['forMember']['uid'],
 			]);
-		}, $membersForTestEmail);
+		}, $membersWithRecommendations);
 		
 		$email = new Mail();
 		return $email->addRecipients($recipients)
@@ -262,14 +257,14 @@ class Marketing extends CI_Controller {
 	{
 		$projectsData = [];
 		$requiredProjectFields = "slug, projectname, projectphoto";
-
+		
 		// TODO: Consider implementing (or finding) a new method to retrieve all rows in a single query
 		foreach ($projectURLs as $projectURL) {
 			if (!preg_match('/[^\/]+$/', $projectURL, $matches)) continue;
 			$slug = $matches[0];
 			$projectsData[] = $this->projects_model->find_from_slug($slug, $requiredProjectFields);
 		}
-
+		
 		return $projectsData;
 	}
 }

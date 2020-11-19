@@ -45,7 +45,7 @@ class Projects_model extends CI_Model
         return $row;
     }
 
-    public function find_from_slug($slug, $select = null)
+    public function find_from_slug(string $slug, string $select = null): ?array
     {
         $pid = $this->get_pid_from_slug($slug);
         return $this->find($pid, $select);
@@ -116,27 +116,16 @@ class Projects_model extends CI_Model
     public function get_projects()
     {
 
-        $this->db->select("pid,uid,projectname,slug,projectphoto,country,sector,stage,fundamental_legal");
-        $this->db->order_by("projectname", "asc");
-        $qryproj = $this->db->get_where('exp_projects', array('isdeleted' => '0'));
 
+        $query_sme = $this->db->query("SELECT pid,uid,projectname,slug FROM exp_projects
+                                        where isdeleted = '0'
+                                        order by projectname ASC
+                                        ");
 
-        $totalproj = $qryproj->num_rows();
+        $smearr = $query_sme->result_array();
+        $query_sme->free_result();
 
-
-        if ($totalproj > 0) {
-            foreach ($qryproj->result_array() as $row) {
-                $imgurl = $row["projectphoto"];
-                $row["projectphoto"] = $imgurl;
-                $projectdata["proj"][] = $row;
-            }
-            $projectdata["totalproj"] = $totalproj;
-            return $projectdata;
-        } else {
-            $projectdata["totalproj"] = 0;
-            $projectdata["proj"] = array();
-            return $projectdata;
-        }
+        return $smearr;
 
     }
 
@@ -3857,17 +3846,18 @@ class Projects_model extends CI_Model
          * @param 	string
          * @return 	boolean
         */
-    public function get_pid_from_slug($slug)
+    public function get_pid_from_slug(string $slug): ?int
     {
         $this->db->select("pid");
         $qrycheck = $this->db->get_where("exp_projects", array("slug" => $slug, "isdeleted" => "0"));
-        if ($qrycheck->num_rows > 0) {
-            $objproject = $qrycheck->row_array();
-            $pid = $objproject["pid"];
-            return $pid;
-        } else {
-            return "";
+        if (!$qrycheck->num_rows() > 0) {
+            return null;
         }
+
+        $objproject = $qrycheck->row_array();
+        $pid = $objproject["pid"];
+        return (int) $pid;
+        
     }
 
     /**

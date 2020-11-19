@@ -49,7 +49,8 @@ class Projects extends CI_Controller
 
         $this->sort_options = array(
             1 => lang('SortAlphabetically'),
-            2 => lang('SortRecentlyUpdatedFirst')
+            2 => lang('SortRecentlyUpdatedFirst'),
+            3 => 'Most Liked'
         );
 
         // TODO: Revisit this logic to use array of events
@@ -349,22 +350,22 @@ class Projects extends CI_Controller
     /**
      * Load Individual Project Detail Page
      *
-     * @param $params
+     * @param $project_identifier Either a PID or a slug
      */
-    public function view($params)
+    public function view($project_identifier)
     {
         $model = $this->projects_model;
 
-        // Allow for $params to be either a slug or an id
-        if (is_numeric($params)) {
-            $slug = $model->get_slug_from_pid((int) $params);
+        // Allow for $project_identifier to be either a slug or an id
+        if (is_numeric($project_identifier)) {
+            $slug = $model->get_slug_from_pid((int) $project_identifier);
             if (! empty($slug)) {
                 redirect("projects/$slug", 'refresh');
             }
         }
 
         // TODO: Revisit this logic and eliminate unnecessary call to DB
-        $slug = $params;
+        $slug = $project_identifier;
         $userid    = $model->get_uid_from_slug($slug);
         $exist_slug = $model->check_project($slug);
         $pid = (int) $model->get_pid_from_slug($slug);
@@ -377,9 +378,11 @@ class Projects extends CI_Controller
         
         $viewdata = array();
         $viewdata['slug'] = $slug;
+	$viewdata['pci'] = 0;
         $viewdata['project']['pid'] = $pid; // Needed for follow/unfollow functions
         $viewdata['userdata'] = $model->get_user_general($userid);
         $viewdata['orgmemberid'] = is_organization_member($viewdata['userdata']['uid']);
+	    
         // Determine who to display as the contact person for the project. 
         // If the project owner belongs to an organization, display the organization 
         // instead of the individual.
@@ -420,7 +423,7 @@ class Projects extends CI_Controller
             $sme_experts = $this->expertise_model->get_sme_experts($pid, array($userid));
         } else {
             // Similar project are visible only for non project owners
-            $similar_projects = $this->projects_model->similar_projects2($pid);
+            //$similar_projects = $this->projects_model->similar_projects2($pid);
         }
 
         $viewdata['project']['topexperts'] = $global_experts;
@@ -440,22 +443,28 @@ class Projects extends CI_Controller
                 $viewdata['project']['procurement']['procurement_date'] == '' &&
                 $viewdata['project']['procurement']['procurement_criteria'] == ''
                 )) {
-            $viewdata['project_sections']['procurement'] = true;   
+            $viewdata['project_sections']['procurement'] = true;
+            $viewdata['pci'] += $viewdata['project']['procurement']['totalprocurement'] * 7;
         }
         if (! ($viewdata['project']['financial']['totalfinancial'] == 0)) {
             $viewdata['project_sections']['financial'] = true;
+            $viewdata['pci'] += $viewdata['project']['financial']['totalfinancial'] * 12;
         }
         if (! ($viewdata['project']['regulatory']['totalregulatory'] == 0)) {
             $viewdata['project_sections']['regulatory'] = true;
+            $viewdata['pci'] += $viewdata['project']['regulatory']['totalregulatory'] * 7;
         }
         if (! (($viewdata['project']['fundamental']['totalfundamental'] - count($viewdata['project']['fundamental']["map_point"])) == 0)) {
             $viewdata['project_sections']['fundamentals'] = true;
+            $viewdata['pci'] += $viewdata['project']['fundamental']['totalfundamental'] * 7;
         }
         if (! ($viewdata['project']['participants']['totalparticipants'] == 0)) {
-            $viewdata['project_sections']['participants'] = true;   
+            $viewdata['project_sections']['participants'] = true;
+            $viewdata['pci'] += $viewdata['project']['participants']['totalparticipants'] * 7;
         }
         if (! ($viewdata['project']['files']['totalfiles'] == 0)) {
-            $viewdata['project_sections']['files'] = true;   
+            $viewdata['project_sections']['files'] = true;
+            $viewdata['pci'] += $viewdata['project']['files']['totalfiles'] * 5;
         }
 
 		$viewdata['isAdminorOwner'] = $this->isAdminOrOwner($userid);
@@ -468,6 +477,11 @@ class Projects extends CI_Controller
         // Discussions
         $this->load->model('discussions_model');
         $viewdata['project']['discussions_access'] = $this->discussions_model->has_access($this->uid, $pid);
+
+        //likes
+        $viewdata['likes'] = $this->get_likes($pid);
+        $viewdata['isliked'] = $this->is_liked($pid);
+
 
         // Forum ad
         $this->load->model('forums_model');
@@ -491,7 +505,19 @@ class Projects extends CI_Controller
         );
 
         $this->load->view('templates/header', $this->headerdata);
-        $this->load->view('projects/projects_view', $viewdata);
+
+        if ($viewdata['project']['projectdata']['pid'] == 1150){
+            $this->load->view('projects/projects_view_sinma', $viewdata);
+        }
+        elseif ($viewdata['project']['projectdata']['pid'] == 2877){
+            $this->load->view('projects/projects_view_maya', $viewdata);
+
+        }
+        else {
+            $this->load->view('projects/projects_view', $viewdata);
+
+        }
+
         $this->load->view('templates/footer', $this->footer_data);
     }
     
@@ -3308,4 +3334,50 @@ class Projects extends CI_Controller
             redirect('/p/' . $this->uri->segment(2));
         }
     }
+
+    public function saveLikes($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+        $userid = (int) sess_var('uid');
+
+        $this->load->model('projects_model');
+        $this->projects_model->saveLikes($proj_id, $userid);
+
+        redirect('/projects/' . $proj_id);
+
+    }
+
+    public function get_likes($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+
+        $this->load->model('projects_model');
+        $likes = $this->projects_model->get_likes($proj_id);
+
+        return $likes;
+    }
+
+    public function is_liked($proj_id)
+    {
+        $proj_id = (int) $proj_id;
+        $userid = (int) sess_var('uid');
+
+        $this->load->model('projects_model');
+        $likes = $this->projects_model->is_liked($proj_id, $userid);
+
+        return $likes;
+    }
+	
+
+	public function top100()
+    {
+        // Render the page
+        $this->load->view('templates/header', $this->headerdata);
+        $this->load->view('projects/top100');
+        $this->load->view('templates/footer', $this->dataLang);
+    }
+
+
+
 }
+

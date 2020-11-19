@@ -7,6 +7,7 @@ GVIP.App.Analytics.context = GVIP.App.Analytics.context || {};
 require('./_nav_mobile.js')();
 require('./_searchbox.js')();
 require('./_alert.js');
+require('./_popup-gallery.js');
 
 $(window).load(function() {
     var $meter = $('#meter'),
@@ -472,6 +473,63 @@ $(function() {
         return false;
     });
 
+	
+	
+	
+	function likeUnlike($form) {
+        if ($form == undefined || $form.length == 0) {
+            return false;
+        }
+
+        var $action = $form.find("input[type=hidden][name=action]"),
+            action = $action.val(),
+            context = $form.find("input[type=hidden][name=context]").val(),
+            $submit = $form.find("a[name=submit] .like-text"),
+            url = hosturl + "/" + context + "/" + action;
+
+        var postData = new Object();
+        postData.id = $form.find("input[type=hidden][name=id]").val();
+        postData.return_likes = $form.find("input[type=hidden][name=return_likes]").val();
+
+        var posting = $.post(url, postData, "json");
+
+        posting.done(function(data) {
+            if (data.status == "success") {
+                $submit.text((action == "like") ? 'Liked' : 'Like');
+
+                var unlikeText = (action == "like") ? 'Unlike' : "";
+                $submit.parent().attr("data-unlike", unlikeText);
+
+                if ($submit.parent().attr("data-unlike") != "") {
+                    $submit.parent().addClass('unlike').addClass('just_changed').mouseleave(function() {
+                        $('.just_changed').removeClass('just_changed');
+                    });
+                } else {
+                    $submit.parent().removeClass('unlike');
+                }
+
+                $action.val((action == "like") ? "unlike" : "like");
+
+            }
+        }).fail(function() {
+            alert("Error while trying to (un)like.")
+        });
+    }
+
+    // like/unlike button implemented as an anchor. Therefore we need to trigger the submit event for the form
+    $("form[name=like_form] a[name=submit]").click(function(e) {
+        e.preventDefault();
+        $(this).parents("form[name=like_form]").submit();
+        return false;
+    });
+
+    $("form[name=like_form]").submit(function(e) {
+        e.preventDefault();
+        likeUnlike($(this));
+        return false;
+    });
+	
+	
     // Submit the form if sort order has been changed for a list view (Projects, Expertise, Lightning...)
     $("select[name=sort_options]").change(function(e) {
         var $form = $('form[name=search_form]'),

@@ -835,6 +835,16 @@ class Projects_model extends CI_Model {
            case 1: // alphabetical by projectname
                $this->db->order_by('projectname');
                break;
+	   case 3: // Most Liked
+			   $this->db
+			   ->join("(SELECT proj_id, COUNT(proj_id) FROM exp_proj_likes
+						JOIN exp_projects
+						ON exp_proj_likes.proj_id = exp_projects.pid
+						WHERE isdeleted = '0'
+						GROUP BY proj_id
+						ORDER BY COUNT(proj_id) DESC) AS update_likes", 'p.pid = update_likes.proj_id', 'left outer')
+			   ->order_by('proj_id ASC');
+		break;
            default: // Most recently updated first (option 2, default)
                $this->db
                     ->join("(SELECT t1.pid, t1.last_date
@@ -4009,7 +4019,6 @@ class Projects_model extends CI_Model {
 			'slug'	=> $slug,
 			'uid'	=> $uid,
 			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("files_permission"),
 			'dateofuploading' => date('Y-m-d')
 		);
 		if($upload['error']=='')
@@ -4056,8 +4065,7 @@ class Projects_model extends CI_Model {
 			'pid'	=> $this->check_user_project($slug,$uid),
 			'slug'	=> $slug,
 			'uid'	=> $uid,
-			'description'	=> $this->input->post("project_files_desc"),
-			'permission'	=> $this->input->post("project_files_permission")
+			'description'	=> $this->input->post("project_files_desc")
 		);
 
 		if($upload['error']=='')
@@ -4430,12 +4438,37 @@ class Projects_model extends CI_Model {
 		$qryproj = $this->db->get_where("exp_projects",array("slug"=>$slug,"uid"=>$uid));
 		$files_data = $qryproj->row_array();
 		$qryproj->free_result();
-		$files_data['files'] = $this->get_project_files($slug,$uid);
-		$files_data['totalfiles'] = count($files_data['files']);
-
-
+		$files_data['files'] = $this->separate_images_and_nonimages($this->get_project_files($slug,$uid));
+        
+        $files_data['image_files_count'] = count($files_data['files']['image_files']);
+		$files_data['other_files_count'] = count($files_data['files']['other_files']);
+        $files_data['totalfiles'] = $files_data['image_files_count'] + $files_data['other_files_count'];
+        
 		return $files_data;
 	}
+
+    /**
+     * Takes a list of file names (with extensions)
+     * and splits them into two arrays: image_files and other_files
+     * @param  array  $files Each item is a string representing a file name
+     * @return array        An associative array with two keys: image_files and other_files
+     */
+    private function separate_images_and_nonimages(array $files)
+    {
+        $image_files = $other_files = [];
+        foreach ($files as $file) {
+            $extension = pathinfo($file['file'], PATHINFO_EXTENSION);
+            $has_image_extension = preg_match('/(jpe?g|png|gif)/', $extension) === 1;
+
+            if ($has_image_extension) {
+                $image_files[] = $file;
+            } else {
+                $other_files[] = $file;
+            }
+        }
+
+        return compact('image_files', 'other_files');
+    }
 
 
 	/**
@@ -5170,7 +5203,7 @@ class Projects_model extends CI_Model {
 
     }
 	
-	
+
 	public function get_proj_map_data()
 	{
 		$query_sme = $this->db->query("SELECT pid, projectname, slug, lat, lng, sector, projectphoto, description, country, subsector, stage, location, sponsor, description, subsector, totalbudget
@@ -5184,6 +5217,95 @@ class Projects_model extends CI_Model {
 
 		return $smearr;
 	}
+	
+	
+	public function get_all_proj_data()
+	{
+		$query_sme = $this->db->query("SELECT pid, totalbudget
+										FROM public.exp_projects
+										WHERE isdeleted = '0'
+										ORDER BY totalbudget DESC
+
+										");
+
+		$smearr = $query_sme->result_array();
+		$query_sme->free_result();
+
+		return $smearr;
+	}
+	
+	
+	/**
+	 * Create a new like record(s)
+	 *
+	 * @param int $proj_id
+     	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function saveLikes($proj_id, $follower)
+	{
+
+		$totallikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\'');
+		$resulttotallikes = $totallikes->num_rows();
+
+		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
+                                    and rated_by=\''.$follower.'\'');
+		$resultchecklikes = $checklikes->num_rows();
+
+		if($resultchecklikes == '0' ){
+
+			$data=array('proj_id'=>$proj_id,'rated_by'=>$follower, 'isliked'=>'1');
+			$this->db->insert('exp_proj_likes',$data);
+
+		}else{
+			$this->db->delete('exp_proj_likes', array('proj_id'=>$proj_id,
+				'rated_by'=>$follower));
+		}
+		return true;
+
+	}
+
+	/**
+	 * Create a new like record(s)
+	 *
+	 * @param int $proj_id
+	 * @return bool
+	 */
+	public function get_likes($proj_id)
+	{
+		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
+                                    and proj_id=\''.$proj_id.'\'');
+		$resultchecklikes = $checklikes->num_rows();
+
+
+		return $resultchecklikes;
+
+
+	}
+
+	/**
+	 * Does user Like project
+	 *
+	 * @param int $proj_id
+	 * @param int $follower It's uid from exp_members
+	 * @return bool
+	 */
+	public function is_liked($proj_id, $follower)
+	{
+
+		$checklikes = $this->db->query('select * from exp_proj_likes where proj_id=\''.$proj_id.'\' 
+                                    and rated_by=\''.$follower.'\'');
+		$resultchecklikes = $checklikes->num_rows();
+
+		if ($resultchecklikes == 1){
+			return true;
+		}
+		else {
+			return false;
+		}
+
+	}
+
 
 
 }
