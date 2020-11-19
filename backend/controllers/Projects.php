@@ -249,8 +249,7 @@ class Projects extends CI_Controller {
 		//collect data from database;
 		$data	=	array(
 			'main_content'	=>	'projects',
-			'proj'				=>	$projectlist,
-			'totalproj'			=>	$filter_total			
+			'proj'				=>	$projectlist
 		);
 		// Render HTML Page from view direcotry
 		$this->load->view("templates/header",$this->headerdata);
