@@ -24,9 +24,7 @@
 
 
 <section class="hero-image">
-    <video playsinline autoplay muted loop='true' poster="polina.jpg" id="bgvid">
-        <source src="https://d2huw5an5od7zn.cloudfront.net/Meet GVIP.mp4" type="video/webm">
-    </video>
+    <video src="https://d2huw5an5od7zn.cloudfront.net/Meet GVIP.mp4" type="video/webm" playsinline autoplay muted loop='true' poster="polina.jpg" id="bgvid></video>
     <div class="wrap">
         <div class="container">
             <div class="headline">
