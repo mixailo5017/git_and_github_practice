@@ -126,10 +126,19 @@ class Projects_model extends CI_Model
         $totalproj = $qryproj->num_rows();
 
 
-
-        $projectdata["totalproj"] = $totalproj;
-        return $projectdata;
-
+        if ($totalproj > 0) {
+            foreach ($qryproj->result_array() as $row) {
+                $imgurl = $row["projectphoto"];
+                $row["projectphoto"] = $imgurl;
+                $projectdata["proj"][] = $row;
+            }
+            $projectdata["totalproj"] = $totalproj;
+            return $projectdata;
+        } else {
+            $projectdata["totalproj"] = 0;
+            $projectdata["proj"] = array();
+            return $projectdata;
+        }
 
     }
 
