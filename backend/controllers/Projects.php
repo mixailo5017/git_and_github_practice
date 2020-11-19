@@ -245,12 +245,11 @@ class Projects extends CI_Controller {
 
 		// load all members data from Members Model.
 		$projectlist 	= 	$this->projects_model->get_projects();
-		$filter_total	= 	$projectlist['totalproj'];
 		
 		//collect data from database;
 		$data	=	array(
 			'main_content'	=>	'projects',
-			'proj'				=>	$projectlist['proj'],
+			'proj'				=>	$projectlist,
 			'totalproj'			=>	$filter_total			
 		);
 		// Render HTML Page from view direcotry
