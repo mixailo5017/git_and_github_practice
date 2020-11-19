@@ -43,17 +43,9 @@
     </div>
 </section>
 
-<?php
-// Plug in default values for counters in case not provided to the view
-$counters['experts'] = empty($counters['experts']) ? 2287 : $counters['experts'];
-$counters['projects'] = empty($counters['projects']) ? 1718 : $counters['projects'];
-$counters['countries'] = empty($counters['countries']) ? 155 : $counters['countries'];
-$counters['totalvalue'] = empty($counters['totalvalue']) ? 2.8 : $counters['totalvalue'];
-$counters['jobs'] = empty($counters['jobs']) ? 84 : $counters['jobs'];
-?>
 <section class="testimonials">
     <div class="container">
-        <h2 class="h2-std" id="testimonials-statistics">To date, GViP has connected <?php echo $counters['experts'] ?> experts with <?php echo $counters['projects'] ?> projects across <?php echo $counters['countries'] ?> countries! That's a total project value of $<?php echo $counters['totalvalue'] ?> trillion, creating an estimated <?php echo $counters['jobs'] ?> million jobs.</h2>
+        <h2 class="h2-std" id="testimonials-statistics">To date, GViP has connected 3950 experts with 3640 projects across 155 countries! That's a total project value of $7.6 trillion, creating an estimated 84 million jobs.</h2>
         <ul>
             <li class="photo">
                 <img src="/images/new/testimonial3.png" width="100" height="100" />
