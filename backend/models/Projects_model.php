@@ -117,26 +117,15 @@ class Projects_model extends CI_Model
     {
 
 
-        $this->db->select("pid,uid,projectname,slug");
-        //$this->db->limit(25);
-        $this->db->order_by("projectname", "asc");
-        $qryproj = $this->db->get_where('exp_projects', array('isdeleted' => '0'));
+        $query_sme = $this->db->query("SELECT pid,uid,projectname,slug FROM exp_projects
+                                        where isdeleted = '0'
+                                        order by projectname ASC
+                                        ");
 
+        $smearr = $query_sme->result_array();
+        $query_sme->free_result();
 
-        $totalproj = $qryproj->num_rows();
-
-
-        if ($totalproj > 0) {
-            foreach ($qryproj->result_array() as $row) {
-                $projectdata["proj"][] = $row;
-            }
-            $projectdata["totalproj"] = $totalproj;
-            return $projectdata;
-        } else {
-            $projectdata["totalproj"] = 0;
-            $projectdata["proj"] = array();
-            return $projectdata;
-        }
+        return $smearr;
 
     }
 
