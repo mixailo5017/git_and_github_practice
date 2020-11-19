@@ -86,9 +86,6 @@
                     </tfoot>
                     <tbody>
                     	<?php 
-		                $i = 0;
-						if($totalproj > 0) 
-						{
 							foreach($proj as $proj)
 							{
 								$proj_userinfo = get_project_userinfo($proj['uid']);
@@ -108,7 +105,6 @@
 
 						<?php
 							}
-						}
 						?>
                     </tbody>
                 </table>
@@ -116,4 +112,3 @@
         </div><!--contentwrapper-->
         
 	</div>
-
