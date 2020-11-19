@@ -128,8 +128,6 @@ class Projects_model extends CI_Model
 
         if ($totalproj > 0) {
             foreach ($qryproj->result_array() as $row) {
-                $imgurl = $row["projectphoto"];
-                $row["projectphoto"] = $imgurl;
                 $projectdata["proj"][] = $row;
             }
             $projectdata["totalproj"] = $totalproj;
