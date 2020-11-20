@@ -87,8 +87,6 @@
                     <tbody>
                     	<?php 
 		                $i = 0;
-						if($totalproj > 0) 
-						{
 							foreach($proj as $proj)
 							{
 						?>
@@ -111,7 +109,6 @@
 
 						<?php
 							}
-						}
 						?>
                     </tbody>
                 </table>
@@ -119,3 +116,4 @@
         </div><!--contentwrapper-->
         
 	</div>
+
