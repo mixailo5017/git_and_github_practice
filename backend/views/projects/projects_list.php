@@ -22,9 +22,7 @@
                     	<?php
 							foreach($proj as $proj)
 							{
-
-								$proj_userinfo = get_project_userinfo($proj['uid']);
-						?>
+							    ?>
                           	<p align="center"><span class="center"><?php echo form_checkbox(array("id"=>"select_".$proj["pid"]."","name"=>"select_".$proj["pid"]."","value"=>$proj["pid"])); ?></span></p>
                             <p><?php echo $proj["pid"]; ?></p>
                             <p>
@@ -33,8 +31,6 @@
 							</span>
 
                             </p>
-                            <p><a style="float:left;" href="/<?php echo index_page(); ?>/myaccount/<?php echo $proj["uid"];?>"><?php echo $proj_userinfo['firstname'].' '.$proj_userinfo['lastname'];?></a></p>
-                            <p><a href="/projects/<?php echo $proj["slug"]; ?>">View</a>&nbsp;&nbsp;<a class="delete" href="" name="<?php echo $proj["pid"]; ?>" id="#/admin.php/projects/delete_projects">Delete</a></p>
 
 						<?php
 							}
