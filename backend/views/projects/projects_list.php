@@ -86,29 +86,28 @@
                     </tfoot>
                     <tbody>
                     	<?php 
-                            $i =0;
+		                $i = 0;
 							foreach($proj as $proj)
 							{
-							    if ($i >25){
-							        break;
-                                }
-								$proj_userinfo = get_project_userinfo($proj['uid']);
 						?>
 						<tr>
                           	<td align="center"><span class="center"><?php echo form_checkbox(array("id"=>"select_".$proj["pid"]."","name"=>"select_".$proj["pid"]."","value"=>$proj["pid"])); ?></span></td>
                             <td><?php echo $proj["pid"]; ?></td>
                             <td>
+                            <div style="float:left;width:60px;">
+                            <img alt="<?php echo $proj["projectname"];?>" style="float:left;" src="<?php echo project_image($proj["projectphoto"], 50);?>" width="50" >
+							</div>
 							<span style="float:left;padding-left:5px;">
 								<a href="/<?php echo index_page(); ?>/projects/edit/<?php echo $proj["slug"];?>"><?php echo $proj["projectname"];?></a>
 							</span>
                             	
                             </td>
-                            <td><a style="float:left;" href="/<?php echo index_page(); ?>/myaccount/<?php echo $proj["uid"];?>"><?php echo $proj_userinfo['firstname'].' '.$proj_userinfo['lastname'];?></a></td>
-                            <td><a href="/projects/<?php echo $proj["slug"]; ?>">View</a>&nbsp;&nbsp;<a class="delete" href="" name="<?php echo $proj["pid"]; ?>" id="#/admin.php/projects/delete_projects">Delete</a></td>
+                            <td><?php echo $proj['country']; ?></td>
+                            <td><?php echo $proj["sector"]; ?></td>
+                            <td><?php echo $proj["stage"]; ?></td>
                         </tr>
 
 						<?php
-                                $i++;
 							}
 						?>
                     </tbody>
@@ -117,3 +116,4 @@
         </div><!--contentwrapper-->
         
 	</div>
+
